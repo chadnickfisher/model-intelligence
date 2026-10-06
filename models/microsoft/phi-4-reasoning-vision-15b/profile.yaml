@@ -1,0 +1,141 @@
+schema_version: '1.0'
+id: phi-4-reasoning-vision-15b
+verified_at: '2026-10-06'
+identity:
+  name: Phi-4-Reasoning-Vision-15B
+  creator: Microsoft
+  family: Phi-4
+  version: Phi-4-reasoning-vision-15B
+  release_date: '2026-03-04'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: Dense Phi4-Reasoning backbone + SigLIP2 mid-fusion dynamic-resolution vision encoder
+    status: documented
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-3c2db7ec3521
+    - src-91f835e2db28
+    - src-96b521869e71
+  parameters:
+    value:
+      total_billion: 15
+      active_billion: 15
+      scope: 15B declared complete model; dense active label is shorthand, not precise per-image conditional
+        compute.
+      exact_parameter_count: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value:
+      native_tokens: 16384
+      extended_tokens: null
+      max_output_tokens: null
+      notes: Input plus generated output share capacity. Endpoint limits can differ.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value:
+      supported:
+      - English
+      notes: Microsoft says not intended for multilingual use; other languages may degrade.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  weights:
+    value:
+      downloadable: true
+      official_repository: https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B
+      formats: null
+      gate: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weight_only_floor_decimal_gb:
+    value:
+      bf16: 30
+      int8: 15
+      ideal_4bit: 7.5
+    status: estimated
+    conditions:
+    - Batch 1, short/moderate context unless otherwise stated.
+    - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+      stated count, runtime, OS and temporary loading buffers.
+    - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
+      storage of inactive experts.
+    - Published maximum context is not a guarantee it fits on the suggested local machine.
+    evidence_ids: &id003
+    - src-91f835e2db28
+  release_date_precision:
+    value: day
+    status: documented
+    conditions: []
+    evidence_ids: *id002
+licensing:
+  name: MIT
+  commercial_use: allowed
+  redistribution: 'true'
+  fine_tuning: null
+  hosted_service: 'true'
+  restrictions:
+  - Retain copyright/license notices; comply with the license.
+  - A license summary, not legal advice. Open weights does not by itself establish a fully open-source AI system.
+  evidence_ids:
+  - src-3c2db7ec3521
+local_inference:
+  availability: available
+  hardware_notes:
+  - 'BF16 planning: 40–48GB GPU comfortable; 4-bit 12–16GB theoretical planning target only when the runtime
+    supports the vision architecture.'
+  - Microsoft recommends BF16 vLLM and tested A6000/A100/H100/B200. Quantized local compatibility was not verified.
+  conditions:
+  - Batch 1, short/moderate context unless otherwise stated.
+  - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+    stated count, runtime, OS and temporary loading buffers.
+  - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
+    of inactive experts.
+  - Published maximum context is not a guarantee it fits on the suggested local machine.
+  evidence_ids: *id003
+capabilities:
+- task: english-visual-math-and-grounding
+  judgment: A compact specialist candidate for charts, visual math and GUI element grounding.
+  confidence: low
+  supporting_evidence_ids:
+  - src-91f835e2db28
+  - src-96b521869e71
+  contradictory_evidence_ids:
+  - src-96b521869e71
+  conditions:
+  - English-focused; selective thinking can save compute but benchmark all required task types.
+  known_failure_modes:
+  - 16k window; hallucination/visual reasoning limitations; independent matched evaluation not verified.
+  evidence_notes: []
+performance_characteristics: []
+access_ids:
+- access-open-phi-4-reasoning-vision-15b-weights
+price_ids: []
+evidence_ids: *id002
+notes: []
+limitations:
+- No model inference or benchmark was run in this research pass.

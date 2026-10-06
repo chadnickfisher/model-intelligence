@@ -1,0 +1,24 @@
+schema_version: '1.0'
+id: nvidia
+verified_at: '2026-10-06'
+name: NVIDIA
+roles:
+- creator
+api_compatibility: []
+access_methods: []
+geographic_availability: []
+rate_limits: []
+caching_batching: []
+privacy_data_use: []
+reliability: []
+model_ids: []
+price_ids: []
+access_ids: []
+evidence_ids:
+- src-58bf94c165a9
+- src-c5a0afc263f8
+- src-9950acce03ed
+notes: []
+limitations:
+- Privacy/data-use details were not fully verified in this baseline.
+- Exact public or account-specific quotas were not established.

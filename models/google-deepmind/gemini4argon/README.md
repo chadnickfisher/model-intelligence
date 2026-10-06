@@ -1,0 +1,86 @@
+# Gemini 4 Argon
+
+**Creator:** Google DeepMind · **Family:** Gemini · **Status:** preview
+**Verified:** 2026-10-06 · **Release:** 2026-09-30
+
+[Canonical data](profile.yaml) · [Methodology](../../../methodology.md) · [Catalog](../../../data/models.md)
+
+## Task judgments
+
+### Long horizon coding and enterprise agent workflows when access is available (medium confidence)
+
+Promising early-access candidate; independent task results support coding potential but do not establish broad deployment reliability.
+
+Conditions: Google; high reasoning; temperature 1; output cap 262144; Vals used $4/$20 regular token pricing, high effort; costs differ from announced promo
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Vals AI Gemini 4 Argon](https://www.vals.ai/models/google_gemini-4-argon)
+
+Contradictory or limiting sources: [Vals AI Gemini 4 Argon](https://www.vals.ai/models/google_gemini-4-argon) · [Introducing Gemini 4 Argon](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/) · [Gemini API model catalog](https://ai.google.dev/gemini-api/docs/models) · [Artificial Analysis Gemini 4 Argon High](https://artificialanalysis.ai/models/gemini-4-argon)
+
+Evidence notes: Public-source synthesis; no inference runs.; Observation obs-ac88874e3783: Independent early-access results are strong on code migration and terminal tasks but much weaker on CUA-bench and fully resolved ProgramBench.; Observation obs-917f279500bc: Announced Sep 30 for selected Fairwind defenders; general developer/consumer access described as forthcoming.; Observation obs-f5e1684ef252: Long tasks can be costly; independent evaluator reports high costs for CUA and code migration, using regular prices.
+
+## Specifications
+
+| Field | Recorded value |
+|---|---|
+| architecture | Unknown / not established |
+| parameters | Unknown / not established |
+| context window | Unknown / not established |
+| maximum output | Unknown / not established |
+| modalities | input: text; image; output: text |
+| language support | Unknown / not established |
+
+Specifications and provenance are qualified in [canonical data](profile.yaml). Published limits do not guarantee effective retrieval or local memory feasibility.
+
+## Access and cost
+
+2 recorded access route(s); 2 model-specific price record(s).
+
+[Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
+
+Provider routes and subscriptions are separate. Read billing units, thresholds, regions, status, and verification dates.
+
+## Licensing and local use
+
+License: Not established / proprietary terms must be checked
+
+Restrictions: Not established in this pass
+
+Commercial use: Unknown / not established
+
+Redistribution: Unknown / not established
+
+Hosted service: Unknown / not established
+
+Local weights/runtime availability: unavailable
+
+Hardware: Not established in this pass
+
+Local conditions: Not established in this pass
+
+## Gaps and caveats
+
+- Public API endpoint identifier and GA date
+- Architecture and parameters
+- Exact deployable context and output limits
+- Public latency and quota
+- Complete input modalities and languages
+- Exact introductory price expiry in main English announcement
+
+## Recorded price offers
+
+| Provider | Tier / status | Rates | Conditions | Verified |
+|---|---|---|---|---|
+| google-developer-api | announced_intro / unknown | input: 2 USD / per_1M_tokens; output: 10 USD / per_1M_tokens; cache_read: 0.1 USD / per_1M_tokens | Announced future introductory API price; cached input derived from explicit 95% discount. No exact public endpoint or effective date verified. | 2026-10-06 |
+| google-developer-api | announced_regular / unknown | input: 4 USD / per_1M_tokens; output: 20 USD / per_1M_tokens | Announced price after introductory period; expiry date is not specified in the fetched main English announcement. | 2026-10-06 |
+
+## Recorded access routes
+
+- google-developer-api / first-party-api: documented route; account eligibility unverified. Not established in this pass
+- google-ai-studio / Google AI Studio: Distribution documented; exact model selector, rollout, regional and subscription entitlement may vary.. Not established in this pass
+
+## Sources
+
+[Introducing Gemini 4 Argon](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/) · [Artificial Analysis Gemini 4 Argon High](https://artificialanalysis.ai/models/gemini-4-argon) · [Vals AI Gemini 4 Argon](https://www.vals.ai/models/google_gemini-4-argon)

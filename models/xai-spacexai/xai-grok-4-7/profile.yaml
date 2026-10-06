@@ -1,0 +1,155 @@
+schema_version: '1.0'
+id: xai-grok-4-7
+verified_at: '2026-10-06'
+identity:
+  name: Grok 4.7
+  creator: xAI / SpaceXAI
+  family: Grok
+  version: '4.7'
+  release_date: '2026-09-21'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: null
+    status: unknown
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-f1f9e55552d3
+    - src-d14fea025626
+    - src-905d5d7a5fb4
+    - src-399a034698f6
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value: 500000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  reasoning_efforts:
+    value:
+    - low
+    - medium
+    - high
+    - xhigh
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  default_effort:
+    value: high
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  function_calling:
+    value: true
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  structured_outputs:
+    value: true
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  batch:
+    value: false
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  api_alias:
+    value: grok-4.7
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weights:
+    value: closed
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+licensing:
+  name: proprietary service terms
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id002
+local_inference:
+  availability: unavailable
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id002
+capabilities:
+- task: agentic-coding-and-knowledge-workflows
+  judgment: Credible candidate; medium confidence for task-fit. AA's xhigh snapshot improves Terminal-Bench
+    4.0 from 21% (4.6 high) to 26%, but costs roughly twice per evaluated task.
+  confidence: medium
+  supporting_evidence_ids:
+  - obs-281c2bae7ad0
+  contradictory_evidence_ids: []
+  conditions:
+  - Grok4.7 xhigh vs Grok4.6 high, first-party API
+  known_failure_modes: []
+  evidence_notes:
+  - 'Observation obs-281c2bae7ad0: AA Intelligence Index v4.3.2 and component tasks'
+- task: low-latency-assistance
+  judgment: Not a latency-first default at high reasoning effort; evaluate low effort or alternatives.
+  confidence: medium
+  supporting_evidence_ids:
+  - obs-281c2bae7ad0
+  contradictory_evidence_ids: []
+  conditions:
+  - Grok4.7 xhigh vs Grok4.6 high, first-party API
+  known_failure_modes: []
+  evidence_notes:
+  - 'Observation obs-281c2bae7ad0: AA Intelligence Index v4.3.2 and component tasks'
+performance_characteristics:
+- task: measured-generation-behavior
+  judgment: 'AA Intelligence Index v4.3.2 and component tasks Measurements: {"output_tokens_per_task": [81000,
+    36000]}. These describe the cited benchmark configuration only.'
+  confidence: medium
+  supporting_evidence_ids:
+  - obs-281c2bae7ad0
+  contradictory_evidence_ids: []
+  conditions:
+  - Grok4.7 xhigh vs Grok4.6 high, first-party API
+  known_failure_modes: []
+  evidence_notes:
+  - Different reasoning settings; broad quality gain is not across every task. Benchmark cost reflects its
+    workload and cannot price user tasks.
+access_ids: []
+price_ids:
+- price-providers-xai-grok-4-7-xai-39519ba1474e
+- price-providers-xai-grok-4-7-opencode-zen-ad6a54b286af
+- price-providers-xai-grok-4-7-opencode-zen-5e46b5d4903b
+evidence_ids: *id002
+notes: []
+limitations:
+- Real-time facts require search tools; model alone has no live event access.
+- Do not equate published context capacity with perfect long-context recall.
+- Price depends on prompt length, tool charges and actual reasoning-token usage.

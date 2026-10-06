@@ -1,0 +1,149 @@
+schema_version: '1.0'
+id: claude-haiku-4-5
+verified_at: '2026-10-06'
+identity:
+  name: Claude Haiku 4.5
+  creator: Anthropic
+  family: Claude 4.5
+  version: null
+  release_date: '2025-10-15'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: null
+    status: unknown
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-e1910c5126bc
+    - src-f3655eaf1407
+    - src-e99bd76836c1
+    - src-5c510b458547
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value: 200000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: 64000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value: Multilingual; exact inventory not specified
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  knowledge_cutoff:
+    value: 2025-02
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weights:
+    value: closed
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  thinking:
+    value: manual extended thinking
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  default_api_effort:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  api_id:
+    value: claude-haiku-4-5-20251001
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  training_cutoff:
+    value: 2025-07
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  earliest_retirement_date:
+    value: '2026-10-15'
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  restrictions:
+    value:
+    - Manual extended-thinking budget; adaptive effort parameter unsupported.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  retirement_note:
+    value: Earliest allowed retirement is not an announced shutdown.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+licensing:
+  name: null
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id002
+local_inference:
+  availability: unavailable
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id002
+capabilities:
+- task: fast-bounded-coding-and-assistant-subtasks
+  judgment: Useful responsive model when limited task scope and validation matter.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-e99bd76836c1
+  - src-5c510b458547
+  contradictory_evidence_ids: []
+  conditions:
+  - Vendor partner testimonials are selected marketing evidence, not independent controlled replications.
+  known_failure_modes:
+  - Low cited non-reasoning HLE and AA-LCR performance; specific errors not categorized in retrieved page.
+  evidence_notes:
+  - 'supporting evidence: Vendor SWE-bench Verified73.3%,500 tasks,50 trials, custom prompt and large thinking
+    budget; launch partners report responsive coding.'
+  - 'contradictory evidence: AA non-reasoning HLE4%, AA-LCR50%; older near-frontier claims must not be generalized
+    to2026 hardest work.'
+  - 'Observation obs-ca2b56257797: Useful responsive model when limited task scope and validation matter.'
+  - 'Potential risk (not a measured failure): Hard reasoning and long-context misses; weaker date freshness.'
+performance_characteristics: []
+access_ids:
+- access-proprietary-access-20
+- access-proprietary-access-21-aws-bedrock
+- access-proprietary-access-21-google-cloud
+- access-proprietary-access-21-azure-foundry
+- access-proprietary-access-22-3
+- access-proprietary-access-22-ide-3
+- access-proprietary-access-23-1
+price_ids:
+- price-proprietary-claude-haiku-4-5-anthropic-92db4721bd09
+- price-proprietary-claude-haiku-4-5-anthropic-9448cb8b044e
+evidence_ids: *id002
+notes: []
+limitations:
+- Undisclosed architecture and parameter count
+- Exact supported-language inventory and per-language quality not verified

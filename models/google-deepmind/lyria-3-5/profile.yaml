@@ -1,0 +1,155 @@
+schema_version: '1.0'
+id: lyria-3-5
+verified_at: '2026-10-06'
+identity:
+  name: Lyria 3.5
+  creator: Google DeepMind
+  family: Lyria
+  version: null
+  release_date: '2026-09-03'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - music_generation
+specifications:
+  architecture:
+    value: Latent diffusion over temporal audio latents
+    status: documented
+    conditions: &id001 []
+    evidence_ids:
+    - src-adf03d8b2d85
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: &id003
+    - src-10e39629c3d3
+    - src-ef50a5784fac
+    - src-a24fd97eb3d0
+    - src-adf03d8b2d85
+    - src-85f93e060d0d
+  context_window:
+    value: 131072
+    status: documented
+    conditions: *id001
+    evidence_ids: &id002
+    - src-ef50a5784fac
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      output:
+      - audio_MP3
+      - lyrics_text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id003
+additional_specifications:
+  knowledge_cutoff:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id003
+  configuration:
+    value:
+      api: Interactions API
+      streaming: false
+      multi_turn_editing: false
+      batch: false
+      reasoning_api: false
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  api_quota:
+    value:
+      rpm: null
+      tpm: null
+      rpd: null
+      reason: Project/model/tier/account-specific; inspect active AI Studio limits. No account queried.
+      evidence_ids:
+      - src-10e39629c3d3
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  canonical_endpoint:
+    value: lyria-3.5
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  context_limit_scope:
+    value: Exact Gemini Developer API input limit
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  release_date_scope:
+    value: API endpoint release
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  language_list_complete:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id003
+  parameter_disclosure:
+    value: not disclosed in fetched public sources
+    status: documented
+    conditions: []
+    evidence_ids: *id003
+licensing:
+  name: null
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id003
+local_inference:
+  availability: unavailable
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id003
+capabilities:
+- task: prompted-full-song-concept-drafts
+  judgment: Promising from official feature evidence; comparative quality confidence remains low.
+  confidence: low
+  supporting_evidence_ids:
+  - obs-d42491a5f0c8
+  - obs-62a4e6b29fd2
+  contradictory_evidence_ids:
+  - obs-4bde1c37710c
+  conditions: []
+  known_failure_modes: []
+  evidence_notes:
+  - task-conditioned synthesis; no inference runs performed
+  - 'Observation obs-d42491a5f0c8: Full songs include prompted verses, choruses, bridges and lyrics; developer
+    guidance supports structural prompts.'
+  - 'Observation obs-62a4e6b29fd2: Google reports improved audio fidelity and lyric-prompt adherence versus
+    Lyria 2.'
+  - 'Observation obs-4bde1c37710c: Single-turn generation, variable duration/output, blocked artist-voice/copyrighted-lyric
+    prompts and SynthID watermark constrain workflows.'
+performance_characteristics: []
+access_ids:
+- access-proprietary-38
+- access-proprietary-38-google-ai-studio
+- access-proprietary-38-google-consumer
+price_ids:
+- price-proprietary-lyria-3-5-google-developer-api-158952f245f5
+evidence_ids: *id003
+notes: []
+limitations:
+- Hard maximum duration
+- Complete lyric language list
+- Independent current-version quality benchmark
+- 'Earliest product release: card predates API GA'

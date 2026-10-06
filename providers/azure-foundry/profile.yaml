@@ -1,0 +1,53 @@
+schema_version: '1.0'
+id: azure-foundry
+verified_at: '2026-10-06'
+name: Microsoft Foundry / Azure
+roles:
+- cloud-platform
+- inference-provider
+api_compatibility: []
+access_methods:
+- Models sold by Azure and partner offerings must be distinguished; region, Global and DataZone deployments
+  differ.
+geographic_availability:
+- '{"status": "partial", "summary": "Standard processing within selected geography; Global may process in any
+  supported geography; DataZone within defined US/EU zone. At-rest geography differs from inference location."}'
+- not_exhaustively_verified
+rate_limits:
+- '{"status": "partial", "summary": "Per-model/deployment/account quotas and prices not verified."}'
+caching_batching: []
+privacy_data_use:
+- '{"status": "public_verified", "summary": "Reviewed policy covers models sold by Azure: no base-model training
+  on prompts/completions. Stateful features can store data; flagged abuse may trigger storage/human review.
+  Modified monitoring requires approval."}'
+reliability: []
+model_ids:
+- gpt-6-astra
+- claude-fable-5-1
+- claude-opus-5-5
+- claude-sonnet-5-5
+- claude-haiku-4-5
+price_ids:
+- price-providers-models-sold-by-azure-azure-foundry-ca5e6135e123
+access_ids:
+- access-proprietary-access-6-azure-foundry
+- access-proprietary-access-15-azure-foundry
+- access-proprietary-access-17-azure-foundry
+- access-proprietary-access-19-azure-foundry
+- access-proprietary-access-21-azure-foundry
+evidence_ids:
+- src-82c97913adaf
+- src-3b2d0dcdbe22
+- src-ea74e2fffbc5
+- src-ad9aa6f1b8ed
+- src-4d070c5c8c67
+- src-752375ff0c97
+- src-e1910c5126bc
+notes:
+- Azure billing is separate from Microsoft/Copilot consumer subscriptions and original creator subscriptions.
+- Official Phi pages advertise Foundry. Exact region, SKU and per-token price not verified.
+- 'creator: Microsoft'
+- 'url: https://azure.microsoft.com/en-us/products/phi'
+limitations:
+- Privacy/data-use details were not fully verified in this baseline.
+- Exact public or account-specific quotas were not established.

@@ -1,0 +1,144 @@
+schema_version: '1.0'
+id: qwen3-coder-next
+verified_at: '2026-10-06'
+identity:
+  name: Qwen3-Coder-Next
+  creator: Alibaba / Qwen
+  family: Qwen3-Coder
+  version: Qwen3-Coder-Next
+  release_date: '2026-02-03'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: Hybrid MoE Gated DeltaNet / gated attention
+    status: documented
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-f2036f817d22
+    - src-71b3fd269cc8
+    - src-fe191bd136cd
+    - src-7c5fa24308a9
+  parameters:
+    value:
+      total_billion: 80
+      active_billion: 3
+      scope: creator-declared count; see notes
+      exact_parameter_count: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value:
+      native_tokens: 262144
+      extended_tokens: null
+      max_output_tokens: null
+      notes: Input plus generated output share capacity. Endpoint limits can differ.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value:
+      supported: null
+      notes: Exact supported-language list not verified in this bounded pass.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  weights:
+    value:
+      downloadable: true
+      official_repository: https://huggingface.co/Qwen/Qwen3-Coder-Next
+      formats: null
+      gate: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  reasoning_mode:
+    value: non-thinking checkpoint; internal agent skill does not mean exposed reasoning mode
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weight_only_floor_decimal_gb:
+    value:
+      bf16: 160
+      int8: 80
+      ideal_4bit: 40.0
+    status: estimated
+    conditions:
+    - Batch 1, short/moderate context unless otherwise stated.
+    - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+      stated count, runtime, OS and temporary loading buffers.
+    - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
+      storage of inactive experts.
+    - Published maximum context is not a guarantee it fits on the suggested local machine.
+    evidence_ids: *id002
+  release_date_precision:
+    value: day
+    status: documented
+    conditions: []
+    evidence_ids: *id002
+licensing:
+  name: Apache-2.0
+  commercial_use: allowed
+  redistribution: 'true'
+  fine_tuning: null
+  hosted_service: 'true'
+  restrictions:
+  - Retain copyright/license notices; comply with the license.
+  - A license summary, not legal advice. Open weights does not by itself establish a fully open-source AI system.
+  evidence_ids:
+  - src-f2036f817d22
+local_inference:
+  availability: available
+  hardware_notes:
+  - 'Planning estimate: 48–64GB aggregate GPU/unified memory at 4-bit and moderate context; 24GB GPU can offload
+    experts into 64GB+ RAM at a throughput cost.'
+  - ''
+  conditions:
+  - Batch 1, short/moderate context unless otherwise stated.
+  - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+    stated count, runtime, OS and temporary loading buffers.
+  - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
+    of inactive experts.
+  - Published maximum context is not a guarantee it fits on the suggested local machine.
+  evidence_ids: *id002
+capabilities:
+- task: local-repository-editing
+  judgment: Useful coding-specialist candidate where non-thinking responses and permissive licensing matter.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-71b3fd269cc8
+  - src-fe191bd136cd
+  contradictory_evidence_ids:
+  - src-7c5fa24308a9
+  conditions:
+  - Use its coding chat template and supported tool parser; do not add thinking tokens.
+  known_failure_modes:
+  - General knowledge/reasoning quality is not established by SWE performance; small quantization may degrade
+    code correctness.
+  evidence_notes: []
+performance_characteristics: []
+access_ids:
+- access-open-qwen3-coder-next-weights
+price_ids: []
+evidence_ids: *id002
+notes: []
+limitations:
+- No model inference or benchmark was run in this research pass.

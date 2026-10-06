@@ -1,0 +1,34 @@
+schema_version: '1.0'
+id: cerebras
+verified_at: '2026-10-06'
+name: Cerebras Inference
+roles:
+- inference-provider
+api_compatibility: []
+access_methods:
+- Shared Inference trial/PayGo and separate Dedicated Inference.
+geographic_availability:
+- '{"status": "partial", "summary": "Processing region and country eligibility unverified."}'
+- not_exhaustively_verified
+rate_limits:
+- '{"status": "partial", "summary": "Trial requires verified payment method: one-time $5, expires 30 days,
+  no permanent renewing free tier. Paid gpt-oss-120b 1M uncached TPM/3M total TPM/1k RPM; token buckets refill
+  continuously."}'
+caching_batching: []
+privacy_data_use:
+- '{"status": "partial", "summary": "Current blanket retention/training policy not verified; old model-specific
+  migration claim is insufficient for all current routes."}'
+reliability: []
+model_ids: []
+price_ids:
+- price-providers-gpt-oss-120b-cerebras-26391efc6d01
+access_ids:
+- access-providers-access-cerebras-trial
+evidence_ids:
+- src-29ae95a372cc
+- src-45a86641ba67
+- src-6a5ec3406d1f
+notes:
+- Catalog says shared models are unpruned, with selective weight-only storage quantization. Dedicated contracts
+  can differ.
+limitations: []

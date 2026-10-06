@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "access-record.schema.json",
+  "title": "access-record",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "verified_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "model_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "provider_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "product": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "methods": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string"
+    },
+    "price_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "restrictions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(src|obs)-[a-f0-9]{12}$"
+      },
+      "uniqueItems": true
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "model_label": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "client_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "requires_account": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "subscription_includes_api": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "reset_cadence": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "verified_at",
+    "model_id",
+    "provider_id",
+    "product",
+    "methods",
+    "status",
+    "price_ids",
+    "restrictions",
+    "evidence_ids",
+    "notes",
+    "model_label",
+    "client_id",
+    "requires_account",
+    "subscription_includes_api",
+    "reset_cadence",
+    "conditions"
+  ],
+  "additionalProperties": false
+}

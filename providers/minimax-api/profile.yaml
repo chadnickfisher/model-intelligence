@@ -1,0 +1,30 @@
+schema_version: '1.0'
+id: minimax-api
+verified_at: '2026-10-06'
+name: MiniMax API
+roles:
+- inference-provider
+api_compatibility: []
+access_methods: []
+geographic_availability: []
+rate_limits: []
+caching_batching: []
+privacy_data_use: []
+reliability: []
+model_ids:
+- minimax-m3
+price_ids:
+- price-open-minimax-m3-minimax-api-cfa19bcf4e29
+- price-open-minimax-m3-minimax-api-f5f41f0c9af4
+- price-open-minimax-m3-minimax-api-bb9117221622
+- price-open-minimax-m3-minimax-api-3a2d3f3837bf
+access_ids:
+- access-open-minimax-m3-minimax-api
+evidence_ids:
+- src-40c9ce9b4812
+notes:
+- 'creator: MiniMax'
+- 'url: https://platform.minimax.io/docs/pricing/overview'
+limitations:
+- Privacy/data-use details were not fully verified in this baseline.
+- Exact public or account-specific quotas were not established.

@@ -1,0 +1,41 @@
+schema_version: '1.0'
+id: openrouter
+verified_at: '2026-10-06'
+name: OpenRouter
+roles:
+- inference-provider
+- gateway
+api_compatibility: []
+access_methods:
+- Unified paid/free model routing, provider pinning/fallback, and BYOK.
+geographic_availability:
+- '{"status": "partial", "summary": "Business EU/US endpoints constrain providers and fail rather than falling
+  outside region. Unknown-region providers excluded; some account data remains US."}'
+- not_exhaustively_verified
+rate_limits:
+- '{"status": "partial", "summary": "Free plan advertises 50 requests/day; precise reset and account purchased-credit
+  exceptions not fully verified."}'
+caching_batching: []
+privacy_data_use:
+- '{"status": "public_verified", "summary": "Prompt/completion logging off by default at gateway; metadata
+  logged. Upstream retention/training policy depends on chosen route. Privacy filters can reject incompatible
+  providers."}'
+reliability: []
+model_ids: []
+price_ids:
+- price-providers-credit-purchases-openrouter-0430bdc1b69f
+- price-providers-credit-purchases-openrouter-e96caea514fe
+- price-providers-byok-openrouter-ad61f93b0f08
+access_ids:
+- access-providers-access-openrouter
+- access-providers-access-openrouter-byok
+evidence_ids:
+- src-e71e7d7dfbb1
+- src-cf152e0fafb2
+- src-45d607317981
+- src-d0fcb427591e
+- src-296afef18214
+notes:
+- Credits are USD-denominated; inference pass-through plus credit-purchase fee. Model licenses and provider
+  terms remain route-specific.
+limitations: []

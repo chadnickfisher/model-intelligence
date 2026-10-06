@@ -1,0 +1,141 @@
+schema_version: '1.0'
+id: ministral-3-8b
+verified_at: '2026-10-06'
+identity:
+  name: Ministral 3 8B Instruct
+  creator: Mistral AI
+  family: Ministral 3
+  version: Ministral-3-8B-Instruct-2512
+  release_date: '2025-12-02'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: Dense 8.4B language model plus 0.4B vision encoder
+    status: documented
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-f2036f817d22
+    - src-e37726fea976
+    - src-a6a9e3d9e616
+  parameters:
+    value:
+      total_billion: 8.8
+      active_billion: 8.4
+      scope: 8.4B LM + 0.4B vision; active_billion denotes dense LM, not per-image encoder compute.
+      exact_parameter_count: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value:
+      native_tokens: 262144
+      extended_tokens: null
+      max_output_tokens: null
+      notes: Input plus generated output share capacity. Endpoint limits can differ.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value:
+      supported: null
+      notes: Exact supported-language list not verified in this bounded pass.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  weights:
+    value:
+      downloadable: true
+      official_repository: https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512
+      formats: null
+      gate: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weight_only_floor_decimal_gb:
+    value:
+      bf16: 17.6
+      int8: 8.8
+      ideal_4bit: 4.4
+    status: estimated
+    conditions:
+    - Batch 1, short/moderate context unless otherwise stated.
+    - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+      stated count, runtime, OS and temporary loading buffers.
+    - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
+      storage of inactive experts.
+    - Published maximum context is not a guarantee it fits on the suggested local machine.
+    evidence_ids: &id003
+    - src-e37726fea976
+  release_date_precision:
+    value: day
+    status: documented
+    conditions: []
+    evidence_ids: *id002
+licensing:
+  name: Apache-2.0
+  commercial_use: allowed
+  redistribution: 'true'
+  fine_tuning: null
+  hosted_service: 'true'
+  restrictions:
+  - Retain copyright/license notices; comply with the license.
+  - A license summary, not legal advice. Open weights does not by itself establish a fully open-source AI system.
+  evidence_ids:
+  - src-f2036f817d22
+local_inference:
+  availability: available
+  hardware_notes:
+  - Vendor says FP8 fits 12GB VRAM; planning 8–12GB with 4-bit at modest context.
+  - Instruct FP8, BF16 and separate Reasoning checkpoints exist; other family sizes are 3B and 14B, not identical
+    profiles.
+  conditions:
+  - Batch 1, short/moderate context unless otherwise stated.
+  - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+    stated count, runtime, OS and temporary loading buffers.
+  - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
+    of inactive experts.
+  - Published maximum context is not a guarantee it fits on the suggested local machine.
+  evidence_ids: *id003
+capabilities:
+- task: edge-multilingual-chat
+  judgment: Practical candidate for bounded local chat, extraction and image description.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-e37726fea976
+  - src-a6a9e3d9e616
+  contradictory_evidence_ids:
+  - src-a6a9e3d9e616
+  conditions:
+  - Choose the Instruct versus separate Reasoning checkpoint deliberately.
+  known_failure_modes:
+  - Complex autonomous planning and reasoning remain weaker; full 256k context can exceed edge memory.
+  evidence_notes: []
+performance_characteristics: []
+access_ids:
+- access-open-ministral-3-8b-weights
+- access-open-ministral-3-8b-mistral-api
+price_ids:
+- price-open-ministral-3-8b-mistral-api-e3e015fcc82e
+evidence_ids: *id002
+notes: []
+limitations:
+- No model inference or benchmark was run in this research pass.

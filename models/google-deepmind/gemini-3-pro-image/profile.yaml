@@ -1,0 +1,178 @@
+schema_version: '1.0'
+id: gemini-3-pro-image
+verified_at: '2026-10-06'
+identity:
+  name: Nano Banana Pro / Gemini 3 Pro Image
+  creator: Google DeepMind
+  family: Gemini
+  version: null
+  release_date: '2026-05-28'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - image_generation
+  - image_editing
+specifications:
+  architecture:
+    value: null
+    status: unknown
+    conditions: &id001 []
+    evidence_ids:
+    - src-d35a477c49c4
+    - src-4c04e11c8a1b
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: &id003
+    - src-5d0514efd100
+    - src-10e39629c3d3
+    - src-21fe0d4c63a7
+    - src-a24fd97eb3d0
+    - src-d35a477c49c4
+    - src-4c04e11c8a1b
+    - src-b88c4950bbf3
+  context_window:
+    value: 65536
+    status: documented
+    conditions: *id001
+    evidence_ids: &id002
+    - src-21fe0d4c63a7
+  maximum_output:
+    value: 32768
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      output:
+      - text
+      - image
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value:
+      recommended:
+      - EN
+      - ar-EG
+      - de-DE
+      - es-MX
+      - fr-FR
+      - hi-IN
+      - id-ID
+      - it-IT
+      - ja-JP
+      - ko-KR
+      - pt-BR
+      - ru-RU
+      - ua-UA
+      - vi-VN
+      - zh-CN
+      note: Locale strings copied as documented; recommendation is not an exhaustive support guarantee.
+      evidence_ids:
+      - src-5d0514efd100
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+additional_specifications:
+  knowledge_cutoff:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id003
+  configuration:
+    value:
+      thinking_supported: true
+      search_grounding_supported: true
+      function_calling: false
+      structured_outputs: false
+      batch: true
+      flex: null
+      priority: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  api_quota:
+    value:
+      rpm: null
+      tpm: null
+      rpd: null
+      reason: Project/model/tier/account-specific; inspect active AI Studio limits. No account queried.
+      evidence_ids:
+      - src-10e39629c3d3
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  canonical_endpoint:
+    value: gemini-3-pro-image
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  context_limit_scope:
+    value: Exact Gemini Developer API input limit
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  release_date_scope:
+    value: API endpoint release
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  language_list_complete:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id003
+  parameter_disclosure:
+    value: not disclosed in fetched public sources
+    status: documented
+    conditions: []
+    evidence_ids: *id003
+licensing:
+  name: null
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id003
+local_inference:
+  availability: unavailable
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id003
+capabilities:
+- task: visual-concepts-mockups-and-text-heavy-image-drafts
+  judgment: Good candidate for reviewed design work; do not use output as faithful forensic restoration.
+  confidence: medium
+  supporting_evidence_ids:
+  - obs-bbe38314fda9
+  - obs-c3991e29aaff
+  contradictory_evidence_ids:
+  - obs-c3991e29aaff
+  conditions:
+  - December 2025 Nano Banana Pro version
+  known_failure_modes: []
+  evidence_notes:
+  - task-conditioned synthesis; no inference runs performed
+  - 'Observation obs-bbe38314fda9: Grounded image creation and text/layout control are supported; results require
+    review.'
+  - 'Observation obs-c3991e29aaff: Independent low-level vision study found attractive reconstructed detail
+    but lower reference-based fidelity than specialists.'
+performance_characteristics: []
+access_ids:
+- access-proprietary-36
+- access-proprietary-36-google-ai-studio
+- access-proprietary-36-google-consumer
+price_ids:
+- price-proprietary-gemini-3-pro-image-google-developer-api-3c200e46dbab
+- price-proprietary-gemini-3-pro-image-google-developer-api-d065c9f3a69a
+evidence_ids: *id003
+notes: []
+limitations:
+- 'Flex/Priority availability: pricing page lists rates but model capability page says unsupported.'
+- Current model-card token-limit reconciliation

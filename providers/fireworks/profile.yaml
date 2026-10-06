@@ -1,0 +1,37 @@
+schema_version: '1.0'
+id: fireworks
+verified_at: '2026-10-06'
+name: Fireworks AI
+roles:
+- inference-provider
+api_compatibility: []
+access_methods:
+- Serverless Standard/Priority/Fast; batch; dedicated deployments and training.
+geographic_availability:
+- '{"status": "partial", "summary": "US-only variants exist; region-restricted dedicated deployments cost 1.5x
+  published standard rates."}'
+- not_exhaustively_verified
+rate_limits:
+- '{"status": "partial", "summary": "Higher limits enterprise-specific; exact account quotas/reset unverified."}'
+caching_batching: []
+privacy_data_use:
+- '{"status": "public_verified", "summary": "Open-model inference prompts/generations not logged or stored
+  absent explicit opt-in. Training workflows persist datasets/checkpoints; closed/passthrough scope requires
+  separate review."}'
+reliability: []
+model_ids: []
+price_ids:
+- price-providers-serverless-fireworks-62abe22f454b
+- price-providers-kimi-k3-fireworks-86a9ddc05c65
+- price-providers-serverless-fireworks-1d9324702206
+- price-providers-kimi-k3-fireworks-b8a86cdad69e
+access_ids:
+- access-providers-access-fireworks-serverless
+evidence_ids:
+- src-24c3404d8b6f
+- src-f5a5dc8f8871
+- src-c0efa35c6619
+notes:
+- Prepaid serverless token billing differs from dedicated per-GPU-second billing. Batch advertised at 50% input/output
+  serverless rates.
+limitations: []

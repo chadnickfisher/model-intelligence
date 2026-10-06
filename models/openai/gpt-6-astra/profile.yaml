@@ -1,0 +1,162 @@
+schema_version: '1.0'
+id: gpt-6-astra
+verified_at: '2026-10-06'
+identity:
+  name: GPT-6 Astra
+  creator: OpenAI
+  family: GPT-6
+  version: null
+  release_date: '2026-09-03'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: null
+    status: unknown
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-67b4ce9b4e6a
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-97b73e99f5cd
+    - src-ea74e2fffbc5
+    - src-f2dca02215ef
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value: 1050000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: 128000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value: Multilingual; exact inventory not specified
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  knowledge_cutoff:
+    value: '2026-04-30'
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weights:
+    value: closed
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  reasoning_efforts:
+    value:
+    - low
+    - medium
+    - high
+    - xhigh
+    - max
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  tool_calling:
+    value: Responses API; Sol/Astra Chat Completions does not support tools. Luna Chat Completions function
+      calling requires none effort.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  restrictions:
+    value:
+    - No none effort; custom temperature/top_p/logprobs unsupported.
+    - Tool calling requires Responses API.
+    - Safety monitoring may stop API work for review.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+licensing:
+  name: null
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id002
+local_inference:
+  availability: unavailable
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id002
+capabilities:
+- task: complex-coding-and-computer-workflows
+  judgment: Strong candidate when difficult end-to-end work justifies latency and token cost.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-97b73e99f5cd
+  - src-ea74e2fffbc5
+  contradictory_evidence_ids: []
+  conditions:
+  - AA harness/version and reasoning effort are material; these are not success probabilities for an arbitrary
+    user task.
+  known_failure_modes:
+  - AA terminal tasks still fail at high and max effort; OpenAI documents legitimate work being interrupted
+    by safety monitoring.
+  evidence_notes:
+  - 'supporting evidence: AA Terminal-Bench4.0: high54%, max59%; AutomationBench-AA high67%, max68%.'
+  - 'contradictory evidence: Higher effort is not uniformly better: AA-Omniscience high44 versus max43; GDP.pdf31%
+    for both.'
+  - 'Observation obs-a91fd388dc88: Strong candidate when difficult end-to-end work justifies latency and token
+    cost.'
+  - 'Potential risk (not a measured failure): Incorrect or out-of-scope actions remain possible; production
+    safety monitors can stop legitimate work.'
+- task: scientific-research
+  judgment: A strong escalation model for hard scientific workflows.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-f2dca02215ef
+  contradictory_evidence_ids: []
+  conditions:
+  - Maximum effort; tool-enabled scientific terminal workflow.
+  known_failure_modes: []
+  evidence_notes:
+  - 'supporting evidence: OpenAI reports68.1% on Terminal-Bench Science0.1 in the Sol comparison.'
+  - 'contradictory evidence: Substantial residual failures; vendor-run setting and benchmark version affect
+    results.'
+  - 'Observation obs-8eab532ce0f9: A strong escalation model for hard scientific workflows.'
+  - 'Potential risk (not a measured failure): Confident wrong derivations or incomplete experiments require
+    independent verification.'
+performance_characteristics: []
+access_ids:
+- access-proprietary-access-1-0
+- access-proprietary-access-2
+- access-proprietary-access-3-0
+- access-proprietary-access-4-0
+- access-proprietary-access-4-ide-0
+- access-proprietary-access-6-azure-foundry
+- access-proprietary-access-6-aws-bedrock
+price_ids:
+- price-proprietary-gpt-6-astra-openai-3d5b2153d0ca
+- price-proprietary-gpt-6-astra-openai-83dbee0ec140
+- price-proprietary-gpt-6-astra-openai-32a917ee1b7b
+- price-proprietary-gpt-6-astra-openai-e68876e21c23
+- price-proprietary-gpt-6-astra-openai-4a3725464c5e
+- price-proprietary-gpt-6-astra-openai-749a19560f3b
+evidence_ids: *id002
+notes: []
+limitations:
+- Undisclosed architecture and parameter count
+- Exact supported-language inventory and per-language quality not verified

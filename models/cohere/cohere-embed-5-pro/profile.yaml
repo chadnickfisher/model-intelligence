@@ -1,0 +1,108 @@
+schema_version: '1.0'
+id: cohere-embed-5-pro
+verified_at: '2026-10-06'
+identity:
+  name: Embed 5 Pro
+  creator: Cohere
+  family: Embed
+  version: 5 Pro
+  release_date: '2026-09-30'
+  latest_meaningful_update: null
+  status: unknown
+  model_types:
+  - specialist
+specifications:
+  architecture:
+    value: null
+    status: unknown
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-9d4f7ae81230
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value: 128000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      - fused text+image
+      output:
+      - embedding
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value: 100+
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  dimensions:
+    value:
+    - 2048
+    - 1536
+    - 1024
+    - 768
+    - 512
+    - 256
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  api_alias:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  weights:
+    value: private_deployment_available; public-weight_license_unverified
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+licensing:
+  name: commercial terms
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id002
+local_inference:
+  availability: unknown
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id002
+capabilities:
+- task: complex-document-retrieval-offline-indexing
+  judgment: Promising quality-focused retrieval option based on vendor tests; independent reproduction not
+    verified.
+  confidence: medium
+  supporting_evidence_ids:
+  - obs-752ea46df2f7
+  contradictory_evidence_ids: []
+  conditions: []
+  known_failure_modes: []
+  evidence_notes:
+  - 'Observation obs-752ea46df2f7: Public evidence observation'
+performance_characteristics: []
+access_ids: []
+price_ids:
+- price-providers-cohere-embed-5-pro-cohere-516f45ff44b6
+- price-providers-cohere-embed-5-pro-cohere-d310d3a8de69
+evidence_ids: *id002
+notes: []
+limitations:
+- Retrieval ranking quality is corpus-dependent.
+- API alias not confirmed.

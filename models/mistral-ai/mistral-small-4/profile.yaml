@@ -1,0 +1,140 @@
+schema_version: '1.0'
+id: mistral-small-4
+verified_at: '2026-10-06'
+identity:
+  name: Mistral Small 4 119B
+  creator: Mistral AI
+  family: Mistral Small
+  version: Mistral-Small-4-119B-2603
+  release_date: '2026-03-16'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: MoE 128 experts, four active; integrated instruction/reasoning/code modes
+    status: documented
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-f2036f817d22
+    - src-dcba779ffa90
+    - src-1cea80c18ff6
+  parameters:
+    value:
+      total_billion: 119
+      active_billion: 6.5
+      scope: creator-declared count; see notes
+      exact_parameter_count: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value:
+      native_tokens: 262144
+      extended_tokens: null
+      max_output_tokens: null
+      notes: Input plus generated output share capacity. Endpoint limits can differ.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value:
+      supported: null
+      notes: Exact supported-language list not verified in this bounded pass.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  weights:
+    value:
+      downloadable: true
+      official_repository: https://huggingface.co/mistralai/Mistral-Small-4-119B-2603
+      formats: null
+      gate: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weight_only_floor_decimal_gb:
+    value:
+      bf16: 238
+      int8: 119
+      ideal_4bit: 59.5
+    status: estimated
+    conditions:
+    - Batch 1, short/moderate context unless otherwise stated.
+    - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+      stated count, runtime, OS and temporary loading buffers.
+    - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
+      storage of inactive experts.
+    - Published maximum context is not a guarantee it fits on the suggested local machine.
+    evidence_ids: *id002
+  release_date_precision:
+    value: day
+    status: documented
+    conditions: []
+    evidence_ids: *id002
+licensing:
+  name: Apache-2.0
+  commercial_use: allowed
+  redistribution: 'true'
+  fine_tuning: null
+  hosted_service: 'true'
+  restrictions:
+  - Retain copyright/license notices; comply with the license.
+  - A license summary, not legal advice. Open weights does not by itself establish a fully open-source AI system.
+  evidence_ids:
+  - src-f2036f817d22
+local_inference:
+  availability: available
+  hardware_notes:
+  - 'Planning estimate: 80GB-class aggregate memory with 4-bit/NVFP4, moderate context; FP8 approximately 119GB
+    weights before overhead.'
+  - Vendor supplies FP8, NVFP4 and EAGLE acceleration options.
+  conditions:
+  - Batch 1, short/moderate context unless otherwise stated.
+  - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+    stated count, runtime, OS and temporary loading buffers.
+  - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
+    of inactive experts.
+  - Published maximum context is not a guarantee it fits on the suggested local machine.
+  evidence_ids: *id002
+capabilities:
+- task: latency-sensitive-enterprise-assistant
+  judgment: Useful candidate for concise multilingual extraction, tool use and mixed chat/reasoning.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-dcba779ffa90
+  - src-1cea80c18ff6
+  contradictory_evidence_ids: []
+  conditions:
+  - Toggle none/high reasoning per request and compare end-to-end success.
+  known_failure_modes:
+  - Creator broad best-in-class claims are not established by independent task-matched evidence; quantization
+    and cache memory matter.
+  evidence_notes: []
+performance_characteristics: []
+access_ids:
+- access-open-mistral-small-4-weights
+- access-open-mistral-small-4-mistral-api
+price_ids:
+- price-open-mistral-small-4-mistral-api-2c982a02c545
+evidence_ids: *id002
+notes: []
+limitations:
+- No model inference or benchmark was run in this research pass.

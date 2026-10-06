@@ -1,0 +1,145 @@
+schema_version: '1.0'
+id: qwen3-5-9b
+verified_at: '2026-10-06'
+identity:
+  name: Qwen3.5-9B
+  creator: Alibaba / Qwen
+  family: Qwen3.5
+  version: Qwen3.5-9B
+  release_date: null
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: Dense hybrid Gated DeltaNet / gated attention with vision encoder
+    status: documented
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-f2036f817d22
+    - src-e0a64484787e
+    - src-7a37d210463f
+  parameters:
+    value:
+      total_billion: 9
+      active_billion: 9
+      scope: 9B language model; approximately 9.7B in independent complete-model catalog.
+      exact_parameter_count: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value:
+      native_tokens: 262144
+      extended_tokens: 1010000
+      max_output_tokens: null
+      notes: Input plus generated output share capacity. Endpoint limits can differ.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      - video
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value:
+      supported: null
+      notes: Exact supported-language list not verified in this bounded pass.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  weights:
+    value:
+      downloadable: true
+      official_repository: https://huggingface.co/Qwen/Qwen3.5-9B
+      formats: null
+      gate: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weight_only_floor_decimal_gb:
+    value:
+      bf16: 18
+      int8: 9
+      ideal_4bit: 4.5
+    status: estimated
+    conditions:
+    - Batch 1, short/moderate context unless otherwise stated.
+    - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+      stated count, runtime, OS and temporary loading buffers.
+    - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
+      storage of inactive experts.
+    - Published maximum context is not a guarantee it fits on the suggested local machine.
+    evidence_ids: *id002
+  release_date_reported:
+    value: 2026-03
+    status: documented
+    conditions:
+    - Source supplied a partial or non-day date; not promoted to an exact release date.
+    evidence_ids: *id002
+  release_date_precision:
+    value: month
+    status: documented
+    conditions: []
+    evidence_ids: *id002
+licensing:
+  name: Apache-2.0
+  commercial_use: allowed
+  redistribution: 'true'
+  fine_tuning: null
+  hosted_service: 'true'
+  restrictions:
+  - Retain copyright/license notices; comply with the license.
+  - A license summary, not legal advice. Open weights does not by itself establish a fully open-source AI system.
+  evidence_ids:
+  - src-f2036f817d22
+local_inference:
+  availability: available
+  hardware_notes:
+  - 'Planning estimate: 8–12GB GPU or 16GB+ unified memory at 4-bit, modest context; 24GB-class memory is more
+    comfortable for BF16.'
+  - 9B is LM count; independent catalog reports 9.7B complete parameters. Million-token mode does not fit these
+    budgets automatically.
+  conditions:
+  - Batch 1, short/moderate context unless otherwise stated.
+  - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+    stated count, runtime, OS and temporary loading buffers.
+  - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
+    of inactive experts.
+  - Published maximum context is not a guarantee it fits on the suggested local machine.
+  evidence_ids: *id002
+capabilities:
+- task: small-local-visual-assistant
+  judgment: Reasonable low-memory candidate for short visual QA, extraction and bounded assistant work.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-e0a64484787e
+  - src-7a37d210463f
+  contradictory_evidence_ids: []
+  conditions:
+  - Measure task accuracy at target image resolution and context.
+  known_failure_modes:
+  - Verbose reasoning can dominate latency; small-model factual and complex planning errors.
+  evidence_notes: []
+performance_characteristics: []
+access_ids:
+- access-open-qwen3-5-9b-weights
+price_ids: []
+evidence_ids: *id002
+notes: []
+limitations:
+- No model inference or benchmark was run in this research pass.

@@ -1,0 +1,46 @@
+schema_version: '1.0'
+id: xai
+verified_at: '2026-10-06'
+name: xAI / SpaceXAI
+roles:
+- creator
+- inference-provider
+api_compatibility: []
+access_methods:
+- Grok API; Grok consumer app; Grok Build are distinct access products.
+geographic_availability:
+- '{"status": "partial", "summary": "Global endpoint does not guarantee processing region. US endpoint serves
+  Grok 4.7/4.6 with 10% token premium; files, collections and server-side tools fall outside its US guarantee."}'
+- not_exhaustively_verified
+rate_limits:
+- '{"status": "partial", "summary": "Spend-tiered per-model RPS and TPM. Model detail displays 150 RPS/50M
+  TPM; not a universal account entitlement."}'
+caching_batching: []
+privacy_data_use:
+- '{"status": "public_verified", "summary": "API: no training without explicit permission; default requests/responses
+  retained 30 days for audit. Team-level self-serve ZDR where available disables persistent features including
+  Files, Collections and Batch."}'
+reliability: []
+model_ids: []
+price_ids:
+- price-providers-xai-grok-4-7-xai-39519ba1474e
+- price-providers-api-xai-35fe1f107006
+- price-providers-api-xai-507fb7e8423e
+- price-providers-us-regional-api-xai-36d03fc1452f
+- price-providers-voice-api-xai-9fdcfab363b7
+access_ids:
+- access-providers-access-xai-api
+- access-providers-access-xai-consumer
+evidence_ids:
+- src-d14fea025626
+- src-ac0d5cc662f8
+- src-983be7893acf
+- src-ea2ea7424a68
+- src-7153ea4f2bae
+- src-f1f9e55552d3
+- src-905d5d7a5fb4
+- src-399a034698f6
+- src-dedf56167aa3
+notes:
+- Proprietary current Grok models; consumer subscription is not an API credit balance.
+limitations: []

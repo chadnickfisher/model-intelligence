@@ -1,0 +1,162 @@
+schema_version: '1.0'
+id: qwen3-8-flash-next
+verified_at: '2026-10-06'
+identity:
+  name: Qwen3.8-Flash-Next
+  creator: Alibaba / Qwen
+  family: Qwen3.8
+  version: Qwen3.8-Flash-Next
+  release_date: '2026-08-26'
+  latest_meaningful_update: null
+  status: preview
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: 'Hybrid MoE: Gated DeltaNet, Qwen Sparse Attention, n-gram lookup embeddings, gated residual, MTP'
+    status: documented
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-0af45d93e83c
+    - src-eb79656c925c
+    - src-fb8e00efa720
+    - src-0ab9540155b9
+  parameters:
+    value:
+      total_billion: 180
+      active_billion: 6
+      scope: creator-declared count; see notes
+      exact_parameter_count: null
+      components_billion:
+        backbone: 125
+        ngram_embeddings: 51
+        mtp: 4
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value:
+      native_tokens: 262144
+      extended_tokens: 1000000
+      max_output_tokens: null
+      notes: Input plus generated output share capacity. Endpoint limits can differ.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      - video
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value:
+      supported: null
+      notes: Exact supported-language list not verified in this bounded pass.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  weights:
+    value:
+      downloadable: true
+      official_repository: https://huggingface.co/Qwen/Qwen3.8-Flash-Next
+      formats: null
+      gate: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weight_only_floor_decimal_gb:
+    value:
+      bf16: 360
+      int8: 180
+      ideal_4bit: 90.0
+    status: estimated
+    conditions:
+    - Batch 1, short/moderate context unless otherwise stated.
+    - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+      stated count, runtime, OS and temporary loading buffers.
+    - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
+      storage of inactive experts.
+    - Published maximum context is not a guarantee it fits on the suggested local machine.
+    evidence_ids: &id003
+    - src-fb8e00efa720
+  release_date_precision:
+    value: day
+    status: documented
+    conditions: []
+    evidence_ids: *id002
+licensing:
+  name: Qwen Community License 1.0
+  commercial_use: conditional
+  redistribution: 'true'
+  fine_tuning: null
+  hosted_service: 'true'
+  restrictions:
+  - Retain notices.
+  - Separate commercial license for MaaS or independent coding/office AI assistant businesses; internal-use
+    exemption.
+  - Display model name above 100M MAU or $20M monthly product/service revenue; see exact definitions.
+  - A license summary, not legal advice. Open weights does not by itself establish a fully open-source AI system.
+  evidence_ids:
+  - src-0af45d93e83c
+local_inference:
+  availability: available
+  hardware_notes:
+  - 'Planning: roughly 100–128GB aggregate memory for a full 4-bit layout; specialized SSD/RAM offload can
+    run on smaller accelerators.'
+  - Creator separates 125B backbone, 51B n-gram table and 4B MTP. A 32GB GPU + 64GB RAM practitioner setup
+    relies on SSD tables, CPU experts, patched runtime and reduced effective resident weight footprint.
+  conditions:
+  - Batch 1, short/moderate context unless otherwise stated.
+  - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+    stated count, runtime, OS and temporary loading buffers.
+  - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
+    of inactive experts.
+  - Published maximum context is not a guarantee it fits on the suggested local machine.
+  evidence_ids: *id003
+capabilities:
+- task: efficient-agent-workers
+  judgment: Interesting for local tool-heavy workers when offloading and license terms fit.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-eb79656c925c
+  - src-0ab9540155b9
+  - src-fb8e00efa720
+  contradictory_evidence_ids:
+  - src-fb8e00efa720
+  conditions:
+  - Benchmark the exact quantized runtime; medium effort performed better than xhigh in one looping case.
+  known_failure_modes:
+  - Runtime-specific grammar failures, thinking loops, CPU/SSD bottlenecks.
+  evidence_notes: []
+- task: commercial-coding-assistant-hosting
+  judgment: Do not assume permissive self-hosted commercial availability.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-0af45d93e83c
+  contradictory_evidence_ids: []
+  conditions:
+  - Check whether business is MaaS or an independent coding/office assistant.
+  known_failure_modes:
+  - License choice can block a deployment even when weights are downloadable.
+  evidence_notes:
+  - 'Conservative baseline confidence: broader convergence has not been independently audited.'
+performance_characteristics: []
+access_ids:
+- access-open-qwen3-8-flash-next-weights
+price_ids: []
+evidence_ids: *id002
+notes: []
+limitations:
+- No model inference or benchmark was run in this research pass.

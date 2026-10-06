@@ -1,0 +1,198 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "provider-profile.schema.json",
+  "title": "provider-profile",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "verified_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "name": {
+      "type": "string"
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "creator",
+          "inference-provider",
+          "gateway",
+          "cloud-platform",
+          "client",
+          "access-product",
+          "weights-host",
+          "unknown"
+        ]
+      }
+    },
+    "api_compatibility": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "access_methods": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "geographic_availability": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rate_limits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "caching_batching": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "privacy_data_use": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reliability": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "task": {
+            "type": "string"
+          },
+          "judgment": {
+            "type": "string"
+          },
+          "confidence": {
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          },
+          "supporting_evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^(src|obs)-[a-f0-9]{12}$"
+            },
+            "uniqueItems": true
+          },
+          "contradictory_evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^(src|obs)-[a-f0-9]{12}$"
+            },
+            "uniqueItems": true
+          },
+          "conditions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "known_failure_modes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence_notes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "task",
+          "judgment",
+          "confidence",
+          "supporting_evidence_ids",
+          "contradictory_evidence_ids",
+          "conditions",
+          "known_failure_modes",
+          "evidence_notes"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "model_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "price_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "access_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(src|obs)-[a-f0-9]{12}$"
+      },
+      "uniqueItems": true
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "verified_at",
+    "name",
+    "roles",
+    "api_compatibility",
+    "access_methods",
+    "geographic_availability",
+    "rate_limits",
+    "caching_batching",
+    "privacy_data_use",
+    "reliability",
+    "model_ids",
+    "price_ids",
+    "access_ids",
+    "evidence_ids",
+    "notes",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,44 @@
+schema_version: '1.0'
+id: groq
+verified_at: '2026-10-06'
+name: Groq
+roles:
+- inference-provider
+api_compatibility: []
+access_methods:
+- Hosted model inference; Free/Developer and enterprise access; preview model lifecycle distinct from production.
+geographic_availability:
+- '{"status": "partial", "summary": "Retained customer data stored in US GCP buckets; this is storage evidence,
+  not a blanket inference-location claim."}'
+- not_exhaustively_verified
+rate_limits:
+- '{"status": "partial", "summary": "Developer gpt-oss-120b: 250k TPM, 1k RPM. Preview models can disappear
+  at short notice."}'
+caching_batching: []
+privacy_data_use:
+- '{"status": "public_verified", "summary": "Inference customer data not retained by default; limited reliability/abuse
+  logging up to 30 days possible. All customers may enable ZDR; persistence features then disabled. Batch files
+  30 days; training until deleted."}'
+reliability: []
+model_ids:
+- gpt-oss-120b
+- gpt-oss-20b
+price_ids:
+- price-proprietary-gpt-oss-120b-groq-0f327a7e8dbf
+- price-proprietary-gpt-oss-120b-groq-cf02720da9d9
+- price-proprietary-gpt-oss-20b-groq-38ccf87aa66a
+- price-providers-gpt-oss-120b-groq-d03d282ce7d7
+- price-providers-speech-to-text-api-groq-9400c198843b
+- price-providers-tts-api-groq-a4d381fb1bc9
+access_ids:
+- access-proprietary-access-27
+- access-proprietary-access-30
+- access-providers-access-groq-developer
+evidence_ids:
+- src-027b0340f566
+- src-6296981297f7
+- src-775e6c7ffc21
+- src-c03a6de01b20
+notes:
+- Model creator remains the original lab, not Groq. Open-weight license still relevant to redistribution/self-hosting.
+limitations: []

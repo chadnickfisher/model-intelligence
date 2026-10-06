@@ -1,0 +1,4268 @@
+schema_version: '1.0'
+verified_at: '2026-10-06'
+records:
+- schema_version: '1.0'
+  id: price-proprietary-gpt-6-astra-openai-3d5b2153d0ca
+  verified_at: '2026-10-06'
+  model_id: gpt-6-astra
+  provider_id: openai
+  product: null
+  model_label: gpt-6-astra
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 10
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 1
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 12.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 50
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - input <=272000 tokens
+  - Tool fees and regional/FedRAMP uplift
+  evidence_ids:
+  - src-67b4ce9b4e6a
+  - src-00eaf917ab11
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-6-astra-openai-83dbee0ec140
+  verified_at: '2026-10-06'
+  model_id: gpt-6-astra
+  provider_id: openai
+  product: null
+  model_label: gpt-6-astra
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Batch
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 5.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 6.25
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 25.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - input <=272000 tokens
+  - Tool fees and regional/FedRAMP uplift
+  evidence_ids:
+  - src-67b4ce9b4e6a
+  - src-00eaf917ab11
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-6-astra-openai-32a917ee1b7b
+  verified_at: '2026-10-06'
+  model_id: gpt-6-astra
+  provider_id: openai
+  product: null
+  model_label: gpt-6-astra
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Flex
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 5.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 6.25
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 25.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - input <=272000 tokens
+  - Tool fees and regional/FedRAMP uplift
+  evidence_ids:
+  - src-67b4ce9b4e6a
+  - src-00eaf917ab11
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-6-astra-openai-e68876e21c23
+  verified_at: '2026-10-06'
+  model_id: gpt-6-astra
+  provider_id: openai
+  product: null
+  model_label: gpt-6-astra
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Fast
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 20
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 25.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 100
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - input <=272000 tokens
+  - Tool fees and regional/FedRAMP uplift
+  evidence_ids:
+  - src-67b4ce9b4e6a
+  - src-00eaf917ab11
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-6-astra-openai-4a3725464c5e
+  verified_at: '2026-10-06'
+  model_id: gpt-6-astra
+  provider_id: openai
+  product: null
+  model_label: gpt-6-astra
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 20
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 25.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 75.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - input >272000 tokens; full request uses long-context rates
+  - Tool fees and regional/FedRAMP uplift
+  evidence_ids:
+  - src-67b4ce9b4e6a
+  - src-00eaf917ab11
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-6-1-sol-openai-d3ef0d0fec3c
+  verified_at: '2026-10-06'
+  model_id: gpt-6-1-sol
+  provider_id: openai
+  product: null
+  model_label: gpt-6.1-sol
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.1
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 2.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 10
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - input <=272000 tokens
+  - Tool fees and regional/FedRAMP uplift
+  evidence_ids:
+  - src-5906a70e58c6
+  - src-00eaf917ab11
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-6-1-sol-openai-6c4abf3b3f1c
+  verified_at: '2026-10-06'
+  model_id: gpt-6-1-sol
+  provider_id: openai
+  product: null
+  model_label: gpt-6.1-sol
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Batch
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 1.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.05
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 1.25
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 5.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - input <=272000 tokens
+  - Tool fees and regional/FedRAMP uplift
+  evidence_ids:
+  - src-5906a70e58c6
+  - src-00eaf917ab11
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-6-1-sol-openai-4aad5754e49e
+  verified_at: '2026-10-06'
+  model_id: gpt-6-1-sol
+  provider_id: openai
+  product: null
+  model_label: gpt-6.1-sol
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Flex
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 1.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.05
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 1.25
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 5.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - input <=272000 tokens
+  - Tool fees and regional/FedRAMP uplift
+  evidence_ids:
+  - src-5906a70e58c6
+  - src-00eaf917ab11
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-6-1-sol-openai-9819b7b75d61
+  verified_at: '2026-10-06'
+  model_id: gpt-6-1-sol
+  provider_id: openai
+  product: null
+  model_label: gpt-6.1-sol
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Fast
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 4
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 5.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 20
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - input <=272000 tokens
+  - Tool fees and regional/FedRAMP uplift
+  evidence_ids:
+  - src-5906a70e58c6
+  - src-00eaf917ab11
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-6-1-sol-openai-7809f5982047
+  verified_at: '2026-10-06'
+  model_id: gpt-6-1-sol
+  provider_id: openai
+  product: null
+  model_label: gpt-6.1-sol
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 4
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 5.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 15.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - input >272000 tokens; full request uses long-context rates
+  - Tool fees and regional/FedRAMP uplift
+  evidence_ids:
+  - src-5906a70e58c6
+  - src-00eaf917ab11
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-6-luna-openai-f641ecfe6181
+  verified_at: '2026-10-06'
+  model_id: gpt-6-luna
+  provider_id: openai
+  product: null
+  model_label: gpt-6-luna
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.1
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.01
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 0.125
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - input <=272000 tokens
+  - Tool fees and regional/FedRAMP uplift
+  evidence_ids:
+  - src-f00960a11928
+  - src-00eaf917ab11
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-6-luna-openai-55f5c3505fba
+  verified_at: '2026-10-06'
+  model_id: gpt-6-luna
+  provider_id: openai
+  product: null
+  model_label: gpt-6-luna
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Batch
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.05
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.005
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 0.0625
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0.25
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - input <=272000 tokens
+  - Tool fees and regional/FedRAMP uplift
+  evidence_ids:
+  - src-f00960a11928
+  - src-00eaf917ab11
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-6-luna-openai-2a740cb6d4c7
+  verified_at: '2026-10-06'
+  model_id: gpt-6-luna
+  provider_id: openai
+  product: null
+  model_label: gpt-6-luna
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Flex
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.05
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.005
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 0.0625
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0.25
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - input <=272000 tokens
+  - Tool fees and regional/FedRAMP uplift
+  evidence_ids:
+  - src-f00960a11928
+  - src-00eaf917ab11
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-6-luna-openai-634d24acb791
+  verified_at: '2026-10-06'
+  model_id: gpt-6-luna
+  provider_id: openai
+  product: null
+  model_label: gpt-6-luna
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Fast
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.02
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 0.25
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 1.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - input <=272000 tokens
+  - Tool fees and regional/FedRAMP uplift
+  evidence_ids:
+  - src-f00960a11928
+  - src-00eaf917ab11
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-6-luna-openai-46f5117770dd
+  verified_at: '2026-10-06'
+  model_id: gpt-6-luna
+  provider_id: openai
+  product: null
+  model_label: gpt-6-luna
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.02
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 0.25
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0.75
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - input >272000 tokens; full request uses long-context rates
+  - Tool fees and regional/FedRAMP uplift
+  evidence_ids:
+  - src-f00960a11928
+  - src-00eaf917ab11
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-6-astra-openai-749a19560f3b
+  verified_at: '2026-10-06'
+  model_id: gpt-6-astra
+  provider_id: openai
+  product: null
+  model_label: gpt-6-astra
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Ultrafast
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 60
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 6
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 75
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 300
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - short context
+  - Tool fees and regional/FedRAMP uplift
+  evidence_ids:
+  - src-00eaf917ab11
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-image-2-5-sunburst-openai-0f6ba21d2197
+  verified_at: '2026-10-06'
+  model_id: gpt-image-2-5-sunburst
+  provider_id: openai
+  product: null
+  model_label: gpt-image-2.5-sunburst
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 5
+    currency: USD
+    unit: per 1 million text tokens
+    conditions: []
+  - metric: cached_input
+    amount: 1.25
+    currency: USD
+    unit: per 1 million text tokens
+    conditions: []
+  - metric: output
+    amount: null
+    currency: USD
+    unit: per 1 million text tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Input image/text charges; actual output token consumption varies
+  evidence_ids:
+  - src-1a9fcf8d6701
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-image-2-5-sunburst-openai-be4252d0ba6c
+  verified_at: '2026-10-06'
+  model_id: gpt-image-2-5-sunburst
+  provider_id: openai
+  product: null
+  model_label: gpt-image-2.5-sunburst
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 8
+    currency: USD
+    unit: per 1 million image tokens
+    conditions: []
+  - metric: cached_input
+    amount: 2
+    currency: USD
+    unit: per 1 million image tokens
+    conditions: []
+  - metric: output
+    amount: 30
+    currency: USD
+    unit: per 1 million image tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Input image/text charges; actual output token consumption varies
+  evidence_ids:
+  - src-1a9fcf8d6701
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-image-2-5-sunburst-openai-40fdb9e8e555
+  verified_at: '2026-10-06'
+  model_id: gpt-image-2-5-sunburst
+  provider_id: openai
+  product: null
+  model_label: gpt-image-2.5-sunburst
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Batch
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: output
+    amount: 15
+    currency: USD
+    unit: per 1 million image output tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-1a9fcf8d6701
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-image-2-5-flare-openai-f37e16009992
+  verified_at: '2026-10-06'
+  model_id: gpt-image-2-5-flare
+  provider_id: openai
+  product: null
+  model_label: gpt-image-2.5-flare
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 5
+    currency: USD
+    unit: per 1 million text tokens
+    conditions: []
+  - metric: cached_input
+    amount: 1.25
+    currency: USD
+    unit: per 1 million text tokens
+    conditions: []
+  - metric: output
+    amount: null
+    currency: USD
+    unit: per 1 million text tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Input image/text charges; actual output token consumption varies
+  evidence_ids:
+  - src-cee7a5257e77
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-image-2-5-flare-openai-ac94b6b07830
+  verified_at: '2026-10-06'
+  model_id: gpt-image-2-5-flare
+  provider_id: openai
+  product: null
+  model_label: gpt-image-2.5-flare
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 8
+    currency: USD
+    unit: per 1 million image tokens
+    conditions: []
+  - metric: cached_input
+    amount: 2
+    currency: USD
+    unit: per 1 million image tokens
+    conditions: []
+  - metric: output
+    amount: 30
+    currency: USD
+    unit: per 1 million image tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Input image/text charges; actual output token consumption varies
+  evidence_ids:
+  - src-cee7a5257e77
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-image-2-5-flare-openai-f6731f24dc2e
+  verified_at: '2026-10-06'
+  model_id: gpt-image-2-5-flare
+  provider_id: openai
+  product: null
+  model_label: gpt-image-2.5-flare
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Batch
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: output
+    amount: 15
+    currency: USD
+    unit: per 1 million image output tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-cee7a5257e77
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-live-1-openai-d34c632dbc2c
+  verified_at: '2026-10-06'
+  model_id: gpt-live-1
+  provider_id: openai
+  product: null
+  model_label: gpt-live-1
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: session
+    amount: 0.05
+    currency: USD
+    unit: per session minute
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Backend model and tool charges
+  - per second; no whole-minute rounding
+  evidence_ids:
+  - src-84d1a7712d6a
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-realtime-2-1-openai-1ffaab4c4919
+  verified_at: '2026-10-06'
+  model_id: gpt-realtime-2-1
+  provider_id: openai
+  product: null
+  model_label: gpt-realtime-2.1
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 4
+    currency: USD
+    unit: per 1 million text tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.4
+    currency: USD
+    unit: per 1 million text tokens
+    conditions: []
+  - metric: output
+    amount: 24
+    currency: USD
+    unit: per 1 million text tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-cf6a8843c8fd
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-realtime-2-1-openai-86fb999c9b89
+  verified_at: '2026-10-06'
+  model_id: gpt-realtime-2-1
+  provider_id: openai
+  product: null
+  model_label: gpt-realtime-2.1
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 32
+    currency: USD
+    unit: per 1 million audio tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.4
+    currency: USD
+    unit: per 1 million audio tokens
+    conditions: []
+  - metric: output
+    amount: 64
+    currency: USD
+    unit: per 1 million audio tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-cf6a8843c8fd
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-realtime-2-1-openai-b208bfb265cc
+  verified_at: '2026-10-06'
+  model_id: gpt-realtime-2-1
+  provider_id: openai
+  product: null
+  model_label: gpt-realtime-2.1
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 5
+    currency: USD
+    unit: per 1 million image tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.5
+    currency: USD
+    unit: per 1 million image tokens
+    conditions: []
+  - metric: output
+    amount: null
+    currency: USD
+    unit: per 1 million image tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-cf6a8843c8fd
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-claude-fable-5-1-anthropic-1c9e85bc3ee3
+  verified_at: '2026-10-06'
+  model_id: claude-fable-5-1
+  provider_id: anthropic
+  product: null
+  model_label: claude-fable-5-1
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 10
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 50
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.25
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write_5m
+    amount: 12.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write_1h
+    amount: 20
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-ad9aa6f1b8ed
+  - src-50846cd1ff36
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-claude-fable-5-1-anthropic-d31f844e1fa5
+  verified_at: '2026-10-06'
+  model_id: claude-fable-5-1
+  provider_id: anthropic
+  product: null
+  model_label: claude-fable-5-1
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Batch
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 5.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 25.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-ad9aa6f1b8ed
+  notes:
+  - 50% input/output discount; cache/tool charges should be checked separately
+- schema_version: '1.0'
+  id: price-proprietary-claude-opus-5-5-anthropic-a9d5d3dc77e4
+  verified_at: '2026-10-06'
+  model_id: claude-opus-5-5
+  provider_id: anthropic
+  product: null
+  model_label: claude-opus-5-5
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 4
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 20
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write_5m
+    amount: 5.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write_1h
+    amount: 8
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-4d070c5c8c67
+  - src-50846cd1ff36
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-claude-opus-5-5-anthropic-c64de5cd2551
+  verified_at: '2026-10-06'
+  model_id: claude-opus-5-5
+  provider_id: anthropic
+  product: null
+  model_label: claude-opus-5-5
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Batch
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 2.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 10.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-4d070c5c8c67
+  notes:
+  - 50% input/output discount; cache/tool charges should be checked separately
+- schema_version: '1.0'
+  id: price-proprietary-claude-sonnet-5-5-anthropic-706ffb2ac9c2
+  verified_at: '2026-10-06'
+  model_id: claude-sonnet-5-5
+  provider_id: anthropic
+  product: null
+  model_label: claude-sonnet-5-5
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 10
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write_5m
+    amount: 2.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write_1h
+    amount: 4
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-752375ff0c97
+  - src-50846cd1ff36
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-claude-sonnet-5-5-anthropic-ed2559301c6f
+  verified_at: '2026-10-06'
+  model_id: claude-sonnet-5-5
+  provider_id: anthropic
+  product: null
+  model_label: claude-sonnet-5-5
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Batch
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 1.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 5.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-752375ff0c97
+  notes:
+  - 50% input/output discount; cache/tool charges should be checked separately
+- schema_version: '1.0'
+  id: price-proprietary-claude-haiku-4-5-anthropic-92db4721bd09
+  verified_at: '2026-10-06'
+  model_id: claude-haiku-4-5
+  provider_id: anthropic
+  product: null
+  model_label: claude-haiku-4-5
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 1
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.1
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write_5m
+    amount: 1.25
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write_1h
+    amount: 2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-e1910c5126bc
+  - src-50846cd1ff36
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-claude-haiku-4-5-anthropic-9448cb8b044e
+  verified_at: '2026-10-06'
+  model_id: claude-haiku-4-5
+  provider_id: anthropic
+  product: null
+  model_label: claude-haiku-4-5
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Batch
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 2.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-e1910c5126bc
+  notes:
+  - 50% input/output discount; cache/tool charges should be checked separately
+- schema_version: '1.0'
+  id: price-proprietary-gpt-oss-120b-groq-0f327a7e8dbf
+  verified_at: '2026-10-06'
+  model_id: gpt-oss-120b
+  provider_id: groq
+  product: openai/gpt-oss-120b
+  model_label: gpt-oss-120b
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Developer / on-demand
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.15
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0.6
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Tool charges; enterprise provisioned capacity
+  evidence_ids:
+  - src-027b0340f566
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-oss-120b-groq-cf02720da9d9
+  verified_at: '2026-10-06'
+  model_id: gpt-oss-120b
+  provider_id: groq
+  product: null
+  model_label: gpt-oss-120b
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Cached input
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: cached_input
+    amount: 0.075
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-775e6c7ffc21
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gpt-oss-20b-groq-38ccf87aa66a
+  verified_at: '2026-10-06'
+  model_id: gpt-oss-20b
+  provider_id: groq
+  product: openai/gpt-oss-20b
+  model_label: gpt-oss-20b
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Developer / on-demand
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.075
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0.3
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Tool charges; enterprise provisioned capacity
+  evidence_ids:
+  - src-027b0340f566
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gemini-3-8-flash-google-developer-api-15580e4c6b8b
+  verified_at: '2026-10-06'
+  model_id: gemini-3-8-flash
+  provider_id: google-developer-api
+  product: gemini-3.8-flash
+  model_label: gemini38flash
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: paid_standard
+  effective_from: null
+  effective_to: '2026-12-31'
+  rates:
+  - metric: input
+    amount: 0.75
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: output_including_thinking
+    amount: 3.75
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: cache_read
+    amount: 0.075
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-b88c4950bbf3
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gemini-3-8-flash-google-developer-api-f9f44895e35b
+  verified_at: '2026-10-06'
+  model_id: gemini-3-8-flash
+  provider_id: google-developer-api
+  product: gemini-3.8-flash
+  model_label: gemini38flash
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: paid_standard
+  effective_from: '2027-01-01'
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 1.5
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: output_including_thinking
+    amount: 7.5
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: cache_read
+    amount: 0.15
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-b88c4950bbf3
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gemini-3-8-flash-google-developer-api-1bad64d36c74
+  verified_at: '2026-10-06'
+  model_id: gemini-3-8-flash
+  provider_id: google-developer-api
+  product: gemini-3.8-flash
+  model_label: gemini38flash
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: paid_batch
+  effective_from: null
+  effective_to: '2026-12-31'
+  rates:
+  - metric: input
+    amount: 0.375
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: output_including_thinking
+    amount: 1.875
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-b88c4950bbf3
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gemini-3-1-pro-preview-google-developer-api-0363b1d20999
+  verified_at: '2026-10-06'
+  model_id: gemini-3-1-pro-preview
+  provider_id: google-developer-api
+  product: gemini-3.1-pro-preview
+  model_label: gemini31pro
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: paid_standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 2
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: output_including_thinking
+    amount: 12
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: cache_read
+    amount: 0.2
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - prompt <= 200,000 tokens
+  evidence_ids:
+  - src-b88c4950bbf3
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gemini-3-1-pro-preview-google-developer-api-6666cc8d3986
+  verified_at: '2026-10-06'
+  model_id: gemini-3-1-pro-preview
+  provider_id: google-developer-api
+  product: gemini-3.1-pro-preview
+  model_label: gemini31pro
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: paid_standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 4
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: output_including_thinking
+    amount: 18
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: cache_read
+    amount: 0.4
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - prompt > 200,000 tokens
+  evidence_ids:
+  - src-b88c4950bbf3
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gemini-3-5-flash-lite-google-developer-api-5e632c3ddf86
+  verified_at: '2026-10-06'
+  model_id: gemini-3-5-flash-lite
+  provider_id: google-developer-api
+  product: gemini-3.5-flash-lite
+  model_label: gemini35lite
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: paid_standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input_all_supported_modalities
+    amount: 0.3
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: output_including_thinking
+    amount: 2.5
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: cache_read
+    amount: 0.03
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-b88c4950bbf3
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gemini-3-pro-image-google-developer-api-3c200e46dbab
+  verified_at: '2026-10-06'
+  model_id: gemini-3-pro-image
+  provider_id: google-developer-api
+  product: gemini-3-pro-image
+  model_label: nanobananapro
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: paid_standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input_text_image
+    amount: 2
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: output_text_thinking
+    amount: 12
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: output_image
+    amount: 120
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-b88c4950bbf3
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gemini-3-pro-image-google-developer-api-d065c9f3a69a
+  verified_at: '2026-10-06'
+  model_id: gemini-3-pro-image
+  provider_id: google-developer-api
+  product: gemini-3-pro-image
+  model_label: nanobananapro
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: paid_standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: 1K_or_2K
+    amount: 0.134
+    currency: USD
+    unit: per_output_image
+    conditions: []
+  - metric: 4K
+    amount: 0.24
+    currency: USD
+    unit: per_output_image
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Published rounded equivalents; input and thinking/text charges additional.
+  evidence_ids:
+  - src-b88c4950bbf3
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-veo-3-1-generate-preview-google-developer-api-a0950450f4b5
+  verified_at: '2026-10-06'
+  model_id: veo-3-1-generate-preview
+  provider_id: google-developer-api
+  product: veo-3.1-generate-preview
+  model_label: veo31
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: paid_standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: 720p_or_1080p_audio_video
+    amount: 0.4
+    currency: USD
+    unit: per_successful_output_second
+    conditions: []
+  - metric: 4K_audio_video
+    amount: 0.6
+    currency: USD
+    unit: per_successful_output_second
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-b88c4950bbf3
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-veo-3-1-generate-preview-google-developer-api-fdc0b33bf21d
+  verified_at: '2026-10-06'
+  model_id: veo-3-1-generate-preview
+  provider_id: google-developer-api
+  product: veo-3.1-fast-generate-preview
+  model_label: veo31
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: paid_fast_endpoint
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: 720p
+    amount: 0.1
+    currency: USD
+    unit: per_successful_output_second
+    conditions: []
+  - metric: 1080p
+    amount: 0.12
+    currency: USD
+    unit: per_successful_output_second
+    conditions: []
+  - metric: 4K
+    amount: 0.3
+    currency: USD
+    unit: per_successful_output_second
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-b88c4950bbf3
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-veo-3-1-generate-preview-google-developer-api-281d4f4cc193
+  verified_at: '2026-10-06'
+  model_id: veo-3-1-generate-preview
+  provider_id: google-developer-api
+  product: veo-3.1-lite-generate-preview
+  model_label: veo31
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: paid_lite_endpoint
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: 720p
+    amount: 0.05
+    currency: USD
+    unit: per_successful_output_second
+    conditions: []
+  - metric: 1080p
+    amount: 0.08
+    currency: USD
+    unit: per_successful_output_second
+    conditions: []
+  - metric: 4K
+    amount: null
+    currency: USD
+    unit: per_successful_output_second
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-b88c4950bbf3
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-lyria-3-5-google-developer-api-158952f245f5
+  verified_at: '2026-10-06'
+  model_id: lyria-3-5
+  provider_id: google-developer-api
+  product: lyria-3.5
+  model_label: lyria35
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: paid_standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: full_song
+    amount: 0.08
+    currency: USD
+    unit: per_song_request
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-b88c4950bbf3
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gemini-3-8-live-google-developer-api-a963ebdabef6
+  verified_at: '2026-10-06'
+  model_id: gemini-3-8-live
+  provider_id: google-developer-api
+  product: gemini-3.8-live
+  model_label: gemini38live
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: paid_standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: text_input
+    amount: 0.75
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: audio_input
+    amount: 3
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: image_video_input
+    amount: 1
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: text_output
+    amount: 4.5
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: audio_output
+    amount: 12
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-b88c4950bbf3
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gemini-omni-1-1-flash-google-developer-api-ea0b882ade35
+  verified_at: '2026-10-06'
+  model_id: gemini-omni-1-1-flash
+  provider_id: google-developer-api
+  product: gemini-omni-1.1-flash
+  model_label: omni11flash
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: paid_standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 1.5
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: text_output
+    amount: 9
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: video_output
+    amount: 17.5
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - 720p outputs billed at 5,792 tokens/second, approximately $0.10/second; not a flat quote for every resolution.
+  evidence_ids:
+  - src-b88c4950bbf3
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gemma-4-31b-it-google-developer-api-e292329c37fa
+  verified_at: '2026-10-06'
+  model_id: gemma-4-31b-it
+  provider_id: google-developer-api
+  product: gemma-4-31b-it
+  model_label: gemma4
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: free
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: output
+    amount: 0
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Gemma 4 pricing section; paid tier unavailable. Quota limited, data-use terms differ from paid Gemini API.
+  evidence_ids:
+  - src-b88c4950bbf3
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-offer-google-consumer-41e68d0d90dc
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: google-consumer
+  product: Google AI Free
+  model_label: null
+  billing_method: free
+  status: current
+  region: United States
+  tier: Google AI Free
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: subscription
+    amount: 0
+    currency: USD
+    unit: per_month
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - United States consumer plan; not per-token API credit or unlimited pinned-model access.
+  evidence_ids:
+  - src-0472a026e3db
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-offer-google-consumer-a63d0d5d6d40
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: google-consumer
+  product: Google AI Plus
+  model_label: null
+  billing_method: subscription
+  status: current
+  region: United States
+  tier: Google AI Plus
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: subscription
+    amount: 4.99
+    currency: USD
+    unit: per_month
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - United States consumer plan; not per-token API credit or unlimited pinned-model access.
+  evidence_ids:
+  - src-0472a026e3db
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-offer-google-consumer-caf526dc5118
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: google-consumer
+  product: Google AI Pro
+  model_label: null
+  billing_method: subscription
+  status: current
+  region: United States
+  tier: Google AI Pro
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: subscription
+    amount: 19.99
+    currency: USD
+    unit: per_month
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - United States consumer plan; not per-token API credit or unlimited pinned-model access.
+  evidence_ids:
+  - src-0472a026e3db
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-offer-google-consumer-1bd9755b027c
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: google-consumer
+  product: Google AI Ultra 5x
+  model_label: null
+  billing_method: subscription
+  status: current
+  region: United States
+  tier: Google AI Ultra 5x
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: subscription
+    amount: 99.99
+    currency: USD
+    unit: per_month
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - United States consumer plan; not per-token API credit or unlimited pinned-model access.
+  evidence_ids:
+  - src-0472a026e3db
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-offer-google-consumer-602758fc425c
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: google-consumer
+  product: Google AI Ultra 20x
+  model_label: null
+  billing_method: subscription
+  status: current
+  region: United States
+  tier: Google AI Ultra 20x
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: subscription
+    amount: 199.99
+    currency: USD
+    unit: per_month
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - United States consumer plan; not per-token API credit or unlimited pinned-model access.
+  evidence_ids:
+  - src-0472a026e3db
+  notes: []
+- schema_version: '1.0'
+  id: price-proprietary-gemini4argon-google-developer-api-29291504e924
+  verified_at: '2026-10-06'
+  model_id: gemini4argon
+  provider_id: google-developer-api
+  product: null
+  model_label: gemini4argon
+  billing_method: metered-api
+  status: unknown
+  region: null
+  tier: announced_intro
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 2
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: output
+    amount: 10
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: cache_read
+    amount: 0.1
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Announced future introductory API price; cached input derived from explicit 95% discount. No exact public
+    endpoint or effective date verified.
+  evidence_ids:
+  - src-6381db252dee
+  notes:
+  - Announced pricing only; not a verified currently purchasable tariff.
+- schema_version: '1.0'
+  id: price-proprietary-gemini4argon-google-developer-api-efc10b9f8cc2
+  verified_at: '2026-10-06'
+  model_id: gemini4argon
+  provider_id: google-developer-api
+  product: null
+  model_label: gemini4argon
+  billing_method: metered-api
+  status: unknown
+  region: null
+  tier: announced_regular
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 4
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  - metric: output
+    amount: 20
+    currency: USD
+    unit: per_1M_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Announced price after introductory period; expiry date is not specified in the fetched main English announcement.
+  evidence_ids:
+  - src-6381db252dee
+  notes:
+  - Announced pricing only; not a verified currently purchasable tariff.
+- schema_version: '1.0'
+  id: price-proprietary-chatgpt-plus-openai-8a4552f810a3
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: openai
+  product: ChatGPT Plus
+  model_label: null
+  billing_method: subscription
+  status: current
+  region: null
+  tier: null
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: subscription
+    amount: 20
+    currency: USD
+    unit: month
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-066ced7db59a
+  notes:
+  - Billed monthly; API usage separate; region/tax may differ
+- schema_version: '1.0'
+  id: price-proprietary-chatgpt-pro100-openai-2dc37ff93c73
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: openai
+  product: ChatGPT Pro100
+  model_label: null
+  billing_method: subscription
+  status: current
+  region: null
+  tier: null
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: subscription
+    amount: 100
+    currency: USD
+    unit: month
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-e06185c2c32b
+  notes:
+  - Lower Pro allowance; no Ultrafast
+- schema_version: '1.0'
+  id: price-proprietary-chatgpt-pro200-openai-2a8ca13fa661
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: openai
+  product: ChatGPT Pro200
+  model_label: null
+  billing_method: subscription
+  status: current
+  region: null
+  tier: null
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: subscription
+    amount: 200
+    currency: USD
+    unit: month
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-e06185c2c32b
+  notes:
+  - New signups resumed; eligible grandfathered allowance throughOct29,2026 only
+- schema_version: '1.0'
+  id: price-proprietary-chatgpt-pro500-openai-8b83ae16f2ca
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: openai
+  product: ChatGPT Pro500
+  model_label: null
+  billing_method: subscription
+  status: current
+  region: null
+  tier: null
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: subscription
+    amount: 500
+    currency: USD
+    unit: month
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-e06185c2c32b
+  notes:
+  - Highest included Pro allowance; Astra Ultrafast eligible
+- schema_version: '1.0'
+  id: price-proprietary-claude-pro-monthly-anthropic-2d6b2b18c5d7
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: anthropic
+  product: Claude Pro monthly
+  model_label: null
+  billing_method: subscription
+  status: current
+  region: null
+  tier: null
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: subscription
+    amount: 20
+    currency: USD
+    unit: month
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-58333316475e
+  notes:
+  - Excludes applicable taxes
+- schema_version: '1.0'
+  id: price-proprietary-claude-pro-annual-anthropic-33c209c5815b
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: anthropic
+  product: Claude Pro annual
+  model_label: null
+  billing_method: subscription
+  status: current
+  region: null
+  tier: null
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: subscription
+    amount: 200
+    currency: USD
+    unit: year
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-58333316475e
+  notes:
+  - Annual upfront; displayed equivalent17/month is rounded
+- schema_version: '1.0'
+  id: price-proprietary-claude-max-anthropic-959775c88e0a
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: anthropic
+  product: Claude Max
+  model_label: null
+  billing_method: subscription
+  status: current
+  region: null
+  tier: null
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: subscription
+    amount: 100
+    currency: USD
+    unit: month starting price
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-58333316475e
+  notes:
+  - 5x/20x usage choices; exact20x price not verified in fetched current page
+- schema_version: '1.0'
+  id: price-open-deepseek-v4-1-flash-deepseek-api-05c298aa0f32
+  verified_at: '2026-10-06'
+  model_id: deepseek-v4-1-flash
+  provider_id: deepseek-api
+  product: deepseek-flash
+  model_label: deepseek-v4-1-flash
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: peak
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.3
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: output
+    amount: 1.2
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.006
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cache_write
+    amount: null
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other times.
+    Reasoning and final tokens contribute to output billing.
+  evidence_ids:
+  - src-280758cc57a6
+  notes: []
+- schema_version: '1.0'
+  id: price-open-deepseek-v4-1-flash-deepseek-api-60717c231a91
+  verified_at: '2026-10-06'
+  model_id: deepseek-v4-1-flash
+  provider_id: deepseek-api
+  product: deepseek-flash
+  model_label: deepseek-v4-1-flash
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: off_peak
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.15
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: output
+    amount: 0.6
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.003
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cache_write
+    amount: null
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other times.
+    Reasoning and final tokens contribute to output billing.
+  evidence_ids:
+  - src-280758cc57a6
+  notes: []
+- schema_version: '1.0'
+  id: price-open-deepseek-v4-pro-0813-deepseek-api-66908c1c12ad
+  verified_at: '2026-10-06'
+  model_id: deepseek-v4-pro-0813
+  provider_id: deepseek-api
+  product: deepseek-v4-pro
+  model_label: deepseek-v4-pro-0813
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: peak
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 1.32
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: output
+    amount: 3.96
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.044
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cache_write
+    amount: null
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other times.
+    Reasoning and final tokens contribute to output billing.
+  evidence_ids:
+  - src-280758cc57a6
+  notes: []
+- schema_version: '1.0'
+  id: price-open-deepseek-v4-pro-0813-deepseek-api-1cba22453144
+  verified_at: '2026-10-06'
+  model_id: deepseek-v4-pro-0813
+  provider_id: deepseek-api
+  product: deepseek-v4-pro
+  model_label: deepseek-v4-pro-0813
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: off_peak
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.66
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: output
+    amount: 1.98
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.022
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cache_write
+    amount: null
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other times.
+    Reasoning and final tokens contribute to output billing.
+  evidence_ids:
+  - src-280758cc57a6
+  notes: []
+- schema_version: '1.0'
+  id: price-open-glm-5-3-zai-api-a3d2f2e33a66
+  verified_at: '2026-10-06'
+  model_id: glm-5-3
+  provider_id: zai-api
+  product: glm-5.3
+  model_label: glm-5-3
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 1.4
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: output
+    amount: 4.4
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.26
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cache_write
+    amount: null
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Cached-input storage currently labeled limited-time free; promotional expired rates are excluded.
+  evidence_ids:
+  - src-667e800254a1
+  notes: []
+- schema_version: '1.0'
+  id: price-open-glm-5-3-flash-zai-api-d4cf1d58c48f
+  verified_at: '2026-10-06'
+  model_id: glm-5-3-flash
+  provider_id: zai-api
+  product: glm-5.3-flash
+  model_label: glm-5-3-flash
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.15
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: output
+    amount: 0.5
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.03
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cache_write
+    amount: null
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Cached-input storage currently labeled limited-time free; promotional expired rates are excluded.
+  evidence_ids:
+  - src-667e800254a1
+  notes: []
+- schema_version: '1.0'
+  id: price-open-minimax-m3-minimax-api-cfa19bcf4e29
+  verified_at: '2026-10-06'
+  model_id: minimax-m3
+  provider_id: minimax-api
+  product: MiniMax-M3
+  model_label: minimax-m3
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: standard_short
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.3
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: output
+    amount: 1.2
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.06
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cache_write
+    amount: null
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Input length <=512k. Current displayed effective rates, not struck-through list prices.
+  evidence_ids:
+  - src-40c9ce9b4812
+  notes: []
+- schema_version: '1.0'
+  id: price-open-minimax-m3-minimax-api-f5f41f0c9af4
+  verified_at: '2026-10-06'
+  model_id: minimax-m3
+  provider_id: minimax-api
+  product: MiniMax-M3
+  model_label: minimax-m3
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: standard_long
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.6
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: output
+    amount: 2.4
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.12
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cache_write
+    amount: null
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Input length >512k. Current displayed effective rates, not struck-through list prices.
+  evidence_ids:
+  - src-40c9ce9b4812
+  notes: []
+- schema_version: '1.0'
+  id: price-open-minimax-m3-minimax-api-bb9117221622
+  verified_at: '2026-10-06'
+  model_id: minimax-m3
+  provider_id: minimax-api
+  product: MiniMax-M3
+  model_label: minimax-m3
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: priority_short
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.44999999999999996
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: output
+    amount: 1.7999999999999998
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.09
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cache_write
+    amount: null
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Input length <=512k. Current displayed effective rates, not struck-through list prices.
+  evidence_ids:
+  - src-40c9ce9b4812
+  notes: []
+- schema_version: '1.0'
+  id: price-open-minimax-m3-minimax-api-3a2d3f3837bf
+  verified_at: '2026-10-06'
+  model_id: minimax-m3
+  provider_id: minimax-api
+  product: MiniMax-M3
+  model_label: minimax-m3
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: priority_long
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.8999999999999999
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: output
+    amount: 3.5999999999999996
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.18
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cache_write
+    amount: null
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Input length >512k. Current displayed effective rates, not struck-through list prices.
+  evidence_ids:
+  - src-40c9ce9b4812
+  notes: []
+- schema_version: '1.0'
+  id: price-open-mistral-large-3-mistral-api-9f59b7cfe481
+  verified_at: '2026-10-06'
+  model_id: mistral-large-3
+  provider_id: mistral-api
+  product: null
+  model_label: mistral-large-3
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.5
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: output
+    amount: 1.5
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.05
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cache_write
+    amount: null
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Default standard tier; regional inference, batch and priority may have different rates.
+  evidence_ids:
+  - src-b17514a392bd
+  notes: []
+- schema_version: '1.0'
+  id: price-open-mistral-medium-3-5-mistral-api-ccb3cbd04b1a
+  verified_at: '2026-10-06'
+  model_id: mistral-medium-3-5
+  provider_id: mistral-api
+  product: mistral-medium-3-5
+  model_label: mistral-medium-3-5
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 1.5
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: output
+    amount: 7.5
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.15
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cache_write
+    amount: null
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Default standard tier; regional inference, batch and priority may have different rates.
+  evidence_ids:
+  - src-b17514a392bd
+  notes: []
+- schema_version: '1.0'
+  id: price-open-mistral-small-4-mistral-api-2c982a02c545
+  verified_at: '2026-10-06'
+  model_id: mistral-small-4
+  provider_id: mistral-api
+  product: mistral-small-2603
+  model_label: mistral-small-4
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.15
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: output
+    amount: 0.6
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.015
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cache_write
+    amount: null
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Default standard tier; regional inference, batch and priority may have different rates.
+  evidence_ids:
+  - src-b17514a392bd
+  notes: []
+- schema_version: '1.0'
+  id: price-open-ministral-3-8b-mistral-api-e3e015fcc82e
+  verified_at: '2026-10-06'
+  model_id: ministral-3-8b
+  provider_id: mistral-api
+  product: null
+  model_label: ministral-3-8b
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.15
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: output
+    amount: 0.15
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.015
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cache_write
+    amount: null
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Default standard tier; regional inference, batch and priority may have different rates.
+  evidence_ids:
+  - src-b17514a392bd
+  notes: []
+- schema_version: '1.0'
+  id: price-open-glm-5-3-mistral-api-2ee05cd2e1e9
+  verified_at: '2026-10-06'
+  model_id: glm-5-3
+  provider_id: mistral-api
+  product: null
+  model_label: glm-5-3
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 1.4
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: output
+    amount: 4.4
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.14
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  - metric: cache_write
+    amount: null
+    currency: USD
+    unit: per_1000000_tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Default standard tier; regional inference, batch and priority may have different rates.
+  evidence_ids:
+  - src-b17514a392bd
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-xai-grok-4-7-xai-39519ba1474e
+  verified_at: '2026-10-06'
+  model_id: xai-grok-4-7
+  provider_id: xai
+  product: API
+  model_label: grok-4.7
+  billing_method: metered-api
+  status: current
+  region: global endpoint; model UI shows us-east-1
+  tier: standard, short context
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 2
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.5
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: output
+    amount: 6
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Higher-context pricing exists above 200k; exact boundary/rates require reconciliation with general page.
+    These are base displayed rates.
+  - not stated
+  evidence_ids:
+  - src-d14fea025626
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-api-xai-35fe1f107006
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: xai
+  product: API
+  model_label: grok-4.6
+  billing_method: metered-api
+  status: current
+  region: global endpoint
+  tier: standard, prompt <200k tokens
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 2
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.5
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: output
+    amount: 6
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-dedf56167aa3
+  notes:
+  - This route names a model/alias not yet resolved to a canonical model profile; do not assume checkpoint
+    equivalence.
+- schema_version: '1.0'
+  id: price-providers-api-xai-507fb7e8423e
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: xai
+  product: API
+  model_label: grok-4.6
+  billing_method: metered-api
+  status: current
+  region: global endpoint
+  tier: standard, prompt >=200k tokens
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 4
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: cached_input
+    amount: 1
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: output
+    amount: 12
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Long rate applies to all tokens in qualifying request.
+  evidence_ids:
+  - src-dedf56167aa3
+  notes:
+  - This route names a model/alias not yet resolved to a canonical model profile; do not assume checkpoint
+    equivalence.
+- schema_version: '1.0'
+  id: price-providers-us-regional-api-xai-36d03fc1452f
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: xai
+  product: US regional API
+  model_label: grok-4.7 / grok-4.6
+  billing_method: metered-api
+  status: current
+  region: United States inference/request handling
+  tier: all token pricing
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: multiplier
+    amount: 1.1
+    currency: USD
+    unit: multiplier on global token rates
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Does not extend US guarantee to Files, Collections or server-side tools.
+  evidence_ids:
+  - src-983be7893acf
+  notes:
+  - This route names a model/alias not yet resolved to a canonical model profile; do not assume checkpoint
+    equivalence.
+- schema_version: '1.0'
+  id: price-providers-voice-api-xai-9fdcfab363b7
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: xai
+  product: Voice API
+  model_label: grok-voice-think-fast-2.0
+  billing_method: metered-api
+  status: current
+  region: not specified
+  tier: speech-to-speech
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: audio
+    amount: 0.08
+    currency: USD
+    unit: per audio minute
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-dedf56167aa3
+  notes:
+  - This route names a model/alias not yet resolved to a canonical model profile; do not assume checkpoint
+    equivalence.
+- schema_version: '1.0'
+  id: price-providers-credit-purchases-openrouter-0430bdc1b69f
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: openrouter
+  product: credit purchases
+  model_label: null
+  billing_method: prepaid-credits
+  status: current
+  region: not specified
+  tier: Standard / PayGo
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: platform_fee_percent
+    amount: 5.5
+    currency: null
+    unit: percent of applicable purchase or billable excess
+    conditions:
+    - Percentage, not a USD-denominated token rate.
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Inference itself passed through at provider rate.
+  evidence_ids:
+  - src-45d607317981
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-credit-purchases-openrouter-e96caea514fe
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: openrouter
+  product: credit purchases
+  model_label: null
+  billing_method: prepaid-credits
+  status: current
+  region: EU/US routing optional
+  tier: Business
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: platform_fee_percent
+    amount: 8
+    currency: null
+    unit: percent of applicable purchase or billable excess
+    conditions:
+    - Percentage, not a USD-denominated token rate.
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-45d607317981
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-byok-openrouter-ad61f93b0f08
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: openrouter
+  product: BYOK
+  model_label: null
+  billing_method: metered-api
+  status: current
+  region: route dependent
+  tier: PayGo
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: free_allowance_usd
+    amount: 25000
+    currency: USD
+    unit: USD-equivalent list-price BYOK inference per month
+    conditions: []
+  - metric: excess_fee_percent
+    amount: 5
+    currency: null
+    unit: percent of applicable purchase or billable excess
+    conditions:
+    - Percentage, not a USD-denominated token rate.
+  included_usage:
+  - Fee-free routing allowance only; upstream provider inference remains separately billed.
+  reset_cadence: monthly
+  overage: []
+  conditions:
+  - Measured by equivalent list-price inference, not number of requests. Enterprise allowance $200,000.
+  evidence_ids:
+  - src-e71e7d7dfbb1
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-inference-providers-hugging-face-335a1fcfc401
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: hugging-face
+  product: Inference Providers
+  model_label: null
+  billing_method: prepaid-credits
+  status: current
+  region: provider dependent
+  tier: Free
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: included_compute_credit
+    amount: 0.1
+    currency: USD
+    unit: monthly credit
+    conditions: []
+  included_usage:
+  - 0.1 USD of included compute credit per month; not the subscription price.
+  reset_cadence: monthly
+  overage: []
+  conditions:
+  - Subject to change; more use requires purchased credits.
+  evidence_ids:
+  - src-64b25f3342fd
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-all-hf-compute-hugging-face-a46afb00e085
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: hugging-face
+  product: all HF compute
+  model_label: null
+  billing_method: prepaid-credits
+  status: current
+  region: product dependent
+  tier: PRO / Team or Enterprise per seat
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: included_compute_credit
+    amount: 2
+    currency: USD
+    unit: monthly included credit
+    conditions: []
+  included_usage:
+  - 2 USD of included compute credit per month; not the subscription price.
+  reset_cadence: monthly
+  overage: []
+  conditions:
+  - Subscription price not verified; this is included compute credit, not subscription price. Inference pass-through
+    without markup.
+  evidence_ids:
+  - src-64b25f3342fd
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-gpt-oss-120b-together-4cacbb083b92
+  verified_at: '2026-10-06'
+  model_id: gpt-oss-120b
+  provider_id: together
+  product: Serverless
+  model_label: gpt-oss-120B
+  billing_method: metered-api
+  status: current
+  region: not selectable in serverless
+  tier: standard displayed serverless
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.15
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: output
+    amount: 0.6
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-2e19eb496679
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-kimi-k3-together-210d7bb86dfc
+  verified_at: '2026-10-06'
+  model_id: kimi-k3
+  provider_id: together
+  product: Serverless
+  model_label: Kimi K3
+  billing_method: metered-api
+  status: current
+  region: not selectable in serverless
+  tier: standard displayed serverless
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 2.7
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.27
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: output
+    amount: 13.5
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-2e19eb496679
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-minimax-m3-together-53e1dc39589c
+  verified_at: '2026-10-06'
+  model_id: minimax-m3
+  provider_id: together
+  product: Serverless
+  model_label: MiniMax M3
+  billing_method: metered-api
+  status: current
+  region: not selectable in serverless
+  tier: standard displayed serverless
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.3
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.06
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: output
+    amount: 1.2
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-2e19eb496679
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-dedicated-inference-together-c011f83509b2
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: together
+  product: Dedicated Inference
+  model_label: NVIDIA HGX H100
+  billing_method: metered-api
+  status: current
+  region: not specified
+  tier: on-demand
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: compute
+    amount: 5.49
+    currency: USD
+    unit: per GPU hour
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Different from GPU Clusters H100 $3.99/hour; not interchangeable products.
+  evidence_ids:
+  - src-2e19eb496679
+  notes:
+  - This route names a model/alias not yet resolved to a canonical model profile; do not assume checkpoint
+    equivalence.
+- schema_version: '1.0'
+  id: price-providers-serverless-fireworks-62abe22f454b
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: fireworks
+  product: Serverless
+  model_label: OpenAI GPT OSS 120B
+  billing_method: metered-api
+  status: current
+  region: default; not region restricted
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.15
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.015
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: output
+    amount: 0.6
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-24c3404d8b6f
+  notes:
+  - This route names a model/alias not yet resolved to a canonical model profile; do not assume checkpoint
+    equivalence.
+- schema_version: '1.0'
+  id: price-providers-kimi-k3-fireworks-86a9ddc05c65
+  verified_at: '2026-10-06'
+  model_id: kimi-k3
+  provider_id: fireworks
+  product: Serverless
+  model_label: Kimi K3
+  billing_method: metered-api
+  status: current
+  region: default; not region restricted
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 3
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.3
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: output
+    amount: 15
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-24c3404d8b6f
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-serverless-fireworks-1d9324702206
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: fireworks
+  product: Serverless
+  model_label: Kimi K3 (US)
+  billing_method: metered-api
+  status: current
+  region: United States
+  tier: Standard US
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 4.5
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.45
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: output
+    amount: 22.5
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-24c3404d8b6f
+  notes:
+  - This route names a model/alias not yet resolved to a canonical model profile; do not assume checkpoint
+    equivalence.
+- schema_version: '1.0'
+  id: price-providers-kimi-k3-fireworks-b8a86cdad69e
+  verified_at: '2026-10-06'
+  model_id: kimi-k3
+  provider_id: fireworks
+  product: Serverless
+  model_label: Kimi K3
+  billing_method: metered-api
+  status: current
+  region: default; not region restricted
+  tier: Priority
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 3.75
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.375
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: output
+    amount: 18.75
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-24c3404d8b6f
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-gpt-oss-120b-groq-d03d282ce7d7
+  verified_at: '2026-10-06'
+  model_id: gpt-oss-120b
+  provider_id: groq
+  product: API
+  model_label: openai/gpt-oss-120b
+  billing_method: metered-api
+  status: current
+  region: not specified
+  tier: Developer
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.15
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: output
+    amount: 0.6
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-027b0340f566
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-speech-to-text-api-groq-9400c198843b
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: groq
+  product: Speech-to-text API
+  model_label: whisper-large-v3-turbo
+  billing_method: metered-api
+  status: current
+  region: not specified
+  tier: Developer
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: audio
+    amount: 0.04
+    currency: USD
+    unit: per audio hour
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-027b0340f566
+  notes:
+  - This route names a model/alias not yet resolved to a canonical model profile; do not assume checkpoint
+    equivalence.
+- schema_version: '1.0'
+  id: price-providers-tts-api-groq-a4d381fb1bc9
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: groq
+  product: TTS API
+  model_label: canopylabs/orpheus-arabic-saudi
+  billing_method: metered-api
+  status: current
+  region: not specified
+  tier: Preview
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: text
+    amount: 40
+    currency: USD
+    unit: per 1M characters
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Preview lifecycle; not recommended by provider for production.
+  evidence_ids:
+  - src-027b0340f566
+  notes:
+  - This route names a model/alias not yet resolved to a canonical model profile; do not assume checkpoint
+    equivalence.
+- schema_version: '1.0'
+  id: price-providers-gpt-oss-120b-cerebras-26391efc6d01
+  verified_at: '2026-10-06'
+  model_id: gpt-oss-120b
+  provider_id: cerebras
+  product: Shared Inference
+  model_label: gpt-oss-120b
+  billing_method: metered-api
+  status: current
+  region: not specified
+  tier: Developer PayGo
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.35
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: output
+    amount: 0.75
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-29ae95a372cc
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-api-aws-bedrock-74cdcaf0f543
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: aws-bedrock
+  product: API
+  model_label: Cohere Rerank 3.5
+  billing_method: metered-api
+  status: current
+  region: not specified in extracted table
+  tier: On-demand
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: queries
+    amount: 2
+    currency: USD
+    unit: per 1,000 queries
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Up to 100 document chunks/query; longer documents split. Region not established, not a region-specific
+    quote.
+  evidence_ids:
+  - src-2f9ece653a0f
+  notes:
+  - This route names a model/alias not yet resolved to a canonical model profile; do not assume checkpoint
+    equivalence.
+- schema_version: '1.0'
+  id: price-providers-cohere-embed-5-pro-cohere-516f45ff44b6
+  verified_at: '2026-10-06'
+  model_id: cohere-embed-5-pro
+  provider_id: cohere
+  product: API
+  model_label: Embed 5 Pro
+  billing_method: metered-api
+  status: current
+  region: not specified
+  tier: GA
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.12
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-9d4f7ae81230
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-cohere-embed-5-fast-cohere-ca6b05775efe
+  verified_at: '2026-10-06'
+  model_id: cohere-embed-5-fast
+  provider_id: cohere
+  product: API
+  model_label: Embed 5 Fast
+  billing_method: metered-api
+  status: current
+  region: not specified
+  tier: GA
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.08
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-9d4f7ae81230
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-cohere-embed-5-pro-cohere-d310d3a8de69
+  verified_at: '2026-10-06'
+  model_id: cohere-embed-5-pro
+  provider_id: cohere
+  product: Model Vault
+  model_label: Embed 5 Pro
+  billing_method: metered-api
+  status: current
+  region: not specified
+  tier: Small dedicated instance
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: compute
+    amount: 3
+    currency: USD
+    unit: per instance hour
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-73e03ec6d5cd
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-api-playground-bfl-082684041227
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: bfl
+  product: API / Playground
+  model_label: FLUX 3 Image
+  billing_method: metered-api
+  status: current
+  region: not specified
+  tier: 1k approximately 1 megapixel
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: generation
+    amount: 0.048
+    currency: USD
+    unit: per image
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-752c7dd560da
+  notes:
+  - This route names a model/alias not yet resolved to a canonical model profile; do not assume checkpoint
+    equivalence.
+- schema_version: '1.0'
+  id: price-providers-bfl-flux3-video-bfl-772aa13dfb82
+  verified_at: '2026-10-06'
+  model_id: bfl-flux3-video
+  provider_id: bfl
+  product: API / Playground
+  model_label: FLUX 3 Video
+  billing_method: metered-api
+  status: current
+  region: not specified
+  tier: t2v/i2v full render HD
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: generation
+    amount: 0.17
+    currency: USD
+    unit: per output second
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-752c7dd560da
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-bfl-flux3-video-bfl-c4a4dfe8876e
+  verified_at: '2026-10-06'
+  model_id: bfl-flux3-video
+  provider_id: bfl
+  product: API / Playground
+  model_label: FLUX 3 Video
+  billing_method: metered-api
+  status: current
+  region: not specified
+  tier: t2v/i2v full render UHD
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: generation
+    amount: 0.8
+    currency: USD
+    unit: per output second
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-752c7dd560da
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-api-playground-bfl-87cdad9a25df
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: bfl
+  product: API / Playground
+  model_label: FLUX.2 [klein] 4B
+  billing_method: metered-api
+  status: current
+  region: not specified
+  tier: first megapixel
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: generation
+    amount: 0.014
+    currency: USD
+    unit: per image
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Each additional megapixel adds $0.001; base is not all-resolution flat price.
+  evidence_ids:
+  - src-752c7dd560da
+  notes:
+  - This route names a model/alias not yet resolved to a canonical model profile; do not assume checkpoint
+    equivalence.
+- schema_version: '1.0'
+  id: price-providers-elevenlabs-eleven-v4-elevenlabs-9a8e2a2f9216
+  verified_at: '2026-10-06'
+  model_id: elevenlabs-eleven-v4
+  provider_id: elevenlabs
+  product: ElevenAPI
+  model_label: eleven_v4
+  billing_method: metered-api
+  status: current
+  region: not specified
+  tier: Free / PayGo displayed
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: text
+    amount: 0.022
+    currency: USD
+    unit: per 1,000 characters
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - excluded
+  evidence_ids:
+  - src-bcc14c31357b
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-elevenapi-elevenlabs-3c86d62642bb
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: elevenlabs
+  product: ElevenAPI
+  model_label: eleven_v4_turbo
+  billing_method: metered-api
+  status: current
+  region: not specified
+  tier: Free / PayGo displayed
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: text
+    amount: 0.011
+    currency: USD
+    unit: per 1,000 characters
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - excluded
+  evidence_ids:
+  - src-bcc14c31357b
+  notes:
+  - This route names a model/alias not yet resolved to a canonical model profile; do not assume checkpoint
+    equivalence.
+- schema_version: '1.0'
+  id: price-providers-elevenapi-subscription-elevenlabs-eb94c3dd9232
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: elevenlabs
+  product: ElevenAPI subscription
+  model_label: null
+  billing_method: subscription
+  status: current
+  region: not specified
+  tier: Starter
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: subscription
+    amount: 6
+    currency: USD
+    unit: per month
+    conditions: []
+  - metric: first_month_promo
+    amount: 1
+    currency: USD
+    unit: per month
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Included amount changes by model; not unlimited API use.
+  - excluded
+  evidence_ids:
+  - src-bcc14c31357b
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-xai-grok-4-7-opencode-zen-ad6a54b286af
+  verified_at: '2026-10-06'
+  model_id: xai-grok-4-7
+  provider_id: opencode-zen
+  product: Zen
+  model_label: grok-4.7
+  billing_method: metered-api
+  status: current
+  region: not specified
+  tier: prompt <=200k
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 2
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.5
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: output
+    amount: 6
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-772c9fd668f0
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-xai-grok-4-7-opencode-zen-5e46b5d4903b
+  verified_at: '2026-10-06'
+  model_id: xai-grok-4-7
+  provider_id: opencode-zen
+  product: Zen
+  model_label: grok-4.7
+  billing_method: metered-api
+  status: current
+  region: not specified
+  tier: prompt >200k
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 4
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: cached_input
+    amount: 1
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: output
+    amount: 12
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-772c9fd668f0
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-zen-credit-purchase-opencode-zen-9481cbb7a771
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: opencode-zen
+  product: Zen credit purchase
+  model_label: null
+  billing_method: metered-api
+  status: current
+  region: not specified
+  tier: credit card
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: percentage_fee
+    amount: 4.4
+    currency: USD
+    unit: per transaction
+    conditions: []
+  - metric: fixed_fee
+    amount: 0.3
+    currency: USD
+    unit: per transaction
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-772c9fd668f0
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-go-opencode-zen-14d71524fa38
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: opencode-zen
+  product: Go
+  model_label: null
+  billing_method: subscription
+  status: current
+  region: international access marketing; residency unspecified
+  tier: Go
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: subscription
+    amount: 10
+    currency: USD
+    unit: per month
+    conditions: []
+  included_usage:
+  - Bounded coding-agent traffic; published request counts are estimates, not fixed entitlements.
+  reset_cadence: 5-hour, weekly and monthly windows; exact reset timezone unverified
+  overage:
+  - Optional Zen-balance fallback can incur metered charges after subscription limits.
+  conditions:
+  - Bounded coding-agent traffic subscription, not general unlimited API.
+  evidence_ids:
+  - src-35b3dc84644e
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-go-opencode-zen-b0161cc92e8a
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: opencode-zen
+  product: Go
+  model_label: null
+  billing_method: subscription
+  status: current
+  region: international access marketing; residency unspecified
+  tier: Go Plus
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: subscription
+    amount: 40
+    currency: USD
+    unit: per month
+    conditions: []
+  included_usage:
+  - Bounded coding-agent traffic; published request counts are estimates, not fixed entitlements.
+  reset_cadence: 5-hour, weekly and monthly windows; exact reset timezone unverified
+  overage:
+  - Optional Zen-balance fallback can incur metered charges after subscription limits.
+  conditions: []
+  evidence_ids:
+  - src-35b3dc84644e
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-cloud-model-inference-google-cloud-fee290a05c24
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: google-cloud
+  product: cloud model inference
+  model_label: null
+  billing_method: metered-api
+  status: unknown
+  region: null
+  tier: null
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: unverified
+    amount: null
+    currency: null
+    unit: unspecified
+    conditions:
+    - No exact public price was verified for this offer.
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-89852246e77a
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-models-sold-by-azure-azure-foundry-ca5e6135e123
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: azure-foundry
+  product: models sold by Azure
+  model_label: null
+  billing_method: metered-api
+  status: unknown
+  region: null
+  tier: null
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: unverified
+    amount: null
+    currency: null
+    unit: unspecified
+    conditions:
+    - No exact public price was verified for this offer.
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-82c97913adaf
+  notes: []
+- schema_version: '1.0'
+  id: price-providers-jamba2-api-ai21-406c5e523043
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: ai21
+  product: Jamba2 API
+  model_label: null
+  billing_method: metered-api
+  status: unknown
+  region: null
+  tier: null
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: unverified
+    amount: null
+    currency: null
+    unit: unspecified
+    conditions:
+    - No exact public price was verified for this offer.
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-dc01b961c57f
+  notes: []

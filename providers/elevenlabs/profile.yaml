@@ -1,0 +1,38 @@
+schema_version: '1.0'
+id: elevenlabs
+verified_at: '2026-10-06'
+name: ElevenLabs
+roles:
+- creator
+- inference-provider
+api_compatibility: []
+access_methods:
+- ElevenAPI PayGo and subscriptions; ElevenCreative/Agents products have different metering/features.
+geographic_availability:
+- '{"status": "partial", "summary": "Residency options exist but eligibility/model coverage needs contract
+  review; not established from pricing."}'
+- not_exhaustively_verified
+rate_limits:
+- '{"status": "partial", "summary": "Character/request and concurrency limits differ by model/plan. Exact account
+  limits unknown."}'
+caching_batching: []
+privacy_data_use:
+- '{"status": "public_verified", "summary": "Default retention enabled. Selected Enterprise API products support
+  Zero Retention Mode via enable_logging=false. Web UI/playground not covered; cloning/music/dubbing/image-video
+  exclusions apply."}'
+reliability: []
+model_ids: []
+price_ids:
+- price-providers-elevenlabs-eleven-v4-elevenlabs-9a8e2a2f9216
+- price-providers-elevenapi-elevenlabs-3c86d62642bb
+- price-providers-elevenapi-subscription-elevenlabs-eb94c3dd9232
+access_ids:
+- access-providers-access-elevenapi
+evidence_ids:
+- src-bcc14c31357b
+- src-58f6a44d1374
+- src-7a7fa65f65f1
+notes:
+- Paid commercial-use terms and voice rights must be checked. Current Eleven v4 promotional API rate ends Oct
+  12; not a permanent price.
+limitations: []

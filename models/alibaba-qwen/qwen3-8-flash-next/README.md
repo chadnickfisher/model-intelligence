@@ -1,0 +1,90 @@
+# Qwen3.8-Flash-Next
+
+**Creator:** Alibaba / Qwen · **Family:** Qwen3.8 · **Status:** preview
+**Verified:** 2026-10-06 · **Release:** 2026-08-26
+
+[Canonical data](profile.yaml) · [Methodology](../../../methodology.md) · [Catalog](../../../data/models.md)
+
+## Task judgments
+
+### Efficient agent workers (medium confidence)
+
+Interesting for local tool-heavy workers when offloading and license terms fit.
+
+Conditions: Benchmark the exact quantized runtime; medium effort performed better than xhigh in one looping case.
+
+Failure modes / limitations: Runtime-specific grammar failures, thinking loops, CPU/SSD bottlenecks.
+
+Supporting sources: [Qwen3.8-Flash-Next model card](https://huggingface.co/Qwen/Qwen3.8-Flash-Next) · [Qwen3.8 Flash-Next independently profiled](https://artificialanalysis.ai/models/qwen3-8-flash-next) · [Single-R9700 Qwen3.8 comparison](https://www.reddit.com/r/Qwen_AI/comments/1wxshto/qwen3827b_vs_qwen38flashnext_as_agent_workers_on/)
+
+Contradictory or limiting sources: [Single-R9700 Qwen3.8 comparison](https://www.reddit.com/r/Qwen_AI/comments/1wxshto/qwen3827b_vs_qwen38flashnext_as_agent_workers_on/)
+
+### Commercial coding assistant hosting (medium confidence)
+
+Do not assume permissive self-hosted commercial availability.
+
+Conditions: Check whether business is MaaS or an independent coding/office assistant.
+
+Failure modes / limitations: License choice can block a deployment even when weights are downloadable.
+
+Supporting sources: [Qwen Community License 1.0](https://huggingface.co/Qwen/Qwen3.8-Flash-Next/blob/main/LICENSE)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Conservative baseline confidence: broader convergence has not been independently audited.
+
+## Specifications
+
+| Field | Recorded value |
+|---|---|
+| architecture | Hybrid MoE: Gated DeltaNet, Qwen Sparse Attention, n-gram lookup embeddings, gated residual, MTP |
+| parameters | total billion: 180; active billion: 6; scope: creator-declared count; see notes; exact parameter count: Unknown / not established; components billion: backbone: 125; ngram embeddings: 51; mtp: 4 |
+| context window | native tokens: 262144; extended tokens: 1000000; max output tokens: Unknown / not established; notes: Input plus generated output share capacity. Endpoint limits can differ. |
+| maximum output | Unknown / not established |
+| modalities | input: text; image; video; output: text |
+| language support | supported: Unknown / not established; notes: Exact supported-language list not verified in this bounded pass. |
+
+Specifications and provenance are qualified in [canonical data](profile.yaml). Published limits do not guarantee effective retrieval or local memory feasibility.
+
+## Access and cost
+
+1 recorded access route(s); 0 model-specific price record(s).
+
+[Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
+
+Provider routes and subscriptions are separate. Read billing units, thresholds, regions, status, and verification dates.
+
+## Licensing and local use
+
+License: Qwen Community License 1.0
+
+Restrictions: Retain notices.; Separate commercial license for MaaS or independent coding/office AI assistant businesses; internal-use exemption.; Display model name above 100M MAU or $20M monthly product/service revenue; see exact definitions.; A license summary, not legal advice. Open weights does not by itself establish a fully open-source AI system.
+
+Commercial use: conditional
+
+Redistribution: true
+
+Hosted service: true
+
+Local weights/runtime availability: available
+
+Hardware: Planning: roughly 100–128GB aggregate memory for a full 4-bit layout; specialized SSD/RAM offload can run on smaller accelerators.; Creator separates 125B backbone, 51B n-gram table and 4B MTP. A 32GB GPU + 64GB RAM practitioner setup relies on SSD tables, CPU experts, patched runtime and reduced effective resident weight footprint.
+
+Local conditions: Batch 1, short/moderate context unless otherwise stated.; Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the stated count, runtime, OS and temporary loading buffers.; Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage of inactive experts.; Published maximum context is not a guarantee it fits on the suggested local machine.
+
+## Gaps and caveats
+
+- No model inference or benchmark was run in this research pass.
+
+## Recorded price offers
+
+| Provider | Tier / status | Rates | Conditions | Verified |
+|---|---|---|---|---|
+
+## Recorded access routes
+
+- hugging-face / weight_distribution: documented route; account eligibility unverified. identity_note: Hugging Face hosts artifacts; the creator is Alibaba / Qwen
+
+## Sources
+
+[Qwen Community License 1.0](https://huggingface.co/Qwen/Qwen3.8-Flash-Next/blob/main/LICENSE) · [Qwen3.8-Flash-Next model card](https://huggingface.co/Qwen/Qwen3.8-Flash-Next) · [Single-R9700 Qwen3.8 comparison](https://www.reddit.com/r/Qwen_AI/comments/1wxshto/qwen3827b_vs_qwen38flashnext_as_agent_workers_on/) · [Qwen3.8 Flash-Next independently profiled](https://artificialanalysis.ai/models/qwen3-8-flash-next)

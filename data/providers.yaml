@@ -1,0 +1,252 @@
+schema_version: '1.0'
+generated: true
+records:
+- id: ai21
+  name: AI21 Labs
+  roles:
+  - creator
+  - inference-provider
+  profile: providers/ai21/profile.yaml
+  readme: providers/ai21/README.md
+- id: alibaba-qwen
+  name: Alibaba / Qwen
+  roles:
+  - creator
+  profile: providers/alibaba-qwen/profile.yaml
+  readme: providers/alibaba-qwen/README.md
+- id: anthropic
+  name: Anthropic
+  roles:
+  - creator
+  - inference-provider
+  profile: providers/anthropic/profile.yaml
+  readme: providers/anthropic/README.md
+- id: aws-bedrock
+  name: Amazon Bedrock
+  roles:
+  - cloud-platform
+  - inference-provider
+  profile: providers/aws-bedrock/profile.yaml
+  readme: providers/aws-bedrock/README.md
+- id: azure-foundry
+  name: Microsoft Foundry / Azure
+  roles:
+  - cloud-platform
+  - inference-provider
+  profile: providers/azure-foundry/profile.yaml
+  readme: providers/azure-foundry/README.md
+- id: bfl
+  name: Black Forest Labs
+  roles:
+  - creator
+  - inference-provider
+  profile: providers/bfl/profile.yaml
+  readme: providers/bfl/README.md
+- id: cerebras
+  name: Cerebras Inference
+  roles:
+  - inference-provider
+  profile: providers/cerebras/profile.yaml
+  readme: providers/cerebras/README.md
+- id: client-opencode
+  name: OpenCode
+  roles:
+  - client
+  profile: providers/client-opencode/profile.yaml
+  readme: providers/client-opencode/README.md
+- id: cohere
+  name: Cohere
+  roles:
+  - creator
+  - inference-provider
+  profile: providers/cohere/profile.yaml
+  readme: providers/cohere/README.md
+- id: deepseek
+  name: DeepSeek
+  roles:
+  - creator
+  profile: providers/deepseek/profile.yaml
+  readme: providers/deepseek/README.md
+- id: deepseek-api
+  name: DeepSeek API
+  roles:
+  - inference-provider
+  profile: providers/deepseek-api/profile.yaml
+  readme: providers/deepseek-api/README.md
+- id: elevenlabs
+  name: ElevenLabs
+  roles:
+  - creator
+  - inference-provider
+  profile: providers/elevenlabs/profile.yaml
+  readme: providers/elevenlabs/README.md
+- id: fireworks
+  name: Fireworks AI
+  roles:
+  - inference-provider
+  profile: providers/fireworks/profile.yaml
+  readme: providers/fireworks/README.md
+- id: google-ai-studio
+  name: Google AI Studio
+  roles:
+  - access-product
+  profile: providers/google-ai-studio/profile.yaml
+  readme: providers/google-ai-studio/README.md
+- id: google-antigravity
+  name: Google Antigravity
+  roles:
+  - client
+  profile: providers/google-antigravity/profile.yaml
+  readme: providers/google-antigravity/README.md
+- id: google-cli
+  name: Gemini CLI
+  roles:
+  - client
+  profile: providers/google-cli/profile.yaml
+  readme: providers/google-cli/README.md
+- id: google-cloud
+  name: Google Cloud
+  roles:
+  - cloud-platform
+  - inference-provider
+  profile: providers/google-cloud/profile.yaml
+  readme: providers/google-cloud/README.md
+- id: google-consumer
+  name: Gemini app / Google AI plans
+  roles:
+  - access-product
+  profile: providers/google-consumer/profile.yaml
+  readme: providers/google-consumer/README.md
+- id: google-deepmind
+  name: Google DeepMind
+  roles:
+  - creator
+  profile: providers/google-deepmind/profile.yaml
+  readme: providers/google-deepmind/README.md
+- id: google-developer-api
+  name: Google Gemini Developer API
+  roles:
+  - inference-provider
+  profile: providers/google-developer-api/profile.yaml
+  readme: providers/google-developer-api/README.md
+- id: groq
+  name: Groq
+  roles:
+  - inference-provider
+  profile: providers/groq/profile.yaml
+  readme: providers/groq/README.md
+- id: hugging-face
+  name: Hugging Face
+  roles:
+  - weights-host
+  - inference-provider
+  - gateway
+  profile: providers/hugging-face/profile.yaml
+  readme: providers/hugging-face/README.md
+- id: kimi-api
+  name: Kimi API
+  roles:
+  - inference-provider
+  profile: providers/kimi-api/profile.yaml
+  readme: providers/kimi-api/README.md
+- id: meta
+  name: Meta
+  roles:
+  - creator
+  profile: providers/meta/profile.yaml
+  readme: providers/meta/README.md
+- id: microsoft
+  name: Microsoft
+  roles:
+  - creator
+  profile: providers/microsoft/profile.yaml
+  readme: providers/microsoft/README.md
+- id: minimax
+  name: MiniMax
+  roles:
+  - creator
+  profile: providers/minimax/profile.yaml
+  readme: providers/minimax/README.md
+- id: minimax-api
+  name: MiniMax API
+  roles:
+  - inference-provider
+  profile: providers/minimax-api/profile.yaml
+  readme: providers/minimax-api/README.md
+- id: mistral-ai
+  name: Mistral AI
+  roles:
+  - creator
+  profile: providers/mistral-ai/profile.yaml
+  readme: providers/mistral-ai/README.md
+- id: mistral-api
+  name: Mistral La Plateforme
+  roles:
+  - inference-provider
+  profile: providers/mistral-api/profile.yaml
+  readme: providers/mistral-api/README.md
+- id: moonshot-ai
+  name: Moonshot AI
+  roles:
+  - creator
+  profile: providers/moonshot-ai/profile.yaml
+  readme: providers/moonshot-ai/README.md
+- id: nvidia
+  name: NVIDIA
+  roles:
+  - creator
+  profile: providers/nvidia/profile.yaml
+  readme: providers/nvidia/README.md
+- id: openai
+  name: OpenAI
+  roles:
+  - creator
+  - inference-provider
+  profile: providers/openai/profile.yaml
+  readme: providers/openai/README.md
+- id: opencode-zen
+  name: OpenCode Zen
+  roles:
+  - inference-provider
+  - gateway
+  - access-product
+  profile: providers/opencode-zen/profile.yaml
+  readme: providers/opencode-zen/README.md
+- id: openrouter
+  name: OpenRouter
+  roles:
+  - inference-provider
+  - gateway
+  profile: providers/openrouter/profile.yaml
+  readme: providers/openrouter/README.md
+- id: qwen-cloud
+  name: Qwen Cloud
+  roles:
+  - inference-provider
+  profile: providers/qwen-cloud/profile.yaml
+  readme: providers/qwen-cloud/README.md
+- id: together
+  name: Together AI
+  roles:
+  - inference-provider
+  profile: providers/together/profile.yaml
+  readme: providers/together/README.md
+- id: xai
+  name: xAI / SpaceXAI
+  roles:
+  - creator
+  - inference-provider
+  profile: providers/xai/profile.yaml
+  readme: providers/xai/README.md
+- id: z-ai-zhipu-ai
+  name: Z.ai / Zhipu AI
+  roles:
+  - creator
+  profile: providers/z-ai-zhipu-ai/profile.yaml
+  readme: providers/z-ai-zhipu-ai/README.md
+- id: zai-api
+  name: Z.ai API
+  roles:
+  - inference-provider
+  profile: providers/zai-api/profile.yaml
+  readme: providers/zai-api/README.md

@@ -1,0 +1,109 @@
+schema_version: '1.0'
+id: hugging-face
+verified_at: '2026-10-06'
+name: Hugging Face
+roles:
+- weights-host
+- inference-provider
+- gateway
+api_compatibility: []
+access_methods:
+- Hub downloads, routed Inference Providers, and dedicated Inference Endpoints are separate products.
+geographic_availability:
+- '{"status": "partial", "summary": "Router location depends on provider; dedicated endpoint regions/hardware
+  must be selected. Gated repositories can restrict EU access."}'
+- not_exhaustively_verified
+rate_limits:
+- '{"status": "partial", "summary": "Free $0.10 monthly credits subject to change; PRO and organization seats
+  $2 monthly general compute credits. Provider quotas still apply."}'
+caching_batching: []
+privacy_data_use:
+- '{"status": "public_verified", "summary": "Routed gateway does not store request/response bodies or use them
+  for training; debugging metadata up to 30 days. Actual inference provider has its own policy."}'
+reliability: []
+model_ids:
+- qwen3-8-27b
+- qwen3-8-flash-next
+- qwen3-8-2-4t-a95b
+- qwen3-coder-next
+- qwen3-5-9b
+- deepseek-v4-1-flash
+- deepseek-v4-pro-0813
+- mistral-small-4
+- mistral-medium-3-5
+- mistral-large-3
+- ministral-3-8b
+- devstral-small-2
+- phi-4-reasoning-vision-15b
+- kimi-k3
+- glm-5-3
+- glm-5-3-flash
+- minimax-m3
+- nemotron-3-ultra
+- llama-4-scout
+- llama-4-maverick
+- phi-4-mini-instruct
+- phi-4-multimodal-instruct
+price_ids:
+- price-providers-inference-providers-hugging-face-335a1fcfc401
+- price-providers-all-hf-compute-hugging-face-a46afb00e085
+access_ids:
+- access-open-qwen3-8-27b-weights
+- access-open-qwen3-8-flash-next-weights
+- access-open-qwen3-8-2-4t-a95b-weights
+- access-open-qwen3-coder-next-weights
+- access-open-qwen3-5-9b-weights
+- access-open-deepseek-v4-1-flash-weights
+- access-open-deepseek-v4-pro-0813-weights
+- access-open-mistral-small-4-weights
+- access-open-mistral-medium-3-5-weights
+- access-open-mistral-large-3-weights
+- access-open-ministral-3-8b-weights
+- access-open-devstral-small-2-weights
+- access-open-phi-4-reasoning-vision-15b-weights
+- access-open-kimi-k3-weights
+- access-open-glm-5-3-weights
+- access-open-glm-5-3-flash-weights
+- access-open-minimax-m3-weights
+- access-open-nemotron-3-ultra-weights
+- access-open-llama-4-scout-weights
+- access-open-llama-4-maverick-weights
+- access-open-phi-4-mini-instruct-weights
+- access-open-phi-4-multimodal-instruct-weights
+- access-providers-access-hf-download
+- access-providers-access-hf-router
+- access-providers-access-hf-endpoints
+evidence_ids:
+- src-64b25f3342fd
+- src-574a462eb9ac
+- src-65ad2b8b0099
+- src-eae889ae29d3
+- src-ca26bca182f6
+- src-eb79656c925c
+- src-2bc2cf30ffd5
+- src-71b3fd269cc8
+- src-e0a64484787e
+- src-5c348986a151
+- src-b96a45c2e083
+- src-dcba779ffa90
+- src-79280a1db5da
+- src-f249e65005c1
+- src-e37726fea976
+- src-fd9a0c74ec31
+- src-91f835e2db28
+- src-e7129e9021b6
+- src-4424584ee706
+- src-5302786105ea
+- src-06645d3950f1
+- src-c5a0afc263f8
+- src-8cb15ff6ddd4
+- src-65471a2c7ad5
+- src-147450d232b3
+- src-29885c43e537
+- src-07e3af888801
+notes:
+- Each repository's license controls weights and commercial use. Gated downloads require account approval/contact-data
+  sharing. Local inference costs hardware and operations.
+limitations:
+- Privacy/data-use details were not fully verified in this baseline.
+- Exact public or account-specific quotas were not established.

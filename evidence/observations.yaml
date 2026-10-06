@@ -1,0 +1,837 @@
+schema_version: '1.0'
+records:
+- id: obs-a91fd388dc88
+  kind: research-synthesis
+  summary: Strong candidate when difficult end-to-end work justifies latency and token cost.
+  source_ids:
+  - src-97b73e99f5cd
+  - src-ea74e2fffbc5
+  observed_at: '2026-10-06'
+  configuration:
+  - AA harness/version and reasoning effort are material; these are not success probabilities for an arbitrary
+    user task.
+  findings:
+  - 'AA Terminal-Bench4.0: high54%, max59%; AutomationBench-AA high67%, max68%.'
+  limitations:
+  - AA terminal tasks still fail at high and max effort; OpenAI documents legitimate work being interrupted
+    by safety monitoring.
+  - 'Higher effort is not uniformly better: AA-Omniscience high44 versus max43; GDP.pdf31% for both.'
+  measurements: {}
+  publisher: null
+- id: obs-8eab532ce0f9
+  kind: research-synthesis
+  summary: A strong escalation model for hard scientific workflows.
+  source_ids:
+  - src-f2dca02215ef
+  observed_at: '2026-10-06'
+  configuration:
+  - Maximum effort; tool-enabled scientific terminal workflow.
+  findings:
+  - OpenAI reports68.1% on Terminal-Bench Science0.1 in the Sol comparison.
+  limitations:
+  - Substantial residual failures; vendor-run setting and benchmark version affect results.
+  measurements: {}
+  publisher: null
+- id: obs-e5d2a15ea501
+  kind: research-synthesis
+  summary: Useful first comparison against Astra for routine complex work.
+  source_ids:
+  - src-fafcf655e0d8
+  observed_at: '2026-10-06'
+  configuration:
+  - Same named max effort; harness and token usage differ across models.
+  findings:
+  - 'AA max: Terminal-Bench4.0 rises44% to56% versus GPT-6 Sol; GDP.pdf25% to31%.'
+  limitations:
+  - Lower SciCode and AA-LCR results than GPT-6 Sol in the cited max-effort comparison.
+  - SciCode declines58% to54%; AA-LCR84% to83%. Newer is not better on every task.
+  measurements: {}
+  publisher: null
+- id: obs-c5c416a3125b
+  kind: research-synthesis
+  summary: Improved but requires checking sources and tool failures.
+  source_ids:
+  - src-f2dca02215ef
+  observed_at: '2026-10-06'
+  configuration:
+  - Use current retrieval for changing facts.
+  findings:
+  - OpenAI difficult-prompt factual error rate:7.7% versus11.4% for GPT-6 Sol at low effort.
+  limitations:
+  - Vendor selected error-inducing prompts still produce factual errors; this is not typical-use prevalence.
+  - This is a selected error-inducing set, not ordinary-use prevalence.
+  measurements: {}
+  publisher: null
+- id: obs-18449a135e8c
+  kind: research-synthesis
+  summary: Good low-token-price option for bounded, validated subtasks.
+  source_ids:
+  - src-ffef271f5600
+  - src-608eb672ebb7
+  observed_at: '2026-10-06'
+  configuration:
+  - Reasoning settings and harness matter; DeepSWE and Terminal-Bench are different tests.
+  findings:
+  - AA max AA-LCR83%; vendor DeepSWE66.6% in its own setup.
+  limitations:
+  - Only13% all-tests-pass on cited AA Terminal-Bench4.0 at max effort.
+  - AA max Terminal-Bench4.0 only13%, GDP.pdf23%; narrower competence than price marketing suggests.
+  measurements: {}
+  publisher: null
+- id: obs-b01421e4dbca
+  kind: research-synthesis
+  summary: Precision-oriented editing choice.
+  source_ids:
+  - src-259c8fd88c0f
+  - src-1a9fcf8d6701
+  - src-285d61f371cf
+  observed_at: '2026-10-06'
+  configuration:
+  - Quality, resolution, reference images and retries change consumption.
+  findings:
+  - Vendor positions Sunburst for finer editing control and Flare for faster generation.
+  limitations:
+  - No independent model-specific head-to-head recovered in this bounded pass; equal token prices do not imply
+    equal cost per image.
+  measurements: {}
+  publisher: null
+- id: obs-144443616836
+  kind: research-synthesis
+  summary: Latency-oriented image generation choice.
+  source_ids:
+  - src-259c8fd88c0f
+  - src-cee7a5257e77
+  - src-285d61f371cf
+  observed_at: '2026-10-06'
+  configuration:
+  - Quality, resolution, reference images and retries change consumption.
+  findings:
+  - Vendor positions Sunburst for finer editing control and Flare for faster generation.
+  limitations:
+  - No independent model-specific head-to-head recovered in this bounded pass; equal token prices do not imply
+    equal cost per image.
+  measurements: {}
+  publisher: null
+- id: obs-4797f27441f5
+  kind: research-synthesis
+  summary: Use for conversational flow with a separately configured reasoning backend.
+  source_ids:
+  - src-84d1a7712d6a
+  - src-c84f0489248c
+  observed_at: '2026-10-06'
+  configuration:
+  - Total cost includes both session duration and backend calls.
+  findings:
+  - Official full-duplex design supports overlapping listen/speak and backend delegation.
+  limitations:
+  - Strong reasoning may come from the backend, not this voice model; no independent task evaluation recovered.
+  measurements: {}
+  publisher: null
+- id: obs-d95f95883e10
+  kind: research-synthesis
+  summary: Consider when reasoning and tools must operate in a realtime speech session.
+  source_ids:
+  - src-cf6a8843c8fd
+  observed_at: '2026-10-06'
+  configuration:
+  - Audio-token pricing cannot be compared directly with Live session-minute pricing.
+  findings:
+  - Vendor documents stronger alphanumeric recognition, noise/silence and interruption behavior over Realtime2.
+  limitations:
+  - No independent version-matched evidence recovered; higher reasoning effort increases latency and output
+    consumption.
+  measurements: {}
+  publisher: null
+- id: obs-8614ee721f1d
+  kind: research-synthesis
+  summary: Escalation candidate with strong evidence but expensive effort-sensitive operation.
+  source_ids:
+  - src-bc2410652a3c
+  observed_at: '2026-10-06'
+  configuration:
+  - Evaluated service includes safety fallback to other Claude models.
+  findings:
+  - 'AA max/default fallback: Terminal-Bench4.0 52%, HLE59%, AA-LCR85%; all improve over Fable5 except some
+    nearly flat tasks.'
+  limitations:
+  - Cited GDP.pdf all-pass result is26%; failed cases are not categorized in the retrieved comparison.
+  - GDP.pdf only26%; these results do not make Fable universally preferable to newer Opus/Sonnet.
+  measurements: {}
+  publisher: null
+- id: obs-c5fa019c8d8a
+  kind: research-synthesis
+  summary: Cache price cut can help context-heavy workflows, but task cost is workload-dependent.
+  source_ids:
+  - src-e7232d52f37f
+  - src-f10e40cc0139
+  observed_at: '2026-10-06'
+  configuration:
+  - Vendor default-effort August traffic and AA max benchmark are different workloads, not directly contradictory
+    arithmetic.
+  findings:
+  - Vendor reports25% typical and up to45% highly agentic savings versus Fable5.
+  limitations:
+  - AA reports higher benchmark task cost despite lower cached-token rates.
+  - AA launch measurement reports20% higher cost/task despite cheaper cache reads.
+  measurements: {}
+  publisher: null
+- id: obs-ec41174a4588
+  kind: research-synthesis
+  summary: Strong balanced candidate for sustained open-ended professional work.
+  source_ids:
+  - src-4950ff35950b
+  - src-0dd3bed5c7dd
+  - src-4d070c5c8c67
+  observed_at: '2026-10-06'
+  configuration:
+  - Independent benchmark harness; default fallback makes this a served configuration, not isolated weights.
+  findings:
+  - 'AA max/default fallback: Terminal-Bench4.0 59.6%; SciCode66.9%; HLE61.4%.'
+  limitations:
+  - Cited Terminal-Bench4.0 all-tests-pass result leaves about40% of tasks unsuccessful.
+  - About40% of terminal benchmark tasks still fail; task-specific leaders differ.
+  measurements: {}
+  publisher: null
+- id: obs-3416d44a445c
+  kind: research-synthesis
+  summary: Strong terminal/task benchmark performer; tune effort rather than assuming maximum is best.
+  source_ids:
+  - src-4d947df5f3d7
+  - src-4e3ca8a95d36
+  observed_at: '2026-10-06'
+  configuration:
+  - AA max/default fallback; creator and AA terminal scores differ because setups differ.
+  findings:
+  - AA reports Terminal-Bench4.0 about64% at max and knowledge-work results near Opus5.5.
+  limitations:
+  - Vendor reports two inspected max-effort FrontierCode cases with timeout or out-of-scope extra edits from
+    expanded subagent review.
+  - 'Anthropic FrontierCode: max46.2%, xhigh52.1%; extra subagent reviews caused timeout or out-of-scope edits.'
+  measurements: {}
+  publisher: null
+- id: obs-8ed2b3f90f11
+  kind: research-synthesis
+  summary: Low per-token price is useful only when effort and total tokens are controlled.
+  source_ids:
+  - src-4e3ca8a95d36
+  - src-4d947df5f3d7
+  observed_at: '2026-10-06'
+  configuration:
+  - Different effort/workload distributions explain divergent conclusions; max is not app-default medium.
+  findings:
+  - Vendor reports up to30% less cost/task than Sonnet5 in its testing.
+  limitations:
+  - AA max-effort run used approximately193k output tokens/task and higher benchmark cost than predecessor.
+  - AA max uses approximately193k output tokens/task and costs$7.60/task, about50% above Sonnet5 on its suite.
+  measurements: {}
+  publisher: null
+- id: obs-ca2b56257797
+  kind: research-synthesis
+  summary: Useful responsive model when limited task scope and validation matter.
+  source_ids:
+  - src-e99bd76836c1
+  - src-5c510b458547
+  observed_at: '2026-10-06'
+  configuration:
+  - Vendor partner testimonials are selected marketing evidence, not independent controlled replications.
+  findings:
+  - Vendor SWE-bench Verified73.3%,500 tasks,50 trials, custom prompt and large thinking budget; launch partners
+    report responsive coding.
+  limitations:
+  - Low cited non-reasoning HLE and AA-LCR performance; specific errors not categorized in retrieved page.
+  - AA non-reasoning HLE4%, AA-LCR50%; older near-frontier claims must not be generalized to2026 hardest work.
+  measurements: {}
+  publisher: null
+- id: obs-c3ae88e5cf4d
+  kind: research-synthesis
+  summary: Consider for self-hosting and customization; modern frontier agent equivalence is unsupported.
+  source_ids:
+  - src-f85326ed9ab1
+  - src-06e7619eb6a4
+  - src-6d85ece3b497
+  observed_at: '2026-10-06'
+  configuration:
+  - Harmony formatting required; hosted provider quantization/output caps may differ from native weights.
+  findings:
+  - Open weights with disclosed MoE design and commercially permissive license; deployment guidance fits80GB
+    memory.
+  limitations:
+  - Cited high-effort service scores0% on Terminal-Bench4.0 and AutomationBench-AA.
+  - 'AA high: Terminal-Bench4.0 and AutomationBench-AA both0%; AA-LCR52%. Older launch benchmarks target different
+    capabilities.'
+  measurements: {}
+  publisher: null
+- id: obs-30265198a1a8
+  kind: research-synthesis
+  summary: Consider for self-hosting and customization; modern frontier agent equivalence is unsupported.
+  source_ids:
+  - src-4fb7165743ee
+  - src-06e7619eb6a4
+  - src-6d85ece3b497
+  observed_at: '2026-10-06'
+  configuration:
+  - Harmony formatting required; hosted provider quantization/output caps may differ from native weights.
+  findings:
+  - Open weights with disclosed MoE design and commercially permissive license; deployment guidance fits16GB
+    memory.
+  limitations:
+  - Cited high-effort service scores0% on Terminal-Bench4.0 and AutomationBench-AA.
+  - 'AA high: Terminal-Bench4.0 and AutomationBench-AA both0%; AA-LCR35%. Older launch benchmarks target different
+    capabilities.'
+  measurements: {}
+  publisher: null
+- id: obs-62d94da56cdb
+  kind: independent_measurement
+  summary: Fast streamed decoding in the observed benchmark service.
+  source_ids:
+  - src-3a6a4293053c
+  observed_at: '2026-10-06'
+  configuration:
+  - high reasoning; Google API
+  findings:
+  - '{"output_tokens_per_second": 241.9}'
+  limitations:
+  - Excludes time to first token and tool-loop overhead; not an SLA.
+  measurements:
+    output_tokens_per_second: 241.9
+  publisher: null
+- id: obs-7445edb36893
+  kind: independent_measurement
+  summary: Competitive contained coding tasks, with much weaker results on harder general terminal work.
+  source_ids:
+  - src-be6c06ae0b52
+  observed_at: '2026-10-06'
+  configuration:
+  - high; temperature 1; Google API; max output 65,536
+  findings:
+  - '{"LiveCodeBench_pct": 89.48, "ProgramBench_pct": 1.0, "SWE_bench_pct": 80.0, "Terminal_Bench_4_0_pct":
+    19.19}'
+  limitations:
+  - Benchmark task sets differ; cannot treat percentages as interchangeable or typical production success rates.
+  measurements:
+    SWE_bench_pct: 80.0
+    LiveCodeBench_pct: 89.48
+    Terminal_Bench_4_0_pct: 19.19
+    ProgramBench_pct: 1.0
+  publisher: null
+- id: obs-a6b7a76a516c
+  kind: independent_measurement
+  summary: Supports demanding visual/scientific question answering in independent evaluation.
+  source_ids:
+  - src-be6c06ae0b52
+  observed_at: '2026-10-06'
+  configuration:
+  - high; Google API
+  findings:
+  - '{"GPQA_Diamond_pct": 94.44, "MMMU_Pro_pct": 89.08}'
+  limitations:
+  - Does not establish grounded factual reliability or autonomous scientific correctness.
+  measurements:
+    MMMU_Pro_pct: 89.08
+    GPQA_Diamond_pct: 94.44
+  publisher: null
+- id: obs-623d3b669e5c
+  kind: provider_limitation
+  summary: Provider discloses hallucinations, occasional timeouts, and increased tokens at higher effort; multilingual
+    safety regressed versus 3.7.
+  source_ids:
+  - src-c4c7ba8fda18
+  observed_at: '2026-10-06'
+  configuration: []
+  findings: []
+  limitations: []
+  measurements: null
+  publisher: null
+- id: obs-2ee68e334fde
+  kind: independent_measurement
+  summary: Strong closed-form science and multimodal QA in current Vals snapshot.
+  source_ids:
+  - src-d56e7b0c3e01
+  observed_at: '2026-10-06'
+  configuration:
+  - high; temperature 1; Google API; output 65,536
+  findings:
+  - '{"GPQA_Diamond_pct": 95.45, "LiveCodeBench_pct": 88.48, "MMMU_Pro_pct": 88.21}'
+  limitations:
+  - Snapshot values differ from older release commentary; dated table retained.
+  measurements:
+    GPQA_Diamond_pct: 95.45
+    MMMU_Pro_pct: 88.21
+    LiveCodeBench_pct: 88.48
+  publisher: null
+- id: obs-e8f1075592de
+  kind: independent_measurement
+  summary: Strong QA does not transfer uniformly to open-ended agents.
+  source_ids:
+  - src-d56e7b0c3e01
+  observed_at: '2026-10-06'
+  configuration:
+  - high; Google API
+  findings:
+  - '{"ProgramBench_pct": 0, "SWE_bench_pct": 78.8, "Terminal_Bench_4_0_pct": 2.52}'
+  limitations:
+  - Different task sets/harnesses; no production reliability guarantee.
+  measurements:
+    Terminal_Bench_4_0_pct: 2.52
+    ProgramBench_pct: 0
+    SWE_bench_pct: 78.8
+  publisher: null
+- id: obs-dc03c35a1b80
+  kind: provider_benchmark
+  summary: Effective long-context retrieval degrades near the advertised maximum.
+  source_ids:
+  - src-564638136e50
+  observed_at: '2026-10-06'
+  configuration: []
+  findings:
+  - '{"128k_average_pct": 84.9, "1M_pointwise_pct": 26.3}'
+  limitations:
+  - Average and pointwise numbers are different aggregation regimes, but both caution against equating capacity
+    with reliable recall.
+  measurements:
+    128k_average_pct: 84.9
+    1M_pointwise_pct: 26.3
+  publisher: null
+- id: obs-16516ab6f54e
+  kind: independent_measurement
+  summary: Measured decode speed supports throughput-sensitive experimentation.
+  source_ids:
+  - src-7199021bd5d2
+  observed_at: '2026-10-06'
+  configuration: []
+  findings:
+  - '{"output_tokens_per_second": 341.5}'
+  limitations:
+  - API snapshot; no end-to-end latency or local execution claim.
+  measurements:
+    output_tokens_per_second: 341.5
+  publisher: null
+- id: obs-8b65b1136da3
+  kind: independent_measurement
+  summary: Useful bounded coding capability with weaker difficult agent performance.
+  source_ids:
+  - src-52c893cadee0
+  observed_at: '2026-10-06'
+  configuration:
+  - high; temperature 1; output 65,536
+  findings:
+  - '{"ProgramBench_pct": 0, "Terminal_Bench_2_1_pct": 50.19, "full_500_task_SWE_bench_verified_pct": 75}'
+  limitations:
+  - Vals Index subset is 68.63% SWE-bench, not the 75% full-set value; avoid mixing.
+  measurements:
+    full_500_task_SWE_bench_verified_pct: 75
+    Terminal_Bench_2_1_pct: 50.19
+    ProgramBench_pct: 0
+  publisher: null
+- id: obs-04efb4d01f02
+  kind: provider_benchmark
+  summary: Large context is not equal to reliable exhaustive retrieval.
+  source_ids:
+  - src-56f9dadd63b1
+  observed_at: '2026-10-06'
+  configuration: []
+  findings:
+  - '{"128k_average_pct": 72.2, "1M_pointwise_pct": 21.3}'
+  limitations:
+  - Provider-run, different aggregation regimes.
+  measurements:
+    128k_average_pct: 72.2
+    1M_pointwise_pct: 21.3
+  publisher: null
+- id: obs-bbe38314fda9
+  kind: provider_capability
+  summary: Grounded image creation and text/layout control are supported; results require review.
+  source_ids:
+  - src-21fe0d4c63a7
+  - src-5d0514efd100
+  observed_at: '2026-10-06'
+  configuration: []
+  findings: []
+  limitations:
+  - No structured outputs or function calling; exact requested image count may not be followed.
+  measurements: null
+  publisher: null
+- id: obs-c3991e29aaff
+  kind: independent_research
+  summary: Independent low-level vision study found attractive reconstructed detail but lower reference-based
+    fidelity than specialists.
+  source_ids:
+  - src-d887c30d6e12
+  observed_at: '2026-10-06'
+  configuration:
+  - December 2025 Nano Banana Pro version
+  findings: []
+  limitations:
+  - Historical version evidence; plausible invented detail is a risk for factual restoration, not proof about
+    every current editing task.
+  measurements: null
+  publisher: null
+- id: obs-a1dcd03b9809
+  kind: provider_capability
+  summary: Native audio, frame controls, reference images and extension fit directed short cinematic shots.
+  source_ids:
+  - src-6fab7b07e4f3
+  - src-521c059d5d6a
+  observed_at: '2026-10-06'
+  configuration: []
+  findings: []
+  limitations: []
+  measurements: null
+  publisher: null
+- id: obs-7d1f6921bea0
+  kind: provider_limitation
+  summary: Multi-video reasoning unsupported; non-English unevaluated; audio processing/safety blocks and variable
+    latency occur.
+  source_ids:
+  - src-6fab7b07e4f3
+  observed_at: '2026-10-06'
+  configuration: []
+  findings:
+  - '{"published_latency_max_seconds": 360, "published_latency_min_seconds": 11}'
+  limitations:
+  - Published range during peak periods, not independently measured or guaranteed.
+  measurements:
+    published_latency_min_seconds: 11
+    published_latency_max_seconds: 360
+  publisher: null
+- id: obs-6dfa41ffcfec
+  kind: provider_comparison
+  summary: Google now recommends Omni as default video option, reserving Veo for particular controls/legacy
+    integration.
+  source_ids:
+  - src-5f9e9fc2ef33
+  observed_at: '2026-10-06'
+  configuration: []
+  findings: []
+  limitations:
+  - Provider positioning; not an independent head-to-head evaluation.
+  measurements: null
+  publisher: null
+- id: obs-d42491a5f0c8
+  kind: provider_capability
+  summary: Full songs include prompted verses, choruses, bridges and lyrics; developer guidance supports structural
+    prompts.
+  source_ids:
+  - src-85f93e060d0d
+  observed_at: '2026-10-06'
+  configuration: []
+  findings: []
+  limitations: []
+  measurements: null
+  publisher: null
+- id: obs-4bde1c37710c
+  kind: provider_limitation
+  summary: Single-turn generation, variable duration/output, blocked artist-voice/copyrighted-lyric prompts
+    and SynthID watermark constrain workflows.
+  source_ids:
+  - src-85f93e060d0d
+  observed_at: '2026-10-06'
+  configuration: []
+  findings: []
+  limitations: []
+  measurements: null
+  publisher: null
+- id: obs-62a4e6b29fd2
+  kind: provider_benchmark
+  summary: Google reports improved audio fidelity and lyric-prompt adherence versus Lyria 2.
+  source_ids:
+  - src-adf03d8b2d85
+  observed_at: '2026-10-06'
+  configuration: []
+  findings: []
+  limitations:
+  - No quantitative independent current-version results verified.
+  measurements: null
+  publisher: null
+- id: obs-c0b11ad9d793
+  kind: provider_capability
+  summary: Streaming voice with interleaved reasoning and default non-blocking tool calls is a suitable interface
+    design for conversational agents.
+  source_ids:
+  - src-04c98c33c883
+  - src-25e1e7c2305d
+  observed_at: '2026-10-06'
+  configuration: []
+  findings: []
+  limitations: []
+  measurements: null
+  publisher: null
+- id: obs-d67386e9f0d6
+  kind: provider_limitation
+  summary: Hallucinations/timeouts remain; migration fails if unsupported thinking_level or proactive_audio:false
+    is sent.
+  source_ids:
+  - src-744e7330e24d
+  - src-04c98c33c883
+  observed_at: '2026-10-06'
+  configuration: []
+  findings: []
+  limitations: []
+  measurements: null
+  publisher: null
+- id: obs-277108d396be
+  kind: official_fact
+  summary: Open downloadable weights and Apache 2.0 allow controlled deployment and tuning.
+  source_ids:
+  - src-ded81031faae
+  - src-fc87bfb1eae7
+  observed_at: '2026-10-06'
+  configuration: []
+  findings: []
+  limitations: []
+  measurements: null
+  publisher: null
+- id: obs-984e3b3ac410
+  kind: provider_benchmark
+  summary: Provider evaluates 31B IT as capable in coding and visual reasoning; smaller variants trade quality
+    for resources.
+  source_ids:
+  - src-fc87bfb1eae7
+  observed_at: '2026-10-06'
+  configuration:
+  - instruction-tuned; provider evaluation
+  findings:
+  - '{"31B_LiveCodeBench_v6_pct": 80, "31B_MMMU_Pro_pct": 76.9, "31B_MRCR_128k_pct": 66.4}'
+  limitations:
+  - Not runtime-independent or universal quality evidence.
+  measurements:
+    31B_LiveCodeBench_v6_pct: 80
+    31B_MMMU_Pro_pct: 76.9
+    31B_MRCR_128k_pct: 66.4
+  publisher: null
+- id: obs-fcfd1534c8b5
+  kind: independent_measurement
+  summary: Independent hosted 31B reasoning throughput is substantially lower than the Flash services measured
+    here.
+  source_ids:
+  - src-3057cae1019b
+  observed_at: '2026-10-06'
+  configuration:
+  - reasoning
+  findings:
+  - '{"output_tokens_per_second": 35.6}'
+  limitations:
+  - Provider/hardware affects speed; not a prediction of any user GPU.
+  measurements:
+    output_tokens_per_second: 35.6
+  publisher: null
+- id: obs-cdfc4938876f
+  kind: independent_measurement
+  summary: Independent configuration-specific results show model size and thinking mode do not create a simple
+    ranking.
+  source_ids:
+  - src-d8ef6a5d74b9
+  observed_at: '2026-10-06'
+  configuration:
+  - different weights and reasoning configurations
+  findings:
+  - '{"26B_A4B_reasoning_AA_LCR_pct": 66, "26B_A4B_reasoning_AA_Omniscience": -51, "31B_nonreasoning_AA_LCR_pct":
+    47, "31B_nonreasoning_AA_Omniscience": -52}'
+  limitations:
+  - Do not attribute non-reasoning 31B results to the reasoning representative. Negative Omniscience is not
+    a percent hallucination rate; aggregate index is estimated.
+  measurements:
+    26B_A4B_reasoning_AA_LCR_pct: 66
+    31B_nonreasoning_AA_LCR_pct: 47
+    26B_A4B_reasoning_AA_Omniscience: -51
+    31B_nonreasoning_AA_Omniscience: -52
+  publisher: null
+- id: obs-3386dd991c55
+  kind: provider_capability
+  summary: Conversational short-video editing and mixed inputs support an iterative workflow.
+  source_ids:
+  - src-3b883af04aa0
+  - src-2ba4c5b6b2c8
+  observed_at: '2026-10-06'
+  configuration: []
+  findings: []
+  limitations: []
+  measurements: null
+  publisher: null
+- id: obs-b46d11e01909
+  kind: provider_limitation
+  summary: Some edits of uploaded videos/recognizable people are regionally restricted; 1080p/4K are upscaled.
+  source_ids:
+  - src-2ba4c5b6b2c8
+  - src-a24fd97eb3d0
+  observed_at: '2026-10-06'
+  configuration: []
+  findings: []
+  limitations:
+  - No independent 1.1 model performance comparison verified.
+  measurements: null
+  publisher: null
+- id: obs-ac88874e3783
+  kind: independent_measurement
+  summary: Independent early-access results are strong on code migration and terminal tasks but much weaker
+    on CUA-bench and fully resolved ProgramBench.
+  source_ids:
+  - src-5535da041415
+  observed_at: '2026-10-06'
+  configuration:
+  - Google; high reasoning; temperature 1; output cap 262144
+  findings:
+  - '{"CUA_bench_pct": 4.83, "Code_Migration_pct": 68.17, "ProgramBench_fully_resolved_pct": 2.5, "Terminal_Bench_4_0_pct":
+    57.58, "Vibe_Code_Bench_v1_1_pct": 91.91}'
+  limitations:
+  - Different task sets and harnesses; not a universal success rate.
+  measurements:
+    Code_Migration_pct: 68.17
+    Vibe_Code_Bench_v1_1_pct: 91.91
+    Terminal_Bench_4_0_pct: 57.58
+    CUA_bench_pct: 4.83
+    ProgramBench_fully_resolved_pct: 2.5
+  publisher: null
+- id: obs-917f279500bc
+  kind: official_availability_limitation
+  summary: Announced Sep 30 for selected Fairwind defenders; general developer/consumer access described as
+    forthcoming.
+  source_ids:
+  - src-6381db252dee
+  - src-919b66e84fc3
+  observed_at: '2026-10-06'
+  configuration: []
+  findings: []
+  limitations:
+  - Catalog absence is not evidence against restricted evaluation access.
+  measurements: null
+  publisher: null
+- id: obs-f5e1684ef252
+  kind: independent_measurement
+  summary: Long tasks can be costly; independent evaluator reports high costs for CUA and code migration, using
+    regular prices.
+  source_ids:
+  - src-5535da041415
+  - src-d493892e40d2
+  observed_at: '2026-10-06'
+  configuration:
+  - Vals used $4/$20 regular token pricing, high effort; costs differ from announced promo
+  findings:
+  - '{"AA_output_tokens_index": 110000000, "AA_output_tokens_per_second": null, "Vals_CUA_cost_per_test_USD":
+    193.78, "Vals_Code_Migration_cost_per_test_USD": 57.82}'
+  limitations:
+  - Benchmark costs are not typical user costs or provider tariffs.
+  measurements:
+    Vals_CUA_cost_per_test_USD: 193.78
+    Vals_Code_Migration_cost_per_test_USD: 57.82
+    AA_output_tokens_index: 110000000
+    AA_output_tokens_per_second: null
+  publisher: null
+- id: obs-281c2bae7ad0
+  kind: independent_benchmark
+  summary: AA Intelligence Index v4.3.2 and component tasks
+  source_ids:
+  - src-399a034698f6
+  observed_at: '2026-10-06'
+  configuration:
+  - Grok4.7 xhigh vs Grok4.6 high, first-party API
+  findings:
+  - '{"aa_lcr_v1_1_pct": [77, 80], "cost_per_task_usd": [3.74, 1.86], "intelligence_index": [46, 44], "output_tokens_per_task":
+    [81000, 36000], "terminal_bench_4_pct": [26, 21]}'
+  limitations:
+  - Different reasoning settings; broad quality gain is not across every task. Benchmark cost reflects its
+    workload and cannot price user tasks.
+  measurements:
+    intelligence_index:
+    - 46
+    - 44
+    terminal_bench_4_pct:
+    - 26
+    - 21
+    aa_lcr_v1_1_pct:
+    - 77
+    - 80
+    cost_per_task_usd:
+    - 3.74
+    - 1.86
+    output_tokens_per_task:
+    - 81000
+    - 36000
+  publisher: Artificial Analysis
+- id: obs-4dd631a08c77
+  kind: independent_benchmark
+  summary: Public evidence observation
+  source_ids:
+  - src-7a929ac1ccc5
+  observed_at: '2026-10-06'
+  configuration: []
+  findings:
+  - '{"aa_omniscience_accuracy_pct": 9, "aa_omniscience_non_hallucination_pct": 86, "launch_intelligence_index":
+    37, "mmmu_pro_pct": 63, "output_tokens_per_second": 281, "scicode_pct": 38, "terminal_bench_hard_pct":
+    25}'
+  limitations:
+  - Launch/pre-release testing; older index revision and comparison set. Abstention can drive non-hallucination
+    result.
+  measurements:
+    launch_intelligence_index: 37
+    aa_omniscience_non_hallucination_pct: 86
+    aa_omniscience_accuracy_pct: 9
+    terminal_bench_hard_pct: 25
+    scicode_pct: 38
+    mmmu_pro_pct: 63
+    output_tokens_per_second: 281
+  publisher: Artificial Analysis
+- id: obs-752ea46df2f7
+  kind: vendor_benchmark
+  summary: Public evidence observation
+  source_ids:
+  - src-9d4f7ae81230
+  observed_at: '2026-10-06'
+  configuration: []
+  findings:
+  - '{"vidore_v3_rcp_ndcg10_fast": 84.5, "vidore_v3_rcp_ndcg10_pro": 85.8}'
+  limitations:
+  - Vendor-run parsed-text retrieval evaluation; metric and corpus preprocessing matter. Independent reproduction
+    not verified.
+  measurements:
+    vidore_v3_rcp_ndcg10_pro: 85.8
+    vidore_v3_rcp_ndcg10_fast: 84.5
+  publisher: Cohere
+- id: obs-516d65ed1c24
+  kind: vendor_documentation
+  summary: Purpose-built machine translation with listed tier-one languages and deployment formats.
+  source_ids:
+  - src-1dac5785145f
+  observed_at: '2026-10-06'
+  configuration: []
+  findings: []
+  limitations:
+  - Capabilities documentation is not comparative translation-quality evidence.
+  measurements: {}
+  publisher: null
+- id: obs-15662c63b9d6
+  kind: vendor_launch
+  summary: Enterprise grounding/instruction-following focus and efficient non-reasoning architecture.
+  source_ids:
+  - src-cd9a80108d1d
+  observed_at: '2026-10-06'
+  configuration: []
+  findings: []
+  limitations:
+  - No independent current evaluation or direct API entitlement established.
+  measurements: {}
+  publisher: null
+- id: obs-aa0038a13410
+  kind: vendor_documentation
+  summary: Short audiovisual generation, pinned keyframes and continuation capabilities publicly documented.
+  source_ids:
+  - src-57a05c45a0b1
+  observed_at: '2026-10-06'
+  configuration: []
+  findings: []
+  limitations:
+  - Vendor examples are selected demonstrations; no independent ranking verified.
+  measurements: {}
+  publisher: null
+- id: obs-7f1696b1081e
+  kind: vendor_documentation
+  summary: Current flagship multilingual synthesis and dialogue features.
+  source_ids:
+  - src-58f6a44d1374
+  observed_at: '2026-10-06'
+  configuration: []
+  findings: []
+  limitations:
+  - Expressiveness claims and latency are provider claims; no independent v4 quality score established.
+  measurements: {}
+  publisher: null

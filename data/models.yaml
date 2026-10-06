@@ -1,0 +1,427 @@
+schema_version: '1.0'
+generated: true
+records:
+- id: ai21-jamba2-mini
+  name: Jamba2 Mini
+  creator: AI21 Labs
+  family: Jamba
+  status: unknown
+  local: available
+  profile: models/ai21-labs/ai21-jamba2-mini/profile.yaml
+  readme: models/ai21-labs/ai21-jamba2-mini/README.md
+- id: qwen3-5-9b
+  name: Qwen3.5-9B
+  creator: Alibaba / Qwen
+  family: Qwen3.5
+  status: active
+  local: available
+  profile: models/alibaba-qwen/qwen3-5-9b/profile.yaml
+  readme: models/alibaba-qwen/qwen3-5-9b/README.md
+- id: qwen3-8-2-4t-a95b
+  name: Qwen3.8-2.4T-A95B
+  creator: Alibaba / Qwen
+  family: Qwen3.8
+  status: active
+  local: available
+  profile: models/alibaba-qwen/qwen3-8-2-4t-a95b/profile.yaml
+  readme: models/alibaba-qwen/qwen3-8-2-4t-a95b/README.md
+- id: qwen3-8-27b
+  name: Qwen3.8-27B
+  creator: Alibaba / Qwen
+  family: Qwen3.8
+  status: active
+  local: available
+  profile: models/alibaba-qwen/qwen3-8-27b/profile.yaml
+  readme: models/alibaba-qwen/qwen3-8-27b/README.md
+- id: qwen3-8-flash-next
+  name: Qwen3.8-Flash-Next
+  creator: Alibaba / Qwen
+  family: Qwen3.8
+  status: preview
+  local: available
+  profile: models/alibaba-qwen/qwen3-8-flash-next/profile.yaml
+  readme: models/alibaba-qwen/qwen3-8-flash-next/README.md
+- id: qwen3-coder-next
+  name: Qwen3-Coder-Next
+  creator: Alibaba / Qwen
+  family: Qwen3-Coder
+  status: active
+  local: available
+  profile: models/alibaba-qwen/qwen3-coder-next/profile.yaml
+  readme: models/alibaba-qwen/qwen3-coder-next/README.md
+- id: claude-fable-5-1
+  name: Claude Fable 5.1
+  creator: Anthropic
+  family: Claude 5
+  status: active
+  local: unavailable
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  readme: models/anthropic/claude-fable-5-1/README.md
+- id: claude-haiku-4-5
+  name: Claude Haiku 4.5
+  creator: Anthropic
+  family: Claude 4.5
+  status: active
+  local: unavailable
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  readme: models/anthropic/claude-haiku-4-5/README.md
+- id: claude-opus-5-5
+  name: Claude Opus 5.5
+  creator: Anthropic
+  family: Claude 5
+  status: active
+  local: unavailable
+  profile: models/anthropic/claude-opus-5-5/profile.yaml
+  readme: models/anthropic/claude-opus-5-5/README.md
+- id: claude-sonnet-5-5
+  name: Claude Sonnet 5.5
+  creator: Anthropic
+  family: Claude 5
+  status: active
+  local: unavailable
+  profile: models/anthropic/claude-sonnet-5-5/profile.yaml
+  readme: models/anthropic/claude-sonnet-5-5/README.md
+- id: bfl-flux3-video
+  name: FLUX 3 Video
+  creator: Black Forest Labs
+  family: FLUX
+  status: preview
+  local: unknown
+  profile: models/black-forest-labs/bfl-flux3-video/profile.yaml
+  readme: models/black-forest-labs/bfl-flux3-video/README.md
+- id: cohere-command-a-plus
+  name: Command A+
+  creator: Cohere
+  family: Command
+  status: preview
+  local: available
+  profile: models/cohere/cohere-command-a-plus/profile.yaml
+  readme: models/cohere/cohere-command-a-plus/README.md
+- id: cohere-embed-5-fast
+  name: Embed 5 Fast
+  creator: Cohere
+  family: Embed
+  status: unknown
+  local: unknown
+  profile: models/cohere/cohere-embed-5-fast/profile.yaml
+  readme: models/cohere/cohere-embed-5-fast/README.md
+- id: cohere-embed-5-pro
+  name: Embed 5 Pro
+  creator: Cohere
+  family: Embed
+  status: unknown
+  local: unknown
+  profile: models/cohere/cohere-embed-5-pro/profile.yaml
+  readme: models/cohere/cohere-embed-5-pro/README.md
+- id: cohere-north-small-translate
+  name: North Small Translate
+  creator: Cohere
+  family: North Translate
+  status: unknown
+  local: available
+  profile: models/cohere/cohere-north-small-translate/profile.yaml
+  readme: models/cohere/cohere-north-small-translate/README.md
+- id: deepseek-v4-1-flash
+  name: DeepSeek-V4.1-Flash
+  creator: DeepSeek
+  family: DeepSeek V4.1
+  status: active
+  local: available
+  profile: models/deepseek/deepseek-v4-1-flash/profile.yaml
+  readme: models/deepseek/deepseek-v4-1-flash/README.md
+- id: deepseek-v4-pro-0813
+  name: DeepSeek-V4-Pro-0813
+  creator: DeepSeek
+  family: DeepSeek V4
+  status: active
+  local: available
+  profile: models/deepseek/deepseek-v4-pro-0813/profile.yaml
+  readme: models/deepseek/deepseek-v4-pro-0813/README.md
+- id: elevenlabs-eleven-v4
+  name: Eleven v4
+  creator: ElevenLabs
+  family: Eleven
+  status: active
+  local: unavailable
+  profile: models/elevenlabs/elevenlabs-eleven-v4/profile.yaml
+  readme: models/elevenlabs/elevenlabs-eleven-v4/README.md
+- id: gemini-3-1-pro-preview
+  name: Gemini 3.1 Pro Preview
+  creator: Google DeepMind
+  family: Gemini
+  status: preview
+  local: unavailable
+  profile: models/google-deepmind/gemini-3-1-pro-preview/profile.yaml
+  readme: models/google-deepmind/gemini-3-1-pro-preview/README.md
+- id: gemini-3-5-flash-lite
+  name: Gemini 3.5 Flash-Lite
+  creator: Google DeepMind
+  family: Gemini
+  status: active
+  local: unavailable
+  profile: models/google-deepmind/gemini-3-5-flash-lite/profile.yaml
+  readme: models/google-deepmind/gemini-3-5-flash-lite/README.md
+- id: gemini-3-8-flash
+  name: Gemini 3.8 Flash
+  creator: Google DeepMind
+  family: Gemini
+  status: active
+  local: unavailable
+  profile: models/google-deepmind/gemini-3-8-flash/profile.yaml
+  readme: models/google-deepmind/gemini-3-8-flash/README.md
+- id: gemini-3-8-live
+  name: Gemini 3.8 Live
+  creator: Google DeepMind
+  family: Gemini
+  status: active
+  local: unavailable
+  profile: models/google-deepmind/gemini-3-8-live/profile.yaml
+  readme: models/google-deepmind/gemini-3-8-live/README.md
+- id: gemini-3-pro-image
+  name: Nano Banana Pro / Gemini 3 Pro Image
+  creator: Google DeepMind
+  family: Gemini
+  status: active
+  local: unavailable
+  profile: models/google-deepmind/gemini-3-pro-image/profile.yaml
+  readme: models/google-deepmind/gemini-3-pro-image/README.md
+- id: gemini-omni-1-1-flash
+  name: Gemini Omni 1.1 Flash
+  creator: Google DeepMind
+  family: Gemini
+  status: active
+  local: unavailable
+  profile: models/google-deepmind/gemini-omni-1-1-flash/profile.yaml
+  readme: models/google-deepmind/gemini-omni-1-1-flash/README.md
+- id: gemini4argon
+  name: Gemini 4 Argon
+  creator: Google DeepMind
+  family: Gemini
+  status: preview
+  local: unavailable
+  profile: models/google-deepmind/gemini4argon/profile.yaml
+  readme: models/google-deepmind/gemini4argon/README.md
+- id: gemma-4-31b-it
+  name: Gemma 4 family (31B IT representative)
+  creator: Google DeepMind
+  family: Gemma
+  status: active
+  local: available
+  profile: models/google-deepmind/gemma-4-31b-it/profile.yaml
+  readme: models/google-deepmind/gemma-4-31b-it/README.md
+- id: lyria-3-5
+  name: Lyria 3.5
+  creator: Google DeepMind
+  family: Lyria
+  status: active
+  local: unavailable
+  profile: models/google-deepmind/lyria-3-5/profile.yaml
+  readme: models/google-deepmind/lyria-3-5/README.md
+- id: veo-3-1-generate-preview
+  name: Veo 3.1
+  creator: Google DeepMind
+  family: Veo
+  status: preview
+  local: unavailable
+  profile: models/google-deepmind/veo-3-1-generate-preview/profile.yaml
+  readme: models/google-deepmind/veo-3-1-generate-preview/README.md
+- id: llama-4-maverick
+  name: Llama 4 Maverick 17B-128E Instruct
+  creator: Meta
+  family: Llama 4
+  status: active
+  local: available
+  profile: models/meta/llama-4-maverick/profile.yaml
+  readme: models/meta/llama-4-maverick/README.md
+- id: llama-4-scout
+  name: Llama 4 Scout 17B-16E Instruct
+  creator: Meta
+  family: Llama 4
+  status: active
+  local: available
+  profile: models/meta/llama-4-scout/profile.yaml
+  readme: models/meta/llama-4-scout/README.md
+- id: phi-4-mini-instruct
+  name: Phi-4 Mini Instruct
+  creator: Microsoft
+  family: Phi-4
+  status: active
+  local: available
+  profile: models/microsoft/phi-4-mini-instruct/profile.yaml
+  readme: models/microsoft/phi-4-mini-instruct/README.md
+- id: phi-4-multimodal-instruct
+  name: Phi-4 Multimodal Instruct
+  creator: Microsoft
+  family: Phi-4
+  status: active
+  local: available
+  profile: models/microsoft/phi-4-multimodal-instruct/profile.yaml
+  readme: models/microsoft/phi-4-multimodal-instruct/README.md
+- id: phi-4-reasoning-vision-15b
+  name: Phi-4-Reasoning-Vision-15B
+  creator: Microsoft
+  family: Phi-4
+  status: active
+  local: available
+  profile: models/microsoft/phi-4-reasoning-vision-15b/profile.yaml
+  readme: models/microsoft/phi-4-reasoning-vision-15b/README.md
+- id: minimax-m3
+  name: MiniMax M3
+  creator: MiniMax
+  family: MiniMax M
+  status: active
+  local: available
+  profile: models/minimax/minimax-m3/profile.yaml
+  readme: models/minimax/minimax-m3/README.md
+- id: devstral-small-2
+  name: Devstral Small 2 24B
+  creator: Mistral AI
+  family: Devstral
+  status: active
+  local: available
+  profile: models/mistral-ai/devstral-small-2/profile.yaml
+  readme: models/mistral-ai/devstral-small-2/README.md
+- id: ministral-3-8b
+  name: Ministral 3 8B Instruct
+  creator: Mistral AI
+  family: Ministral 3
+  status: active
+  local: available
+  profile: models/mistral-ai/ministral-3-8b/profile.yaml
+  readme: models/mistral-ai/ministral-3-8b/README.md
+- id: mistral-large-3
+  name: Mistral Large 3 675B Instruct
+  creator: Mistral AI
+  family: Mistral Large
+  status: active
+  local: available
+  profile: models/mistral-ai/mistral-large-3/profile.yaml
+  readme: models/mistral-ai/mistral-large-3/README.md
+- id: mistral-medium-3-5
+  name: Mistral Medium 3.5 128B
+  creator: Mistral AI
+  family: Mistral Medium
+  status: active
+  local: available
+  profile: models/mistral-ai/mistral-medium-3-5/profile.yaml
+  readme: models/mistral-ai/mistral-medium-3-5/README.md
+- id: mistral-small-4
+  name: Mistral Small 4 119B
+  creator: Mistral AI
+  family: Mistral Small
+  status: active
+  local: available
+  profile: models/mistral-ai/mistral-small-4/profile.yaml
+  readme: models/mistral-ai/mistral-small-4/README.md
+- id: kimi-k3
+  name: Kimi K3
+  creator: Moonshot AI
+  family: Kimi
+  status: active
+  local: available
+  profile: models/moonshot-ai/kimi-k3/profile.yaml
+  readme: models/moonshot-ai/kimi-k3/README.md
+- id: nemotron-3-ultra
+  name: Nemotron3 Ultra 550B-A55B
+  creator: NVIDIA
+  family: Nemotron3
+  status: active
+  local: available
+  profile: models/nvidia/nemotron-3-ultra/profile.yaml
+  readme: models/nvidia/nemotron-3-ultra/README.md
+- id: gpt-6-1-sol
+  name: GPT-6.1 Sol
+  creator: OpenAI
+  family: GPT-6
+  status: active
+  local: unavailable
+  profile: models/openai/gpt-6-1-sol/profile.yaml
+  readme: models/openai/gpt-6-1-sol/README.md
+- id: gpt-6-astra
+  name: GPT-6 Astra
+  creator: OpenAI
+  family: GPT-6
+  status: active
+  local: unavailable
+  profile: models/openai/gpt-6-astra/profile.yaml
+  readme: models/openai/gpt-6-astra/README.md
+- id: gpt-6-luna
+  name: GPT-6 Luna
+  creator: OpenAI
+  family: GPT-6
+  status: active
+  local: unavailable
+  profile: models/openai/gpt-6-luna/profile.yaml
+  readme: models/openai/gpt-6-luna/README.md
+- id: gpt-image-2-5-flare
+  name: GPT Image 2.5 Flare
+  creator: OpenAI
+  family: GPT Image2.5
+  status: active
+  local: unavailable
+  profile: models/openai/gpt-image-2-5-flare/profile.yaml
+  readme: models/openai/gpt-image-2-5-flare/README.md
+- id: gpt-image-2-5-sunburst
+  name: GPT Image 2.5 Sunburst
+  creator: OpenAI
+  family: GPT Image2.5
+  status: active
+  local: unavailable
+  profile: models/openai/gpt-image-2-5-sunburst/profile.yaml
+  readme: models/openai/gpt-image-2-5-sunburst/README.md
+- id: gpt-live-1
+  name: GPT-Live 1
+  creator: OpenAI
+  family: GPT-Live
+  status: active
+  local: unavailable
+  profile: models/openai/gpt-live-1/profile.yaml
+  readme: models/openai/gpt-live-1/README.md
+- id: gpt-oss-120b
+  name: gpt-oss-120b
+  creator: OpenAI
+  family: gpt-oss
+  status: active
+  local: available
+  profile: models/openai/gpt-oss-120b/profile.yaml
+  readme: models/openai/gpt-oss-120b/README.md
+- id: gpt-oss-20b
+  name: gpt-oss-20b
+  creator: OpenAI
+  family: gpt-oss
+  status: active
+  local: available
+  profile: models/openai/gpt-oss-20b/profile.yaml
+  readme: models/openai/gpt-oss-20b/README.md
+- id: gpt-realtime-2-1
+  name: GPT-Realtime 2.1
+  creator: OpenAI
+  family: GPT-Realtime
+  status: active
+  local: unavailable
+  profile: models/openai/gpt-realtime-2-1/profile.yaml
+  readme: models/openai/gpt-realtime-2-1/README.md
+- id: xai-grok-4-7
+  name: Grok 4.7
+  creator: xAI / SpaceXAI
+  family: Grok
+  status: active
+  local: unavailable
+  profile: models/xai-spacexai/xai-grok-4-7/profile.yaml
+  readme: models/xai-spacexai/xai-grok-4-7/README.md
+- id: glm-5-3
+  name: GLM-5.3
+  creator: Z.ai / Zhipu AI
+  family: GLM5
+  status: active
+  local: available
+  profile: models/z-ai-zhipu-ai/glm-5-3/profile.yaml
+  readme: models/z-ai-zhipu-ai/glm-5-3/README.md
+- id: glm-5-3-flash
+  name: GLM-5.3-Flash
+  creator: Z.ai / Zhipu AI
+  family: GLM5
+  status: active
+  local: available
+  profile: models/z-ai-zhipu-ai/glm-5-3-flash/profile.yaml
+  readme: models/z-ai-zhipu-ai/glm-5-3-flash/README.md

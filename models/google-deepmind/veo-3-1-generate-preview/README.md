@@ -1,0 +1,81 @@
+# Veo 3.1
+
+**Creator:** Google DeepMind · **Family:** Veo · **Status:** preview
+**Verified:** 2026-10-06 · **Release:** 2025-10-15
+
+[Canonical data](profile.yaml) · [Methodology](../../../methodology.md) · [Catalog](../../../data/models.md)
+
+## Task judgments
+
+### Directed short shots requiring first last frame or extensions (medium confidence)
+
+Useful specialist option; test Omni too for new general video workflows.
+
+Conditions: Not established in this pass
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Veo generation guide](https://ai.google.dev/gemini-api/docs/veo) · [Veo 3.1 API model documentation](https://ai.google.dev/gemini-api/docs/models/veo-3.1-generate-preview)
+
+Contradictory or limiting sources: [Veo generation guide](https://ai.google.dev/gemini-api/docs/veo) · [Video generation overview](https://ai.google.dev/gemini-api/docs/video)
+
+Evidence notes: task-conditioned synthesis; no inference runs performed; Observation obs-a1dcd03b9809: Native audio, frame controls, reference images and extension fit directed short cinematic shots.; Observation obs-7d1f6921bea0: Multi-video reasoning unsupported; non-English unevaluated; audio processing/safety blocks and variable latency occur.; Observation obs-6dfa41ffcfec: Google now recommends Omni as default video option, reserving Veo for particular controls/legacy integration.
+
+## Specifications
+
+| Field | Recorded value |
+|---|---|
+| architecture | Unknown / not established |
+| parameters | Unknown / not established |
+| context window | 1024 |
+| maximum output | Unknown / not established |
+| modalities | input: text; image; prior_generated_video_for_extension; output: video; synchronized_audio |
+| language support | fully supported: English; other languages: not evaluated; may work with variable results; evidence ids: src-6fab7b07e4f3 |
+
+Specifications and provenance are qualified in [canonical data](profile.yaml). Published limits do not guarantee effective retrieval or local memory feasibility.
+
+## Access and cost
+
+2 recorded access route(s); 3 model-specific price record(s).
+
+[Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
+
+Provider routes and subscriptions are separate. Read billing units, thresholds, regions, status, and verification dates.
+
+## Licensing and local use
+
+License: Not established / proprietary terms must be checked
+
+Restrictions: Not established in this pass
+
+Commercial use: Unknown / not established
+
+Redistribution: Unknown / not established
+
+Hosted service: Unknown / not established
+
+Local weights/runtime availability: unavailable
+
+Hardware: Not established in this pass
+
+Local conditions: Not established in this pass
+
+## Gaps and caveats
+
+
+## Recorded price offers
+
+| Provider | Tier / status | Rates | Conditions | Verified |
+|---|---|---|---|---|
+| google-developer-api | paid_standard / current | 720p_or_1080p_audio_video: 0.4 USD / per_successful_output_second; 4K_audio_video: 0.6 USD / per_successful_output_second | Not established in this pass | 2026-10-06 |
+| google-developer-api | paid_fast_endpoint / current | 720p: 0.1 USD / per_successful_output_second; 1080p: 0.12 USD / per_successful_output_second; 4K: 0.3 USD / per_successful_output_second | Not established in this pass | 2026-10-06 |
+| google-developer-api | paid_lite_endpoint / current | 720p: 0.05 USD / per_successful_output_second; 1080p: 0.08 USD / per_successful_output_second; 4K: unknown USD / per_successful_output_second | Not established in this pass | 2026-10-06 |
+
+## Recorded access routes
+
+- google-developer-api / first-party-api: documented route; account eligibility unverified. Not established in this pass
+- google-ai-studio / Google AI Studio: Distribution documented; exact model selector, rollout, regional and subscription entitlement may vary.. Not established in this pass
+
+## Sources
+
+[Veo generation guide](https://ai.google.dev/gemini-api/docs/veo) · [Gemini API rate limits](https://ai.google.dev/gemini-api/docs/rate-limits) · [Veo 3.1 API model documentation](https://ai.google.dev/gemini-api/docs/models/veo-3.1-generate-preview) · [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog)

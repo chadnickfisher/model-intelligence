@@ -1,0 +1,847 @@
+schema_version: '1.0'
+verified_at: '2026-10-06'
+records:
+- schema_version: '1.0'
+  id: event-cdfcfb7ffe97
+  verified_at: '2026-10-06'
+  model_id: null
+  model_label: sora-2
+  provider_id: null
+  event_type: shut_down
+  event_date: '2026-09-24'
+  summary: '{"date": "2026-09-24", "model_ids": ["sora-2", "sora-2-pro"], "replacement": null, "scope": "OpenAI
+    Videos API and aliases/snapshots", "sources": ["oai-deprecations"], "status": "shut_down"}'
+  evidence_ids:
+  - src-bab0e18b2802
+- schema_version: '1.0'
+  id: event-469466c797b2
+  verified_at: '2026-10-06'
+  model_id: null
+  model_label: sora-2-pro
+  provider_id: null
+  event_type: shut_down
+  event_date: '2026-09-24'
+  summary: '{"date": "2026-09-24", "model_ids": ["sora-2", "sora-2-pro"], "replacement": null, "scope": "OpenAI
+    Videos API and aliases/snapshots", "sources": ["oai-deprecations"], "status": "shut_down"}'
+  evidence_ids:
+  - src-bab0e18b2802
+- schema_version: '1.0'
+  id: event-21aa30a5ba38
+  verified_at: '2026-10-06'
+  model_id: null
+  model_label: tts-1
+  provider_id: null
+  event_type: deprecated
+  event_date: '2027-01-06'
+  summary: '{"model_ids": ["tts-1", "tts-1-hd", "gpt-4o-mini-tts"], "replacement": "gpt-realtime-2.1-mini",
+    "shutdown_date": "2027-01-06", "sources": ["oai-deprecations"], "status": "deprecated"}'
+  evidence_ids:
+  - src-bab0e18b2802
+- schema_version: '1.0'
+  id: event-427cc58b334c
+  verified_at: '2026-10-06'
+  model_id: null
+  model_label: tts-1-hd
+  provider_id: null
+  event_type: deprecated
+  event_date: '2027-01-06'
+  summary: '{"model_ids": ["tts-1", "tts-1-hd", "gpt-4o-mini-tts"], "replacement": "gpt-realtime-2.1-mini",
+    "shutdown_date": "2027-01-06", "sources": ["oai-deprecations"], "status": "deprecated"}'
+  evidence_ids:
+  - src-bab0e18b2802
+- schema_version: '1.0'
+  id: event-1eba958ad089
+  verified_at: '2026-10-06'
+  model_id: null
+  model_label: gpt-4o-mini-tts
+  provider_id: null
+  event_type: deprecated
+  event_date: '2027-01-06'
+  summary: '{"model_ids": ["tts-1", "tts-1-hd", "gpt-4o-mini-tts"], "replacement": "gpt-realtime-2.1-mini",
+    "shutdown_date": "2027-01-06", "sources": ["oai-deprecations"], "status": "deprecated"}'
+  evidence_ids:
+  - src-bab0e18b2802
+- schema_version: '1.0'
+  id: event-454a74ffd6e1
+  verified_at: '2026-10-06'
+  model_id: null
+  model_label: whisper-1
+  provider_id: null
+  event_type: deprecated
+  event_date: '2027-02-26'
+  summary: '{"model_ids": ["whisper-1", "gpt-4o-transcribe", "gpt-4o-mini-transcribe", "gpt-4o-transcribe-diarize"],
+    "replacement": ["gpt-live-transcribe", "gpt-transcribe"], "shutdown_date": "2027-02-26", "sources": ["oai-deprecations"],
+    "status": "deprecated"}'
+  evidence_ids:
+  - src-bab0e18b2802
+- schema_version: '1.0'
+  id: event-3d8e7611ba77
+  verified_at: '2026-10-06'
+  model_id: null
+  model_label: gpt-4o-transcribe
+  provider_id: null
+  event_type: deprecated
+  event_date: '2027-02-26'
+  summary: '{"model_ids": ["whisper-1", "gpt-4o-transcribe", "gpt-4o-mini-transcribe", "gpt-4o-transcribe-diarize"],
+    "replacement": ["gpt-live-transcribe", "gpt-transcribe"], "shutdown_date": "2027-02-26", "sources": ["oai-deprecations"],
+    "status": "deprecated"}'
+  evidence_ids:
+  - src-bab0e18b2802
+- schema_version: '1.0'
+  id: event-f8af8732cde4
+  verified_at: '2026-10-06'
+  model_id: null
+  model_label: gpt-4o-mini-transcribe
+  provider_id: null
+  event_type: deprecated
+  event_date: '2027-02-26'
+  summary: '{"model_ids": ["whisper-1", "gpt-4o-transcribe", "gpt-4o-mini-transcribe", "gpt-4o-transcribe-diarize"],
+    "replacement": ["gpt-live-transcribe", "gpt-transcribe"], "shutdown_date": "2027-02-26", "sources": ["oai-deprecations"],
+    "status": "deprecated"}'
+  evidence_ids:
+  - src-bab0e18b2802
+- schema_version: '1.0'
+  id: event-aa2cdf39caa0
+  verified_at: '2026-10-06'
+  model_id: null
+  model_label: gpt-4o-transcribe-diarize
+  provider_id: null
+  event_type: deprecated
+  event_date: '2027-02-26'
+  summary: '{"model_ids": ["whisper-1", "gpt-4o-transcribe", "gpt-4o-mini-transcribe", "gpt-4o-transcribe-diarize"],
+    "replacement": ["gpt-live-transcribe", "gpt-transcribe"], "shutdown_date": "2027-02-26", "sources": ["oai-deprecations"],
+    "status": "deprecated"}'
+  evidence_ids:
+  - src-bab0e18b2802
+- schema_version: '1.0'
+  id: release-gpt-6-astra
+  verified_at: '2026-10-06'
+  model_id: gpt-6-astra
+  model_label: GPT-6 Astra
+  provider_id: null
+  event_type: release
+  event_date: '2026-09-03'
+  summary: Initial baseline records GPT-6 Astra as active. Release date is unknown where null.
+  evidence_ids:
+  - src-67b4ce9b4e6a
+  - src-0e5ba6524c75
+  - src-49e8d0577a5e
+  - src-97b73e99f5cd
+  - src-ea74e2fffbc5
+  - src-f2dca02215ef
+- schema_version: '1.0'
+  id: release-gpt-6-1-sol
+  verified_at: '2026-10-06'
+  model_id: gpt-6-1-sol
+  model_label: GPT-6.1 Sol
+  provider_id: null
+  event_type: release
+  event_date: '2026-09-29'
+  summary: Initial baseline records GPT-6.1 Sol as active. Release date is unknown where null.
+  evidence_ids:
+  - src-5906a70e58c6
+  - src-0e5ba6524c75
+  - src-49e8d0577a5e
+  - src-fafcf655e0d8
+  - src-f2dca02215ef
+- schema_version: '1.0'
+  id: release-gpt-6-luna
+  verified_at: '2026-10-06'
+  model_id: gpt-6-luna
+  model_label: GPT-6 Luna
+  provider_id: null
+  event_type: release
+  event_date: '2026-09-22'
+  summary: Initial baseline records GPT-6 Luna as active. Release date is unknown where null.
+  evidence_ids:
+  - src-f00960a11928
+  - src-0e5ba6524c75
+  - src-49e8d0577a5e
+  - src-ffef271f5600
+  - src-608eb672ebb7
+- schema_version: '1.0'
+  id: release-gpt-image-2-5-sunburst
+  verified_at: '2026-10-06'
+  model_id: gpt-image-2-5-sunburst
+  model_label: GPT Image 2.5 Sunburst
+  provider_id: null
+  event_type: release
+  event_date: '2026-09-08'
+  summary: Initial baseline records GPT Image 2.5 Sunburst as active. Release date is unknown where null.
+  evidence_ids:
+  - src-1a9fcf8d6701
+  - src-259c8fd88c0f
+  - src-285d61f371cf
+- schema_version: '1.0'
+  id: release-gpt-image-2-5-flare
+  verified_at: '2026-10-06'
+  model_id: gpt-image-2-5-flare
+  model_label: GPT Image 2.5 Flare
+  provider_id: null
+  event_type: release
+  event_date: '2026-09-08'
+  summary: Initial baseline records GPT Image 2.5 Flare as active. Release date is unknown where null.
+  evidence_ids:
+  - src-cee7a5257e77
+  - src-259c8fd88c0f
+  - src-285d61f371cf
+- schema_version: '1.0'
+  id: release-gpt-live-1
+  verified_at: '2026-10-06'
+  model_id: gpt-live-1
+  model_label: GPT-Live 1
+  provider_id: null
+  event_type: release
+  event_date: '2026-07-08'
+  summary: Initial baseline records GPT-Live 1 as active. Release date is unknown where null.
+  evidence_ids:
+  - src-84d1a7712d6a
+  - src-c84f0489248c
+  - src-49e8d0577a5e
+- schema_version: '1.0'
+  id: release-gpt-realtime-2-1
+  verified_at: '2026-10-06'
+  model_id: gpt-realtime-2-1
+  model_label: GPT-Realtime 2.1
+  provider_id: null
+  event_type: release
+  event_date: '2026-07-06'
+  summary: Initial baseline records GPT-Realtime 2.1 as active. Release date is unknown where null.
+  evidence_ids:
+  - src-cf6a8843c8fd
+  - src-49e8d0577a5e
+  - src-911ea99b80ae
+- schema_version: '1.0'
+  id: release-claude-fable-5-1
+  verified_at: '2026-10-06'
+  model_id: claude-fable-5-1
+  model_label: Claude Fable 5.1
+  provider_id: null
+  event_type: release
+  event_date: '2026-09-01'
+  summary: Initial baseline records Claude Fable 5.1 as active. Release date is unknown where null.
+  evidence_ids:
+  - src-ad9aa6f1b8ed
+  - src-f3655eaf1407
+  - src-bc2410652a3c
+  - src-e7232d52f37f
+  - src-f10e40cc0139
+- schema_version: '1.0'
+  id: release-claude-opus-5-5
+  verified_at: '2026-10-06'
+  model_id: claude-opus-5-5
+  model_label: Claude Opus 5.5
+  provider_id: null
+  event_type: release
+  event_date: '2026-09-22'
+  summary: Initial baseline records Claude Opus 5.5 as active. Release date is unknown where null.
+  evidence_ids:
+  - src-4d070c5c8c67
+  - src-f3655eaf1407
+  - src-4950ff35950b
+  - src-0dd3bed5c7dd
+- schema_version: '1.0'
+  id: release-claude-sonnet-5-5
+  verified_at: '2026-10-06'
+  model_id: claude-sonnet-5-5
+  model_label: Claude Sonnet 5.5
+  provider_id: null
+  event_type: release
+  event_date: '2026-09-28'
+  summary: Initial baseline records Claude Sonnet 5.5 as active. Release date is unknown where null.
+  evidence_ids:
+  - src-752375ff0c97
+  - src-f3655eaf1407
+  - src-4d947df5f3d7
+  - src-4e3ca8a95d36
+- schema_version: '1.0'
+  id: release-claude-haiku-4-5
+  verified_at: '2026-10-06'
+  model_id: claude-haiku-4-5
+  model_label: Claude Haiku 4.5
+  provider_id: null
+  event_type: release
+  event_date: '2025-10-15'
+  summary: Initial baseline records Claude Haiku 4.5 as active. Release date is unknown where null.
+  evidence_ids:
+  - src-e1910c5126bc
+  - src-f3655eaf1407
+  - src-e99bd76836c1
+  - src-5c510b458547
+- schema_version: '1.0'
+  id: release-gpt-oss-120b
+  verified_at: '2026-10-06'
+  model_id: gpt-oss-120b
+  model_label: gpt-oss-120b
+  provider_id: null
+  event_type: release
+  event_date: '2025-08-05'
+  summary: Initial baseline records gpt-oss-120b as active. Release date is unknown where null.
+  evidence_ids:
+  - src-1b711f47aa6a
+  - src-f85326ed9ab1
+  - src-06e7619eb6a4
+  - src-6d85ece3b497
+- schema_version: '1.0'
+  id: release-gpt-oss-20b
+  verified_at: '2026-10-06'
+  model_id: gpt-oss-20b
+  model_label: gpt-oss-20b
+  provider_id: null
+  event_type: release
+  event_date: '2025-08-05'
+  summary: Initial baseline records gpt-oss-20b as active. Release date is unknown where null.
+  evidence_ids:
+  - src-0dc6c2d41a2c
+  - src-4fb7165743ee
+  - src-06e7619eb6a4
+  - src-6d85ece3b497
+- schema_version: '1.0'
+  id: release-gemini-3-8-flash
+  verified_at: '2026-10-06'
+  model_id: gemini-3-8-flash
+  model_label: Gemini 3.8 Flash
+  provider_id: null
+  event_type: release
+  event_date: '2026-09-02'
+  summary: Initial baseline records Gemini 3.8 Flash as active. Release date is unknown where null.
+  evidence_ids:
+  - src-c4c7ba8fda18
+  - src-10e39629c3d3
+  - src-116c1a7f3be0
+  - src-a24fd97eb3d0
+- schema_version: '1.0'
+  id: release-gemini-3-1-pro-preview
+  verified_at: '2026-10-06'
+  model_id: gemini-3-1-pro-preview
+  model_label: Gemini 3.1 Pro Preview
+  provider_id: null
+  event_type: preview-or-announcement
+  event_date: '2026-02-19'
+  summary: Initial baseline records Gemini 3.1 Pro Preview as preview. Release date is unknown where null.
+  evidence_ids:
+  - src-10e39629c3d3
+  - src-07ba3e0f52cc
+  - src-a24fd97eb3d0
+  - src-564638136e50
+  - src-4c04e11c8a1b
+- schema_version: '1.0'
+  id: release-gemini-3-5-flash-lite
+  verified_at: '2026-10-06'
+  model_id: gemini-3-5-flash-lite
+  model_label: Gemini 3.5 Flash-Lite
+  provider_id: null
+  event_type: release
+  event_date: '2026-07-21'
+  summary: Initial baseline records Gemini 3.5 Flash-Lite as active. Release date is unknown where null.
+  evidence_ids:
+  - src-56f9dadd63b1
+  - src-10e39629c3d3
+  - src-f7fe39222f11
+  - src-a24fd97eb3d0
+  - src-0b12f0c84b90
+  - src-4c04e11c8a1b
+- schema_version: '1.0'
+  id: release-gemini-3-pro-image
+  verified_at: '2026-10-06'
+  model_id: gemini-3-pro-image
+  model_label: Nano Banana Pro / Gemini 3 Pro Image
+  provider_id: null
+  event_type: release
+  event_date: '2026-05-28'
+  summary: Initial baseline records Nano Banana Pro / Gemini 3 Pro Image as active. Release date is unknown
+    where null.
+  evidence_ids:
+  - src-5d0514efd100
+  - src-10e39629c3d3
+  - src-21fe0d4c63a7
+  - src-a24fd97eb3d0
+  - src-d35a477c49c4
+  - src-4c04e11c8a1b
+  - src-b88c4950bbf3
+- schema_version: '1.0'
+  id: release-veo-3-1-generate-preview
+  verified_at: '2026-10-06'
+  model_id: veo-3-1-generate-preview
+  model_label: Veo 3.1
+  provider_id: null
+  event_type: preview-or-announcement
+  event_date: '2025-10-15'
+  summary: Initial baseline records Veo 3.1 as preview. Release date is unknown where null.
+  evidence_ids:
+  - src-6fab7b07e4f3
+  - src-10e39629c3d3
+  - src-521c059d5d6a
+  - src-a24fd97eb3d0
+- schema_version: '1.0'
+  id: release-lyria-3-5
+  verified_at: '2026-10-06'
+  model_id: lyria-3-5
+  model_label: Lyria 3.5
+  provider_id: null
+  event_type: release
+  event_date: '2026-09-03'
+  summary: Initial baseline records Lyria 3.5 as active. Release date is unknown where null.
+  evidence_ids:
+  - src-10e39629c3d3
+  - src-ef50a5784fac
+  - src-a24fd97eb3d0
+  - src-adf03d8b2d85
+  - src-85f93e060d0d
+- schema_version: '1.0'
+  id: release-gemini-3-8-live
+  verified_at: '2026-10-06'
+  model_id: gemini-3-8-live
+  model_label: Gemini 3.8 Live
+  provider_id: null
+  event_type: release
+  event_date: '2026-09-15'
+  summary: Initial baseline records Gemini 3.8 Live as active. Release date is unknown where null.
+  evidence_ids:
+  - src-25e1e7c2305d
+  - src-10e39629c3d3
+  - src-04c98c33c883
+  - src-a24fd97eb3d0
+  - src-744e7330e24d
+  - src-4c04e11c8a1b
+- schema_version: '1.0'
+  id: release-gemma-4-31b-it
+  verified_at: '2026-10-06'
+  model_id: gemma-4-31b-it
+  model_label: Gemma 4 family (31B IT representative)
+  provider_id: null
+  event_type: release
+  event_date: '2026-03-31'
+  summary: Initial baseline records Gemma 4 family (31B IT representative) as active. Release date is unknown
+    where null.
+  evidence_ids:
+  - src-fc87bfb1eae7
+  - src-10e39629c3d3
+  - src-10b631f7c7a9
+  - src-a24fd97eb3d0
+  - src-ded81031faae
+  - src-0835beeb534f
+- schema_version: '1.0'
+  id: release-gemini-omni-1-1-flash
+  verified_at: '2026-10-06'
+  model_id: gemini-omni-1-1-flash
+  model_label: Gemini Omni 1.1 Flash
+  provider_id: null
+  event_type: release
+  event_date: '2026-08-27'
+  summary: Initial baseline records Gemini Omni 1.1 Flash as active. Release date is unknown where null.
+  evidence_ids:
+  - src-10e39629c3d3
+  - src-3b883af04aa0
+  - src-a24fd97eb3d0
+- schema_version: '1.0'
+  id: release-gemini4argon
+  verified_at: '2026-10-06'
+  model_id: gemini4argon
+  model_label: Gemini 4 Argon
+  provider_id: null
+  event_type: preview-or-announcement
+  event_date: '2026-09-30'
+  summary: Initial baseline records Gemini 4 Argon as preview. Release date is unknown where null.
+  evidence_ids:
+  - src-6381db252dee
+  - src-d493892e40d2
+  - src-5535da041415
+- schema_version: '1.0'
+  id: release-qwen3-coder-next
+  verified_at: '2026-10-06'
+  model_id: qwen3-coder-next
+  model_label: Qwen3-Coder-Next
+  provider_id: null
+  event_type: release
+  event_date: '2026-02-03'
+  summary: Initial baseline records Qwen3-Coder-Next as active. Release date is unknown where null.
+  evidence_ids:
+  - src-f2036f817d22
+  - src-71b3fd269cc8
+  - src-fe191bd136cd
+  - src-7c5fa24308a9
+- schema_version: '1.0'
+  id: release-qwen3-5-9b
+  verified_at: '2026-10-06'
+  model_id: qwen3-5-9b
+  model_label: Qwen3.5-9B
+  provider_id: null
+  event_type: release
+  event_date: null
+  summary: Initial baseline records Qwen3.5-9B as active. Release date is unknown where null.
+  evidence_ids:
+  - src-f2036f817d22
+  - src-e0a64484787e
+  - src-7a37d210463f
+- schema_version: '1.0'
+  id: release-qwen3-8-2-4t-a95b
+  verified_at: '2026-10-06'
+  model_id: qwen3-8-2-4t-a95b
+  model_label: Qwen3.8-2.4T-A95B
+  provider_id: null
+  event_type: release
+  event_date: null
+  summary: Initial baseline records Qwen3.8-2.4T-A95B as active. Release date is unknown where null.
+  evidence_ids:
+  - src-fbaa665d7533
+  - src-2bc2cf30ffd5
+- schema_version: '1.0'
+  id: release-qwen3-8-27b
+  verified_at: '2026-10-06'
+  model_id: qwen3-8-27b
+  model_label: Qwen3.8-27B
+  provider_id: null
+  event_type: release
+  event_date: '2026-08-14'
+  summary: Initial baseline records Qwen3.8-27B as active. Release date is unknown where null.
+  evidence_ids:
+  - src-f2036f817d22
+  - src-ca26bca182f6
+  - src-fb8e00efa720
+  - src-94984ea907dd
+- schema_version: '1.0'
+  id: release-qwen3-8-flash-next
+  verified_at: '2026-10-06'
+  model_id: qwen3-8-flash-next
+  model_label: Qwen3.8-Flash-Next
+  provider_id: null
+  event_type: preview-or-announcement
+  event_date: '2026-08-26'
+  summary: Initial baseline records Qwen3.8-Flash-Next as preview. Release date is unknown where null.
+  evidence_ids:
+  - src-0af45d93e83c
+  - src-eb79656c925c
+  - src-fb8e00efa720
+  - src-0ab9540155b9
+- schema_version: '1.0'
+  id: release-deepseek-v4-pro-0813
+  verified_at: '2026-10-06'
+  model_id: deepseek-v4-pro-0813
+  model_label: DeepSeek-V4-Pro-0813
+  provider_id: null
+  event_type: release
+  event_date: '2026-08-13'
+  summary: Initial baseline records DeepSeek-V4-Pro-0813 as active. Release date is unknown where null.
+  evidence_ids:
+  - src-f6adda98b53a
+  - src-b96a45c2e083
+  - src-280758cc57a6
+  - src-2bf74f8ecb84
+- schema_version: '1.0'
+  id: release-deepseek-v4-1-flash
+  verified_at: '2026-10-06'
+  model_id: deepseek-v4-1-flash
+  model_label: DeepSeek-V4.1-Flash
+  provider_id: null
+  event_type: release
+  event_date: '2026-09-10'
+  summary: Initial baseline records DeepSeek-V4.1-Flash as active. Release date is unknown where null.
+  evidence_ids:
+  - src-525e7f64ea10
+  - src-5c348986a151
+  - src-2034e17f9f4e
+  - src-280758cc57a6
+- schema_version: '1.0'
+  id: release-llama-4-maverick
+  verified_at: '2026-10-06'
+  model_id: llama-4-maverick
+  model_label: Llama 4 Maverick 17B-128E Instruct
+  provider_id: null
+  event_type: release
+  event_date: '2025-04-05'
+  summary: Initial baseline records Llama 4 Maverick 17B-128E Instruct as active. Release date is unknown where
+    null.
+  evidence_ids:
+  - src-5744ead18753
+  - src-65471a2c7ad5
+  - src-8cb15ff6ddd4
+  - src-7494e8051b41
+- schema_version: '1.0'
+  id: release-llama-4-scout
+  verified_at: '2026-10-06'
+  model_id: llama-4-scout
+  model_label: Llama 4 Scout 17B-16E Instruct
+  provider_id: null
+  event_type: release
+  event_date: '2025-04-05'
+  summary: Initial baseline records Llama 4 Scout 17B-16E Instruct as active. Release date is unknown where
+    null.
+  evidence_ids:
+  - src-5744ead18753
+  - src-8cb15ff6ddd4
+  - src-65471a2c7ad5
+  - src-94efd6cf8bb7
+  - src-7494e8051b41
+- schema_version: '1.0'
+  id: release-phi-4-mini-instruct
+  verified_at: '2026-10-06'
+  model_id: phi-4-mini-instruct
+  model_label: Phi-4 Mini Instruct
+  provider_id: null
+  event_type: release
+  event_date: null
+  summary: Initial baseline records Phi-4 Mini Instruct as active. Release date is unknown where null.
+  evidence_ids:
+  - src-3c2db7ec3521
+  - src-147450d232b3
+  - src-9f758a03b0f2
+  - src-6c5f51c9393d
+- schema_version: '1.0'
+  id: release-phi-4-multimodal-instruct
+  verified_at: '2026-10-06'
+  model_id: phi-4-multimodal-instruct
+  model_label: Phi-4 Multimodal Instruct
+  provider_id: null
+  event_type: release
+  event_date: null
+  summary: Initial baseline records Phi-4 Multimodal Instruct as active. Release date is unknown where null.
+  evidence_ids:
+  - src-3c2db7ec3521
+  - src-29885c43e537
+  - src-2a442166513f
+  - src-99b21e349ac9
+- schema_version: '1.0'
+  id: release-phi-4-reasoning-vision-15b
+  verified_at: '2026-10-06'
+  model_id: phi-4-reasoning-vision-15b
+  model_label: Phi-4-Reasoning-Vision-15B
+  provider_id: null
+  event_type: release
+  event_date: '2026-03-04'
+  summary: Initial baseline records Phi-4-Reasoning-Vision-15B as active. Release date is unknown where null.
+  evidence_ids:
+  - src-3c2db7ec3521
+  - src-91f835e2db28
+  - src-96b521869e71
+- schema_version: '1.0'
+  id: release-minimax-m3
+  verified_at: '2026-10-06'
+  model_id: minimax-m3
+  model_label: MiniMax M3
+  provider_id: null
+  event_type: release
+  event_date: null
+  summary: Initial baseline records MiniMax M3 as active. Release date is unknown where null.
+  evidence_ids:
+  - src-6a511cb9176a
+  - src-06645d3950f1
+  - src-418bc9a9adc1
+  - src-40c9ce9b4812
+- schema_version: '1.0'
+  id: release-devstral-small-2
+  verified_at: '2026-10-06'
+  model_id: devstral-small-2
+  model_label: Devstral Small 2 24B
+  provider_id: null
+  event_type: release
+  event_date: '2025-12-09'
+  summary: Initial baseline records Devstral Small 2 24B as active. Release date is unknown where null.
+  evidence_ids:
+  - src-f2036f817d22
+  - src-fd9a0c74ec31
+  - src-1f59cd499805
+- schema_version: '1.0'
+  id: release-ministral-3-8b
+  verified_at: '2026-10-06'
+  model_id: ministral-3-8b
+  model_label: Ministral 3 8B Instruct
+  provider_id: null
+  event_type: release
+  event_date: '2025-12-02'
+  summary: Initial baseline records Ministral 3 8B Instruct as active. Release date is unknown where null.
+  evidence_ids:
+  - src-f2036f817d22
+  - src-e37726fea976
+  - src-a6a9e3d9e616
+- schema_version: '1.0'
+  id: release-mistral-large-3
+  verified_at: '2026-10-06'
+  model_id: mistral-large-3
+  model_label: Mistral Large 3 675B Instruct
+  provider_id: null
+  event_type: release
+  event_date: '2025-12-02'
+  summary: Initial baseline records Mistral Large 3 675B Instruct as active. Release date is unknown where
+    null.
+  evidence_ids:
+  - src-f2036f817d22
+  - src-f249e65005c1
+  - src-e5d72ab8d32b
+- schema_version: '1.0'
+  id: release-mistral-medium-3-5
+  verified_at: '2026-10-06'
+  model_id: mistral-medium-3-5
+  model_label: Mistral Medium 3.5 128B
+  provider_id: null
+  event_type: release
+  event_date: '2026-04-28'
+  summary: Initial baseline records Mistral Medium 3.5 128B as active. Release date is unknown where null.
+  evidence_ids:
+  - src-23f19f916bbb
+  - src-79280a1db5da
+  - src-d2d60d683099
+- schema_version: '1.0'
+  id: release-mistral-small-4
+  verified_at: '2026-10-06'
+  model_id: mistral-small-4
+  model_label: Mistral Small 4 119B
+  provider_id: null
+  event_type: release
+  event_date: '2026-03-16'
+  summary: Initial baseline records Mistral Small 4 119B as active. Release date is unknown where null.
+  evidence_ids:
+  - src-f2036f817d22
+  - src-dcba779ffa90
+  - src-1cea80c18ff6
+- schema_version: '1.0'
+  id: release-kimi-k3
+  verified_at: '2026-10-06'
+  model_id: kimi-k3
+  model_label: Kimi K3
+  provider_id: null
+  event_type: release
+  event_date: null
+  summary: Initial baseline records Kimi K3 as active. Release date is unknown where null.
+  evidence_ids:
+  - src-74dc5faee60d
+  - src-e7129e9021b6
+  - src-5d65f998595a
+- schema_version: '1.0'
+  id: release-nemotron-3-ultra
+  verified_at: '2026-10-06'
+  model_id: nemotron-3-ultra
+  model_label: Nemotron3 Ultra 550B-A55B
+  provider_id: null
+  event_type: release
+  event_date: '2026-06-04'
+  summary: Initial baseline records Nemotron3 Ultra 550B-A55B as active. Release date is unknown where null.
+  evidence_ids:
+  - src-58bf94c165a9
+  - src-c5a0afc263f8
+  - src-9950acce03ed
+- schema_version: '1.0'
+  id: release-glm-5-3
+  verified_at: '2026-10-06'
+  model_id: glm-5-3
+  model_label: GLM-5.3
+  provider_id: null
+  event_type: release
+  event_date: null
+  summary: Initial baseline records GLM-5.3 as active. Release date is unknown where null.
+  evidence_ids:
+  - src-dc71eaf3c8b8
+  - src-4424584ee706
+  - src-26ed078844ac
+  - src-d1e7ac1dfe19
+  - src-7e6c3dd9add1
+- schema_version: '1.0'
+  id: release-glm-5-3-flash
+  verified_at: '2026-10-06'
+  model_id: glm-5-3-flash
+  model_label: GLM-5.3-Flash
+  provider_id: null
+  event_type: release
+  event_date: null
+  summary: Initial baseline records GLM-5.3-Flash as active. Release date is unknown where null.
+  evidence_ids:
+  - src-04173aa90698
+  - src-5302786105ea
+  - src-b02205ef3bed
+  - src-667e800254a1
+  - src-80c359151519
+- schema_version: '1.0'
+  id: release-xai-grok-4-7
+  verified_at: '2026-10-06'
+  model_id: xai-grok-4-7
+  model_label: Grok 4.7
+  provider_id: null
+  event_type: release
+  event_date: '2026-09-21'
+  summary: Initial baseline records Grok 4.7 as active. Release date is unknown where null.
+  evidence_ids:
+  - src-f1f9e55552d3
+  - src-d14fea025626
+  - src-905d5d7a5fb4
+  - src-399a034698f6
+- schema_version: '1.0'
+  id: release-cohere-command-a-plus
+  verified_at: '2026-10-06'
+  model_id: cohere-command-a-plus
+  model_label: Command A+
+  provider_id: null
+  event_type: preview-or-announcement
+  event_date: '2026-05-20'
+  summary: Initial baseline records Command A+ as preview. Release date is unknown where null.
+  evidence_ids:
+  - src-4b5fc50d9047
+  - src-7a929ac1ccc5
+- schema_version: '1.0'
+  id: release-cohere-embed-5-pro
+  verified_at: '2026-10-06'
+  model_id: cohere-embed-5-pro
+  model_label: Embed 5 Pro
+  provider_id: null
+  event_type: release
+  event_date: '2026-09-30'
+  summary: Initial baseline records Embed 5 Pro as unknown. Release date is unknown where null.
+  evidence_ids:
+  - src-9d4f7ae81230
+- schema_version: '1.0'
+  id: release-cohere-embed-5-fast
+  verified_at: '2026-10-06'
+  model_id: cohere-embed-5-fast
+  model_label: Embed 5 Fast
+  provider_id: null
+  event_type: release
+  event_date: '2026-09-30'
+  summary: Initial baseline records Embed 5 Fast as unknown. Release date is unknown where null.
+  evidence_ids:
+  - src-9d4f7ae81230
+- schema_version: '1.0'
+  id: release-cohere-north-small-translate
+  verified_at: '2026-10-06'
+  model_id: cohere-north-small-translate
+  model_label: North Small Translate
+  provider_id: null
+  event_type: release
+  event_date: null
+  summary: Initial baseline records North Small Translate as unknown. Release date is unknown where null.
+  evidence_ids:
+  - src-1dac5785145f
+- schema_version: '1.0'
+  id: release-ai21-jamba2-mini
+  verified_at: '2026-10-06'
+  model_id: ai21-jamba2-mini
+  model_label: Jamba2 Mini
+  provider_id: null
+  event_type: release
+  event_date: '2026-01-08'
+  summary: Initial baseline records Jamba2 Mini as unknown. Release date is unknown where null.
+  evidence_ids:
+  - src-cd9a80108d1d
+  - src-dc01b961c57f
+- schema_version: '1.0'
+  id: release-bfl-flux3-video
+  verified_at: '2026-10-06'
+  model_id: bfl-flux3-video
+  model_label: FLUX 3 Video
+  provider_id: null
+  event_type: preview-or-announcement
+  event_date: null
+  summary: Initial baseline records FLUX 3 Video as preview. Release date is unknown where null.
+  evidence_ids:
+  - src-57a05c45a0b1
+  - src-752c7dd560da
+- schema_version: '1.0'
+  id: release-elevenlabs-eleven-v4
+  verified_at: '2026-10-06'
+  model_id: elevenlabs-eleven-v4
+  model_label: Eleven v4
+  provider_id: null
+  event_type: release
+  event_date: null
+  summary: Initial baseline records Eleven v4 as active. Release date is unknown where null.
+  evidence_ids:
+  - src-58f6a44d1374
+  - src-bcc14c31357b

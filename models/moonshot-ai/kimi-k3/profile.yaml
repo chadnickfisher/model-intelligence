@@ -1,0 +1,161 @@
+schema_version: '1.0'
+id: kimi-k3
+verified_at: '2026-10-06'
+identity:
+  name: Kimi K3
+  creator: Moonshot AI
+  family: Kimi
+  version: Kimi-K3
+  release_date: null
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: MoE with Kimi Delta Attention, gated MLA, Attention Residuals, Stable LatentMoE; MoonViT-V2 vision
+      encoder
+    status: documented
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-74dc5faee60d
+    - src-e7129e9021b6
+    - src-5d65f998595a
+  parameters:
+    value:
+      total_billion: 2800
+      active_billion: 104
+      scope: creator-declared count; see notes
+      exact_parameter_count: null
+      components_billion:
+        vision_encoder: 0.401
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value:
+      native_tokens: 1048576
+      extended_tokens: null
+      max_output_tokens: null
+      notes: Input plus generated output share capacity. Endpoint limits can differ.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      - video
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value:
+      supported: null
+      notes: Exact supported-language list not verified in this bounded pass.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  weights:
+    value:
+      downloadable: true
+      official_repository: https://huggingface.co/moonshotai/Kimi-K3
+      formats: null
+      gate: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  reasoning_mode:
+    value: always thinking; low/high/max
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weight_only_floor_decimal_gb:
+    value:
+      bf16: 5600
+      int8: 2800
+      ideal_4bit: 1400.0
+    status: estimated
+    conditions:
+    - Batch 1, short/moderate context unless otherwise stated.
+    - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+      stated count, runtime, OS and temporary loading buffers.
+    - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
+      storage of inactive experts.
+    - Published maximum context is not a guarantee it fits on the suggested local machine.
+    evidence_ids: *id002
+  release_date_reported:
+    value: 2026-07
+    status: documented
+    conditions:
+    - Source supplied a partial or non-day date; not promoted to an exact release date.
+    evidence_ids: *id002
+  release_date_precision:
+    value: month
+    status: documented
+    conditions: []
+    evidence_ids: *id002
+licensing:
+  name: Kimi K3 License
+  commercial_use: conditional
+  redistribution: 'true'
+  fine_tuning: null
+  hosted_service: 'true'
+  restrictions:
+  - Retain notices.
+  - MaaS business above $20M aggregate trailing-12-month revenue requires agreement.
+  - UI branding above 100M MAU or $20M monthly revenue.
+  - Internal-only use and official products/certified inference partners exempt from preceding commercial/branding
+    conditions.
+  - A license summary, not legal advice. Open weights does not by itself establish a fully open-source AI system.
+  evidence_ids:
+  - src-74dc5faee60d
+local_inference:
+  availability: available
+  hardware_notes:
+  - 'Datacenter scale: native MXFP4 weights alone roughly 1.4TB plus quantization/runtime/cache; multi-node
+    high-memory deployment.'
+  - Quantization-aware trained MXFP4 weights / MXFP8 activations; do not substitute a 104B-active memory estimate.
+  conditions:
+  - Batch 1, short/moderate context unless otherwise stated.
+  - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+    stated count, runtime, OS and temporary loading buffers.
+  - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
+    of inactive experts.
+  - Published maximum context is not a guarantee it fits on the suggested local machine.
+  evidence_ids: *id002
+capabilities:
+- task: long-horizon-multimodal-agents
+  judgment: Strong candidate for large-scale visual coding and tool-based knowledge work if cost and license
+    are acceptable.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-e7129e9021b6
+  - src-5d65f998595a
+  contradictory_evidence_ids: []
+  conditions:
+  - Thinking is always on; preserve complete returned assistant messages including reasoning and tool fields.
+  known_failure_modes:
+  - Harness-dependent benchmark results; visual tasks still fail; preserving long histories increases costs.
+  evidence_notes: []
+performance_characteristics: []
+access_ids:
+- access-open-kimi-k3-weights
+- access-open-kimi-k3-kimi-api
+price_ids:
+- price-providers-kimi-k3-together-210d7bb86dfc
+- price-providers-kimi-k3-fireworks-86a9ddc05c65
+- price-providers-kimi-k3-fireworks-b8a86cdad69e
+evidence_ids: *id002
+notes: []
+limitations:
+- No model inference or benchmark was run in this research pass.

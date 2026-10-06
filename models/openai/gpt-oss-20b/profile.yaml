@@ -1,0 +1,142 @@
+schema_version: '1.0'
+id: gpt-oss-20b
+verified_at: '2026-10-06'
+identity:
+  name: gpt-oss-20b
+  creator: OpenAI
+  family: gpt-oss
+  version: null
+  release_date: '2025-08-05'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: Mixture-of-experts Transformer; alternating dense/local sparse attention; grouped-query attention;
+      RoPE
+    status: documented
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-0dc6c2d41a2c
+    - src-4fb7165743ee
+    - src-06e7619eb6a4
+    - src-6d85ece3b497
+  parameters:
+    value:
+      total: 21000000000
+      active: 3600000000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value: 131072
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: 131072
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value: Mostly English training; multilingual quality varies
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  knowledge_cutoff:
+    value: '2024-06-01'
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weights:
+    value: open
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  layers:
+    value: 24
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  total_experts:
+    value: 32
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  active_experts_per_token:
+    value: 4
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  reasoning_efforts:
+    value:
+    - low
+    - medium
+    - high
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  reference_memory_gb:
+    value: 16
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+licensing:
+  name: Apache-2.0
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id002
+local_inference:
+  availability: available
+  hardware_notes:
+  - 'Published reference memory: 16 GB; runtime/context overhead and configuration must be checked.'
+  conditions: []
+  evidence_ids: *id002
+capabilities:
+- task: local-private-text-reasoning-and-adaptation
+  judgment: Consider for self-hosting and customization; modern frontier agent equivalence is unsupported.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-4fb7165743ee
+  - src-06e7619eb6a4
+  - src-6d85ece3b497
+  contradictory_evidence_ids: []
+  conditions:
+  - Harmony formatting required; hosted provider quantization/output caps may differ from native weights.
+  known_failure_modes:
+  - Cited high-effort service scores0% on Terminal-Bench4.0 and AutomationBench-AA.
+  evidence_notes:
+  - 'supporting evidence: Open weights with disclosed MoE design and commercially permissive license; deployment
+    guidance fits16GB memory.'
+  - 'contradictory evidence: AA high: Terminal-Bench4.0 and AutomationBench-AA both0%; AA-LCR35%. Older launch
+    benchmarks target different capabilities.'
+  - 'Observation obs-30265198a1a8: Consider for self-hosting and customization; modern frontier agent equivalence
+    is unsupported.'
+  - 'Potential risk (not a measured failure): Long-horizon failure, hallucination and language weakness; self-hosting
+    does not add missing vision/audio.'
+performance_characteristics: []
+access_ids:
+- access-proprietary-access-29
+- access-proprietary-access-30
+- access-proprietary-access-31
+price_ids:
+- price-proprietary-gpt-oss-20b-groq-38ccf87aa66a
+evidence_ids: *id002
+notes: []
+limitations:
+- Deployment-specific latency, maximum usable context and total RAM depend on quantization/runtime/KV cache
+- Exact supported-language inventory unverified

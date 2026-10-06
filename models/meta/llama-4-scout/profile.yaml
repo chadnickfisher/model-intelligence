@@ -1,0 +1,167 @@
+schema_version: '1.0'
+id: llama-4-scout
+verified_at: '2026-10-06'
+identity:
+  name: Llama 4 Scout 17B-16E Instruct
+  creator: Meta
+  family: Llama 4
+  version: Llama-4-Scout-17B-16E-Instruct
+  release_date: '2025-04-05'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: Early-fusion multimodal MoE autoregressive Transformer
+    status: documented
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-5744ead18753
+    - src-8cb15ff6ddd4
+    - src-65471a2c7ad5
+    - src-94efd6cf8bb7
+    - src-7494e8051b41
+  parameters:
+    value:
+      total_billion: 109
+      active_billion: 17
+      scope: Creator-declared total and per-token active parameters.
+      exact_parameter_count: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value:
+      native_tokens: 10000000
+      extended_tokens: null
+      max_output_tokens: null
+      notes: Input plus generated output share capacity. Endpoint limits can differ.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value:
+      supported:
+      - Arabic
+      - English
+      - French
+      - German
+      - Hindi
+      - Indonesian
+      - Italian
+      - Portuguese
+      - Spanish
+      - Tagalog
+      - Thai
+      - Vietnamese
+      notes: Other languages require additional tuning/evaluation and compliance.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  weights:
+    value:
+      downloadable: true
+      official_repository: https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct
+      formats: null
+      gate: Hugging Face license acceptance / access gating
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weight_only_floor_decimal_gb:
+    value:
+      bf16: 218
+      int8: 109
+      ideal_4bit: 54.5
+    status: estimated
+    conditions:
+    - Batch 1, short/moderate context unless otherwise stated.
+    - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+      stated count, runtime, OS and temporary loading buffers.
+    - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
+      storage of inactive experts.
+    - Published maximum context is not a guarantee it fits on the suggested local machine.
+    evidence_ids: &id003
+    - src-8cb15ff6ddd4
+  release_date_precision:
+    value: day
+    status: documented
+    conditions: []
+    evidence_ids: *id002
+licensing:
+  name: Llama 4 Community License
+  commercial_use: conditional
+  redistribution: 'true'
+  fine_tuning: null
+  hosted_service: 'true'
+  restrictions:
+  - License copy, notices and Built with Llama labeling required.
+  - Distributed improved models must begin name with Llama.
+  - Separate authorization for >700M MAU at release-date test.
+  - Incorporated AUP; EU-domicile restriction for these multimodal weights, except product/service end users.
+  - A license summary, not legal advice. Open weights does not by itself establish a fully open-source AI system.
+  evidence_ids:
+  - src-5744ead18753
+local_inference:
+  availability: available
+  hardware_notes:
+  - 'Vendor: one H100 with on-the-fly INT4. Planning: >=80GB accelerator/unified memory for modest context.'
+  - The10M context maximum is not a demonstrated one-GPU operating point.
+  conditions:
+  - Batch 1, short/moderate context unless otherwise stated.
+  - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+    stated count, runtime, OS and temporary loading buffers.
+  - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
+    of inactive experts.
+  - Published maximum context is not a guarantee it fits on the suggested local machine.
+  evidence_ids: *id003
+capabilities:
+- task: multilingual-visual-chat
+  judgment: Established downloadable option for image QA and multilingual chat when custom terms fit.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-8cb15ff6ddd4
+  - src-65471a2c7ad5
+  contradictory_evidence_ids: []
+  conditions:
+  - Twelve explicitly supported languages; image evaluation up to five images.
+  known_failure_modes:
+  - Official instruction benchmarks used BF16, so quantized equivalence is unproven.
+  evidence_notes: []
+- task: very-long-document-work
+  judgment: Scout’s 10M advertised capacity is not enough evidence to prefer it for difficult long-document
+    reasoning.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-8cb15ff6ddd4
+  contradictory_evidence_ids:
+  - src-94efd6cf8bb7
+  conditions:
+  - Test position sensitivity and retrieval on real documents.
+  known_failure_modes:
+  - Very large KV memory and incomplete long-context reasoning reliability.
+  evidence_notes: []
+performance_characteristics: []
+access_ids:
+- access-open-llama-4-scout-weights
+price_ids: []
+evidence_ids: *id002
+notes: []
+limitations:
+- No model inference or benchmark was run in this research pass.

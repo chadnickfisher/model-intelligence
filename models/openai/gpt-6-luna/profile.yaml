@@ -1,0 +1,139 @@
+schema_version: '1.0'
+id: gpt-6-luna
+verified_at: '2026-10-06'
+identity:
+  name: GPT-6 Luna
+  creator: OpenAI
+  family: GPT-6
+  version: null
+  release_date: '2026-09-22'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: null
+    status: unknown
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-f00960a11928
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-ffef271f5600
+    - src-608eb672ebb7
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value: 1050000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: 128000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value: Multilingual; exact inventory not specified
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  knowledge_cutoff:
+    value: '2026-05-18'
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weights:
+    value: closed
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  reasoning_efforts:
+    value:
+    - none
+    - low
+    - medium
+    - high
+    - xhigh
+    - max
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  tool_calling:
+    value: Responses API; Sol/Astra Chat Completions does not support tools. Luna Chat Completions function
+      calling requires none effort.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  restrictions:
+    value:
+    - Chat Completions function calling requires none effort.
+    - EU regional processing documented for Standard/Flex/Batch.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+licensing:
+  name: null
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id002
+local_inference:
+  availability: unavailable
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id002
+capabilities:
+- task: focused-high-volume-tasks
+  judgment: Good low-token-price option for bounded, validated subtasks.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-ffef271f5600
+  - src-608eb672ebb7
+  contradictory_evidence_ids: []
+  conditions:
+  - Reasoning settings and harness matter; DeepSWE and Terminal-Bench are different tests.
+  known_failure_modes:
+  - Only13% all-tests-pass on cited AA Terminal-Bench4.0 at max effort.
+  evidence_notes:
+  - 'supporting evidence: AA max AA-LCR83%; vendor DeepSWE66.6% in its own setup.'
+  - 'contradictory evidence: AA max Terminal-Bench4.0 only13%, GDP.pdf23%; narrower competence than price marketing
+    suggests.'
+  - 'Observation obs-18449a135e8c: Good low-token-price option for bounded, validated subtasks.'
+  - 'Potential risk (not a measured failure): Brittle long-horizon work; weak factual calibration; use deterministic
+    checks.'
+performance_characteristics: []
+access_ids:
+- access-proprietary-access-1-2
+- access-proprietary-access-3-2
+- access-proprietary-access-4-2
+- access-proprietary-access-4-ide-2
+- access-proprietary-access-5-1
+price_ids:
+- price-proprietary-gpt-6-luna-openai-f641ecfe6181
+- price-proprietary-gpt-6-luna-openai-55f5c3505fba
+- price-proprietary-gpt-6-luna-openai-2a740cb6d4c7
+- price-proprietary-gpt-6-luna-openai-634d24acb791
+- price-proprietary-gpt-6-luna-openai-46f5117770dd
+evidence_ids: *id002
+notes: []
+limitations:
+- Undisclosed architecture and parameter count
+- Exact supported-language inventory and per-language quality not verified

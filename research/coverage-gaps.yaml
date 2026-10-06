@@ -1,0 +1,55 @@
+schema_version: '1.0'
+verified_at: '2026-10-06'
+gaps:
+- 'proprietary: Closed-model parameter counts and architecture not disclosed in sources reviewed'
+- 'proprietary: Exact chat/CLI/IDE quotas and remaining balances are account-specific'
+- 'proprietary: Third-party Azure/Bedrock/Foundry/Google rates not verified here'
+- 'proprietary: No independent version-matched image/audio benchmark located in bounded search'
+- 'proprietary: Generic language support does not establish equal quality across languages'
+- 'proprietary: OpenAI current ordinary Chat routing is not treated as identical to Work model selection'
+- 'proprietary: Current transcription models and restricted life-science/cyber models are referenced but not
+  fully profiled'
+- 'proprietary: No independent current-version Lyria 3.5, Gemini 3.8 Live or Omni 1.1 evaluation verified.'
+- 'proprietary: Veo evidence is official capability/limitation documentation; independent broad cinematic comparison
+  not verified.'
+- 'proprietary: Proprietary parameter counts and full per-language capabilities not disclosed in fetched sources.'
+- 'proprietary: Provider API health, actual entitlements, regions and production throughput were not tested.'
+- 'proprietary: No comprehensive alternative hosting-provider tariff survey.'
+- 'proprietary: Consumer plan/model rollout details can differ from API and model-card distribution lists.'
+- 'open: This is a bounded pass, not an exhaustive inventory. Gemma and gpt-oss handled in another bundle.'
+- 'open: Latest weight-card identities checked from official HF org inventories; release dates at month precision
+  remain null-day rather than invented.'
+- 'open: No exact max-output limit verified for most downloadable checkpoints. Do not equate total context
+  with maximum generated output. Provider shorthand 1M/384K is normalized to decimal values here; exact tokenizer-unit
+  limits should be checked before implementation.'
+- 'open: Language lists, provider region/retention/SLA and every distributor are not exhaustively verified.'
+- 'open: Kimi/Qwen current official price tables missing/unextractable in this pass; prices remain null rather
+  than relying on aggregator snapshots. Mistral standard pricing recovered on final verification.'
+- 'open: Independent task-matched evidence is weakest for Phi4 ReasoningVision, Qwen3.8 Max downloadable checkpoint
+  and DeepSeekPro0813. Confidence reduced explicitly.'
+- 'open: AA June Nemotron release report uses an older index than currentv4.3.2; never rank its47.7 directly
+  against October scores.'
+- 'open: Specialists discovered but not profiled: Shieldstral guard model, Leanstral formal proving, Voxtral
+  realtime/TTS, Qwen3.8 Omni paper, Nemotron competition-coding/IMO recipes. These do not establish general-assistant
+  superiority.'
+- 'providers: {"detail": "No accounts inspected; geographic access, tax, payment acceptance, negotiated price,
+  available credit, actual quotas and model approval remain unknown.", "priority": "before_any_purchase", "topic":
+  "Account entitlement"}'
+- 'providers: {"detail": "Cerebras current general policy, BFL API policy, AI21 direct API policy and ElevenLabs
+  own-model training settings need focused verification. Data-residency statements require exact endpoint/product
+  contracts.", "priority": "before_sensitive_data", "topic": "Route-specific privacy"}'
+- 'providers: {"detail": "Jamba2 API availability, Embed5 API aliases, Together/Fireworks exact API slugs and
+  FLUX3/Eleven4 release dates remain unconfirmed. Hosted display labels are not guaranteed API identifiers.",
+  "priority": "before_production", "topic": "Lifecycle and aliases"}'
+- 'providers: {"detail": "AWS/Google/Azure full region/deployment tariffs not normalized; one Bedrock rerank
+  table is region-unspecified. No general cloud-host price inferred.", "priority": "before_cost_model", "topic":
+  "Cloud tariffs"}'
+- 'providers: {"detail": "Published v4/v4Turbo temporary 72%-off pricing expires Oct12; exact end timezone
+  absent.", "priority": "2026-10-12", "topic": "Eleven v4 promotion"}'
+- 'providers: {"detail": "No own model calls or practitioner workload verification. FLUX3, Eleven4, Jamba2,
+  NorthTranslate relative quality remains low confidence. Embed5 evidence currently vendor-run.", "priority":
+  "evaluation_design", "topic": "Untested specialists"}'
+- 'providers: {"detail": "Cerebras developer table available in official search rendering but omitted in direct
+  extraction; reconcile during next focused check. Dynamic lists and free promos are especially volatile.",
+  "priority": "maintenance", "topic": "Prices and table extraction"}'
+normalization_warnings: []

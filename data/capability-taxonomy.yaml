@@ -1,0 +1,180 @@
+schema_version: '1.0'
+capabilities:
+- id: software-architecture
+  label: Software architecture
+- id: scoped-coding
+  label: Scoped coding
+- id: ambiguous-coding
+  label: Ambiguous coding
+- id: localized-edits
+  label: Localized edits
+- id: debugging
+  label: Debugging
+- id: difficult-debugging
+  label: Difficult debugging
+- id: refactoring
+  label: Refactoring
+- id: test-generation
+  label: Test generation
+- id: code-review
+  label: Code review
+- id: repository-exploration
+  label: Repository exploration
+- id: long-horizon-autonomy
+  label: Long horizon autonomy
+- id: tool-use
+  label: Tool use
+- id: structured-output
+  label: Structured output
+- id: reasoning
+  label: Reasoning
+- id: mathematics
+  label: Mathematics
+- id: scientific-reasoning
+  label: Scientific reasoning
+- id: research
+  label: Research
+- id: writing
+  label: Writing
+- id: summarization
+  label: Summarization
+- id: instruction-following
+  label: Instruction following
+- id: long-context-reasoning
+  label: Long context reasoning
+- id: large-context-retrieval
+  label: Large context retrieval
+- id: frontend-ui-generation
+  label: Frontend ui generation
+- id: image-understanding
+  label: Image understanding
+- id: image-generation
+  label: Image generation
+- id: audio
+  label: Audio
+- id: video
+  label: Video
+- id: multilingual
+  label: Multilingual
+- id: agentic-coding-and-knowledge-work
+  label: Agentic coding and knowledge work
+- id: agentic-coding-and-knowledge-workflows
+  label: Agentic coding and knowledge workflows
+- id: cache-heavy-agents
+  label: Cache heavy agents
+- id: coding-and-document-reasoning-at-constrained-spend
+  label: Coding and document reasoning at constrained spend
+- id: coding-at-different-effort-budgets
+  label: Coding at different effort budgets
+- id: commercial-coding-assistant-hosting
+  label: Commercial coding assistant hosting
+- id: compact-audio-image-understanding
+  label: Compact audio image understanding
+- id: complex-coding-and-computer-workflows
+  label: Complex coding and computer workflows
+- id: complex-document-retrieval-offline-indexing
+  label: Complex document retrieval offline indexing
+- id: cost-constrained-multimodal-agents
+  label: Cost constrained multimodal agents
+- id: cost-sensitive-professional-workflows
+  label: Cost sensitive professional workflows
+- id: difficult-science-visual-qa-and-long-documents
+  label: Difficult science visual qa and long documents
+- id: directed-short-shots-requiring-first-last-frame-or-extensions
+  label: Directed short shots requiring first last frame or extensions
+- id: edge-multilingual-chat
+  label: Edge multilingual chat
+- id: efficient-agent-workers
+  label: Efficient agent workers
+- id: english-visual-math-and-grounding
+  label: English visual math and grounding
+- id: everyday-image-generation
+  label: Everyday image generation
+- id: expressive-multilingual-narration-and-dialogue
+  label: Expressive multilingual narration and dialogue
+- id: factual-answers-and-tool-backed-research
+  label: Factual answers and tool backed research
+- id: fast-bounded-coding-and-assistant-subtasks
+  label: Fast bounded coding and assistant subtasks
+- id: fast-multimodal-assistant-and-bounded-coding-tasks
+  label: Fast multimodal assistant and bounded coding tasks
+- id: focused-high-volume-tasks
+  label: Focused high volume tasks
+- id: grounded-extraction-constrained-enterprise-question-answering
+  label: Grounded extraction constrained enterprise question answering
+- id: hard-scientific-reasoning-agentic-coding
+  label: Hard scientific reasoning agentic coding
+- id: high-throughput-text-agents
+  label: High throughput text agents
+- id: high-volume-interactive-retrieval
+  label: High volume interactive retrieval
+- id: high-volume-parsing-classification-and-bounded-subagent-work
+  label: High volume parsing classification and bounded subagent work
+- id: image-editing
+  label: Image editing
+- id: input-heavy-tool-agents
+  label: Input heavy tool agents
+- id: iterative-short-video-editing
+  label: Iterative short video editing
+- id: large-scale-text-agents
+  label: Large scale text agents
+- id: latency-sensitive-enterprise-assistant
+  label: Latency sensitive enterprise assistant
+- id: local-coding-agent
+  label: Local coding agent
+- id: local-multimodal-coding
+  label: Local multimodal coding
+- id: local-private-text-reasoning-and-adaptation
+  label: Local private text reasoning and adaptation
+- id: local-repository-editing
+  label: Local repository editing
+- id: locally-controlled-multimodal-coding-assistant
+  label: Locally controlled multimodal coding assistant
+- id: long-horizon-coding-and-enterprise-agent-workflows-when-access-is-available
+  label: Long horizon coding and enterprise agent workflows when access is available
+- id: long-horizon-multimodal-agents
+  label: Long horizon multimodal agents
+- id: long-horizon-reasoning-and-coding
+  label: Long horizon reasoning and coding
+- id: long-horizon-text-coding
+  label: Long horizon text coding
+- id: low-latency-assistance
+  label: Low latency assistance
+- id: low-memory-instruction-tasks
+  label: Low memory instruction tasks
+- id: multilingual-visual-chat
+  label: Multilingual visual chat
+- id: multimodal-long-context-work
+  label: Multimodal long context work
+- id: natural-simultaneous-listening-and-speaking
+  label: Natural simultaneous listening and speaking
+- id: non-reasoning-multilingual-rag
+  label: Non reasoning multilingual rag
+- id: private-multilingual-rag-and-enterprise-agents
+  label: Private multilingual rag and enterprise agents
+- id: prompted-full-song-concept-drafts
+  label: Prompted full song concept drafts
+- id: scientific-research
+  label: Scientific research
+- id: self-host-cost-savings
+  label: Self host cost savings
+- id: self-hosted-enterprise-localization-research
+  label: Self hosted enterprise localization research
+- id: short-audiovisual-generation-and-keyframed-continuation
+  label: Short audiovisual generation and keyframed continuation
+- id: small-local-visual-assistant
+  label: Small local visual assistant
+- id: text-coding-and-reasoning
+  label: Text coding and reasoning
+- id: tool-connected-real-time-voice-conversation
+  label: Tool connected real time voice conversation
+- id: tool-using-speech-agents
+  label: Tool using speech agents
+- id: unified-reasoning-coding
+  label: Unified reasoning coding
+- id: unsupervised-long-horizon-terminal-execution
+  label: Unsupervised long horizon terminal execution
+- id: very-long-document-work
+  label: Very long document work
+- id: visual-concepts-mockups-and-text-heavy-image-drafts
+  label: Visual concepts mockups and text heavy image drafts

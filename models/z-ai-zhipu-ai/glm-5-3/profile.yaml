@@ -1,0 +1,151 @@
+schema_version: '1.0'
+id: glm-5-3
+verified_at: '2026-10-06'
+identity:
+  name: GLM-5.3
+  creator: Z.ai / Zhipu AI
+  family: GLM5
+  version: GLM-5.3
+  release_date: null
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: MoE with DeepSeek-style sparse attention; same base model as GLM5.2, newer post-training
+    status: documented
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-dc71eaf3c8b8
+    - src-4424584ee706
+    - src-26ed078844ac
+    - src-d1e7ac1dfe19
+    - src-7e6c3dd9add1
+  parameters:
+    value:
+      total_billion: 753
+      active_billion: 40
+      scope: 753B HF serialized artifact, 40B rounded active from independent catalog; runtime maintainer says
+        ~743B/39B. Preserve discrepancy.
+      exact_parameter_count: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value:
+      native_tokens: 1000000
+      extended_tokens: null
+      max_output_tokens: null
+      notes: Input plus generated output share capacity. Endpoint limits can differ.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value:
+      supported: null
+      notes: Exact supported-language list not verified in this bounded pass.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  weights:
+    value:
+      downloadable: true
+      official_repository: https://huggingface.co/zai-org/GLM-5.3
+      formats: null
+      gate: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weight_only_floor_decimal_gb:
+    value:
+      bf16: 1506
+      int8: 753
+      ideal_4bit: 376.5
+    status: estimated
+    conditions:
+    - Batch 1, short/moderate context unless otherwise stated.
+    - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+      stated count, runtime, OS and temporary loading buffers.
+    - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
+      storage of inactive experts.
+    - Published maximum context is not a guarantee it fits on the suggested local machine.
+    evidence_ids: *id002
+  release_date_reported:
+    value: 2026-08
+    status: documented
+    conditions:
+    - Source supplied a partial or non-day date; not promoted to an exact release date.
+    evidence_ids: *id002
+  release_date_precision:
+    value: month
+    status: documented
+    conditions: []
+    evidence_ids: *id002
+licensing:
+  name: GLM-5.3 License
+  commercial_use: conditional
+  redistribution: 'true'
+  fine_tuning: null
+  hosted_service: 'true'
+  restrictions:
+  - Retain notices.
+  - MaaS operator above $10B aggregate trailing-12-month revenue must pass Z.ai security review before commercial
+    use.
+  - A license summary, not legal advice. Open weights does not by itself establish a fully open-source AI system.
+  evidence_ids:
+  - src-dc71eaf3c8b8
+local_inference:
+  availability: available
+  hardware_notes:
+  - 'Datacenter / high-memory multi-GPU: ideal 4-bit full weights around 377GB plus substantial headroom.'
+  - Runtime-maintainer count ~743B/39B differs from serialized HF 753B / AA 40B; neither equals required VRAM.
+  conditions:
+  - Batch 1, short/moderate context unless otherwise stated.
+  - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+    stated count, runtime, OS and temporary loading buffers.
+  - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
+    of inactive experts.
+  - Published maximum context is not a guarantee it fits on the suggested local machine.
+  evidence_ids: *id002
+capabilities:
+- task: long-horizon-text-coding
+  judgment: Strong candidate for coding agents and text-based knowledge work with sufficient serving resources.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-4424584ee706
+  - src-26ed078844ac
+  contradictory_evidence_ids: []
+  conditions:
+  - Preserve reasoning/template semantics; compare max effort using complete-task budgets.
+  known_failure_modes:
+  - Creator evaluations alter some anti-cheat checks and harnesses; cyber/terminal strengths do not establish
+    visual capability.
+  evidence_notes: []
+performance_characteristics: []
+access_ids:
+- access-open-glm-5-3-weights
+- access-open-glm-5-3-zai-api
+- access-open-glm-5-3-mistral-api
+price_ids:
+- price-open-glm-5-3-zai-api-a3d2f2e33a66
+- price-open-glm-5-3-mistral-api-2ee05cd2e1e9
+evidence_ids: *id002
+notes: []
+limitations:
+- No model inference or benchmark was run in this research pass.

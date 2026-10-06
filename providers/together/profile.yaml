@@ -1,0 +1,36 @@
+schema_version: '1.0'
+id: together
+verified_at: '2026-10-06'
+name: Together AI
+roles:
+- inference-provider
+api_compatibility: []
+access_methods:
+- Serverless inference; reserved throughput; dedicated GPU hosting; training. Some catalog models are upstream
+  passthrough.
+geographic_availability:
+- '{"status": "partial", "summary": "Serverless lacks region selection. Dedicated/private deployment supports
+  residency options including EU. Third-party model authors do not see requests for Together-hosted weights."}'
+- not_exhaustively_verified
+rate_limits:
+- '{"status": "partial", "summary": "Per-model/account rate limits not verified in this pass."}'
+caching_batching: []
+privacy_data_use:
+- '{"status": "public_verified", "summary": "Direct default stores prompts/responses for product improvement;
+  training sharing separately opt-in, off by default. Organization admin can disable storage for ZDR; doing
+  so disables passthrough models."}'
+reliability: []
+model_ids: []
+price_ids:
+- price-providers-gpt-oss-120b-together-4cacbb083b92
+- price-providers-kimi-k3-together-210d7bb86dfc
+- price-providers-minimax-m3-together-53e1dc39589c
+- price-providers-dedicated-inference-together-c011f83509b2
+access_ids:
+- access-providers-access-together-serverless
+evidence_ids:
+- src-2e19eb496679
+- src-a8bf24d0415e
+notes:
+- Hosted weights and passthrough products differ. Dedicated GPU hourly price is not a token price.
+limitations: []

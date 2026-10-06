@@ -1,0 +1,129 @@
+schema_version: '1.0'
+id: gpt-image-2-5-sunburst
+verified_at: '2026-10-06'
+identity:
+  name: GPT Image 2.5 Sunburst
+  creator: OpenAI
+  family: GPT Image2.5
+  version: null
+  release_date: '2026-09-08'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - image-generation
+specifications:
+  architecture:
+    value: null
+    status: unknown
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-1a9fcf8d6701
+    - src-259c8fd88c0f
+    - src-285d61f371cf
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      output:
+      - image
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  knowledge_cutoff:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  weights:
+    value: closed
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  output_resolution:
+    value: Up to3840x2160; above2560x1440 experimental
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  resolution_constraints:
+    value: Edges divisible by16; aspect ratio1:3 to3:1; further pixel/edge caps apply
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  quality_settings:
+    value:
+    - low
+    - medium
+    - high
+    - xhigh
+    - max
+    - auto
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+licensing:
+  name: null
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id002
+local_inference:
+  availability: unavailable
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id002
+capabilities:
+- task: image-editing
+  judgment: Precision-oriented editing choice.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-259c8fd88c0f
+  - src-1a9fcf8d6701
+  - src-285d61f371cf
+  contradictory_evidence_ids: []
+  conditions:
+  - Quality, resolution, reference images and retries change consumption.
+  known_failure_modes: []
+  evidence_notes:
+  - 'supporting evidence: Vendor positions Sunburst for finer editing control and Flare for faster generation.'
+  - 'contradictory evidence: No independent model-specific head-to-head recovered in this bounded pass; equal
+    token prices do not imply equal cost per image.'
+  - 'Observation obs-b01421e4dbca: Precision-oriented editing choice.'
+  - 'Potential risk (not a measured failure): Inspect text, local edits and identity consistency; these checks
+    are prudent risk controls, not measured failure rates.'
+performance_characteristics: []
+access_ids:
+- access-proprietary-access-7
+- access-proprietary-access-8
+price_ids:
+- price-proprietary-gpt-image-2-5-sunburst-openai-0f6ba21d2197
+- price-proprietary-gpt-image-2-5-sunburst-openai-be4252d0ba6c
+- price-proprietary-gpt-image-2-5-sunburst-openai-40fdb9e8e555
+evidence_ids: *id002
+notes: []
+limitations:
+- Undisclosed architecture and parameter count
+- Exact supported-language inventory and per-language quality not verified

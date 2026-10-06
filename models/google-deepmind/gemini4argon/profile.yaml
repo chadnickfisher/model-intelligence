@@ -1,0 +1,161 @@
+schema_version: '1.0'
+id: gemini4argon
+verified_at: '2026-10-06'
+identity:
+  name: Gemini 4 Argon
+  creator: Google DeepMind
+  family: Gemini
+  version: null
+  release_date: '2026-09-30'
+  latest_meaningful_update: null
+  status: preview
+  model_types:
+  - frontier_reasoning
+  - coding
+  - enterprise_agents
+specifications:
+  architecture:
+    value: null
+    status: unknown
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-6381db252dee
+    - src-d493892e40d2
+    - src-5535da041415
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  knowledge_cutoff:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  configuration:
+    value:
+      evaluated_reasoning_effort: high
+      vals_evaluation_max_output_tokens: 262144
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  api_quota:
+    value:
+      rpm: null
+      tpm: null
+      rpd: null
+      reason: Restricted rollout; no public endpoint entitlement verified.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  canonical_endpoint:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  release_date_scope:
+    value: announcement and selected Fairwind early-access rollout, not public API GA
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_list_complete:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  parameter_disclosure:
+    value: not disclosed in fetched sources
+    status: documented
+    conditions: []
+    evidence_ids: *id002
+licensing:
+  name: null
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id002
+local_inference:
+  availability: unavailable
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id002
+capabilities:
+- task: long-horizon-coding-and-enterprise-agent-workflows-when-access-is-available
+  judgment: Promising early-access candidate; independent task results support coding potential but do not
+    establish broad deployment reliability.
+  confidence: medium
+  supporting_evidence_ids:
+  - obs-ac88874e3783
+  contradictory_evidence_ids:
+  - obs-ac88874e3783
+  - obs-917f279500bc
+  - obs-f5e1684ef252
+  conditions:
+  - Google; high reasoning; temperature 1; output cap 262144
+  - Vals used $4/$20 regular token pricing, high effort; costs differ from announced promo
+  known_failure_modes: []
+  evidence_notes:
+  - Public-source synthesis; no inference runs.
+  - 'Observation obs-ac88874e3783: Independent early-access results are strong on code migration and terminal
+    tasks but much weaker on CUA-bench and fully resolved ProgramBench.'
+  - 'Observation obs-917f279500bc: Announced Sep 30 for selected Fairwind defenders; general developer/consumer
+    access described as forthcoming.'
+  - 'Observation obs-f5e1684ef252: Long tasks can be costly; independent evaluator reports high costs for CUA
+    and code migration, using regular prices.'
+performance_characteristics:
+- task: measured-generation-behavior
+  judgment: 'Long tasks can be costly; independent evaluator reports high costs for CUA and code migration,
+    using regular prices. Measurements: {"AA_output_tokens_index": 110000000, "AA_output_tokens_per_second":
+    null}. These describe the cited benchmark configuration only.'
+  confidence: medium
+  supporting_evidence_ids:
+  - obs-f5e1684ef252
+  contradictory_evidence_ids: []
+  conditions:
+  - Vals used $4/$20 regular token pricing, high effort; costs differ from announced promo
+  known_failure_modes: []
+  evidence_notes:
+  - Benchmark costs are not typical user costs or provider tariffs.
+access_ids:
+- access-proprietary-42
+- access-proprietary-42-google-ai-studio
+price_ids:
+- price-proprietary-gemini4argon-google-developer-api-29291504e924
+- price-proprietary-gemini4argon-google-developer-api-efc10b9f8cc2
+evidence_ids: *id002
+notes: []
+limitations:
+- Public API endpoint identifier and GA date
+- Architecture and parameters
+- Exact deployable context and output limits
+- Public latency and quota
+- Complete input modalities and languages
+- Exact introductory price expiry in main English announcement

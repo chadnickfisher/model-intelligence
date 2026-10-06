@@ -1,0 +1,55 @@
+schema_version: '1.0'
+id: google-consumer
+verified_at: '2026-10-06'
+name: Gemini app / Google AI plans
+roles:
+- access-product
+api_compatibility: []
+access_methods: []
+geographic_availability: []
+rate_limits: []
+caching_batching: []
+privacy_data_use: []
+reliability: []
+model_ids:
+- gemini-3-8-flash
+- gemini-3-1-pro-preview
+- gemini-3-5-flash-lite
+- gemini-3-pro-image
+- lyria-3-5
+- gemini-3-8-live
+- gemini-omni-1-1-flash
+price_ids:
+- price-proprietary-offer-google-consumer-41e68d0d90dc
+- price-proprietary-offer-google-consumer-a63d0d5d6d40
+- price-proprietary-offer-google-consumer-caf526dc5118
+- price-proprietary-offer-google-consumer-1bd9755b027c
+- price-proprietary-offer-google-consumer-602758fc425c
+access_ids:
+- access-proprietary-33-google-consumer
+- access-proprietary-34-google-consumer
+- access-proprietary-35-google-consumer
+- access-proprietary-36-google-consumer
+- access-proprietary-38-google-consumer
+- access-proprietary-39-google-consumer
+- access-proprietary-41-google-consumer
+evidence_ids:
+- src-0472a026e3db
+- src-c4c7ba8fda18
+- src-116c1a7f3be0
+- src-564638136e50
+- src-6b2bf752a4f2
+- src-07ba3e0f52cc
+- src-56f9dadd63b1
+- src-f7fe39222f11
+- src-21fe0d4c63a7
+- src-ef50a5784fac
+- src-adf03d8b2d85
+- src-04c98c33c883
+- src-744e7330e24d
+- src-3b883af04aa0
+notes:
+- 'pricing_source: g_subs'
+limitations:
+- Privacy/data-use details were not fully verified in this baseline.
+- Exact public or account-specific quotas were not established.

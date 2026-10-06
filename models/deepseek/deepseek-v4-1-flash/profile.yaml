@@ -1,0 +1,167 @@
+schema_version: '1.0'
+id: deepseek-v4-1-flash
+verified_at: '2026-10-06'
+identity:
+  name: DeepSeek-V4.1-Flash
+  creator: DeepSeek
+  family: DeepSeek V4.1
+  version: DeepSeek-V4.1-Flash
+  release_date: '2026-09-10'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: Causal encoder-decoder MoE with CSA2, sparse indexing, mHC, Engram lookup memory and DSpark draft
+      module
+    status: documented
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-525e7f64ea10
+    - src-5c348986a151
+    - src-2034e17f9f4e
+    - src-280758cc57a6
+  parameters:
+    value:
+      total_billion: 763
+      active_billion: 16
+      scope: 763B serialized HF artifact; creator headline is 552B backbone, plus conditional memory and auxiliaries.
+      exact_parameter_count: null
+      backbone_billion: 552
+      conditional_memory_billion: 196
+      active_prefill_billion: 8
+      active_decode_billion: 16
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value:
+      native_tokens: 1000000
+      extended_tokens: null
+      max_output_tokens: 384000
+      notes: 384K is first-party API limit; weight-card generation example recommends >=256K budget, not a
+        separate model hard limit.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: 384000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value:
+      supported: null
+      notes: Exact supported-language list not verified in this bounded pass.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  weights:
+    value:
+      downloadable: true
+      official_repository: https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash
+      formats: null
+      gate: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  reasoning_mode:
+    value: API thinking/non-thinking; numerical effort 1–100 in weight card
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weight_only_floor_decimal_gb:
+    value:
+      bf16: 1526
+      int8: 763
+      ideal_4bit: 381.5
+    status: estimated
+    conditions:
+    - Batch 1, short/moderate context unless otherwise stated.
+    - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+      stated count, runtime, OS and temporary loading buffers.
+    - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
+      storage of inactive experts.
+    - Published maximum context is not a guarantee it fits on the suggested local machine.
+    evidence_ids: *id002
+  release_date_precision:
+    value: day
+    status: documented
+    conditions: []
+    evidence_ids: *id002
+licensing:
+  name: MIT
+  commercial_use: allowed
+  redistribution: 'true'
+  fine_tuning: null
+  hosted_service: 'true'
+  restrictions:
+  - Retain copyright/license notices; comply with the license.
+  - A license summary, not legal advice. Open weights does not by itself establish a fully open-source AI system.
+  evidence_ids:
+  - src-525e7f64ea10
+local_inference:
+  availability: available
+  hardware_notes:
+  - 'Datacenter or specialized workstation: 4-bit floor about 382GB for all serialized parameters; reserve
+    substantially more RAM/HBM and confirm support.'
+  - 552B backbone + 196B Engram conditional memory; HF artifact reports 763B including auxiliary components.
+    8B active prefill / 16B decode excludes a simple universal active-count interpretation. Engram can be placed
+    separately; no minimum verified.
+  conditions:
+  - Batch 1, short/moderate context unless otherwise stated.
+  - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+    stated count, runtime, OS and temporary loading buffers.
+  - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
+    of inactive experts.
+  - Published maximum context is not a guarantee it fits on the suggested local machine.
+  evidence_ids: *id002
+capabilities:
+- task: input-heavy-tool-agents
+  judgment: Promising cost-oriented candidate for long-context coding/review and image-grounded tool tasks.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-5c348986a151
+  - src-2034e17f9f4e
+  - src-280758cc57a6
+  contradictory_evidence_ids: []
+  conditions:
+  - Check maximum reasoning effort versus task cost; preserve correct prompt encoding.
+  known_failure_modes:
+  - Creator DeepSWE results vary materially by harness; long traces, tool mistakes and invalid edits remain
+    possible.
+  evidence_notes: []
+- task: self-host-cost-savings
+  judgment: No automatic savings from open weights; utilization and infrastructure dominate.
+  confidence: low
+  supporting_evidence_ids:
+  - src-5c348986a151
+  contradictory_evidence_ids: []
+  conditions:
+  - Compare full GPU/RAM/operator cost with actual cached API token mix.
+  known_failure_modes:
+  - Underutilized hardware can cost more than API access.
+  evidence_notes: []
+performance_characteristics: []
+access_ids:
+- access-open-deepseek-v4-1-flash-weights
+- access-open-deepseek-v4-1-flash-deepseek-api
+price_ids:
+- price-open-deepseek-v4-1-flash-deepseek-api-05c298aa0f32
+- price-open-deepseek-v4-1-flash-deepseek-api-60717c231a91
+evidence_ids: *id002
+notes: []
+limitations:
+- No model inference or benchmark was run in this research pass.

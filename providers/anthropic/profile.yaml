@@ -1,0 +1,69 @@
+schema_version: '1.0'
+id: anthropic
+verified_at: '2026-10-06'
+name: Anthropic
+roles:
+- creator
+- inference-provider
+api_compatibility: []
+access_methods: []
+geographic_availability: []
+rate_limits: []
+caching_batching: []
+privacy_data_use: []
+reliability: []
+model_ids:
+- claude-fable-5-1
+- claude-opus-5-5
+- claude-sonnet-5-5
+- claude-haiku-4-5
+price_ids:
+- price-proprietary-claude-fable-5-1-anthropic-1c9e85bc3ee3
+- price-proprietary-claude-fable-5-1-anthropic-d31f844e1fa5
+- price-proprietary-claude-opus-5-5-anthropic-a9d5d3dc77e4
+- price-proprietary-claude-opus-5-5-anthropic-c64de5cd2551
+- price-proprietary-claude-sonnet-5-5-anthropic-706ffb2ac9c2
+- price-proprietary-claude-sonnet-5-5-anthropic-ed2559301c6f
+- price-proprietary-claude-haiku-4-5-anthropic-92db4721bd09
+- price-proprietary-claude-haiku-4-5-anthropic-9448cb8b044e
+- price-proprietary-claude-pro-monthly-anthropic-2d6b2b18c5d7
+- price-proprietary-claude-pro-annual-anthropic-33c209c5815b
+- price-proprietary-claude-max-anthropic-959775c88e0a
+access_ids:
+- access-proprietary-access-14
+- access-proprietary-access-16
+- access-proprietary-access-18
+- access-proprietary-access-20
+- access-proprietary-access-22-0
+- access-proprietary-access-22-1
+- access-proprietary-access-22-2
+- access-proprietary-access-22-3
+- access-proprietary-access-22-ide-0
+- access-proprietary-access-22-ide-1
+- access-proprietary-access-22-ide-2
+- access-proprietary-access-22-ide-3
+- access-proprietary-access-23-0
+- access-proprietary-access-23-1
+- access-proprietary-access-24
+- access-proprietary-access-25
+evidence_ids:
+- src-ad9aa6f1b8ed
+- src-f3655eaf1407
+- src-bc2410652a3c
+- src-e7232d52f37f
+- src-f10e40cc0139
+- src-4d070c5c8c67
+- src-4950ff35950b
+- src-0dd3bed5c7dd
+- src-752375ff0c97
+- src-4d947df5f3d7
+- src-4e3ca8a95d36
+- src-e1910c5126bc
+- src-e99bd76836c1
+- src-5c510b458547
+- src-50846cd1ff36
+- src-58333316475e
+notes: []
+limitations:
+- Privacy/data-use details were not fully verified in this baseline.
+- Exact public or account-specific quotas were not established.

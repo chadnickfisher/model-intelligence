@@ -1,0 +1,167 @@
+schema_version: '1.0'
+id: gemini-3-1-pro-preview
+verified_at: '2026-10-06'
+identity:
+  name: Gemini 3.1 Pro Preview
+  creator: Google DeepMind
+  family: Gemini
+  version: null
+  release_date: '2026-02-19'
+  latest_meaningful_update: null
+  status: preview
+  model_types:
+  - reasoning
+  - multimodal
+  - coding
+specifications:
+  architecture:
+    value: Gemini 3 Pro-derived sparse mixture-of-experts transformer; exact 3.1 modifications undisclosed
+    status: documented
+    conditions: &id001 []
+    evidence_ids:
+    - src-564638136e50
+    - src-4c04e11c8a1b
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: &id003
+    - src-10e39629c3d3
+    - src-07ba3e0f52cc
+    - src-a24fd97eb3d0
+    - src-564638136e50
+    - src-4c04e11c8a1b
+  context_window:
+    value: 1048576
+    status: documented
+    conditions: *id001
+    evidence_ids: &id002
+    - src-07ba3e0f52cc
+  maximum_output:
+    value: 65536
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      - video
+      - audio
+      - PDF
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id003
+additional_specifications:
+  knowledge_cutoff:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id003
+  configuration:
+    value:
+      thinking_supported: true
+      service_tiers:
+      - standard
+      - batch
+      - flex
+      - priority
+      endpoint_variant:
+        id: gemini-3.1-pro-preview-customtools
+        purpose: prioritizes custom tools and bash
+        warning: May vary in quality for tasks not benefiting from these tools.
+      file_search: AI Studio only according to model page
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  api_quota:
+    value:
+      rpm: null
+      tpm: null
+      rpd: null
+      reason: Project/model/tier/account-specific; inspect active AI Studio limits. No account queried.
+      evidence_ids:
+      - src-10e39629c3d3
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  canonical_endpoint:
+    value: gemini-3.1-pro-preview
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  context_limit_scope:
+    value: Exact Gemini Developer API input limit
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  release_date_scope:
+    value: API endpoint release
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  language_list_complete:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id003
+  parameter_disclosure:
+    value: not disclosed in fetched public sources
+    status: documented
+    conditions: []
+    evidence_ids: *id003
+licensing:
+  name: null
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id003
+local_inference:
+  availability: unavailable
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id003
+capabilities:
+- task: difficult-science-visual-qa-and-long-documents
+  judgment: Strong QA candidate; selectively retrieve evidence rather than fill the entire context indiscriminately.
+  confidence: medium
+  supporting_evidence_ids:
+  - obs-2ee68e334fde
+  contradictory_evidence_ids:
+  - obs-dc03c35a1b80
+  - obs-e8f1075592de
+  conditions:
+  - high; temperature 1; Google API; output 65,536
+  - high; Google API
+  known_failure_modes: []
+  evidence_notes:
+  - task-conditioned synthesis; no inference runs performed
+  - 'Observation obs-2ee68e334fde: Strong closed-form science and multimodal QA in current Vals snapshot.'
+  - 'Observation obs-dc03c35a1b80: Effective long-context retrieval degrades near the advertised maximum.'
+  - 'Observation obs-e8f1075592de: Strong QA does not transfer uniformly to open-ended agents.'
+performance_characteristics: []
+access_ids:
+- access-proprietary-34
+- access-proprietary-34-google-ai-studio
+- access-proprietary-34-google-consumer
+- access-proprietary-34-google-antigravity
+- access-proprietary-34-google-cli
+price_ids:
+- price-proprietary-gemini-3-1-pro-preview-google-developer-api-0363b1d20999
+- price-proprietary-gemini-3-1-pro-preview-google-developer-api-6666cc8d3986
+evidence_ids: *id003
+notes: []
+limitations:
+- Parameter counts
+- Complete language list
+- Exact 3.1-specific knowledge cutoff

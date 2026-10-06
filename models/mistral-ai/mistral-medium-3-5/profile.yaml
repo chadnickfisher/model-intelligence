@@ -1,0 +1,144 @@
+schema_version: '1.0'
+id: mistral-medium-3-5
+verified_at: '2026-10-06'
+identity:
+  name: Mistral Medium 3.5 128B
+  creator: Mistral AI
+  family: Mistral Medium
+  version: Mistral-Medium-3.5-128B
+  release_date: '2026-04-28'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: Dense multimodal decoder; unified instruction, reasoning and coding
+    status: documented
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-23f19f916bbb
+    - src-79280a1db5da
+    - src-d2d60d683099
+  parameters:
+    value:
+      total_billion: 128
+      active_billion: 128
+      scope: creator-declared count; see notes
+      exact_parameter_count: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value:
+      native_tokens: 262144
+      extended_tokens: null
+      max_output_tokens: null
+      notes: Input plus generated output share capacity. Endpoint limits can differ.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value:
+      supported: null
+      notes: Exact supported-language list not verified in this bounded pass.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  weights:
+    value:
+      downloadable: true
+      official_repository: https://huggingface.co/mistralai/Mistral-Medium-3.5-128B
+      formats: null
+      gate: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weight_only_floor_decimal_gb:
+    value:
+      bf16: 256
+      int8: 128
+      ideal_4bit: 64.0
+    status: estimated
+    conditions:
+    - Batch 1, short/moderate context unless otherwise stated.
+    - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+      stated count, runtime, OS and temporary loading buffers.
+    - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
+      storage of inactive experts.
+    - Published maximum context is not a guarantee it fits on the suggested local machine.
+    evidence_ids: *id002
+  release_date_precision:
+    value: day
+    status: documented
+    conditions: []
+    evidence_ids: *id002
+licensing:
+  name: Modified MIT
+  commercial_use: conditional
+  redistribution: 'true'
+  fine_tuning: null
+  hosted_service: 'true'
+  restrictions:
+  - Retain notices.
+  - No license rights if company/employer consolidated monthly revenue exceeds $20M in preceding month; obtain
+    separate license or use Mistral hosting.
+  - A license summary, not legal advice. Open weights does not by itself establish a fully open-source AI system.
+  evidence_ids:
+  - src-23f19f916bbb
+local_inference:
+  availability: available
+  hardware_notes:
+  - 'Planning estimate: 80–96GB class aggregate memory at 4-bit; multi-GPU FP8 needs over 128GB weights plus
+    headroom.'
+  - Dense compute cost is much higher than 6.5B-active Small4. Card gives 8-way tensor-parallel serving examples,
+    not a universal minimum.
+  conditions:
+  - Batch 1, short/moderate context unless otherwise stated.
+  - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+    stated count, runtime, OS and temporary loading buffers.
+  - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
+    of inactive experts.
+  - Published maximum context is not a guarantee it fits on the suggested local machine.
+  evidence_ids: *id002
+capabilities:
+- task: unified-reasoning-coding
+  judgment: Current Mistral candidate when one model must combine image input, coding and selectable reasoning.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-79280a1db5da
+  - src-d2d60d683099
+  contradictory_evidence_ids: []
+  conditions:
+  - Verify license eligibility and corrected long-context configuration.
+  known_failure_modes:
+  - Official card warns early Transformers config and GGUF conversions from it degrade long-context performance.
+  evidence_notes: []
+performance_characteristics: []
+access_ids:
+- access-open-mistral-medium-3-5-weights
+- access-open-mistral-medium-3-5-mistral-api
+price_ids:
+- price-open-mistral-medium-3-5-mistral-api-ccb3cbd04b1a
+evidence_ids: *id002
+notes:
+- Replaces Medium3.1/Magistral in Le Chat and Devstral2 in Vibe; do not infer those products expose this exact
+  configuration.
+limitations:
+- No model inference or benchmark was run in this research pass.

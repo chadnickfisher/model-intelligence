@@ -1,0 +1,31 @@
+schema_version: '1.0'
+id: z-ai-zhipu-ai
+verified_at: '2026-10-06'
+name: Z.ai / Zhipu AI
+roles:
+- creator
+api_compatibility: []
+access_methods: []
+geographic_availability: []
+rate_limits: []
+caching_batching: []
+privacy_data_use: []
+reliability: []
+model_ids: []
+price_ids: []
+access_ids: []
+evidence_ids:
+- src-dc71eaf3c8b8
+- src-4424584ee706
+- src-26ed078844ac
+- src-d1e7ac1dfe19
+- src-7e6c3dd9add1
+- src-04173aa90698
+- src-5302786105ea
+- src-b02205ef3bed
+- src-667e800254a1
+- src-80c359151519
+notes: []
+limitations:
+- Privacy/data-use details were not fully verified in this baseline.
+- Exact public or account-specific quotas were not established.

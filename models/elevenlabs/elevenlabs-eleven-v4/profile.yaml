@@ -1,0 +1,107 @@
+schema_version: '1.0'
+id: elevenlabs-eleven-v4
+verified_at: '2026-10-06'
+identity:
+  name: Eleven v4
+  creator: ElevenLabs
+  family: Eleven
+  version: '4'
+  release_date: null
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - specialist
+specifications:
+  architecture:
+    value: null
+    status: unknown
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-58f6a44d1374
+    - src-bcc14c31357b
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      output:
+      - speech
+      - multi-speaker dialogue
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value: 90+
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  max_characters_per_request:
+    value: 10000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  api:
+    value: Text to Dialogue; Turbo sibling supports realtime WebSocket
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  api_alias:
+    value: eleven_v4
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weights:
+    value: closed
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+licensing:
+  name: commercial service terms and voice-rights restrictions
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id002
+local_inference:
+  availability: unavailable
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id002
+capabilities:
+- task: expressive-multilingual-narration-and-dialogue
+  judgment: Current documented flagship for expressive/cloned voices; credible shortlist candidate, but independent
+    v4 preference/accuracy results not verified.
+  confidence: low
+  supporting_evidence_ids:
+  - obs-7f1696b1081e
+  contradictory_evidence_ids: []
+  conditions: []
+  known_failure_modes: []
+  evidence_notes:
+  - 'Observation obs-7f1696b1081e: Current flagship multilingual synthesis and dialogue features.'
+performance_characteristics: []
+access_ids: []
+price_ids:
+- price-providers-elevenlabs-eleven-v4-elevenlabs-9a8e2a2f9216
+evidence_ids: *id002
+notes: []
+limitations:
+- Voice likeness/consent rights are separate from technical cloning capability.
+- API promo expires Oct12; pricing should not be treated as stable.
+- Latency claims for Turbo exclude application/network overhead.

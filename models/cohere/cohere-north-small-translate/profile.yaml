@@ -1,0 +1,115 @@
+schema_version: '1.0'
+id: cohere-north-small-translate
+verified_at: '2026-10-06'
+identity:
+  name: North Small Translate
+  creator: Cohere
+  family: North Translate
+  version: '1.0'
+  release_date: null
+  latest_meaningful_update: null
+  status: unknown
+  model_types:
+  - specialist
+specifications:
+  architecture:
+    value: null
+    status: unknown
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-1dac5785145f
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value: 16000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: 16000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      output:
+      - translated text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  parameters_total_billion:
+    value: 218
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  parameters_active_billion:
+    value: 25
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_locale_variants:
+    value: more than 50
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  hardware:
+    value: 'W4A16: 2 H100 or 1 B200; FP8: 4 H100 or 2 B200'
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  api_alias:
+    value: north-small-translate-1-0
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weights:
+    value: open
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+licensing:
+  name: CC-BY-NC-4.0 for downloadable weights; commercial use requires separate authorization
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id002
+local_inference:
+  availability: available
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id002
+capabilities:
+- task: self-hosted-enterprise-localization-research
+  judgment: Purpose-built candidate, particularly listed tier-one languages. Hardware and noncommercial license
+    substantially narrow free deployment usefulness.
+  confidence: low
+  supporting_evidence_ids:
+  - obs-516d65ed1c24
+  contradictory_evidence_ids: []
+  conditions: []
+  known_failure_modes: []
+  evidence_notes:
+  - 'Observation obs-516d65ed1c24: Purpose-built machine translation with listed tier-one languages and deployment
+    formats.'
+performance_characteristics: []
+access_ids: []
+price_ids: []
+evidence_ids: *id002
+notes: []
+limitations:
+- No independent translation-quality result verified in this pass.
+- Commercial API/production pricing unknown.
+- Name 'Small' does not mean laptop-size.

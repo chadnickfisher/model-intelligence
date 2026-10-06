@@ -1,0 +1,42 @@
+schema_version: '1.0'
+id: opencode-zen
+verified_at: '2026-10-06'
+name: OpenCode Zen
+roles:
+- inference-provider
+- gateway
+- access-product
+api_compatibility: []
+access_methods:
+- Optional gateway by OpenCode team; separate from OpenCode client. OpenCode Go is a separate bounded coding-traffic
+  subscription.
+geographic_availability:
+- '{"status": "partial", "summary": "Go marketed for international access; this does not establish data residency
+  or universal country eligibility."}'
+- not_exhaustively_verified
+rate_limits:
+- '{"status": "partial", "summary": "Go has 5-hour, weekly and monthly usage limits. Published request counts
+  are estimates based on token mixes, not guaranteed quotas."}'
+caching_batching: []
+privacy_data_use:
+- '{"status": "public_verified", "summary": "Model-route specific. Go docs list Grok 4.7/4.6 30-day retention,
+  GLM/Kimi/MiniMax selected routes zero days; no training for those listed routes."}'
+reliability: []
+model_ids: []
+price_ids:
+- price-providers-xai-grok-4-7-opencode-zen-ad6a54b286af
+- price-providers-xai-grok-4-7-opencode-zen-5e46b5d4903b
+- price-providers-zen-credit-purchase-opencode-zen-9481cbb7a771
+- price-providers-go-opencode-zen-14d71524fa38
+- price-providers-go-opencode-zen-b0161cc92e8a
+access_ids:
+- access-providers-access-opencode-zen
+- access-providers-access-opencode-go
+evidence_ids:
+- src-13da216438ac
+- src-772c9fd668f0
+- src-35b3dc84644e
+notes:
+- Zen prepaid PAYG charges card fees; optional auto-reload defaults documented as $20 below $5. Monthly usage
+  cap and cash charged can differ.
+limitations: []

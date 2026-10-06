@@ -1,0 +1,173 @@
+schema_version: '1.0'
+id: gemini-3-5-flash-lite
+verified_at: '2026-10-06'
+identity:
+  name: Gemini 3.5 Flash-Lite
+  creator: Google DeepMind
+  family: Gemini
+  version: null
+  release_date: '2026-07-21'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - efficient
+  - extraction
+  - subagents
+specifications:
+  architecture:
+    value: Gemini 3.1 Flash-Lite-derived; published lineage points to Gemini 3 Pro sparse MoE transformer
+    status: documented
+    conditions: &id001 []
+    evidence_ids:
+    - src-56f9dadd63b1
+    - src-0b12f0c84b90
+    - src-4c04e11c8a1b
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: &id003
+    - src-56f9dadd63b1
+    - src-10e39629c3d3
+    - src-f7fe39222f11
+    - src-a24fd97eb3d0
+    - src-0b12f0c84b90
+    - src-4c04e11c8a1b
+  context_window:
+    value: 1048576
+    status: documented
+    conditions: *id001
+    evidence_ids: &id002
+    - src-f7fe39222f11
+  maximum_output:
+    value: 65536
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      - video
+      - audio
+      - PDF
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id003
+additional_specifications:
+  knowledge_cutoff:
+    value:
+      latest_some_domains: 2026-03
+      other_domains: 2025-01
+      evidence_ids:
+      - src-56f9dadd63b1
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  configuration:
+    value:
+      thinking_supported: true
+      service_tiers:
+      - standard
+      - batch
+      - flex
+      - priority
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  api_quota:
+    value:
+      rpm: null
+      tpm: null
+      rpd: null
+      reason: Project/model/tier/account-specific; inspect active AI Studio limits. No account queried.
+      evidence_ids:
+      - src-10e39629c3d3
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  canonical_endpoint:
+    value: gemini-3.5-flash-lite
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  context_limit_scope:
+    value: Exact Gemini Developer API input limit
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  release_date_scope:
+    value: API endpoint release
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  language_list_complete:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id003
+  parameter_disclosure:
+    value: not disclosed in fetched public sources
+    status: documented
+    conditions: []
+    evidence_ids: *id003
+licensing:
+  name: null
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id003
+local_inference:
+  availability: unavailable
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id003
+capabilities:
+- task: high-volume-parsing-classification-and-bounded-subagent-work
+  judgment: Reasonable economical starting point, with validation and escalation for difficult cases.
+  confidence: medium
+  supporting_evidence_ids:
+  - obs-16516ab6f54e
+  - obs-8b65b1136da3
+  contradictory_evidence_ids:
+  - obs-04efb4d01f02
+  - obs-8b65b1136da3
+  conditions:
+  - high; temperature 1; output 65,536
+  known_failure_modes: []
+  evidence_notes:
+  - task-conditioned synthesis; no inference runs performed
+  - 'Observation obs-16516ab6f54e: Measured decode speed supports throughput-sensitive experimentation.'
+  - 'Observation obs-8b65b1136da3: Useful bounded coding capability with weaker difficult agent performance.'
+  - 'Observation obs-04efb4d01f02: Large context is not equal to reliable exhaustive retrieval.'
+performance_characteristics:
+- task: measured-generation-behavior
+  judgment: 'Measured decode speed supports throughput-sensitive experimentation. Measurements: {"output_tokens_per_second":
+    341.5}. These describe the cited benchmark configuration only.'
+  confidence: medium
+  supporting_evidence_ids:
+  - obs-16516ab6f54e
+  contradictory_evidence_ids: []
+  conditions: []
+  known_failure_modes: []
+  evidence_notes:
+  - API snapshot; no end-to-end latency or local execution claim.
+access_ids:
+- access-proprietary-35
+- access-proprietary-35-google-ai-studio
+- access-proprietary-35-google-consumer
+price_ids:
+- price-proprietary-gemini-3-5-flash-lite-google-developer-api-5e632c3ddf86
+evidence_ids: *id003
+notes: []
+limitations: []

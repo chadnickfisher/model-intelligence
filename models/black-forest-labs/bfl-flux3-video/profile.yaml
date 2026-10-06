@@ -1,0 +1,129 @@
+schema_version: '1.0'
+id: bfl-flux3-video
+verified_at: '2026-10-06'
+identity:
+  name: FLUX 3 Video
+  creator: Black Forest Labs
+  family: FLUX
+  version: '3'
+  release_date: null
+  latest_meaningful_update: null
+  status: preview
+  model_types:
+  - video-generation
+specifications:
+  architecture:
+    value: null
+    status: unknown
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-57a05c45a0b1
+    - src-752c7dd560da
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image keyframes
+      - video continuation
+      output:
+      - video
+      - synchronized audio
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  max_video_seconds:
+    value: 20
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  max_resolution:
+    value: 3840 x 2176 (16:9 UHD)
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  fps:
+    value: 24
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  modes:
+    value:
+    - t2v
+    - i2v
+    - v2v
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  reference_keyframes_max:
+    value: 10
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  api_alias:
+    value: flux-3-video
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weights:
+    value: hosted_video_model; separate Action open-weight mode not evaluated
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+licensing:
+  name: API service terms; no blanket open-source claim
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id002
+local_inference:
+  availability: unknown
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id002
+capabilities:
+- task: short-audiovisual-generation-and-keyframed-continuation
+  judgment: Feature-rich candidate where synchronized sound and pinned frames matter; quality judgment remains
+    low confidence without independent testing.
+  confidence: low
+  supporting_evidence_ids:
+  - obs-aa0038a13410
+  contradictory_evidence_ids: []
+  conditions: []
+  known_failure_modes: []
+  evidence_notes:
+  - 'Observation obs-aa0038a13410: Short audiovisual generation, pinned keyframes and continuation capabilities
+    publicly documented.'
+performance_characteristics: []
+access_ids: []
+price_ids:
+- price-providers-bfl-flux3-video-bfl-772aa13dfb82
+- price-providers-bfl-flux3-video-bfl-c4a4dfe8876e
+evidence_ids: *id002
+notes: []
+limitations:
+- Preview can change.
+- 4K classes are finished with video upsampler, not an established native-resolution quality guarantee.
+- Omni Reference still marked forthcoming in reviewed docs.

@@ -1,0 +1,62 @@
+schema_version: '1.0'
+id: google-ai-studio
+verified_at: '2026-10-06'
+name: Google AI Studio
+roles:
+- access-product
+api_compatibility: []
+access_methods: []
+geographic_availability: []
+rate_limits: []
+caching_batching: []
+privacy_data_use: []
+reliability: []
+model_ids:
+- gemini-3-8-flash
+- gemini-3-1-pro-preview
+- gemini-3-5-flash-lite
+- gemini-3-pro-image
+- veo-3-1-generate-preview
+- lyria-3-5
+- gemini-3-8-live
+- gemma-4-31b-it
+- gemini-omni-1-1-flash
+- gemini4argon
+price_ids: []
+access_ids:
+- access-proprietary-33-google-ai-studio
+- access-proprietary-34-google-ai-studio
+- access-proprietary-35-google-ai-studio
+- access-proprietary-36-google-ai-studio
+- access-proprietary-37-google-ai-studio
+- access-proprietary-38-google-ai-studio
+- access-proprietary-39-google-ai-studio
+- access-proprietary-40-google-ai-studio
+- access-proprietary-41-google-ai-studio
+- access-proprietary-42-google-ai-studio
+evidence_ids:
+- src-c4c7ba8fda18
+- src-116c1a7f3be0
+- src-564638136e50
+- src-6b2bf752a4f2
+- src-07ba3e0f52cc
+- src-56f9dadd63b1
+- src-f7fe39222f11
+- src-0472a026e3db
+- src-21fe0d4c63a7
+- src-521c059d5d6a
+- src-ef50a5784fac
+- src-adf03d8b2d85
+- src-04c98c33c883
+- src-744e7330e24d
+- src-a24fd97eb3d0
+- src-ded81031faae
+- src-2f3ae40d3bb7
+- src-3b883af04aa0
+- src-6381db252dee
+- src-919b66e84fc3
+notes:
+- Experimentation interface; does not establish consumer app subscription entitlement.
+limitations:
+- Privacy/data-use details were not fully verified in this baseline.
+- Exact public or account-specific quotas were not established.

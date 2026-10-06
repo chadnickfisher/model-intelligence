@@ -1,0 +1,138 @@
+schema_version: '1.0'
+id: devstral-small-2
+verified_at: '2026-10-06'
+identity:
+  name: Devstral Small 2 24B
+  creator: Mistral AI
+  family: Devstral
+  version: Devstral-Small-2-24B-Instruct-2512
+  release_date: '2025-12-09'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: Dense Ministral3-style decoder with vision
+    status: documented
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-f2036f817d22
+    - src-fd9a0c74ec31
+    - src-1f59cd499805
+  parameters:
+    value:
+      total_billion: 24
+      active_billion: 24
+      scope: creator-declared count; see notes
+      exact_parameter_count: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value:
+      native_tokens: 262144
+      extended_tokens: null
+      max_output_tokens: null
+      notes: Input plus generated output share capacity. Endpoint limits can differ.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value:
+      supported: null
+      notes: Exact supported-language list not verified in this bounded pass.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  weights:
+    value:
+      downloadable: true
+      official_repository: https://huggingface.co/mistralai/Devstral-Small-2-24B-Instruct-2512
+      formats: null
+      gate: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weight_only_floor_decimal_gb:
+    value:
+      bf16: 48
+      int8: 24
+      ideal_4bit: 12.0
+    status: estimated
+    conditions:
+    - Batch 1, short/moderate context unless otherwise stated.
+    - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+      stated count, runtime, OS and temporary loading buffers.
+    - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
+      storage of inactive experts.
+    - Published maximum context is not a guarantee it fits on the suggested local machine.
+    evidence_ids: &id003
+    - src-fd9a0c74ec31
+  release_date_precision:
+    value: day
+    status: documented
+    conditions: []
+    evidence_ids: *id002
+licensing:
+  name: Apache-2.0
+  commercial_use: allowed
+  redistribution: 'true'
+  fine_tuning: null
+  hosted_service: 'true'
+  restrictions:
+  - Retain copyright/license notices; comply with the license.
+  - A license summary, not legal advice. Open weights does not by itself establish a fully open-source AI system.
+  evidence_ids:
+  - src-f2036f817d22
+local_inference:
+  availability: available
+  hardware_notes:
+  - Vendor positions single RTX4090 / 32GB-RAM Mac; use quantization for practical headroom.
+  - 24B FP8 weights alone can exhaust a 24GB card; do not assume full-context fit from the marketing hardware
+    statement. Planning 24–32GB with 4-bit, modest context.
+  conditions:
+  - Batch 1, short/moderate context unless otherwise stated.
+  - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+    stated count, runtime, OS and temporary loading buffers.
+  - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
+    of inactive experts.
+  - Published maximum context is not a guarantee it fits on the suggested local machine.
+  evidence_ids: *id003
+capabilities:
+- task: local-coding-agent
+  judgment: A sensible local SWE candidate with image input and Apache terms.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-fd9a0c74ec31
+  - src-1f59cd499805
+  contradictory_evidence_ids: []
+  conditions:
+  - Use tested scaffold/tool parser; code changes still need tests and review.
+  known_failure_modes:
+  - Creator reports 68% SWE-bench Verified but only 22.5% Terminal Bench2; task breadth is uneven.
+  evidence_notes: []
+performance_characteristics: []
+access_ids:
+- access-open-devstral-small-2-weights
+price_ids: []
+evidence_ids: *id002
+notes: []
+limitations:
+- No model inference or benchmark was run in this research pass.

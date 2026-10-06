@@ -1,0 +1,35 @@
+schema_version: '1.0'
+id: bfl
+verified_at: '2026-10-06'
+name: Black Forest Labs
+roles:
+- creator
+- inference-provider
+api_compatibility: []
+access_methods:
+- FLUX API and Playground use credits; open-weight products have independent licenses.
+geographic_availability:
+- '{"status": "partial", "summary": "Processing location and geographic restrictions unverified."}'
+- not_exhaustively_verified
+rate_limits:
+- '{"status": "partial", "summary": "Credit balance required; exact concurrency, limits/reset not verified.
+  FLUX3 is preview."}'
+caching_batching: []
+privacy_data_use:
+- '{"status": "partial", "summary": "API retention/training not verified in this pass."}'
+reliability: []
+model_ids: []
+price_ids:
+- price-providers-api-playground-bfl-082684041227
+- price-providers-bfl-flux3-video-bfl-772aa13dfb82
+- price-providers-bfl-flux3-video-bfl-c4a4dfe8876e
+- price-providers-api-playground-bfl-87cdad9a25df
+access_ids:
+- access-providers-access-bfl-api
+evidence_ids:
+- src-752c7dd560da
+- src-57a05c45a0b1
+notes:
+- FLUX.2 dev is local-only on BFL and noncommercial; hosted third-party offers can have different agreements.
+  Do not label all FLUX variants open-source.
+limitations: []

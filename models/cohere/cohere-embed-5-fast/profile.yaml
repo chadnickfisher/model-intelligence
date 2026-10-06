@@ -1,0 +1,101 @@
+schema_version: '1.0'
+id: cohere-embed-5-fast
+verified_at: '2026-10-06'
+identity:
+  name: Embed 5 Fast
+  creator: Cohere
+  family: Embed
+  version: 5 Fast
+  release_date: '2026-09-30'
+  latest_meaningful_update: null
+  status: unknown
+  model_types:
+  - specialist
+specifications:
+  architecture:
+    value: null
+    status: unknown
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-9d4f7ae81230
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value: 128000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      - fused text+image
+      output:
+      - embedding
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value: 100+
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  shares_embedding_space_with:
+    value: model.cohere-embed-5-pro
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  api_alias:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  weights:
+    value: private_deployment_available; public-weight_license_unverified
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+licensing:
+  name: commercial terms
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id002
+local_inference:
+  availability: unknown
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id002
+capabilities:
+- task: high-volume-interactive-retrieval
+  judgment: Candidate for query-time cost/latency savings, including Pro-index/Fast-query pairing; current
+    comparative evidence is vendor-generated.
+  confidence: medium
+  supporting_evidence_ids:
+  - obs-752ea46df2f7
+  contradictory_evidence_ids: []
+  conditions: []
+  known_failure_modes: []
+  evidence_notes:
+  - 'Observation obs-752ea46df2f7: Public evidence observation'
+performance_characteristics: []
+access_ids: []
+price_ids:
+- price-providers-cohere-embed-5-fast-cohere-ca6b05775efe
+evidence_ids: *id002
+notes: []
+limitations:
+- No independent latency measurements established here.
+- Do not treat retrieval benchmarks as generation or reasoning scores.

@@ -1,0 +1,137 @@
+schema_version: '1.0'
+id: cohere-command-a-plus
+verified_at: '2026-10-06'
+identity:
+  name: Command A+
+  creator: Cohere
+  family: Command
+  version: 05-2026
+  release_date: '2026-05-20'
+  latest_meaningful_update: null
+  status: preview
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: null
+    status: unknown
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-4b5fc50d9047
+    - src-7a929ac1ccc5
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value: 128000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: 64000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value: 48
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  parameters_total_billion:
+    value: 218
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  parameters_active_billion:
+    value: 25
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  knowledge_cutoff:
+    value: '2025-04-01'
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  hardware:
+    value: 1 B200 or 2 H100 at W4A4
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  api_alias:
+    value: command-a-plus-05-2026
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weights:
+    value: open
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+licensing:
+  name: Apache-2.0
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id002
+local_inference:
+  availability: available
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id002
+capabilities:
+- task: private-multilingual-rag-and-enterprise-agents
+  judgment: Useful candidate where controllable deployment and abstention matter. Independent launch testing
+    found 86% non-hallucination but only 9% knowledge accuracy; high abstention is not universal correctness.
+  confidence: medium
+  supporting_evidence_ids:
+  - obs-4dd631a08c77
+  contradictory_evidence_ids: []
+  conditions: []
+  known_failure_modes: []
+  evidence_notes:
+  - 'Observation obs-4dd631a08c77: Public evidence observation'
+- task: hard-scientific-reasoning-agentic-coding
+  judgment: Launch testing showed gaps on hardest tasks; do not infer frontier quality from hardware efficiency.
+  confidence: medium
+  supporting_evidence_ids:
+  - obs-4dd631a08c77
+  contradictory_evidence_ids: []
+  conditions: []
+  known_failure_modes: []
+  evidence_notes:
+  - 'Observation obs-4dd631a08c77: Public evidence observation'
+performance_characteristics:
+- task: measured-generation-behavior
+  judgment: 'Public evidence observation Measurements: {"output_tokens_per_second": 281}. These describe the
+    cited benchmark configuration only.'
+  confidence: medium
+  supporting_evidence_ids:
+  - obs-4dd631a08c77
+  contradictory_evidence_ids: []
+  conditions: []
+  known_failure_modes: []
+  evidence_notes:
+  - Launch/pre-release testing; older index revision and comparison set. Abstention can drive non-hallucination
+    result.
+access_ids: []
+price_ids: []
+evidence_ids: *id002
+notes: []
+limitations:
+- API free-trial limits differ from paid production Model Vault.
+- Launch benchmark scores are dated and not comparable with current index revisions without normalization.

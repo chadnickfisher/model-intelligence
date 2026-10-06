@@ -1,0 +1,27 @@
+schema_version: '1.0'
+id: client-opencode
+verified_at: '2026-10-06'
+name: OpenCode
+roles:
+- client
+api_compatibility: []
+access_methods: []
+geographic_availability: []
+rate_limits: []
+caching_batching: []
+privacy_data_use: []
+reliability: []
+model_ids: []
+price_ids: []
+access_ids: []
+evidence_ids:
+- src-13da216438ac
+notes:
+- Client connects to third-party APIs or local model servers. Optional Zen gateway and Go subscription are
+  separate access products.
+- 'creator: OpenCode team'
+- 'model_creator: false'
+- 'inference_provider: false'
+limitations:
+- Privacy/data-use details were not fully verified in this baseline.
+- Exact public or account-specific quotas were not established.

@@ -1,0 +1,108 @@
+schema_version: '1.0'
+id: gpt-realtime-2-1
+verified_at: '2026-10-06'
+identity:
+  name: GPT-Realtime 2.1
+  creator: OpenAI
+  family: GPT-Realtime
+  version: null
+  release_date: '2026-07-06'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: null
+    status: unknown
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-cf6a8843c8fd
+    - src-49e8d0577a5e
+    - src-911ea99b80ae
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value: 128000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: 32000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      - audio
+      output:
+      - text
+      - audio
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  knowledge_cutoff:
+    value: '2024-09-30'
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weights:
+    value: closed
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+licensing:
+  name: null
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id002
+local_inference:
+  availability: unavailable
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id002
+capabilities:
+- task: tool-using-speech-agents
+  judgment: Consider when reasoning and tools must operate in a realtime speech session.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-cf6a8843c8fd
+  contradictory_evidence_ids: []
+  conditions:
+  - Audio-token pricing cannot be compared directly with Live session-minute pricing.
+  known_failure_modes: []
+  evidence_notes:
+  - 'supporting evidence: Vendor documents stronger alphanumeric recognition, noise/silence and interruption
+    behavior over Realtime2.'
+  - 'contradictory evidence: No independent version-matched evidence recovered; higher reasoning effort increases
+    latency and output consumption.'
+  - 'Observation obs-d95f95883e10: Consider when reasoning and tools must operate in a realtime speech session.'
+  - 'Potential risk (not a measured failure): Recognition errors in identifiers; latency-sensitive turn-taking;
+    tool error recovery.'
+performance_characteristics: []
+access_ids:
+- access-proprietary-access-13
+price_ids:
+- price-proprietary-gpt-realtime-2-1-openai-1ffaab4c4919
+- price-proprietary-gpt-realtime-2-1-openai-86fb999c9b89
+- price-proprietary-gpt-realtime-2-1-openai-b208bfb265cc
+evidence_ids: *id002
+notes: []
+limitations:
+- Undisclosed architecture and parameter count
+- Exact supported-language inventory and per-language quality not verified

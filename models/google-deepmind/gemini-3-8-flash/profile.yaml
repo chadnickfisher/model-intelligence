@@ -1,0 +1,204 @@
+schema_version: '1.0'
+id: gemini-3-8-flash
+verified_at: '2026-10-06'
+identity:
+  name: Gemini 3.8 Flash
+  creator: Google DeepMind
+  family: Gemini
+  version: null
+  release_date: '2026-09-02'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - general
+  - reasoning
+  - coding
+  - agents
+specifications:
+  architecture:
+    value: null
+    status: unknown
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-c4c7ba8fda18
+    - src-10e39629c3d3
+    - src-116c1a7f3be0
+    - src-a24fd97eb3d0
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value: 1048576
+    status: documented
+    conditions: *id001
+    evidence_ids: &id003
+    - src-116c1a7f3be0
+  maximum_output:
+    value: 65536
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      - video
+      - audio
+      - PDF
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  language_support:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  knowledge_cutoff:
+    value:
+      latest_some_domains: 2026-03
+      other_domains: 2025-01
+      evidence_ids:
+      - src-c4c7ba8fda18
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  configuration:
+    value:
+      thinking_levels:
+      - low
+      - medium
+      - high
+      unsupported_thinking_level: minimal
+      service_tiers:
+      - standard
+      - batch
+      - flex
+      - priority
+      note: Effort and service tiers are configurations, not additional models.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  api_quota:
+    value:
+      rpm: null
+      tpm: null
+      rpd: null
+      reason: Project/model/tier/account-specific; inspect active AI Studio limits. No account queried.
+      evidence_ids:
+      - src-10e39629c3d3
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  canonical_endpoint:
+    value: gemini-3.8-flash
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  context_limit_scope:
+    value: Exact Gemini Developer API input limit
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  release_date_scope:
+    value: API endpoint release
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_list_complete:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  parameter_disclosure:
+    value: not disclosed in fetched public sources
+    status: documented
+    conditions: []
+    evidence_ids: *id002
+licensing:
+  name: null
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id002
+local_inference:
+  availability: unavailable
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id002
+capabilities:
+- task: fast-multimodal-assistant-and-bounded-coding-tasks
+  judgment: Strong candidate when throughput matters and outputs can be tested.
+  confidence: medium
+  supporting_evidence_ids:
+  - obs-62d94da56cdb
+  - obs-7445edb36893
+  - obs-a6b7a76a516c
+  contradictory_evidence_ids:
+  - obs-623d3b669e5c
+  - obs-7445edb36893
+  conditions:
+  - high reasoning; Google API
+  - high; temperature 1; Google API; max output 65,536
+  - high; Google API
+  known_failure_modes: []
+  evidence_notes:
+  - task-conditioned synthesis; no inference runs performed
+  - 'Observation obs-62d94da56cdb: Fast streamed decoding in the observed benchmark service.'
+  - 'Observation obs-7445edb36893: Competitive contained coding tasks, with much weaker results on harder general
+    terminal work.'
+  - 'Observation obs-a6b7a76a516c: Supports demanding visual/scientific question answering in independent evaluation.'
+  - 'Observation obs-623d3b669e5c: Provider discloses hallucinations, occasional timeouts, and increased tokens
+    at higher effort; multilingual safety regressed versus 3.7.'
+- task: unsupervised-long-horizon-terminal-execution
+  judgment: Conditional; use tests and checkpointing rather than assuming benchmark coding strength transfers.
+  confidence: medium
+  supporting_evidence_ids:
+  - obs-7445edb36893
+  contradictory_evidence_ids:
+  - obs-7445edb36893
+  - obs-623d3b669e5c
+  conditions:
+  - high; temperature 1; Google API; max output 65,536
+  known_failure_modes: []
+  evidence_notes:
+  - task-conditioned synthesis; no inference runs performed
+  - 'Observation obs-7445edb36893: Competitive contained coding tasks, with much weaker results on harder general
+    terminal work.'
+  - 'Observation obs-623d3b669e5c: Provider discloses hallucinations, occasional timeouts, and increased tokens
+    at higher effort; multilingual safety regressed versus 3.7.'
+performance_characteristics:
+- task: measured-generation-behavior
+  judgment: 'Fast streamed decoding in the observed benchmark service. Measurements: {"output_tokens_per_second":
+    241.9}. These describe the cited benchmark configuration only.'
+  confidence: medium
+  supporting_evidence_ids:
+  - obs-62d94da56cdb
+  contradictory_evidence_ids: []
+  conditions:
+  - high reasoning; Google API
+  known_failure_modes: []
+  evidence_notes:
+  - Excludes time to first token and tool-loop overhead; not an SLA.
+access_ids:
+- access-proprietary-33
+- access-proprietary-33-google-ai-studio
+- access-proprietary-33-google-consumer
+- access-proprietary-33-google-antigravity
+price_ids:
+- price-proprietary-gemini-3-8-flash-google-developer-api-15580e4c6b8b
+- price-proprietary-gemini-3-8-flash-google-developer-api-f9f44895e35b
+- price-proprietary-gemini-3-8-flash-google-developer-api-1bad64d36c74
+evidence_ids: *id002
+notes: []
+limitations:
+- Full language coverage list
+- Architecture beyond published dependency
+- Private production latency/SLAs

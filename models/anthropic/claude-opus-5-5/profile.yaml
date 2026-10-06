@@ -1,0 +1,166 @@
+schema_version: '1.0'
+id: claude-opus-5-5
+verified_at: '2026-10-06'
+identity:
+  name: Claude Opus 5.5
+  creator: Anthropic
+  family: Claude 5
+  version: null
+  release_date: '2026-09-22'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: null
+    status: unknown
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-4d070c5c8c67
+    - src-f3655eaf1407
+    - src-4950ff35950b
+    - src-0dd3bed5c7dd
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value: 1000000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: 128000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value: Multilingual; exact inventory not specified
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  knowledge_cutoff:
+    value: 2026-06
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weights:
+    value: closed
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  thinking:
+    value: adaptive always on
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  default_api_effort:
+    value: medium
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  api_id:
+    value: claude-opus-5-5
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  training_cutoff:
+    value: 2026-06
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  batch_beta_output_tokens:
+    value: 300000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  reasoning_efforts:
+    value:
+    - low
+    - medium
+    - high
+    - xhigh
+    - max
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  earliest_retirement_date:
+    value: '2027-09-22'
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  restrictions:
+    value:
+    - Thinking cannot be disabled; forced tool use rejected.
+    - Old computer_20251124 tool rejected on Claude API and Google Cloud.
+    - 300K output only Message Batches beta with documented header.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  retirement_note:
+    value: Earliest allowed retirement is not an announced shutdown.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+licensing:
+  name: null
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id002
+local_inference:
+  availability: unavailable
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id002
+capabilities:
+- task: agentic-coding-and-knowledge-work
+  judgment: Strong balanced candidate for sustained open-ended professional work.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-4950ff35950b
+  - src-0dd3bed5c7dd
+  - src-4d070c5c8c67
+  contradictory_evidence_ids: []
+  conditions:
+  - Independent benchmark harness; default fallback makes this a served configuration, not isolated weights.
+  known_failure_modes:
+  - Cited Terminal-Bench4.0 all-tests-pass result leaves about40% of tasks unsuccessful.
+  evidence_notes:
+  - 'supporting evidence: AA max/default fallback: Terminal-Bench4.0 59.6%; SciCode66.9%; HLE61.4%.'
+  - 'contradictory evidence: About40% of terminal benchmark tasks still fail; task-specific leaders differ.'
+  - 'Observation obs-ec41174a4588: Strong balanced candidate for sustained open-ended professional work.'
+  - 'Potential risk (not a measured failure): Residual prompt-injection vulnerability and out-of-scope actions;
+    always-on thinking affects latency.'
+performance_characteristics: []
+access_ids:
+- access-proprietary-access-16
+- access-proprietary-access-17-aws-bedrock
+- access-proprietary-access-17-google-cloud
+- access-proprietary-access-17-azure-foundry
+- access-proprietary-access-22-1
+- access-proprietary-access-22-ide-1
+- access-proprietary-access-24
+price_ids:
+- price-proprietary-claude-opus-5-5-anthropic-a9d5d3dc77e4
+- price-proprietary-claude-opus-5-5-anthropic-c64de5cd2551
+evidence_ids: *id002
+notes: []
+limitations:
+- Undisclosed architecture and parameter count
+- Exact supported-language inventory and per-language quality not verified

@@ -1,0 +1,158 @@
+schema_version: '1.0'
+id: minimax-m3
+verified_at: '2026-10-06'
+identity:
+  name: MiniMax M3
+  creator: MiniMax
+  family: MiniMax M
+  version: MiniMax-M3
+  release_date: null
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: Native multimodal MoE with MiniMax Sparse Attention
+    status: documented
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-6a511cb9176a
+    - src-06645d3950f1
+    - src-418bc9a9adc1
+    - src-40c9ce9b4812
+  parameters:
+    value:
+      total_billion: 428
+      active_billion: 23
+      scope: creator-declared count; see notes
+      exact_parameter_count: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value:
+      native_tokens: 1000000
+      extended_tokens: null
+      max_output_tokens: null
+      notes: Input plus generated output share capacity. Endpoint limits can differ.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      - video
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value:
+      supported: null
+      notes: Exact supported-language list not verified in this bounded pass.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  weights:
+    value:
+      downloadable: true
+      official_repository: https://huggingface.co/MiniMaxAI/MiniMax-M3
+      formats: null
+      gate: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weight_only_floor_decimal_gb:
+    value:
+      bf16: 856
+      int8: 428
+      ideal_4bit: 214.0
+    status: estimated
+    conditions:
+    - Batch 1, short/moderate context unless otherwise stated.
+    - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+      stated count, runtime, OS and temporary loading buffers.
+    - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
+      storage of inactive experts.
+    - Published maximum context is not a guarantee it fits on the suggested local machine.
+    evidence_ids: *id002
+  release_date_reported:
+    value: 2026-06
+    status: documented
+    conditions:
+    - Source supplied a partial or non-day date; not promoted to an exact release date.
+    evidence_ids: *id002
+  release_date_precision:
+    value: month
+    status: documented
+    conditions: []
+    evidence_ids: *id002
+licensing:
+  name: MiniMax Community License
+  commercial_use: conditional
+  redistribution: 'true'
+  fine_tuning: null
+  hosted_service: 'true'
+  restrictions:
+  - Retain copyright and permission notices.
+  - 'Commercial use: branding plus one-time notice; >$20M yearly product/service revenue requires prior written
+    authorization.'
+  - Prohibited-use appendix applies, including any military use.
+  - A license summary, not legal advice. Open weights does not by itself establish a fully open-source AI system.
+  evidence_ids:
+  - src-6a511cb9176a
+local_inference:
+  availability: available
+  hardware_notes:
+  - 'Datacenter / high-memory workstation: ideal 4-bit roughly 214GB; plan >=256GB aggregate memory plus workload
+    headroom.'
+  - Card ~428B versus HF serialized 427B and alternate MXFP8 artifact ~440B; scope/rounding differs. Supported
+    quantized backend required.
+  conditions:
+  - Batch 1, short/moderate context unless otherwise stated.
+  - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+    stated count, runtime, OS and temporary loading buffers.
+  - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
+    of inactive experts.
+  - Published maximum context is not a guarantee it fits on the suggested local machine.
+  evidence_ids: *id002
+capabilities:
+- task: multimodal-long-context-work
+  judgment: A candidate for cost-sensitive image/video coding and work agents; compare using the >512k price
+    band when relevant.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-06645d3950f1
+  - src-418bc9a9adc1
+  - src-40c9ce9b4812
+  contradictory_evidence_ids: []
+  conditions:
+  - Thinking can be enabled, adaptive or disabled; paid hosting terms are separate from weight license.
+  known_failure_modes:
+  - Long-context requests cost more; reported attention speedups are creator comparisons against M2, not universal
+    application speedups.
+  evidence_notes: []
+performance_characteristics: []
+access_ids:
+- access-open-minimax-m3-weights
+- access-open-minimax-m3-minimax-api
+price_ids:
+- price-open-minimax-m3-minimax-api-cfa19bcf4e29
+- price-open-minimax-m3-minimax-api-f5f41f0c9af4
+- price-open-minimax-m3-minimax-api-bb9117221622
+- price-open-minimax-m3-minimax-api-3a2d3f3837bf
+- price-providers-minimax-m3-together-53e1dc39589c
+evidence_ids: *id002
+notes: []
+limitations:
+- No model inference or benchmark was run in this research pass.

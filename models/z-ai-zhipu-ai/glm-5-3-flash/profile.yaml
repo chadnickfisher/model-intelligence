@@ -1,0 +1,149 @@
+schema_version: '1.0'
+id: glm-5-3-flash
+verified_at: '2026-10-06'
+identity:
+  name: GLM-5.3-Flash
+  creator: Z.ai / Zhipu AI
+  family: GLM5
+  version: GLM-5.3-Flash
+  release_date: null
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: Native multimodal MoE combining sparse and linear attention with mHC
+    status: documented
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-04173aa90698
+    - src-5302786105ea
+    - src-b02205ef3bed
+    - src-667e800254a1
+    - src-80c359151519
+  parameters:
+    value:
+      total_billion: 320
+      active_billion: 18
+      scope: creator-declared count; see notes
+      exact_parameter_count: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value:
+      native_tokens: 1000000
+      extended_tokens: null
+      max_output_tokens: null
+      notes: Input plus generated output share capacity. Endpoint limits can differ.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value:
+      supported: null
+      notes: Exact supported-language list not verified in this bounded pass.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  weights:
+    value:
+      downloadable: true
+      official_repository: https://huggingface.co/zai-org/GLM-5.3-Flash
+      formats: null
+      gate: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weight_only_floor_decimal_gb:
+    value:
+      bf16: 640
+      int8: 320
+      ideal_4bit: 160.0
+    status: estimated
+    conditions:
+    - Batch 1, short/moderate context unless otherwise stated.
+    - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+      stated count, runtime, OS and temporary loading buffers.
+    - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
+      storage of inactive experts.
+    - Published maximum context is not a guarantee it fits on the suggested local machine.
+    evidence_ids: *id002
+  release_date_reported:
+    value: 2026-08
+    status: documented
+    conditions:
+    - Source supplied a partial or non-day date; not promoted to an exact release date.
+    evidence_ids: *id002
+  release_date_precision:
+    value: month
+    status: documented
+    conditions: []
+    evidence_ids: *id002
+licensing:
+  name: MIT
+  commercial_use: allowed
+  redistribution: 'true'
+  fine_tuning: null
+  hosted_service: 'true'
+  restrictions:
+  - Retain copyright/license notices; comply with the license.
+  - A license summary, not legal advice. Open weights does not by itself establish a fully open-source AI system.
+  evidence_ids:
+  - src-04173aa90698
+local_inference:
+  availability: available
+  hardware_notes:
+  - 'Planning estimate: 192–256GB aggregate memory for supported 4-bit with modest batching; FP8 requires over
+    320GB weights plus headroom.'
+  - HF serialized metadata rounds to 321B; official model-card declaration is 320B.
+  conditions:
+  - Batch 1, short/moderate context unless otherwise stated.
+  - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+    stated count, runtime, OS and temporary loading buffers.
+  - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
+    of inactive experts.
+  - Published maximum context is not a guarantee it fits on the suggested local machine.
+  evidence_ids: *id002
+capabilities:
+- task: cost-constrained-multimodal-agents
+  judgment: Useful candidate where image-capable agents, MIT terms and lower token prices matter.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-5302786105ea
+  - src-b02205ef3bed
+  - src-667e800254a1
+  contradictory_evidence_ids: []
+  conditions:
+  - Exact hosted vs local runtime multimodal adapters differ; profile full task latency.
+  known_failure_modes:
+  - Verbose reasoning and measured 53 tokens/sec can dominate latency; no guarantee of flagship GLM5.3 task
+    parity.
+  evidence_notes: []
+performance_characteristics: []
+access_ids:
+- access-open-glm-5-3-flash-weights
+- access-open-glm-5-3-flash-zai-api
+price_ids:
+- price-open-glm-5-3-flash-zai-api-d4cf1d58c48f
+evidence_ids: *id002
+notes: []
+limitations:
+- No model inference or benchmark was run in this research pass.

@@ -1,0 +1,142 @@
+schema_version: '1.0'
+id: deepseek-v4-pro-0813
+verified_at: '2026-10-06'
+identity:
+  name: DeepSeek-V4-Pro-0813
+  creator: DeepSeek
+  family: DeepSeek V4
+  version: DeepSeek-V4-Pro-0813
+  release_date: '2026-08-13'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: Sparse-attention MoE V4 backbone plus DSpark speculative decoder
+    status: documented
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-f6adda98b53a
+    - src-b96a45c2e083
+    - src-280758cc57a6
+    - src-2bf74f8ecb84
+  parameters:
+    value:
+      total_billion: 1600
+      active_billion: 49
+      scope: 1.6T backbone; HF full artifact rounds to 1.7T; exact all-component total not verified.
+      exact_parameter_count: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value:
+      native_tokens: 1000000
+      extended_tokens: null
+      max_output_tokens: 384000
+      notes: Input plus generated output share capacity. Endpoint limits can differ.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: 384000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value:
+      supported: null
+      notes: Exact supported-language list not verified in this bounded pass.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  weights:
+    value:
+      downloadable: true
+      official_repository: https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813
+      formats: null
+      gate: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weight_only_floor_decimal_gb:
+    value:
+      bf16: 3200
+      int8: 1600
+      ideal_4bit: 800.0
+    status: estimated
+    conditions:
+    - Batch 1, short/moderate context unless otherwise stated.
+    - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+      stated count, runtime, OS and temporary loading buffers.
+    - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
+      storage of inactive experts.
+    - Published maximum context is not a guarantee it fits on the suggested local machine.
+    evidence_ids: *id002
+  release_date_precision:
+    value: day
+    status: documented
+    conditions: []
+    evidence_ids: *id002
+licensing:
+  name: MIT
+  commercial_use: allowed
+  redistribution: 'true'
+  fine_tuning: null
+  hosted_service: 'true'
+  restrictions:
+  - Retain copyright/license notices; comply with the license.
+  - A license summary, not legal advice. Open weights does not by itself establish a fully open-source AI system.
+  evidence_ids:
+  - src-f6adda98b53a
+local_inference:
+  availability: available
+  hardware_notes:
+  - Datacenter-scale multi-GPU/multi-node; ideal 4-bit backbone alone roughly 800GB.
+  - HF serialized artifact rounds to 1.7T due to auxiliary modules; real storage floor is higher than the headline-backbone
+    calculation.
+  conditions:
+  - Batch 1, short/moderate context unless otherwise stated.
+  - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+    stated count, runtime, OS and temporary loading buffers.
+  - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
+    of inactive experts.
+  - Published maximum context is not a guarantee it fits on the suggested local machine.
+  evidence_ids: *id002
+capabilities:
+- task: text-coding-and-reasoning
+  judgment: Officially supersedes Preview and remains a capable text-agent option.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-b96a45c2e083
+  - src-280758cc57a6
+  contradictory_evidence_ids: []
+  conditions:
+  - Use 0813 evidence, not April preview scores; reasoning low/high/max changes behavior.
+  known_failure_modes:
+  - Text-only; system-level results depend on DeepSeek Harness; no independent checkpoint-matched test established
+    here.
+  evidence_notes: []
+performance_characteristics: []
+access_ids:
+- access-open-deepseek-v4-pro-0813-weights
+- access-open-deepseek-v4-pro-0813-deepseek-api
+price_ids:
+- price-open-deepseek-v4-pro-0813-deepseek-api-66908c1c12ad
+- price-open-deepseek-v4-pro-0813-deepseek-api-1cba22453144
+evidence_ids: *id002
+notes: []
+limitations:
+- No model inference or benchmark was run in this research pass.
+- Independent 0813-only reproducible comparison not verified.

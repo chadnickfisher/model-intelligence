@@ -1,0 +1,27 @@
+schema_version: '1.0'
+id: google-cli
+verified_at: '2026-10-06'
+name: Gemini CLI
+roles:
+- client
+api_compatibility: []
+access_methods: []
+geographic_availability: []
+rate_limits: []
+caching_batching: []
+privacy_data_use: []
+reliability: []
+model_ids:
+- gemini-3-1-pro-preview
+price_ids: []
+access_ids:
+- access-proprietary-34-google-cli
+evidence_ids:
+- src-564638136e50
+- src-6b2bf752a4f2
+- src-07ba3e0f52cc
+notes:
+- Separate product/harness; does not change underlying model identity.
+limitations:
+- Privacy/data-use details were not fully verified in this baseline.
+- Exact public or account-specific quotas were not established.

@@ -1,0 +1,48 @@
+schema_version: '1.0'
+id: google-cloud
+verified_at: '2026-10-06'
+name: Google Cloud
+roles:
+- cloud-platform
+- inference-provider
+api_compatibility: []
+access_methods:
+- Vertex AI-era URL currently redirects to Gemini Enterprise Agent Platform documentation; distinguish from
+  consumer Gemini and AI Studio.
+geographic_availability:
+- '{"status": "partial", "summary": "Regional/global endpoint details and partner-model terms must be checked
+  per deployment."}'
+- not_exhaustively_verified
+rate_limits:
+- '{"status": "partial", "summary": "Quotas and guaranteed capacity depend on deployment; not verified here."}'
+caching_batching: []
+privacy_data_use:
+- '{"status": "public_verified", "summary": "Managed models not used for training/fine-tuning without permission.
+  ZDR requires feature-specific settings/exemptions; Search grounding retains limited derived-query data up
+  to 3 days, Maps grounding 30 days."}'
+reliability: []
+model_ids:
+- claude-fable-5-1
+- claude-opus-5-5
+- claude-sonnet-5-5
+- claude-haiku-4-5
+price_ids:
+- price-providers-cloud-model-inference-google-cloud-fee290a05c24
+access_ids:
+- access-proprietary-access-15-google-cloud
+- access-proprietary-access-17-google-cloud
+- access-proprietary-access-19-google-cloud
+- access-proprietary-access-21-google-cloud
+evidence_ids:
+- src-89852246e77a
+- src-ad9aa6f1b8ed
+- src-4d070c5c8c67
+- src-752375ff0c97
+- src-e1910c5126bc
+notes:
+- Cloud-hosted partner models have separate entitlements and billing; broad host access does not imply all
+  models available.
+- Availability cited from model cards; regional deployment and enterprise price not checked.
+limitations:
+- Privacy/data-use details were not fully verified in this baseline.
+- Exact public or account-specific quotas were not established.

@@ -1,0 +1,187 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "price-record.schema.json",
+  "title": "price-record",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "verified_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "model_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "provider_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "product": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "billing_method": {
+      "enum": [
+        "subscription",
+        "metered-api",
+        "prepaid-credits",
+        "free",
+        "self-hosted",
+        "mixed",
+        "unknown"
+      ]
+    },
+    "status": {
+      "enum": [
+        "current",
+        "historical",
+        "unknown"
+      ]
+    },
+    "region": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tier": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "effective_from": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "effective_to": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "metric": {
+            "type": "string"
+          },
+          "amount": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "currency": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "unit": {
+            "type": "string"
+          },
+          "conditions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "metric",
+          "amount",
+          "currency",
+          "unit",
+          "conditions"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "included_usage": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reset_cadence": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "overage": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(src|obs)-[a-f0-9]{12}$"
+      },
+      "uniqueItems": true
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "model_label": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "verified_at",
+    "model_id",
+    "provider_id",
+    "product",
+    "billing_method",
+    "status",
+    "region",
+    "tier",
+    "effective_from",
+    "effective_to",
+    "rates",
+    "included_usage",
+    "reset_cadence",
+    "overage",
+    "conditions",
+    "evidence_ids",
+    "notes",
+    "model_label"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,154 @@
+schema_version: '1.0'
+id: qwen3-8-27b
+verified_at: '2026-10-06'
+identity:
+  name: Qwen3.8-27B
+  creator: Alibaba / Qwen
+  family: Qwen3.8
+  version: Qwen3.8-27B
+  release_date: '2026-08-14'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: Dense hybrid Gated DeltaNet / gated-attention decoder with vision encoder
+    status: documented
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-f2036f817d22
+    - src-ca26bca182f6
+    - src-fb8e00efa720
+    - src-94984ea907dd
+  parameters:
+    value:
+      total_billion: 27
+      active_billion: 27
+      scope: 27B language model; official HF tensor metadata rounds complete artifact to 28B.
+      exact_parameter_count: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value:
+      native_tokens: 262144
+      extended_tokens: 1000000
+      max_output_tokens: null
+      notes: Input plus generated output share capacity. Endpoint limits can differ.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      - video
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value:
+      supported: null
+      notes: Exact supported-language list not verified in this bounded pass.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  weights:
+    value:
+      downloadable: true
+      official_repository: https://huggingface.co/Qwen/Qwen3.8-27B
+      formats: null
+      gate: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weight_only_floor_decimal_gb:
+    value:
+      bf16: 54
+      int8: 27
+      ideal_4bit: 13.5
+    status: estimated
+    conditions:
+    - Batch 1, short/moderate context unless otherwise stated.
+    - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+      stated count, runtime, OS and temporary loading buffers.
+    - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
+      storage of inactive experts.
+    - Published maximum context is not a guarantee it fits on the suggested local machine.
+    evidence_ids: &id003
+    - src-fb8e00efa720
+  release_date_precision:
+    value: day
+    status: documented
+    conditions: []
+    evidence_ids: *id002
+licensing:
+  name: Apache-2.0
+  commercial_use: allowed
+  redistribution: 'true'
+  fine_tuning: null
+  hosted_service: 'true'
+  restrictions:
+  - Retain copyright/license notices; comply with the license.
+  - A license summary, not legal advice. Open weights does not by itself establish a fully open-source AI system.
+  evidence_ids:
+  - src-f2036f817d22
+local_inference:
+  availability: available
+  hardware_notes:
+  - 'Planning estimate: 24–32GB GPU or 32–48GB unified memory with 4-bit weights, modest context; BF16 usually
+    needs 64–80GB class memory.'
+  - 27B is the language-model declaration; HF serialized model is approximately 28B including additional components.
+  conditions:
+  - Batch 1, short/moderate context unless otherwise stated.
+  - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+    stated count, runtime, OS and temporary loading buffers.
+  - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
+    of inactive experts.
+  - Published maximum context is not a guarantee it fits on the suggested local machine.
+  evidence_ids: *id003
+capabilities:
+- task: local-multimodal-coding
+  judgment: A credible compact candidate for iterative code editing and image-grounded workflows.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-ca26bca182f6
+  - src-94984ea907dd
+  - src-fb8e00efa720
+  contradictory_evidence_ids:
+  - src-fb8e00efa720
+  conditions:
+  - Use supported thinking/template settings; compare medium and xhigh by whole-task cost.
+  known_failure_modes:
+  - Dependent tool-call ordering failures and runtime grammar issues were reported in one local setup.
+  evidence_notes: []
+- task: long-context-reasoning
+  judgment: Treat million-token mode as an extension to validate, rather than a proven local operating point.
+  confidence: low
+  supporting_evidence_ids:
+  - src-ca26bca182f6
+  contradictory_evidence_ids:
+  - src-94984ea907dd
+  conditions:
+  - Native 262,144; extension requires appropriate runtime configuration and memory.
+  known_failure_modes:
+  - Long reasoning traces, context pressure, retrieval misses.
+  evidence_notes: []
+performance_characteristics: []
+access_ids:
+- access-open-qwen3-8-27b-weights
+price_ids: []
+evidence_ids: *id002
+notes: []
+limitations:
+- No model inference or benchmark was run in this research pass.

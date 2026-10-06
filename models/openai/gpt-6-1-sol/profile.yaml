@@ -1,0 +1,152 @@
+schema_version: '1.0'
+id: gpt-6-1-sol
+verified_at: '2026-10-06'
+identity:
+  name: GPT-6.1 Sol
+  creator: OpenAI
+  family: GPT-6
+  version: null
+  release_date: '2026-09-29'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: null
+    status: unknown
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-5906a70e58c6
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-fafcf655e0d8
+    - src-f2dca02215ef
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value: 1050000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: 128000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value: Multilingual; exact inventory not specified
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  knowledge_cutoff:
+    value: '2026-04-30'
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weights:
+    value: closed
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  reasoning_efforts:
+    value:
+    - low
+    - medium
+    - high
+    - xhigh
+    - max
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  tool_calling:
+    value: Responses API; Sol/Astra Chat Completions does not support tools. Luna Chat Completions function
+      calling requires none effort.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  restrictions:
+    value:
+    - none/minimal reasoning unsupported.
+    - Chat Completions has no tool calling; use Responses.
+    - Fast mode unavailable with EU data residency.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+licensing:
+  name: null
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id002
+local_inference:
+  availability: unavailable
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id002
+capabilities:
+- task: coding-and-document-reasoning-at-constrained-spend
+  judgment: Useful first comparison against Astra for routine complex work.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-fafcf655e0d8
+  contradictory_evidence_ids: []
+  conditions:
+  - Same named max effort; harness and token usage differ across models.
+  known_failure_modes:
+  - Lower SciCode and AA-LCR results than GPT-6 Sol in the cited max-effort comparison.
+  evidence_notes:
+  - 'supporting evidence: AA max: Terminal-Bench4.0 rises44% to56% versus GPT-6 Sol; GDP.pdf25% to31%.'
+  - 'contradictory evidence: SciCode declines58% to54%; AA-LCR84% to83%. Newer is not better on every task.'
+  - 'Observation obs-e5d2a15ea501: Useful first comparison against Astra for routine complex work.'
+  - 'Potential risk (not a measured failure): Long-context misses and task-specific coding regressions.'
+- task: factual-answers-and-tool-backed-research
+  judgment: Improved but requires checking sources and tool failures.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-f2dca02215ef
+  contradictory_evidence_ids: []
+  conditions:
+  - Use current retrieval for changing facts.
+  known_failure_modes:
+  - Vendor selected error-inducing prompts still produce factual errors; this is not typical-use prevalence.
+  evidence_notes:
+  - 'supporting evidence: OpenAI difficult-prompt factual error rate:7.7% versus11.4% for GPT-6 Sol at low
+    effort.'
+  - 'contradictory evidence: This is a selected error-inducing set, not ordinary-use prevalence.'
+  - 'Observation obs-c5c416a3125b: Improved but requires checking sources and tool failures.'
+  - 'Potential risk (not a measured failure): Undisclosed search failure remains possible; fabricated certainty.'
+performance_characteristics: []
+access_ids:
+- access-proprietary-access-1-1
+- access-proprietary-access-3-1
+- access-proprietary-access-4-1
+- access-proprietary-access-4-ide-1
+- access-proprietary-access-5-0
+price_ids:
+- price-proprietary-gpt-6-1-sol-openai-d3ef0d0fec3c
+- price-proprietary-gpt-6-1-sol-openai-6c4abf3b3f1c
+- price-proprietary-gpt-6-1-sol-openai-4aad5754e49e
+- price-proprietary-gpt-6-1-sol-openai-9819b7b75d61
+- price-proprietary-gpt-6-1-sol-openai-7809f5982047
+evidence_ids: *id002
+notes: []
+limitations:
+- Undisclosed architecture and parameter count
+- Exact supported-language inventory and per-language quality not verified

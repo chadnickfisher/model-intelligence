@@ -1,0 +1,31 @@
+schema_version: '1.0'
+id: google-antigravity
+verified_at: '2026-10-06'
+name: Google Antigravity
+roles:
+- client
+api_compatibility: []
+access_methods: []
+geographic_availability: []
+rate_limits: []
+caching_batching: []
+privacy_data_use: []
+reliability: []
+model_ids:
+- gemini-3-8-flash
+- gemini-3-1-pro-preview
+price_ids: []
+access_ids:
+- access-proprietary-33-google-antigravity
+- access-proprietary-34-google-antigravity
+evidence_ids:
+- src-c4c7ba8fda18
+- src-116c1a7f3be0
+- src-564638136e50
+- src-6b2bf752a4f2
+- src-07ba3e0f52cc
+notes:
+- Distribution verified for selected models; exact account quotas unobserved.
+limitations:
+- Privacy/data-use details were not fully verified in this baseline.
+- Exact public or account-specific quotas were not established.

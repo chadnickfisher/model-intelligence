@@ -1,0 +1,51 @@
+schema_version: '1.0'
+id: google-deepmind
+verified_at: '2026-10-06'
+name: Google DeepMind
+roles:
+- creator
+api_compatibility: []
+access_methods: []
+geographic_availability: []
+rate_limits: []
+caching_batching: []
+privacy_data_use: []
+reliability: []
+model_ids: []
+price_ids: []
+access_ids: []
+evidence_ids:
+- src-c4c7ba8fda18
+- src-10e39629c3d3
+- src-116c1a7f3be0
+- src-a24fd97eb3d0
+- src-07ba3e0f52cc
+- src-564638136e50
+- src-4c04e11c8a1b
+- src-56f9dadd63b1
+- src-f7fe39222f11
+- src-0b12f0c84b90
+- src-5d0514efd100
+- src-21fe0d4c63a7
+- src-d35a477c49c4
+- src-b88c4950bbf3
+- src-6fab7b07e4f3
+- src-521c059d5d6a
+- src-ef50a5784fac
+- src-adf03d8b2d85
+- src-85f93e060d0d
+- src-25e1e7c2305d
+- src-04c98c33c883
+- src-744e7330e24d
+- src-fc87bfb1eae7
+- src-10b631f7c7a9
+- src-ded81031faae
+- src-0835beeb534f
+- src-3b883af04aa0
+- src-6381db252dee
+- src-d493892e40d2
+- src-5535da041415
+notes: []
+limitations:
+- Privacy/data-use details were not fully verified in this baseline.
+- Exact public or account-specific quotas were not established.

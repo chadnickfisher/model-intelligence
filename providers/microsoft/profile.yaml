@@ -1,0 +1,30 @@
+schema_version: '1.0'
+id: microsoft
+verified_at: '2026-10-06'
+name: Microsoft
+roles:
+- creator
+api_compatibility: []
+access_methods: []
+geographic_availability: []
+rate_limits: []
+caching_batching: []
+privacy_data_use: []
+reliability: []
+model_ids: []
+price_ids: []
+access_ids: []
+evidence_ids:
+- src-3c2db7ec3521
+- src-147450d232b3
+- src-9f758a03b0f2
+- src-6c5f51c9393d
+- src-29885c43e537
+- src-2a442166513f
+- src-99b21e349ac9
+- src-91f835e2db28
+- src-96b521869e71
+notes: []
+limitations:
+- Privacy/data-use details were not fully verified in this baseline.
+- Exact public or account-specific quotas were not established.

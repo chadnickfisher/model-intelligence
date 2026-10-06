@@ -1,0 +1,11 @@
+schema_version: '1.0'
+generated: true
+as_of: '2026-10-06'
+counts:
+  models: 53
+  providers_and_access_products: 39
+  capability_judgments: 64
+  price_records: 122
+  access_routes: 140
+  public_sources: 225
+  evidence_observations: 53

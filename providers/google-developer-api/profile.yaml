@@ -1,0 +1,80 @@
+schema_version: '1.0'
+id: google-developer-api
+verified_at: '2026-10-06'
+name: Google Gemini Developer API
+roles:
+- inference-provider
+api_compatibility: []
+access_methods: []
+geographic_availability: []
+rate_limits: []
+caching_batching: []
+privacy_data_use: []
+reliability: []
+model_ids:
+- gemini-3-8-flash
+- gemini-3-1-pro-preview
+- gemini-3-5-flash-lite
+- gemini-3-pro-image
+- veo-3-1-generate-preview
+- lyria-3-5
+- gemini-3-8-live
+- gemma-4-31b-it
+- gemini-omni-1-1-flash
+- gemini4argon
+price_ids:
+- price-proprietary-gemini-3-8-flash-google-developer-api-15580e4c6b8b
+- price-proprietary-gemini-3-8-flash-google-developer-api-f9f44895e35b
+- price-proprietary-gemini-3-8-flash-google-developer-api-1bad64d36c74
+- price-proprietary-gemini-3-1-pro-preview-google-developer-api-0363b1d20999
+- price-proprietary-gemini-3-1-pro-preview-google-developer-api-6666cc8d3986
+- price-proprietary-gemini-3-5-flash-lite-google-developer-api-5e632c3ddf86
+- price-proprietary-gemini-3-pro-image-google-developer-api-3c200e46dbab
+- price-proprietary-gemini-3-pro-image-google-developer-api-d065c9f3a69a
+- price-proprietary-veo-3-1-generate-preview-google-developer-api-a0950450f4b5
+- price-proprietary-veo-3-1-generate-preview-google-developer-api-fdc0b33bf21d
+- price-proprietary-veo-3-1-generate-preview-google-developer-api-281d4f4cc193
+- price-proprietary-lyria-3-5-google-developer-api-158952f245f5
+- price-proprietary-gemini-3-8-live-google-developer-api-a963ebdabef6
+- price-proprietary-gemini-omni-1-1-flash-google-developer-api-ea0b882ade35
+- price-proprietary-gemma-4-31b-it-google-developer-api-e292329c37fa
+- price-proprietary-gemini4argon-google-developer-api-29291504e924
+- price-proprietary-gemini4argon-google-developer-api-efc10b9f8cc2
+access_ids:
+- access-proprietary-33
+- access-proprietary-34
+- access-proprietary-35
+- access-proprietary-36
+- access-proprietary-37
+- access-proprietary-38
+- access-proprietary-39
+- access-proprietary-40
+- access-proprietary-41
+- access-proprietary-42
+evidence_ids:
+- src-b88c4950bbf3
+- src-6381db252dee
+- src-c4c7ba8fda18
+- src-116c1a7f3be0
+- src-564638136e50
+- src-6b2bf752a4f2
+- src-07ba3e0f52cc
+- src-56f9dadd63b1
+- src-f7fe39222f11
+- src-0472a026e3db
+- src-21fe0d4c63a7
+- src-521c059d5d6a
+- src-ef50a5784fac
+- src-adf03d8b2d85
+- src-04c98c33c883
+- src-744e7330e24d
+- src-a24fd97eb3d0
+- src-ded81031faae
+- src-2f3ae40d3bb7
+- src-3b883af04aa0
+- src-919b66e84fc3
+notes:
+- 'pricing_source: g_price'
+limitations:
+- Privacy/data-use details were not fully verified in this baseline.
+- Exact public or account-specific quotas were not established.

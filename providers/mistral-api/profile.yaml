@@ -1,0 +1,42 @@
+schema_version: '1.0'
+id: mistral-api
+verified_at: '2026-10-06'
+name: Mistral La Plateforme
+roles:
+- inference-provider
+api_compatibility: []
+access_methods: []
+geographic_availability: []
+rate_limits: []
+caching_batching: []
+privacy_data_use: []
+reliability: []
+model_ids:
+- mistral-small-4
+- mistral-medium-3-5
+- mistral-large-3
+- ministral-3-8b
+- glm-5-3
+price_ids:
+- price-open-mistral-large-3-mistral-api-9f59b7cfe481
+- price-open-mistral-medium-3-5-mistral-api-ccb3cbd04b1a
+- price-open-mistral-small-4-mistral-api-2c982a02c545
+- price-open-ministral-3-8b-mistral-api-e3e015fcc82e
+- price-open-glm-5-3-mistral-api-2ee05cd2e1e9
+access_ids:
+- access-open-mistral-small-4-mistral-api
+- access-open-mistral-medium-3-5-mistral-api
+- access-open-mistral-large-3-mistral-api
+- access-open-ministral-3-8b-mistral-api
+- access-open-glm-5-3-mistral-api
+evidence_ids:
+- src-02abf04db026
+- src-b17514a392bd
+- src-b0218078301d
+- src-ece7a0a55f7b
+notes:
+- 'creator: Mistral AI'
+- 'url: https://docs.mistral.ai/models/'
+limitations:
+- Privacy/data-use details were not fully verified in this baseline.
+- Exact public or account-specific quotas were not established.

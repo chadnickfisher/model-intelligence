@@ -1,0 +1,180 @@
+schema_version: '1.0'
+id: claude-fable-5-1
+verified_at: '2026-10-06'
+identity:
+  name: Claude Fable 5.1
+  creator: Anthropic
+  family: Claude 5
+  version: null
+  release_date: '2026-09-01'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: null
+    status: unknown
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-ad9aa6f1b8ed
+    - src-f3655eaf1407
+    - src-bc2410652a3c
+    - src-e7232d52f37f
+    - src-f10e40cc0139
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value: 1000000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: 128000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value: Multilingual; exact inventory not specified
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  knowledge_cutoff:
+    value: 2026-06
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weights:
+    value: closed
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  thinking:
+    value: adaptive always on
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  default_api_effort:
+    value: high
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  api_id:
+    value: claude-fable-5-1
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  training_cutoff:
+    value: 2026-06
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  reasoning_efforts:
+    value:
+    - low
+    - medium
+    - high
+    - xhigh
+    - max
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  earliest_retirement_date:
+    value: '2027-09-01'
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  restrictions:
+    value:
+    - Always-on adaptive thinking.
+    - Forced tool use rejected; preserved-thinking compatibility constraints apply.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  retirement_note:
+    value: Earliest allowed retirement is not an announced shutdown.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+licensing:
+  name: null
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id002
+local_inference:
+  availability: unavailable
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id002
+capabilities:
+- task: long-horizon-reasoning-and-coding
+  judgment: Escalation candidate with strong evidence but expensive effort-sensitive operation.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-bc2410652a3c
+  contradictory_evidence_ids: []
+  conditions:
+  - Evaluated service includes safety fallback to other Claude models.
+  known_failure_modes:
+  - Cited GDP.pdf all-pass result is26%; failed cases are not categorized in the retrieved comparison.
+  evidence_notes:
+  - 'supporting evidence: AA max/default fallback: Terminal-Bench4.0 52%, HLE59%, AA-LCR85%; all improve over
+    Fable5 except some nearly flat tasks.'
+  - 'contradictory evidence: GDP.pdf only26%; these results do not make Fable universally preferable to newer
+    Opus/Sonnet.'
+  - 'Observation obs-8614ee721f1d: Escalation candidate with strong evidence but expensive effort-sensitive
+    operation.'
+  - 'Potential risk (not a measured failure): Fallback changes model provenance; errors persist on document
+    reasoning.'
+- task: cache-heavy-agents
+  judgment: Cache price cut can help context-heavy workflows, but task cost is workload-dependent.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-e7232d52f37f
+  - src-f10e40cc0139
+  contradictory_evidence_ids: []
+  conditions:
+  - Vendor default-effort August traffic and AA max benchmark are different workloads, not directly contradictory
+    arithmetic.
+  known_failure_modes:
+  - AA reports higher benchmark task cost despite lower cached-token rates.
+  evidence_notes:
+  - 'Conservative baseline confidence: broader convergence has not been independently audited.'
+  - 'supporting evidence: Vendor reports25% typical and up to45% highly agentic savings versus Fable5.'
+  - 'contradictory evidence: AA launch measurement reports20% higher cost/task despite cheaper cache reads.'
+  - 'Observation obs-c5fa019c8d8a: Cache price cut can help context-heavy workflows, but task cost is workload-dependent.'
+  - 'Potential risk (not a measured failure): Longer reasoning can erase cache savings.'
+performance_characteristics: []
+access_ids:
+- access-proprietary-access-14
+- access-proprietary-access-15-aws-bedrock
+- access-proprietary-access-15-google-cloud
+- access-proprietary-access-15-azure-foundry
+- access-proprietary-access-22-0
+- access-proprietary-access-22-ide-0
+- access-proprietary-access-25
+price_ids:
+- price-proprietary-claude-fable-5-1-anthropic-1c9e85bc3ee3
+- price-proprietary-claude-fable-5-1-anthropic-d31f844e1fa5
+evidence_ids: *id002
+notes: []
+limitations:
+- Undisclosed architecture and parameter count
+- Exact supported-language inventory and per-language quality not verified

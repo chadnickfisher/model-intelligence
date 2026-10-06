@@ -1,0 +1,2278 @@
+schema_version: '1.0'
+records:
+- id: src-00eaf917ab11
+  url: https://developers.openai.com/api/docs/pricing
+  title: OpenAI API pricing
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Standard, Batch, Flex, Fast and Ultrafast prices
+  - modality-specific media token rates
+  limitations: []
+- id: src-027b0340f566
+  url: https://console.groq.com/docs/models
+  title: Groq supported models
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - GPT-OSS hosted prices
+  - Developer quotas
+  - provider context/output caps
+  limitations: []
+- id: src-02abf04db026
+  url: https://docs.mistral.ai/models/
+  title: null
+  publisher: null
+  source_type: unknown
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-04173aa90698
+  url: https://huggingface.co/zai-org/GLM-5.3-Flash/blob/main/LICENSE
+  title: GLM5.3 Flash MIT license
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-0472a026e3db
+  url: https://gemini.google/subscriptions/
+  title: Google AI subscriptions (United States)
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - US consumer plans
+  - consumer app versus API access
+  limitations: []
+- id: src-04c98c33c883
+  url: https://ai.google.dev/gemini-api/docs/models/gemini-3.8-live
+  title: Gemini 3.8 Live API model documentation
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Gemini 3.8 Live identity/status/endpoint/limits/modalities/capabilities
+  limitations: []
+- id: src-06645d3950f1
+  url: https://huggingface.co/MiniMaxAI/MiniMax-M3
+  title: MiniMax M3 model card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-066ced7db59a
+  url: https://help.openai.com/en/articles/6950777-what-is-chatgpt-free-plan
+  title: What is ChatGPT Plus?
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Plus USD20 monthly
+  - API billed separately
+  - variable limits
+  limitations: []
+- id: src-06e7619eb6a4
+  url: https://openai.com/index/introducing-gpt-oss/
+  title: Introducing gpt-oss
+  publisher: null
+  source_type: primary
+  published_at: '2025-08-05'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Architecture and parameter counts
+  - Apache2
+  - self-hosting
+  - mostly English training
+  - no first-party API at release
+  limitations: []
+- id: src-07ba3e0f52cc
+  url: https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview
+  title: Gemini 3.1 Pro Preview API model documentation
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Gemini 3.1 Pro Preview identity/status/endpoint/limits/modalities/capabilities
+  limitations: []
+- id: src-07e3af888801
+  url: https://huggingface.co/docs/inference-endpoints/guides/access
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-0835beeb534f
+  url: https://huggingface.co/google/gemma-4-31B-it/raw/main/config.json
+  title: Gemma 4 31B IT config.json
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - 31B text max_position_embeddings 262144; dense architecture
+  limitations: []
+- id: src-0ab9540155b9
+  url: https://artificialanalysis.ai/models/qwen3-8-flash-next
+  title: Qwen3.8 Flash-Next independently profiled
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
+    with methodology, model mode, harness and date.
+- id: src-0ad851468a32
+  url: https://artificialanalysis.ai/models/qwen3-8-max
+  title: Qwen3.8 Max 0902 hosted profile
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Profile is the 0902 hosted variant; do not transfer its scores or prices to the August downloadable checkpoint
+    without equivalence evidence.
+- id: src-0af45d93e83c
+  url: https://huggingface.co/Qwen/Qwen3.8-Flash-Next/blob/main/LICENSE
+  title: Qwen Community License 1.0
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - MaaS excludes mere request relaying; AI Work Assistant excludes single-purpose, other-domain assistants,
+    and an assistant feature in a product whose main purpose is not AI coding/office productivity.
+- id: src-0b12f0c84b90
+  url: https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-1-Flash-Lite-Model-Card.pdf
+  title: Gemini 3.1 Flash-Lite model card
+  publisher: null
+  source_type: primary
+  published_at: 2026-05
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Gemini 3.5 Flash-Lite architecture lineage to Gemini 3 Pro
+  limitations: []
+- id: src-0dc6c2d41a2c
+  url: https://developers.openai.com/api/docs/models/gpt-oss-20b
+  title: gpt-oss-20b model specifications
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Model identity
+  - context/output/modalities/cutoff
+  - model-specific pricing and restrictions
+  limitations: []
+- id: src-0dd3bed5c7dd
+  url: https://www.anthropic.com/claude-opus-5-5
+  title: Introducing Claude Opus 5.5
+  publisher: null
+  source_type: primary
+  published_at: '2026-09-22'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Long-horizon coding and knowledge work
+  - safety limitations and controls
+  limitations: []
+- id: src-0e5ba6524c75
+  url: https://developers.openai.com/api/docs/models
+  title: OpenAI current model catalog
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Current flagship and specialized catalog
+  - multilingual support; no exact language list
+  limitations: []
+- id: src-10b631f7c7a9
+  url: https://ai.google.dev/gemma/docs/releases
+  title: Gemma releases
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Gemma 4 March 31 family release; June 3 12B release
+  limitations: []
+- id: src-10e39629c3d3
+  url: https://ai.google.dev/gemini-api/docs/rate-limits
+  title: Gemini API rate limits
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - project-scoped account-dependent quotas
+  - preview restrictions
+  limitations: []
+- id: src-116c1a7f3be0
+  url: https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash
+  title: Gemini 3.8 Flash API model documentation
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Gemini 3.8 Flash identity/status/endpoint/limits/modalities/capabilities
+  limitations: []
+- id: src-121b461632ab
+  url: https://developers.openai.com/api/docs/guides/image-generation
+  title: Image generation guide
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Image generation integration reference
+  limitations: []
+- id: src-13da216438ac
+  url: https://opencode.ai/docs/providers/
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-147450d232b3
+  url: https://huggingface.co/microsoft/Phi-4-mini-instruct
+  title: Phi-4 Mini / Multimodal model card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-1a9fcf8d6701
+  url: https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst
+  title: gpt-image-2.5-sunburst model specifications
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Model identity
+  - context/output/modalities/cutoff
+  - model-specific pricing and restrictions
+  limitations: []
+- id: src-1b711f47aa6a
+  url: https://developers.openai.com/api/docs/models/gpt-oss-120b
+  title: gpt-oss-120b model specifications
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Model identity
+  - context/output/modalities/cutoff
+  - model-specific pricing and restrictions
+  limitations: []
+- id: src-1cea80c18ff6
+  url: https://artificialanalysis.ai/models/mistral-small-4
+  title: Mistral Small4 reasoning independently profiled
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
+    with methodology, model mode, harness and date.
+- id: src-1dac5785145f
+  url: https://docs.cohere.com/docs/north-small-translate-1.0
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-1f59cd499805
+  url: https://artificialanalysis.ai/models/devstral-small-2
+  title: Devstral Small2 independently profiled
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
+    with methodology, model mode, harness and date.
+- id: src-2034e17f9f4e
+  url: https://artificialanalysis.ai/models/deepseek-v4-1-flash
+  title: DeepSeek V4.1 Flash max independently profiled
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
+    with methodology, model mode, harness and date.
+- id: src-21fe0d4c63a7
+  url: https://ai.google.dev/gemini-api/docs/models/gemini-3-pro-image
+  title: Nano Banana Pro API model documentation
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Nano Banana Pro identity/status/endpoint/limits/modalities/capabilities
+  limitations: []
+- id: src-23f19f916bbb
+  url: https://huggingface.co/mistralai/Mistral-Medium-3.5-128B/blob/main/LICENSE
+  title: Mistral Medium3.5 Modified MIT
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-24c3404d8b6f
+  url: https://docs.fireworks.ai/serverless/pricing
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-259c8fd88c0f
+  url: https://openai.com/index/introducing-chatgpt-images-2-5/
+  title: Introducing ChatGPT Images 2.5
+  publisher: null
+  source_type: primary
+  published_at: '2026-09-08'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Sunburst versus Flare roles
+  - ChatGPT/Work/Codex access
+  limitations: []
+- id: src-25e1e7c2305d
+  url: https://ai.google.dev/gemini-api/docs/live-api
+  title: Live API overview
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Live API multilingual support and streaming capabilities
+  limitations: []
+- id: src-26ed078844ac
+  url: https://artificialanalysis.ai/models/glm-5-3
+  title: GLM5.3 max independently profiled
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
+    with methodology, model mode, harness and date.
+- id: src-280758cc57a6
+  url: https://api-docs.deepseek.com/quick_start/pricing/
+  title: DeepSeek live pricing and alias mapping
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-285d61f371cf
+  url: https://developers.openai.com/api/reference/resources/images/methods/generate
+  title: Create image API reference
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Image output resolution constraints
+  limitations: []
+- id: src-296afef18214
+  url: https://openrouter.ai/blog/announcements/1-million-free-byok-requests-per-month/
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-29885c43e537
+  url: https://huggingface.co/microsoft/Phi-4-multimodal-instruct
+  title: Phi-4 Multimodal official card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-29ae95a372cc
+  url: https://www.cerebras.ai/pricing
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-2a442166513f
+  url: https://huggingface.co/microsoft/Phi-4-multimodal-instruct/raw/main/config.json
+  title: Phi-4 Multimodal config
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-2ba4c5b6b2c8
+  url: https://ai.google.dev/gemini-api/docs/omni
+  title: Omni video guide
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Omni regional restrictions, editing tradeoffs
+  limitations: []
+- id: src-2bc2cf30ffd5
+  url: https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B
+  title: Qwen3.8-2.4T-A95B model card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-2bf74f8ecb84
+  url: https://deepseek.com/en/news/v4-preview/
+  title: DeepSeek V4 architecture introduction
+  publisher: null
+  source_type: primary
+  published_at: '2026-04-24'
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-2e19eb496679
+  url: https://www.together.ai/pricing
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-2f3ae40d3bb7
+  url: https://ai.google.dev/gemma/docs/core
+  title: Gemma 4 overview
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - current open-weight family and distribution
+  limitations: []
+- id: src-2f9ece653a0f
+  url: https://aws.amazon.com/bedrock/pricing/
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-3057cae1019b
+  url: https://artificialanalysis.ai/models/gemma-4-31b
+  title: Artificial Analysis gemma-4-31b
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - current measured throughput and configuration; no universal score adopted
+  limitations: []
+- id: src-35b3dc84644e
+  url: https://opencode.ai/docs/go/
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-3930e8dede76
+  url: https://help.openai.com/en/articles/6825453-chatgpt-release-notes
+  title: ChatGPT release notes
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Sep29 Sol rollout
+  - Ultrafast is a service tier
+  limitations: []
+- id: src-399a034698f6
+  url: https://artificialanalysis.ai/models/comparisons/grok-4-7-vs-grok-4-6
+  title: null
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-3a3f99333e64
+  url: https://artificialanalysis.ai/models/gemini-3-1-pro-preview
+  title: Artificial Analysis gemini-3-1-pro-preview
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - current measured throughput and configuration; no universal score adopted
+  limitations: []
+- id: src-3a6a4293053c
+  url: https://artificialanalysis.ai/models/gemini-3-8-flash
+  title: Artificial Analysis gemini-3-8-flash
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - current measured throughput and configuration; no universal score adopted
+  limitations: []
+- id: src-3b2d0dcdbe22
+  url: https://azure.microsoft.com/en-us/products/phi
+  title: null
+  publisher: null
+  source_type: unknown
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-3b883af04aa0
+  url: https://ai.google.dev/gemini-api/docs/models/gemini-omni-flash
+  title: Gemini Omni Flash API model documentation
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Gemini Omni Flash identity/status/endpoint/limits/modalities/capabilities
+  limitations: []
+- id: src-3c2db7ec3521
+  url: https://opensource.org/license/mit
+  title: MIT License
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Model-specific adoption is verified from official cards or license files.
+- id: src-40c9ce9b4812
+  url: https://platform.minimax.io/docs/pricing/overview
+  title: MiniMax API pricing
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-418bc9a9adc1
+  url: https://artificialanalysis.ai/models/minimax-m3
+  title: MiniMax M3 independently profiled
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
+    with methodology, model mode, harness and date.
+- id: src-4424584ee706
+  url: https://huggingface.co/zai-org/GLM-5.3
+  title: GLM-5.3 model card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-45a86641ba67
+  url: https://inference-docs.cerebras.ai/models/overview
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-45d607317981
+  url: https://openrouter.ai/business
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-4950ff35950b
+  url: https://artificialanalysis.ai/articles/claude-opus-5-5
+  title: Claude Opus 5.5 independent analysis
+  publisher: null
+  source_type: independent-evaluation
+  published_at: '2026-09-22'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Terminal-Bench/SciCode/HLE measurements
+  limitations: []
+- id: src-49e8d0577a5e
+  url: https://developers.openai.com/api/docs/changelog
+  title: OpenAI API changelog
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Release dates
+  - GPT-Live API general availability
+  - GPT-6 tool-calling endpoint restrictions
+  limitations: []
+- id: src-4b5fc50d9047
+  url: https://docs.cohere.com/docs/command-a-plus
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-4c04e11c8a1b
+  url: https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf
+  title: Gemini 3 Pro base model card
+  publisher: null
+  source_type: primary
+  published_at: 2026-05
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - sparse MoE transformer architecture of base Gemini 3 Pro
+  - family lineage
+  limitations: []
+- id: src-4d070c5c8c67
+  url: https://platform.claude.com/docs/en/models/opus-5-5/overview
+  title: Claude opus-5-5 specifications
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Release/status
+  - specifications
+  - token pricing
+  - platform availability
+  - migration restrictions
+  limitations: []
+- id: src-4d947df5f3d7
+  url: https://artificialanalysis.ai/articles/claude-sonnet-5-5/
+  title: Claude Sonnet 5.5 independent analysis
+  publisher: null
+  source_type: independent-evaluation
+  published_at: '2026-09-28'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Terminal and knowledge work results
+  - high output token consumption
+  - fallback and prerelease caveats
+  limitations: []
+- id: src-4e3ca8a95d36
+  url: https://www.anthropic.com/claude-sonnet-5-5
+  title: Introducing Claude Sonnet 5.5
+  publisher: null
+  source_type: primary
+  published_at: '2026-09-28'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Task-conditioned capability
+  - FrontierCode max versus xhigh failure
+  - vendor cost claims
+  limitations: []
+- id: src-4fb7165743ee
+  url: https://huggingface.co/openai/gpt-oss-20b
+  title: OpenAI gpt-oss-20b model card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Open weights
+  - parameter count
+  - Harmony formatting
+  - hardware guidance
+  limitations: []
+- id: src-50846cd1ff36
+  url: https://platform.claude.com/docs/en/about-claude/pricing
+  title: Claude API pricing
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - USD API billing
+  - caching and batch pricing reference
+  limitations: []
+- id: src-521c059d5d6a
+  url: https://ai.google.dev/gemini-api/docs/models/veo-3.1-generate-preview
+  title: Veo 3.1 API model documentation
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Veo 3.1 identity/status/endpoint/limits/modalities/capabilities
+  limitations: []
+- id: src-525e7f64ea10
+  url: https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/LICENSE
+  title: null
+  publisher: null
+  source_type: unknown
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-52c893cadee0
+  url: https://www.vals.ai/models/google_gemini-3.5-flash-lite
+  title: Vals AI gemini-3.5-flash-lite
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - task-specific benchmark results; high reasoning, Google API, temperature 1, 65,536 output-token cap
+  limitations: []
+- id: src-5302786105ea
+  url: https://huggingface.co/zai-org/GLM-5.3-Flash
+  title: GLM-5.3-Flash model card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-5535da041415
+  url: https://www.vals.ai/models/google_gemini-4-argon
+  title: Vals AI Gemini 4 Argon
+  publisher: null
+  source_type: independent-evaluation
+  published_at: '2026-09-30'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - task-specific high-reasoning results; 262144 evaluation output cap; regular-price evaluation costing
+  limitations: []
+- id: src-564638136e50
+  url: https://deepmind.google/models/model-cards/gemini-3-1-pro/
+  title: Gemini 3.1 Pro model card
+  publisher: null
+  source_type: primary
+  published_at: '2026-02-19'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Gemini 3.1 Pro architecture/dependency/distribution/limitations; provider evaluations
+  limitations: []
+- id: src-56f9dadd63b1
+  url: https://deepmind.google/models/model-cards/gemini-3-5-flash-lite/
+  title: Gemini 3.5 Flash-Lite model card
+  publisher: null
+  source_type: primary
+  published_at: '2026-07-21'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Gemini 3.5 Flash-Lite architecture/dependency/distribution/limitations; provider evaluations
+  limitations: []
+- id: src-5744ead18753
+  url: https://github.com/meta-llama/llama-models/blob/main/models/llama4/LICENSE
+  title: Llama 4 Community License
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-574a462eb9ac
+  url: https://huggingface.co/docs/inference-providers/en/security
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-57a05c45a0b1
+  url: https://docs.bfl.ai/flux_3/flux3_overview
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-58333316475e
+  url: https://claude.com/pricing
+  title: Claude plan pricing
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Subscription prices
+  - model access
+  - shared rolling/weekly usage pools
+  - no fixed message allowance
+  limitations: []
+- id: src-58bf94c165a9
+  url: https://raw.githubusercontent.com/OpenMDW/OpenMDW/refs/heads/main/1.1/LICENSE.OpenMDW-1.1
+  title: OpenMDW1.1
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-58f6a44d1374
+  url: https://elevenlabs.io/docs/overview/models
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-5906a70e58c6
+  url: https://developers.openai.com/api/docs/models/gpt-6.1-sol
+  title: gpt-6.1-sol model specifications
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Model identity
+  - context/output/modalities/cutoff
+  - model-specific pricing and restrictions
+  limitations: []
+- id: src-5c348986a151
+  url: https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash
+  title: DeepSeek-V4.1-Flash model card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-5c510b458547
+  url: https://artificialanalysis.ai/models/comparisons/hy3-vs-claude-4-5-haiku
+  title: Haiku non-reasoning benchmark comparison
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Haiku task-specific knowledge and long-context results; other composite is estimated
+  limitations: []
+- id: src-5d0514efd100
+  url: https://ai.google.dev/gemini-api/docs/image-generation
+  title: Gemini image generation guide
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Nano Banana Pro image limits, language recommendations, watermark
+  limitations: []
+- id: src-5d65f998595a
+  url: https://artificialanalysis.ai/models/kimi-k3
+  title: Kimi K3 max independently profiled
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
+    with methodology, model mode, harness and date.
+- id: src-5f9e9fc2ef33
+  url: https://ai.google.dev/gemini-api/docs/video
+  title: Video generation overview
+  publisher: null
+  source_type: primary
+  published_at: '2026-06-30'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Google currently recommends Omni as default, Veo for particular controls
+  limitations: []
+- id: src-608eb672ebb7
+  url: https://openai.com/index/introducing-gpt-6-sol-and-luna/
+  title: Introducing GPT-6 Sol and Luna
+  publisher: null
+  source_type: primary
+  published_at: '2026-09-22'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Luna release/access
+  - vendor DeepSWE results
+  - effort/task-dependent price-performance
+  limitations: []
+- id: src-6296981297f7
+  url: https://console.groq.com/docs/your-data
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-6381db252dee
+  url: https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/
+  title: Introducing Gemini 4 Argon
+  publisher: null
+  source_type: primary
+  published_at: '2026-09-30'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - limited Fairwind early access
+  - announced 1M output budget
+  - planned introductory and regular prices
+  - provider benchmark claims
+  limitations: []
+- id: src-64b25f3342fd
+  url: https://huggingface.co/docs/inference-providers/main/pricing
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-65471a2c7ad5
+  url: https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct
+  title: Llama 4 Maverick official card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-65ad2b8b0099
+  url: https://huggingface.co/docs/inference-endpoints/pricing
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-661daa73f91c
+  url: https://www.qwencloud.com/
+  title: null
+  publisher: null
+  source_type: unknown
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-667e800254a1
+  url: https://docs.z.ai/guides/overview/pricing
+  title: Z.ai pricing
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-67b4ce9b4e6a
+  url: https://developers.openai.com/api/docs/models/gpt-6-astra
+  title: gpt-6-astra model specifications
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Model identity
+  - context/output/modalities/cutoff
+  - model-specific pricing and restrictions
+  limitations: []
+- id: src-6a511cb9176a
+  url: https://huggingface.co/MiniMaxAI/MiniMax-M3/blob/main/LICENSE
+  title: MiniMax M3 Community License
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-6a5ec3406d1f
+  url: https://inference-docs.cerebras.ai/support/rate-limits
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-6b2bf752a4f2
+  url: https://geminicli.com/docs/get-started/gemini-3/
+  title: Gemini 3 on Gemini CLI
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - conditional Gemini 3.1 Pro CLI access
+  limitations: []
+- id: src-6c5f51c9393d
+  url: https://huggingface.co/microsoft/Phi-4-mini-instruct/raw/main/config.json
+  title: Phi-4 Mini config
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-6d85ece3b497
+  url: https://artificialanalysis.ai/models/comparisons/gpt-oss-120b-vs-gpt-oss-20b
+  title: gpt-oss 120B versus20B high-effort comparison
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Modern agentic benchmark limitations
+  - model-size capability reversals
+  limitations: []
+- id: src-6fab7b07e4f3
+  url: https://ai.google.dev/gemini-api/docs/veo
+  title: Veo generation guide
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Veo duration, resolution, controls, languages, failure modes
+  limitations: []
+- id: src-6fea481a4699
+  url: https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-7153ea4f2bae
+  url: https://docs.x.ai/console/billing
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-7199021bd5d2
+  url: https://artificialanalysis.ai/models/gemini-3-5-flash-lite
+  title: Artificial Analysis gemini-3-5-flash-lite
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - current measured throughput and configuration; no universal score adopted
+  limitations: []
+- id: src-71b3fd269cc8
+  url: https://huggingface.co/Qwen/Qwen3-Coder-Next
+  title: Qwen3-Coder-Next model card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-73e03ec6d5cd
+  url: https://cohere.com/pricing
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-744e7330e24d
+  url: https://deepmind.google/models/model-cards/gemini-3-8-audio/
+  title: Gemini 3.8 Audio model card
+  publisher: null
+  source_type: primary
+  published_at: '2026-09-15'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Gemini 3.8 Audio architecture/dependency/distribution/limitations; provider evaluations
+  limitations: []
+- id: src-7494e8051b41
+  url: https://github.com/meta-llama/llama-models/blob/main/models/llama4/USE_POLICY.md
+  title: Llama 4 acceptable-use policy
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-74dc5faee60d
+  url: https://huggingface.co/moonshotai/Kimi-K3/blob/main/LICENSE
+  title: Kimi K3 License
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-752375ff0c97
+  url: https://platform.claude.com/docs/en/models/sonnet-5-5/overview
+  title: Claude sonnet-5-5 specifications
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Release/status
+  - specifications
+  - token pricing
+  - platform availability
+  - migration restrictions
+  limitations: []
+- id: src-752c7dd560da
+  url: https://docs.bfl.ai/quick_start/pricing
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-772c9fd668f0
+  url: https://opencode.ai/docs/zen/
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-775e6c7ffc21
+  url: https://console.groq.com/docs/model/openai/gpt-oss-120b
+  title: Groq GPT-OSS 120B offering
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Provider cached-input pricing
+  - TruePoint quantization
+  - model card parameter rounding differs
+  limitations: []
+- id: src-79280a1db5da
+  url: https://huggingface.co/mistralai/Mistral-Medium-3.5-128B
+  title: Mistral Medium 3.5 128B model card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-7a37d210463f
+  url: https://artificialanalysis.ai/models/qwen3-5-9b
+  title: Qwen3.5 9B independently profiled
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
+    with methodology, model mode, harness and date.
+- id: src-7a7fa65f65f1
+  url: https://elevenlabs.io/docs/eleven-api/resources/zero-retention-mode
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-7a929ac1ccc5
+  url: https://artificialanalysis.ai/articles/cohere-launches-open-weights-model-command-a-more-than-a-year-since-the-command-a-release
+  title: null
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-7c5fa24308a9
+  url: https://artificialanalysis.ai/models/qwen3-coder-next
+  title: Qwen3-Coder-Next independently profiled
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
+    with methodology, model mode, harness and date.
+- id: src-7e6c3dd9add1
+  url: https://docs.z.ai/guides/llm/glm-5.3
+  title: GLM5.3 endpoint guide
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Rendered spec table not fully extracted; max-output remains unknown here.
+- id: src-80c359151519
+  url: https://docs.z.ai/guides/vlm/glm-5.3-flash
+  title: GLM5.3 Flash endpoint guide
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Hosted adapters may accept video/file inputs; core weight card establishes image/text.
+- id: src-82c97913adaf
+  url: https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-84d1a7712d6a
+  url: https://developers.openai.com/api/docs/models/gpt-live-1
+  title: gpt-live-1 model specifications
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Model identity
+  - context/output/modalities/cutoff
+  - model-specific pricing and restrictions
+  limitations: []
+- id: src-85f93e060d0d
+  url: https://ai.google.dev/gemini-api/docs/music-generation
+  title: Generate music with Lyria 3.5
+  publisher: null
+  source_type: primary
+  published_at: '2026-10-01'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - song duration, stereo MP3, single-turn limitation, safety and determinism
+  limitations: []
+- id: src-87b22fdbd4b5
+  url: https://platform.kimi.ai/docs/pricing/chat
+  title: Kimi pricing explanation
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Monetary rates not extractable; do not import AA snapshot as official current quote.
+- id: src-89852246e77a
+  url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/zero-data-retention
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-8cb15ff6ddd4
+  url: https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct
+  title: Llama 4 Scout / Maverick model card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-8eb2666e2af7
+  url: https://ai.google.dev/gemini-api/docs/deprecations
+  title: Gemini API deprecations
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Imagen 4 shutdown 2026-08-17
+  limitations: []
+- id: src-905d5d7a5fb4
+  url: https://docs.x.ai/developers/models
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-911ea99b80ae
+  url: https://developers.openai.com/api/docs/models/gpt-realtime-2.1-mini
+  title: null
+  publisher: null
+  source_type: unknown
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-919b66e84fc3
+  url: https://ai.google.dev/gemini-api/docs/models
+  title: Gemini API model catalog
+  publisher: null
+  source_type: primary
+  published_at: '2026-10-01'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - model identities and availability
+  - legacy Imagen shutdown
+  - version naming
+  limitations: []
+- id: src-91f835e2db28
+  url: https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B
+  title: Phi-4-Reasoning-Vision-15B model card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-94984ea907dd
+  url: https://artificialanalysis.ai/models/qwen3-8-27b
+  title: Qwen3.8 27B xhigh independently profiled
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
+    with methodology, model mode, harness and date.
+- id: src-94efd6cf8bb7
+  url: https://artificialanalysis.ai/models/comparisons/llama-4-scout-vs-llama-3-1-instruct-405b
+  title: Scout independent comparison
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - A 10M window does not establish reliable 10M retrieval or reasoning. Pricing/access columns are not used
+    as licensing authority.
+- id: src-96b521869e71
+  url: https://www.microsoft.com/en-us/research/blog/phi-4-reasoning-vision-and-the-lessons-of-training-a-multimodal-reasoning-model/
+  title: Microsoft selective vision-reasoning evaluation
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Vendor-run comparison; benchmark modes, output budgets and prompts vary.
+- id: src-97b73e99f5cd
+  url: https://artificialanalysis.ai/models/comparisons/gpt-6-astra-high-vs-gpt-6-astra
+  title: Astra high versus max benchmark comparison
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Task-specific results by reasoning effort
+  - cost per task
+  limitations: []
+- id: src-983be7893acf
+  url: https://docs.x.ai/developers/advanced-api-usage/regions
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-9950acce03ed
+  url: https://artificialanalysis.ai/articles/nvidia-nemotron-3-ultra-released
+  title: Nemotron3 Ultra release evaluation
+  publisher: null
+  source_type: independent-evaluation
+  published_at: '2026-06-04'
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - NVIDIA partnered in prerelease testing; historic index scores must not be mixed with current v4.3.2.
+- id: src-99b21e349ac9
+  url: https://artificialanalysis.ai/models/phi-4-multimodal
+  title: Phi4 Multimodal catalog
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - No usable matched independent performance evidence extracted in this bounded pass.
+- id: src-9d4f7ae81230
+  url: https://cohere.com/blog/embed-5
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-9f4d7bf2c58f
+  url: https://artificialanalysis.ai/evaluations/terminalbench-4-0
+  title: Terminal-Bench4.0 evaluator methodology
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - 66 tasks, mini-swe-agent, pass@1 averaged over3 repeats
+  - all tests must pass
+  limitations: []
+- id: src-9f758a03b0f2
+  url: https://artificialanalysis.ai/models/phi-4-mini
+  title: Phi4 Mini catalog audit
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Page says February 2024 release, conflicting with official February 2025; official card takes precedence.
+    Zero API price fields are not accepted as evidence of free service.
+- id: src-a03104fba002
+  url: https://docs.cohere.com/docs/rate-limits
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-a24fd97eb3d0
+  url: https://ai.google.dev/gemini-api/docs/changelog
+  title: Gemini API release notes
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - release dates
+  - Nano Banana Pro preview to GA
+  - Omni GA
+  - Gemma hosted API launch
+  limitations: []
+- id: src-a6a9e3d9e616
+  url: https://artificialanalysis.ai/models/ministral-3-8b
+  title: Ministral3 8B independently profiled
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
+    with methodology, model mode, harness and date.
+- id: src-a8bf24d0415e
+  url: https://docs.together.ai/docs/privacy-and-security
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-a90c98ed76ae
+  url: https://www.ai21.com/deployment/
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-ac0d5cc662f8
+  url: https://docs.x.ai/developers/faq/security
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-ad9aa6f1b8ed
+  url: https://platform.claude.com/docs/en/models/fable-5-1/overview
+  title: Claude fable-5-1 specifications
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Release/status
+  - specifications
+  - token pricing
+  - platform availability
+  - migration restrictions
+  limitations: []
+- id: src-adf03d8b2d85
+  url: https://deepmind.google/models/model-cards/lyria-3-5/
+  title: Lyria 3.5 model card
+  publisher: null
+  source_type: primary
+  published_at: '2026-07-29'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Lyria 3.5 architecture/dependency/distribution/limitations; provider evaluations
+  limitations: []
+- id: src-b0218078301d
+  url: https://docs.mistral.ai/models/mistral-small-4-0-26-03
+  title: mistral-small-2603 model page
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - No inference call made.
+- id: src-b02205ef3bed
+  url: https://artificialanalysis.ai/models/glm-5-3-flash
+  title: GLM5.3 Flash independently profiled
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
+    with methodology, model mode, harness and date.
+- id: src-b17514a392bd
+  url: https://docs.mistral.ai/inference/pricing
+  title: Mistral standard pricing
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Default standard tier shown; region/batch/priority options may differ.
+- id: src-b88c4950bbf3
+  url: https://ai.google.dev/gemini-api/docs/pricing
+  title: Gemini Developer API pricing
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - prices[*] where provider is google_developer_api
+  - free versus paid data-use distinction
+  limitations: []
+- id: src-b954960ad3a2
+  url: https://chatgpt.com/pricing/
+  title: ChatGPT pricing
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Consumer plan feature access; rendered numeric prices unavailable
+  limitations: []
+- id: src-b96a45c2e083
+  url: https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813
+  title: DeepSeek-V4-Pro-0813 model card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-bab0e18b2802
+  url: https://developers.openai.com/api/docs/deprecations
+  title: OpenAI API deprecations
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Sora 2 shutdown
+  - TTS and transcription upcoming shutdowns
+  limitations: []
+- id: src-bc2410652a3c
+  url: https://artificialanalysis.ai/models/comparisons/claude-fable-5-1-vs-claude-fable-5
+  title: Fable5.1 versus Fable5 benchmark comparison
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Fable task metrics with default fallback
+  limitations: []
+- id: src-bc8a6f826b6d
+  url: https://artificialanalysis.ai/models/comparisons/claude-sonnet-5-5-medium-vs-claude-sonnet-5
+  title: Sonnet5.5 medium versus Sonnet5 max
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Effort-dependent reversals on long-context/science
+  limitations: []
+- id: src-bcc14c31357b
+  url: https://elevenlabs.io/pricing/api
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-be6c06ae0b52
+  url: https://www.vals.ai/models/google_gemini-3.8-flash
+  title: Vals AI gemini-3.8-flash
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - task-specific benchmark results; high reasoning, Google API, temperature 1, 65,536 output-token cap
+  limitations: []
+- id: src-c03a6de01b20
+  url: https://console.groq.com/docs/rate-limits
+  title: Groq rate limits
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Free-tier public quotas
+  limitations: []
+- id: src-c0efa35c6619
+  url: https://docs.fireworks.ai/guides/security_compliance/data_security
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-c4c7ba8fda18
+  url: https://deepmind.google/models/model-cards/gemini-3-8-flash/
+  title: Gemini 3.8 Flash model card
+  publisher: null
+  source_type: primary
+  published_at: '2026-09-02'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Gemini 3.8 Flash architecture/dependency/distribution/limitations; provider evaluations
+  limitations: []
+- id: src-c5a0afc263f8
+  url: https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16
+  title: Nemotron3 Ultra 550B-A55B model card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-c84f0489248c
+  url: https://openai.com/index/introducing-gpt-live/
+  title: Introducing GPT-Live
+  publisher: null
+  source_type: primary
+  published_at: '2026-07-08'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Full-duplex design
+  - ChatGPT Voice launch
+  - separate backend reasoning
+  limitations: []
+- id: src-ca26bca182f6
+  url: https://huggingface.co/Qwen/Qwen3.8-27B
+  title: Qwen3.8-27B model card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-cd9a80108d1d
+  url: https://www.ai21.com/blog/introducing-jamba2/
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-cee7a5257e77
+  url: https://developers.openai.com/api/docs/models/gpt-image-2.5-flare
+  title: gpt-image-2.5-flare model specifications
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Model identity
+  - context/output/modalities/cutoff
+  - model-specific pricing and restrictions
+  limitations: []
+- id: src-cf152e0fafb2
+  url: https://openrouter.ai/support
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-cf6a8843c8fd
+  url: https://developers.openai.com/api/docs/models/gpt-realtime-2.1
+  title: gpt-realtime-2.1 model specifications
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Model identity
+  - context/output/modalities/cutoff
+  - model-specific pricing and restrictions
+  limitations: []
+- id: src-d0fcb427591e
+  url: https://openrouter.ai/providers
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-d14fea025626
+  url: https://docs.x.ai/developers/models/grok-4.7
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-d1e7ac1dfe19
+  url: https://recipes.vllm.ai/zai-org/GLM-5.3
+  title: vLLM GLM5.3 recipe
+  publisher: null
+  source_type: unknown
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Counts differ from HF serialized 753B / AA rounded 40B; components and rounding not fully reconciled.
+- id: src-d2d60d683099
+  url: https://artificialanalysis.ai/models/mistral-medium-3-5
+  title: Mistral Medium3.5 independently profiled
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
+    with methodology, model mode, harness and date.
+- id: src-d35a477c49c4
+  url: https://deepmind.google/models/model-cards/gemini-3-pro-image/
+  title: Gemini 3 Pro Image model card
+  publisher: null
+  source_type: primary
+  published_at: 2025-11
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Gemini 3 Pro Image architecture/dependency/distribution/limitations; provider evaluations
+  limitations: []
+- id: src-d493892e40d2
+  url: https://artificialanalysis.ai/models/gemini-4-argon
+  title: Artificial Analysis Gemini 4 Argon High
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - observed output-token use, unknown throughput; independent 1M context description
+  limitations: []
+- id: src-d5314b91bf6a
+  url: https://api-docs.deepseek.com/news/news260910/
+  title: DeepSeek V4.1 Flash release
+  publisher: null
+  source_type: primary
+  published_at: '2026-09-10'
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-d56e7b0c3e01
+  url: https://www.vals.ai/models/google_gemini-3.1-pro-preview
+  title: Vals AI gemini-3.1-pro-preview
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - task-specific benchmark results; high reasoning, Google API, temperature 1, 65,536 output-token cap
+  limitations: []
+- id: src-d887c30d6e12
+  url: https://arxiv.org/abs/2512.15110
+  title: Is Nano Banana Pro a Low-Level Vision All-Rounder?
+  publisher: null
+  source_type: independent-evaluation
+  published_at: '2025-12-19'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - 14 low-level tasks/40 datasets; subjective quality versus pixel fidelity
+  limitations: []
+- id: src-d8ef6a5d74b9
+  url: https://artificialanalysis.ai/models/comparisons/gemma-4-26b-a4b-vs-gemma-4-31b-non-reasoning
+  title: Gemma 4 configuration comparison
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - configuration-specific AA-LCR and AA-Omniscience; aggregate scores marked estimated
+  limitations: []
+- id: src-dc01b961c57f
+  url: https://www.ai21.com/jamba/
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-dc71eaf3c8b8
+  url: https://huggingface.co/zai-org/GLM-5.3/blob/main/LICENSE
+  title: GLM5.3 License
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-dcba779ffa90
+  url: https://huggingface.co/mistralai/Mistral-Small-4-119B-2603
+  title: Mistral Small 4 119B model card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-ded81031faae
+  url: https://huggingface.co/google/gemma-4-31B-it
+  title: Google Gemma 4 31B instruction-tuned weights
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - downloadable weights
+  - deployment identity
+  - 31B architecture and limitations
+  limitations: []
+- id: src-dedf56167aa3
+  url: https://docs.x.ai/developers/pricing
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-e06185c2c32b
+  url: https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers
+  title: About ChatGPT Pro tiers
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - USD100/200/500 plans
+  - Ultrafast eligibility
+  - temporary Pro200 grandfathering
+  limitations: []
+- id: src-e0a64484787e
+  url: https://huggingface.co/Qwen/Qwen3.5-9B
+  title: Qwen3.5-9B model card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-e1910c5126bc
+  url: https://platform.claude.com/docs/en/models/haiku-4-5/overview
+  title: Claude haiku-4-5 specifications
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Release/status
+  - specifications
+  - token pricing
+  - platform availability
+  - migration restrictions
+  limitations: []
+- id: src-e37726fea976
+  url: https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512
+  title: Ministral 3 8B Instruct model card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-e5d72ab8d32b
+  url: https://artificialanalysis.ai/models/mistral-large-3
+  title: Mistral Large3 independently profiled
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
+    with methodology, model mode, harness and date.
+- id: src-e7129e9021b6
+  url: https://huggingface.co/moonshotai/Kimi-K3
+  title: Kimi K3 model card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-e71e7d7dfbb1
+  url: https://openrouter.ai/pricing
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-e7232d52f37f
+  url: https://www.anthropic.com/claude-fable-and-mythos-5-1
+  title: Introducing Claude Fable 5.1 and Mythos 5.1
+  publisher: null
+  source_type: primary
+  published_at: '2026-09-01'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Same underlying model different safeguards
+  - trusted-access restrictions
+  - cache economics claim
+  limitations: []
+- id: src-e99bd76836c1
+  url: https://www.anthropic.com/news/claude-haiku-4-5
+  title: Introducing Claude Haiku 4.5
+  publisher: null
+  source_type: primary
+  published_at: '2025-10-15'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Vendor SWE-bench result with harness conditions
+  - app/Code access
+  - vendor-selected practitioner evidence
+  limitations: []
+- id: src-ea2ea7424a68
+  url: https://docs.x.ai/developers/rate-limits
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-ea74e2fffbc5
+  url: https://openai.com/index/gpt-6-astra/
+  title: 'GPT-6 Astra: A new generation of intelligence'
+  publisher: null
+  source_type: primary
+  published_at: '2026-09-03'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Vendor evaluations
+  - launch product/provider access
+  - safety monitoring interruptions
+  limitations: []
+- id: src-eae889ae29d3
+  url: https://huggingface.co/docs/hub/models-gated
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-eb79656c925c
+  url: https://huggingface.co/Qwen/Qwen3.8-Flash-Next
+  title: Qwen3.8-Flash-Next model card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-ece7a0a55f7b
+  url: https://docs.mistral.ai/models/mistral-medium-3-5-26-04
+  title: mistral-medium-3-5 model page
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - No inference call made.
+- id: src-eea6ff0c375c
+  url: https://console.groq.com/docs/tool-use/built-in-tools
+  title: Groq built-in tools
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Hosted search/code execution are service features
+  limitations: []
+- id: src-ef50a5784fac
+  url: https://ai.google.dev/gemini-api/docs/models/lyria-3.5
+  title: Lyria 3.5 API model documentation
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Lyria 3.5 identity/status/endpoint/limits/modalities/capabilities
+  limitations: []
+- id: src-f00960a11928
+  url: https://developers.openai.com/api/docs/models/gpt-6-luna
+  title: gpt-6-luna model specifications
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Model identity
+  - context/output/modalities/cutoff
+  - model-specific pricing and restrictions
+  limitations: []
+- id: src-f10e40cc0139
+  url: https://artificialanalysis.ai/zh/articles/claude-fable-5-1
+  title: Fable 5.1 launch measurement
+  publisher: null
+  source_type: independent-evaluation
+  published_at: '2026-09-01'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Cache discount versus benchmark task cost
+  - fallback composition
+  limitations: []
+- id: src-f1f9e55552d3
+  url: https://artificialanalysis.ai/models/grok-4-7-high
+  title: null
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-f2036f817d22
+  url: https://www.apache.org/licenses/LICENSE-2.0
+  title: Apache License 2.0
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - License text linked; model-specific adoption is verified from each official model card.
+- id: src-f23b0b274bf1
+  url: https://huggingface.co/google/gemma-4-12B-it
+  title: Google Gemma 4 12B instruction-tuned weights
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - 12B unified modality and architecture
+  limitations: []
+- id: src-f249e65005c1
+  url: https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512
+  title: Mistral Large 3 675B Instruct model card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-f2dca02215ef
+  url: https://openai.com/index/introducing-gpt-6-1-sol/
+  title: Introducing GPT-6.1 Sol
+  publisher: null
+  source_type: primary
+  published_at: '2026-09-29'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Work/Codex versus Chat access
+  - vendor DeepSWE and science evaluations
+  - factuality failure conditions
+  limitations: []
+- id: src-f3655eaf1407
+  url: https://platform.claude.com/docs/en/models/overview
+  title: Claude current model overview
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Current models
+  - multilingual and visual inputs
+  - provider IDs
+  limitations: []
+- id: src-f5a5dc8f8871
+  url: https://fireworks.ai/pricing
+  title: null
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-f6adda98b53a
+  url: https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813/blob/main/LICENSE
+  title: null
+  publisher: null
+  source_type: unknown
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-f7fe39222f11
+  url: https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite
+  title: Gemini 3.5 Flash-Lite API model documentation
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Gemini 3.5 Flash-Lite identity/status/endpoint/limits/modalities/capabilities
+  limitations: []
+- id: src-f85326ed9ab1
+  url: https://huggingface.co/openai/gpt-oss-120b
+  title: OpenAI gpt-oss-120b model card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Open weights
+  - parameter count
+  - Harmony formatting
+  - hardware guidance
+  limitations: []
+- id: src-fafcf655e0d8
+  url: https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-vs-gpt-6-sol
+  title: GPT-6.1 Sol versus GPT-6 Sol, max effort
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Terminal-Bench/long-context/science task results
+  - non-monotonic gains
+  limitations: []
+- id: src-fb8e00efa720
+  url: https://www.reddit.com/r/Qwen_AI/comments/1wxshto/qwen3827b_vs_qwen38flashnext_as_agent_workers_on/
+  title: Single-R9700 Qwen3.8 comparison
+  publisher: null
+  source_type: practitioner
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations:
+  - Low-confidence, one-machine report, not independently reproduced; configuration changes are not recommended
+    automatically.
+- id: src-fbaa665d7533
+  url: https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B/blob/main/LICENSE
+  title: Qwen3.8-Max License
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-fc87bfb1eae7
+  url: https://ai.google.dev/gemma/docs/core/model_card_4
+  title: Gemma 4 model card
+  publisher: null
+  source_type: primary
+  published_at: '2026-07-30'
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - variant parameters, architecture, context, modalities, language scope, license, provider benchmarks
+  limitations: []
+- id: src-fd9a0c74ec31
+  url: https://huggingface.co/mistralai/Devstral-Small-2-24B-Instruct-2512
+  title: Devstral Small 2 24B model card
+  publisher: null
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-fe191bd136cd
+  url: https://arxiv.org/abs/2603.00729
+  title: Qwen3-Coder-Next technical report
+  publisher: null
+  source_type: primary
+  published_at: 2026-03
+  accessed_at: '2026-10-06'
+  claim_scope: []
+  limitations: []
+- id: src-ffef271f5600
+  url: https://artificialanalysis.ai/models/comparisons/gpt-6-luna-vs-gpt-5-3-codex
+  title: GPT-6 Luna max benchmark comparison
+  publisher: null
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-06'
+  claim_scope:
+  - Luna task-specific measured results
+  limitations: []

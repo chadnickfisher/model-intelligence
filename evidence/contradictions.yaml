@@ -1,0 +1,113 @@
+schema_version: '1.0'
+records:
+- id: conflict-3fb010c2c999
+  summary: '{"finding": "Vendor Sonnet savings and AA max-effort cost increase refer to different workloads;
+    preserve both.", "sources": ["launch-sonnet", "aa-sonnet"], "topic": "Task cost versus token price"}'
+  evidence_ids:
+  - src-4e3ca8a95d36
+  - src-4d947df5f3d7
+  verified_at: '2026-10-06'
+- id: conflict-e1b6221ee8d6
+  summary: '{"finding": "Fable/Mythos share a base model with distinct safeguards; AA default-fallback scores
+    include other models.", "sources": ["launch-fable", "aa-fable-cost"], "topic": "Model versus served system"}'
+  evidence_ids:
+  - src-e7232d52f37f
+  - src-f10e40cc0139
+  verified_at: '2026-10-06'
+- id: conflict-6b1dcc513858
+  summary: '{"finding": "Creator specifies117B total; Groq markets120B. Store117B and the120B product name
+    separately.", "sources": ["oss-launch", "groq-120"], "topic": "Parameter rounding"}'
+  evidence_ids:
+  - src-06e7619eb6a4
+  - src-775e6c7ffc21
+  verified_at: '2026-10-06'
+- id: conflict-e835ed89e0da
+  summary: '{"finding": "Creator catalog131072 max output versus Groq65536. Model capacity and provider cap
+    are separate records.", "sources": ["spec-gpt-oss-120b", "spec-gpt-oss-20b", "groq-models"], "topic": "gpt-oss
+    output limit"}'
+  evidence_ids:
+  - src-1b711f47aa6a
+  - src-0dc6c2d41a2c
+  - src-027b0340f566
+  verified_at: '2026-10-06'
+- id: conflict-70a1337c09b0
+  summary: '{"finding": "Pricing-page extraction contains older Free-plan labels while newer release explicitly
+    grants Luna desktop access. Treat actual picker/account eligibility as authoritative; do not infer a universal
+    entitlement.", "sources": ["chatgpt-pricing", "launch-luna", "chatgpt-release"], "topic": "OpenAI consumer
+    catalog freshness"}'
+  evidence_ids:
+  - src-b954960ad3a2
+  - src-608eb672ebb7
+  - src-3930e8dede76
+  verified_at: '2026-10-06'
+- id: conflict-3083a7caa067
+  summary: '{"finding": "Vendor harness scores and AA mini-swe-agent pass@1 results differ. Never merge across
+    harness/effort/version into a universal score.", "sources": ["aa-terminal-method", "aa-astra", "launch-astra",
+    "launch-sonnet"], "topic": "Benchmark versions"}'
+  evidence_ids:
+  - src-9f4d7bf2c58f
+  - src-97b73e99f5cd
+  - src-ea74e2fffbc5
+  - src-4e3ca8a95d36
+  verified_at: '2026-10-06'
+- id: conflict-aa782ff5b16a
+  summary: '{"finding": "Current model index/detail and security/regional docs list Grok4.7, but aggregate
+    price-page extraction still headlines Grok4.6. Grok4.7 detail confirms $2/$0.50/$6 and higher-context pricing,
+    while Zen supplies a full long-context table.", "id": "conflict.xai-latest-price", "resolution": "Keep
+    creator model-detail base prices verified; do not blindly copy aggregate 4.6 long-context rows to 4.7.
+    Record Zen''s separate route tariff.", "severity": "medium", "source_urls": ["https://docs.x.ai/developers/models/grok-4.7",
+    "https://docs.x.ai/developers/pricing", "https://opencode.ai/docs/zen/"], "topic": "Grok4.7 versus aggregate
+    pricing"}'
+  evidence_ids:
+  - src-d14fea025626
+  - src-dedf56167aa3
+  - src-772c9fd668f0
+  verified_at: '2026-10-06'
+- id: conflict-049df6b321a3
+  summary: '{"finding": "OpenRouter provider directory reports Together zero retention; Together direct docs
+    default prompt/output storage on for product improvement.", "id": "conflict.together-retention-route",
+    "resolution": "Not necessarily inconsistent contracts. Bind privacy statements to direct API versus OpenRouter
+    route and actual settings.", "severity": "high", "source_urls": ["https://openrouter.ai/providers", "https://docs.together.ai/docs/privacy-and-security"],
+    "topic": "Together retention depends on access path"}'
+  evidence_ids:
+  - src-d0fcb427591e
+  - src-a8bf24d0415e
+  verified_at: '2026-10-06'
+- id: conflict-6faefe7f8113
+  summary: '{"finding": "October2025 announcement explicitly updated Aug10 2026 says old 1M free requests policy
+    has changed. Current plan allowance uses equivalent inference dollars.", "id": "conflict.openrouter-byok-old",
+    "resolution": "Current pricing page prevails; never present 1M requests as current entitlement.", "severity":
+    "high", "source_urls": ["https://openrouter.ai/blog/announcements/1-million-free-byok-requests-per-month/",
+    "https://openrouter.ai/pricing"], "topic": "Old BYOK request allowance superseded"}'
+  evidence_ids:
+  - src-296afef18214
+  - src-e71e7d7dfbb1
+  verified_at: '2026-10-06'
+- id: conflict-abb7ec3824bd
+  summary: '{"finding": "Current docs explicitly say no permanent renewing free tier; verified-payment trial
+    $5 expires30days.", "id": "conflict.cerebras-free", "resolution": "Treat historical free-tier material
+    as stale.", "severity": "high", "source_urls": ["https://inference-docs.cerebras.ai/support/rate-limits"],
+    "topic": "Permanent free inference no longer current"}'
+  evidence_ids:
+  - src-6a5ec3406d1f
+  verified_at: '2026-10-06'
+- id: conflict-d6edc93d791f
+  summary: '{"finding": "OpenCode is a client. Zen separately describes itself as an AI gateway. Go is a bounded
+    subscription accepted by coding clients.", "id": "conflict.opencode-taxonomy", "resolution": "Three distinct
+    records; never assign all OpenCode traffic Zen prices/privacy.", "severity": "high", "source_urls": ["https://opencode.ai/docs/providers/",
+    "https://opencode.ai/docs/zen/", "https://opencode.ai/docs/go/"], "topic": "Client versus gateway versus
+    subscription"}'
+  evidence_ids:
+  - src-13da216438ac
+  - src-772c9fd668f0
+  - src-35b3dc84644e
+  verified_at: '2026-10-06'
+- id: conflict-c7b6c5d014b7
+  summary: '{"finding": "Command A+ Apache2; North Small Translate CC-BY-NC4.0.", "id": "conflict.cohere-license",
+    "resolution": "No creator-level blanket commercial-use claim.", "severity": "high", "source_urls": ["https://docs.cohere.com/docs/command-a-plus",
+    "https://docs.cohere.com/docs/north-small-translate-1.0"], "topic": "Open weights licenses differ within
+    creator"}'
+  evidence_ids:
+  - src-4b5fc50d9047
+  - src-1dac5785145f
+  verified_at: '2026-10-06'

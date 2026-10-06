@@ -1,0 +1,3382 @@
+schema_version: '1.0'
+verified_at: '2026-10-06'
+records:
+- schema_version: '1.0'
+  id: access-proprietary-access-1-0
+  verified_at: '2026-10-06'
+  model_id: gpt-6-astra
+  provider_id: openai
+  model_label: gpt-6-astra
+  product: Responses / Chat Completions
+  methods:
+  - API
+  status: Available; endpoint feature differences apply
+  price_ids:
+  - price-proprietary-gpt-6-astra-openai-3d5b2153d0ca
+  - price-proprietary-gpt-6-astra-openai-83dbee0ec140
+  - price-proprietary-gpt-6-astra-openai-32a917ee1b7b
+  - price-proprietary-gpt-6-astra-openai-e68876e21c23
+  - price-proprietary-gpt-6-astra-openai-4a3725464c5e
+  - price-proprietary-gpt-6-astra-openai-749a19560f3b
+  restrictions:
+  - 'quota: Tier/account dependent; actual remaining quota unknown'
+  - 'subscription_includes_api: false'
+  evidence_ids:
+  - src-0e5ba6524c75
+  - src-49e8d0577a5e
+  notes:
+  - Tier/account dependent; actual remaining quota unknown
+  client_id: null
+  requires_account: null
+  subscription_includes_api: false
+  reset_cadence: null
+  conditions:
+  - Tier/account dependent; actual remaining quota unknown
+- schema_version: '1.0'
+  id: access-proprietary-access-1-1
+  verified_at: '2026-10-06'
+  model_id: gpt-6-1-sol
+  provider_id: openai
+  model_label: gpt-6.1-sol
+  product: Responses / Chat Completions
+  methods:
+  - API
+  status: Available; endpoint feature differences apply
+  price_ids:
+  - price-proprietary-gpt-6-1-sol-openai-d3ef0d0fec3c
+  - price-proprietary-gpt-6-1-sol-openai-6c4abf3b3f1c
+  - price-proprietary-gpt-6-1-sol-openai-4aad5754e49e
+  - price-proprietary-gpt-6-1-sol-openai-9819b7b75d61
+  - price-proprietary-gpt-6-1-sol-openai-7809f5982047
+  restrictions:
+  - 'quota: Tier/account dependent; actual remaining quota unknown'
+  - 'subscription_includes_api: false'
+  evidence_ids:
+  - src-0e5ba6524c75
+  - src-49e8d0577a5e
+  notes:
+  - Tier/account dependent; actual remaining quota unknown
+  client_id: null
+  requires_account: null
+  subscription_includes_api: false
+  reset_cadence: null
+  conditions:
+  - Tier/account dependent; actual remaining quota unknown
+- schema_version: '1.0'
+  id: access-proprietary-access-1-2
+  verified_at: '2026-10-06'
+  model_id: gpt-6-luna
+  provider_id: openai
+  model_label: gpt-6-luna
+  product: Responses / Chat Completions
+  methods:
+  - API
+  status: Available; endpoint feature differences apply
+  price_ids:
+  - price-proprietary-gpt-6-luna-openai-f641ecfe6181
+  - price-proprietary-gpt-6-luna-openai-55f5c3505fba
+  - price-proprietary-gpt-6-luna-openai-2a740cb6d4c7
+  - price-proprietary-gpt-6-luna-openai-634d24acb791
+  - price-proprietary-gpt-6-luna-openai-46f5117770dd
+  restrictions:
+  - 'quota: Tier/account dependent; actual remaining quota unknown'
+  - 'subscription_includes_api: false'
+  evidence_ids:
+  - src-0e5ba6524c75
+  - src-49e8d0577a5e
+  notes:
+  - Tier/account dependent; actual remaining quota unknown
+  client_id: null
+  requires_account: null
+  subscription_includes_api: false
+  reset_cadence: null
+  conditions:
+  - Tier/account dependent; actual remaining quota unknown
+- schema_version: '1.0'
+  id: access-proprietary-access-2
+  verified_at: '2026-10-06'
+  model_id: gpt-6-astra
+  provider_id: openai
+  model_label: gpt-6-astra
+  product: ChatGPT
+  methods:
+  - chat_subscription
+  status: Eligible Plus/Pro/Business/Enterprise access; workspace permissions and current picker govern
+  price_ids:
+  - price-proprietary-gpt-6-astra-openai-3d5b2153d0ca
+  - price-proprietary-gpt-6-astra-openai-83dbee0ec140
+  - price-proprietary-gpt-6-astra-openai-32a917ee1b7b
+  - price-proprietary-gpt-6-astra-openai-e68876e21c23
+  - price-proprietary-gpt-6-astra-openai-4a3725464c5e
+  - price-proprietary-gpt-6-astra-openai-749a19560f3b
+  restrictions:
+  - 'quota: Included allowance and model-specific availability vary; not an unlimited API entitlement'
+  evidence_ids:
+  - src-ea74e2fffbc5
+  - src-b954960ad3a2
+  notes:
+  - Included allowance and model-specific availability vary; not an unlimited API entitlement
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Included allowance and model-specific availability vary; not an unlimited API entitlement
+- schema_version: '1.0'
+  id: access-proprietary-access-3-0
+  verified_at: '2026-10-06'
+  model_id: gpt-6-astra
+  provider_id: openai
+  model_label: gpt-6-astra
+  product: ChatGPT Work
+  methods:
+  - agent_workspace
+  status: Paid-plan access; Luna also documented for Free/Go desktop
+  price_ids:
+  - price-proprietary-gpt-6-astra-openai-3d5b2153d0ca
+  - price-proprietary-gpt-6-astra-openai-83dbee0ec140
+  - price-proprietary-gpt-6-astra-openai-32a917ee1b7b
+  - price-proprietary-gpt-6-astra-openai-e68876e21c23
+  - price-proprietary-gpt-6-astra-openai-4a3725464c5e
+  - price-proprietary-gpt-6-astra-openai-749a19560f3b
+  restrictions:
+  - 'quota: Shared plan usage; actual allowance/reset account-specific'
+  evidence_ids:
+  - src-608eb672ebb7
+  - src-f2dca02215ef
+  - src-3930e8dede76
+  notes:
+  - Shared plan usage; actual allowance/reset account-specific
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Shared plan usage; actual allowance/reset account-specific
+- schema_version: '1.0'
+  id: access-proprietary-access-3-1
+  verified_at: '2026-10-06'
+  model_id: gpt-6-1-sol
+  provider_id: openai
+  model_label: gpt-6.1-sol
+  product: ChatGPT Work
+  methods:
+  - agent_workspace
+  status: Paid-plan access; Luna also documented for Free/Go desktop
+  price_ids:
+  - price-proprietary-gpt-6-1-sol-openai-d3ef0d0fec3c
+  - price-proprietary-gpt-6-1-sol-openai-6c4abf3b3f1c
+  - price-proprietary-gpt-6-1-sol-openai-4aad5754e49e
+  - price-proprietary-gpt-6-1-sol-openai-9819b7b75d61
+  - price-proprietary-gpt-6-1-sol-openai-7809f5982047
+  restrictions:
+  - 'quota: Shared plan usage; actual allowance/reset account-specific'
+  evidence_ids:
+  - src-608eb672ebb7
+  - src-f2dca02215ef
+  - src-3930e8dede76
+  notes:
+  - Shared plan usage; actual allowance/reset account-specific
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Shared plan usage; actual allowance/reset account-specific
+- schema_version: '1.0'
+  id: access-proprietary-access-3-2
+  verified_at: '2026-10-06'
+  model_id: gpt-6-luna
+  provider_id: openai
+  model_label: gpt-6-luna
+  product: ChatGPT Work
+  methods:
+  - agent_workspace
+  status: Paid-plan access; Luna also documented for Free/Go desktop
+  price_ids:
+  - price-proprietary-gpt-6-luna-openai-f641ecfe6181
+  - price-proprietary-gpt-6-luna-openai-55f5c3505fba
+  - price-proprietary-gpt-6-luna-openai-2a740cb6d4c7
+  - price-proprietary-gpt-6-luna-openai-634d24acb791
+  - price-proprietary-gpt-6-luna-openai-46f5117770dd
+  restrictions:
+  - 'quota: Shared plan usage; actual allowance/reset account-specific'
+  evidence_ids:
+  - src-608eb672ebb7
+  - src-f2dca02215ef
+  - src-3930e8dede76
+  notes:
+  - Shared plan usage; actual allowance/reset account-specific
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Shared plan usage; actual allowance/reset account-specific
+- schema_version: '1.0'
+  id: access-proprietary-access-4-0
+  verified_at: '2026-10-06'
+  model_id: gpt-6-astra
+  provider_id: openai
+  model_label: gpt-6-astra
+  product: Codex CLI
+  methods:
+  - CLI
+  status: Codex product access; paid plan or separately billed API authentication depends on setup
+  price_ids:
+  - price-proprietary-gpt-6-astra-openai-3d5b2153d0ca
+  - price-proprietary-gpt-6-astra-openai-83dbee0ec140
+  - price-proprietary-gpt-6-astra-openai-32a917ee1b7b
+  - price-proprietary-gpt-6-astra-openai-e68876e21c23
+  - price-proprietary-gpt-6-astra-openai-4a3725464c5e
+  - price-proprietary-gpt-6-astra-openai-749a19560f3b
+  restrictions:
+  - 'quota: Plan allowances are not model/API token limits'
+  evidence_ids:
+  - src-0e5ba6524c75
+  - src-608eb672ebb7
+  - src-f2dca02215ef
+  notes:
+  - Plan allowances are not model/API token limits
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Plan allowances are not model/API token limits
+- schema_version: '1.0'
+  id: access-proprietary-access-4-1
+  verified_at: '2026-10-06'
+  model_id: gpt-6-1-sol
+  provider_id: openai
+  model_label: gpt-6.1-sol
+  product: Codex CLI
+  methods:
+  - CLI
+  status: Codex product access; paid plan or separately billed API authentication depends on setup
+  price_ids:
+  - price-proprietary-gpt-6-1-sol-openai-d3ef0d0fec3c
+  - price-proprietary-gpt-6-1-sol-openai-6c4abf3b3f1c
+  - price-proprietary-gpt-6-1-sol-openai-4aad5754e49e
+  - price-proprietary-gpt-6-1-sol-openai-9819b7b75d61
+  - price-proprietary-gpt-6-1-sol-openai-7809f5982047
+  restrictions:
+  - 'quota: Plan allowances are not model/API token limits'
+  evidence_ids:
+  - src-0e5ba6524c75
+  - src-608eb672ebb7
+  - src-f2dca02215ef
+  notes:
+  - Plan allowances are not model/API token limits
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Plan allowances are not model/API token limits
+- schema_version: '1.0'
+  id: access-proprietary-access-4-2
+  verified_at: '2026-10-06'
+  model_id: gpt-6-luna
+  provider_id: openai
+  model_label: gpt-6-luna
+  product: Codex CLI
+  methods:
+  - CLI
+  status: Codex product access; paid plan or separately billed API authentication depends on setup
+  price_ids:
+  - price-proprietary-gpt-6-luna-openai-f641ecfe6181
+  - price-proprietary-gpt-6-luna-openai-55f5c3505fba
+  - price-proprietary-gpt-6-luna-openai-2a740cb6d4c7
+  - price-proprietary-gpt-6-luna-openai-634d24acb791
+  - price-proprietary-gpt-6-luna-openai-46f5117770dd
+  restrictions:
+  - 'quota: Plan allowances are not model/API token limits'
+  evidence_ids:
+  - src-0e5ba6524c75
+  - src-608eb672ebb7
+  - src-f2dca02215ef
+  notes:
+  - Plan allowances are not model/API token limits
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Plan allowances are not model/API token limits
+- schema_version: '1.0'
+  id: access-proprietary-access-4-ide-0
+  verified_at: '2026-10-06'
+  model_id: gpt-6-astra
+  provider_id: openai
+  model_label: gpt-6-astra
+  product: Codex IDE extension
+  methods:
+  - IDE
+  status: Codex IDE product documented; model access still depends on account and workspace settings
+  price_ids:
+  - price-proprietary-gpt-6-astra-openai-3d5b2153d0ca
+  - price-proprietary-gpt-6-astra-openai-83dbee0ec140
+  - price-proprietary-gpt-6-astra-openai-32a917ee1b7b
+  - price-proprietary-gpt-6-astra-openai-e68876e21c23
+  - price-proprietary-gpt-6-astra-openai-4a3725464c5e
+  - price-proprietary-gpt-6-astra-openai-749a19560f3b
+  restrictions:
+  - 'quota: Plan allowances are not model/API token limits'
+  evidence_ids:
+  - src-0e5ba6524c75
+  - src-608eb672ebb7
+  - src-f2dca02215ef
+  notes:
+  - Plan allowances are not model/API token limits
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Plan allowances are not model/API token limits
+- schema_version: '1.0'
+  id: access-proprietary-access-4-ide-1
+  verified_at: '2026-10-06'
+  model_id: gpt-6-1-sol
+  provider_id: openai
+  model_label: gpt-6.1-sol
+  product: Codex IDE extension
+  methods:
+  - IDE
+  status: Codex IDE product documented; model access still depends on account and workspace settings
+  price_ids:
+  - price-proprietary-gpt-6-1-sol-openai-d3ef0d0fec3c
+  - price-proprietary-gpt-6-1-sol-openai-6c4abf3b3f1c
+  - price-proprietary-gpt-6-1-sol-openai-4aad5754e49e
+  - price-proprietary-gpt-6-1-sol-openai-9819b7b75d61
+  - price-proprietary-gpt-6-1-sol-openai-7809f5982047
+  restrictions:
+  - 'quota: Plan allowances are not model/API token limits'
+  evidence_ids:
+  - src-0e5ba6524c75
+  - src-608eb672ebb7
+  - src-f2dca02215ef
+  notes:
+  - Plan allowances are not model/API token limits
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Plan allowances are not model/API token limits
+- schema_version: '1.0'
+  id: access-proprietary-access-4-ide-2
+  verified_at: '2026-10-06'
+  model_id: gpt-6-luna
+  provider_id: openai
+  model_label: gpt-6-luna
+  product: Codex IDE extension
+  methods:
+  - IDE
+  status: Codex IDE product documented; model access still depends on account and workspace settings
+  price_ids:
+  - price-proprietary-gpt-6-luna-openai-f641ecfe6181
+  - price-proprietary-gpt-6-luna-openai-55f5c3505fba
+  - price-proprietary-gpt-6-luna-openai-2a740cb6d4c7
+  - price-proprietary-gpt-6-luna-openai-634d24acb791
+  - price-proprietary-gpt-6-luna-openai-46f5117770dd
+  restrictions:
+  - 'quota: Plan allowances are not model/API token limits'
+  evidence_ids:
+  - src-0e5ba6524c75
+  - src-608eb672ebb7
+  - src-f2dca02215ef
+  notes:
+  - Plan allowances are not model/API token limits
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Plan allowances are not model/API token limits
+- schema_version: '1.0'
+  id: access-proprietary-access-5-0
+  verified_at: '2026-10-06'
+  model_id: gpt-6-1-sol
+  provider_id: openai
+  model_label: gpt-6.1-sol
+  product: ChatGPT Chat
+  methods:
+  - chat_subscription
+  status: Not yet available in Chat according to current launch/help documentation
+  price_ids:
+  - price-proprietary-gpt-6-1-sol-openai-d3ef0d0fec3c
+  - price-proprietary-gpt-6-1-sol-openai-6c4abf3b3f1c
+  - price-proprietary-gpt-6-1-sol-openai-4aad5754e49e
+  - price-proprietary-gpt-6-1-sol-openai-9819b7b75d61
+  - price-proprietary-gpt-6-1-sol-openai-7809f5982047
+  restrictions: []
+  evidence_ids:
+  - src-f2dca02215ef
+  - src-608eb672ebb7
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-5-1
+  verified_at: '2026-10-06'
+  model_id: gpt-6-luna
+  provider_id: openai
+  model_label: gpt-6-luna
+  product: ChatGPT Chat
+  methods:
+  - chat_subscription
+  status: Not yet available in Chat according to current launch/help documentation
+  price_ids:
+  - price-proprietary-gpt-6-luna-openai-f641ecfe6181
+  - price-proprietary-gpt-6-luna-openai-55f5c3505fba
+  - price-proprietary-gpt-6-luna-openai-2a740cb6d4c7
+  - price-proprietary-gpt-6-luna-openai-634d24acb791
+  - price-proprietary-gpt-6-luna-openai-46f5117770dd
+  restrictions: []
+  evidence_ids:
+  - src-f2dca02215ef
+  - src-608eb672ebb7
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-6-azure-foundry
+  verified_at: '2026-10-06'
+  model_id: gpt-6-astra
+  provider_id: azure-foundry
+  model_label: gpt-6-astra
+  product: Microsoft Foundry / Azure
+  methods:
+  - third_party_API
+  status: Official launch names these providers; region, contract and prices not independently verified
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-ea74e2fffbc5
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-6-aws-bedrock
+  verified_at: '2026-10-06'
+  model_id: gpt-6-astra
+  provider_id: aws-bedrock
+  model_label: gpt-6-astra
+  product: Amazon Bedrock
+  methods:
+  - third_party_API
+  status: Official launch names these providers; region, contract and prices not independently verified
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-ea74e2fffbc5
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-7
+  verified_at: '2026-10-06'
+  model_id: gpt-image-2-5-sunburst
+  provider_id: openai
+  model_label: gpt-image-2.5-sunburst
+  product: Images API / Responses image-generation tool
+  methods:
+  - API
+  status: Available
+  price_ids:
+  - price-proprietary-gpt-image-2-5-sunburst-openai-0f6ba21d2197
+  - price-proprietary-gpt-image-2-5-sunburst-openai-be4252d0ba6c
+  - price-proprietary-gpt-image-2-5-sunburst-openai-40fdb9e8e555
+  restrictions:
+  - 'quota: Usage tier/account-specific; no fixed image count inferred'
+  evidence_ids:
+  - src-1a9fcf8d6701
+  notes:
+  - Usage tier/account-specific; no fixed image count inferred
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Usage tier/account-specific; no fixed image count inferred
+- schema_version: '1.0'
+  id: access-proprietary-access-8
+  verified_at: '2026-10-06'
+  model_id: gpt-image-2-5-sunburst
+  provider_id: openai
+  model_label: gpt-image-2.5-sunburst
+  product: ChatGPT Images2.5 / Work / Codex
+  methods:
+  - chat_subscription
+  status: Images2.5 available across tiers; precise underlying API variant selection in each UI not established
+  price_ids:
+  - price-proprietary-gpt-image-2-5-sunburst-openai-0f6ba21d2197
+  - price-proprietary-gpt-image-2-5-sunburst-openai-be4252d0ba6c
+  - price-proprietary-gpt-image-2-5-sunburst-openai-40fdb9e8e555
+  restrictions: []
+  evidence_ids:
+  - src-259c8fd88c0f
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-9
+  verified_at: '2026-10-06'
+  model_id: gpt-image-2-5-flare
+  provider_id: openai
+  model_label: gpt-image-2.5-flare
+  product: Images API / Responses image-generation tool
+  methods:
+  - API
+  status: Available
+  price_ids:
+  - price-proprietary-gpt-image-2-5-flare-openai-f37e16009992
+  - price-proprietary-gpt-image-2-5-flare-openai-ac94b6b07830
+  - price-proprietary-gpt-image-2-5-flare-openai-f6731f24dc2e
+  restrictions:
+  - 'quota: Usage tier/account-specific; no fixed image count inferred'
+  evidence_ids:
+  - src-cee7a5257e77
+  notes:
+  - Usage tier/account-specific; no fixed image count inferred
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Usage tier/account-specific; no fixed image count inferred
+- schema_version: '1.0'
+  id: access-proprietary-access-10
+  verified_at: '2026-10-06'
+  model_id: gpt-image-2-5-flare
+  provider_id: openai
+  model_label: gpt-image-2.5-flare
+  product: ChatGPT Images2.5 / Work / Codex
+  methods:
+  - chat_subscription
+  status: Images2.5 available across tiers; precise underlying API variant selection in each UI not established
+  price_ids:
+  - price-proprietary-gpt-image-2-5-flare-openai-f37e16009992
+  - price-proprietary-gpt-image-2-5-flare-openai-ac94b6b07830
+  - price-proprietary-gpt-image-2-5-flare-openai-f6731f24dc2e
+  restrictions: []
+  evidence_ids:
+  - src-259c8fd88c0f
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-11
+  verified_at: '2026-10-06'
+  model_id: gpt-live-1
+  provider_id: openai
+  model_label: gpt-live-1
+  product: Live sessions API
+  methods:
+  - API
+  status: Generally available
+  price_ids:
+  - price-proprietary-gpt-live-1-openai-d34c632dbc2c
+  restrictions: []
+  evidence_ids:
+  - src-49e8d0577a5e
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-12
+  verified_at: '2026-10-06'
+  model_id: gpt-live-1
+  provider_id: openai
+  model_label: gpt-live-1
+  product: ChatGPT Voice
+  methods:
+  - chat_subscription
+  status: GPT-Live family powers Voice; exact routing and plan allotment may vary
+  price_ids:
+  - price-proprietary-gpt-live-1-openai-d34c632dbc2c
+  restrictions: []
+  evidence_ids:
+  - src-c84f0489248c
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-13
+  verified_at: '2026-10-06'
+  model_id: gpt-realtime-2-1
+  provider_id: openai
+  model_label: gpt-realtime-2.1
+  product: Realtime API
+  methods:
+  - API
+  status: Available
+  price_ids:
+  - price-proprietary-gpt-realtime-2-1-openai-1ffaab4c4919
+  - price-proprietary-gpt-realtime-2-1-openai-86fb999c9b89
+  - price-proprietary-gpt-realtime-2-1-openai-b208bfb265cc
+  restrictions:
+  - 'quota: {"actual_account_remaining": null, "free": "not supported", "tier1": {"RPD": 1000, "RPM": 200,
+    "TPM": 40000}}'
+  evidence_ids:
+  - src-49e8d0577a5e
+  notes:
+  - '{''free'': ''not supported'', ''tier1'': {''RPM'': 200, ''RPD'': 1000, ''TPM'': 40000}, ''actual_account_remaining'':
+    None}'
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - '{''free'': ''not supported'', ''tier1'': {''RPM'': 200, ''RPD'': 1000, ''TPM'': 40000}, ''actual_account_remaining'':
+    None}'
+- schema_version: '1.0'
+  id: access-proprietary-access-14
+  verified_at: '2026-10-06'
+  model_id: claude-fable-5-1
+  provider_id: anthropic
+  model_label: claude-fable-5-1
+  product: Claude API
+  methods:
+  - API
+  status: Active
+  price_ids:
+  - price-proprietary-claude-fable-5-1-anthropic-1c9e85bc3ee3
+  - price-proprietary-claude-fable-5-1-anthropic-d31f844e1fa5
+  restrictions:
+  - 'quota: Tier/account-specific; exact numeric public tier table not captured'
+  evidence_ids:
+  - src-ad9aa6f1b8ed
+  notes:
+  - Tier/account-specific; exact numeric public tier table not captured
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Tier/account-specific; exact numeric public tier table not captured
+- schema_version: '1.0'
+  id: access-proprietary-access-15-aws-bedrock
+  verified_at: '2026-10-06'
+  model_id: claude-fable-5-1
+  provider_id: aws-bedrock
+  model_label: claude-fable-5-1
+  product: Amazon Bedrock
+  methods:
+  - third_party_API
+  status: Listed by creator; independent provider pricing and regional entitlement not verified
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-ad9aa6f1b8ed
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-15-google-cloud
+  verified_at: '2026-10-06'
+  model_id: claude-fable-5-1
+  provider_id: google-cloud
+  model_label: claude-fable-5-1
+  product: Google Cloud
+  methods:
+  - third_party_API
+  status: Listed by creator; independent provider pricing and regional entitlement not verified
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-ad9aa6f1b8ed
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-15-azure-foundry
+  verified_at: '2026-10-06'
+  model_id: claude-fable-5-1
+  provider_id: azure-foundry
+  model_label: claude-fable-5-1
+  product: Microsoft Foundry / Azure
+  methods:
+  - third_party_API
+  status: Listed by creator; independent provider pricing and regional entitlement not verified
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-ad9aa6f1b8ed
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-16
+  verified_at: '2026-10-06'
+  model_id: claude-opus-5-5
+  provider_id: anthropic
+  model_label: claude-opus-5-5
+  product: Claude API
+  methods:
+  - API
+  status: Active
+  price_ids:
+  - price-proprietary-claude-opus-5-5-anthropic-a9d5d3dc77e4
+  - price-proprietary-claude-opus-5-5-anthropic-c64de5cd2551
+  restrictions:
+  - 'quota: Tier/account-specific; exact numeric public tier table not captured'
+  evidence_ids:
+  - src-4d070c5c8c67
+  notes:
+  - Tier/account-specific; exact numeric public tier table not captured
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Tier/account-specific; exact numeric public tier table not captured
+- schema_version: '1.0'
+  id: access-proprietary-access-17-aws-bedrock
+  verified_at: '2026-10-06'
+  model_id: claude-opus-5-5
+  provider_id: aws-bedrock
+  model_label: claude-opus-5-5
+  product: Amazon Bedrock
+  methods:
+  - third_party_API
+  status: Listed by creator; independent provider pricing and regional entitlement not verified
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-4d070c5c8c67
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-17-google-cloud
+  verified_at: '2026-10-06'
+  model_id: claude-opus-5-5
+  provider_id: google-cloud
+  model_label: claude-opus-5-5
+  product: Google Cloud
+  methods:
+  - third_party_API
+  status: Listed by creator; independent provider pricing and regional entitlement not verified
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-4d070c5c8c67
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-17-azure-foundry
+  verified_at: '2026-10-06'
+  model_id: claude-opus-5-5
+  provider_id: azure-foundry
+  model_label: claude-opus-5-5
+  product: Microsoft Foundry / Azure
+  methods:
+  - third_party_API
+  status: Listed by creator; independent provider pricing and regional entitlement not verified
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-4d070c5c8c67
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-18
+  verified_at: '2026-10-06'
+  model_id: claude-sonnet-5-5
+  provider_id: anthropic
+  model_label: claude-sonnet-5-5
+  product: Claude API
+  methods:
+  - API
+  status: Active
+  price_ids:
+  - price-proprietary-claude-sonnet-5-5-anthropic-706ffb2ac9c2
+  - price-proprietary-claude-sonnet-5-5-anthropic-ed2559301c6f
+  restrictions:
+  - 'quota: Tier/account-specific; exact numeric public tier table not captured'
+  evidence_ids:
+  - src-752375ff0c97
+  notes:
+  - Tier/account-specific; exact numeric public tier table not captured
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Tier/account-specific; exact numeric public tier table not captured
+- schema_version: '1.0'
+  id: access-proprietary-access-19-aws-bedrock
+  verified_at: '2026-10-06'
+  model_id: claude-sonnet-5-5
+  provider_id: aws-bedrock
+  model_label: claude-sonnet-5-5
+  product: Amazon Bedrock
+  methods:
+  - third_party_API
+  status: Listed by creator; independent provider pricing and regional entitlement not verified
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-752375ff0c97
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-19-google-cloud
+  verified_at: '2026-10-06'
+  model_id: claude-sonnet-5-5
+  provider_id: google-cloud
+  model_label: claude-sonnet-5-5
+  product: Google Cloud
+  methods:
+  - third_party_API
+  status: Listed by creator; independent provider pricing and regional entitlement not verified
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-752375ff0c97
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-19-azure-foundry
+  verified_at: '2026-10-06'
+  model_id: claude-sonnet-5-5
+  provider_id: azure-foundry
+  model_label: claude-sonnet-5-5
+  product: Microsoft Foundry / Azure
+  methods:
+  - third_party_API
+  status: Listed by creator; independent provider pricing and regional entitlement not verified
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-752375ff0c97
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-20
+  verified_at: '2026-10-06'
+  model_id: claude-haiku-4-5
+  provider_id: anthropic
+  model_label: claude-haiku-4-5
+  product: Claude API
+  methods:
+  - API
+  status: Active
+  price_ids:
+  - price-proprietary-claude-haiku-4-5-anthropic-92db4721bd09
+  - price-proprietary-claude-haiku-4-5-anthropic-9448cb8b044e
+  restrictions:
+  - 'quota: Tier/account-specific; exact numeric public tier table not captured'
+  evidence_ids:
+  - src-e1910c5126bc
+  notes:
+  - Tier/account-specific; exact numeric public tier table not captured
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Tier/account-specific; exact numeric public tier table not captured
+- schema_version: '1.0'
+  id: access-proprietary-access-21-aws-bedrock
+  verified_at: '2026-10-06'
+  model_id: claude-haiku-4-5
+  provider_id: aws-bedrock
+  model_label: claude-haiku-4-5
+  product: Amazon Bedrock
+  methods:
+  - third_party_API
+  status: Listed by creator; independent provider pricing and regional entitlement not verified
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-e1910c5126bc
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-21-google-cloud
+  verified_at: '2026-10-06'
+  model_id: claude-haiku-4-5
+  provider_id: google-cloud
+  model_label: claude-haiku-4-5
+  product: Google Cloud
+  methods:
+  - third_party_API
+  status: Listed by creator; independent provider pricing and regional entitlement not verified
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-e1910c5126bc
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-21-azure-foundry
+  verified_at: '2026-10-06'
+  model_id: claude-haiku-4-5
+  provider_id: azure-foundry
+  model_label: claude-haiku-4-5
+  product: Microsoft Foundry / Azure
+  methods:
+  - third_party_API
+  status: Listed by creator; independent provider pricing and regional entitlement not verified
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-e1910c5126bc
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-22-0
+  verified_at: '2026-10-06'
+  model_id: claude-fable-5-1
+  provider_id: anthropic
+  model_label: claude-fable-5-1
+  product: Claude Code terminal
+  methods:
+  - CLI
+  status: All paid Claude plans include Code; API-credit billing is a separate option
+  price_ids:
+  - price-proprietary-claude-fable-5-1-anthropic-1c9e85bc3ee3
+  - price-proprietary-claude-fable-5-1-anthropic-d31f844e1fa5
+  restrictions:
+  - 'quota: Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified'
+  evidence_ids:
+  - src-58333316475e
+  notes:
+  - Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
+- schema_version: '1.0'
+  id: access-proprietary-access-22-1
+  verified_at: '2026-10-06'
+  model_id: claude-opus-5-5
+  provider_id: anthropic
+  model_label: claude-opus-5-5
+  product: Claude Code terminal
+  methods:
+  - CLI
+  status: All paid Claude plans include Code; API-credit billing is a separate option
+  price_ids:
+  - price-proprietary-claude-opus-5-5-anthropic-a9d5d3dc77e4
+  - price-proprietary-claude-opus-5-5-anthropic-c64de5cd2551
+  restrictions:
+  - 'quota: Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified'
+  evidence_ids:
+  - src-58333316475e
+  notes:
+  - Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
+- schema_version: '1.0'
+  id: access-proprietary-access-22-2
+  verified_at: '2026-10-06'
+  model_id: claude-sonnet-5-5
+  provider_id: anthropic
+  model_label: claude-sonnet-5-5
+  product: Claude Code terminal
+  methods:
+  - CLI
+  status: All paid Claude plans include Code; API-credit billing is a separate option
+  price_ids:
+  - price-proprietary-claude-sonnet-5-5-anthropic-706ffb2ac9c2
+  - price-proprietary-claude-sonnet-5-5-anthropic-ed2559301c6f
+  restrictions:
+  - 'quota: Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified'
+  evidence_ids:
+  - src-58333316475e
+  notes:
+  - Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
+- schema_version: '1.0'
+  id: access-proprietary-access-22-3
+  verified_at: '2026-10-06'
+  model_id: claude-haiku-4-5
+  provider_id: anthropic
+  model_label: claude-haiku-4-5
+  product: Claude Code terminal
+  methods:
+  - CLI
+  status: All paid Claude plans include Code; API-credit billing is a separate option
+  price_ids:
+  - price-proprietary-claude-haiku-4-5-anthropic-92db4721bd09
+  - price-proprietary-claude-haiku-4-5-anthropic-9448cb8b044e
+  restrictions:
+  - 'quota: Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified'
+  evidence_ids:
+  - src-58333316475e
+  notes:
+  - Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
+- schema_version: '1.0'
+  id: access-proprietary-access-22-ide-0
+  verified_at: '2026-10-06'
+  model_id: claude-fable-5-1
+  provider_id: anthropic
+  model_label: claude-fable-5-1
+  product: Claude Code IDE integrations
+  methods:
+  - IDE
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-proprietary-claude-fable-5-1-anthropic-1c9e85bc3ee3
+  - price-proprietary-claude-fable-5-1-anthropic-d31f844e1fa5
+  restrictions: []
+  evidence_ids:
+  - src-58333316475e
+  notes:
+  - Exact IDE integration model entitlement not verified in this bounded pass
+  - Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-22-ide-1
+  verified_at: '2026-10-06'
+  model_id: claude-opus-5-5
+  provider_id: anthropic
+  model_label: claude-opus-5-5
+  product: Claude Code IDE integrations
+  methods:
+  - IDE
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-proprietary-claude-opus-5-5-anthropic-a9d5d3dc77e4
+  - price-proprietary-claude-opus-5-5-anthropic-c64de5cd2551
+  restrictions: []
+  evidence_ids:
+  - src-58333316475e
+  notes:
+  - Exact IDE integration model entitlement not verified in this bounded pass
+  - Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-22-ide-2
+  verified_at: '2026-10-06'
+  model_id: claude-sonnet-5-5
+  provider_id: anthropic
+  model_label: claude-sonnet-5-5
+  product: Claude Code IDE integrations
+  methods:
+  - IDE
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-proprietary-claude-sonnet-5-5-anthropic-706ffb2ac9c2
+  - price-proprietary-claude-sonnet-5-5-anthropic-ed2559301c6f
+  restrictions: []
+  evidence_ids:
+  - src-58333316475e
+  notes:
+  - Exact IDE integration model entitlement not verified in this bounded pass
+  - Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-22-ide-3
+  verified_at: '2026-10-06'
+  model_id: claude-haiku-4-5
+  provider_id: anthropic
+  model_label: claude-haiku-4-5
+  product: Claude Code IDE integrations
+  methods:
+  - IDE
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-proprietary-claude-haiku-4-5-anthropic-92db4721bd09
+  - price-proprietary-claude-haiku-4-5-anthropic-9448cb8b044e
+  restrictions: []
+  evidence_ids:
+  - src-58333316475e
+  notes:
+  - Exact IDE integration model entitlement not verified in this bounded pass
+  - Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-23-0
+  verified_at: '2026-10-06'
+  model_id: claude-sonnet-5-5
+  provider_id: anthropic
+  model_label: claude-sonnet-5-5
+  product: Claude apps
+  methods:
+  - chat_subscription
+  status: Sonnet/Haiku families on Free and paid plans; version selection can change
+  price_ids:
+  - price-proprietary-claude-sonnet-5-5-anthropic-706ffb2ac9c2
+  - price-proprietary-claude-sonnet-5-5-anthropic-ed2559301c6f
+  restrictions:
+  - 'quota: Rolling5h window; paid plans additionally weekly caps; no fixed message count'
+  evidence_ids:
+  - src-58333316475e
+  notes:
+  - Rolling5h window; paid plans additionally weekly caps; no fixed message count
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Rolling5h window; paid plans additionally weekly caps; no fixed message count
+- schema_version: '1.0'
+  id: access-proprietary-access-23-1
+  verified_at: '2026-10-06'
+  model_id: claude-haiku-4-5
+  provider_id: anthropic
+  model_label: claude-haiku-4-5
+  product: Claude apps
+  methods:
+  - chat_subscription
+  status: Sonnet/Haiku families on Free and paid plans; version selection can change
+  price_ids:
+  - price-proprietary-claude-haiku-4-5-anthropic-92db4721bd09
+  - price-proprietary-claude-haiku-4-5-anthropic-9448cb8b044e
+  restrictions:
+  - 'quota: Rolling5h window; paid plans additionally weekly caps; no fixed message count'
+  evidence_ids:
+  - src-58333316475e
+  notes:
+  - Rolling5h window; paid plans additionally weekly caps; no fixed message count
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Rolling5h window; paid plans additionally weekly caps; no fixed message count
+- schema_version: '1.0'
+  id: access-proprietary-access-24
+  verified_at: '2026-10-06'
+  model_id: claude-opus-5-5
+  provider_id: anthropic
+  model_label: claude-opus-5-5
+  product: Claude apps
+  methods:
+  - chat_subscription
+  status: Opus family on paid plans
+  price_ids:
+  - price-proprietary-claude-opus-5-5-anthropic-a9d5d3dc77e4
+  - price-proprietary-claude-opus-5-5-anthropic-c64de5cd2551
+  restrictions:
+  - 'quota: Same shared usage pool; model weighting/actual remainder account-specific'
+  evidence_ids:
+  - src-58333316475e
+  notes:
+  - Same shared usage pool; model weighting/actual remainder account-specific
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Same shared usage pool; model weighting/actual remainder account-specific
+- schema_version: '1.0'
+  id: access-proprietary-access-25
+  verified_at: '2026-10-06'
+  model_id: claude-fable-5-1
+  provider_id: anthropic
+  model_label: claude-fable-5-1
+  product: Claude apps
+  methods:
+  - chat_subscription
+  status: Pro uses usage credits; Max has Fable access within50% of weekly limits
+  price_ids:
+  - price-proprietary-claude-fable-5-1-anthropic-1c9e85bc3ee3
+  - price-proprietary-claude-fable-5-1-anthropic-d31f844e1fa5
+  restrictions:
+  - 'quota: Not equivalent to unlimited subscription access'
+  evidence_ids:
+  - src-58333316475e
+  notes:
+  - Not equivalent to unlimited subscription access
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Not equivalent to unlimited subscription access
+- schema_version: '1.0'
+  id: access-proprietary-access-26
+  verified_at: '2026-10-06'
+  model_id: gpt-oss-120b
+  provider_id: null
+  model_label: gpt-oss-120b
+  product: Hugging Face weights / compatible runtimes
+  methods:
+  - local_weights
+  status: Downloadable; no runtime executed for this research
+  price_ids: []
+  restrictions:
+  - 'quota: Hardware/runtime dependent'
+  evidence_ids:
+  - src-f85326ed9ab1
+  - src-06e7619eb6a4
+  notes:
+  - Self-hosting is an access method, not a third-party inference provider.
+  - Hardware/runtime dependent
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Hardware/runtime dependent
+- schema_version: '1.0'
+  id: access-proprietary-access-27
+  verified_at: '2026-10-06'
+  model_id: gpt-oss-120b
+  provider_id: groq
+  model_label: gpt-oss-120b
+  product: GroqCloud
+  methods:
+  - API
+  status: Production model
+  price_ids:
+  - price-proprietary-gpt-oss-120b-groq-0f327a7e8dbf
+  - price-proprietary-gpt-oss-120b-groq-cf02720da9d9
+  - price-providers-gpt-oss-120b-groq-d03d282ce7d7
+  restrictions:
+  - 'quota: {"actual_account_remaining": null, "developer": {"RPM": 1000, "TPM": 250000}, "free": {"RPD": 1000,
+    "RPM": 30, "TPD": 200000, "TPM": 8000}}'
+  evidence_ids:
+  - src-027b0340f566
+  - src-c03a6de01b20
+  notes:
+  - '{''free'': {''RPM'': 30, ''RPD'': 1000, ''TPM'': 8000, ''TPD'': 200000}, ''developer'': {''RPM'': 1000,
+    ''TPM'': 250000}, ''actual_account_remaining'': None}'
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - '{''free'': {''RPM'': 30, ''RPD'': 1000, ''TPM'': 8000, ''TPD'': 200000}, ''developer'': {''RPM'': 1000,
+    ''TPM'': 250000}, ''actual_account_remaining'': None}'
+- schema_version: '1.0'
+  id: access-proprietary-access-28
+  verified_at: '2026-10-06'
+  model_id: gpt-oss-120b
+  provider_id: openai
+  model_label: gpt-oss-120b
+  product: ChatGPT / OpenAI hosted API
+  methods:
+  - chat_subscription
+  status: No first-party hosted entitlement established; OpenAI catalog entry is not evidence of API hosting
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-06e7619eb6a4
+  - src-1b711f47aa6a
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-access-29
+  verified_at: '2026-10-06'
+  model_id: gpt-oss-20b
+  provider_id: null
+  model_label: gpt-oss-20b
+  product: Hugging Face weights / compatible runtimes
+  methods:
+  - local_weights
+  status: Downloadable; no runtime executed for this research
+  price_ids: []
+  restrictions:
+  - 'quota: Hardware/runtime dependent'
+  evidence_ids:
+  - src-4fb7165743ee
+  - src-06e7619eb6a4
+  notes:
+  - Self-hosting is an access method, not a third-party inference provider.
+  - Hardware/runtime dependent
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Hardware/runtime dependent
+- schema_version: '1.0'
+  id: access-proprietary-access-30
+  verified_at: '2026-10-06'
+  model_id: gpt-oss-20b
+  provider_id: groq
+  model_label: gpt-oss-20b
+  product: GroqCloud
+  methods:
+  - API
+  status: Production model
+  price_ids:
+  - price-proprietary-gpt-oss-20b-groq-38ccf87aa66a
+  restrictions:
+  - 'quota: {"actual_account_remaining": null, "developer": {"RPM": 1000, "TPM": 250000}, "free": {"RPD": 1000,
+    "RPM": 30, "TPD": 200000, "TPM": 8000}}'
+  evidence_ids:
+  - src-027b0340f566
+  - src-c03a6de01b20
+  notes:
+  - '{''free'': {''RPM'': 30, ''RPD'': 1000, ''TPM'': 8000, ''TPD'': 200000}, ''developer'': {''RPM'': 1000,
+    ''TPM'': 250000}, ''actual_account_remaining'': None}'
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - '{''free'': {''RPM'': 30, ''RPD'': 1000, ''TPM'': 8000, ''TPD'': 200000}, ''developer'': {''RPM'': 1000,
+    ''TPM'': 250000}, ''actual_account_remaining'': None}'
+- schema_version: '1.0'
+  id: access-proprietary-access-31
+  verified_at: '2026-10-06'
+  model_id: gpt-oss-20b
+  provider_id: openai
+  model_label: gpt-oss-20b
+  product: ChatGPT / OpenAI hosted API
+  methods:
+  - chat_subscription
+  status: No first-party hosted entitlement established; OpenAI catalog entry is not evidence of API hosting
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-06e7619eb6a4
+  - src-0dc6c2d41a2c
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-33
+  verified_at: '2026-10-06'
+  model_id: gemini-3-8-flash
+  provider_id: google-developer-api
+  model_label: gemini38flash
+  product: null
+  methods:
+  - first-party-api
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-proprietary-gemini-3-8-flash-google-developer-api-15580e4c6b8b
+  - price-proprietary-gemini-3-8-flash-google-developer-api-f9f44895e35b
+  - price-proprietary-gemini-3-8-flash-google-developer-api-1bad64d36c74
+  restrictions: []
+  evidence_ids:
+  - src-c4c7ba8fda18
+  - src-116c1a7f3be0
+  notes:
+  - Distribution card names app, but consumer plan page advertises 3.6 Flash and 3.1 Pro; exact selector/rollout
+    access unknown.
+  - 'API documented: true'
+  - 'Developer web UI: {"available": true, "provider": "google_aistudio"}'
+  - 'Consumer distribution reference (not exact entitlement): ["Gemini app", "Google AI Mode"]'
+  - 'IDE distribution reference: ["Google Antigravity"]'
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-34
+  verified_at: '2026-10-06'
+  model_id: gemini-3-1-pro-preview
+  provider_id: google-developer-api
+  model_label: gemini31pro
+  product: null
+  methods:
+  - first-party-api
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-proprietary-gemini-3-1-pro-preview-google-developer-api-0363b1d20999
+  - price-proprietary-gemini-3-1-pro-preview-google-developer-api-6666cc8d3986
+  restrictions: []
+  evidence_ids:
+  - src-564638136e50
+  - src-6b2bf752a4f2
+  - src-07ba3e0f52cc
+  notes:
+  - 'API documented: true'
+  - 'Developer web UI: {"available": true, "provider": "google_aistudio"}'
+  - 'Consumer distribution reference (not exact entitlement): ["Gemini app", "NotebookLM", "Gemini Enterprise"]'
+  - 'IDE distribution reference: ["Google Antigravity"]'
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-35
+  verified_at: '2026-10-06'
+  model_id: gemini-3-5-flash-lite
+  provider_id: google-developer-api
+  model_label: gemini35lite
+  product: null
+  methods:
+  - first-party-api
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-proprietary-gemini-3-5-flash-lite-google-developer-api-5e632c3ddf86
+  restrictions: []
+  evidence_ids:
+  - src-56f9dadd63b1
+  - src-f7fe39222f11
+  notes:
+  - 'API documented: true'
+  - 'Developer web UI: {"available": true, "provider": "google_aistudio"}'
+  - 'Consumer distribution reference (not exact entitlement): ["Gemini app"]'
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-36
+  verified_at: '2026-10-06'
+  model_id: gemini-3-pro-image
+  provider_id: google-developer-api
+  model_label: nanobananapro
+  product: null
+  methods:
+  - first-party-api
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-proprietary-gemini-3-pro-image-google-developer-api-3c200e46dbab
+  - price-proprietary-gemini-3-pro-image-google-developer-api-d065c9f3a69a
+  restrictions: []
+  evidence_ids:
+  - src-0472a026e3db
+  - src-21fe0d4c63a7
+  notes:
+  - 'API documented: true'
+  - 'Developer web UI: {"available": true, "provider": "google_aistudio"}'
+  - 'Consumer distribution reference (not exact entitlement): ["Google Flow (limited free access documented)"]'
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-37
+  verified_at: '2026-10-06'
+  model_id: veo-3-1-generate-preview
+  provider_id: google-developer-api
+  model_label: veo31
+  product: null
+  methods:
+  - first-party-api
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-proprietary-veo-3-1-generate-preview-google-developer-api-a0950450f4b5
+  - price-proprietary-veo-3-1-generate-preview-google-developer-api-fdc0b33bf21d
+  - price-proprietary-veo-3-1-generate-preview-google-developer-api-281d4f4cc193
+  restrictions: []
+  evidence_ids:
+  - src-521c059d5d6a
+  notes:
+  - Current consumer product selector was not verified; do not equate historical Flow availability with this
+    precise endpoint.
+  - 'API documented: true'
+  - 'Developer web UI: {"available": true, "provider": "google_aistudio"}'
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-38
+  verified_at: '2026-10-06'
+  model_id: lyria-3-5
+  provider_id: google-developer-api
+  model_label: lyria35
+  product: null
+  methods:
+  - first-party-api
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-proprietary-lyria-3-5-google-developer-api-158952f245f5
+  restrictions: []
+  evidence_ids:
+  - src-ef50a5784fac
+  - src-adf03d8b2d85
+  notes:
+  - 'API documented: true'
+  - 'Developer web UI: {"available": true, "provider": "google_aistudio"}'
+  - 'Consumer distribution reference (not exact entitlement): ["Google Flow Music"]'
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-39
+  verified_at: '2026-10-06'
+  model_id: gemini-3-8-live
+  provider_id: google-developer-api
+  model_label: gemini38live
+  product: null
+  methods:
+  - first-party-api
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-proprietary-gemini-3-8-live-google-developer-api-a963ebdabef6
+  restrictions: []
+  evidence_ids:
+  - src-04c98c33c883
+  - src-744e7330e24d
+  notes:
+  - Consumer Gemini Live branding alone does not promise a pinned API model.
+  - 'API documented: true'
+  - 'Developer web UI: {"available": true, "provider": "google_aistudio"}'
+  - 'Consumer distribution reference (not exact entitlement): ["Gemini app", "Google Search Live"]'
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-40
+  verified_at: '2026-10-06'
+  model_id: gemma-4-31b-it
+  provider_id: google-developer-api
+  model_label: gemma4
+  product: null
+  methods:
+  - first-party-api
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-proprietary-gemma-4-31b-it-google-developer-api-e292329c37fa
+  restrictions: []
+  evidence_ids:
+  - src-a24fd97eb3d0
+  - src-ded81031faae
+  - src-2f3ae40d3bb7
+  notes:
+  - 31B/26B hosted through Gemini API/AI Studio; downloaded weights permit separate local runtimes and tuning.
+    No consumer Gemini model-selector access established.
+  - 'API documented: true'
+  - 'Developer web UI: {"available": true, "provider": "google_aistudio"}'
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-41
+  verified_at: '2026-10-06'
+  model_id: gemini-omni-1-1-flash
+  provider_id: google-developer-api
+  model_label: omni11flash
+  product: null
+  methods:
+  - first-party-api
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-proprietary-gemini-omni-1-1-flash-google-developer-api-ea0b882ade35
+  restrictions: []
+  evidence_ids:
+  - src-3b883af04aa0
+  - src-0472a026e3db
+  notes:
+  - Catalog placement under Preview conflicts with model page and dated GA notes; use exact stable endpoint.
+  - 'API documented: true'
+  - 'Developer web UI: {"available": true, "provider": "google_aistudio"}'
+  - 'Consumer distribution reference (not exact entitlement): ["Google Flow", "Gemini app video feature (exact
+    selector unknown)"]'
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-42
+  verified_at: '2026-10-06'
+  model_id: gemini4argon
+  provider_id: google-developer-api
+  model_label: gemini4argon
+  product: null
+  methods:
+  - first-party-api
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-proprietary-gemini4argon-google-developer-api-29291504e924
+  - price-proprietary-gemini4argon-google-developer-api-efc10b9f8cc2
+  restrictions: []
+  evidence_ids:
+  - src-6381db252dee
+  - src-919b66e84fc3
+  notes:
+  - Official announcement restricts initial access to trusted Fairwind cyber defenders. Public catalog updated
+    Oct 1 still omits Argon. Do not infer access from Ultra subscription alone.
+  - 'API documented: null'
+  - 'Developer web UI: {"available": null, "provider": "google_aistudio"}'
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-qwen3-8-27b-weights
+  verified_at: '2026-10-06'
+  model_id: qwen3-8-27b
+  provider_id: hugging-face
+  model_label: qwen3-8-27b
+  product: null
+  methods:
+  - weight_distribution
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'identity_note: Hugging Face hosts artifacts; the creator is Alibaba / Qwen'
+  evidence_ids:
+  - src-ca26bca182f6
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-qwen3-8-flash-next-weights
+  verified_at: '2026-10-06'
+  model_id: qwen3-8-flash-next
+  provider_id: hugging-face
+  model_label: qwen3-8-flash-next
+  product: null
+  methods:
+  - weight_distribution
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'identity_note: Hugging Face hosts artifacts; the creator is Alibaba / Qwen'
+  evidence_ids:
+  - src-eb79656c925c
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-qwen3-8-2-4t-a95b-weights
+  verified_at: '2026-10-06'
+  model_id: qwen3-8-2-4t-a95b
+  provider_id: hugging-face
+  model_label: qwen3-8-2-4t-a95b
+  product: null
+  methods:
+  - weight_distribution
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'identity_note: Hugging Face hosts artifacts; the creator is Alibaba / Qwen'
+  evidence_ids:
+  - src-2bc2cf30ffd5
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-qwen3-coder-next-weights
+  verified_at: '2026-10-06'
+  model_id: qwen3-coder-next
+  provider_id: hugging-face
+  model_label: qwen3-coder-next
+  product: null
+  methods:
+  - weight_distribution
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'identity_note: Hugging Face hosts artifacts; the creator is Alibaba / Qwen'
+  evidence_ids:
+  - src-71b3fd269cc8
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-qwen3-5-9b-weights
+  verified_at: '2026-10-06'
+  model_id: qwen3-5-9b
+  provider_id: hugging-face
+  model_label: qwen3-5-9b
+  product: null
+  methods:
+  - weight_distribution
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'identity_note: Hugging Face hosts artifacts; the creator is Alibaba / Qwen'
+  evidence_ids:
+  - src-e0a64484787e
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-deepseek-v4-1-flash-weights
+  verified_at: '2026-10-06'
+  model_id: deepseek-v4-1-flash
+  provider_id: hugging-face
+  model_label: deepseek-v4-1-flash
+  product: null
+  methods:
+  - weight_distribution
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'identity_note: Hugging Face hosts artifacts; the creator is DeepSeek'
+  evidence_ids:
+  - src-5c348986a151
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-deepseek-v4-pro-0813-weights
+  verified_at: '2026-10-06'
+  model_id: deepseek-v4-pro-0813
+  provider_id: hugging-face
+  model_label: deepseek-v4-pro-0813
+  product: null
+  methods:
+  - weight_distribution
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'identity_note: Hugging Face hosts artifacts; the creator is DeepSeek'
+  evidence_ids:
+  - src-b96a45c2e083
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-mistral-small-4-weights
+  verified_at: '2026-10-06'
+  model_id: mistral-small-4
+  provider_id: hugging-face
+  model_label: mistral-small-4
+  product: null
+  methods:
+  - weight_distribution
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'identity_note: Hugging Face hosts artifacts; the creator is Mistral AI'
+  evidence_ids:
+  - src-dcba779ffa90
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-mistral-medium-3-5-weights
+  verified_at: '2026-10-06'
+  model_id: mistral-medium-3-5
+  provider_id: hugging-face
+  model_label: mistral-medium-3-5
+  product: null
+  methods:
+  - weight_distribution
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'identity_note: Hugging Face hosts artifacts; the creator is Mistral AI'
+  evidence_ids:
+  - src-79280a1db5da
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-mistral-large-3-weights
+  verified_at: '2026-10-06'
+  model_id: mistral-large-3
+  provider_id: hugging-face
+  model_label: mistral-large-3
+  product: null
+  methods:
+  - weight_distribution
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'identity_note: Hugging Face hosts artifacts; the creator is Mistral AI'
+  evidence_ids:
+  - src-f249e65005c1
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-ministral-3-8b-weights
+  verified_at: '2026-10-06'
+  model_id: ministral-3-8b
+  provider_id: hugging-face
+  model_label: ministral-3-8b
+  product: null
+  methods:
+  - weight_distribution
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'identity_note: Hugging Face hosts artifacts; the creator is Mistral AI'
+  evidence_ids:
+  - src-e37726fea976
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-devstral-small-2-weights
+  verified_at: '2026-10-06'
+  model_id: devstral-small-2
+  provider_id: hugging-face
+  model_label: devstral-small-2
+  product: null
+  methods:
+  - weight_distribution
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'identity_note: Hugging Face hosts artifacts; the creator is Mistral AI'
+  evidence_ids:
+  - src-fd9a0c74ec31
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-phi-4-reasoning-vision-15b-weights
+  verified_at: '2026-10-06'
+  model_id: phi-4-reasoning-vision-15b
+  provider_id: hugging-face
+  model_label: phi-4-reasoning-vision-15b
+  product: null
+  methods:
+  - weight_distribution
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'identity_note: Hugging Face hosts artifacts; the creator is Microsoft'
+  evidence_ids:
+  - src-91f835e2db28
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-kimi-k3-weights
+  verified_at: '2026-10-06'
+  model_id: kimi-k3
+  provider_id: hugging-face
+  model_label: kimi-k3
+  product: null
+  methods:
+  - weight_distribution
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'identity_note: Hugging Face hosts artifacts; the creator is Moonshot AI'
+  evidence_ids:
+  - src-e7129e9021b6
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-glm-5-3-weights
+  verified_at: '2026-10-06'
+  model_id: glm-5-3
+  provider_id: hugging-face
+  model_label: glm-5-3
+  product: null
+  methods:
+  - weight_distribution
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'identity_note: Hugging Face hosts artifacts; the creator is Z.ai / Zhipu AI'
+  evidence_ids:
+  - src-4424584ee706
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-glm-5-3-flash-weights
+  verified_at: '2026-10-06'
+  model_id: glm-5-3-flash
+  provider_id: hugging-face
+  model_label: glm-5-3-flash
+  product: null
+  methods:
+  - weight_distribution
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'identity_note: Hugging Face hosts artifacts; the creator is Z.ai / Zhipu AI'
+  evidence_ids:
+  - src-5302786105ea
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-minimax-m3-weights
+  verified_at: '2026-10-06'
+  model_id: minimax-m3
+  provider_id: hugging-face
+  model_label: minimax-m3
+  product: null
+  methods:
+  - weight_distribution
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'identity_note: Hugging Face hosts artifacts; the creator is MiniMax'
+  evidence_ids:
+  - src-06645d3950f1
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-nemotron-3-ultra-weights
+  verified_at: '2026-10-06'
+  model_id: nemotron-3-ultra
+  provider_id: hugging-face
+  model_label: nemotron-3-ultra
+  product: null
+  methods:
+  - weight_distribution
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'identity_note: Hugging Face hosts artifacts; the creator is NVIDIA'
+  evidence_ids:
+  - src-c5a0afc263f8
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-deepseek-v4-1-flash-deepseek-api
+  verified_at: '2026-10-06'
+  model_id: deepseek-v4-1-flash
+  provider_id: deepseek-api
+  model_label: deepseek-v4-1-flash
+  product: null
+  methods:
+  - hosted_api
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-open-deepseek-v4-1-flash-deepseek-api-05c298aa0f32
+  - price-open-deepseek-v4-1-flash-deepseek-api-60717c231a91
+  restrictions: []
+  evidence_ids:
+  - src-280758cc57a6
+  notes:
+  - Legacy v4-flash aliases route here; alias may change again.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-deepseek-v4-pro-0813-deepseek-api
+  verified_at: '2026-10-06'
+  model_id: deepseek-v4-pro-0813
+  provider_id: deepseek-api
+  model_label: deepseek-v4-pro-0813
+  product: null
+  methods:
+  - hosted_api
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-open-deepseek-v4-pro-0813-deepseek-api-66908c1c12ad
+  - price-open-deepseek-v4-pro-0813-deepseek-api-1cba22453144
+  restrictions: []
+  evidence_ids:
+  - src-280758cc57a6
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-glm-5-3-zai-api
+  verified_at: '2026-10-06'
+  model_id: glm-5-3
+  provider_id: zai-api
+  model_label: glm-5-3
+  product: null
+  methods:
+  - hosted_api
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-open-glm-5-3-zai-api-a3d2f2e33a66
+  restrictions: []
+  evidence_ids:
+  - src-667e800254a1
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-glm-5-3-flash-zai-api
+  verified_at: '2026-10-06'
+  model_id: glm-5-3-flash
+  provider_id: zai-api
+  model_label: glm-5-3-flash
+  product: null
+  methods:
+  - hosted_api
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-open-glm-5-3-flash-zai-api-d4cf1d58c48f
+  restrictions: []
+  evidence_ids:
+  - src-667e800254a1
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-minimax-m3-minimax-api
+  verified_at: '2026-10-06'
+  model_id: minimax-m3
+  provider_id: minimax-api
+  model_label: minimax-m3
+  product: null
+  methods:
+  - hosted_api
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-open-minimax-m3-minimax-api-cfa19bcf4e29
+  - price-open-minimax-m3-minimax-api-f5f41f0c9af4
+  - price-open-minimax-m3-minimax-api-bb9117221622
+  - price-open-minimax-m3-minimax-api-3a2d3f3837bf
+  restrictions: []
+  evidence_ids:
+  - src-40c9ce9b4812
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-kimi-k3-kimi-api
+  verified_at: '2026-10-06'
+  model_id: kimi-k3
+  provider_id: kimi-api
+  model_label: kimi-k3
+  product: null
+  methods:
+  - hosted_api
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-e7129e9021b6
+  notes:
+  - Official pricing page accessible, but monetary table did not extract; primary-verified price left null.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-mistral-small-4-mistral-api
+  verified_at: '2026-10-06'
+  model_id: mistral-small-4
+  provider_id: mistral-api
+  model_label: mistral-small-4
+  product: null
+  methods:
+  - hosted_api
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-open-mistral-small-4-mistral-api-2c982a02c545
+  restrictions: []
+  evidence_ids:
+  - src-b0218078301d
+  notes:
+  - Alias is mutable; pin a dated identifier where offered.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-mistral-medium-3-5-mistral-api
+  verified_at: '2026-10-06'
+  model_id: mistral-medium-3-5
+  provider_id: mistral-api
+  model_label: mistral-medium-3-5
+  product: null
+  methods:
+  - hosted_api
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-open-mistral-medium-3-5-mistral-api-ccb3cbd04b1a
+  restrictions: []
+  evidence_ids:
+  - src-ece7a0a55f7b
+  notes:
+  - Alias is mutable; pin a dated identifier where offered.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-mistral-large-3-mistral-api
+  verified_at: '2026-10-06'
+  model_id: mistral-large-3
+  provider_id: mistral-api
+  model_label: mistral-large-3
+  product: null
+  methods:
+  - hosted_api
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-open-mistral-large-3-mistral-api-9f59b7cfe481
+  restrictions: []
+  evidence_ids:
+  - src-b17514a392bd
+  notes:
+  - Provider lists model; exact API identifier not verified.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-ministral-3-8b-mistral-api
+  verified_at: '2026-10-06'
+  model_id: ministral-3-8b
+  provider_id: mistral-api
+  model_label: ministral-3-8b
+  product: null
+  methods:
+  - hosted_api
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-open-ministral-3-8b-mistral-api-e3e015fcc82e
+  restrictions: []
+  evidence_ids:
+  - src-b17514a392bd
+  notes:
+  - Provider lists model; exact API identifier not verified.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-glm-5-3-mistral-api
+  verified_at: '2026-10-06'
+  model_id: glm-5-3
+  provider_id: mistral-api
+  model_label: glm-5-3
+  product: null
+  methods:
+  - hosted_api
+  status: documented route; account eligibility unverified
+  price_ids:
+  - price-open-glm-5-3-mistral-api-2ee05cd2e1e9
+  restrictions: []
+  evidence_ids:
+  - src-b17514a392bd
+  notes:
+  - Provider lists model; exact API identifier not verified.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-llama-4-scout-weights
+  verified_at: '2026-10-06'
+  model_id: llama-4-scout
+  provider_id: hugging-face
+  model_label: llama-4-scout
+  product: null
+  methods:
+  - weight_distribution
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'identity_note: Meta created the model; Hugging Face hosts gated artifacts.'
+  evidence_ids:
+  - src-8cb15ff6ddd4
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-llama-4-maverick-weights
+  verified_at: '2026-10-06'
+  model_id: llama-4-maverick
+  provider_id: hugging-face
+  model_label: llama-4-maverick
+  product: null
+  methods:
+  - weight_distribution
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'identity_note: Meta created the model; Hugging Face hosts gated artifacts.'
+  evidence_ids:
+  - src-65471a2c7ad5
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-phi-4-mini-instruct-weights
+  verified_at: '2026-10-06'
+  model_id: phi-4-mini-instruct
+  provider_id: hugging-face
+  model_label: phi-4-mini-instruct
+  product: null
+  methods:
+  - weight_distribution
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'identity_note: Microsoft created the model; Hugging Face hosts artifacts.'
+  evidence_ids:
+  - src-147450d232b3
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-open-phi-4-multimodal-instruct-weights
+  verified_at: '2026-10-06'
+  model_id: phi-4-multimodal-instruct
+  provider_id: hugging-face
+  model_label: phi-4-multimodal-instruct
+  product: null
+  methods:
+  - weight_distribution
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'identity_note: Microsoft created the model; Hugging Face hosts artifacts.'
+  evidence_ids:
+  - src-29885c43e537
+  notes: []
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-providers-access-xai-api
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: xai
+  model_label: null
+  product: Grok API
+  methods:
+  - metered_api
+  status: 'true'
+  price_ids: []
+  restrictions:
+  - 'quota_reset: per-second requests, per-minute tokens; actual team limits unknown'
+  - 'billing: prepaid credits; optional invoicing'
+  evidence_ids:
+  - src-7153ea4f2bae
+  - src-ea2ea7424a68
+  notes:
+  - per-second requests, per-minute tokens; actual team limits unknown
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: per-second requests, per-minute tokens; actual team limits unknown
+  conditions:
+  - per-second requests, per-minute tokens; actual team limits unknown
+- schema_version: '1.0'
+  id: access-providers-access-xai-consumer
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: xai
+  model_label: null
+  product: Grok consumer app / subscription
+  methods:
+  - consumer_subscription
+  status: 'true'
+  price_ids: []
+  restrictions:
+  - 'quota_reset: unknown'
+  - 'billing: current plan prices not verified'
+  evidence_ids:
+  - src-ac0d5cc662f8
+  notes:
+  - unknown
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: unknown
+  conditions:
+  - unknown
+- schema_version: '1.0'
+  id: access-providers-access-openrouter
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: openrouter
+  model_label: null
+  product: OpenRouter managed credits
+  methods:
+  - gateway_api
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'quota_reset: Free plan 50 requests/day; reset timezone and purchased-credit exceptions not verified'
+  - 'billing: USD credits plus purchase fee'
+  evidence_ids:
+  - src-e71e7d7dfbb1
+  - src-cf152e0fafb2
+  notes:
+  - Free plan 50 requests/day; reset timezone and purchased-credit exceptions not verified
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: Free plan 50 requests/day; reset timezone and purchased-credit exceptions not verified
+  conditions:
+  - Free plan 50 requests/day; reset timezone and purchased-credit exceptions not verified
+- schema_version: '1.0'
+  id: access-providers-access-openrouter-byok
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: openrouter
+  model_label: null
+  product: BYOK
+  methods:
+  - bring_your_own_key
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'quota_reset: monthly allowance; exact timezone unknown'
+  - 'billing: upstream provider bill plus gateway fee after monthly dollar allowance'
+  evidence_ids:
+  - src-e71e7d7dfbb1
+  - src-296afef18214
+  notes:
+  - Free plan 50 requests/day; reset timezone and purchased-credit exceptions not verified
+  - monthly allowance; exact timezone unknown
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: monthly allowance; exact timezone unknown
+  conditions:
+  - monthly allowance; exact timezone unknown
+- schema_version: '1.0'
+  id: access-providers-access-hf-download
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: hugging-face
+  model_label: null
+  product: Hub model weights
+  methods:
+  - download_self_host
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'quota_reset: download limits/gating depend on repository and account'
+  - 'billing: weights may have no download fee; hardware/storage/operations still cost'
+  evidence_ids:
+  - src-eae889ae29d3
+  notes:
+  - download limits/gating depend on repository and account
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: download limits/gating depend on repository and account
+  conditions:
+  - download limits/gating depend on repository and account
+  - 'Account requirement: repository-dependent'
+- schema_version: '1.0'
+  id: access-providers-access-hf-router
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: hugging-face
+  model_label: null
+  product: Inference Providers
+  methods:
+  - gateway_api
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'quota_reset: monthly compute credits; provider quotas additional'
+  - 'billing: monthly credits then PayGo or custom provider key'
+  evidence_ids:
+  - src-64b25f3342fd
+  notes:
+  - monthly compute credits; provider quotas additional
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: monthly compute credits; provider quotas additional
+  conditions:
+  - monthly compute credits; provider quotas additional
+- schema_version: '1.0'
+  id: access-providers-access-hf-endpoints
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: hugging-face
+  model_label: null
+  product: Inference Endpoints
+  methods:
+  - dedicated_host
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'quota_reset: capacity/configuration dependent'
+  - 'billing: hourly compute and replicas, monthly bill'
+  evidence_ids:
+  - src-65ad2b8b0099
+  - src-07e3af888801
+  notes:
+  - capacity/configuration dependent
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: capacity/configuration dependent
+  conditions:
+  - capacity/configuration dependent
+- schema_version: '1.0'
+  id: access-providers-access-together-serverless
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: together
+  model_label: null
+  product: Serverless
+  methods:
+  - metered_api
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'quota_reset: not verified'
+  - 'billing: per token or media unit'
+  evidence_ids:
+  - src-2e19eb496679
+  - src-a8bf24d0415e
+  notes:
+  - not verified
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: not verified
+  conditions:
+  - not verified
+- schema_version: '1.0'
+  id: access-providers-access-fireworks-serverless
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: fireworks
+  model_label: null
+  product: Serverless
+  methods:
+  - metered_api
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'quota_reset: not verified'
+  - 'billing: prepaid credits, Standard/Priority/Fast, separate batch'
+  evidence_ids:
+  - src-24c3404d8b6f
+  notes:
+  - not verified
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: not verified
+  conditions:
+  - not verified
+- schema_version: '1.0'
+  id: access-providers-access-groq-developer
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: groq
+  model_label: null
+  product: GroqCloud Developer
+  methods:
+  - metered_api
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'quota_reset: RPM/TPM per listed model; exact reset semantics not verified'
+  - 'billing: per model unit'
+  evidence_ids:
+  - src-027b0340f566
+  notes:
+  - RPM/TPM per listed model; exact reset semantics not verified
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: RPM/TPM per listed model; exact reset semantics not verified
+  conditions:
+  - RPM/TPM per listed model; exact reset semantics not verified
+- schema_version: '1.0'
+  id: access-providers-access-cerebras-trial
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: cerebras
+  model_label: null
+  product: Shared Inference Free Trial
+  methods:
+  - time_limited_trial
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'quota_reset: continuous token buckets; gpt-oss120b 5 RPM, 30k uncached TPM, 90k total TPM, 1M TPH/TPD'
+  - 'billing: one-time $5 after verified payment method, expires after 30 days'
+  evidence_ids:
+  - src-6a5ec3406d1f
+  notes:
+  - No permanently renewing free tier; exhausted trial stops until PayGo purchase.
+  - continuous token buckets; gpt-oss120b 5 RPM, 30k uncached TPM, 90k total TPM, 1M TPH/TPD
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: continuous token buckets; gpt-oss120b 5 RPM, 30k uncached TPM, 90k total TPM, 1M TPH/TPD
+  conditions:
+  - No permanently renewing free tier; exhausted trial stops until PayGo purchase.
+  - continuous token buckets; gpt-oss120b 5 RPM, 30k uncached TPM, 90k total TPM, 1M TPH/TPD
+- schema_version: '1.0'
+  id: access-providers-access-cloud-hosts
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: null
+  model_label: null
+  product: Cloud managed model deployment
+  methods:
+  - cloud_model_host
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'quota_reset: per account/model/region; not verified'
+  - 'billing: model/region/deployment/service-tier specific'
+  evidence_ids:
+  - src-2f9ece653a0f
+  - src-89852246e77a
+  - src-82c97913adaf
+  notes:
+  - Public catalog does not establish account/region capacity or model approval.
+  - per account/model/region; not verified
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: per account/model/region; not verified
+  conditions:
+  - Public catalog does not establish account/region capacity or model approval.
+  - per account/model/region; not verified
+- schema_version: '1.0'
+  id: access-providers-access-cohere-trial
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: cohere
+  model_label: null
+  product: API trial and new-model evaluation
+  methods:
+  - evaluation_api
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'quota_reset: 1,000 calls/month; newer chat variants trial-limited even with production key'
+  - 'billing: free within documented limits'
+  evidence_ids:
+  - src-73e03ec6d5cd
+  - src-a03104fba002
+  notes:
+  - Trial API not for commercial production; newer production capacity sales/Model Vault.
+  - 1,000 calls/month; newer chat variants trial-limited even with production key
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: 1,000 calls/month; newer chat variants trial-limited even with production key
+  conditions:
+  - Trial API not for commercial production; newer production capacity sales/Model Vault.
+  - 1,000 calls/month; newer chat variants trial-limited even with production key
+- schema_version: '1.0'
+  id: access-providers-access-ai21-selfhost
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: ai21
+  model_label: null
+  product: Jamba2 weights
+  methods:
+  - download_self_host
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'quota_reset: not applicable to model license; deployment-specific'
+  - 'billing: infrastructure costs unknown'
+  evidence_ids:
+  - src-cd9a80108d1d
+  notes:
+  - Apache2 Jamba2 release; do not inherit older Jamba license.
+  - not applicable to model license; deployment-specific
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: not applicable to model license; deployment-specific
+  conditions:
+  - Apache2 Jamba2 release; do not inherit older Jamba license.
+  - not applicable to model license; deployment-specific
+  - 'Account requirement: download gate not verified'
+- schema_version: '1.0'
+  id: access-providers-access-bfl-api
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: bfl
+  model_label: null
+  product: FLUX API / Playground
+  methods:
+  - media_credits
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'quota_reset: concurrency/reset unknown'
+  - 'billing: 1 credit=$0.01; image or output-video-second pricing'
+  evidence_ids:
+  - src-752c7dd560da
+  notes:
+  - concurrency/reset unknown
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: concurrency/reset unknown
+  conditions:
+  - concurrency/reset unknown
+- schema_version: '1.0'
+  id: access-providers-access-elevenapi
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: elevenlabs
+  model_label: null
+  product: ElevenAPI
+  methods:
+  - api_paygo_or_subscription
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'quota_reset: monthly plan credits; detailed rollover/reset not verified'
+  - 'billing: model-specific characters/audio/media units; subscriptions supply included usage'
+  evidence_ids:
+  - src-bcc14c31357b
+  notes:
+  - monthly plan credits; detailed rollover/reset not verified
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: monthly plan credits; detailed rollover/reset not verified
+  conditions:
+  - monthly plan credits; detailed rollover/reset not verified
+- schema_version: '1.0'
+  id: access-providers-access-opencode-client
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: null
+  model_label: null
+  product: OpenCode
+  methods:
+  - client
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'billing: depends on chosen remote/local backend; client alone supplies no inference entitlement'
+  evidence_ids:
+  - src-13da216438ac
+  notes: []
+  client_id: client-opencode
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-providers-access-opencode-zen
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: opencode-zen
+  model_label: null
+  product: Zen
+  methods:
+  - gateway_api
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'quota_reset: workspace/member monthly spend caps; precise reset timezone unknown'
+  - 'billing: prepaid per-token usage plus card fees'
+  evidence_ids:
+  - src-772c9fd668f0
+  notes:
+  - workspace/member monthly spend caps; precise reset timezone unknown
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: workspace/member monthly spend caps; precise reset timezone unknown
+  conditions:
+  - workspace/member monthly spend caps; precise reset timezone unknown
+- schema_version: '1.0'
+  id: access-providers-access-opencode-go
+  verified_at: '2026-10-06'
+  model_id: null
+  provider_id: opencode-zen
+  model_label: null
+  product: Go / Go Plus
+  methods:
+  - coding_subscription
+  status: documented route; account eligibility unverified
+  price_ids: []
+  restrictions:
+  - 'quota_reset: 5-hour, weekly and monthly limits; consumption model varies; request tables are estimates'
+  - 'billing: $10 / $40 per month'
+  evidence_ids:
+  - src-35b3dc84644e
+  notes:
+  - Typical coding-agent traffic and session identification required; only one subscriber per workspace. Optional
+    Zen-balance fallback can incur metered usage after limits.
+  - 5-hour, weekly and monthly limits; consumption model varies; request tables are estimates
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: 5-hour, weekly and monthly limits; consumption model varies; request tables are estimates
+  conditions:
+  - Typical coding-agent traffic and session identification required; only one subscriber per workspace. Optional
+    Zen-balance fallback can incur metered usage after limits.
+  - 5-hour, weekly and monthly limits; consumption model varies; request tables are estimates
+- schema_version: '1.0'
+  id: access-proprietary-33-google-ai-studio
+  verified_at: '2026-10-06'
+  model_id: gemini-3-8-flash
+  provider_id: google-ai-studio
+  model_label: gemini38flash
+  product: Google AI Studio
+  methods:
+  - developer-web-ui
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-c4c7ba8fda18
+  - src-116c1a7f3be0
+  notes:
+  - Distribution card names app, but consumer plan page advertises 3.6 Flash and 3.1 Pro; exact selector/rollout
+    access unknown.
+  - Do not infer API entitlement from access in this product.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-33-google-consumer
+  verified_at: '2026-10-06'
+  model_id: gemini-3-8-flash
+  provider_id: google-consumer
+  model_label: gemini38flash
+  product: Gemini app / Google AI plans
+  methods:
+  - first-party-chat
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-c4c7ba8fda18
+  - src-116c1a7f3be0
+  notes:
+  - Distribution card names app, but consumer plan page advertises 3.6 Flash and 3.1 Pro; exact selector/rollout
+    access unknown.
+  - Do not infer API entitlement from access in this product.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-33-google-antigravity
+  verified_at: '2026-10-06'
+  model_id: gemini-3-8-flash
+  provider_id: google-antigravity
+  model_label: gemini38flash
+  product: Google Antigravity
+  methods:
+  - ide
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-c4c7ba8fda18
+  - src-116c1a7f3be0
+  notes:
+  - Distribution card names app, but consumer plan page advertises 3.6 Flash and 3.1 Pro; exact selector/rollout
+    access unknown.
+  - Do not infer API entitlement from access in this product.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-34-google-ai-studio
+  verified_at: '2026-10-06'
+  model_id: gemini-3-1-pro-preview
+  provider_id: google-ai-studio
+  model_label: gemini31pro
+  product: Google AI Studio
+  methods:
+  - developer-web-ui
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-564638136e50
+  - src-6b2bf752a4f2
+  - src-07ba3e0f52cc
+  notes:
+  - ''
+  - Do not infer API entitlement from access in this product.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-34-google-consumer
+  verified_at: '2026-10-06'
+  model_id: gemini-3-1-pro-preview
+  provider_id: google-consumer
+  model_label: gemini31pro
+  product: Gemini app / Google AI plans
+  methods:
+  - first-party-chat
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-564638136e50
+  - src-6b2bf752a4f2
+  - src-07ba3e0f52cc
+  notes:
+  - ''
+  - Do not infer API entitlement from access in this product.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-34-google-antigravity
+  verified_at: '2026-10-06'
+  model_id: gemini-3-1-pro-preview
+  provider_id: google-antigravity
+  model_label: gemini31pro
+  product: Google Antigravity
+  methods:
+  - ide
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-564638136e50
+  - src-6b2bf752a4f2
+  - src-07ba3e0f52cc
+  notes:
+  - ''
+  - Do not infer API entitlement from access in this product.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-34-google-cli
+  verified_at: '2026-10-06'
+  model_id: gemini-3-1-pro-preview
+  provider_id: google-cli
+  model_label: gemini31pro
+  product: Gemini CLI
+  methods:
+  - cli
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-564638136e50
+  - src-6b2bf752a4f2
+  - src-07ba3e0f52cc
+  notes:
+  - ''
+  - Do not infer API entitlement from access in this product.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-35-google-ai-studio
+  verified_at: '2026-10-06'
+  model_id: gemini-3-5-flash-lite
+  provider_id: google-ai-studio
+  model_label: gemini35lite
+  product: Google AI Studio
+  methods:
+  - developer-web-ui
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-56f9dadd63b1
+  - src-f7fe39222f11
+  notes:
+  - ''
+  - Do not infer API entitlement from access in this product.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-35-google-consumer
+  verified_at: '2026-10-06'
+  model_id: gemini-3-5-flash-lite
+  provider_id: google-consumer
+  model_label: gemini35lite
+  product: Gemini app / Google AI plans
+  methods:
+  - first-party-chat
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-56f9dadd63b1
+  - src-f7fe39222f11
+  notes:
+  - ''
+  - Do not infer API entitlement from access in this product.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-36-google-ai-studio
+  verified_at: '2026-10-06'
+  model_id: gemini-3-pro-image
+  provider_id: google-ai-studio
+  model_label: nanobananapro
+  product: Google AI Studio
+  methods:
+  - developer-web-ui
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-0472a026e3db
+  - src-21fe0d4c63a7
+  notes:
+  - ''
+  - Do not infer API entitlement from access in this product.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-36-google-consumer
+  verified_at: '2026-10-06'
+  model_id: gemini-3-pro-image
+  provider_id: google-consumer
+  model_label: nanobananapro
+  product: Gemini app / Google AI plans
+  methods:
+  - first-party-chat
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-0472a026e3db
+  - src-21fe0d4c63a7
+  notes:
+  - ''
+  - Do not infer API entitlement from access in this product.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-37-google-ai-studio
+  verified_at: '2026-10-06'
+  model_id: veo-3-1-generate-preview
+  provider_id: google-ai-studio
+  model_label: veo31
+  product: Google AI Studio
+  methods:
+  - developer-web-ui
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-521c059d5d6a
+  notes:
+  - Current consumer product selector was not verified; do not equate historical Flow availability with this
+    precise endpoint.
+  - Do not infer API entitlement from access in this product.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-38-google-ai-studio
+  verified_at: '2026-10-06'
+  model_id: lyria-3-5
+  provider_id: google-ai-studio
+  model_label: lyria35
+  product: Google AI Studio
+  methods:
+  - developer-web-ui
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-ef50a5784fac
+  - src-adf03d8b2d85
+  notes:
+  - ''
+  - Do not infer API entitlement from access in this product.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-38-google-consumer
+  verified_at: '2026-10-06'
+  model_id: lyria-3-5
+  provider_id: google-consumer
+  model_label: lyria35
+  product: Gemini app / Google AI plans
+  methods:
+  - first-party-chat
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-ef50a5784fac
+  - src-adf03d8b2d85
+  notes:
+  - ''
+  - Do not infer API entitlement from access in this product.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-39-google-ai-studio
+  verified_at: '2026-10-06'
+  model_id: gemini-3-8-live
+  provider_id: google-ai-studio
+  model_label: gemini38live
+  product: Google AI Studio
+  methods:
+  - developer-web-ui
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-04c98c33c883
+  - src-744e7330e24d
+  notes:
+  - Consumer Gemini Live branding alone does not promise a pinned API model.
+  - Do not infer API entitlement from access in this product.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-39-google-consumer
+  verified_at: '2026-10-06'
+  model_id: gemini-3-8-live
+  provider_id: google-consumer
+  model_label: gemini38live
+  product: Gemini app / Google AI plans
+  methods:
+  - first-party-chat
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-04c98c33c883
+  - src-744e7330e24d
+  notes:
+  - Consumer Gemini Live branding alone does not promise a pinned API model.
+  - Do not infer API entitlement from access in this product.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-40-google-ai-studio
+  verified_at: '2026-10-06'
+  model_id: gemma-4-31b-it
+  provider_id: google-ai-studio
+  model_label: gemma4
+  product: Google AI Studio
+  methods:
+  - developer-web-ui
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-a24fd97eb3d0
+  - src-ded81031faae
+  - src-2f3ae40d3bb7
+  notes:
+  - 31B/26B hosted through Gemini API/AI Studio; downloaded weights permit separate local runtimes and tuning.
+    No consumer Gemini model-selector access established.
+  - Do not infer API entitlement from access in this product.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-41-google-ai-studio
+  verified_at: '2026-10-06'
+  model_id: gemini-omni-1-1-flash
+  provider_id: google-ai-studio
+  model_label: omni11flash
+  product: Google AI Studio
+  methods:
+  - developer-web-ui
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-3b883af04aa0
+  - src-0472a026e3db
+  notes:
+  - Catalog placement under Preview conflicts with model page and dated GA notes; use exact stable endpoint.
+  - Do not infer API entitlement from access in this product.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-41-google-consumer
+  verified_at: '2026-10-06'
+  model_id: gemini-omni-1-1-flash
+  provider_id: google-consumer
+  model_label: omni11flash
+  product: Gemini app / Google AI plans
+  methods:
+  - first-party-chat
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-3b883af04aa0
+  - src-0472a026e3db
+  notes:
+  - Catalog placement under Preview conflicts with model page and dated GA notes; use exact stable endpoint.
+  - Do not infer API entitlement from access in this product.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []
+- schema_version: '1.0'
+  id: access-proprietary-42-google-ai-studio
+  verified_at: '2026-10-06'
+  model_id: gemini4argon
+  provider_id: google-ai-studio
+  model_label: gemini4argon
+  product: Google AI Studio
+  methods:
+  - developer-web-ui
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
+  price_ids: []
+  restrictions: []
+  evidence_ids:
+  - src-6381db252dee
+  - src-919b66e84fc3
+  notes:
+  - Official announcement restricts initial access to trusted Fairwind cyber defenders. Public catalog updated
+    Oct 1 still omits Argon. Do not infer access from Ultra subscription alone.
+  - Do not infer API entitlement from access in this product.
+  client_id: null
+  requires_account: null
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions: []

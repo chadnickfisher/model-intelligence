@@ -1,0 +1,191 @@
+schema_version: '1.0'
+id: claude-sonnet-5-5
+verified_at: '2026-10-06'
+identity:
+  name: Claude Sonnet 5.5
+  creator: Anthropic
+  family: Claude 5
+  version: null
+  release_date: '2026-09-28'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: null
+    status: unknown
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-752375ff0c97
+    - src-f3655eaf1407
+    - src-4d947df5f3d7
+    - src-4e3ca8a95d36
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value: 1000000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: 128000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value: Multilingual; exact inventory not specified
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  knowledge_cutoff:
+    value: 2026-06
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weights:
+    value: closed
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  thinking:
+    value: adaptive
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  default_api_effort:
+    value: high
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  api_id:
+    value: claude-sonnet-5-5
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  training_cutoff:
+    value: 2026-06
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  batch_beta_output_tokens:
+    value: 300000
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  reasoning_efforts:
+    value:
+    - low
+    - medium
+    - high
+    - xhigh
+    - max
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  earliest_retirement_date:
+    value: '2027-09-28'
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  default_app_effort:
+    value: medium
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  restrictions:
+    value:
+    - Use between_tools for no upfront thinking; forced tool use rejected.
+    - Old computer_20251124 tool rejected on Claude API and Google Cloud.
+    - 300K output only Message Batches beta with documented header.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  retirement_note:
+    value: Earliest allowed retirement is not an announced shutdown.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+licensing:
+  name: null
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id002
+local_inference:
+  availability: unavailable
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id002
+capabilities:
+- task: coding-at-different-effort-budgets
+  judgment: Strong terminal/task benchmark performer; tune effort rather than assuming maximum is best.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-4d947df5f3d7
+  - src-4e3ca8a95d36
+  contradictory_evidence_ids: []
+  conditions:
+  - AA max/default fallback; creator and AA terminal scores differ because setups differ.
+  known_failure_modes:
+  - Vendor reports two inspected max-effort FrontierCode cases with timeout or out-of-scope extra edits from
+    expanded subagent review.
+  evidence_notes:
+  - 'supporting evidence: AA reports Terminal-Bench4.0 about64% at max and knowledge-work results near Opus5.5.'
+  - 'contradictory evidence: Anthropic FrontierCode: max46.2%, xhigh52.1%; extra subagent reviews caused timeout
+    or out-of-scope edits.'
+  - 'Observation obs-3416d44a445c: Strong terminal/task benchmark performer; tune effort rather than assuming
+    maximum is best.'
+  - 'Potential risk (not a measured failure): Overworking, scope expansion, timeouts and large reasoning bills.'
+- task: cost-sensitive-professional-workflows
+  judgment: Low per-token price is useful only when effort and total tokens are controlled.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-4e3ca8a95d36
+  - src-4d947df5f3d7
+  contradictory_evidence_ids: []
+  conditions:
+  - Different effort/workload distributions explain divergent conclusions; max is not app-default medium.
+  known_failure_modes:
+  - AA max-effort run used approximately193k output tokens/task and higher benchmark cost than predecessor.
+  evidence_notes:
+  - 'Conservative baseline confidence: broader convergence has not been independently audited.'
+  - 'supporting evidence: Vendor reports up to30% less cost/task than Sonnet5 in its testing.'
+  - 'contradictory evidence: AA max uses approximately193k output tokens/task and costs$7.60/task, about50%
+    above Sonnet5 on its suite.'
+  - 'Observation obs-8ed2b3f90f11: Low per-token price is useful only when effort and total tokens are controlled.'
+  - 'Potential risk (not a measured failure): Subscription allowance or API budget can be exhausted by long
+    reasoning.'
+performance_characteristics: []
+access_ids:
+- access-proprietary-access-18
+- access-proprietary-access-19-aws-bedrock
+- access-proprietary-access-19-google-cloud
+- access-proprietary-access-19-azure-foundry
+- access-proprietary-access-22-2
+- access-proprietary-access-22-ide-2
+- access-proprietary-access-23-0
+price_ids:
+- price-proprietary-claude-sonnet-5-5-anthropic-706ffb2ac9c2
+- price-proprietary-claude-sonnet-5-5-anthropic-ed2559301c6f
+evidence_ids: *id002
+notes: []
+limitations:
+- Undisclosed architecture and parameter count
+- Exact supported-language inventory and per-language quality not verified

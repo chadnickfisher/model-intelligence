@@ -1,0 +1,144 @@
+schema_version: '1.0'
+id: phi-4-multimodal-instruct
+verified_at: '2026-10-06'
+identity:
+  name: Phi-4 Multimodal Instruct
+  creator: Microsoft
+  family: Phi-4
+  version: Phi-4-multimodal-instruct
+  release_date: null
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: Phi-4 Mini dense language backbone with vision/audio encoders and modality-specific adapters
+    status: documented
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-3c2db7ec3521
+    - src-29885c43e537
+    - src-2a442166513f
+    - src-99b21e349ac9
+  parameters:
+    value:
+      total_billion: 5.6
+      active_billion: null
+      scope: Creator-declared complete model; multimodal active count depends on input modality.
+      exact_parameter_count: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value:
+      native_tokens: 131072
+      extended_tokens: null
+      max_output_tokens: null
+      notes: Input plus generated output share capacity. Endpoint limits can differ.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      - audio
+      output:
+      - text
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_support:
+    value:
+      supported: null
+      notes: Text and speech coverage differ; exact modality-specific lists were not fully verified.
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  weights:
+    value:
+      downloadable: true
+      official_repository: https://huggingface.co/microsoft/Phi-4-multimodal-instruct
+      formats: null
+      gate: null
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  weight_only_floor_decimal_gb:
+    value:
+      bf16: 11.2
+      int8: 5.6
+      ideal_4bit: 2.8
+    status: estimated
+    conditions:
+    - Batch 1, short/moderate context unless otherwise stated.
+    - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+      stated count, runtime, OS and temporary loading buffers.
+    - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
+      storage of inactive experts.
+    - Published maximum context is not a guarantee it fits on the suggested local machine.
+    evidence_ids: *id002
+  release_date_reported:
+    value: 2025-02
+    status: documented
+    conditions:
+    - Source supplied a partial or non-day date; not promoted to an exact release date.
+    evidence_ids: *id002
+  release_date_precision:
+    value: month
+    status: documented
+    conditions: []
+    evidence_ids: *id002
+licensing:
+  name: MIT
+  commercial_use: allowed
+  redistribution: 'true'
+  fine_tuning: null
+  hosted_service: 'true'
+  restrictions:
+  - Retain copyright/license notices; comply with the license.
+  - A license summary, not legal advice. Open weights does not by itself establish a fully open-source AI system.
+  evidence_ids:
+  - src-3c2db7ec3521
+local_inference:
+  availability: available
+  hardware_notes:
+  - Planning:8–12GB for supported quantization, or16–24GB for BF16 plus vision/audio/runtime headroom.
+  - 128k capacity does not automatically fit local budgets; modality batches increase memory.
+  conditions:
+  - Batch 1, short/moderate context unless otherwise stated.
+  - Weight-only floors exclude quantization metadata, KV cache, activations, vision encoder if outside the
+    stated count, runtime, OS and temporary loading buffers.
+  - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
+    of inactive experts.
+  - Published maximum context is not a guarantee it fits on the suggested local machine.
+  evidence_ids: *id002
+capabilities:
+- task: compact-audio-image-understanding
+  judgment: Multimodal adds image and audio input to a small text-output model.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-29885c43e537
+  contradictory_evidence_ids: []
+  conditions:
+  - Use supported modality adapters; it does not generate audio.
+  known_failure_modes:
+  - Speech-language coverage differs from text; long-session drift and misleading sensitive voice-attribute
+    inferences.
+  evidence_notes: []
+performance_characteristics: []
+access_ids:
+- access-open-phi-4-multimodal-instruct-weights
+price_ids: []
+evidence_ids: *id002
+notes: []
+limitations:
+- No model inference or benchmark was run in this research pass.

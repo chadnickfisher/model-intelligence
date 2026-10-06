@@ -1,0 +1,171 @@
+schema_version: '1.0'
+id: veo-3-1-generate-preview
+verified_at: '2026-10-06'
+identity:
+  name: Veo 3.1
+  creator: Google DeepMind
+  family: Veo
+  version: null
+  release_date: '2025-10-15'
+  latest_meaningful_update: null
+  status: preview
+  model_types:
+  - video_generation
+specifications:
+  architecture:
+    value: null
+    status: unknown
+    conditions: &id001 []
+    evidence_ids: &id002
+    - src-6fab7b07e4f3
+    - src-10e39629c3d3
+    - src-521c059d5d6a
+    - src-a24fd97eb3d0
+  parameters:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  context_window:
+    value: 1024
+    status: documented
+    conditions: *id001
+    evidence_ids: &id003
+    - src-521c059d5d6a
+  maximum_output:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id003
+  modalities:
+    value:
+      input:
+      - text
+      - image
+      - prior_generated_video_for_extension
+      output:
+      - video
+      - synchronized_audio
+    status: documented
+    conditions: *id001
+    evidence_ids: *id003
+  language_support:
+    value:
+      fully_supported:
+      - English
+      other_languages: not evaluated; may work with variable results
+      evidence_ids:
+      - src-6fab7b07e4f3
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+additional_specifications:
+  knowledge_cutoff:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  configuration:
+    value:
+      variants:
+      - veo-3.1-fast-generate-preview
+      - veo-3.1-lite-generate-preview
+      variant_note: Fast and Lite are distinct endpoints; do not silently apply standard price to them.
+      controls:
+      - first_and_last_frame
+      - up_to_three_reference_images
+      - extension
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  api_quota:
+    value:
+      rpm: null
+      tpm: null
+      rpd: null
+      reason: Project/model/tier/account-specific; inspect active AI Studio limits. No account queried.
+      evidence_ids:
+      - src-10e39629c3d3
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  canonical_endpoint:
+    value: veo-3.1-generate-preview
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  context_limit_scope:
+    value: Exact Gemini Developer API input limit
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  release_date_scope:
+    value: API endpoint release
+    status: documented
+    conditions: *id001
+    evidence_ids: *id002
+  language_list_complete:
+    value: null
+    status: unknown
+    conditions: *id001
+    evidence_ids: *id002
+  parameter_disclosure:
+    value: not disclosed in fetched public sources
+    status: documented
+    conditions: []
+    evidence_ids: *id002
+licensing:
+  name: null
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions: []
+  evidence_ids: *id002
+local_inference:
+  availability: unavailable
+  hardware_notes: []
+  conditions: []
+  evidence_ids: *id002
+capabilities:
+- task: directed-short-shots-requiring-first-last-frame-or-extensions
+  judgment: Useful specialist option; test Omni too for new general video workflows.
+  confidence: medium
+  supporting_evidence_ids:
+  - obs-a1dcd03b9809
+  contradictory_evidence_ids:
+  - obs-7d1f6921bea0
+  - obs-6dfa41ffcfec
+  conditions: []
+  known_failure_modes: []
+  evidence_notes:
+  - task-conditioned synthesis; no inference runs performed
+  - 'Observation obs-a1dcd03b9809: Native audio, frame controls, reference images and extension fit directed
+    short cinematic shots.'
+  - 'Observation obs-7d1f6921bea0: Multi-video reasoning unsupported; non-English unevaluated; audio processing/safety
+    blocks and variable latency occur.'
+  - 'Observation obs-6dfa41ffcfec: Google now recommends Omni as default video option, reserving Veo for particular
+    controls/legacy integration.'
+performance_characteristics:
+- task: measured-generation-behavior
+  judgment: 'Multi-video reasoning unsupported; non-English unevaluated; audio processing/safety blocks and
+    variable latency occur. Measurements: {"published_latency_min_seconds": 11, "published_latency_max_seconds":
+    360}. These describe the cited benchmark configuration only.'
+  confidence: medium
+  supporting_evidence_ids:
+  - obs-7d1f6921bea0
+  contradictory_evidence_ids: []
+  conditions: []
+  known_failure_modes: []
+  evidence_notes:
+  - Published range during peak periods, not independently measured or guaranteed.
+access_ids:
+- access-proprietary-37
+- access-proprietary-37-google-ai-studio
+price_ids:
+- price-proprietary-veo-3-1-generate-preview-google-developer-api-a0950450f4b5
+- price-proprietary-veo-3-1-generate-preview-google-developer-api-fdc0b33bf21d
+- price-proprietary-veo-3-1-generate-preview-google-developer-api-281d4f4cc193
+evidence_ids: *id002
+notes: []
+limitations: []

@@ -1,0 +1,33 @@
+schema_version: '1.0'
+id: ai21
+verified_at: '2026-10-06'
+name: AI21 Labs
+roles:
+- creator
+- inference-provider
+api_compatibility: []
+access_methods:
+- Jamba2 downloads; AI21 Studio and private managed/self-managed deployment options.
+geographic_availability:
+- '{"status": "partial", "summary": "Deployment choice can keep data under customer control; direct API regional
+  availability unverified."}'
+- not_exhaustively_verified
+rate_limits:
+- '{"status": "partial", "summary": "Current Studio quotas and Jamba2 API pricing unverified."}'
+caching_batching: []
+privacy_data_use:
+- '{"status": "partial", "summary": "Private VPC/on-prem options documented. Direct API retention/training
+  conditions not verified."}'
+reliability: []
+model_ids: []
+price_ids:
+- price-providers-jamba2-api-ai21-406c5e523043
+access_ids:
+- access-providers-access-ai21-selfhost
+evidence_ids:
+- src-cd9a80108d1d
+- src-dc01b961c57f
+- src-a90c98ed76ae
+notes:
+- Jamba2 3B and Mini released Apache-2.0; do not apply older Jamba custom license to Jamba2.
+limitations: []

@@ -1,0 +1,26 @@
+schema_version: '1.0'
+id: meta
+verified_at: '2026-10-06'
+name: Meta
+roles:
+- creator
+api_compatibility: []
+access_methods: []
+geographic_availability: []
+rate_limits: []
+caching_batching: []
+privacy_data_use: []
+reliability: []
+model_ids: []
+price_ids: []
+access_ids: []
+evidence_ids:
+- src-5744ead18753
+- src-65471a2c7ad5
+- src-8cb15ff6ddd4
+- src-7494e8051b41
+- src-94efd6cf8bb7
+notes: []
+limitations:
+- Privacy/data-use details were not fully verified in this baseline.
+- Exact public or account-specific quotas were not established.
