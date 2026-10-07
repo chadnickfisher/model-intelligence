@@ -47,7 +47,7 @@ Supporting sources: [Explicit Edit Benchmark public data](https://huggingface.co
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: No matched independent contradictory evaluation located. This source establishes a narrow measured route, not a general ability ranking.; Potential transfer risk, not measured semantic failure: test-free byte matching does not establish a correct code change.; Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:deepseek-v4-1-flash-scoped-mechanical; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: No matched independent contradictory evaluation located. This source establishes a narrow measured route, not a general ability ranking.; Potential transfer risk, not measured semantic failure: test-free byte matching does not establish a correct code change.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.debugging (medium confidence)
 
@@ -69,7 +69,7 @@ Supporting sources: [Bug Hunt Bench frozen measurements](https://github.com/phur
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation quality.; No matched independent contradiction located; partial successes and misses coexist.; Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:deepseek-v4-1-flash-debug-bughunt; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation quality.; No matched independent contradiction located; partial successes and misses coexist.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.frontend (medium confidence)
 
@@ -91,7 +91,7 @@ Supporting sources: [Code Arena WebDev Frontend](https://arena.ai/leaderboard/co
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-deepseek-v4-1-flash; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ### Self host cost savings (low confidence)
 

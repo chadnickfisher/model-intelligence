@@ -47,7 +47,7 @@ Supporting sources: [Explicit Edit Benchmark public data](https://huggingface.co
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: No matched independent contradictory evaluation located. This source establishes a narrow measured route, not a general ability ranking.; Potential transfer risk, not measured semantic failure: test-free byte matching does not establish a correct code change.; Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:minimax-m3-scoped-mechanical; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: No matched independent contradictory evaluation located. This source establishes a narrow measured route, not a general ability ranking.; Potential transfer risk, not measured semantic failure: test-free byte matching does not establish a correct code change.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.debugging (low confidence)
 
@@ -69,7 +69,7 @@ Supporting sources: [OdinEval program repair](https://arxiv.org/html/2608.18595v
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Preprint; check released manifest before stronger confidence. No universal language or harness transfer.; Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:minimax-m3-debug-odin; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Preprint; check released manifest before stronger confidence. No universal language or harness transfer.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.refactoring (medium confidence)
 
@@ -91,7 +91,7 @@ Supporting sources: [RefactorPlatform](https://arxiv.org/html/2609.04898v1) · [
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: One campaign, no uncertainty estimate; results tied to retrieval/scaffold. Do not transfer qwen3.6-flash or kimi-k2.6 results to current siblings. deepseek-v4-pro 77/89% has no 0813 pin and is excluded.; One author/project, no independent replication. A useful failure warning, not a measured population failure rate.; Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R05; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: One campaign, no uncertainty estimate; results tied to retrieval/scaffold. Do not transfer qwen3.6-flash or kimi-k2.6 results to current siblings. deepseek-v4-pro 77/89% has no 0813 pin and is excluded.; One author/project, no independent replication. A useful failure warning, not a measured population failure rate.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.frontend (medium confidence)
 
@@ -113,7 +113,7 @@ Supporting sources: [Code Arena WebDev Frontend](https://arena.ai/leaderboard/co
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-minimax-m3; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ## Specifications
 

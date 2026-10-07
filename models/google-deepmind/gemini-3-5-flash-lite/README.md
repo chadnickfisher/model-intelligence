@@ -49,7 +49,7 @@ Supporting sources: [Code Arena WebDev Frontend](https://arena.ai/leaderboard/co
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-gemini-3-5-flash-lite; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ### Measured generation behavior (medium confidence)
 

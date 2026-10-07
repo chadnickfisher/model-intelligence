@@ -1,10 +1,8 @@
 # Coverage and verification gaps
 
-The initial baseline is a bounded public-source research pass as of 2026-10-06. It prioritizes major current families and useful specialist/local variants. It is not an exhaustive inventory of every checkpoint, provider route, country, enterprise contract, or account quota.
+The catalog is a bounded public-evidence knowledge base. Current domain checks and remaining gaps are recorded in [research coverage](../data/research-coverage.yaml). Field and task investigations may retain explicit unknowns; domain accounting alone does not certify adequate evidence.
 
-The October 7 manual integration preserves this baseline and adds dated research observations. The [task follow-up](task-followup-2026-10-07.md) and [Haiku 5.5 initial load](haiku-5-5-load-2026-10-07.md) bring the catalog to 54 models with actual checks in all four domains. See [current domain accounting](../data/research-coverage.yaml) and [bounded-run accounting](../data/research-runs.md) for observed results, remaining evidence gaps and field-level completion. Earlier domain checks are not retroactively certified under the full-load checklist. An empty task category means no adequate judgment has yet been recorded. It does not establish model incapability.
-
-Unresolved coverage priorities include stable independent evidence for very new releases, configuration-matched latency and reliability, region-specific subscription details, actual local memory/performance at long context, enterprise negotiated pricing, and granular third-party route differences. Recheck pricing and licensing for deployment decisions.
+Coverage priorities include configuration-matched independent measurements, exact provider tariffs and eligibility, local memory/performance, and contradictions. Missing judgments do not establish model incapability. Every fact retains its actual inspection date.
 
 ## Recorded inventory
 

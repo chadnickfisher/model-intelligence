@@ -221,7 +221,7 @@ capabilities:
     original_task: fast-multimodal-assistant-and-bounded-coding-tasks
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - id: judgment-46e287976a5cc041
   scope: direct
   task_ids:
@@ -252,7 +252,7 @@ capabilities:
     original_task: unsupervised-long-horizon-terminal-execution
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 1
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - id: judgment-d060233bb88428f3
   scope: direct
   task_ids:
@@ -281,7 +281,6 @@ capabilities:
     not a general ability ranking.
   - 'Potential transfer risk, not measured semantic failure: test-free byte matching does not establish a correct
     code change.'
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gemini-3-8-flash-scoped-mechanical'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -320,7 +319,6 @@ capabilities:
   - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
     quality.
   - No matched independent contradiction located; partial successes and misses coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gemini-3-8-flash-debug-bughunt'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -350,7 +348,6 @@ capabilities:
   evidence_notes:
   - Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve xHigh as board label.
     Intro's below 50% statement is stale. Gemini 3.1 Pro 33.81±6.64 is withheld pending preview-ID mapping.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R03'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -382,7 +379,6 @@ capabilities:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-gemini-3-8-flash'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -411,7 +407,6 @@ capabilities:
   known_failure_modes:
   - Security misses and occasional unparsable output.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-gemini38'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -445,7 +440,7 @@ performance_characteristics:
     original_task: measured-generation-behavior
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 access_ids:
 - access-5f7e3a72405e1a66
 - access-931df670dc77fc41

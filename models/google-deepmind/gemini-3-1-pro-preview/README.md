@@ -49,7 +49,7 @@ Supporting sources: [Theory of Code Space: Do Code Agents Understand Software Ar
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Preliminary small synthetic corpus; no variance estimate. Authors attribute the Gemini result mainly to exploration, not inability to understand code.; Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A01; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Preliminary small synthetic corpus; no variance estimate. Authors attribute the Gemini result mainly to exploration, not inability to understand code.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.refactoring (medium confidence)
 
@@ -71,7 +71,7 @@ Supporting sources: [REFINE: A Multi-Agent LLM Approach for Evidence-Guided Code
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Static proxies do not prove executable equivalence. Broader quality metrics inconsistent; generated candidates were not integrated into repositories. Exact reasoning/sampling settings not established.; Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R04; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Static proxies do not prove executable equivalence. Broader quality metrics inconsistent; generated candidates were not integrated into repositories. Exact reasoning/sampling settings not established.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.frontend (medium confidence)
 
@@ -93,7 +93,7 @@ Supporting sources: [Code Arena WebDev Frontend](https://arena.ai/leaderboard/co
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-gemini-3-1-pro-preview; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.review (medium confidence)
 
@@ -115,7 +115,7 @@ Supporting sources: [Foundation Models as Oracles for Refactoring Correctness De
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-gemini31; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.tests (medium confidence)
 
@@ -137,7 +137,7 @@ Supporting sources: [Foundation Models as Oracles for Refactoring Correctness De
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-gemini31; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ## Specifications
 

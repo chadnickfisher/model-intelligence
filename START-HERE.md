@@ -12,4 +12,4 @@ reactivate maintenance. See [MAINTENANCE.md](MAINTENANCE.md).
 Confidence describes evidence support, not ability. Related tasks in compound
 judgments are navigation only. Read the actual conclusion, conditions, limiting
 evidence and failure modes. Unknown is not weak and a warning is not an endorsement.
-See [explicit history](history/README.md) for the limits of earlier-state queries.
+See [current records and changes](docs/change-tracking.md) for source dates and Git provenance.

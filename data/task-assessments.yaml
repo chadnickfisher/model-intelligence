@@ -1,0 +1,2535 @@
+schema_version: '1.0'
+records:
+- model_id: claude-haiku-4-5
+  task_id: agent.computer_use
+  applicability: applicable
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Computer-use tool/safety tests establish interface applicability; safety attack prevention is
+    not normal task completion quality.
+  judgment_ids: []
+  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
+    judgment is inferred from insufficient task evidence.
+  evidence_ids:
+  - src-ce7f65873843
+  - src-3044b3f1e225
+  conditions: []
+  remaining_gaps:
+  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  id: task-assessment-f410fba68cf3dead
+- model_id: claude-haiku-4-5
+  task_id: agent.long_horizon
+  applicability: applicable
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Launch context-awareness and small gateway loops do not establish sustained independent completion
+    under an exact long-horizon scaffold.
+  judgment_ids: []
+  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
+    judgment is inferred from insufficient task evidence.
+  evidence_ids:
+  - src-ce7f65873843
+  - src-ab8901f1a6fe
+  conditions: []
+  remaining_gaps:
+  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  id: task-assessment-6b5d42fcbe23e5cf
+- model_id: claude-haiku-4-5
+  task_id: agent.tool_use
+  applicability: applicable
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Tool calling applies, but one reported loop does not establish task reliability.
+  judgment_ids: []
+  confidence_rationale: One anecdotal reproduction with stochastic successes; low-confidence behavior evidence.
+  evidence_ids:
+  - src-e86418b60c92
+  - src-e1910c5126bc
+  conditions: []
+  remaining_gaps:
+  - No exact-setup success rate, causal attribution or recovery verified.
+  id: task-assessment-c91f33429215e18d
+- model_id: claude-haiku-4-5
+  task_id: audio.conversation
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native interface lacks this task input or generated output modality.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-e1910c5126bc
+  conditions:
+  - Native documented Haiku API; external tools can perform separate work.
+  remaining_gaps: []
+  id: task-assessment-807bf6ae2fc78a8b
+- model_id: claude-haiku-4-5
+  task_id: audio.speech_generation
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native interface lacks this task input or generated output modality.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-e1910c5126bc
+  conditions:
+  - Native documented Haiku API; external tools can perform separate work.
+  remaining_gaps: []
+  id: task-assessment-e765deb0b6b7022b
+- model_id: claude-haiku-4-5
+  task_id: audio.understanding
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native interface lacks this task input or generated output modality.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-e1910c5126bc
+  conditions:
+  - Native documented Haiku API; external tools can perform separate work.
+  remaining_gaps: []
+  id: task-assessment-6f4b7a04ae47b01b
+- model_id: claude-haiku-4-5
+  task_id: coding.architecture
+  applicability: applicable
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Business-analysis text, short functions and code review do not measure design tradeoffs across
+    a real system.
+  judgment_ids: []
+  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
+    judgment is inferred from insufficient task evidence.
+  evidence_ids:
+  - src-bfdf4f90e154
+  - src-5a27e3e4bac2
+  conditions: []
+  remaining_gaps:
+  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  id: task-assessment-45060bc73fea456f
+- model_id: claude-haiku-4-5
+  task_id: coding.debugging
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-07'
+  rationale: Original measured outputs and metric match this exact task boundary; conclusion and failure modes
+    stay within the recorded setup.
+  judgment_ids:
+  - judgment-4310e42c6be1639d
+  confidence_rationale: Low confidence reflects the specific source, measurement date/setup, identity gaps
+    and limited replication; benchmark score is not confidence. Empty contrary evidence means none was located
+    in this pass.
+  evidence_ids:
+  - src-2e03cb5a63cf
+  conditions: []
+  remaining_gaps:
+  - Independent replication, serving identity and broader task transfer remain limited.
+  id: task-assessment-035f9b56bc115000
+- model_id: claude-haiku-4-5
+  task_id: coding.frontend
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-07'
+  rationale: Inspected named-model frontend preference result.
+  judgment_ids:
+  - judgment-db0341f19aa38f54
+  confidence_rationale: Medium confidence in the recorded hosted preference finding; this does not establish
+    production correctness or other coding tasks.
+  evidence_ids:
+  - src-4e6f4ff35504
+  conditions: []
+  remaining_gaps: []
+  id: task-assessment-f1596b82de2a6877
+- model_id: claude-haiku-4-5
+  task_id: coding.refactoring
+  applicability: applicable
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Short implementation and diagnosis evaluations do not measure behavior-preserving restructuring
+    with validation.
+  judgment_ids: []
+  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
+    judgment is inferred from insufficient task evidence.
+  evidence_ids:
+  - src-2e03cb5a63cf
+  - src-5a27e3e4bac2
+  conditions: []
+  remaining_gaps:
+  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  id: task-assessment-a50311f0ac269e97
+- model_id: claude-haiku-4-5
+  task_id: coding.repository_work
+  applicability: applicable
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Vendor SWE-bench aggregate and gateway package fixes are compound scaffolds; no independent general
+    repository-work conclusion established.
+  judgment_ids: []
+  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
+    judgment is inferred from insufficient task evidence.
+  evidence_ids:
+  - src-ce7f65873843
+  - src-ab8901f1a6fe
+  conditions: []
+  remaining_gaps:
+  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  id: task-assessment-c4d08737257b9d09
+- model_id: claude-haiku-4-5
+  task_id: coding.review
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-07'
+  rationale: Original measured outputs and metric match this exact task boundary; conclusion and failure modes
+    stay within the recorded setup.
+  judgment_ids:
+  - judgment-e35ebbffc833ea6a
+  confidence_rationale: Low confidence reflects the specific source, measurement date/setup, identity gaps
+    and limited replication; benchmark score is not confidence. Empty contrary evidence means none was located
+    in this pass.
+  evidence_ids:
+  - src-5a27e3e4bac2
+  conditions: []
+  remaining_gaps:
+  - Independent replication, serving identity and broader task transfer remain limited.
+  id: task-assessment-3708053cd29c211e
+- model_id: claude-haiku-4-5
+  task_id: coding.scoped_edit
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-07'
+  rationale: Function implementation fits a scoped coding task.
+  judgment_ids:
+  - judgment-c01714fd674be14c
+  confidence_rationale: 'Low confidence: nine saturated short tasks, one attempt and unknown hosted backend;
+    execution success supports the narrow task, not general coding superiority.'
+  evidence_ids:
+  - src-9d3919791a72
+  - src-9be7b13428d4
+  conditions: []
+  remaining_gaps: []
+  id: task-assessment-9876a6a73050ac63
+- model_id: claude-haiku-4-5
+  task_id: coding.tests
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-07'
+  rationale: Original test-fragility paper supports the retained warning.
+  judgment_ids:
+  - judgment-19237c319f0876ad
+  confidence_rationale: 'Low confidence: two-shot snippet setup, semantic changes and unpinned API identity
+    limit transfer; preserve the warning.'
+  evidence_ids:
+  - src-995284168dc8
+  conditions: []
+  remaining_gaps: []
+  id: task-assessment-971e56e026ee6b79
+- model_id: claude-haiku-4-5
+  task_id: context.reasoning
+  applicability: applicable
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Long-context composite and grade-school questions do not isolate cross-document reasoning under
+    a controlled supplied-context setup.
+  judgment_ids: []
+  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
+    judgment is inferred from insufficient task evidence.
+  evidence_ids:
+  - src-28f7598af662
+  - src-4313a1decc61
+  conditions: []
+  remaining_gaps:
+  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  id: task-assessment-70acb95d3946a2a0
+- model_id: claude-haiku-4-5
+  task_id: context.retrieval
+  applicability: applicable
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Declared context size and structured extraction do not isolate recall from supplied long context;
+    external-corpus search is a separate task.
+  judgment_ids: []
+  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
+    judgment is inferred from insufficient task evidence.
+  evidence_ids:
+  - src-bfdf4f90e154
+  - src-6042302df83d
+  conditions: []
+  remaining_gaps:
+  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  id: task-assessment-dcc5526d2e5aed56
+- model_id: claude-haiku-4-5
+  task_id: image.editing
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native interface lacks this task input or generated output modality.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-e1910c5126bc
+  conditions:
+  - Native documented Haiku API; external tools can perform separate work.
+  remaining_gaps: []
+  id: task-assessment-80f11fd57f7d5baf
+- model_id: claude-haiku-4-5
+  task_id: image.generation
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native interface lacks this task input or generated output modality.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-e1910c5126bc
+  conditions:
+  - Native documented Haiku API; external tools can perform separate work.
+  remaining_gaps: []
+  id: task-assessment-0a8fa9de3191200f
+- model_id: claude-haiku-4-5
+  task_id: knowledge.classification
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-07'
+  rationale: Original measured outputs and metric match this exact task boundary; conclusion and failure modes
+    stay within the recorded setup.
+  judgment_ids:
+  - judgment-889de5fb1a96f5d4
+  confidence_rationale: Low confidence reflects the specific source, measurement date/setup, identity gaps
+    and limited replication; benchmark score is not confidence. Empty contrary evidence means none was located
+    in this pass.
+  evidence_ids:
+  - src-4228c246c84d
+  conditions: []
+  remaining_gaps:
+  - Independent replication, serving identity and broader task transfer remain limited.
+  id: task-assessment-f5d314fd7a92ac1b
+- model_id: claude-haiku-4-5
+  task_id: knowledge.extraction
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-07'
+  rationale: Original measured outputs and metric match this exact task boundary; conclusion and failure modes
+    stay within the recorded setup.
+  judgment_ids:
+  - judgment-623c7e8d247d4615
+  confidence_rationale: Low confidence reflects the specific source, measurement date/setup, identity gaps
+    and limited replication; benchmark score is not confidence. Empty contrary evidence means none was located
+    in this pass.
+  evidence_ids:
+  - src-bfdf4f90e154
+  - src-61e1f4d1aadb
+  conditions: []
+  remaining_gaps:
+  - Independent replication, serving identity and broader task transfer remain limited.
+  id: task-assessment-1b0fb30d39474ae8
+- model_id: claude-haiku-4-5
+  task_id: knowledge.rag
+  applicability: applicable
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Inspected RAG paper measures injected-failure localization; patent retrieval measures legal rewriting.
+    Neither is exact-model grounded-answer quality.
+  judgment_ids: []
+  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
+    judgment is inferred from insufficient task evidence.
+  evidence_ids:
+  - src-6042302df83d
+  - src-4313a1decc61
+  conditions: []
+  remaining_gaps:
+  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  id: task-assessment-23bab6c2ee79504a
+- model_id: claude-haiku-4-5
+  task_id: knowledge.retrieval
+  applicability: applicable
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Haiku text output can propose search/ranking, but retrieved evidence concerns RAG diagnosis or
+    patent revision rather than isolated corpus ranking quality.
+  judgment_ids: []
+  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
+    judgment is inferred from insufficient task evidence.
+  evidence_ids:
+  - src-6042302df83d
+  - src-4313a1decc61
+  conditions: []
+  remaining_gaps:
+  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  id: task-assessment-070c4cf809080b7a
+- model_id: claude-haiku-4-5
+  task_id: language.instruction_following
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-07'
+  rationale: Original measured outputs and metric match this exact task boundary; conclusion and failure modes
+    stay within the recorded setup.
+  judgment_ids:
+  - judgment-7156ae35731ec615
+  confidence_rationale: Low confidence reflects the specific source, measurement date/setup, identity gaps
+    and limited replication; benchmark score is not confidence. Empty contrary evidence means none was located
+    in this pass.
+  evidence_ids:
+  - src-e495b08b40a6
+  conditions: []
+  remaining_gaps:
+  - Independent replication, serving identity and broader task transfer remain limited.
+  id: task-assessment-a9238a6155ba837c
+- model_id: claude-haiku-4-5
+  task_id: language.multilingual_chat
+  applicability: applicable
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Translated MMLU and Portuguese literary constraints do not establish multi-language conversational
+    quality.
+  judgment_ids: []
+  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
+    judgment is inferred from insufficient task evidence.
+  evidence_ids:
+  - src-07c29d610258
+  - src-e495b08b40a6
+  conditions: []
+  remaining_gaps:
+  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  id: task-assessment-30b59fee8e68d79e
+- model_id: claude-haiku-4-5
+  task_id: language.summarization
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-07'
+  rationale: Original measured outputs and metric match this exact task boundary; conclusion and failure modes
+    stay within the recorded setup.
+  judgment_ids:
+  - judgment-d14d5e6960fa913c
+  confidence_rationale: Low confidence reflects the specific source, measurement date/setup, identity gaps
+    and limited replication; benchmark score is not confidence. Empty contrary evidence means none was located
+    in this pass.
+  evidence_ids:
+  - src-bfdf4f90e154
+  - src-61e1f4d1aadb
+  conditions: []
+  remaining_gaps:
+  - Independent replication, serving identity and broader task transfer remain limited.
+  id: task-assessment-cd9224eb0ce1b12a
+- model_id: claude-haiku-4-5
+  task_id: language.translation
+  applicability: applicable
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Translated question comprehension is not model translation; no exact-model translation fidelity
+    result established in the inspected sources.
+  judgment_ids: []
+  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
+    judgment is inferred from insufficient task evidence.
+  evidence_ids:
+  - src-07c29d610258
+  - src-e495b08b40a6
+  conditions: []
+  remaining_gaps:
+  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  id: task-assessment-c4edf245f3de0db4
+- model_id: claude-haiku-4-5
+  task_id: language.writing
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-07'
+  rationale: Original measured outputs and metric match this exact task boundary; conclusion and failure modes
+    stay within the recorded setup.
+  judgment_ids:
+  - judgment-391bee7f74fddbd3
+  confidence_rationale: Low confidence reflects the specific source, measurement date/setup, identity gaps
+    and limited replication; benchmark score is not confidence. Empty contrary evidence means none was located
+    in this pass.
+  evidence_ids:
+  - src-bfdf4f90e154
+  - src-61e1f4d1aadb
+  conditions: []
+  remaining_gaps:
+  - Independent replication, serving identity and broader task transfer remain limited.
+  id: task-assessment-be1059e3be2c76c5
+- model_id: claude-haiku-4-5
+  task_id: music.generation
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native interface lacks this task input or generated output modality.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-e1910c5126bc
+  conditions:
+  - Native documented Haiku API; external tools can perform separate work.
+  remaining_gaps: []
+  id: task-assessment-103aa45aa3e96b74
+- model_id: claude-haiku-4-5
+  task_id: reasoning.general
+  applicability: applicable
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Grade-school arithmetic, optimization/code and commercial composite scores do not isolate general
+    reasoning breadth.
+  judgment_ids: []
+  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
+    judgment is inferred from insufficient task evidence.
+  evidence_ids:
+  - src-28f7598af662
+  - src-e7bbd7b591b2
+  conditions: []
+  remaining_gaps:
+  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  id: task-assessment-7f40f93eccc45929
+- model_id: claude-haiku-4-5
+  task_id: reasoning.math
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-07'
+  rationale: Original measured outputs and metric match this exact task boundary; conclusion and failure modes
+    stay within the recorded setup.
+  judgment_ids:
+  - judgment-2e00e2f0e910045e
+  confidence_rationale: Low confidence reflects the specific source, measurement date/setup, identity gaps
+    and limited replication; benchmark score is not confidence. Empty contrary evidence means none was located
+    in this pass.
+  evidence_ids:
+  - src-28f7598af662
+  conditions: []
+  remaining_gaps:
+  - Independent replication, serving identity and broader task transfer remain limited.
+  id: task-assessment-00995d010b732e38
+- model_id: claude-haiku-4-5
+  task_id: reasoning.scientific
+  applicability: applicable
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Biology safety evaluations and optimization coding do not measure scientific derivation or explanation
+    correctness.
+  judgment_ids: []
+  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
+    judgment is inferred from insufficient task evidence.
+  evidence_ids:
+  - src-ce7f65873843
+  - src-e7bbd7b591b2
+  conditions: []
+  remaining_gaps:
+  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  id: task-assessment-0f30a5835019c235
+- model_id: claude-haiku-4-5
+  task_id: research.fact_check
+  applicability: applicable
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Reddit fact-check-response labels measure classification, not source checking or claim adjudication;
+    no exact verification study established.
+  judgment_ids: []
+  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
+    judgment is inferred from insufficient task evidence.
+  evidence_ids:
+  - src-4228c246c84d
+  conditions: []
+  remaining_gaps:
+  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  id: task-assessment-ecc4e04d13da8e1f
+- model_id: claude-haiku-4-5
+  task_id: research.synthesis
+  applicability: applicable
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Business summaries and patent revision do not independently establish multi-source synthesis with
+    contradiction handling.
+  judgment_ids: []
+  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
+    judgment is inferred from insufficient task evidence.
+  evidence_ids:
+  - src-bfdf4f90e154
+  - src-4313a1decc61
+  conditions: []
+  remaining_gaps:
+  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  id: task-assessment-f5984a7e326c5042
+- model_id: claude-haiku-4-5
+  task_id: video.editing
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native interface lacks this task input or generated output modality.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-e1910c5126bc
+  conditions:
+  - Native documented Haiku API; external tools can perform separate work.
+  remaining_gaps: []
+  id: task-assessment-9a882d3c3ebdd8c9
+- model_id: claude-haiku-4-5
+  task_id: video.generation
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native interface lacks this task input or generated output modality.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-e1910c5126bc
+  conditions:
+  - Native documented Haiku API; external tools can perform separate work.
+  remaining_gaps: []
+  id: task-assessment-2019cba138b2e373
+- model_id: claude-haiku-4-5
+  task_id: vision.grounding
+  applicability: applicable
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Image input support and optimization figure extraction do not measure localized boxes, points
+    or spatial grounding.
+  judgment_ids: []
+  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
+    judgment is inferred from insufficient task evidence.
+  evidence_ids:
+  - src-e7bbd7b591b2
+  conditions: []
+  remaining_gaps:
+  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  id: task-assessment-3e2254d6ed03b5dc
+- model_id: claude-haiku-4-5
+  task_id: vision.question_answering
+  applicability: applicable
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Joint figure-to-Gurobi extraction and code generation cannot isolate question-answer correctness
+    about images.
+  judgment_ids: []
+  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
+    judgment is inferred from insufficient task evidence.
+  evidence_ids:
+  - src-e7bbd7b591b2
+  conditions: []
+  remaining_gaps:
+  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  id: task-assessment-726103d8f98518b0
+- model_id: cohere-embed-5-fast
+  task_id: agent.computer_use
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot operate a graphical interface through that
+    interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-18764875e8ebf8d0
+- model_id: cohere-embed-5-fast
+  task_id: agent.long_horizon
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot sustain an action sequence through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-5b2e0eed6f0c90d9
+- model_id: cohere-embed-5-fast
+  task_id: agent.tool_use
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot select and issue tool calls through that
+    interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-c9b06d6365da08a4
+- model_id: cohere-embed-5-fast
+  task_id: audio.conversation
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot conduct an audio interaction through that
+    interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-a752454902efd90f
+- model_id: cohere-embed-5-fast
+  task_id: audio.speech_generation
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot output speech through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-1afa9b9724c8a3bf
+- model_id: cohere-embed-5-fast
+  task_id: audio.understanding
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot accept and interpret audio through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-0b8baa028b109fcd
+- model_id: cohere-embed-5-fast
+  task_id: coding.architecture
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot explain a system design through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-61bf65080ea21f1e
+- model_id: cohere-embed-5-fast
+  task_id: coding.debugging
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot diagnose and repair code through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-80c268cbda8025bd
+- model_id: cohere-embed-5-fast
+  task_id: coding.frontend
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot produce a frontend implementation through
+    that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-448730541913d77b
+- model_id: cohere-embed-5-fast
+  task_id: coding.refactoring
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot produce refactored code through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-9078a50a9410ddb4
+- model_id: cohere-embed-5-fast
+  task_id: coding.repository_work
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot execute repository work through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-250e6ba335e017d0
+- model_id: cohere-embed-5-fast
+  task_id: coding.review
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot return a code critique through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-2512b5bfcb3ebf28
+- model_id: cohere-embed-5-fast
+  task_id: coding.scoped_edit
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot produce a code change through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-0f4ee387f63124a3
+- model_id: cohere-embed-5-fast
+  task_id: coding.tests
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot produce or repair tests through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-d1ababc58c6f8ec5
+- model_id: cohere-embed-5-fast
+  task_id: context.reasoning
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot return a solution from supplied context through
+    that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-d7f92fa712e2b1a2
+- model_id: cohere-embed-5-fast
+  task_id: context.retrieval
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot return information recovered from supplied
+    context through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-1818e981af20866f
+- model_id: cohere-embed-5-fast
+  task_id: image.editing
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot output an edited image through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-0354af4b1748d1c8
+- model_id: cohere-embed-5-fast
+  task_id: image.generation
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot output an image through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-4f011719ee20c4ff
+- model_id: cohere-embed-5-fast
+  task_id: knowledge.classification
+  applicability: applicable
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Inspected classification/clustering input roles and retrieval evaluations. Embeddings can feed
+    a downstream classifier, but no exact Fast classifier accuracy under an identified head and labels was
+    established.
+  judgment_ids: []
+  confidence_rationale: Interface applicability is positive; absent classification evaluation does not imply
+    weak ability.
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-e9acd4aa3c25
+  - src-095104f20b18
+  conditions: []
+  remaining_gaps:
+  - Downstream head, labels, calibration and exact classifier quality unknown.
+  id: task-assessment-e275117071a27f2c
+- model_id: cohere-embed-5-fast
+  task_id: knowledge.extraction
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot return extracted fields through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-572915d1c9861c7a
+- model_id: cohere-embed-5-fast
+  task_id: knowledge.rag
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot generate a grounded answer through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-af79716489a00d77
+- model_id: cohere-embed-5-fast
+  task_id: knowledge.retrieval
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-07'
+  rationale: Corpus retrieval and candidate ranking fit the approved task boundary.
+  judgment_ids:
+  - judgment-afbdc8473c5cc5bd
+  - judgment-7e21faf82ca7635e
+  - judgment-cbfb9b59385271d6
+  confidence_rationale: Vendor candidate ranking and independent corpus retrieval are different setups. The
+    new study has incomplete labels, short passages and unpinned API weights; its judgment remains low confidence.
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  - src-095104f20b18
+  conditions: []
+  remaining_gaps: []
+  id: task-assessment-221d948b14c51978
+- model_id: cohere-embed-5-fast
+  task_id: language.instruction_following
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot produce a constrained response through that
+    interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-399e27e5d22c1e28
+- model_id: cohere-embed-5-fast
+  task_id: language.multilingual_chat
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot generate conversational replies through that
+    interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-b0229f20c7f03ff1
+- model_id: cohere-embed-5-fast
+  task_id: language.summarization
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot generate a summary through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-ebdc0c9efa10faa9
+- model_id: cohere-embed-5-fast
+  task_id: language.translation
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot generate a translation through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-78c4c5670fd9925c
+- model_id: cohere-embed-5-fast
+  task_id: language.writing
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot generate prose through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-0cafc05e775ce040
+- model_id: cohere-embed-5-fast
+  task_id: music.generation
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot output music through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-ea1a8e38bed3444c
+- model_id: cohere-embed-5-fast
+  task_id: reasoning.general
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot return a reasoned solution through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-13099b57a70bbdca
+- model_id: cohere-embed-5-fast
+  task_id: reasoning.math
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot return a mathematical solution through that
+    interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-49d3089270730d48
+- model_id: cohere-embed-5-fast
+  task_id: reasoning.scientific
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot return a scientific derivation through that
+    interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-1853a35a077aa067
+- model_id: cohere-embed-5-fast
+  task_id: research.fact_check
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot adjudicate factual claims through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-87940f71b1113917
+- model_id: cohere-embed-5-fast
+  task_id: research.synthesis
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot synthesize an answer through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-835bc3bbfbba4813
+- model_id: cohere-embed-5-fast
+  task_id: video.editing
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot output edited video through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-47252979cf3f4f98
+- model_id: cohere-embed-5-fast
+  task_id: video.generation
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot output video through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-98af1e11e61f4674
+- model_id: cohere-embed-5-fast
+  task_id: vision.grounding
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot return spatial grounding through that interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-20bdb39b26ba794d
+- model_id: cohere-embed-5-fast
+  task_id: vision.question_answering
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native Embed endpoint returns vectors; it cannot return an answer about an image through that
+    interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  conditions:
+  - Exclusion applies to this exposed embedding endpoint; downstream systems have separate capabilities.
+  remaining_gaps: []
+  id: task-assessment-8a93f95cf1f6de00
+- model_id: veo-3-1-generate-preview
+  task_id: agent.computer_use
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: Native API returns a conditioned video artifact, without a GUI action output or visible-state
+    interaction loop. An external agent operating a GUI is a separate system.
+  judgment_ids: []
+  confidence_rationale: High confidence in documented native interface mismatch; no claim about a surrounding
+    agent or latent model ability.
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - Reassess if a changed native interface or separate route/task setup is documented.
+  id: task-assessment-817062ef38ffa534
+- model_id: veo-3-1-generate-preview
+  task_id: agent.long_horizon
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: Native operation is a bounded clip with optional conditioning/extension, rather than a goal-tracking
+    agent selecting dependent actions or revising plans after feedback.
+  judgment_ids: []
+  confidence_rationale: High confidence in documented native interface mismatch; no claim about a surrounding
+    agent or latent model ability.
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - Reassess if a changed native interface or separate route/task setup is documented.
+  id: task-assessment-1f7b15f43b07d0aa
+- model_id: veo-3-1-generate-preview
+  task_id: agent.tool_use
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: Native contract is asynchronous video generation without tool declarations, tool-call output or
+    a tool-result turn. An orchestrator calling this endpoint is a separate agent.
+  judgment_ids: []
+  confidence_rationale: High confidence in documented native interface mismatch; no claim about a surrounding
+    agent or latent model ability.
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - Reassess if a changed native interface or separate route/task setup is documented.
+  id: task-assessment-42884a39ff8e736e
+- model_id: veo-3-1-generate-preview
+  task_id: audio.conversation
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The rubric requires interactive listening and spoken turn management; the endpoint generates an
+    asynchronous video rather than accepting conversational audio turns.
+  judgment_ids: []
+  confidence_rationale: Positive documented interface mismatch with the task rubric; no exclusion based on
+    absent benchmark evidence.
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  conditions:
+  - Exclusion applies to the documented standalone standard API interface; no claim about a separate orchestrator
+    or consumer tool.
+  remaining_gaps: []
+  id: task-assessment-feeba0b1002c24ec
+- model_id: veo-3-1-generate-preview
+  task_id: audio.speech_generation
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Native dialogue inside generated video is documented, but standalone speech fidelity and requested
+    delivery are unmeasured here.
+  judgment_ids: []
+  confidence_rationale: Sparse task-specific evidence and family/endpoint identity differences require an investigated
+    unknown.
+  evidence_ids:
+  - src-6fab7b07e4f3
+  - src-1ccfb1085c29
+  conditions:
+  - Do not turn video/audio demonstrations into narrow standalone task endorsements.
+  remaining_gaps:
+  - Need exact-route task-specific evidence under the rubric; no direct current judgment exists for this task.
+  id: task-assessment-247296f516d7a9af
+- model_id: veo-3-1-generate-preview
+  task_id: audio.understanding
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The rubric requires interpreting supplied audio; the documented standard endpoint accepts text/images
+    and prior generated video for extension, not an audio-understanding input/output interface.
+  judgment_ids: []
+  confidence_rationale: Positive documented interface mismatch with the task rubric; no exclusion based on
+    absent benchmark evidence.
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  conditions:
+  - Exclusion applies to the documented standalone standard API interface; no claim about a separate orchestrator
+    or consumer tool.
+  remaining_gaps: []
+  id: task-assessment-b59a7e8f84174bc2
+- model_id: veo-3-1-generate-preview
+  task_id: coding.architecture
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Architecture explanation could be conveyed audiovisually, but inspected video evaluations do not
+    assess software boundaries/interfaces or reasoned system tradeoffs.
+  judgment_ids: []
+  confidence_rationale: 'Low confidence for this exact task: original studies/docs lack a matched exact-route
+    setup and direct judgment support; generation metrics and vendor features remain bounded.'
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  - src-a46b08b514ab
+  - src-f2cba52655a4
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - No direct current judgment supports this task under an exact standard-preview measured setup.
+  id: task-assessment-3640f0c9bd1c433f
+- model_id: veo-3-1-generate-preview
+  task_id: coding.debugging
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Original service/SDK incident reports diagnose Veo itself, rather than measure Veo tracing software
+    faults and checking corrective changes.
+  judgment_ids: []
+  confidence_rationale: 'Low confidence for this exact task: original studies/docs lack a matched exact-route
+    setup and direct judgment support; generation metrics and vendor features remain bounded.'
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  - src-a46b08b514ab
+  - src-f2cba52655a4
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - No direct current judgment supports this task under an exact standard-preview measured setup.
+  id: task-assessment-a9c2450092f427d7
+- model_id: veo-3-1-generate-preview
+  task_id: coding.frontend
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: Video/audio output does not return executable interface components, software interactions or application
+    rendering behavior required by this task.
+  judgment_ids: []
+  confidence_rationale: High confidence in documented native interface mismatch; no claim about a surrounding
+    agent or latent model ability.
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - Reassess if a changed native interface or separate route/task setup is documented.
+  id: task-assessment-1e0f71986ef81ed9
+- model_id: veo-3-1-generate-preview
+  task_id: coding.refactoring
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: Native video artifact output does not return modified source files implementing behavior-preserving
+    restructuring required by this task.
+  judgment_ids: []
+  confidence_rationale: High confidence in documented native interface mismatch; no claim about a surrounding
+    agent or latent model ability.
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - Reassess if a changed native interface or separate route/task setup is documented.
+  id: task-assessment-4440ad75f83fee58
+- model_id: veo-3-1-generate-preview
+  task_id: coding.repository_work
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: Native generation contract does not manipulate a repository or return coordinated software/configuration/test
+    changes; wrappers are separate systems.
+  judgment_ids: []
+  confidence_rationale: High confidence in documented native interface mismatch; no claim about a surrounding
+    agent or latent model ability.
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - Reassess if a changed native interface or separate route/task setup is documented.
+  id: task-assessment-808afb5fed3848af
+- model_id: veo-3-1-generate-preview
+  task_id: coding.review
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Findings could be conveyed in video, but inspected evaluations do not assess actionable code findings
+    with supported trigger and impact.
+  judgment_ids: []
+  confidence_rationale: 'Low confidence for this exact task: original studies/docs lack a matched exact-route
+    setup and direct judgment support; generation metrics and vendor features remain bounded.'
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  - src-a46b08b514ab
+  - src-f2cba52655a4
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - No direct current judgment supports this task under an exact standard-preview measured setup.
+  id: task-assessment-d0559ce06c33a4fb
+- model_id: veo-3-1-generate-preview
+  task_id: coding.scoped_edit
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The rubric requires a bounded code change; the endpoint output contract is a video artifact rather
+    than source-code edits.
+  judgment_ids: []
+  confidence_rationale: Positive documented interface mismatch with the task rubric; no exclusion based on
+    absent benchmark evidence.
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  conditions:
+  - Exclusion applies to the documented standalone standard API interface; no claim about a separate orchestrator
+    or consumer tool.
+  remaining_gaps: []
+  id: task-assessment-a63a3528fc7844d2
+- model_id: veo-3-1-generate-preview
+  task_id: coding.tests
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The rubric requires software test development; the endpoint returns video rather than an executable
+    test artifact.
+  judgment_ids: []
+  confidence_rationale: Positive documented interface mismatch with the task rubric; no exclusion based on
+    absent benchmark evidence.
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  conditions:
+  - Exclusion applies to the documented standalone standard API interface; no claim about a separate orchestrator
+    or consumer tool.
+  remaining_gaps: []
+  id: task-assessment-6cab0a449bb7d336
+- model_id: veo-3-1-generate-preview
+  task_id: context.reasoning
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Documented1024-token text input and visual conditioning do not establish extended-context dependency
+    reasoning. Capacity alone does not exclude every rubric case.
+  judgment_ids: []
+  confidence_rationale: 'Low confidence for this exact task: original studies/docs lack a matched exact-route
+    setup and direct judgment support; generation metrics and vendor features remain bounded.'
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  - src-a46b08b514ab
+  - src-f2cba52655a4
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - No direct current judgment supports this task under an exact standard-preview measured setup.
+  id: task-assessment-d34d23a4983cdde0
+- model_id: veo-3-1-generate-preview
+  task_id: context.retrieval
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Inspected generation studies do not measure recovery of supplied facts across extended context
+    positions and distractions; this differs from external corpus retrieval.
+  judgment_ids: []
+  confidence_rationale: 'Low confidence for this exact task: original studies/docs lack a matched exact-route
+    setup and direct judgment support; generation metrics and vendor features remain bounded.'
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  - src-a46b08b514ab
+  - src-f2cba52655a4
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - No direct current judgment supports this task under an exact standard-preview measured setup.
+  id: task-assessment-096ca567976fe2f7
+- model_id: veo-3-1-generate-preview
+  task_id: image.editing
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The rubric requires an edited still-image artifact; image conditioning here returns video rather
+    than an edited image.
+  judgment_ids: []
+  confidence_rationale: Positive documented interface mismatch with the task rubric; no exclusion based on
+    absent benchmark evidence.
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  conditions:
+  - Exclusion applies to the documented standalone standard API interface; no claim about a separate orchestrator
+    or consumer tool.
+  remaining_gaps: []
+  id: task-assessment-4b905c2ad3a6e524
+- model_id: veo-3-1-generate-preview
+  task_id: image.generation
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The rubric requires a still-image output; the documented endpoint returns a generated video with
+    audio.
+  judgment_ids: []
+  confidence_rationale: Positive documented interface mismatch with the task rubric; no exclusion based on
+    absent benchmark evidence.
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  conditions:
+  - Exclusion applies to the documented standalone standard API interface; no claim about a separate orchestrator
+    or consumer tool.
+  remaining_gaps: []
+  id: task-assessment-52e0e0acd7a1558c
+- model_id: veo-3-1-generate-preview
+  task_id: knowledge.classification
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Video/audio could express categories, but inspected metrics do not assess classification under
+    a defined taxonomy or ambiguity contract.
+  judgment_ids: []
+  confidence_rationale: 'Low confidence for this exact task: original studies/docs lack a matched exact-route
+    setup and direct judgment support; generation metrics and vendor features remain bounded.'
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  - src-a46b08b514ab
+  - src-f2cba52655a4
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - No direct current judgment supports this task under an exact standard-preview measured setup.
+  id: task-assessment-10be02481f440546
+- model_id: veo-3-1-generate-preview
+  task_id: knowledge.extraction
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Rendered text/audio could express extracted values; inspected OCR/adherence metrics concern generated
+    artifacts rather than structured extraction from supplied material.
+  judgment_ids: []
+  confidence_rationale: 'Low confidence for this exact task: original studies/docs lack a matched exact-route
+    setup and direct judgment support; generation metrics and vendor features remain bounded.'
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  - src-a46b08b514ab
+  - src-f2cba52655a4
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - No direct current judgment supports this task under an exact standard-preview measured setup.
+  id: task-assessment-42a57fd44a51dc4e
+- model_id: veo-3-1-generate-preview
+  task_id: knowledge.rag
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: An external workflow could supply retrieved passages; inspected sources do not establish attributed
+    supported answers under a documented corpus/retriever setup.
+  judgment_ids: []
+  confidence_rationale: 'Low confidence for this exact task: original studies/docs lack a matched exact-route
+    setup and direct judgment support; generation metrics and vendor features remain bounded.'
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  - src-a46b08b514ab
+  - src-f2cba52655a4
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - No direct current judgment supports this task under an exact standard-preview measured setup.
+  id: task-assessment-3bf0f9bff12fc7ae
+- model_id: veo-3-1-generate-preview
+  task_id: knowledge.retrieval
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: The native endpoint generates audiovisual output and has no corpus ranking interface.
+  judgment_ids: []
+  confidence_rationale: ''
+  evidence_ids:
+  - src-521c059d5d6a
+  conditions:
+  - Exact standard Gemini Developer API preview interface.
+  remaining_gaps: []
+  id: task-assessment-2a8064d5a3efc617
+- model_id: veo-3-1-generate-preview
+  task_id: language.instruction_following
+  applicability: applicable
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: BRITE/AVGen assess video prompt adherence, but exact standard-preview provider/version pin and
+    current direct instruction-following judgment support are not established. Do not split broad video support.
+  judgment_ids: []
+  confidence_rationale: 'Low confidence for this exact task: original studies/docs lack a matched exact-route
+    setup and direct judgment support; generation metrics and vendor features remain bounded.'
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  - src-a46b08b514ab
+  - src-f2cba52655a4
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - No direct current judgment supports this task under an exact standard-preview measured setup.
+  id: task-assessment-b57767c6355b288e
+- model_id: veo-3-1-generate-preview
+  task_id: language.multilingual_chat
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: Native asynchronous video interface does not expose dialogue turns. English-conditioned video
+    dialogue differs from multilingual conversational chat.
+  judgment_ids: []
+  confidence_rationale: High confidence in documented native interface mismatch; no claim about a surrounding
+    agent or latent model ability.
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - Reassess if a changed native interface or separate route/task setup is documented.
+  id: task-assessment-647cf26bd2f7c8ab
+- model_id: veo-3-1-generate-preview
+  task_id: language.summarization
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Video summaries are possible, but inspected sources do not measure preservation of supplied meaning,
+    qualifications and attribution under a summary contract.
+  judgment_ids: []
+  confidence_rationale: 'Low confidence for this exact task: original studies/docs lack a matched exact-route
+    setup and direct judgment support; generation metrics and vendor features remain bounded.'
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  - src-a46b08b514ab
+  - src-f2cba52655a4
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - No direct current judgment supports this task under an exact standard-preview measured setup.
+  id: task-assessment-1d2ba9cb7171eaeb
+- model_id: veo-3-1-generate-preview
+  task_id: language.translation
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Guide explicitly leaves non-English performance unevaluated. Spoken/text generation does not establish
+    source-to-target semantic fidelity for a documented language pair.
+  judgment_ids: []
+  confidence_rationale: 'Low confidence for this exact task: original studies/docs lack a matched exact-route
+    setup and direct judgment support; generation metrics and vendor features remain bounded.'
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  - src-a46b08b514ab
+  - src-f2cba52655a4
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - No direct current judgment supports this task under an exact standard-preview measured setup.
+  id: task-assessment-b98d99ccad99078a
+- model_id: veo-3-1-generate-preview
+  task_id: language.writing
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Dialogue/captions can express prose, but inspected sources do not measure genre, audience, coherence
+    and revision fidelity under the writing rubric.
+  judgment_ids: []
+  confidence_rationale: 'Low confidence for this exact task: original studies/docs lack a matched exact-route
+    setup and direct judgment support; generation metrics and vendor features remain bounded.'
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  - src-a46b08b514ab
+  - src-f2cba52655a4
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - No direct current judgment supports this task under an exact standard-preview measured setup.
+  id: task-assessment-b09702ba197472ce
+- model_id: veo-3-1-generate-preview
+  task_id: music.generation
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Family demonstrations include musical soundtracks; composition quality and exact-route music task
+    applicability remain unresolved.
+  judgment_ids: []
+  confidence_rationale: Sparse task-specific evidence and family/endpoint identity differences require an investigated
+    unknown.
+  evidence_ids:
+  - src-6fab7b07e4f3
+  - src-1ccfb1085c29
+  conditions:
+  - Do not turn video/audio demonstrations into narrow standalone task endorsements.
+  remaining_gaps:
+  - Need exact-route task-specific evidence under the rubric; no direct current judgment exists for this task.
+  id: task-assessment-65e2a10ff1dca3a8
+- model_id: veo-3-1-generate-preview
+  task_id: reasoning.general
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Implausible-scene adherence measures generated video, not justified answers to logical constraints;
+    consumer-interface benchmark identity also remains unmapped.
+  judgment_ids: []
+  confidence_rationale: 'Low confidence for this exact task: original studies/docs lack a matched exact-route
+    setup and direct judgment support; generation metrics and vendor features remain bounded.'
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  - src-a46b08b514ab
+  - src-f2cba52655a4
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - No direct current judgment supports this task under an exact standard-preview measured setup.
+  id: task-assessment-c117393c8b3a364d
+- model_id: veo-3-1-generate-preview
+  task_id: reasoning.math
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Physical/temporal generation metrics do not assess derivation, proof or mathematical validity
+    under a matched task setup.
+  judgment_ids: []
+  confidence_rationale: 'Low confidence for this exact task: original studies/docs lack a matched exact-route
+    setup and direct judgment support; generation metrics and vendor features remain bounded.'
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  - src-a46b08b514ab
+  - src-f2cba52655a4
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - No direct current judgment supports this task under an exact standard-preview measured setup.
+  id: task-assessment-a7b5c1b8f984c86f
+- model_id: veo-3-1-generate-preview
+  task_id: reasoning.scientific
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: BRITE physical/biological compliance evaluates generation, rather than mechanisms, experimental
+    interpretation or supported scientific hypothesis comparison.
+  judgment_ids: []
+  confidence_rationale: 'Low confidence for this exact task: original studies/docs lack a matched exact-route
+    setup and direct judgment support; generation metrics and vendor features remain bounded.'
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  - src-a46b08b514ab
+  - src-f2cba52655a4
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - No direct current judgment supports this task under an exact standard-preview measured setup.
+  id: task-assessment-28dbea7737d10fbf
+- model_id: veo-3-1-generate-preview
+  task_id: research.fact_check
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Inspected source-backed reports are researcher analysis of Veo, not Veo checking claims against
+    sources and reconciling contradictions.
+  judgment_ids: []
+  confidence_rationale: 'Low confidence for this exact task: original studies/docs lack a matched exact-route
+    setup and direct judgment support; generation metrics and vendor features remain bounded.'
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  - src-a46b08b514ab
+  - src-f2cba52655a4
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - No direct current judgment supports this task under an exact standard-preview measured setup.
+  id: task-assessment-c7c311e3b509c93b
+- model_id: veo-3-1-generate-preview
+  task_id: research.synthesis
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Multi-source research synthesis with preserved attribution is not measured by inspected video
+    studies; audiovisual output alone does not exclude a possible setup.
+  judgment_ids: []
+  confidence_rationale: 'Low confidence for this exact task: original studies/docs lack a matched exact-route
+    setup and direct judgment support; generation metrics and vendor features remain bounded.'
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  - src-a46b08b514ab
+  - src-f2cba52655a4
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - No direct current judgment supports this task under an exact standard-preview measured setup.
+  id: task-assessment-7755d96c969c6152
+- model_id: veo-3-1-generate-preview
+  task_id: video.editing
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: The guide documents extension, while family marketing illustrates broader editing; exact-preview
+    preservation quality is not independently established.
+  judgment_ids: []
+  confidence_rationale: Sparse task-specific evidence and family/endpoint identity differences require an investigated
+    unknown.
+  evidence_ids:
+  - src-6fab7b07e4f3
+  - src-1ccfb1085c29
+  conditions:
+  - Do not turn video/audio demonstrations into narrow standalone task endorsements.
+  remaining_gaps:
+  - Need exact-route task-specific evidence under the rubric; no direct current judgment exists for this task.
+  id: task-assessment-73560760c46b61ac
+- model_id: veo-3-1-generate-preview
+  task_id: video.generation
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-07'
+  rationale: The endpoint generates video. The existing direct unknown detail-accuracy judgment remains justified
+    under the task rubric.
+  judgment_ids:
+  - judgment-a39ac31ce68709f0
+  confidence_rationale: 'Low confidence in exact-route detail accuracy: official generation controls are documented,
+    but the October 2025 practitioner failure concerns Fast; November 2025 support advice supplies no measured
+    standard comparison. The inspected historical independent arena announcement is preference evidence with
+    unpinned route/setup, and platform timing does not measure detail correctness. No contradiction located
+    is not proof of agreement. Preserve the judgment assessment unknown.'
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  - src-91a6d4ec7912
+  conditions:
+  - Standard preview only; Fast distortion reports and consumer labels remain separate.
+  remaining_gaps:
+  - No exact-route controlled detail-accuracy result established.
+  id: task-assessment-80dc2f4aad3bae9c
+- model_id: veo-3-1-generate-preview
+  task_id: vision.grounding
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: Reference identity conditioning is documented, but no measured localization to regions, coordinates
+    or explicit visual references established.
+  judgment_ids: []
+  confidence_rationale: 'Low confidence for this exact task: original studies/docs lack a matched exact-route
+    setup and direct judgment support; generation metrics and vendor features remain bounded.'
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  - src-a46b08b514ab
+  - src-f2cba52655a4
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - No direct current judgment supports this task under an exact standard-preview measured setup.
+  id: task-assessment-dc4ba7c3b743b650
+- model_id: veo-3-1-generate-preview
+  task_id: vision.question_answering
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: BRITE human QA about generated clips is an evaluator method, rather than Veo answering questions
+    grounded in input images; conditioning alone is insufficient.
+  judgment_ids: []
+  confidence_rationale: 'Low confidence for this exact task: original studies/docs lack a matched exact-route
+    setup and direct judgment support; generation metrics and vendor features remain bounded.'
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-6fab7b07e4f3
+  - src-a46b08b514ab
+  - src-f2cba52655a4
+  conditions:
+  - 'Scope: standalone veo-3.1-generate-preview native endpoint; external agents, consumer aliases and Fast/Lite
+    are separate.'
+  remaining_gaps:
+  - No direct current judgment supports this task under an exact standard-preview measured setup.
+  id: task-assessment-b1ff817b2e3223ea
+- model_id: claude-haiku-5-5
+  task_id: agent.computer_use
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-07'
+  rationale: Conditional computer operation evidence is limited to the vendor OSWorld 2.1 offline subset (72.4%);
+    harness and effort are incompletely specified.
+  judgment_ids:
+  - judgment-b1c7dd3088dba162
+  confidence_rationale: Low confidence because source/setup support is sparse or vendor-heavy; no contrary
+    result located in this bounded pass is not agreement.
+  evidence_ids:
+  - src-cdb1d51fae04
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Independent task-specific replication and production acceptance remain unknown.
+  id: task-assessment-62ce149b20f55554
+- model_id: claude-haiku-5-5
+  task_id: agent.long_horizon
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-07'
+  rationale: 'Warning: long agent prompts at low effort can stop early; creator mitigation is prompting or
+    higher effort, without independently measured recovery.'
+  judgment_ids:
+  - judgment-92f36cfb1da4e0f4
+  confidence_rationale: Low confidence because source/setup support is sparse or vendor-heavy; no contrary
+    result located in this bounded pass is not agreement.
+  evidence_ids:
+  - src-8ac74a7d6b30
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Creator-reported limitation; frequency and independent recovery unknown.
+  id: task-assessment-5bc71344cf52f0a4
+- model_id: claude-haiku-5-5
+  task_id: agent.tool_use
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-07'
+  rationale: 'Warning: structured JSON with thinking disabled can skip a required tool; creator suggests adaptive
+    thinking or explicit tool choice.'
+  judgment_ids:
+  - judgment-5c1cc68fa486d6fe
+  confidence_rationale: Low confidence because source/setup support is sparse or vendor-heavy; no contrary
+    result located in this bounded pass is not agreement.
+  evidence_ids:
+  - src-8ac74a7d6b30
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Creator-reported limitation; frequency and independent recovery unknown.
+  id: task-assessment-bf6d43a875764db4
+- model_id: claude-haiku-5-5
+  task_id: audio.conversation
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
+    API. External tool output does not establish native modality support.
+  judgment_ids: []
+  confidence_rationale: Positive modality mismatch in primary specifications.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps: []
+  id: task-assessment-34f7c4b503ee4dae
+- model_id: claude-haiku-5-5
+  task_id: audio.speech_generation
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
+    API. External tool output does not establish native modality support.
+  judgment_ids: []
+  confidence_rationale: Positive modality mismatch in primary specifications.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps: []
+  id: task-assessment-c89209987372bb95
+- model_id: claude-haiku-5-5
+  task_id: audio.understanding
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
+    API. External tool output does not establish native modality support.
+  judgment_ids: []
+  confidence_rationale: Positive modality mismatch in primary specifications.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps: []
+  id: task-assessment-90478ea3d7160ee0
+- model_id: claude-haiku-5-5
+  task_id: coding.architecture
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: 'Investigated coding.architecture: exact-model sources do not establish the rubric inclusion rules;
+    broad/older-model results cannot complete this task.'
+  judgment_ids: []
+  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-dc1c9e6b2717
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Task-specific setup and exact-model evidence remain unknown.
+  id: task-assessment-d0e5a4d550b0cd7d
+- model_id: claude-haiku-5-5
+  task_id: coding.debugging
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: 'Investigated coding.debugging: exact-model sources do not establish the rubric inclusion rules;
+    broad/older-model results cannot complete this task.'
+  judgment_ids: []
+  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-dc1c9e6b2717
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Task-specific setup and exact-model evidence remain unknown.
+  id: task-assessment-326b7b712ec16138
+- model_id: claude-haiku-5-5
+  task_id: coding.frontend
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: 'Investigated coding.frontend: exact-model sources do not establish the rubric inclusion rules;
+    broad/older-model results cannot complete this task.'
+  judgment_ids: []
+  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-dc1c9e6b2717
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Task-specific setup and exact-model evidence remain unknown.
+  id: task-assessment-40621d8c483b753c
+- model_id: claude-haiku-5-5
+  task_id: coding.refactoring
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: 'Investigated coding.refactoring: exact-model sources do not establish the rubric inclusion rules;
+    broad/older-model results cannot complete this task.'
+  judgment_ids: []
+  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-dc1c9e6b2717
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Task-specific setup and exact-model evidence remain unknown.
+  id: task-assessment-38fa48f06c4e25a4
+- model_id: claude-haiku-5-5
+  task_id: coding.repository_work
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-07'
+  rationale: 'Warning: the creator reports code changes can be declared complete without verification at low/medium
+    effort; broad repository correctness remains unknown.'
+  judgment_ids:
+  - judgment-d5a912ae74e8e488
+  confidence_rationale: Low confidence because source/setup support is sparse or vendor-heavy; no contrary
+    result located in this bounded pass is not agreement.
+  evidence_ids:
+  - src-8ac74a7d6b30
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Creator-reported limitation; frequency and independent recovery unknown.
+  id: task-assessment-1c6d29ed4df8ddd4
+- model_id: claude-haiku-5-5
+  task_id: coding.review
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: 'Investigated coding.review: exact-model sources do not establish the rubric inclusion rules;
+    broad/older-model results cannot complete this task.'
+  judgment_ids: []
+  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-dc1c9e6b2717
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Task-specific setup and exact-model evidence remain unknown.
+  id: task-assessment-00fcaa516ef8e113
+- model_id: claude-haiku-5-5
+  task_id: coding.scoped_edit
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: 'Investigated coding.scoped_edit: exact-model sources do not establish the rubric inclusion rules;
+    broad/older-model results cannot complete this task.'
+  judgment_ids: []
+  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-dc1c9e6b2717
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Task-specific setup and exact-model evidence remain unknown.
+  id: task-assessment-d533159f8053b5c9
+- model_id: claude-haiku-5-5
+  task_id: coding.tests
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: 'Investigated coding.tests: exact-model sources do not establish the rubric inclusion rules; broad/older-model
+    results cannot complete this task.'
+  judgment_ids: []
+  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-dc1c9e6b2717
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Task-specific setup and exact-model evidence remain unknown.
+  id: task-assessment-2a4b6c25405e04af
+- model_id: claude-haiku-5-5
+  task_id: context.reasoning
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: 'Investigated context.reasoning: exact-model sources do not establish the rubric inclusion rules;
+    broad/older-model results cannot complete this task.'
+  judgment_ids: []
+  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-dc1c9e6b2717
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Task-specific setup and exact-model evidence remain unknown.
+  id: task-assessment-6d0bf13f28bfbbb4
+- model_id: claude-haiku-5-5
+  task_id: context.retrieval
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: 'Investigated context.retrieval: exact-model sources do not establish the rubric inclusion rules;
+    broad/older-model results cannot complete this task.'
+  judgment_ids: []
+  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-dc1c9e6b2717
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Task-specific setup and exact-model evidence remain unknown.
+  id: task-assessment-e917473258788d20
+- model_id: claude-haiku-5-5
+  task_id: image.editing
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
+    API. External tool output does not establish native modality support.
+  judgment_ids: []
+  confidence_rationale: Positive modality mismatch in primary specifications.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps: []
+  id: task-assessment-2c3296e9d8da744e
+- model_id: claude-haiku-5-5
+  task_id: image.generation
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
+    API. External tool output does not establish native modality support.
+  judgment_ids: []
+  confidence_rationale: Positive modality mismatch in primary specifications.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps: []
+  id: task-assessment-755706c9523d5646
+- model_id: claude-haiku-5-5
+  task_id: knowledge.classification
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-07'
+  rationale: Candidate for short label-assignment requests; creator positioning supports a conditional trial,
+    not measured accuracy across label sets.
+  judgment_ids:
+  - judgment-27ba5595ff0f118f
+  confidence_rationale: Low confidence because source/setup support is sparse or vendor-heavy; no contrary
+    result located in this bounded pass is not agreement.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Independent task-specific replication and production acceptance remain unknown.
+  id: task-assessment-fb33dd1364414b14
+- model_id: claude-haiku-5-5
+  task_id: knowledge.extraction
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-07'
+  rationale: Candidate for bounded extraction from supplied material; no independently inspected extraction
+    dataset establishes general reliability.
+  judgment_ids:
+  - judgment-fad82c58efab1580
+  confidence_rationale: Low confidence because source/setup support is sparse or vendor-heavy; no contrary
+    result located in this bounded pass is not agreement.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Independent task-specific replication and production acceptance remain unknown.
+  id: task-assessment-c10513eee14a151f
+- model_id: claude-haiku-5-5
+  task_id: knowledge.rag
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: 'Investigated knowledge.rag: exact-model sources do not establish the rubric inclusion rules;
+    broad/older-model results cannot complete this task.'
+  judgment_ids: []
+  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-dc1c9e6b2717
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Task-specific setup and exact-model evidence remain unknown.
+  id: task-assessment-b81cc21d7254a00e
+- model_id: claude-haiku-5-5
+  task_id: knowledge.retrieval
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: 'Investigated knowledge.retrieval: exact-model sources do not establish the rubric inclusion rules;
+    broad/older-model results cannot complete this task.'
+  judgment_ids: []
+  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-dc1c9e6b2717
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Task-specific setup and exact-model evidence remain unknown.
+  id: task-assessment-d45046a69b444f64
+- model_id: claude-haiku-5-5
+  task_id: language.instruction_following
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: 'Investigated language.instruction_following: exact-model sources do not establish the rubric
+    inclusion rules; broad/older-model results cannot complete this task.'
+  judgment_ids: []
+  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-dc1c9e6b2717
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Task-specific setup and exact-model evidence remain unknown.
+  id: task-assessment-99d4d97c5179942e
+- model_id: claude-haiku-5-5
+  task_id: language.multilingual_chat
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: 'Investigated language.multilingual_chat: exact-model sources do not establish the rubric inclusion
+    rules; broad/older-model results cannot complete this task.'
+  judgment_ids: []
+  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-dc1c9e6b2717
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Task-specific setup and exact-model evidence remain unknown.
+  id: task-assessment-99c458e8f0177913
+- model_id: claude-haiku-5-5
+  task_id: language.summarization
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-07'
+  rationale: Candidate for short summaries; creator launch claims remain unreplicated under a specified fidelity
+    evaluation.
+  judgment_ids:
+  - judgment-8550661dd3250cd7
+  confidence_rationale: Low confidence because source/setup support is sparse or vendor-heavy; no contrary
+    result located in this bounded pass is not agreement.
+  evidence_ids:
+  - src-cdb1d51fae04
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Independent task-specific replication and production acceptance remain unknown.
+  id: task-assessment-950325cee30bc61b
+- model_id: claude-haiku-5-5
+  task_id: language.translation
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: 'Investigated language.translation: exact-model sources do not establish the rubric inclusion
+    rules; broad/older-model results cannot complete this task.'
+  judgment_ids: []
+  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-dc1c9e6b2717
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Task-specific setup and exact-model evidence remain unknown.
+  id: task-assessment-1043dd04c51e382a
+- model_id: claude-haiku-5-5
+  task_id: language.writing
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: 'Investigated language.writing: exact-model sources do not establish the rubric inclusion rules;
+    broad/older-model results cannot complete this task.'
+  judgment_ids: []
+  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-dc1c9e6b2717
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Task-specific setup and exact-model evidence remain unknown.
+  id: task-assessment-993554c2dacaacc2
+- model_id: claude-haiku-5-5
+  task_id: music.generation
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
+    API. External tool output does not establish native modality support.
+  judgment_ids: []
+  confidence_rationale: Positive modality mismatch in primary specifications.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps: []
+  id: task-assessment-6054473604e5d63f
+- model_id: claude-haiku-5-5
+  task_id: reasoning.general
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-07'
+  rationale: Vendor HLE results provide narrow academic reasoning evidence (45.9% without tools, 57.4% with
+    tools), with unresolved effort and measurement dates.
+  judgment_ids:
+  - judgment-2a8d07b5d42de50a
+  confidence_rationale: Low confidence because source/setup support is sparse or vendor-heavy; no contrary
+    result located in this bounded pass is not agreement.
+  evidence_ids:
+  - src-cdb1d51fae04
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Independent task-specific replication and production acceptance remain unknown.
+  id: task-assessment-de6b85bf79a000d1
+- model_id: claude-haiku-5-5
+  task_id: reasoning.math
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: 'Investigated reasoning.math: exact-model sources do not establish the rubric inclusion rules;
+    broad/older-model results cannot complete this task.'
+  judgment_ids: []
+  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-dc1c9e6b2717
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Task-specific setup and exact-model evidence remain unknown.
+  id: task-assessment-499e4a1aeab3a323
+- model_id: claude-haiku-5-5
+  task_id: reasoning.scientific
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: 'Investigated reasoning.scientific: exact-model sources do not establish the rubric inclusion
+    rules; broad/older-model results cannot complete this task.'
+  judgment_ids: []
+  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-dc1c9e6b2717
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Task-specific setup and exact-model evidence remain unknown.
+  id: task-assessment-1c140690071bddbe
+- model_id: claude-haiku-5-5
+  task_id: research.fact_check
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: 'Investigated research.fact_check: exact-model sources do not establish the rubric inclusion rules;
+    broad/older-model results cannot complete this task.'
+  judgment_ids: []
+  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-dc1c9e6b2717
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Task-specific setup and exact-model evidence remain unknown.
+  id: task-assessment-f34cd39639dc1c4e
+- model_id: claude-haiku-5-5
+  task_id: research.synthesis
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: 'Investigated research.synthesis: exact-model sources do not establish the rubric inclusion rules;
+    broad/older-model results cannot complete this task.'
+  judgment_ids: []
+  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-dc1c9e6b2717
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Task-specific setup and exact-model evidence remain unknown.
+  id: task-assessment-8f6233faac73b939
+- model_id: claude-haiku-5-5
+  task_id: video.editing
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
+    API. External tool output does not establish native modality support.
+  judgment_ids: []
+  confidence_rationale: Positive modality mismatch in primary specifications.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps: []
+  id: task-assessment-2489457cdc600233
+- model_id: claude-haiku-5-5
+  task_id: video.generation
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-07'
+  rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
+    API. External tool output does not establish native modality support.
+  judgment_ids: []
+  confidence_rationale: Positive modality mismatch in primary specifications.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps: []
+  id: task-assessment-f93f6a5d9b45ce15
+- model_id: claude-haiku-5-5
+  task_id: vision.grounding
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-07'
+  rationale: 'Investigated vision.grounding: exact-model sources do not establish the rubric inclusion rules;
+    broad/older-model results cannot complete this task.'
+  judgment_ids: []
+  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-dc1c9e6b2717
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Task-specific setup and exact-model evidence remain unknown.
+  id: task-assessment-6f250c04f5cc2109
+- model_id: claude-haiku-5-5
+  task_id: vision.question_answering
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-07'
+  rationale: Vendor Chartography result (46.4%, no tools) supports only a conditional chart-question trial;
+    visual grounding and general image reliability remain unknown.
+  judgment_ids:
+  - judgment-f7c3002252f74a20
+  confidence_rationale: Low confidence because source/setup support is sparse or vendor-heavy; no contrary
+    result located in this bounded pass is not agreement.
+  evidence_ids:
+  - src-cdb1d51fae04
+  conditions:
+  - Exact-model public evidence; no inference or account access.
+  remaining_gaps:
+  - Independent task-specific replication and production acceptance remain unknown.
+  id: task-assessment-125bdec834549880

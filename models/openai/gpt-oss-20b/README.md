@@ -49,7 +49,7 @@ Supporting sources: [Bug Hunt Bench frozen measurements](https://github.com/phur
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation quality.; No matched independent contradiction located; partial successes and misses coexist.; Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-oss-20b-debug-bughunt; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation quality.; No matched independent contradiction located; partial successes and misses coexist.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.review (medium confidence)
 
@@ -71,7 +71,7 @@ Supporting sources: [Foundation Models as Oracles for Refactoring Correctness De
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-oss20; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.tests (medium confidence)
 
@@ -93,7 +93,7 @@ Supporting sources: [Foundation Models as Oracles for Refactoring Correctness De
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-oss20; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ## Specifications
 

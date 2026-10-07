@@ -23,7 +23,7 @@ def canonical(root=ROOT):
                        ('access_coverage', 'data/access-coverage.yaml'), ('benchmark', 'data/benchmarks.yaml'),
                        ('research_coverage', 'data/research-coverage.yaml'),
                        ('research_contract', 'data/research-contract.yaml'),
-                       ('research_run', 'data/research-runs.yaml')]:
+                       ('task_assessment', 'data/task-assessments.yaml')]:
         for record in read(root / name)['records']:
             result[(kind, record['id'])] = (name, record)
     for record in read(root / 'data/capability-taxonomy.yaml')['capabilities']:
@@ -31,7 +31,8 @@ def canonical(root=ROOT):
     for record in read(root / 'data/aliases.yaml')['records']:
         result[('alias', record['id'])] = ('data/aliases.yaml', record)
     # Optional for older retained fixtures/snapshots; present in the current repository.
-    for kind, name in [('maintenance_contract', 'data/maintenance-contract.yaml'),
+    for kind, name in [('research_run', 'data/research-runs.yaml'),
+                       ('maintenance_contract', 'data/maintenance-contract.yaml'),
                        ('maintenance_pass', 'data/maintenance-passes.yaml')]:
         if (root / name).exists():
             for record in read(root / name)['records']:

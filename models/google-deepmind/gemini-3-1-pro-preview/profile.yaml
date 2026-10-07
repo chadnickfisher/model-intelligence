@@ -221,7 +221,7 @@ capabilities:
     original_task: difficult-science-visual-qa-and-long-documents
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - id: judgment-a2765fe12608a3e5
   scope: direct
   task_ids:
@@ -244,7 +244,6 @@ capabilities:
   evidence_notes:
   - Preliminary small synthetic corpus; no variance estimate. Authors attribute the Gemini result mainly to
     exploration, not inability to understand code.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A01'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -274,7 +273,6 @@ capabilities:
   evidence_notes:
   - Static proxies do not prove executable equivalence. Broader quality metrics inconsistent; generated candidates
     were not integrated into repositories. Exact reasoning/sampling settings not established.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R04'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -306,7 +304,6 @@ capabilities:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-gemini-3-1-pro-preview'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -333,7 +330,6 @@ capabilities:
   known_failure_modes:
   - One generated witness failed to compile; main dataset lacks clean negatives.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-gemini31'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -360,7 +356,6 @@ capabilities:
   known_failure_modes:
   - Not evidence of complete repository regression coverage.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-gemini31'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null

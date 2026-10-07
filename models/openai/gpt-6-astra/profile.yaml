@@ -209,7 +209,7 @@ capabilities:
     original_task: complex-coding-and-computer-workflows
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - id: judgment-4e7af644a89ef0a9
   scope: direct
   task_ids:
@@ -239,7 +239,7 @@ capabilities:
     original_task: scientific-research
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 1
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - id: judgment-50e193772d714514
   scope: direct
   task_ids:
@@ -270,7 +270,6 @@ capabilities:
   - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
     quality.
   - No matched independent contradiction located; partial successes and misses coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-astra-debug-bughunt'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -298,7 +297,6 @@ capabilities:
   - No failures observed in14attempts; this is too small and feedback-rich to establish general reliability.
   evidence_notes:
   - Different code scale from Bug Hunt Bench; both findings should coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-astra-debug-small-python'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -327,7 +325,6 @@ capabilities:
   evidence_notes:
   - Single anecdote, no code or controlled runs. Warning about this workload only; cannot establish a general
     failure rate or override refactoring benchmark E07.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A05'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -357,7 +354,6 @@ capabilities:
   evidence_notes:
   - Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve xHigh as board label.
     Intro's below 50% statement is stale. Gemini 3.1 Pro 33.81±6.64 is withheld pending preview-ID mapping.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R01'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -389,7 +385,6 @@ capabilities:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-gpt-6-astra'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -419,7 +414,6 @@ capabilities:
   known_failure_modes:
   - Diff-only study missed security issues despite high finding precision.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-astra'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null

@@ -198,7 +198,7 @@ capabilities:
     original_task: local-private-text-reasoning-and-adaptation
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - id: judgment-5f82e79ab532e98f
   scope: direct
   task_ids:
@@ -219,7 +219,6 @@ capabilities:
   - 79.1% well-formed cases;47 cases had malformed responses.
   evidence_notes:
   - Old immutable-checkpoint evidence; current provider/harness parity unverified.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-oss-120b-scoped-aider'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -258,7 +257,6 @@ capabilities:
   - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
     quality.
   - No matched independent contradiction located; partial successes and misses coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-oss-120b-debug-bughunt'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -288,7 +286,6 @@ capabilities:
     disproving this local result.
   - 'Related caution source: bughunt-data. It is not a controlled contradiction because the task size, route,
     effort and harness differ.'
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-oss-120b-debug-local-csv'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -315,7 +312,6 @@ capabilities:
   known_failure_modes:
   - Much lower fault detection in simpler generation harnesses; coverage is incomplete.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-oss120'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null

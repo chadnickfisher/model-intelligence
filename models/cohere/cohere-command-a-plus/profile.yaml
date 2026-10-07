@@ -145,7 +145,7 @@ capabilities:
     original_task: private-multilingual-rag-and-enterprise-agents
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - id: judgment-9e8f4c9fa81f59ba
   scope: compound
   task_ids: []
@@ -170,7 +170,7 @@ capabilities:
     original_task: hard-scientific-reasoning-agentic-coding
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 1
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - id: judgment-f2ef16690b3303d9
   scope: direct
   task_ids:
@@ -226,7 +226,7 @@ performance_characteristics:
     original_task: measured-generation-behavior
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 access_ids:
 - access-07bf870b8a2b3269
 - access-42cc6e1a9bf1aff1

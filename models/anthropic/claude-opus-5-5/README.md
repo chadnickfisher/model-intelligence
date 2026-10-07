@@ -49,7 +49,7 @@ Supporting sources: [Bug Hunt Bench frozen measurements](https://github.com/phur
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation quality.; No matched independent contradiction located; partial successes and misses coexist.; Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:claude-opus-5-5-debug-bughunt; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation quality.; No matched independent contradiction located; partial successes and misses coexist.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.architecture (low confidence)
 
@@ -71,7 +71,7 @@ Supporting sources: [Introducing Claude Opus 5.5](https://www.anthropic.com/clau
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: One selected testimonial. Anthropic's HAProxy C-to-Rust migration report is adjacent migration evidence, not a same-language behavior-preserving refactoring benchmark.; Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A03; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: One selected testimonial. Anthropic's HAProxy C-to-Rust migration report is adjacent migration evidence, not a same-language behavior-preserving refactoring benchmark.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.frontend (medium confidence)
 
@@ -93,7 +93,7 @@ Supporting sources: [Code Arena WebDev Frontend](https://arena.ai/leaderboard/co
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-claude-opus-5-5; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.review (medium confidence)
 
@@ -115,7 +115,7 @@ Supporting sources: [Claude Opus 5.5 for code review: More catches, different mi
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-opus55; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ## Specifications
 

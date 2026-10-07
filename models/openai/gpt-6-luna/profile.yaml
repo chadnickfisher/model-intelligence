@@ -193,7 +193,7 @@ capabilities:
     original_task: focused-high-volume-tasks
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - id: judgment-4793164eb12deab7
   scope: direct
   task_ids:
@@ -222,7 +222,6 @@ capabilities:
     not a general ability ranking.
   - 'Potential transfer risk, not measured semantic failure: test-free byte matching does not establish a correct
     code change.'
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-luna-scoped-mechanical'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -261,7 +260,6 @@ capabilities:
   - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
     quality.
   - No matched independent contradiction located; partial successes and misses coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-luna-debug-bughunt'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -288,7 +286,6 @@ capabilities:
   - 10/12 self-repairs passed; two regex repairs reduced passing-test counts.
   evidence_notes:
   - Tiny sample; not evidence that high effort universally hurts.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-luna-debug-small-python'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -320,7 +317,6 @@ capabilities:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-gpt-6-luna'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null

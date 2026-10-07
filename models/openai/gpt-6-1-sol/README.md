@@ -71,7 +71,7 @@ Supporting sources: [Explicit Edit Benchmark public data](https://huggingface.co
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: No matched independent contradictory evaluation located. This source establishes a narrow measured route, not a general ability ranking.; Potential transfer risk, not measured semantic failure: test-free byte matching does not establish a correct code change.; Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-1-sol-scoped-mechanical; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: No matched independent contradictory evaluation located. This source establishes a narrow measured route, not a general ability ranking.; Potential transfer risk, not measured semantic failure: test-free byte matching does not establish a correct code change.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.debugging (medium confidence)
 
@@ -93,7 +93,7 @@ Supporting sources: [Bug Hunt Bench frozen measurements](https://github.com/phur
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation quality.; No matched independent contradiction located; partial successes and misses coexist.; Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-1-sol-debug-bughunt; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation quality.; No matched independent contradiction located; partial successes and misses coexist.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.debugging (low confidence)
 
@@ -115,7 +115,7 @@ Supporting sources: [Python coding and repair track](https://github.com/joonlab/
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Different code scale from Bug Hunt Bench; both findings should coexist.; Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-1-sol-debug-small-python; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Different code scale from Bug Hunt Bench; both findings should coexist.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.frontend (medium confidence)
 
@@ -137,7 +137,7 @@ Supporting sources: [Code Arena WebDev Frontend](https://arena.ai/leaderboard/co
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-gpt-6-1-sol; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.tests (low confidence)
 
@@ -159,7 +159,7 @@ Supporting sources: [GPT-6.1 Sol reasoning effort test on two builds](https://sp
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-sol61; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.frontend (medium confidence)
 
@@ -181,7 +181,7 @@ Supporting sources: [GPT-6.1 Sol reasoning effort test on two builds](https://sp
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-sol61-practitioner; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ## Specifications
 

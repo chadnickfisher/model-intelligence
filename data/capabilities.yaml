@@ -29,7 +29,7 @@ records:
     original_task: grounded-extraction-constrained-enterprise-question-answering
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: ai21-jamba2-mini
   profile: models/ai21-labs/ai21-jamba2-mini/profile.yaml
   id: judgment-d1c98668b2402aca
@@ -90,7 +90,7 @@ records:
     original_task: small-local-visual-assistant
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: qwen3-5-9b
   profile: models/alibaba-qwen/qwen3-5-9b/profile.yaml
   id: judgment-fea7dda7dcc44e0e
@@ -149,7 +149,7 @@ records:
     original_task: large-scale-text-agents
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: qwen3-8-2-4t-a95b
   profile: models/alibaba-qwen/qwen3-8-2-4t-a95b/profile.yaml
   id: judgment-fba9d11fe50c103d
@@ -211,7 +211,7 @@ records:
     original_task: local-multimodal-coding
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: qwen3-8-27b
   profile: models/alibaba-qwen/qwen3-8-27b/profile.yaml
   id: judgment-6db95607e291642c
@@ -239,7 +239,7 @@ records:
     original_task: long-context-reasoning
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 1
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: qwen3-8-27b
   profile: models/alibaba-qwen/qwen3-8-27b/profile.yaml
   id: judgment-74505ce6779ad313
@@ -261,7 +261,6 @@ records:
   evidence_notes:
   - A configuration-specific continuity warning, not a measured code-correctness score; hardware/quant/template
     changes require recheck.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:qwen3-8-27b-debug-context-warning'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -295,7 +294,6 @@ records:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-qwen3-8-27b'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -334,7 +332,7 @@ records:
     original_task: efficient-agent-workers
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: qwen3-8-flash-next
   profile: models/alibaba-qwen/qwen3-8-flash-next/profile.yaml
   id: judgment-2e3d7688d669fd57
@@ -360,7 +358,6 @@ records:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-qwen3-8-flash-next'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -398,7 +395,7 @@ records:
     original_task: local-repository-editing
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: qwen3-coder-next
   profile: models/alibaba-qwen/qwen3-coder-next/profile.yaml
   id: judgment-4205dcdceec8959d
@@ -421,7 +418,6 @@ records:
   evidence_notes:
   - Paper has inconsistent category wording; do not use its contradictory category100%claims.
   - 'Non-thinking checkpoint: do not repeat paper''s reasoning-mode characterization.'
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:qwen3-coder-next-debug-quantum'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -451,7 +447,6 @@ records:
   - Q8_0 configuration stalled under its hardware/time conditions; that is deployment evidence, not proof of
     weaker weights.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:qwen3-coder-next-debug-local-csv'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -483,7 +478,6 @@ records:
   evidence_notes:
   - Only low-confidence, narrowly scoped evidence. No demonstrated large-repository refactoring reliability
     or architecture rating.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R06'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -528,7 +522,7 @@ records:
     original_task: long-horizon-reasoning-and-coding
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: claude-fable-5-1
   profile: models/anthropic/claude-fable-5-1/profile.yaml
   id: judgment-f023edc397fdd671
@@ -561,7 +555,6 @@ records:
   - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
     quality.
   - No matched independent contradiction located; partial successes and misses coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:claude-fable-5-1-debug-bughunt'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -598,7 +591,6 @@ records:
   - Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve xHigh as board label.
     Intro's below 50% statement is stale. Gemini 3.1 Pro 33.81±6.64 is withheld pending preview-ID mapping.
   - Vendor behavior description supplements E07; it is not an independent refactor success measurement.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R02'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -632,7 +624,6 @@ records:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-claude-fable-5-1'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -662,7 +653,6 @@ records:
   known_failure_modes:
   - Substantial judge-rejected commentary and misses; higher reasoning did not improve aggregate results.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-fable51'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -705,7 +695,7 @@ records:
     original_task: fast-bounded-coding-and-assistant-subtasks
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: claude-haiku-4-5
   profile: models/anthropic/claude-haiku-4-5/profile.yaml
   id: judgment-db0341f19aa38f54
@@ -731,7 +721,6 @@ records:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-claude-haiku-4-5'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -760,7 +749,6 @@ records:
   known_failure_modes:
   - Behavioral changes materially reduced test pass rate.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-haiku'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -1319,7 +1307,7 @@ records:
     original_task: agentic-coding-and-knowledge-work
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: claude-opus-5-5
   profile: models/anthropic/claude-opus-5-5/profile.yaml
   id: judgment-e494146b5a163111
@@ -1352,7 +1340,6 @@ records:
   - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
     quality.
   - No matched independent contradiction located; partial successes and misses coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:claude-opus-5-5-debug-bughunt'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -1382,7 +1369,6 @@ records:
   evidence_notes:
   - One selected testimonial. Anthropic's HAProxy C-to-Rust migration report is adjacent migration evidence,
     not a same-language behavior-preserving refactoring benchmark.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A03'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -1416,7 +1402,6 @@ records:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-claude-opus-5-5'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -1445,7 +1430,6 @@ records:
   known_failure_modes:
   - Known bugs missed; many actionable comments did not pass the judge.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-opus55'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -1488,7 +1472,7 @@ records:
     original_task: coding-at-different-effort-budgets
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: claude-sonnet-5-5
   profile: models/anthropic/claude-sonnet-5-5/profile.yaml
   id: judgment-cb9aeb423bbdc834
@@ -1510,7 +1494,6 @@ records:
   evidence_notes:
   - Inspected failure cases are direct scoped-edit evidence; aggregate FrontierCode is not reclassified into
     every coding task.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:claude-sonnet-5-5-scoped-max-warning'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -1551,7 +1534,6 @@ records:
   - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
     quality.
   - No matched independent contradiction located; partial successes and misses coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:claude-sonnet-5-5-debug-bughunt'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -1581,7 +1563,6 @@ records:
   - No case-specific failures disclosed.
   evidence_notes:
   - Supports architecture analysis candidacy, not general architecture-design reliability.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A02'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -1615,7 +1596,6 @@ records:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-claude-sonnet-5-5'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -1644,7 +1624,6 @@ records:
   known_failure_modes:
   - Do not treat unjudged OSS comment reductions as quality gains.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-sonnet55'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -1681,7 +1660,7 @@ records:
     original_task: short-audiovisual-generation-and-keyframed-continuation
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: bfl-flux3-video
   profile: models/black-forest-labs/bfl-flux3-video/profile.yaml
   id: judgment-bf07973843af6a72
@@ -1739,7 +1718,7 @@ records:
     original_task: private-multilingual-rag-and-enterprise-agents
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: cohere-command-a-plus
   profile: models/cohere/cohere-command-a-plus/profile.yaml
   id: judgment-9e8f4c9fa81f59ba
@@ -1766,7 +1745,7 @@ records:
     original_task: hard-scientific-reasoning-agentic-coding
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 1
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: cohere-command-a-plus
   profile: models/cohere/cohere-command-a-plus/profile.yaml
   id: judgment-f2ef16690b3303d9
@@ -1828,7 +1807,7 @@ records:
     original_task: high-volume-interactive-retrieval
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: cohere-embed-5-fast
   profile: models/cohere/cohere-embed-5-fast/profile.yaml
   id: judgment-7e21faf82ca7635e
@@ -1915,7 +1894,7 @@ records:
     original_task: complex-document-retrieval-offline-indexing
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: cohere-embed-5-pro
   profile: models/cohere/cohere-embed-5-pro/profile.yaml
   id: judgment-d02c0c4f21657798
@@ -1974,7 +1953,7 @@ records:
     original_task: self-hosted-enterprise-localization-research
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: cohere-north-small-translate
   profile: models/cohere/cohere-north-small-translate/profile.yaml
   id: judgment-0e77ffde181d61b9
@@ -2038,7 +2017,7 @@ records:
     original_task: input-heavy-tool-agents
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: deepseek-v4-1-flash
   profile: models/deepseek/deepseek-v4-1-flash/profile.yaml
   id: judgment-9f7fdd9b0567b2b5
@@ -2069,7 +2048,6 @@ records:
     not a general ability ranking.
   - 'Potential transfer risk, not measured semantic failure: test-free byte matching does not establish a correct
     code change.'
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:deepseek-v4-1-flash-scoped-mechanical'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -2110,7 +2088,6 @@ records:
   - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
     quality.
   - No matched independent contradiction located; partial successes and misses coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:deepseek-v4-1-flash-debug-bughunt'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -2144,7 +2121,6 @@ records:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-deepseek-v4-1-flash'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -2182,7 +2158,7 @@ records:
     original_task: text-coding-and-reasoning
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: deepseek-v4-pro-0813
   profile: models/deepseek/deepseek-v4-pro-0813/profile.yaml
   id: judgment-abdefeccf40296a5
@@ -2208,7 +2184,6 @@ records:
     do not inherit oldFlash0731results intoV4.1.
   - The analysis report bounds independent bug discovery; it does not contradict repair after locations are
     supplied.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:deepseek-v4-pro-0813-debug-planned-fixes'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -2239,7 +2214,6 @@ records:
   evidence_notes:
   - No public code/logs; cross-task 95.9% claim accuracy is not architecture-specific. Reject author's inference
     that references are safe without verification.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A04'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -2273,7 +2247,6 @@ records:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-deepseek-v4-pro-0813'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -2302,7 +2275,6 @@ records:
   known_failure_modes:
   - Missed planted issues and deceptive tests; malformed responses can silently approve.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-deepseek0813'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -2331,7 +2303,6 @@ records:
   known_failure_modes:
   - Concurrency case omitted.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-deepseek0813'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -2366,7 +2337,7 @@ records:
     original_task: expressive-multilingual-narration-and-dialogue
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: elevenlabs-eleven-v4
   profile: models/elevenlabs/elevenlabs-eleven-v4/profile.yaml
   id: judgment-96525c869cedff6c
@@ -2433,7 +2404,7 @@ records:
     original_task: difficult-science-visual-qa-and-long-documents
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: gemini-3-1-pro-preview
   profile: models/google-deepmind/gemini-3-1-pro-preview/profile.yaml
   id: judgment-a2765fe12608a3e5
@@ -2458,7 +2429,6 @@ records:
   evidence_notes:
   - Preliminary small synthetic corpus; no variance estimate. Authors attribute the Gemini result mainly to
     exploration, not inability to understand code.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A01'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -2490,7 +2460,6 @@ records:
   evidence_notes:
   - Static proxies do not prove executable equivalence. Broader quality metrics inconsistent; generated candidates
     were not integrated into repositories. Exact reasoning/sampling settings not established.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R04'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -2524,7 +2493,6 @@ records:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-gemini-3-1-pro-preview'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -2553,7 +2521,6 @@ records:
   known_failure_modes:
   - One generated witness failed to compile; main dataset lacks clean negatives.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-gemini31'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -2582,7 +2549,6 @@ records:
   known_failure_modes:
   - Not evidence of complete repository regression coverage.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-gemini31'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -2625,7 +2591,7 @@ records:
     original_task: high-volume-parsing-classification-and-bounded-subagent-work
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: gemini-3-5-flash-lite
   profile: models/google-deepmind/gemini-3-5-flash-lite/profile.yaml
   id: judgment-201d3355c8d34484
@@ -2651,7 +2617,6 @@ records:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-gemini-3-5-flash-lite'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -2699,7 +2664,7 @@ records:
     original_task: fast-multimodal-assistant-and-bounded-coding-tasks
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: gemini-3-8-flash
   profile: models/google-deepmind/gemini-3-8-flash/profile.yaml
   id: judgment-46e287976a5cc041
@@ -2732,7 +2697,7 @@ records:
     original_task: unsupervised-long-horizon-terminal-execution
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 1
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: gemini-3-8-flash
   profile: models/google-deepmind/gemini-3-8-flash/profile.yaml
   id: judgment-d060233bb88428f3
@@ -2763,7 +2728,6 @@ records:
     not a general ability ranking.
   - 'Potential transfer risk, not measured semantic failure: test-free byte matching does not establish a correct
     code change.'
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gemini-3-8-flash-scoped-mechanical'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -2804,7 +2768,6 @@ records:
   - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
     quality.
   - No matched independent contradiction located; partial successes and misses coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gemini-3-8-flash-debug-bughunt'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -2836,7 +2799,6 @@ records:
   evidence_notes:
   - Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve xHigh as board label.
     Intro's below 50% statement is stale. Gemini 3.1 Pro 33.81±6.64 is withheld pending preview-ID mapping.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R03'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -2870,7 +2832,6 @@ records:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-gemini-3-8-flash'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -2901,7 +2862,6 @@ records:
   known_failure_modes:
   - Security misses and occasional unparsable output.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-gemini38'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -2940,7 +2900,7 @@ records:
     original_task: tool-connected-real-time-voice-conversation
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: gemini-3-8-live
   profile: models/google-deepmind/gemini-3-8-live/profile.yaml
   id: judgment-0a7fc4e6861b9abe
@@ -3004,7 +2964,7 @@ records:
     original_task: visual-concepts-mockups-and-text-heavy-image-drafts
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: gemini-3-pro-image
   profile: models/google-deepmind/gemini-3-pro-image/profile.yaml
   id: judgment-231a8488cc54a31b
@@ -3066,7 +3026,7 @@ records:
     original_task: iterative-short-video-editing
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: gemini-omni-1-1-flash
   profile: models/google-deepmind/gemini-omni-1-1-flash/profile.yaml
   id: judgment-af4ab0ba09892360
@@ -3137,7 +3097,7 @@ records:
     original_task: long-horizon-coding-and-enterprise-agent-workflows-when-access-is-available
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: gemini4argon
   profile: models/google-deepmind/gemini4argon/profile.yaml
   id: judgment-0134f7d02c624e6b
@@ -3163,7 +3123,6 @@ records:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-gemini4argon'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -3213,7 +3172,7 @@ records:
     original_task: locally-controlled-multimodal-coding-assistant
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: gemma-4-31b-it
   profile: models/google-deepmind/gemma-4-31b-it/profile.yaml
   id: judgment-f226052d85b08e80
@@ -3278,7 +3237,7 @@ records:
     original_task: prompted-full-song-concept-drafts
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: lyria-3-5
   profile: models/google-deepmind/lyria-3-5/profile.yaml
   id: judgment-d0a9599027c859f7
@@ -3342,7 +3301,7 @@ records:
     original_task: directed-short-shots-requiring-first-last-frame-or-extensions
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: veo-3-1-generate-preview
   profile: models/google-deepmind/veo-3-1-generate-preview/profile.yaml
   id: judgment-a39ac31ce68709f0
@@ -3402,7 +3361,7 @@ records:
     original_task: multilingual-visual-chat
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: llama-4-maverick
   profile: models/meta/llama-4-maverick/profile.yaml
   id: judgment-4c86ac1246e4aa6b
@@ -3463,7 +3422,7 @@ records:
     original_task: multilingual-visual-chat
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: llama-4-scout
   profile: models/meta/llama-4-scout/profile.yaml
   id: judgment-9a9a7a9cb18c9163
@@ -3492,7 +3451,7 @@ records:
     original_task: very-long-document-work
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 1
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: llama-4-scout
   profile: models/meta/llama-4-scout/profile.yaml
   id: judgment-b0524d80aaeb6829
@@ -3513,7 +3472,6 @@ records:
   known_failure_modes:
   - Style shortcuts, missing context and conservative ties.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-scout'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -3550,7 +3508,7 @@ records:
     original_task: low-memory-instruction-tasks
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: phi-4-mini-instruct
   profile: models/microsoft/phi-4-mini-instruct/profile.yaml
   id: judgment-eb06ac9534f922b4
@@ -3611,7 +3569,7 @@ records:
     original_task: compact-audio-image-understanding
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: phi-4-multimodal-instruct
   profile: models/microsoft/phi-4-multimodal-instruct/profile.yaml
   id: judgment-61024ceeda4b1074
@@ -3672,7 +3630,7 @@ records:
     original_task: english-visual-math-and-grounding
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: phi-4-reasoning-vision-15b
   profile: models/microsoft/phi-4-reasoning-vision-15b/profile.yaml
   id: judgment-87ac71979507153c
@@ -3735,7 +3693,7 @@ records:
     original_task: multimodal-long-context-work
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: minimax-m3
   profile: models/minimax/minimax-m3/profile.yaml
   id: judgment-93c890d81197f7fc
@@ -3766,7 +3724,6 @@ records:
     not a general ability ranking.
   - 'Potential transfer risk, not measured semantic failure: test-free byte matching does not establish a correct
     code change.'
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:minimax-m3-scoped-mechanical'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -3796,7 +3753,6 @@ records:
   - A patch applying or reproducing an issue does not ensure complete repair.
   evidence_notes:
   - Preprint; check released manifest before stronger confidence. No universal language or harness transfer.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:minimax-m3-debug-odin'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -3835,7 +3791,6 @@ records:
     or kimi-k2.6 results to current siblings. deepseek-v4-pro 77/89% has no 0813 pin and is excluded.
   - One author/project, no independent replication. A useful failure warning, not a measured population failure
     rate.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R05'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -3869,7 +3824,6 @@ records:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-minimax-m3'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -3905,7 +3859,7 @@ records:
     original_task: local-coding-agent
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: devstral-small-2
   profile: models/mistral-ai/devstral-small-2/profile.yaml
   id: judgment-8d7c54b092733784
@@ -3970,7 +3924,7 @@ records:
     original_task: edge-multilingual-chat
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: ministral-3-8b
   profile: models/mistral-ai/ministral-3-8b/profile.yaml
   id: judgment-c95618e6317eb57c
@@ -3995,7 +3949,6 @@ records:
   evidence_notes:
   - Tiny function-level slice; no architecture/repository inference. PDF/ZIP artifacts listed, but advertised
     root CSV returned 404. Qwen3.5-9B was replaced by Qwen3-8B, despite misleading internal key; no transfer.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R07'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -4034,7 +3987,7 @@ records:
     original_task: non-reasoning-multilingual-rag
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: mistral-large-3
   profile: models/mistral-ai/mistral-large-3/profile.yaml
   id: judgment-70b7c0b4e8adbe58
@@ -4060,7 +4013,6 @@ records:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-mistral-large-3'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -4097,7 +4049,7 @@ records:
     original_task: unified-reasoning-coding
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: mistral-medium-3-5
   profile: models/mistral-ai/mistral-medium-3-5/profile.yaml
   id: judgment-e66b1386a6d0363d
@@ -4123,7 +4075,6 @@ records:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-mistral-medium-3-5'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -4162,7 +4113,7 @@ records:
     original_task: latency-sensitive-enterprise-assistant
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: mistral-small-4
   profile: models/mistral-ai/mistral-small-4/profile.yaml
   id: judgment-9a65dee264bffeda
@@ -4223,7 +4174,7 @@ records:
     original_task: long-horizon-multimodal-agents
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: kimi-k3
   profile: models/moonshot-ai/kimi-k3/profile.yaml
   id: judgment-b00034cf95cef727
@@ -4256,7 +4207,6 @@ records:
   - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
     quality.
   - No matched independent contradiction located; partial successes and misses coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:kimi-k3-debug-bughunt'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -4286,7 +4236,6 @@ records:
   - A patch applying or reproducing an issue does not ensure complete repair.
   evidence_notes:
   - Preprint; check released manifest before stronger confidence. No universal language or harness transfer.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:kimi-k3-debug-odin'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -4318,7 +4267,6 @@ records:
   evidence_notes:
   - One run, unpublished full score artifacts; serving effects not isolated. qwen3.8-max-preview comparator
     cannot transfer to qwen3-8-2-4t-a95b weights.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A06'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -4352,7 +4300,6 @@ records:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-kimi-k3'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -4382,7 +4329,6 @@ records:
   known_failure_modes:
   - Calendar overlap and checkout polish trailed the tested older comparator.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-kimi-practitioner'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -4454,7 +4400,7 @@ records:
     original_task: coding-and-document-reasoning-at-constrained-spend
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: gpt-6-1-sol
   profile: models/openai/gpt-6-1-sol/profile.yaml
   id: judgment-6485858c395995b9
@@ -4487,7 +4433,7 @@ records:
     original_task: factual-answers-and-tool-backed-research
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 1
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: gpt-6-1-sol
   profile: models/openai/gpt-6-1-sol/profile.yaml
   id: judgment-98fd19b09613391e
@@ -4517,7 +4463,6 @@ records:
     not a general ability ranking.
   - 'Potential transfer risk, not measured semantic failure: test-free byte matching does not establish a correct
     code change.'
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-1-sol-scoped-mechanical'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -4558,7 +4503,6 @@ records:
   - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
     quality.
   - No matched independent contradiction located; partial successes and misses coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-1-sol-debug-bughunt'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -4588,7 +4532,6 @@ records:
   - No failures observed in14attempts; this is too small and feedback-rich to establish general reliability.
   evidence_notes:
   - Different code scale from Bug Hunt Bench; both findings should coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-1-sol-debug-small-python'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -4622,7 +4565,6 @@ records:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-gpt-6-1-sol'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -4651,7 +4593,6 @@ records:
   known_failure_modes:
   - No full independent execution audit; low effort may omit real tests.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-sol61'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -4681,7 +4622,6 @@ records:
   known_failure_modes:
   - Dense low-effort source; false localhost-running summaries.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-sol61-practitioner'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -4727,7 +4667,7 @@ records:
     original_task: complex-coding-and-computer-workflows
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: gpt-6-astra
   profile: models/openai/gpt-6-astra/profile.yaml
   id: judgment-4e7af644a89ef0a9
@@ -4759,7 +4699,7 @@ records:
     original_task: scientific-research
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 1
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: gpt-6-astra
   profile: models/openai/gpt-6-astra/profile.yaml
   id: judgment-50e193772d714514
@@ -4792,7 +4732,6 @@ records:
   - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
     quality.
   - No matched independent contradiction located; partial successes and misses coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-astra-debug-bughunt'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -4822,7 +4761,6 @@ records:
   - No failures observed in14attempts; this is too small and feedback-rich to establish general reliability.
   evidence_notes:
   - Different code scale from Bug Hunt Bench; both findings should coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-astra-debug-small-python'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -4853,7 +4791,6 @@ records:
   evidence_notes:
   - Single anecdote, no code or controlled runs. Warning about this workload only; cannot establish a general
     failure rate or override refactoring benchmark E07.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A05'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -4885,7 +4822,6 @@ records:
   evidence_notes:
   - Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve xHigh as board label.
     Intro's below 50% statement is stale. Gemini 3.1 Pro 33.81±6.64 is withheld pending preview-ID mapping.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R01'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -4919,7 +4855,6 @@ records:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-gpt-6-astra'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -4951,7 +4886,6 @@ records:
   known_failure_modes:
   - Diff-only study missed security issues despite high finding precision.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-astra'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -4994,7 +4928,7 @@ records:
     original_task: focused-high-volume-tasks
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: gpt-6-luna
   profile: models/openai/gpt-6-luna/profile.yaml
   id: judgment-4793164eb12deab7
@@ -5025,7 +4959,6 @@ records:
     not a general ability ranking.
   - 'Potential transfer risk, not measured semantic failure: test-free byte matching does not establish a correct
     code change.'
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-luna-scoped-mechanical'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -5066,7 +4999,6 @@ records:
   - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
     quality.
   - No matched independent contradiction located; partial successes and misses coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-luna-debug-bughunt'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -5095,7 +5027,6 @@ records:
   - 10/12 self-repairs passed; two regex repairs reduced passing-test counts.
   evidence_notes:
   - Tiny sample; not evidence that high effort universally hurts.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-luna-debug-small-python'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -5129,7 +5060,6 @@ records:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-gpt-6-luna'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -5171,7 +5101,7 @@ records:
     original_task: everyday-image-generation
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: gpt-image-2-5-flare
   profile: models/openai/gpt-image-2-5-flare/profile.yaml
   id: judgment-2ca135b74c458093
@@ -5240,7 +5170,7 @@ records:
     original_task: image-editing
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: gpt-image-2-5-sunburst
   profile: models/openai/gpt-image-2-5-sunburst/profile.yaml
   id: judgment-42c1857157777f2b
@@ -5308,7 +5238,7 @@ records:
     original_task: natural-simultaneous-listening-and-speaking
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: gpt-live-1
   profile: models/openai/gpt-live-1/profile.yaml
   id: judgment-6fc6e6b6589624e3
@@ -5378,7 +5308,7 @@ records:
     original_task: local-private-text-reasoning-and-adaptation
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: gpt-oss-120b
   profile: models/openai/gpt-oss-120b/profile.yaml
   id: judgment-5f82e79ab532e98f
@@ -5401,7 +5331,6 @@ records:
   - 79.1% well-formed cases;47 cases had malformed responses.
   evidence_notes:
   - Old immutable-checkpoint evidence; current provider/harness parity unverified.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-oss-120b-scoped-aider'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -5442,7 +5371,6 @@ records:
   - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
     quality.
   - No matched independent contradiction located; partial successes and misses coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-oss-120b-debug-bughunt'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -5474,7 +5402,6 @@ records:
     disproving this local result.
   - 'Related caution source: bughunt-data. It is not a controlled contradiction because the task size, route,
     effort and harness differ.'
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-oss-120b-debug-local-csv'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -5503,7 +5430,6 @@ records:
   known_failure_modes:
   - Much lower fault detection in simpler generation harnesses; coverage is incomplete.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-oss120'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -5549,7 +5475,7 @@ records:
     original_task: local-private-text-reasoning-and-adaptation
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: gpt-oss-20b
   profile: models/openai/gpt-oss-20b/profile.yaml
   id: judgment-46cdaaca49f8b491
@@ -5582,7 +5508,6 @@ records:
   - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
     quality.
   - No matched independent contradiction located; partial successes and misses coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-oss-20b-debug-bughunt'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -5612,7 +5537,6 @@ records:
   known_failure_modes:
   - Compilation errors missed; false alarms on clean refactorings.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-oss20'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -5643,7 +5567,6 @@ records:
   known_failure_modes:
   - Wrong assertions, missed behavioral changes and disrupted coverage.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-oss20'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -5684,7 +5607,7 @@ records:
     original_task: tool-using-speech-agents
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: gpt-realtime-2-1
   profile: models/openai/gpt-realtime-2-1/profile.yaml
   id: judgment-8d4fb0af2cb7e4fe
@@ -5743,7 +5666,7 @@ records:
     original_task: agentic-coding-and-knowledge-workflows
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: xai-grok-4-7
   profile: models/xai-spacexai/xai-grok-4-7/profile.yaml
   id: judgment-2216eba8e5c983c7
@@ -5776,7 +5699,6 @@ records:
   - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
     quality.
   - No matched independent contradiction located; partial successes and misses coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:xai-grok-4-7-debug-bughunt'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -5810,7 +5732,6 @@ records:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-xai-grok-4-7'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -5848,7 +5769,7 @@ records:
     original_task: long-horizon-text-coding
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: glm-5-3
   profile: models/z-ai-zhipu-ai/glm-5-3/profile.yaml
   id: judgment-a007e05cd0f0f5f6
@@ -5882,7 +5803,6 @@ records:
   - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
     quality.
   - No matched independent contradiction located; partial successes and misses coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:glm-5-3-debug-bughunt'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -5916,7 +5836,6 @@ records:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-glm-5-3'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -5955,7 +5874,7 @@ records:
     original_task: cost-constrained-multimodal-agents
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: glm-5-3-flash
   profile: models/z-ai-zhipu-ai/glm-5-3-flash/profile.yaml
   id: judgment-35e494a9a2bcd94d
@@ -5986,7 +5905,6 @@ records:
     not a general ability ranking.
   - 'Potential transfer risk, not measured semantic failure: test-free byte matching does not establish a correct
     code change.'
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:glm-5-3-flash-scoped-mechanical'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -6027,7 +5945,6 @@ records:
   - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
     quality.
   - No matched independent contradiction located; partial successes and misses coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:glm-5-3-flash-debug-bughunt'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -6061,7 +5978,6 @@ records:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-glm-5-3-flash'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null

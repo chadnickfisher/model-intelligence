@@ -2365,78 +2365,22 @@ records:
   entity_id: maintenance-contract-v1
   canonical_path: data/maintenance-contract.yaml
   value_hash: 8926edc8d3e7ecd726b271e0f4a571d7a65a4e1710de1b2c63426fda77ee29b1
-- entity_type: maintenance_pass
-  entity_id: maintenance-pass-compressed-2026-10-07-day-2-behavior
-  canonical_path: data/maintenance-passes.yaml
-  value_hash: 132489a59e602832195629cd9e5a8c3acbb7768e5250d90ae58959ece98a1cc0
-- entity_type: maintenance_pass
-  entity_id: maintenance-pass-compressed-2026-10-07-day-2-discovery-replay
-  canonical_path: data/maintenance-passes.yaml
-  value_hash: 65c6a0ff70c304740188b75faed31d4caa1733974b3563fd38dd9010ac079dbb
-- entity_type: maintenance_pass
-  entity_id: maintenance-pass-compressed-2026-10-07-day-3-discovery-replay
-  canonical_path: data/maintenance-passes.yaml
-  value_hash: ca2df71095117736d7678d98b700e40d3bd477974d73f6a5a4eb2dc1cf908520
-- entity_type: maintenance_pass
-  entity_id: maintenance-pass-compressed-2026-10-07-day-3-unknowns
-  canonical_path: data/maintenance-passes.yaml
-  value_hash: 411ca4c0d6f5c34753892fce856ba68beee7852a3b0e81a1a1f052b0af055fdb
-- entity_type: maintenance_pass
-  entity_id: maintenance-pass-compressed-2026-10-07-day-4-discovery-replay
-  canonical_path: data/maintenance-passes.yaml
-  value_hash: f84557c9932e13ef26ace0411bb85a5ef02136e100dcc946a92856468d47f69e
-- entity_type: maintenance_pass
-  entity_id: maintenance-pass-compressed-2026-10-07-day-5-discovery-replay
-  canonical_path: data/maintenance-passes.yaml
-  value_hash: 80bece66ad5341e454baa573cd66e8189287ef5dc4aecd9e746d6b95c9665477
-- entity_type: maintenance_pass
-  entity_id: maintenance-pass-compressed-2026-10-07-day-6-capabilities
-  canonical_path: data/maintenance-passes.yaml
-  value_hash: 0c77e44a25f21a6018cdd9cb12714b2f6b7a8a24400bc4e721ea4dbde36a1557
-- entity_type: maintenance_pass
-  entity_id: maintenance-pass-compressed-2026-10-07-day-6-discovery-replay
-  canonical_path: data/maintenance-passes.yaml
-  value_hash: 1ee48780025e1ae8b1efdf35b0b5c2bc22d3db583873cb2f26e29e7f0d0273d2
-- entity_type: maintenance_pass
-  entity_id: maintenance-pass-compressed-2026-10-07-day-7-benchmarks
-  canonical_path: data/maintenance-passes.yaml
-  value_hash: bb851d1e5b6417e719e19dc038245633ca89673faa639da04cb87309617508e8
-- entity_type: maintenance_pass
-  entity_id: maintenance-pass-compressed-2026-10-07-day-7-discovery-replay
-  canonical_path: data/maintenance-passes.yaml
-  value_hash: 7a3c5b07952e1bb2f6ddfe1b5e4e2b1fa2e0b7c72944e4537f1eccd90af0f1b5
-- entity_type: maintenance_pass
-  entity_id: maintenance-pass-pilot-2026-10-07-access
-  canonical_path: data/maintenance-passes.yaml
-  value_hash: 01e507d7a31d1d60a3e372db7ba1d1ec1e824339b62818bbd6120b3d3140e517
-- entity_type: maintenance_pass
-  entity_id: maintenance-pass-pilot-2026-10-07-discovery
-  canonical_path: data/maintenance-passes.yaml
-  value_hash: 94f6152938c22187f3958b33c4395bf8929d7854adcc37b939a3e14a2c08a6ca
-- entity_type: maintenance_pass
-  entity_id: maintenance-pass-reserve-2026-10-07-azure-fast
-  canonical_path: data/maintenance-passes.yaml
-  value_hash: b331e27779b443a380648cb79f68d6b09b8a8349426965891a692747164c33c8
-- entity_type: maintenance_pass
-  entity_id: maintenance-pass-reserve-2026-10-07-veo-price-identity
-  canonical_path: data/maintenance-passes.yaml
-  value_hash: e38c0c1a4323266b374bc667a909e54b16f82b4630f418607f8e1f6f9a984b60
 - entity_type: model
   entity_id: ai21-jamba2-mini
   canonical_path: models/ai21-labs/ai21-jamba2-mini/profile.yaml
-  value_hash: 78e23d5bb7773c0a292970145c155c1694e1f903a6aa96e1d1dc52b4674c08e7
+  value_hash: d07e819f1f0de152ace496f99479452d573cab60473fa77a5863aa3bbb7b4827
 - entity_type: model
   entity_id: bfl-flux3-video
   canonical_path: models/black-forest-labs/bfl-flux3-video/profile.yaml
-  value_hash: e651c02ac79e8475a4d325a74e31cbdfa2856a8ac70e5c1a599977ce8828a567
+  value_hash: 199b2020962955bcad8f4dce0cc3146112cc206c9d699203622181b4e91c5f95
 - entity_type: model
   entity_id: claude-fable-5-1
   canonical_path: models/anthropic/claude-fable-5-1/profile.yaml
-  value_hash: 7efa5ebf997ad63cbe39f67e608f89adb5fc7b1309657753f22a05c1ddce38b9
+  value_hash: 6be20be85decc74a319367a5f88380d86e818aa02c86a8ae389a7065c6f1ccca
 - entity_type: model
   entity_id: claude-haiku-4-5
   canonical_path: models/anthropic/claude-haiku-4-5/profile.yaml
-  value_hash: 90d8fb25557ea9c8f144a8ee3dabf8a4c4cfbb5a2a7edcec6621ef6a8f8a58a7
+  value_hash: f4d17b990c7cbf5de7a6432b72ba91d48e8e3babb96c5ef377add7d003ca2361
 - entity_type: model
   entity_id: claude-haiku-5-5
   canonical_path: models/anthropic/claude-haiku-5-5/profile.yaml
@@ -2444,199 +2388,199 @@ records:
 - entity_type: model
   entity_id: claude-opus-5-5
   canonical_path: models/anthropic/claude-opus-5-5/profile.yaml
-  value_hash: 163f92b58b58ad86d91939d5042e829579e349946c5be7dae69366cffc47a9f6
+  value_hash: 91bcc4cd3c442f0d74bf13529148d906267c18db4593445bc9ac360b2c712231
 - entity_type: model
   entity_id: claude-sonnet-5-5
   canonical_path: models/anthropic/claude-sonnet-5-5/profile.yaml
-  value_hash: 67c56a04135d37232cfc6d03601229771ec50bc4fa3674a5fb1ca1b04672027c
+  value_hash: 77fc6a0b6d6afe3ecaedeebef68069da11be8864f160dc94bcf5eabaaa20329e
 - entity_type: model
   entity_id: cohere-command-a-plus
   canonical_path: models/cohere/cohere-command-a-plus/profile.yaml
-  value_hash: 08d27dc3dfff41a72320a7b2546c8bf7310db23f9f059a2ab8c1fd9d24755353
+  value_hash: 09a9ab7067dce7d5bc8ef441265fbe6b3af9454342e9f46e4b3c0591ad10a5e1
 - entity_type: model
   entity_id: cohere-embed-5-fast
   canonical_path: models/cohere/cohere-embed-5-fast/profile.yaml
-  value_hash: 7afca80363d29b9cd12302ba71a6cac6239d1e35fb90f8fcf2cafb757a8002ed
+  value_hash: f3ce4cc51835340556205eb09c61dc50b328b1826218680e2fb4d4408202f9a0
 - entity_type: model
   entity_id: cohere-embed-5-pro
   canonical_path: models/cohere/cohere-embed-5-pro/profile.yaml
-  value_hash: f5e0835d10a366f4f4d9db02c6493eba87439715399bd7d5cb4e7736b3427541
+  value_hash: 47c07773e42c7c101fa38f109bff2e4fcf1b03373177b9c0585f5d3602bb5bfe
 - entity_type: model
   entity_id: cohere-north-small-translate
   canonical_path: models/cohere/cohere-north-small-translate/profile.yaml
-  value_hash: a8a3cf1ebe446dd4b08294e1c2021dd673e70784bb987221961ec93d376e727a
+  value_hash: 430a10c299730850c43d0a0aa1fee3123a84072a55f50cb445eae1e782f800a4
 - entity_type: model
   entity_id: deepseek-v4-1-flash
   canonical_path: models/deepseek/deepseek-v4-1-flash/profile.yaml
-  value_hash: 4bc493187ce2bc342d7d3c79a4da4125c6933c68ac84915ee3741f72624616af
+  value_hash: f2e4cb26fe26ec69eee37425ef5e312302d63dbcde3efb56a52f321ed6052d2f
 - entity_type: model
   entity_id: deepseek-v4-pro-0813
   canonical_path: models/deepseek/deepseek-v4-pro-0813/profile.yaml
-  value_hash: f79c7040ec4ae6b0681aecce552ac178ebc9f4740b5a8da3cb612f8ca4878df2
+  value_hash: 1b076aa27f1817369aeb80e13bc8b365a7554c172b852e0027d94807a010aee1
 - entity_type: model
   entity_id: devstral-small-2
   canonical_path: models/mistral-ai/devstral-small-2/profile.yaml
-  value_hash: c9c05d3909bc6b4f17e0ce24293678f005faa2ee7caaaeb1b27d9d600c2c27ae
+  value_hash: 861309a619dbd218c4060954cb2b25e6ad2d92958c5df4d2991db20679f2af98
 - entity_type: model
   entity_id: elevenlabs-eleven-v4
   canonical_path: models/elevenlabs/elevenlabs-eleven-v4/profile.yaml
-  value_hash: 1efccfbe1a94ced73adeb972aebb2d4c1e8f24bae3b6d4520c42828f8d5b81cc
+  value_hash: 43ef0c62ed700d757422f3148c9e364466ba0397cd491668e3ae0443296112cd
 - entity_type: model
   entity_id: gemini-3-1-pro-preview
   canonical_path: models/google-deepmind/gemini-3-1-pro-preview/profile.yaml
-  value_hash: bc2a121704fc7ea325e8a3f98d35af3f287fc0e888888f689e99eccd1dc4caac
+  value_hash: bb2acafbfba305764eb48d1b4b9978af9f6d673b70729e2f342fbfbd23bc738a
 - entity_type: model
   entity_id: gemini-3-5-flash-lite
   canonical_path: models/google-deepmind/gemini-3-5-flash-lite/profile.yaml
-  value_hash: 1e5cc5258072c60fc6e9ead4f707405ffef12907985f37e4fd46e0b63c8a7058
+  value_hash: 72f66fdaaf0dfc4431360107eec0706dd0d4aa5b7b7fdfbcfeb522fc53e1fd3d
 - entity_type: model
   entity_id: gemini-3-8-flash
   canonical_path: models/google-deepmind/gemini-3-8-flash/profile.yaml
-  value_hash: 57e27118f05d2d1c98272fb20bee51a32a5c2a0e6a2df24685673398c15af7cd
+  value_hash: 88a4f6a2cc800959a84ff31361804fe387e8917de0b12ba17d91c0f24e47b00a
 - entity_type: model
   entity_id: gemini-3-8-live
   canonical_path: models/google-deepmind/gemini-3-8-live/profile.yaml
-  value_hash: 8c2db324b6358d5de7a60118eae46bc2f42280c54243b2e474b4455cde6198a5
+  value_hash: dd431da7d400a56f6612bab04a5ee73dac7e0129362d67892669c16ca6f3a3b6
 - entity_type: model
   entity_id: gemini-3-pro-image
   canonical_path: models/google-deepmind/gemini-3-pro-image/profile.yaml
-  value_hash: 1007bcb2ab78c26780d8c8d5ab6c4f2bc6ce97360b7e2159bf69d79f4ded4003
+  value_hash: 0d44c0365fe6f03720c153f126f86063886abdf6e05948763f4813939fd25c54
 - entity_type: model
   entity_id: gemini-omni-1-1-flash
   canonical_path: models/google-deepmind/gemini-omni-1-1-flash/profile.yaml
-  value_hash: ca15d62a6522dfb58612063fb64fb8fc90370aef9d9805feda8ede96e61ee742
+  value_hash: bf9ed07410cd753a10af501f4afdec2a9fcf44d1ac34d6447bae09c2b1d7d1b8
 - entity_type: model
   entity_id: gemini4argon
   canonical_path: models/google-deepmind/gemini4argon/profile.yaml
-  value_hash: 14b9671945f428d78df562bc9807b37b27e7810b60b7a3e8290b8bee7c3c31f3
+  value_hash: a697f8a2b34e6f2575eccd961f0c2ccc7404b73cdbcd6b981f52bd4f950b59db
 - entity_type: model
   entity_id: gemma-4-31b-it
   canonical_path: models/google-deepmind/gemma-4-31b-it/profile.yaml
-  value_hash: e18e57d8679e12d97f5bf07e4bfc465855962cb33fe823175269d81c62780d75
+  value_hash: 11ccd7e384e6dc8a596865cf09e26f51c65ae9a206b9d2a5bdcf80a87673377c
 - entity_type: model
   entity_id: glm-5-3
   canonical_path: models/z-ai-zhipu-ai/glm-5-3/profile.yaml
-  value_hash: 0e5bbc26802a1c74a5eb70b28dc34d35cdd96303aa3706117d66d1e025226edf
+  value_hash: 67a93dd8945496db5290bb66226513ba1f32ae5c77a4848f5c3fd13521a8ed52
 - entity_type: model
   entity_id: glm-5-3-flash
   canonical_path: models/z-ai-zhipu-ai/glm-5-3-flash/profile.yaml
-  value_hash: 614624fe81f03db1158cd99313d0a91422d0077e92b1cdd666f4580a33359e32
+  value_hash: e9949aca47cda91980784ecc389167a50f4abf91998efdde1c154b90f6485e30
 - entity_type: model
   entity_id: gpt-6-1-sol
   canonical_path: models/openai/gpt-6-1-sol/profile.yaml
-  value_hash: 2314c34774b61af60ce65ba0e3a77d3d998b779aa7331ce22e81652e87e7d686
+  value_hash: e48477371cb920ce483a6c38745c6cd6c3be45276b642d6ea61fbcffbb2ee6db
 - entity_type: model
   entity_id: gpt-6-astra
   canonical_path: models/openai/gpt-6-astra/profile.yaml
-  value_hash: fe1091e33f37d0ec084351c2912f26f928a4899fbf7dea127f897ddea9414ff1
+  value_hash: b4a56317fee3e163e9b0788a75237856cb2fcec6053e1dd3517f4ff547733470
 - entity_type: model
   entity_id: gpt-6-luna
   canonical_path: models/openai/gpt-6-luna/profile.yaml
-  value_hash: 322f657f15622aa4458448ad3541e9c79417f0869cfa10e17f11c30e4b2e56d8
+  value_hash: 5726f6654bd725576a6c73bd0c361196d188de7f750e0dcad1ed03c36e105498
 - entity_type: model
   entity_id: gpt-image-2-5-flare
   canonical_path: models/openai/gpt-image-2-5-flare/profile.yaml
-  value_hash: e41208acdc028496e1eb0a2f9aab699befbde06922ea50bc7fd7cd6914a26ae4
+  value_hash: df6d934895f67ad342c8b749fb9d5c8a0fe3698b77a0c549f73563bec9b2170a
 - entity_type: model
   entity_id: gpt-image-2-5-sunburst
   canonical_path: models/openai/gpt-image-2-5-sunburst/profile.yaml
-  value_hash: f5e997268591de7bfe6417f72225735b81200d38f68446382b800dc8e7933e50
+  value_hash: f549b2917825350f8184013476cf319c9710b87255db883954a33167cf2e76cf
 - entity_type: model
   entity_id: gpt-live-1
   canonical_path: models/openai/gpt-live-1/profile.yaml
-  value_hash: dae24ed669bbb5e8fd172706127f89fd12b428148490b7f83cf15ce3c40a6c27
+  value_hash: cf479e005cd9fcb436430b1fd5d0a4ee3a9d9700ff27a326c2f1089b875285e9
 - entity_type: model
   entity_id: gpt-oss-120b
   canonical_path: models/openai/gpt-oss-120b/profile.yaml
-  value_hash: 67f134f0f7f53e8d34c8e735602c03daa9e3a6801b9fe0cd57d06a1f33c16471
+  value_hash: a299fa94cb4f3c69178e57d521338f2df9a9003f8ea80ed6a7cef5019af81ab9
 - entity_type: model
   entity_id: gpt-oss-20b
   canonical_path: models/openai/gpt-oss-20b/profile.yaml
-  value_hash: 4eb64dfcf8c23a715cee819dbc859be44fa803034f1082c06f0f80de1634ca20
+  value_hash: ab7bc1b479aa8a8f96c8d08d6791cae2e26443a3377e7638eede45f0fe5ae223
 - entity_type: model
   entity_id: gpt-realtime-2-1
   canonical_path: models/openai/gpt-realtime-2-1/profile.yaml
-  value_hash: 4e5d570cd108ba6d99bbcb32f1975359fdeaee35fd0aeeaa493ca0e65877c1c7
+  value_hash: 698f9fb38aeea82a4dc596b242a4f482d24ef469eeff1f1e3d9d66c778f1cae9
 - entity_type: model
   entity_id: kimi-k3
   canonical_path: models/moonshot-ai/kimi-k3/profile.yaml
-  value_hash: 87ada02f10e284f25d32a00779321314e1e761ca44df297ceeef1263617bc954
+  value_hash: e89f8e17be3e5db97ca5050d4b643f54fb8d2b675b642fd7cc0fdc4335f56730
 - entity_type: model
   entity_id: llama-4-maverick
   canonical_path: models/meta/llama-4-maverick/profile.yaml
-  value_hash: e76c6c25fd3536ec915f6d5671e225dde15122e6d5ed936fe8620eb4bf136f82
+  value_hash: 410762dfc4a41d65207b4dfd11b09bcdb241f470e70d7b372e58d02a313b9cfb
 - entity_type: model
   entity_id: llama-4-scout
   canonical_path: models/meta/llama-4-scout/profile.yaml
-  value_hash: 6253c2c1e480568979ef9e509a4be58e9886e79fed47faad3bc5bc897bc77b10
+  value_hash: d18caf531ab04c499bcf8beedb4a7181b5adc25b06d4c20ec226accafa392dea
 - entity_type: model
   entity_id: lyria-3-5
   canonical_path: models/google-deepmind/lyria-3-5/profile.yaml
-  value_hash: b1fe5d0f88026bec3914ef0e4b522ea067d33c4302026d6b70c7a456a0c6a577
+  value_hash: ef8bed016b6e0f9f999bfaa6cba0437d58d968b068df211a2a15b1abbf53ee80
 - entity_type: model
   entity_id: minimax-m3
   canonical_path: models/minimax/minimax-m3/profile.yaml
-  value_hash: 5d8a17b32c75a60c8142b3b7200512a5518d3b1b08aa7c281a17337be4377dab
+  value_hash: 4ca9a7662d1ce72f9ada0b74bdafddc922ffcb63182713d0a0891802537a056a
 - entity_type: model
   entity_id: ministral-3-8b
   canonical_path: models/mistral-ai/ministral-3-8b/profile.yaml
-  value_hash: d7d61dce74ec41e89481e8aa2f1150b66aa9ac713f486f1b1ba2b40226164f8e
+  value_hash: 4a3740d0f2ebaff9f6db7ee4f08b979f08d47da9d42e54af99c6297b00d00bc5
 - entity_type: model
   entity_id: mistral-large-3
   canonical_path: models/mistral-ai/mistral-large-3/profile.yaml
-  value_hash: 883e318307a63747577c255316473c040bc669dbbb99568aac222addc4214922
+  value_hash: b1f4f1ce1e1feac64bff03f7bc6b7f72dc04c97c392fbbaa29c7a421f80734bf
 - entity_type: model
   entity_id: mistral-medium-3-5
   canonical_path: models/mistral-ai/mistral-medium-3-5/profile.yaml
-  value_hash: 0a2dd703dc955e750d2d88f451dff6266b4e8211fe99f264b8d3056286ea47d5
+  value_hash: 8ae5eea985e0a1f4baee5bc7def520c668fd8a0b7d5885f52cf7c9babba5c9ae
 - entity_type: model
   entity_id: mistral-small-4
   canonical_path: models/mistral-ai/mistral-small-4/profile.yaml
-  value_hash: c1db2dc3062aff115622ef35d3985bad54000ca9ce910628c4bc548a7529299a
+  value_hash: e08676911c3ba70752a824afee8d3be8201026cb484a02acffc8a96266a04ab3
 - entity_type: model
   entity_id: nemotron-3-ultra
   canonical_path: models/nvidia/nemotron-3-ultra/profile.yaml
-  value_hash: df2ad8981f2948b8bb067f4516dc2d7c23522ad83c56c585b8c057ca88295a0f
+  value_hash: 81df12ba5f4270bc9ef120a3a82a84f6057a0b21e9691cc3ff15ab28493e94e9
 - entity_type: model
   entity_id: phi-4-mini-instruct
   canonical_path: models/microsoft/phi-4-mini-instruct/profile.yaml
-  value_hash: 4b7f38d7669adde9b2d0ed646015bdb4912a20214e97a22ffd229afd7c45cb74
+  value_hash: d79dde595d66e5c7d0053e17b930df682cc1deac26feffb0528a15f5a3bfa1eb
 - entity_type: model
   entity_id: phi-4-multimodal-instruct
   canonical_path: models/microsoft/phi-4-multimodal-instruct/profile.yaml
-  value_hash: 01087e39effb98806ce441d2f20ea597345a3dd8d80a176284e9cf408c7edddb
+  value_hash: 37f67e82704f0df393f74ba612505021d57fa4e5f05b2aa57df889f3a7ea40f3
 - entity_type: model
   entity_id: phi-4-reasoning-vision-15b
   canonical_path: models/microsoft/phi-4-reasoning-vision-15b/profile.yaml
-  value_hash: 8e04591f94ae385f6eb4d19007f5a3e9b173b952d92b5f04b5a34915c724dd54
+  value_hash: 41b98b96e37117b287b07fac006ac25f0a69e0d76c9e12feeb9e469d3477b78e
 - entity_type: model
   entity_id: qwen3-5-9b
   canonical_path: models/alibaba-qwen/qwen3-5-9b/profile.yaml
-  value_hash: ca37f8cc05f262a1714ff00d61558b7e1b7e2a22de37c549b9aea350a7cd927e
+  value_hash: 7359b91729698540a4f9368801e7cb9b0856d8d229b76405151fb80ec00fe58c
 - entity_type: model
   entity_id: qwen3-8-2-4t-a95b
   canonical_path: models/alibaba-qwen/qwen3-8-2-4t-a95b/profile.yaml
-  value_hash: 7a015f9bfe9e6729db852ccf251d3a63eb1dc974f4a824627a9091ef39063ec2
+  value_hash: 6579c9619d95a2b39d74e3553261811f9a6b6999e2a9e814a9edd219c6050c15
 - entity_type: model
   entity_id: qwen3-8-27b
   canonical_path: models/alibaba-qwen/qwen3-8-27b/profile.yaml
-  value_hash: 404591c810f34206400ef5bfa6906c986da521f7c961120d8b994b24f9a30abe
+  value_hash: 0f570e347c0464a411d0637a0ce2405fade180adbdbe25490bdb43e073e0a04b
 - entity_type: model
   entity_id: qwen3-8-flash-next
   canonical_path: models/alibaba-qwen/qwen3-8-flash-next/profile.yaml
-  value_hash: a5d96a3a4727114cc3b3ee7b63a533cafb166431aa7bafee8057d84e2bc79aee
+  value_hash: 7a259f11e6c9554876aa96afe4f185def5fc4c0761c8e09034bd10080a05ad6d
 - entity_type: model
   entity_id: qwen3-coder-next
   canonical_path: models/alibaba-qwen/qwen3-coder-next/profile.yaml
-  value_hash: 9ed24c222792559fb78138db6e53bd2de19567444bd357bf50ff494c5ffb4ecf
+  value_hash: d79759a6db4d789ccfba0a288886b929148e7c36f196408b9cce6e3e52a72b08
 - entity_type: model
   entity_id: veo-3-1-generate-preview
   canonical_path: models/google-deepmind/veo-3-1-generate-preview/profile.yaml
-  value_hash: b628388f8e3b906b96e6a49fc4711b30f29538b821b3cdd2aa2b112d337a3abc
+  value_hash: a7aa7494332cdaec0bf0be4b87e446f903ce979ee9e6e6b72ce6ebe570e399e7
 - entity_type: model
   entity_id: xai-grok-4-7
   canonical_path: models/xai-spacexai/xai-grok-4-7/profile.yaml
-  value_hash: 1e05902935e409c008b3ac651a131636345e7416b54daf2e4cd63baa3f452702
+  value_hash: 047992ee19c3a830aa58b50cf2dd563ade5eb77a8bd67674495dec159b30dfd2
 - entity_type: observation
   entity_id: obs-04efb4d01f02
   canonical_path: evidence/observations.yaml
@@ -4821,14 +4765,6 @@ records:
   entity_id: research-coverage-xai-grok-4-7-capabilities
   canonical_path: data/research-coverage.yaml
   value_hash: fce25cbde74f72e2c1a16ce9aaa579d003062a8165394c2e524b4cffb8df6b2c
-- entity_type: research_run
-  entity_id: research-run-haiku-5-5-2026-10-07
-  canonical_path: data/research-runs.yaml
-  value_hash: 397a2f46d7cc24c73555cf0fbb5d29a14814abff51d2bcf24a1680a49963c827
-- entity_type: research_run
-  entity_id: research-run-pilot-2026-10-07-v1-1
-  canonical_path: data/research-runs.yaml
-  value_hash: 91c959dcb516c907f5f0eede51416ab4735d84f24e8e043c54abc4feeec5d668
 - entity_type: source
   entity_id: src-00450f075cbd
   canonical_path: evidence/sources.yaml
@@ -7545,3 +7481,595 @@ records:
   entity_id: vision.question_answering
   canonical_path: data/capability-taxonomy.yaml
   value_hash: ce150e3c003c39093c0896163c58882f1e368a936122cf8a915428e3ea79805d
+- entity_type: task_assessment
+  entity_id: task-assessment-00995d010b732e38
+  canonical_path: data/task-assessments.yaml
+  value_hash: 5a1d8339c691a092c452f75fe05d5b4947817dacd437bab446ae193cb57f7143
+- entity_type: task_assessment
+  entity_id: task-assessment-00fcaa516ef8e113
+  canonical_path: data/task-assessments.yaml
+  value_hash: b970ffc97b60edc22b200182e596d162d8db001493238518410635aef568f76f
+- entity_type: task_assessment
+  entity_id: task-assessment-0354af4b1748d1c8
+  canonical_path: data/task-assessments.yaml
+  value_hash: dc0da740dd4ba558d80327061064b2128db177682f22bc9a14bc28b9ac108e7e
+- entity_type: task_assessment
+  entity_id: task-assessment-035f9b56bc115000
+  canonical_path: data/task-assessments.yaml
+  value_hash: 707910afb206fd4a232ea867d5b485825c815364cf03089dc10347a658969a9d
+- entity_type: task_assessment
+  entity_id: task-assessment-070c4cf809080b7a
+  canonical_path: data/task-assessments.yaml
+  value_hash: 87d248368d6dd98db9dd25df3216444f828f15f05ac395aa66916c7be1429e75
+- entity_type: task_assessment
+  entity_id: task-assessment-096ca567976fe2f7
+  canonical_path: data/task-assessments.yaml
+  value_hash: eb2298539e750c62f26cdd7dc50216bdd16f1e9173a9f954b2f2337706314fa6
+- entity_type: task_assessment
+  entity_id: task-assessment-0a8fa9de3191200f
+  canonical_path: data/task-assessments.yaml
+  value_hash: ee2a28664acfda9c60345ea1fa2327b2c409ac8dcd26d2e01dc8f70c876db089
+- entity_type: task_assessment
+  entity_id: task-assessment-0b8baa028b109fcd
+  canonical_path: data/task-assessments.yaml
+  value_hash: a1754103c95257d9945e8c86ab6d81ecdcffdcb93f52a598b7c491d192ccaca8
+- entity_type: task_assessment
+  entity_id: task-assessment-0cafc05e775ce040
+  canonical_path: data/task-assessments.yaml
+  value_hash: f60f0f7b8deb21ef99b53253b5a9c2b50a28da7eb05df12d6285d5610aebf3ee
+- entity_type: task_assessment
+  entity_id: task-assessment-0f30a5835019c235
+  canonical_path: data/task-assessments.yaml
+  value_hash: f3b5594501b9e0b3162a7c823e14a6c55b1f1c286c27577a681c8a4978e6bc7d
+- entity_type: task_assessment
+  entity_id: task-assessment-0f4ee387f63124a3
+  canonical_path: data/task-assessments.yaml
+  value_hash: 795230f6c77dc35ad527d47a9cee8d564f090f315c05eddd33e85767a4cb4eef
+- entity_type: task_assessment
+  entity_id: task-assessment-103aa45aa3e96b74
+  canonical_path: data/task-assessments.yaml
+  value_hash: fc525e8068f5b3056da317b9d285d88330a7b6e934a53cea405972446bf73b52
+- entity_type: task_assessment
+  entity_id: task-assessment-1043dd04c51e382a
+  canonical_path: data/task-assessments.yaml
+  value_hash: 4c650ec23cc85791e61d472de4c01cc006e5f0d61a6557a5695bf0582b82ab17
+- entity_type: task_assessment
+  entity_id: task-assessment-10be02481f440546
+  canonical_path: data/task-assessments.yaml
+  value_hash: 658e60fa675b2c21e1afe8c710e3a63f7824d1d7f1f54562dea496109373c79c
+- entity_type: task_assessment
+  entity_id: task-assessment-125bdec834549880
+  canonical_path: data/task-assessments.yaml
+  value_hash: 6b04178e1011aa4e252572e9e904744fdfc0135a52db5e4e7724c66b8e2fbd73
+- entity_type: task_assessment
+  entity_id: task-assessment-13099b57a70bbdca
+  canonical_path: data/task-assessments.yaml
+  value_hash: 665dc43ad269d6e59e7e42bd49f44caaaf81fb424630966ab2180ef7ad311e8c
+- entity_type: task_assessment
+  entity_id: task-assessment-1818e981af20866f
+  canonical_path: data/task-assessments.yaml
+  value_hash: 09138be8c878d8e47544784dbd8a3ff67078746a571ad0c50d0efdef001bb2b4
+- entity_type: task_assessment
+  entity_id: task-assessment-1853a35a077aa067
+  canonical_path: data/task-assessments.yaml
+  value_hash: acca348c0c142b67329cc8c916f9ae821c83d69e21aae0f1b5d38de84a05c90b
+- entity_type: task_assessment
+  entity_id: task-assessment-18764875e8ebf8d0
+  canonical_path: data/task-assessments.yaml
+  value_hash: 9d5d52d27fa42f7a89365d4fa658267f8170166bafbd1a3a4fe3fcfd451597e4
+- entity_type: task_assessment
+  entity_id: task-assessment-1afa9b9724c8a3bf
+  canonical_path: data/task-assessments.yaml
+  value_hash: 96ed8b0eb4152bb6caeed48e9eff0b24a97afdcdc4b12dcd973c29ab152c7d8b
+- entity_type: task_assessment
+  entity_id: task-assessment-1b0fb30d39474ae8
+  canonical_path: data/task-assessments.yaml
+  value_hash: 5827b34b444b556bdcd57e5f5dd0f004b4442e9577666469aff98f26a46f14dc
+- entity_type: task_assessment
+  entity_id: task-assessment-1c140690071bddbe
+  canonical_path: data/task-assessments.yaml
+  value_hash: 7ce7fccc6e24c1c06c6a046c1b72f9b226a440f25896548bfbfa6c266d17f801
+- entity_type: task_assessment
+  entity_id: task-assessment-1c6d29ed4df8ddd4
+  canonical_path: data/task-assessments.yaml
+  value_hash: 75a097f2321450bb5a53c77865983fc13ce9605a59386c106b45653482c4e7f4
+- entity_type: task_assessment
+  entity_id: task-assessment-1d2ba9cb7171eaeb
+  canonical_path: data/task-assessments.yaml
+  value_hash: f9e2ab13d40ceabbf1290d986301c31c5e7e003095cdfc492e95eaf786581caf
+- entity_type: task_assessment
+  entity_id: task-assessment-1e0f71986ef81ed9
+  canonical_path: data/task-assessments.yaml
+  value_hash: bf85356aa54f8f60a1efbeda67f9164926d811bbb66e21117647e71c86ba17e1
+- entity_type: task_assessment
+  entity_id: task-assessment-1f7b15f43b07d0aa
+  canonical_path: data/task-assessments.yaml
+  value_hash: 06553051308780ab736c5801fe1e9c4e4d544bda346f2e3dbf71a54f17ec3a06
+- entity_type: task_assessment
+  entity_id: task-assessment-2019cba138b2e373
+  canonical_path: data/task-assessments.yaml
+  value_hash: e57a738f5deccf5e34c19430f21dcdcce722a6326aa0548ce806241dfd78a8f9
+- entity_type: task_assessment
+  entity_id: task-assessment-20bdb39b26ba794d
+  canonical_path: data/task-assessments.yaml
+  value_hash: 9087168a93a0364a0fcbdb1a3fb46d74c5c3777c3bad012b3a844854ebdb5758
+- entity_type: task_assessment
+  entity_id: task-assessment-221d948b14c51978
+  canonical_path: data/task-assessments.yaml
+  value_hash: ea2c1e83d9cd30c93047dc6abdf87797eb96ca22b48bf74883349a877e82dc1a
+- entity_type: task_assessment
+  entity_id: task-assessment-23bab6c2ee79504a
+  canonical_path: data/task-assessments.yaml
+  value_hash: 11b1e2d64fa5d3d374e0d550edbb7f7a50e2610d0d29123321857642d6784a13
+- entity_type: task_assessment
+  entity_id: task-assessment-247296f516d7a9af
+  canonical_path: data/task-assessments.yaml
+  value_hash: 2f8df8c9cf88808106e6bd3fb1d53084244fcd89e315981023cd8ae22348d14a
+- entity_type: task_assessment
+  entity_id: task-assessment-2489457cdc600233
+  canonical_path: data/task-assessments.yaml
+  value_hash: d02a7a66ea3201f2c51791fbd19809583807dfb025ace1135401386cbfa5f22d
+- entity_type: task_assessment
+  entity_id: task-assessment-250e6ba335e017d0
+  canonical_path: data/task-assessments.yaml
+  value_hash: 6f1a4aac74fb6e93f057791d33fadeb852dcbe5e2c03c2ccacc33791a645d9b7
+- entity_type: task_assessment
+  entity_id: task-assessment-2512b5bfcb3ebf28
+  canonical_path: data/task-assessments.yaml
+  value_hash: b08a57f1e01e0647ca32eb630346aae59ac1941ef89f4da9bf7e4313d5c624bc
+- entity_type: task_assessment
+  entity_id: task-assessment-28dbea7737d10fbf
+  canonical_path: data/task-assessments.yaml
+  value_hash: 1add604d2dec7512986ae49c309271b33685354d1ec4fbf939af12d58d598dd6
+- entity_type: task_assessment
+  entity_id: task-assessment-2a4b6c25405e04af
+  canonical_path: data/task-assessments.yaml
+  value_hash: 4f72b45b5a32d62ec543e11827d9132311fb64649da24c235ff9edba022644bc
+- entity_type: task_assessment
+  entity_id: task-assessment-2a8064d5a3efc617
+  canonical_path: data/task-assessments.yaml
+  value_hash: 9c2520c5da93cf144c211b9538f4a6e72d82ce3399bd6e5965d227ff99bb8351
+- entity_type: task_assessment
+  entity_id: task-assessment-2c3296e9d8da744e
+  canonical_path: data/task-assessments.yaml
+  value_hash: cc44ee3e17df4d14249d5814d030055dcf823727acbf7750a786eb235b40b928
+- entity_type: task_assessment
+  entity_id: task-assessment-30b59fee8e68d79e
+  canonical_path: data/task-assessments.yaml
+  value_hash: 3dc2c760b22c113fab00e732bbac320d3def0f81a800a081f1aa92e7dcca9c8c
+- entity_type: task_assessment
+  entity_id: task-assessment-326b7b712ec16138
+  canonical_path: data/task-assessments.yaml
+  value_hash: 0e727f6fe03f6b475a86af9dd280a00740313699bc8d1e29d125d287ba620a6b
+- entity_type: task_assessment
+  entity_id: task-assessment-34f7c4b503ee4dae
+  canonical_path: data/task-assessments.yaml
+  value_hash: 0bca1e5154b1c7b57f921c14d1f783ab5fe7a2c66a52b70c82a18086ba22d32f
+- entity_type: task_assessment
+  entity_id: task-assessment-3640f0c9bd1c433f
+  canonical_path: data/task-assessments.yaml
+  value_hash: 4855e7d105a354cd8aa438b2e9518fe4b9df5884f524fb3b9a218636c1fea333
+- entity_type: task_assessment
+  entity_id: task-assessment-3708053cd29c211e
+  canonical_path: data/task-assessments.yaml
+  value_hash: 7cd10878e2e0f21268a8c023435fe6d88711a696a7316625eeebe9c882736da3
+- entity_type: task_assessment
+  entity_id: task-assessment-38fa48f06c4e25a4
+  canonical_path: data/task-assessments.yaml
+  value_hash: 990d86f2e894c350cf37b2c891ebef29a33fd12412379236e62debf39d29105a
+- entity_type: task_assessment
+  entity_id: task-assessment-399e27e5d22c1e28
+  canonical_path: data/task-assessments.yaml
+  value_hash: fbea2cfc32066ef57cf78bfa2cfd362fe3408ebafcb4cd47a9859a1076991904
+- entity_type: task_assessment
+  entity_id: task-assessment-3bf0f9bff12fc7ae
+  canonical_path: data/task-assessments.yaml
+  value_hash: 7aa7369ae8fe84588a1b78610e71f305d5e86d9d7ae502836b9ff73dcf4a0fcb
+- entity_type: task_assessment
+  entity_id: task-assessment-3e2254d6ed03b5dc
+  canonical_path: data/task-assessments.yaml
+  value_hash: 2c65eab37a15358aeddb93c755dfd692922b3b263ad9d26619ad5beea0c8e6d7
+- entity_type: task_assessment
+  entity_id: task-assessment-40621d8c483b753c
+  canonical_path: data/task-assessments.yaml
+  value_hash: dd3cb5018d3ad1af7bfa6176ec3cb3c8280decdd1c1280cc5ec9b9b35f044548
+- entity_type: task_assessment
+  entity_id: task-assessment-42884a39ff8e736e
+  canonical_path: data/task-assessments.yaml
+  value_hash: a9a5a346e28cb3c6e2561ee06ac38081d0fa82a2fbad60776e86e7c93f4a37bd
+- entity_type: task_assessment
+  entity_id: task-assessment-42a57fd44a51dc4e
+  canonical_path: data/task-assessments.yaml
+  value_hash: 4131f8b27f2ac1bbf7de72e7f1ddc15df014363a6c95778ee2d51e40dbf563b5
+- entity_type: task_assessment
+  entity_id: task-assessment-4440ad75f83fee58
+  canonical_path: data/task-assessments.yaml
+  value_hash: 643e46ff5d5c963134007e6826744253ccaae4198dc1661514e33042f900ccb9
+- entity_type: task_assessment
+  entity_id: task-assessment-448730541913d77b
+  canonical_path: data/task-assessments.yaml
+  value_hash: c30f9e04139537a12e013fa8818343648739b324943e9eb71c676fce8cc75276
+- entity_type: task_assessment
+  entity_id: task-assessment-45060bc73fea456f
+  canonical_path: data/task-assessments.yaml
+  value_hash: a34effe769dc3eda4654bc5c21c021981461ac821d4be0213413fc9094bdbd1e
+- entity_type: task_assessment
+  entity_id: task-assessment-47252979cf3f4f98
+  canonical_path: data/task-assessments.yaml
+  value_hash: ae08c1a7568e58588fdb33ea3930277a898d3681eb2bc6455a9cdfc8717f9c8b
+- entity_type: task_assessment
+  entity_id: task-assessment-499e4a1aeab3a323
+  canonical_path: data/task-assessments.yaml
+  value_hash: 903c9f37570d6d3036102e37e796d8c4bc02d1a8808407d0eed3659f17563e35
+- entity_type: task_assessment
+  entity_id: task-assessment-49d3089270730d48
+  canonical_path: data/task-assessments.yaml
+  value_hash: 94928d3fbaea24e3a3d320b0d98d2514f41664fac006d93b5e81a57bd9c0a02a
+- entity_type: task_assessment
+  entity_id: task-assessment-4b905c2ad3a6e524
+  canonical_path: data/task-assessments.yaml
+  value_hash: 66392248ccd5bc9c98103fd1c8060325822fdccea6664c029419dca87e804a39
+- entity_type: task_assessment
+  entity_id: task-assessment-4f011719ee20c4ff
+  canonical_path: data/task-assessments.yaml
+  value_hash: 96741970492421f2d4e2a7646b8de36a39249dc7b16fd0af87247b933bb49e57
+- entity_type: task_assessment
+  entity_id: task-assessment-52e0e0acd7a1558c
+  canonical_path: data/task-assessments.yaml
+  value_hash: 31da9a14f683d32133467999e5106b683d38bbd4903e1e0b04fa9ef65b0dc29e
+- entity_type: task_assessment
+  entity_id: task-assessment-572915d1c9861c7a
+  canonical_path: data/task-assessments.yaml
+  value_hash: dd5a7556c10fdd1128b0bbb3ab319fbad4d44390f07000162d9e0ab2d04219e3
+- entity_type: task_assessment
+  entity_id: task-assessment-5b2e0eed6f0c90d9
+  canonical_path: data/task-assessments.yaml
+  value_hash: 87d8d37f5d1d7f2174a9b69e7a7e4146626a0b6a8b1f6bb1cad78ae05b006a2f
+- entity_type: task_assessment
+  entity_id: task-assessment-5bc71344cf52f0a4
+  canonical_path: data/task-assessments.yaml
+  value_hash: 5a49661f35c39d1f2b3a2ab42c2f1789ee5aea98669c90aeb219bbd3d4c9f30e
+- entity_type: task_assessment
+  entity_id: task-assessment-6054473604e5d63f
+  canonical_path: data/task-assessments.yaml
+  value_hash: 574172de7579db5567eefe69cc085df417fe84480fb79d8bb2db30c3040ba3c0
+- entity_type: task_assessment
+  entity_id: task-assessment-61bf65080ea21f1e
+  canonical_path: data/task-assessments.yaml
+  value_hash: defbb0aa4d809422456f2857791a4dec58f5e324020dee8fb9521db6c5cc0fe9
+- entity_type: task_assessment
+  entity_id: task-assessment-62ce149b20f55554
+  canonical_path: data/task-assessments.yaml
+  value_hash: bda064bcc9831c534e11f7124c0cc2a2d2481ab74e48e42a408f5c41a7fcae68
+- entity_type: task_assessment
+  entity_id: task-assessment-647cf26bd2f7c8ab
+  canonical_path: data/task-assessments.yaml
+  value_hash: cf7419340c0a0d756c96a5986d34a58f5e6e1978891392909a3fb67dacdfe00c
+- entity_type: task_assessment
+  entity_id: task-assessment-65e2a10ff1dca3a8
+  canonical_path: data/task-assessments.yaml
+  value_hash: ac98e05f707d5910de345b6e58c42b2b6a3ee172bc6e00876b6fd83abc9a1c81
+- entity_type: task_assessment
+  entity_id: task-assessment-6b5d42fcbe23e5cf
+  canonical_path: data/task-assessments.yaml
+  value_hash: 55b5e4de3e5507f7d7e62fa000072fb2f3ceae33f35492a299e8c3aab0599dbd
+- entity_type: task_assessment
+  entity_id: task-assessment-6cab0a449bb7d336
+  canonical_path: data/task-assessments.yaml
+  value_hash: d187710a7b21a8b5ee0839f55fe0f1886e7e2df11071bf7cf305ad4018af75f0
+- entity_type: task_assessment
+  entity_id: task-assessment-6d0bf13f28bfbbb4
+  canonical_path: data/task-assessments.yaml
+  value_hash: 2c5e4169d3768828534e67190654922455067cddf3912a6f8f9f940472a8f61e
+- entity_type: task_assessment
+  entity_id: task-assessment-6f250c04f5cc2109
+  canonical_path: data/task-assessments.yaml
+  value_hash: a3fa3174a4fa8ea257ca5688c0f5ae01a08d6dda89d1279a9de2193f7a8aeec2
+- entity_type: task_assessment
+  entity_id: task-assessment-6f4b7a04ae47b01b
+  canonical_path: data/task-assessments.yaml
+  value_hash: cf243d33e460df24169cce28ac4d930269c537bfb07fab457d717fa029d94f4a
+- entity_type: task_assessment
+  entity_id: task-assessment-70acb95d3946a2a0
+  canonical_path: data/task-assessments.yaml
+  value_hash: e662bba7a637f0aa38dbefc4204e7be928774317cf1da682daa2c46f4b574ecc
+- entity_type: task_assessment
+  entity_id: task-assessment-726103d8f98518b0
+  canonical_path: data/task-assessments.yaml
+  value_hash: f0574be41e38522c4052f2452659229f46a62e1280048b39e86e7060ad15a1bc
+- entity_type: task_assessment
+  entity_id: task-assessment-73560760c46b61ac
+  canonical_path: data/task-assessments.yaml
+  value_hash: 80d27a0316ec8bc6744f8c57fd1d19be24ddb044efa1232e4a6d14a58ef15fbb
+- entity_type: task_assessment
+  entity_id: task-assessment-755706c9523d5646
+  canonical_path: data/task-assessments.yaml
+  value_hash: 99c6acf81d887e83e9a3538c4cf998e0131d3ec36797d3a11967b7d2b560ab7d
+- entity_type: task_assessment
+  entity_id: task-assessment-7755d96c969c6152
+  canonical_path: data/task-assessments.yaml
+  value_hash: 14d5bc2b62bf5b4372be4f53c40dd52c16327fd1efd0cbcd6c990d9cdfa18a22
+- entity_type: task_assessment
+  entity_id: task-assessment-78c4c5670fd9925c
+  canonical_path: data/task-assessments.yaml
+  value_hash: d905fc7325428aa0ea730180d2da6b9ce87a7925febd13e4de29802fdbdbf4a3
+- entity_type: task_assessment
+  entity_id: task-assessment-7f40f93eccc45929
+  canonical_path: data/task-assessments.yaml
+  value_hash: 1ecdd7eff90190fddf8567caa5c0d291085e2f60d380e2edc590c2591d4e0ad9
+- entity_type: task_assessment
+  entity_id: task-assessment-807bf6ae2fc78a8b
+  canonical_path: data/task-assessments.yaml
+  value_hash: d764032dc3726dec5a84789d9398f286ea285b79ed122f4d2ecc84dab03bd075
+- entity_type: task_assessment
+  entity_id: task-assessment-808afb5fed3848af
+  canonical_path: data/task-assessments.yaml
+  value_hash: 0b0e39c35957e0d9bd0276f4751cd660b9ef41dbf9fc4782f88f701417f866ad
+- entity_type: task_assessment
+  entity_id: task-assessment-80c268cbda8025bd
+  canonical_path: data/task-assessments.yaml
+  value_hash: f9fbaf988be3b66aabd1b30fe30d40561a0f807ed179f464543928de6e2e2ad4
+- entity_type: task_assessment
+  entity_id: task-assessment-80dc2f4aad3bae9c
+  canonical_path: data/task-assessments.yaml
+  value_hash: 14d81aa97e39563ac6d98cf7477e12014fa1a00c42a86b5a7ff62740e1c72675
+- entity_type: task_assessment
+  entity_id: task-assessment-80f11fd57f7d5baf
+  canonical_path: data/task-assessments.yaml
+  value_hash: 3c8444962826ebbcf625227a902af704f2c38d0b3f6bce19b3931b62d35f1523
+- entity_type: task_assessment
+  entity_id: task-assessment-817062ef38ffa534
+  canonical_path: data/task-assessments.yaml
+  value_hash: 598c1501603debdb660f1b4d8e9d3b8213e5195007c8dc290d0eee381e0b5f1d
+- entity_type: task_assessment
+  entity_id: task-assessment-835bc3bbfbba4813
+  canonical_path: data/task-assessments.yaml
+  value_hash: 1abcf4303c73527684df0e86cbdbe333bd447d3135b646cfdb59a7ed1a30373e
+- entity_type: task_assessment
+  entity_id: task-assessment-87940f71b1113917
+  canonical_path: data/task-assessments.yaml
+  value_hash: 30783a07f75b8976d3c380e8183018d76d99184504fb2d52610c6c78ce705efd
+- entity_type: task_assessment
+  entity_id: task-assessment-8a93f95cf1f6de00
+  canonical_path: data/task-assessments.yaml
+  value_hash: 69090afc8076393440b1541755a1c2ba367186c3c073b31986fde1ce24a56ecc
+- entity_type: task_assessment
+  entity_id: task-assessment-8f6233faac73b939
+  canonical_path: data/task-assessments.yaml
+  value_hash: 6e6727e3e8754b732b3e36a5ef082c60053abcffb401749b55f38a1747fda241
+- entity_type: task_assessment
+  entity_id: task-assessment-90478ea3d7160ee0
+  canonical_path: data/task-assessments.yaml
+  value_hash: 6e85dd54691112d17fad0c095c3d9ec8e8dea6a642c4e50da64f3807fd5dfda8
+- entity_type: task_assessment
+  entity_id: task-assessment-9078a50a9410ddb4
+  canonical_path: data/task-assessments.yaml
+  value_hash: 661e9e2888a9ee4b79ba83735e52abca0d84c83c69e9223315c93675c4194c57
+- entity_type: task_assessment
+  entity_id: task-assessment-950325cee30bc61b
+  canonical_path: data/task-assessments.yaml
+  value_hash: b291bbd191d25d28c6a9087a46d3f0d85baee38f12840f9d01c01a5fc9da4870
+- entity_type: task_assessment
+  entity_id: task-assessment-971e56e026ee6b79
+  canonical_path: data/task-assessments.yaml
+  value_hash: fcd45e78accfaa2d60be715f215f0e8104f927b47eef4b86905c9945698a8cbe
+- entity_type: task_assessment
+  entity_id: task-assessment-9876a6a73050ac63
+  canonical_path: data/task-assessments.yaml
+  value_hash: fbfafdbd46e636d0980d9b8661ae08baae36a7e16ab1607e79d2e52b9adf3984
+- entity_type: task_assessment
+  entity_id: task-assessment-98af1e11e61f4674
+  canonical_path: data/task-assessments.yaml
+  value_hash: a213f903b00b5cf3c38cb3a53e7855be91448db4204248a93d754b6e2f35ba78
+- entity_type: task_assessment
+  entity_id: task-assessment-993554c2dacaacc2
+  canonical_path: data/task-assessments.yaml
+  value_hash: 19146048ef164ec9f7a0a39861ef8b51742806ced14798134cac5dd59fdc1168
+- entity_type: task_assessment
+  entity_id: task-assessment-99c458e8f0177913
+  canonical_path: data/task-assessments.yaml
+  value_hash: 7827884100b3244b63ac57a85044432a77fbd91b8a936ae9bdb5515de91dc303
+- entity_type: task_assessment
+  entity_id: task-assessment-99d4d97c5179942e
+  canonical_path: data/task-assessments.yaml
+  value_hash: 24527a230834c78bf4a74d4e16705b219cae4297edaef350192dd6b0beb5d040
+- entity_type: task_assessment
+  entity_id: task-assessment-9a882d3c3ebdd8c9
+  canonical_path: data/task-assessments.yaml
+  value_hash: b262546106ddb5dd594e598b699392b4a2925c41065c886d98753d89a2187629
+- entity_type: task_assessment
+  entity_id: task-assessment-a50311f0ac269e97
+  canonical_path: data/task-assessments.yaml
+  value_hash: 9843d9673245e8d803526a279578e3b54fc22882a84d7892d237cc0323387eb0
+- entity_type: task_assessment
+  entity_id: task-assessment-a63a3528fc7844d2
+  canonical_path: data/task-assessments.yaml
+  value_hash: 96f32731633aa995507ede2bb37bfc5ac53b36867228b824dab2db3d4f0bff7f
+- entity_type: task_assessment
+  entity_id: task-assessment-a752454902efd90f
+  canonical_path: data/task-assessments.yaml
+  value_hash: 02d273e8edb642bd1ed0b4fc3f68d941623fd669944bc4b7fadb68b0744f6617
+- entity_type: task_assessment
+  entity_id: task-assessment-a7b5c1b8f984c86f
+  canonical_path: data/task-assessments.yaml
+  value_hash: 90f083b4191935c724e8b4b6f04a78770de2b23dbcf0278f01bba6c160ef7570
+- entity_type: task_assessment
+  entity_id: task-assessment-a9238a6155ba837c
+  canonical_path: data/task-assessments.yaml
+  value_hash: c1b87e8220d610755b4ea3981385327ecabcf342a33b9c42880d71ac53cc6b2a
+- entity_type: task_assessment
+  entity_id: task-assessment-a9c2450092f427d7
+  canonical_path: data/task-assessments.yaml
+  value_hash: 69672b8490e330d534e8a10cfbecfd3a5aa585dc27401782b4124f688086e61e
+- entity_type: task_assessment
+  entity_id: task-assessment-af79716489a00d77
+  canonical_path: data/task-assessments.yaml
+  value_hash: cc217d90320db39c14b3ea2d9b100fd01bd18b6060292ba74c1793061bcb0f3e
+- entity_type: task_assessment
+  entity_id: task-assessment-b0229f20c7f03ff1
+  canonical_path: data/task-assessments.yaml
+  value_hash: 3df8b7576f3d551ff16af51c59cdf862373270cdee23301ed96696373b75e458
+- entity_type: task_assessment
+  entity_id: task-assessment-b09702ba197472ce
+  canonical_path: data/task-assessments.yaml
+  value_hash: 11a6ba7790b111cc4cd7cd20a605370a4f46aa70c8e12bfab848c57278ff67b2
+- entity_type: task_assessment
+  entity_id: task-assessment-b1ff817b2e3223ea
+  canonical_path: data/task-assessments.yaml
+  value_hash: 31d8502960efe8a38db329af7fefed6b0b4df5549d80f90cf78f76ab935642a4
+- entity_type: task_assessment
+  entity_id: task-assessment-b57767c6355b288e
+  canonical_path: data/task-assessments.yaml
+  value_hash: a962ccf65ea2fb5c148bc17ed8aac58eae4991ee8afb40673b0a0b3b633e54a1
+- entity_type: task_assessment
+  entity_id: task-assessment-b59a7e8f84174bc2
+  canonical_path: data/task-assessments.yaml
+  value_hash: 219216f1714f1a68a26b0cb2c42e69b84b39f15c0e48d3e0d0eb8e8658d9fbf7
+- entity_type: task_assessment
+  entity_id: task-assessment-b81cc21d7254a00e
+  canonical_path: data/task-assessments.yaml
+  value_hash: 13dd801bbcf158520d3f6006b0ce299201aaf592b45ed180e95991039e50aea4
+- entity_type: task_assessment
+  entity_id: task-assessment-b98d99ccad99078a
+  canonical_path: data/task-assessments.yaml
+  value_hash: b59cd9e599fb74d6bb8971dca44b2c356b6d2b26f3b17cf3f8d25f35a37e9541
+- entity_type: task_assessment
+  entity_id: task-assessment-be1059e3be2c76c5
+  canonical_path: data/task-assessments.yaml
+  value_hash: bab54d01c58dc2cd915f7131beb258454e9f68069cc18712e69ad499550c3156
+- entity_type: task_assessment
+  entity_id: task-assessment-bf6d43a875764db4
+  canonical_path: data/task-assessments.yaml
+  value_hash: 9a3177815e1ab4940227c8ae07b51333b4fb35d11d907b6f57ab505784dfed6e
+- entity_type: task_assessment
+  entity_id: task-assessment-c10513eee14a151f
+  canonical_path: data/task-assessments.yaml
+  value_hash: 4e45563d177d096f289b4b50abbc3f2573fbf6a81beb329b9392b74b4f9232bd
+- entity_type: task_assessment
+  entity_id: task-assessment-c117393c8b3a364d
+  canonical_path: data/task-assessments.yaml
+  value_hash: 109c3fd6bbc99201c6436224b79dd80ad0075416d88164024c475f4b5f560fd2
+- entity_type: task_assessment
+  entity_id: task-assessment-c4d08737257b9d09
+  canonical_path: data/task-assessments.yaml
+  value_hash: f3c3d973c6ca9461d77732f9c56be7f578ad7612e1c2f9e3d5f4f7c389f01e39
+- entity_type: task_assessment
+  entity_id: task-assessment-c4edf245f3de0db4
+  canonical_path: data/task-assessments.yaml
+  value_hash: 5a4fbf6d04df161c928772995dffac55957ece688a5f0c9f09308044d09d5222
+- entity_type: task_assessment
+  entity_id: task-assessment-c7c311e3b509c93b
+  canonical_path: data/task-assessments.yaml
+  value_hash: db20558aa26567db8ee2b5abd25382d72ea3dc504fe064620fda52491de610f2
+- entity_type: task_assessment
+  entity_id: task-assessment-c89209987372bb95
+  canonical_path: data/task-assessments.yaml
+  value_hash: 068ca446909a397c175dfa563370d216024369df7e37559b5c317b1500085ec4
+- entity_type: task_assessment
+  entity_id: task-assessment-c91f33429215e18d
+  canonical_path: data/task-assessments.yaml
+  value_hash: be7c99e1ab75b4d599b0e7c5b43249280d3c503b33afcab9eed03c06c3b06725
+- entity_type: task_assessment
+  entity_id: task-assessment-c9b06d6365da08a4
+  canonical_path: data/task-assessments.yaml
+  value_hash: ba2d671d01891ff6d66e498de84624665933112f63249034dac9d2a84417ed4b
+- entity_type: task_assessment
+  entity_id: task-assessment-cd9224eb0ce1b12a
+  canonical_path: data/task-assessments.yaml
+  value_hash: 0eb158245db4b195b747149b31ede155c8dc845d76c4d214da8638c4ec2cccf1
+- entity_type: task_assessment
+  entity_id: task-assessment-d0559ce06c33a4fb
+  canonical_path: data/task-assessments.yaml
+  value_hash: b50562c7971687703b7337f44a740d6f00751421b0f1cc3bf62ffa2f3f5ea36f
+- entity_type: task_assessment
+  entity_id: task-assessment-d0e5a4d550b0cd7d
+  canonical_path: data/task-assessments.yaml
+  value_hash: daa05a71b7bab9f153c04b7be7c04f3b0b27f7e0d3e0a23b60e86d9457c63ceb
+- entity_type: task_assessment
+  entity_id: task-assessment-d1ababc58c6f8ec5
+  canonical_path: data/task-assessments.yaml
+  value_hash: 0b3645492038baaf6aa0999aa6915ac4ccdd78a42d7789706c3905d63583bea4
+- entity_type: task_assessment
+  entity_id: task-assessment-d34d23a4983cdde0
+  canonical_path: data/task-assessments.yaml
+  value_hash: 4ecd070b34c23a4e058b1c4e1cae1a4c567bf00ad4eabb5e378d0d2e8890fd21
+- entity_type: task_assessment
+  entity_id: task-assessment-d45046a69b444f64
+  canonical_path: data/task-assessments.yaml
+  value_hash: 5866ebbea41947c52db08e22e08d6c003bc0dcb73131ff962649d6fc9c580e42
+- entity_type: task_assessment
+  entity_id: task-assessment-d533159f8053b5c9
+  canonical_path: data/task-assessments.yaml
+  value_hash: c04e2612a8ab62520814f1dd4927cc99125fd8ba5b959e22bd8aa726c0ecd113
+- entity_type: task_assessment
+  entity_id: task-assessment-d7f92fa712e2b1a2
+  canonical_path: data/task-assessments.yaml
+  value_hash: f9b8cd0bd1c3f5a3239cbff2561ae90244cb5cb844a73c602dc259d5f89a6652
+- entity_type: task_assessment
+  entity_id: task-assessment-dc4ba7c3b743b650
+  canonical_path: data/task-assessments.yaml
+  value_hash: 58e9476ce575c2fe87d8c43b53d3410523c2f6760ca11dc8e98a26b9da9aed03
+- entity_type: task_assessment
+  entity_id: task-assessment-dcc5526d2e5aed56
+  canonical_path: data/task-assessments.yaml
+  value_hash: e68b326db721e91050afd2a6da986e8bf0e9b50d728f0d878d4927fe4591b818
+- entity_type: task_assessment
+  entity_id: task-assessment-de6b85bf79a000d1
+  canonical_path: data/task-assessments.yaml
+  value_hash: 9dbaf50d64882be117b74751fc9f20df17321878200d04d21006eb9ae6963dd4
+- entity_type: task_assessment
+  entity_id: task-assessment-e275117071a27f2c
+  canonical_path: data/task-assessments.yaml
+  value_hash: 289d1e5f8d1d10c885faea37f118a659acf30ab050696eac825df9f73e26ac34
+- entity_type: task_assessment
+  entity_id: task-assessment-e765deb0b6b7022b
+  canonical_path: data/task-assessments.yaml
+  value_hash: e25b62b71d4073a89aad39cf4eba2b503a951e34fc693d62c774d597d5b3be86
+- entity_type: task_assessment
+  entity_id: task-assessment-e917473258788d20
+  canonical_path: data/task-assessments.yaml
+  value_hash: eefdcd48d53e6649a6de9f407099b1b4ec7c78bdabe34c6a655dd56019936ad3
+- entity_type: task_assessment
+  entity_id: task-assessment-ea1a8e38bed3444c
+  canonical_path: data/task-assessments.yaml
+  value_hash: 2ce1f41f0a662d31c7ebb11133bfe54cfd4dc67c4c3ee434793f7fe5b593343a
+- entity_type: task_assessment
+  entity_id: task-assessment-ebdc0c9efa10faa9
+  canonical_path: data/task-assessments.yaml
+  value_hash: 41361d1089d15b65129fc68953cc14101e6f77eaafd4ea44a23f1b7fe19c83d4
+- entity_type: task_assessment
+  entity_id: task-assessment-ecc4e04d13da8e1f
+  canonical_path: data/task-assessments.yaml
+  value_hash: 85e65d21a34242ac9aa52d39699356b8fab85c2371500becebb1413220fe2672
+- entity_type: task_assessment
+  entity_id: task-assessment-f1596b82de2a6877
+  canonical_path: data/task-assessments.yaml
+  value_hash: 4fc0efd73ca93e138b11a7fb560b37bd6e7c9addc3ccfb8dacfe089ffafc88e0
+- entity_type: task_assessment
+  entity_id: task-assessment-f34cd39639dc1c4e
+  canonical_path: data/task-assessments.yaml
+  value_hash: f7b060fbd97e92f106cb60a93e7ee11580a6c6076412f935034db5ea054df3b4
+- entity_type: task_assessment
+  entity_id: task-assessment-f410fba68cf3dead
+  canonical_path: data/task-assessments.yaml
+  value_hash: 08f36b156d62d2ec92af4935e4fbd3f04fe4696f667e631855fce6fbf1643010
+- entity_type: task_assessment
+  entity_id: task-assessment-f5984a7e326c5042
+  canonical_path: data/task-assessments.yaml
+  value_hash: 236da1968803ccc4cb9fd9daaffdf5e333bab2f7a80af5c9031b45f4a5cdb85e
+- entity_type: task_assessment
+  entity_id: task-assessment-f5d314fd7a92ac1b
+  canonical_path: data/task-assessments.yaml
+  value_hash: fc842eda94626783e4630c4346469cea603366f5e42fd47d472a57fa7b5c2377
+- entity_type: task_assessment
+  entity_id: task-assessment-f93f6a5d9b45ce15
+  canonical_path: data/task-assessments.yaml
+  value_hash: 9f3083d88b096e3ef334f1ff9f2bb28830de5b7d5a272c307c23d1845168ed38
+- entity_type: task_assessment
+  entity_id: task-assessment-fb33dd1364414b14
+  canonical_path: data/task-assessments.yaml
+  value_hash: b6fec5d63c2b8f66ae11dcbcc87f132b7b3061393c15f8fad4417e60ddb3adcd
+- entity_type: task_assessment
+  entity_id: task-assessment-feeba0b1002c24ec
+  canonical_path: data/task-assessments.yaml
+  value_hash: 12de6726e267c0d988e5345e52b434af7214feadb0824ef204e51e7a65b05835

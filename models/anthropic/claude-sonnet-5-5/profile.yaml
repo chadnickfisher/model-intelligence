@@ -242,7 +242,7 @@ capabilities:
     original_task: coding-at-different-effort-budgets
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - id: judgment-cb9aeb423bbdc834
   scope: direct
   task_ids:
@@ -262,7 +262,6 @@ capabilities:
   evidence_notes:
   - Inspected failure cases are direct scoped-edit evidence; aggregate FrontierCode is not reclassified into
     every coding task.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:claude-sonnet-5-5-scoped-max-warning'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -301,7 +300,6 @@ capabilities:
   - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
     quality.
   - No matched independent contradiction located; partial successes and misses coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:claude-sonnet-5-5-debug-bughunt'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -329,7 +327,6 @@ capabilities:
   - No case-specific failures disclosed.
   evidence_notes:
   - Supports architecture analysis candidacy, not general architecture-design reliability.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A02'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -361,7 +358,6 @@ capabilities:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-claude-sonnet-5-5'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -388,7 +384,6 @@ capabilities:
   known_failure_modes:
   - Do not treat unjudged OSS comment reductions as quality gains.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-sonnet55'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -429,7 +424,7 @@ performance_characteristics:
     original_task: cost-sensitive-professional-workflows
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 1
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 access_ids:
 - access-3f77ae5286ee9409
 - access-7a57b99f53529297

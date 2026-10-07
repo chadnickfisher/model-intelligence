@@ -243,7 +243,7 @@ capabilities:
     original_task: long-horizon-reasoning-and-coding
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - id: judgment-f023edc397fdd671
   scope: direct
   task_ids:
@@ -274,7 +274,6 @@ capabilities:
   - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
     quality.
   - No matched independent contradiction located; partial successes and misses coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:claude-fable-5-1-debug-bughunt'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -309,7 +308,6 @@ capabilities:
   - Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve xHigh as board label.
     Intro's below 50% statement is stale. Gemini 3.1 Pro 33.81±6.64 is withheld pending preview-ID mapping.
   - Vendor behavior description supplements E07; it is not an independent refactor success measurement.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R02'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -341,7 +339,6 @@ capabilities:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-claude-fable-5-1'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -369,7 +366,6 @@ capabilities:
   known_failure_modes:
   - Substantial judge-rejected commentary and misses; higher reasoning did not improve aggregate results.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-fable51'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -409,7 +405,7 @@ performance_characteristics:
     original_task: cache-heavy-agents
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 1
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 access_ids:
 - access-12b530682515e367
 - access-19e1cfd25b21093c

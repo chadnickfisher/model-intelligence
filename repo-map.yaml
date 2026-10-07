@@ -12,15 +12,13 @@ canonical:
   aliases: data/aliases.yaml
   current_record_integrity: data/record-integrity.yaml
   change_summaries: changelog/changes.yaml
-  migration_originals: history/migrations/2026-10-07-capabilities.yaml
   behavior_findings: data/behavior.yaml
   access_research_coverage: data/access-coverage.yaml
   benchmarks: data/benchmarks.yaml
   research_coverage: data/research-coverage.yaml
   research_contract: data/research-contract.yaml
-  research_runs: data/research-runs.yaml
   maintenance_contract: data/maintenance-contract.yaml
-  maintenance_passes: data/maintenance-passes.yaml
+  task_assessments: data/task-assessments.yaml
 indexes:
   models: data/models.yaml
   providers: data/providers.yaml

@@ -194,7 +194,7 @@ capabilities:
     original_task: multilingual-visual-chat
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - id: judgment-9a9a7a9cb18c9163
   scope: unresolved
   task_ids: []
@@ -221,7 +221,7 @@ capabilities:
     original_task: very-long-document-work
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 1
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - id: judgment-b0524d80aaeb6829
   scope: direct
   task_ids:
@@ -240,7 +240,6 @@ capabilities:
   known_failure_modes:
   - Style shortcuts, missing context and conservative ties.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-scout'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null

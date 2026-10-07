@@ -47,7 +47,7 @@ Supporting sources: [Bug Hunt Bench frozen measurements](https://github.com/phur
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation quality.; No matched independent contradiction located; partial successes and misses coexist.; Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:kimi-k3-debug-bughunt; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation quality.; No matched independent contradiction located; partial successes and misses coexist.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.debugging (low confidence)
 
@@ -69,7 +69,7 @@ Supporting sources: [OdinEval program repair](https://arxiv.org/html/2608.18595v
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Preprint; check released manifest before stronger confidence. No universal language or harness transfer.; Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:kimi-k3-debug-odin; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Preprint; check released manifest before stronger confidence. No universal language or harness transfer.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.architecture (low confidence)
 
@@ -91,7 +91,7 @@ Supporting sources: [Qwen 3.8 Max Benchmark: How It Compares With Kimi K3](https
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: One run, unpublished full score artifacts; serving effects not isolated. qwen3.8-max-preview comparator cannot transfer to qwen3-8-2-4t-a95b weights.; Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A06; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: One run, unpublished full score artifacts; serving effects not isolated. qwen3.8-max-preview comparator cannot transfer to qwen3-8-2-4t-a95b weights.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.frontend (medium confidence)
 
@@ -113,7 +113,7 @@ Supporting sources: [Code Arena WebDev Frontend](https://arena.ai/leaderboard/co
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-kimi-k3; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.frontend (medium confidence)
 
@@ -135,7 +135,7 @@ Supporting sources: [Kimi K3 versus Claude Fable 5 on ten UIs](https://blog.kilo
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-kimi-practitioner; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ## Specifications
 

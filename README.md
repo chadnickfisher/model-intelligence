@@ -20,8 +20,8 @@ Current counts are in the [generated inventory](data/coverage.yaml). Counts indi
 - [Releases](data/releases.yaml) and [change history](changelog/2026-10.md)
 - [Methodology](methodology.md), [coverage gaps](research/coverage.md), and [maintenance plan](MAINTENANCE.md)
 - For agents: [AGENTS.md](AGENTS.md) and [repo-map.yaml](repo-map.yaml)
-- [Current state and concise changes](history/README.md): source-backed records, changelog and reproducible Git baselines
-- [Bounded research contract](docs/bounded-research.md) and [batch completion accounting](data/research-runs.md)
+- [Current state and concise changes](docs/change-tracking.md): source-backed records, changelog and reproducible Git baselines
+- [Research methodology](docs/bounded-research.md) and [current task assessments](data/task-assessments.yaml)
 
 ## What is canonical?
 
@@ -90,11 +90,7 @@ Every research package accounts for all catalog models across capabilities,
 benchmarks/confidence rationale, access/pricing/limits and post-launch behavior in
 the [research coverage ledger](data/research-coverage.yaml). Actual check dates and
 source/search references are separate from carry-forward verification dates.
-The [October 7 task follow-up](research/task-followup-2026-10-07.md) completes the
-26 capability and 26 benchmark checks that were pending in the earlier package.
-All 53 models now have actual checks in all four domains; investigated unknowns
-and configuration gaps remain explicit. Validation checks ledger consistency,
-not the adequacy of source research. Research maintenance remains paused.
+Investigated unknowns and configuration gaps remain explicit. Validation checks record consistency, not the adequacy of source research. Research maintenance remains paused.
 
 Cost Explorer estimates **text-token subtotals** only when an exact current price
 record has an explicit matching model/provider API route. Total input includes
@@ -148,7 +144,7 @@ Research maintenance is **PAUSED as of 2026-10-06**. No daily research is schedu
 
 Stable judgments retain their original evidence and provenance. Confidence measures evidence support, not ability. A compound claim is never split into per-task endorsements; related tasks are navigation only. Warnings and missing evidence remain visible.
 
-See the [current research ledger](data/research-coverage.yaml), [bounded-run accounting](data/research-runs.md) and [concise changelog](changelog/2026-10.md) for coverage, completion and material changes. The [Haiku 5.5 initial load](research/haiku-5-5-load-2026-10-07.md) completes the one-new-model pilot path. Investigated unknowns remain explicit. Conditional tariffs and non-token units are preserved as route details when estimation is unsupported.
+See the [current research ledger](data/research-coverage.yaml), [task applicability and assessments](data/task-assessments.yaml) and [concise changelog](changelog/2026-10.md) for dated evidence, uncertainty and material product changes. Conditional tariffs and non-token units remain qualified. Detailed work packets and pilot reports are local development artifacts.
 
 The 37-task rubric now defines inclusion, exclusion, examples and neighboring tasks, distinguishing corpus retrieval/ranking from supplied-context recovery and generated RAG answers. A separate versioned batch checklist tracks factual fields, applicability decisions and source categories against a frozen baseline. Earlier domain checks are not retroactively certified as field-complete research. Observation summaries preserve full canonical claims and qualifications. These local correctness and workflow changes do not activate recurring maintenance.
 

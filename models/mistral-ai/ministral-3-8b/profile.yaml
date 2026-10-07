@@ -166,7 +166,7 @@ capabilities:
     original_task: edge-multilingual-chat
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - id: judgment-c95618e6317eb57c
   scope: direct
   task_ids:
@@ -189,7 +189,6 @@ capabilities:
   evidence_notes:
   - Tiny function-level slice; no architecture/repository inference. PDF/ZIP artifacts listed, but advertised
     root CSV returned 404. Qwen3.5-9B was replaced by Qwen3-8B, despite misleading internal key; no transfer.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R07'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null

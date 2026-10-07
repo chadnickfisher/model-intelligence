@@ -29,7 +29,7 @@ a model only with positive mismatch evidence. Applicable tasks need a bounded
 assessment; investigated uncertainty remains explicit.
 
 New batches use the [bounded contract](docs/bounded-research.md) and separate
-[run accounting](data/research-runs.yaml). Completion is derived from required
+local bounded-run accounting. Completion is derived from required
 field checks, task decisions and source-category checks against a pinned baseline.
 Earlier four-domain coverage does not establish completion under this contract.
 

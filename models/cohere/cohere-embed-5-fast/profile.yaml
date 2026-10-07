@@ -41,8 +41,8 @@ specifications:
       - 2048
     status: documented
     conditions:
-    - Vector dimension unit, not generated tokens; select a supported dimensionality. SageMaker listing
-      defaults to 1024.
+    - Vector dimension unit, not generated tokens; select a supported dimensionality. SageMaker listing defaults
+      to 1024.
     evidence_ids:
     - src-e9acd4aa3c25
   modalities:
@@ -102,8 +102,8 @@ local_inference:
   availability: available
   hardware_notes: []
   conditions:
-  - Licensed private infrastructure/self-hosting described by creator; public weights, minimum VRAM and
-    fine-tuning rights not established.
+  - Licensed private infrastructure/self-hosting described by creator; public weights, minimum VRAM and fine-tuning
+    rights not established.
   evidence_ids:
   - src-9d4f7ae81230
   - src-d02c4ac36fa4
@@ -114,8 +114,8 @@ capabilities:
   - knowledge.retrieval
   related_task_ids: []
   assessment: conditional
-  scope_note: Rubric 1.1 maps corpus retrieval to knowledge.retrieval. The stable ID, original conclusion
-    and evidence remain; confidence is lowered because cost/latency transfer still relies on vendor evidence.
+  scope_note: Rubric 1.1 maps corpus retrieval to knowledge.retrieval. The stable ID, original conclusion and
+    evidence remain; confidence is lowered because cost/latency transfer still relies on vendor evidence.
   judgment: Candidate for query-time cost/latency savings, including Pro-index/Fast-query pairing; current
     comparative evidence is vendor-generated.
   confidence: low
@@ -126,8 +126,8 @@ capabilities:
   known_failure_modes: []
   evidence_notes:
   - 'Observation obs-752ea46df2f7: Public evidence observation'
-  - 'Pilot reassessment: no independent exact-setup latency evidence inspected; the independent corpus
-    study measures retrieval quality, not query-time savings. Earlier confidence remains in history.'
+  - 'Pilot reassessment: no independent exact-setup latency evidence inspected; the independent corpus study
+    measures retrieval quality, not query-time savings. Earlier confidence remains in history.'
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -135,15 +135,15 @@ capabilities:
     original_task: high-volume-interactive-retrieval
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - id: judgment-7e21faf82ca7635e
   scope: direct
   task_ids:
   - knowledge.retrieval
   related_task_ids: []
   assessment: conditional
-  scope_note: Rubric 1.1 maps external-corpus retrieval and candidate ranking to knowledge.retrieval.
-    Stable judgment ID, original conclusion, confidence and evidence are preserved.
+  scope_note: Rubric 1.1 maps external-corpus retrieval and candidate ranking to knowledge.retrieval. Stable
+    judgment ID, original conclusion, confidence and evidence are preserved.
   judgment: Vendor ViDoRe V3 results support ranking a fixed candidate set of parsed documents; first-stage
     retrieval recall over a full index remains unknown.
   confidence: low
@@ -155,10 +155,10 @@ capabilities:
   known_failure_modes:
   - This candidate-ranking result cannot establish full-index recall or all-language superiority.
   evidence_notes:
-  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are
-    not confidence.'
-  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded
-    in the coverage ledger.
+  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
+    confidence.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -184,8 +184,8 @@ capabilities:
   known_failure_modes:
   - Long-document, multilingual, multimodal and full RAG quality are not established by this setup.
   evidence_notes:
-  - Low confidence reflects setup breadth, identity uncertainty and source limitations, not the score.
-    No contradictory result located in this bounded pass does not establish agreement.
+  - Low confidence reflects setup breadth, identity uncertainty and source limitations, not the score. No contradictory
+    result located in this bounded pass does not establish agreement.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:

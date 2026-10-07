@@ -190,7 +190,7 @@ capabilities:
     original_task: coding-and-document-reasoning-at-constrained-spend
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - id: judgment-6485858c395995b9
   scope: compound
   task_ids: []
@@ -221,7 +221,7 @@ capabilities:
     original_task: factual-answers-and-tool-backed-research
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 1
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - id: judgment-98fd19b09613391e
   scope: direct
   task_ids:
@@ -249,7 +249,6 @@ capabilities:
     not a general ability ranking.
   - 'Potential transfer risk, not measured semantic failure: test-free byte matching does not establish a correct
     code change.'
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-1-sol-scoped-mechanical'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -288,7 +287,6 @@ capabilities:
   - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
     quality.
   - No matched independent contradiction located; partial successes and misses coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-1-sol-debug-bughunt'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -316,7 +314,6 @@ capabilities:
   - No failures observed in14attempts; this is too small and feedback-rich to establish general reliability.
   evidence_notes:
   - Different code scale from Bug Hunt Bench; both findings should coexist.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-1-sol-debug-small-python'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -348,7 +345,6 @@ capabilities:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-gpt-6-1-sol'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -375,7 +371,6 @@ capabilities:
   known_failure_modes:
   - No full independent execution audit; low effort may omit real tests.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-sol61'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -403,7 +398,6 @@ capabilities:
   known_failure_modes:
   - Dense low-effort source; false localhost-running summaries.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-sol61-practitioner'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null

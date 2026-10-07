@@ -2,22 +2,20 @@ schema_version: '1.0'
 records:
 - id: change-initial-foundation
   observed_at: '2026-10-07'
-  summary: Established evidence-backed current records, task boundaries and bounded research validation. Earlier
-    implementation detail is retained in Git.
+  summary: Established evidence-backed current records, task boundaries and validated product data.
   evidence_ids: []
   changed_entities: []
 - id: change-maintenance-pilot
   observed_at: '2026-10-07'
-  summary: Ran the manual maintenance rehearsal; corrected Veo sibling offer membership, verified exact Embed
-    Fast Azure billing and added a qualified Veo behavior report.
+  summary: Corrected Veo sibling offer membership, verified exact Embed Fast Azure billing and added a qualified
+    Veo behavior finding.
   evidence_ids:
   - src-11f146f5e385
   - src-3c610c36550c
   changed_entities: []
 - id: change-haiku-5-5-load
   observed_at: '2026-10-07'
-  summary: 'Added the complete bounded Haiku 5.5 initial load: exact identity, conditional offers, narrow task
-    judgments and explicit unknowns.'
+  summary: Added Haiku 5.5 with exact identity, conditional offers, narrow task judgments and explicit unknowns.
   evidence_ids:
   - src-d69b0e2a2d12
   changed_entities: []
@@ -27,62 +25,6 @@ records:
   evidence_ids:
   - src-d69b0e2a2d12
   changed_entities:
-  - entity_type: maintenance_pass
-    entity_id: maintenance-pass-compressed-2026-10-07-day-2-behavior
-    canonical_path: data/maintenance-passes.yaml
-    operation: update
-  - entity_type: maintenance_pass
-    entity_id: maintenance-pass-compressed-2026-10-07-day-2-discovery-replay
-    canonical_path: data/maintenance-passes.yaml
-    operation: update
-  - entity_type: maintenance_pass
-    entity_id: maintenance-pass-compressed-2026-10-07-day-3-discovery-replay
-    canonical_path: data/maintenance-passes.yaml
-    operation: update
-  - entity_type: maintenance_pass
-    entity_id: maintenance-pass-compressed-2026-10-07-day-3-unknowns
-    canonical_path: data/maintenance-passes.yaml
-    operation: update
-  - entity_type: maintenance_pass
-    entity_id: maintenance-pass-compressed-2026-10-07-day-4-discovery-replay
-    canonical_path: data/maintenance-passes.yaml
-    operation: update
-  - entity_type: maintenance_pass
-    entity_id: maintenance-pass-compressed-2026-10-07-day-5-discovery-replay
-    canonical_path: data/maintenance-passes.yaml
-    operation: update
-  - entity_type: maintenance_pass
-    entity_id: maintenance-pass-compressed-2026-10-07-day-6-capabilities
-    canonical_path: data/maintenance-passes.yaml
-    operation: update
-  - entity_type: maintenance_pass
-    entity_id: maintenance-pass-compressed-2026-10-07-day-6-discovery-replay
-    canonical_path: data/maintenance-passes.yaml
-    operation: update
-  - entity_type: maintenance_pass
-    entity_id: maintenance-pass-compressed-2026-10-07-day-7-benchmarks
-    canonical_path: data/maintenance-passes.yaml
-    operation: update
-  - entity_type: maintenance_pass
-    entity_id: maintenance-pass-compressed-2026-10-07-day-7-discovery-replay
-    canonical_path: data/maintenance-passes.yaml
-    operation: update
-  - entity_type: maintenance_pass
-    entity_id: maintenance-pass-pilot-2026-10-07-access
-    canonical_path: data/maintenance-passes.yaml
-    operation: update
-  - entity_type: maintenance_pass
-    entity_id: maintenance-pass-pilot-2026-10-07-discovery
-    canonical_path: data/maintenance-passes.yaml
-    operation: update
-  - entity_type: maintenance_pass
-    entity_id: maintenance-pass-reserve-2026-10-07-azure-fast
-    canonical_path: data/maintenance-passes.yaml
-    operation: update
-  - entity_type: maintenance_pass
-    entity_id: maintenance-pass-reserve-2026-10-07-veo-price-identity
-    canonical_path: data/maintenance-passes.yaml
-    operation: update
   - entity_type: price
     entity_id: price-033812acbb533c13
     canonical_path: data/pricing.yaml
@@ -98,14 +40,6 @@ records:
   - entity_type: price
     entity_id: price-ff990a87ae69bd0a
     canonical_path: data/pricing.yaml
-    operation: update
-  - entity_type: research_run
-    entity_id: research-run-haiku-5-5-2026-10-07
-    canonical_path: data/research-runs.yaml
-    operation: update
-  - entity_type: research_run
-    entity_id: research-run-pilot-2026-10-07-v1-1
-    canonical_path: data/research-runs.yaml
     operation: update
   id: change-f644ad2c9e79a587
 - observed_at: '2026-10-07'
@@ -130,3 +64,814 @@ records:
     canonical_path: data/pricing.yaml
     operation: update
   id: change-07913f7fd77abfef
+- observed_at: '2026-10-07'
+  summary: Keep published data focused on current product evidence and task decisions; archive development
+    work locally
+  evidence_ids:
+  - src-d69b0e2a2d12
+  changed_entities:
+  - entity_type: model
+    entity_id: ai21-jamba2-mini
+    canonical_path: models/ai21-labs/ai21-jamba2-mini/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: bfl-flux3-video
+    canonical_path: models/black-forest-labs/bfl-flux3-video/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: claude-fable-5-1
+    canonical_path: models/anthropic/claude-fable-5-1/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: claude-haiku-4-5
+    canonical_path: models/anthropic/claude-haiku-4-5/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: claude-opus-5-5
+    canonical_path: models/anthropic/claude-opus-5-5/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: claude-sonnet-5-5
+    canonical_path: models/anthropic/claude-sonnet-5-5/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: cohere-command-a-plus
+    canonical_path: models/cohere/cohere-command-a-plus/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: cohere-embed-5-fast
+    canonical_path: models/cohere/cohere-embed-5-fast/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: cohere-embed-5-pro
+    canonical_path: models/cohere/cohere-embed-5-pro/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: cohere-north-small-translate
+    canonical_path: models/cohere/cohere-north-small-translate/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: deepseek-v4-1-flash
+    canonical_path: models/deepseek/deepseek-v4-1-flash/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: deepseek-v4-pro-0813
+    canonical_path: models/deepseek/deepseek-v4-pro-0813/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: devstral-small-2
+    canonical_path: models/mistral-ai/devstral-small-2/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: elevenlabs-eleven-v4
+    canonical_path: models/elevenlabs/elevenlabs-eleven-v4/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: gemini-3-1-pro-preview
+    canonical_path: models/google-deepmind/gemini-3-1-pro-preview/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: gemini-3-5-flash-lite
+    canonical_path: models/google-deepmind/gemini-3-5-flash-lite/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: gemini-3-8-flash
+    canonical_path: models/google-deepmind/gemini-3-8-flash/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: gemini-3-8-live
+    canonical_path: models/google-deepmind/gemini-3-8-live/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: gemini-3-pro-image
+    canonical_path: models/google-deepmind/gemini-3-pro-image/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: gemini-omni-1-1-flash
+    canonical_path: models/google-deepmind/gemini-omni-1-1-flash/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: gemini4argon
+    canonical_path: models/google-deepmind/gemini4argon/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: gemma-4-31b-it
+    canonical_path: models/google-deepmind/gemma-4-31b-it/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: glm-5-3
+    canonical_path: models/z-ai-zhipu-ai/glm-5-3/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: glm-5-3-flash
+    canonical_path: models/z-ai-zhipu-ai/glm-5-3-flash/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: gpt-6-1-sol
+    canonical_path: models/openai/gpt-6-1-sol/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: gpt-6-astra
+    canonical_path: models/openai/gpt-6-astra/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: gpt-6-luna
+    canonical_path: models/openai/gpt-6-luna/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: gpt-image-2-5-flare
+    canonical_path: models/openai/gpt-image-2-5-flare/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: gpt-image-2-5-sunburst
+    canonical_path: models/openai/gpt-image-2-5-sunburst/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: gpt-live-1
+    canonical_path: models/openai/gpt-live-1/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: gpt-oss-120b
+    canonical_path: models/openai/gpt-oss-120b/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: gpt-oss-20b
+    canonical_path: models/openai/gpt-oss-20b/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: gpt-realtime-2-1
+    canonical_path: models/openai/gpt-realtime-2-1/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: kimi-k3
+    canonical_path: models/moonshot-ai/kimi-k3/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: llama-4-maverick
+    canonical_path: models/meta/llama-4-maverick/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: llama-4-scout
+    canonical_path: models/meta/llama-4-scout/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: lyria-3-5
+    canonical_path: models/google-deepmind/lyria-3-5/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: minimax-m3
+    canonical_path: models/minimax/minimax-m3/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: ministral-3-8b
+    canonical_path: models/mistral-ai/ministral-3-8b/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: mistral-large-3
+    canonical_path: models/mistral-ai/mistral-large-3/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: mistral-medium-3-5
+    canonical_path: models/mistral-ai/mistral-medium-3-5/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: mistral-small-4
+    canonical_path: models/mistral-ai/mistral-small-4/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: nemotron-3-ultra
+    canonical_path: models/nvidia/nemotron-3-ultra/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: phi-4-mini-instruct
+    canonical_path: models/microsoft/phi-4-mini-instruct/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: phi-4-multimodal-instruct
+    canonical_path: models/microsoft/phi-4-multimodal-instruct/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: phi-4-reasoning-vision-15b
+    canonical_path: models/microsoft/phi-4-reasoning-vision-15b/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: qwen3-5-9b
+    canonical_path: models/alibaba-qwen/qwen3-5-9b/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: qwen3-8-2-4t-a95b
+    canonical_path: models/alibaba-qwen/qwen3-8-2-4t-a95b/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: qwen3-8-27b
+    canonical_path: models/alibaba-qwen/qwen3-8-27b/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: qwen3-8-flash-next
+    canonical_path: models/alibaba-qwen/qwen3-8-flash-next/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: qwen3-coder-next
+    canonical_path: models/alibaba-qwen/qwen3-coder-next/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: veo-3-1-generate-preview
+    canonical_path: models/google-deepmind/veo-3-1-generate-preview/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: xai-grok-4-7
+    canonical_path: models/xai-spacexai/xai-grok-4-7/profile.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-00995d010b732e38
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-00fcaa516ef8e113
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-0354af4b1748d1c8
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-035f9b56bc115000
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-070c4cf809080b7a
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-096ca567976fe2f7
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-0a8fa9de3191200f
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-0b8baa028b109fcd
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-0cafc05e775ce040
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-0f30a5835019c235
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-0f4ee387f63124a3
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-103aa45aa3e96b74
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-1043dd04c51e382a
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-10be02481f440546
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-125bdec834549880
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-13099b57a70bbdca
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-1818e981af20866f
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-1853a35a077aa067
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-18764875e8ebf8d0
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-1afa9b9724c8a3bf
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-1b0fb30d39474ae8
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-1c140690071bddbe
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-1c6d29ed4df8ddd4
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-1d2ba9cb7171eaeb
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-1e0f71986ef81ed9
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-1f7b15f43b07d0aa
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-2019cba138b2e373
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-20bdb39b26ba794d
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-221d948b14c51978
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-23bab6c2ee79504a
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-247296f516d7a9af
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-2489457cdc600233
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-250e6ba335e017d0
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-2512b5bfcb3ebf28
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-28dbea7737d10fbf
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-2a4b6c25405e04af
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-2a8064d5a3efc617
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-2c3296e9d8da744e
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-30b59fee8e68d79e
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-326b7b712ec16138
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-34f7c4b503ee4dae
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-3640f0c9bd1c433f
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-3708053cd29c211e
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-38fa48f06c4e25a4
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-399e27e5d22c1e28
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-3bf0f9bff12fc7ae
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-3e2254d6ed03b5dc
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-40621d8c483b753c
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-42884a39ff8e736e
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-42a57fd44a51dc4e
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-4440ad75f83fee58
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-448730541913d77b
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-45060bc73fea456f
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-47252979cf3f4f98
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-499e4a1aeab3a323
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-49d3089270730d48
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-4b905c2ad3a6e524
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-4f011719ee20c4ff
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-52e0e0acd7a1558c
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-572915d1c9861c7a
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-5b2e0eed6f0c90d9
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-5bc71344cf52f0a4
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-6054473604e5d63f
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-61bf65080ea21f1e
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-62ce149b20f55554
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-647cf26bd2f7c8ab
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-65e2a10ff1dca3a8
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-6b5d42fcbe23e5cf
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-6cab0a449bb7d336
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-6d0bf13f28bfbbb4
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-6f250c04f5cc2109
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-6f4b7a04ae47b01b
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-70acb95d3946a2a0
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-726103d8f98518b0
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-73560760c46b61ac
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-755706c9523d5646
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-7755d96c969c6152
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-78c4c5670fd9925c
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-7f40f93eccc45929
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-807bf6ae2fc78a8b
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-808afb5fed3848af
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-80c268cbda8025bd
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-80dc2f4aad3bae9c
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-80f11fd57f7d5baf
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-817062ef38ffa534
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-835bc3bbfbba4813
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-87940f71b1113917
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-8a93f95cf1f6de00
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-8f6233faac73b939
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-90478ea3d7160ee0
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-9078a50a9410ddb4
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-950325cee30bc61b
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-971e56e026ee6b79
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-9876a6a73050ac63
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-98af1e11e61f4674
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-993554c2dacaacc2
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-99c458e8f0177913
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-99d4d97c5179942e
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-9a882d3c3ebdd8c9
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-a50311f0ac269e97
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-a63a3528fc7844d2
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-a752454902efd90f
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-a7b5c1b8f984c86f
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-a9238a6155ba837c
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-a9c2450092f427d7
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-af79716489a00d77
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-b0229f20c7f03ff1
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-b09702ba197472ce
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-b1ff817b2e3223ea
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-b57767c6355b288e
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-b59a7e8f84174bc2
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-b81cc21d7254a00e
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-b98d99ccad99078a
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-be1059e3be2c76c5
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-bf6d43a875764db4
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-c10513eee14a151f
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-c117393c8b3a364d
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-c4d08737257b9d09
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-c4edf245f3de0db4
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-c7c311e3b509c93b
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-c89209987372bb95
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-c91f33429215e18d
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-c9b06d6365da08a4
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-cd9224eb0ce1b12a
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-d0559ce06c33a4fb
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-d0e5a4d550b0cd7d
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-d1ababc58c6f8ec5
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-d34d23a4983cdde0
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-d45046a69b444f64
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-d533159f8053b5c9
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-d7f92fa712e2b1a2
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-dc4ba7c3b743b650
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-dcc5526d2e5aed56
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-de6b85bf79a000d1
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-e275117071a27f2c
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-e765deb0b6b7022b
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-e917473258788d20
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-ea1a8e38bed3444c
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-ebdc0c9efa10faa9
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-ecc4e04d13da8e1f
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-f1596b82de2a6877
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-f34cd39639dc1c4e
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-f410fba68cf3dead
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-f5984a7e326c5042
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-f5d314fd7a92ac1b
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-f93f6a5d9b45ce15
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-fb33dd1364414b14
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-feeba0b1002c24ec
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  id: change-49d5d89988e0eec8

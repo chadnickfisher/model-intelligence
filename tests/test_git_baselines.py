@@ -25,7 +25,7 @@ def small_repo(tmp_path):
        'evidence/sources.yaml':[{'id':'src-aaaaaaaaaaaa','accessed_at':'2026-10-07'}],
        'evidence/observations.yaml':[],'data/behavior.yaml':[],'data/access-coverage.yaml':[],
        'data/benchmarks.yaml':[],'data/research-coverage.yaml':[],'data/research-contract.yaml':[],
-       'data/research-runs.yaml':[],'data/aliases.yaml':[]}
+       'data/research-runs.yaml':[],'data/task-assessments.yaml':[],'data/aliases.yaml':[]}
     for path,rows in mapping.items():write(tmp_path/path,{'records':rows})
     write(tmp_path/'data/capability-taxonomy.yaml',{'capabilities':[]})
     git(tmp_path,'init')
@@ -101,7 +101,8 @@ def test_git_maintenance_carry_forward_requires_the_declared_commit():
 
 def test_legacy_receipt_retains_its_own_evidence_boundary_without_live_journal():
     current={k:r for k,(_,r) in canonical().items()}
-    run=current[('maintenance_pass','maintenance-pass-pilot-2026-10-07-discovery')]
+    from tools.git_baselines import PRODUCT_ARCHIVE_COMMIT
+    run=git_state(PRODUCT_ARCHIVE_COMMIT)[('maintenance_pass','maintenance-pass-pilot-2026-10-07-discovery')]
     _,evidence,_=receipt_states(run,'maintenance_pass',current)
     key=('access','access-ac968b718918b9b3')
     assert evidence[key]['billing_class']=='unknown'

@@ -47,7 +47,7 @@ Supporting sources: [QBugLM quantum software debugging](https://arxiv.org/html/2
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Paper has inconsistent category wording; do not use its contradictory category100%claims.; Non-thinking checkpoint: do not repeat paper's reasoning-mode characterization.; Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:qwen3-coder-next-debug-quantum; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Paper has inconsistent category wording; do not use its contradictory category100%claims.; Non-thinking checkpoint: do not repeat paper's reasoning-mode characterization.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.debugging (low confidence)
 
@@ -69,7 +69,7 @@ Supporting sources: [Local ClosedCode editing and CSV repair study](https://zenn
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:qwen3-coder-next-debug-local-csv; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.refactoring (low confidence)
 
@@ -91,7 +91,7 @@ Supporting sources: [Qwen3-Coder-Next 80B 4bit MLX](https://www.gauntletbench.co
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Only low-confidence, narrowly scoped evidence. No demonstrated large-repository refactoring reliability or architecture rating.; Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R06; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Only low-confidence, narrowly scoped evidence. No demonstrated large-repository refactoring reliability or architecture rating.; Confidence concerns this bounded claim, not a capability score.
 
 ## Specifications
 

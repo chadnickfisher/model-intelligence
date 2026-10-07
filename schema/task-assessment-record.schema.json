@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Current task assessment",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^task-assessment-[a-f0-9]{16}$"
+    },
+    "model_id": {
+      "type": "string"
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "applicability": {
+      "enum": [
+        "applicable",
+        "excluded",
+        "unknown"
+      ]
+    },
+    "result": {
+      "enum": [
+        "assessed",
+        "excluded",
+        "unknown"
+      ]
+    },
+    "checked_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "confidence_rationale": {
+      "type": "string"
+    },
+    "judgment_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "remaining_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "id",
+    "model_id",
+    "task_id",
+    "applicability",
+    "result",
+    "checked_at",
+    "rationale",
+    "confidence_rationale",
+    "judgment_ids",
+    "evidence_ids",
+    "conditions",
+    "remaining_gaps"
+  ],
+  "additionalProperties": false
+}

@@ -9,6 +9,7 @@ from tools.knowledge import ROOT
 
 # Last committed full journal, used only to read pre-migration receipt boundaries.
 LEGACY_COMMIT = '11611137dae2f0b5cf1874e9d862f32a6058a3b6'
+PRODUCT_ARCHIVE_COMMIT = 'ce93efb4741873cb6ac04167376d3b1a07779d60'
 def git_bytes(commit, path, root=ROOT):
     if not re.fullmatch(r'[a-f0-9]{7,40}', commit):
         raise ValueError('A pinned Git commit is required')
@@ -35,7 +36,7 @@ def git_state(commit, root=ROOT):
        'data/benchmarks.yaml':'benchmark','data/research-coverage.yaml':'research_coverage',
        'data/research-contract.yaml':'research_contract','data/research-runs.yaml':'research_run',
        'data/maintenance-contract.yaml':'maintenance_contract','data/maintenance-passes.yaml':'maintenance_pass',
-       'data/aliases.yaml':'alias','data/capability-taxonomy.yaml':'task'}
+       'data/task-assessments.yaml':'task_assessment','data/aliases.yaml':'alias','data/capability-taxonomy.yaml':'task'}
     with tarfile.open(fileobj=BytesIO(raw)) as archive:
         for item in archive:
             path = item.name

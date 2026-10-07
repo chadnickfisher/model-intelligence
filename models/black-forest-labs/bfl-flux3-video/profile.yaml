@@ -158,7 +158,7 @@ capabilities:
     original_task: short-audiovisual-generation-and-keyframed-continuation
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - id: judgment-bf07973843af6a72
   scope: direct
   task_ids:

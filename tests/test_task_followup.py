@@ -5,7 +5,8 @@ from tools.knowledge import ROOT, canonical
 
 
 def followup():
-    receipt=json.loads((ROOT/'history/research/2026-10-07/task-followup.json').read_text(encoding='utf-8'))
+    from tools.git_baselines import git_bytes, PRODUCT_ARCHIVE_COMMIT
+    receipt=json.loads(git_bytes(PRODUCT_ARCHIVE_COMMIT,'history/research/2026-10-07/task-followup.json'))
     current=canonical()
     rows=[r for (kind,ident),(_,r) in current.items() if kind=='benchmark' and ident in receipt['benchmark_ids']]
     return receipt,current,rows

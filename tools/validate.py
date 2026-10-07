@@ -8,16 +8,15 @@ from jsonschema import Draft202012Validator, FormatChecker
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from tools.knowledge import canonical, judgment_index, scope_errors, research_coverage_errors, integrity_errors
-from tools.research_runs import baseline_state, run_errors, task_rubric_errors
-from tools.maintenance import pass_errors
+from tools.research_runs import task_rubric_errors
 def read(p):return yaml.load(p.read_text(encoding='utf-8'),Loader=getattr(yaml,'CSafeLoader',yaml.SafeLoader))
 def records(p):return read(ROOT/p)['records']
 def run():
  errors=[];collections={}
  files={'model-profile':sorted(ROOT.glob('models/*/*/profile.yaml')),'provider-profile':sorted(ROOT.glob('providers/*/profile.yaml'))}
  for typ,paths in files.items():collections[typ]=[(p.relative_to(ROOT).as_posix(),read(p)) for p in paths]
- for typ,path in [('price-record','data/pricing.yaml'),('access-record','data/access.yaml'),('release-record','data/releases.yaml'),('source-record','evidence/sources.yaml'),('behavior-record','data/behavior.yaml'),('access-coverage-record','data/access-coverage.yaml'),('benchmark-record','data/benchmarks.yaml'),('research-coverage-record','data/research-coverage.yaml'),('research-contract-record','data/research-contract.yaml'),('research-run-record','data/research-runs.yaml')]:collections[typ]=[(path,x) for x in records(path)]
- for typ,path in [('maintenance-contract-record','data/maintenance-contract.yaml'),('maintenance-pass-record','data/maintenance-passes.yaml')]:collections[typ]=[(path,x) for x in records(path)]
+ for typ,path in [('price-record','data/pricing.yaml'),('access-record','data/access.yaml'),('release-record','data/releases.yaml'),('source-record','evidence/sources.yaml'),('behavior-record','data/behavior.yaml'),('access-coverage-record','data/access-coverage.yaml'),('benchmark-record','data/benchmarks.yaml'),('research-coverage-record','data/research-coverage.yaml'),('research-contract-record','data/research-contract.yaml'),('task-assessment-record','data/task-assessments.yaml')]:collections[typ]=[(path,x) for x in records(path)]
+ for typ,path in [('maintenance-contract-record','data/maintenance-contract.yaml')]:collections[typ]=[(path,x) for x in records(path)]
  for typ,path,key in [('task-record','data/capability-taxonomy.yaml','capabilities'),('alias-record','data/aliases.yaml','records')]:collections[typ]=[(path,x) for x in read(ROOT/path)[key]]
  allids=set()
  for typ,items in collections.items():
@@ -87,16 +86,14 @@ def run():
   for j in m['capabilities']+m['performance_characteristics']:
    if j['id'] in allids:errors.append('Duplicate judgment '+j['id'])
    allids.add(j['id'])
+ for _,a in collections['task-assessment-record']:
+  if a['model_id'] not in modelids or a['task_id'] not in tasks:errors.append(a['id']+': unresolved model/task')
+  exact={j['id']:j for _,m in collections['model-profile'] if m['id']==a['model_id'] for j in m['capabilities']}
+  for ident in a['judgment_ids']:
+   if ident not in exact or a['task_id'] not in exact[ident]['task_ids']:errors.append(a['id']+': assessment requires an exact direct task judgment')
+  if a['result']=='assessed' and (not a['judgment_ids'] or not a['confidence_rationale']):errors.append(a['id']+': assessed task needs judgment and confidence rationale')
  if records('data/capabilities.yaml')!=expected:errors.append('Capability index differs from canonical claims; run render.py')
  current={key:value for key,(_,value) in canonical(ROOT).items()}
- from tools.git_baselines import receipt_states
- for kind,typ in [('research_run','research-run-record'),('maintenance_pass','maintenance-pass-record')]:
-  for _,receipt in collections[typ]:
-   try:
-    baseline,evidence_state,revisions=receipt_states(receipt,kind,current)
-    errors.extend(run_errors(receipt,baseline,evidence_state) if kind=='research_run'
-                  else pass_errors(receipt,baseline,evidence_state,revisions))
-   except (KeyError,ValueError) as error:errors.append(receipt['id']+': invalid Git baseline '+str(error))
  errors.extend(integrity_errors(ROOT))
  for _,m in collections['model-profile']:
   if not m['evidence_ids']:errors.append(f"{m['id']}: no profile provenance")
@@ -108,13 +105,14 @@ def run():
  # Public-only safety check. Heuristics supplement, not replace, human review.
  patterns=[r'sk-[A-Za-z0-9]{20,}',r'ghp_[A-Za-z0-9]{20,}',r'-----BEGIN .*PRIVATE KEY-----',r'/workspace/(scratch|shared)/']
  for p in ROOT.rglob('*'):
-  if not p.is_file() or any(x in p.parts for x in ['.git','.venv','__pycache__','.pytest_cache']) or p==Path(__file__):continue
+  if not p.is_file() or any(x in p.parts for x in ['.git','.local','.venv','__pycache__','.pytest_cache']) or p==Path(__file__):continue
   if p.suffix in ['.md','.yaml','.json','.py']:
    text=p.read_text(encoding='utf-8')
    for pat in patterns:
     if re.search(pat,text):errors.append(f'Public-only check flagged {p.relative_to(ROOT)}')
  # Relative links in generated Markdown must resolve; URLs checked during research.
  for p in ROOT.rglob('*.md'):
+  if any(x in p.parts for x in ['.git','.local','.venv','__pycache__','.pytest_cache']):continue
   for link in re.findall(r'\]\(([^)]+)\)',p.read_text(encoding='utf-8')):
    if '://' in link or link.startswith('#'):continue
    if not (p.parent/link.split('#')[0]).exists():errors.append(f'Broken local link {p.relative_to(ROOT)} -> {link}')

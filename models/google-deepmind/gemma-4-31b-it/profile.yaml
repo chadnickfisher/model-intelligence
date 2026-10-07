@@ -236,7 +236,7 @@ capabilities:
     original_task: locally-controlled-multimodal-coding-assistant
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - id: judgment-f226052d85b08e80
   scope: direct
   task_ids:
@@ -292,7 +292,7 @@ performance_characteristics:
     original_task: measured-generation-behavior
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 access_ids:
 - access-26b160a51b88f282
 - access-313f8f51e65be23a

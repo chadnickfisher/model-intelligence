@@ -47,7 +47,7 @@ Supporting sources: [Reasoning vs Instruct: A Local Python Coding Benchmark Acro
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Tiny function-level slice; no architecture/repository inference. PDF/ZIP artifacts listed, but advertised root CSV returned 404. Qwen3.5-9B was replaced by Qwen3-8B, despite misleading internal key; no transfer.; Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R07; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Tiny function-level slice; no architecture/repository inference. PDF/ZIP artifacts listed, but advertised root CSV returned 404. Qwen3.5-9B was replaced by Qwen3-8B, despite misleading internal key; no transfer.; Confidence concerns this bounded claim, not a capability score.
 
 ## Specifications
 

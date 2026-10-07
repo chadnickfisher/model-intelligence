@@ -14,7 +14,7 @@ individual conclusion. Performance observations are not task endorsements.
 Historical entity, capability and date-snapshot query APIs are outside scope.
 Recent changes return concise summaries from the changelog. Git retains previous
 versions; current records retain their original source, inspection and effective
-dates. See [current state and changes](../history/README.md).
+dates. See [current state and changes](../docs/change-tracking.md).
 
 Price-threshold queries must require a billing unit and route. Never compare $/month to $/million tokens. A request for local models must distinguish downloadable weights, license compatibility, required precision/memory/context, and runtime compatibility. Capability queries return evidence-backed judgments, not invented scalar ranks. Unknown is a first-class result, not a negative match.
 
@@ -47,3 +47,5 @@ benchmarks, access/pricing and behavior. Return actual check dates, result,
 source/search references and remaining gaps. Pending checks have null dates;
 source absence is unknown. Accounting validation does not certify research quality.
 Both record types retain evidence and dates; previous versions are retained by Git.
+
+Current task applicability and assessment conclusions are in data/task-assessments.yaml. Return their actual dates, rationale, direct judgment references and gaps. Missing assessment records remain unknown; local research/checklist files are outside the query layer.

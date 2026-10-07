@@ -1,4 +1,5 @@
 from tools.git_baselines import legacy_revisions as history
+from tools.git_baselines import git_bytes, PRODUCT_ARCHIVE_COMMIT
 from explorer.data import load, behavior_findings
 from tools.knowledge import ROOT,read
 
@@ -9,7 +10,8 @@ def test_imported_identity_gates_and_original_baseline_are_preserved():
     assert len(new)==84 and all(j['scope']=='direct' and len(j['task_ids'])==1 for j in new)
     # Reported non-IT variants and pre-release checkpoints are not silently enrolled.
     assert not any(j['task_ids']==['coding.frontend'] for j in data['model']['gemma-4-31b-it']['capabilities'] if j['provenance'].get('origin')=='research')
-    assert len(read(ROOT/'history/migrations/2026-10-07-capabilities.yaml')['records'])==71
+    import yaml
+    assert len(yaml.safe_load(git_bytes(PRODUCT_ARCHIVE_COMMIT,'history/migrations/2026-10-07-capabilities.yaml'))['records'])==71
 
 
 def test_capped_free_routes_are_not_unlimited_metered_offers():

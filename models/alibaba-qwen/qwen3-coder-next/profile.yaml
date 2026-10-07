@@ -187,7 +187,7 @@ capabilities:
     original_task: local-repository-editing
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - id: judgment-4205dcdceec8959d
   scope: direct
   task_ids:
@@ -208,7 +208,6 @@ capabilities:
   evidence_notes:
   - Paper has inconsistent category wording; do not use its contradictory category100%claims.
   - 'Non-thinking checkpoint: do not repeat paper''s reasoning-mode characterization.'
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:qwen3-coder-next-debug-quantum'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -236,7 +235,6 @@ capabilities:
   - Q8_0 configuration stalled under its hardware/time conditions; that is deployment evidence, not proof of
     weaker weights.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:qwen3-coder-next-debug-local-csv'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -266,7 +264,6 @@ capabilities:
   evidence_notes:
   - Only low-confidence, narrowly scoped evidence. No demonstrated large-repository refactoring reliability
     or architecture rating.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R06'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null

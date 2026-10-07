@@ -71,7 +71,7 @@ Supporting sources: [Bug Hunt Bench frozen measurements](https://github.com/phur
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation quality.; No matched independent contradiction located; partial successes and misses coexist.; Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-astra-debug-bughunt; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation quality.; No matched independent contradiction located; partial successes and misses coexist.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.debugging (low confidence)
 
@@ -93,7 +93,7 @@ Supporting sources: [Python coding and repair track](https://github.com/joonlab/
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Different code scale from Bug Hunt Bench; both findings should coexist.; Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-astra-debug-small-python; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Different code scale from Bug Hunt Bench; both findings should coexist.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.architecture (low confidence)
 
@@ -115,7 +115,7 @@ Supporting sources: [GPT-6 Astra is good, but still far from what I would call A
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Single anecdote, no code or controlled runs. Warning about this workload only; cannot establish a general failure rate or override refactoring benchmark E07.; Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A05; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Single anecdote, no code or controlled runs. Warning about this workload only; cannot establish a general failure rate or override refactoring benchmark E07.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.refactoring (medium confidence)
 
@@ -137,7 +137,7 @@ Supporting sources: [SWE Atlas - Refactoring](https://labs.scale.com/leaderboard
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve xHigh as board label. Intro's below 50% statement is stale. Gemini 3.1 Pro 33.81±6.64 is withheld pending preview-ID mapping.; Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R01; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve xHigh as board label. Intro's below 50% statement is stale. Gemini 3.1 Pro 33.81±6.64 is withheld pending preview-ID mapping.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.frontend (medium confidence)
 
@@ -159,7 +159,7 @@ Supporting sources: [Code Arena WebDev Frontend](https://arena.ai/leaderboard/co
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-gpt-6-astra; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.review (medium confidence)
 
@@ -181,7 +181,7 @@ Supporting sources: [GPT-6 Astra review: Code review results, privacy, and cost]
 
 Contradictory or limiting sources: [GPT-6 Astra Cost 1.6x More Per Verified Bug Than GPT-5.6 Sol](https://entelligence.ai/blogs/gpt-6-astra-cost-1.6x-more-per-verified-bug-than-gpt-5.6-sol)
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-astra; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ## Specifications
 

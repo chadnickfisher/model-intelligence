@@ -67,7 +67,7 @@ Supporting sources: [Qwen3.8-27B local deployment probes](https://github.com/The
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: A configuration-specific continuity warning, not a measured code-correctness score; hardware/quant/template changes require recheck.; Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:qwen3-8-27b-debug-context-warning; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: A configuration-specific continuity warning, not a measured code-correctness score; hardware/quant/template changes require recheck.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.frontend (medium confidence)
 
@@ -89,7 +89,7 @@ Supporting sources: [Code Arena WebDev Frontend](https://arena.ai/leaderboard/co
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-qwen3-8-27b; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ## Specifications
 

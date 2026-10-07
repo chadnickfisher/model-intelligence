@@ -28,4 +28,4 @@ edit; the renderer never registers labels. Keep broad evidence as a compound or
 unresolved judgment, with related task IDs for navigation only. Retain stable
 judgment IDs, warnings, unknowns and contradictory evidence. Do not equate
 confidence with capability strength. Record canonical changes with the
-[compact change workflow](history/README.md) before regenerating and validating views.
+[compact change workflow](docs/change-tracking.md) before regenerating and validating views.

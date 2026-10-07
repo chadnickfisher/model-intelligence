@@ -178,7 +178,7 @@ capabilities:
     original_task: text-coding-and-reasoning
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
-    history_path: history/migrations/2026-10-07-capabilities.yaml
+    history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - id: judgment-abdefeccf40296a5
   scope: direct
   task_ids:
@@ -202,7 +202,6 @@ capabilities:
     do not inherit oldFlash0731results intoV4.1.
   - The analysis report bounds independent bug discovery; it does not contradict repair after locations are
     supplied.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:deepseek-v4-pro-0813-debug-planned-fixes'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -231,7 +230,6 @@ capabilities:
   evidence_notes:
   - No public code/logs; cross-task 95.9% claim accuracy is not architecture-specific. Reject author's inference
     that references are safe without verification.
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A04'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -263,7 +261,6 @@ capabilities:
   - exact_named_release_effort_retained
   known_failure_modes: []
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-deepseek-v4-pro-0813'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -290,7 +287,6 @@ capabilities:
   known_failure_modes:
   - Missed planted issues and deceptive tests; malformed responses can silently approve.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-deepseek0813'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null
@@ -317,7 +313,6 @@ capabilities:
   known_failure_modes:
   - Concurrency case omitted.
   evidence_notes:
-  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-deepseek0813'
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
   effective_from: null

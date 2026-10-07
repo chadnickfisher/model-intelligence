@@ -49,7 +49,7 @@ Supporting sources: [Introducing Claude Sonnet 5.5](https://www.anthropic.com/cl
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Inspected failure cases are direct scoped-edit evidence; aggregate FrontierCode is not reclassified into every coding task.; Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:claude-sonnet-5-5-scoped-max-warning; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Inspected failure cases are direct scoped-edit evidence; aggregate FrontierCode is not reclassified into every coding task.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.debugging (medium confidence)
 
@@ -71,7 +71,7 @@ Supporting sources: [Bug Hunt Bench frozen measurements](https://github.com/phur
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation quality.; No matched independent contradiction located; partial successes and misses coexist.; Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:claude-sonnet-5-5-debug-bughunt; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation quality.; No matched independent contradiction located; partial successes and misses coexist.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.architecture (low confidence)
 
@@ -93,7 +93,7 @@ Supporting sources: [Introducing Claude Sonnet 5.5](https://www.anthropic.com/cl
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Supports architecture analysis candidacy, not general architecture-design reliability.; Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A02; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Supports architecture analysis candidacy, not general architecture-design reliability.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.frontend (medium confidence)
 
@@ -115,7 +115,7 @@ Supporting sources: [Code Arena WebDev Frontend](https://arena.ai/leaderboard/co
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-claude-sonnet-5-5; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.review (medium confidence)
 
@@ -137,7 +137,7 @@ Supporting sources: [Claude Sonnet 5.5 for code review: More catches than Sonnet
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-sonnet55; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ### Cost sensitive professional workflows (medium confidence)
 

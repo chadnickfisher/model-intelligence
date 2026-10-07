@@ -1,4 +1,5 @@
 from tools.git_baselines import legacy_revisions as history
+from tools.git_baselines import git_bytes, PRODUCT_ARCHIVE_COMMIT
 from copy import deepcopy
 from pathlib import Path
 from hashlib import sha256
@@ -11,7 +12,8 @@ from tools.migrate_v2 import write_yaml
 
 
 def test_all_original_conclusions_and_evidence_survive():
-    originals = read(ROOT / 'history/migrations/2026-10-07-capabilities.yaml')['records']
+    import yaml
+    originals = yaml.safe_load(git_bytes(PRODUCT_ARCHIVE_COMMIT, 'history/migrations/2026-10-07-capabilities.yaml'))['records']
     current = canonical()
     revisions = history()
     assert len([r for r in originals if r['original_collection'] == 'capabilities']) == 64
@@ -49,7 +51,7 @@ def test_index_retains_actual_claim_and_never_splits_bundle():
 def copied_repo(tmp_path):
     root = tmp_path / 'repo'
     subprocess.run(['git','clone','--shared','--no-checkout',str(ROOT),str(root)],check=True,capture_output=True)
-    shutil.copytree(ROOT, root, dirs_exist_ok=True, ignore=shutil.ignore_patterns('.git', '__pycache__', '.pytest_cache'))
+    shutil.copytree(ROOT, root, dirs_exist_ok=True, ignore=shutil.ignore_patterns('.git', '.local', '__pycache__', '.pytest_cache'))
     return root
 
 

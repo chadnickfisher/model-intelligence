@@ -47,7 +47,7 @@ Supporting sources: [DeepSeek V4 Pro 0813 implementation follow-up](https://www.
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Author reports unchanged preexisting failures and no new static errors. No public code independently checked; do not inherit oldFlash0731results intoV4.1.; The analysis report bounds independent bug discovery; it does not contradict repair after locations are supplied.; Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:deepseek-v4-pro-0813-debug-planned-fixes; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Author reports unchanged preexisting failures and no new static errors. No public code independently checked; do not inherit oldFlash0731results intoV4.1.; The analysis report bounds independent bug discovery; it does not contradict repair after locations are supplied.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.architecture (low confidence)
 
@@ -69,7 +69,7 @@ Supporting sources: [DeepSeek V4 Pro 0813 code-analysis experiment](https://www.
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: No public code/logs; cross-task 95.9% claim accuracy is not architecture-specific. Reject author's inference that references are safe without verification.; Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A04; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: No public code/logs; cross-task 95.9% claim accuracy is not architecture-specific. Reject author's inference that references are safe without verification.; Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.frontend (medium confidence)
 
@@ -91,7 +91,7 @@ Supporting sources: [Code Arena WebDev Frontend](https://arena.ai/leaderboard/co
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-deepseek-v4-pro-0813; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.review (medium confidence)
 
@@ -113,7 +113,7 @@ Supporting sources: [Living AI code review benchmark](https://diffdojo.com/bench
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-deepseek0813; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ### Coding.tests (low confidence)
 
@@ -135,7 +135,7 @@ Supporting sources: [DeepSeek V4 Pro 0813 implementation follow-up](https://www.
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-deepseek0813; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ## Specifications
 
