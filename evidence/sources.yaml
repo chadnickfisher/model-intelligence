@@ -7216,3 +7216,14 @@ records:
   - Consumer-facing interfaces and single seeds are explicit limitations. No exact standard-preview API
     code/provider pin is established. Human QA about generated artifacts is not native model QA, mathematical
     reasoning or scientific problem solving.
+- id: src-3c610c36550c
+  url: https://github.com/googleapis/js-genai/issues/1272
+  title: Veo 3.1 reported intermittent RAI audio-filter blocks
+  publisher: GhouI / googleapis js-genai issue tracker
+  source_type: practitioner
+  published_at: '2026-01-23'
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - 'Original exact Standard preview report: image input, eight-second 9:16 video, JavaScript generateVideos.'
+  limitations:
+  - One reporter; unpinned SDK; no controlled failure rate, causal diagnosis or verified fix.

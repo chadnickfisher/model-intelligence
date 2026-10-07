@@ -7943,3 +7943,42 @@ records:
   research_details:
     layer: model_or_harness_unresolved
     weights_change_established: false
+- schema_version: '1.0'
+  id: behavior-f6b93c5fc8b996da
+  model_ids:
+  - veo-3-1-generate-preview
+  provider_id: google-developer-api
+  product: Gemini Developer API
+  model_version: veo-3-1-generate-preview
+  harness: '@google/genai generateVideos; SDK version labeled latest but unpinned'
+  effort: null
+  claim: A January 23, 2026 reporter describes intermittent audio-filter blocks for the exact Standard preview endpoint
+    with an input image, eight-second output and 9:16 aspect ratio. Repeated identical requests reportedly sometimes
+    succeed; this does not establish recovery or the responsible layer.
+  change_type: unresolved
+  metrics: []
+  observed_at: '2026-10-07'
+  reported_at: '2026-01-23'
+  effective_from: null
+  status: unknown
+  fact_status: reported
+  confidence: low
+  supporting_evidence_ids:
+  - src-3c610c36550c
+  contradictory_evidence_ids: []
+  official_acknowledgment: null
+  fix:
+    published_at: null
+    version: null
+    summary: null
+    evidence_ids: []
+    measured_improvement: null
+  conditions:
+  - Public exact-ID practitioner report only; no model calls or local reproduction.
+  - Image input and short portrait output; do not transfer to Fast/Lite, Vertex or Flow.
+  notes:
+  - Tracker closed not planned with stale/awaiting-response labels. Closure and retry successes do not prove a fix.
+  - October 7 is repository observation date; January 23 is report date, not established onset or recovery.
+  research_details:
+    layer: audio_filter_or_service_or_harness_unresolved
+    weights_change_established: false
