@@ -17,6 +17,6 @@ Observed 2026-10-07. This is an inventory date, not a fresh verification date fo
 - price records: 159
 - access routes: 316
 - public sources: 564
-- evidence observations: 54
+- evidence observations: 55
 
 See [coverage gaps](coverage-gaps.yaml) for source-specific limitations and [contradictions](../evidence/contradictions.yaml) for unresolved differences. Counts indicate coverage, not quality or completeness.

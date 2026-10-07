@@ -849,3 +849,20 @@ records:
   - Expressiveness claims and latency are provider claims; no independent v4 quality score established.
   measurements: {}
   publisher: null
+- id: obs-retrieval-rubric-v1-1
+  kind: editorial-methodology
+  summary: Distinguish corpus retrieval/ranking from supplied-context recovery and retrieval-grounded answer
+    generation.
+  source_ids:
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
+  observed_at: '2026-10-07'
+  configuration:
+  - Task rubric 1.1; no model inference.
+  findings:
+  - Add knowledge.retrieval for external-corpus retrieval and candidate ranking. Existing model findings remain
+    preserved; a task mapping change needs inspected evidence and an explicit rationale.
+  limitations:
+  - Task enrollment does not establish model ability or end-to-end answer quality.
+  measurements: {}
+  publisher: null

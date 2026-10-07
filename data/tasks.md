@@ -1,6 +1,6 @@
 # Task rubric
 
-Generated from [canonical task definitions](capability-taxonomy.yaml). Rubric 1.0 defines claim boundaries; it does not reclassify earlier judgments.
+Generated from [canonical task definitions](capability-taxonomy.yaml). Rubric 1.1 defines claim boundaries; it does not reclassify earlier judgments.
 
 Cost, provider, modality, effort and harness remain explicit operating conditions. Absence of evidence is unknown, not exclusion.
 
@@ -477,12 +477,13 @@ Exclude from this task:
 
 - Locating facts already supplied in a prompt is context retrieval unless external retrieval is part of the task.
 - A cited answer without a documented retrieval workflow does not establish RAG performance.
+- Retrieving or ranking passages without generating an answer belongs to knowledge.retrieval.
 
 Examples:
 
 - Answer a policy question from retrieved handbook sections and identify which section supports each condition.
 
-Neighboring tasks: context.retrieval, research.fact_check, agent.tool_use
+Neighboring tasks: context.retrieval, research.fact_check, agent.tool_use, knowledge.retrieval
 
 ## context.retrieval — Context: retrieval
 
@@ -496,13 +497,13 @@ Include:
 Exclude from this task:
 
 - Deriving a conclusion across retrieved facts is context reasoning when integration is required.
-- Retrieving from a separate corpus belongs to knowledge.rag under its retrieval workflow.
+- Retrieving or ranking records from a separate corpus belongs to knowledge.retrieval; answer generation is assessed separately.
 
 Examples:
 
 - Find an exception clause buried in a long supplied policy alongside similar but inapplicable clauses.
 
-Neighboring tasks: context.reasoning, knowledge.extraction, knowledge.rag
+Neighboring tasks: context.reasoning, knowledge.extraction, knowledge.rag, knowledge.retrieval
 
 ## context.reasoning — Context: reasoning
 
@@ -723,4 +724,24 @@ Examples:
 - Generate an instrumental piece with a specified tempo, instrumentation, and contrasting second section.
 
 Neighboring tasks: audio.speech_generation, audio.understanding, video.generation
+
+## knowledge.retrieval — Knowledge: retrieval
+
+Retrieve or rank relevant records for a query from an external corpus or a supplied candidate set.
+
+Include:
+
+- Assess semantic retrieval using query/document representations and a documented corpus.
+- Rank supplied candidate documents by relevance under a documented reranking setup.
+
+Exclude from this task:
+
+- Recovering a fact from a single supplied long context belongs to context.retrieval.
+- Generating and grounding an answer belongs to knowledge.rag; retrieval alone does not establish answer quality.
+
+Examples:
+
+- Rank policy passages for an exception question and report first-stage recall separately from candidate-ranking quality.
+
+Neighboring tasks: context.retrieval, knowledge.rag, knowledge.classification
 

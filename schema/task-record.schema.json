@@ -7,7 +7,7 @@
     "label": {"type": "string", "minLength": 1},
     "scope": {"type": "string", "minLength": 1},
     "status": {"enum": ["active", "retired"]},
-    "rubric_version": {"const": "1.0"},
+    "rubric_version": {"enum": ["1.0", "1.1"]},
     "inclusion_rules": {"$ref": "#/$defs/rules"},
     "exclusion_rules": {"$ref": "#/$defs/rules"},
     "examples": {"$ref": "#/$defs/rules"},

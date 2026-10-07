@@ -4,7 +4,7 @@ capabilities:
   label: 'Coding: scoped edit'
   scope: Implement a bounded code change with a specified goal and a localized acceptance criterion.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Add or change a specific function, endpoint, or component to meet stated behavior.
   - Evaluate correctness of the requested change and preservation of relevant existing behavior.
@@ -13,12 +13,15 @@ capabilities:
   - Broad repository coordination or system design requires its own task evidence.
   examples:
   - Add pagination to an existing endpoint with specified ordering and page limits.
-  neighboring_task_ids: [coding.debugging, coding.refactoring, coding.repository_work]
+  neighboring_task_ids:
+  - coding.debugging
+  - coding.refactoring
+  - coding.repository_work
 - id: coding.debugging
   label: 'Coding: debugging'
   scope: Diagnose a concrete software failure, identify its cause, and assess a corrective change.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Trace failing behavior through code, logs, or a reproducible test to a supported cause.
   - Check that a proposed repair addresses the failure under the recorded setup.
@@ -27,12 +30,15 @@ capabilities:
   - Reporting suspicious code without investigating a failure is code review.
   examples:
   - Find why an empty input crashes a parser and verify a repair against the reproduction.
-  neighboring_task_ids: [coding.scoped_edit, coding.tests, coding.review]
+  neighboring_task_ids:
+  - coding.scoped_edit
+  - coding.tests
+  - coding.review
 - id: coding.architecture
   label: 'Coding: architecture'
   scope: Design software structure and interfaces while reasoning about requirements and system tradeoffs.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Propose component boundaries, data flows, or interfaces for stated system requirements.
   - Explain consequences of design choices for maintenance, reliability, or scalability.
@@ -41,12 +47,15 @@ capabilities:
   - General logical puzzles without software design requirements belong to reasoning.general.
   examples:
   - Design a job queue with retry boundaries, idempotency, and failure isolation.
-  neighboring_task_ids: [coding.refactoring, coding.repository_work, reasoning.general]
+  neighboring_task_ids:
+  - coding.refactoring
+  - coding.repository_work
+  - reasoning.general
 - id: coding.refactoring
   label: 'Coding: refactoring'
   scope: Restructure existing code while preserving its specified externally observable behavior.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Remove duplication, reorganize modules, or simplify implementation without changing the contract.
   - Assess behavior preservation through relevant checks or explicit invariants.
@@ -55,12 +64,15 @@ capabilities:
   - Proposing a design without restructuring existing code is architecture work.
   examples:
   - Extract shared validation from three handlers while keeping responses and errors stable.
-  neighboring_task_ids: [coding.scoped_edit, coding.architecture, coding.tests]
+  neighboring_task_ids:
+  - coding.scoped_edit
+  - coding.architecture
+  - coding.tests
 - id: coding.tests
   label: 'Coding: tests'
   scope: Develop or improve software tests that meaningfully distinguish correct from incorrect behavior.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Select representative inputs, edge cases, and assertions for a specified software contract.
   - Assess whether tests detect relevant faults and avoid misleading passes.
@@ -69,12 +81,15 @@ capabilities:
   - Diagnosing the underlying application defect is debugging when that is the task outcome.
   examples:
   - Write regression tests for retry exhaustion, successful recovery, and duplicate delivery.
-  neighboring_task_ids: [coding.debugging, coding.review, coding.scoped_edit]
+  neighboring_task_ids:
+  - coding.debugging
+  - coding.review
+  - coding.scoped_edit
 - id: coding.review
   label: 'Coding: review'
   scope: Inspect code or a proposed change and produce actionable, supported findings about its risks or defects.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Identify concrete correctness, security, or maintenance problems in the reviewed code.
   - Explain a finding's trigger and impact with evidence from the change and relevant context.
@@ -83,12 +98,16 @@ capabilities:
   - Implementing repairs or independently tracing a reported failure requires separate task evidence.
   examples:
   - Review an authorization change and identify a path that exposes another user's record.
-  neighboring_task_ids: [coding.debugging, coding.tests, coding.repository_work]
+  neighboring_task_ids:
+  - coding.debugging
+  - coding.tests
+  - coding.repository_work
 - id: coding.repository_work
   label: 'Coding: repository work'
-  scope: Coordinate a software change across an existing repository's files, dependencies, conventions, and checks.
+  scope: Coordinate a software change across an existing repository's files, dependencies, conventions, and
+    checks.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Navigate relevant repository context and integrate mutually dependent changes.
   - Keep implementation, configuration, tests, and documentation consistent with the requested outcome.
@@ -97,12 +116,15 @@ capabilities:
   - Duration alone does not make repository work a long-horizon agent task.
   examples:
   - Update an API contract across server code, client types, tests, and migration documentation.
-  neighboring_task_ids: [coding.scoped_edit, coding.architecture, agent.long_horizon]
+  neighboring_task_ids:
+  - coding.scoped_edit
+  - coding.architecture
+  - agent.long_horizon
 - id: coding.frontend
   label: 'Coding: frontend'
   scope: Build or modify user-facing software interfaces, including layout, interaction, and rendering behavior.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Implement usable interface components and interactions under the stated design requirements.
   - Evaluate visual layout, responsiveness, accessibility, or interaction correctness as documented.
@@ -111,12 +133,16 @@ capabilities:
   - Generating an interface illustration without functional code belongs to image.generation.
   examples:
   - Implement a responsive search page with keyboard navigation and loading and error states.
-  neighboring_task_ids: [coding.scoped_edit, coding.tests, image.generation]
+  neighboring_task_ids:
+  - coding.scoped_edit
+  - coding.tests
+  - image.generation
 - id: agent.long_horizon
   label: 'Agent: long horizon'
-  scope: Maintain progress toward a goal through multiple dependent actions, intermediate results, and plan revisions.
+  scope: Maintain progress toward a goal through multiple dependent actions, intermediate results, and plan
+    revisions.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Track constraints and unfinished work across a sequence whose next steps depend on earlier outcomes.
   - Adapt a plan after feedback or setbacks and verify the final goal state.
@@ -125,12 +151,15 @@ capabilities:
   - Large supplied input alone belongs to context tasks rather than long-horizon agency.
   examples:
   - Investigate a repository issue, implement a repair, resolve failing checks, and verify the complete change.
-  neighboring_task_ids: [agent.tool_use, coding.repository_work, context.reasoning]
+  neighboring_task_ids:
+  - agent.tool_use
+  - coding.repository_work
+  - context.reasoning
 - id: agent.tool_use
   label: 'Agent: tool use'
   scope: Select and invoke external tools with valid arguments, then use their results to complete a task.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Choose appropriate available tools and supply arguments consistent with their contracts.
   - Interpret tool responses, handle documented errors, and connect results to the requested outcome.
@@ -139,12 +168,15 @@ capabilities:
   - Visual GUI navigation belongs to computer use when that interaction is the measured task.
   examples:
   - Query a structured catalog and use the returned route and price records to answer a constrained request.
-  neighboring_task_ids: [agent.computer_use, agent.long_horizon, knowledge.rag]
+  neighboring_task_ids:
+  - agent.computer_use
+  - agent.long_horizon
+  - knowledge.rag
 - id: agent.computer_use
   label: 'Agent: computer use'
   scope: Operate a graphical interface by interpreting its visible state and performing appropriate interactions.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Navigate pages or applications through controls such as clicks, typing, and scrolling.
   - Verify interface state changes and recover from interaction failures within the measured setup.
@@ -153,12 +185,16 @@ capabilities:
   - Identifying a control in a static screenshot alone is visual grounding.
   examples:
   - Fill a browser form, correct a validation error, and confirm the saved result in the interface.
-  neighboring_task_ids: [agent.tool_use, vision.grounding, agent.long_horizon]
+  neighboring_task_ids:
+  - agent.tool_use
+  - vision.grounding
+  - agent.long_horizon
 - id: reasoning.general
   label: 'Reasoning: general'
-  scope: Derive a justified answer from logical relationships, constraints, or causal premises outside specialized tasks.
+  scope: Derive a justified answer from logical relationships, constraints, or causal premises outside specialized
+    tasks.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Solve a stated constraint or inference problem using the supplied premises.
   - Assess consistency and explain the reasoning steps relevant to the answer.
@@ -167,12 +203,15 @@ capabilities:
   - Recalling a fact or satisfying formatting constraints alone does not establish logical reasoning.
   examples:
   - Determine a feasible schedule from availability constraints and explain why alternatives conflict.
-  neighboring_task_ids: [reasoning.math, reasoning.scientific, context.reasoning]
+  neighboring_task_ids:
+  - reasoning.math
+  - reasoning.scientific
+  - context.reasoning
 - id: reasoning.math
   label: 'Reasoning: math'
   scope: Solve mathematical problems through quantitative derivation, calculation, proof, or formal argument.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Derive numerical or symbolic results while respecting assumptions and mathematical constraints.
   - Construct or evaluate a proof or a mathematical solution's validity.
@@ -181,12 +220,15 @@ capabilities:
   - Scientific interpretation of a computed result requires separate scientific reasoning evidence.
   examples:
   - Prove an inequality under stated bounds and identify when equality holds.
-  neighboring_task_ids: [reasoning.general, reasoning.scientific, knowledge.extraction]
+  neighboring_task_ids:
+  - reasoning.general
+  - reasoning.scientific
+  - knowledge.extraction
 - id: reasoning.scientific
   label: 'Reasoning: scientific'
   scope: Apply scientific concepts and evidence to explain phenomena, evaluate hypotheses, or interpret experiments.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Reason about mechanisms, experimental controls, or conclusions supported by scientific observations.
   - Distinguish evidence, assumptions, uncertainty, and competing explanations in a scientific problem.
@@ -195,12 +237,16 @@ capabilities:
   - Combining paper summaries without evaluating scientific reasoning is research synthesis.
   examples:
   - Explain whether an experiment separates a treatment effect from a confounding variable.
-  neighboring_task_ids: [reasoning.math, research.synthesis, research.fact_check]
+  neighboring_task_ids:
+  - reasoning.math
+  - research.synthesis
+  - research.fact_check
 - id: research.fact_check
   label: 'Research: fact check'
-  scope: Verify a specific factual claim against attributable sources and report the supported conclusion and uncertainty.
+  scope: Verify a specific factual claim against attributable sources and report the supported conclusion and
+    uncertainty.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Inspect source identity, date, and relevance to the exact claim being checked.
   - Reconcile supporting and conflicting sources or state that the claim remains unresolved.
@@ -209,12 +255,15 @@ capabilities:
   - Fluent unsupported recall does not measure source-based verification.
   examples:
   - Check whether a published product limit applies to a named version on the stated date.
-  neighboring_task_ids: [research.synthesis, knowledge.rag, language.summarization]
+  neighboring_task_ids:
+  - research.synthesis
+  - knowledge.rag
+  - language.summarization
 - id: research.synthesis
   label: 'Research: synthesis'
   scope: Combine multiple relevant sources into a grounded account of their findings, relationships, and disagreements.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Integrate distinct sources around a research question while preserving attribution and source conditions.
   - Explain areas of agreement, conflicting findings, and unresolved gaps across the sources.
@@ -223,12 +272,15 @@ capabilities:
   - Verifying one isolated proposition is fact checking rather than evidence integration.
   examples:
   - Compare several studies of an intervention while retaining their populations and measurement differences.
-  neighboring_task_ids: [research.fact_check, language.summarization, reasoning.scientific]
+  neighboring_task_ids:
+  - research.fact_check
+  - language.summarization
+  - reasoning.scientific
 - id: language.writing
   label: 'Language: writing'
   scope: Compose or revise prose to meet a communicative purpose, audience, tone, and structure.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Produce clear, coherent prose appropriate to the requested genre and audience.
   - Revise wording or organization while preserving the intended meaning and constraints.
@@ -237,12 +289,15 @@ capabilities:
   - Quality in transferring meaning between languages is translation.
   examples:
   - Rewrite a technical explanation for a general audience while keeping its essential caveats.
-  neighboring_task_ids: [language.summarization, language.instruction_following, language.translation]
+  neighboring_task_ids:
+  - language.summarization
+  - language.instruction_following
+  - language.translation
 - id: language.summarization
   label: 'Language: summarization'
   scope: Condense supplied material while preserving its essential meaning, qualifications, and attribution.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Select salient content for the requested summary length and purpose.
   - Preserve important limitations and avoid adding claims absent from the source.
@@ -251,12 +306,16 @@ capabilities:
   - Returning specified fields without an overview is knowledge extraction.
   examples:
   - Summarize a meeting transcript with decisions, unresolved issues, and assigned actions.
-  neighboring_task_ids: [language.writing, research.synthesis, knowledge.extraction]
+  neighboring_task_ids:
+  - language.writing
+  - research.synthesis
+  - knowledge.extraction
 - id: language.instruction_following
   label: 'Language: instruction following'
-  scope: Satisfy explicit task instructions and output constraints while resolving their stated priority and dependencies.
+  scope: Satisfy explicit task instructions and output constraints while resolving their stated priority and
+    dependencies.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Follow requested content, formatting, ordering, or exclusion constraints that can be assessed directly.
   - Maintain multiple compatible instructions throughout the response or task.
@@ -265,12 +324,15 @@ capabilities:
   - Generic praise for helpfulness does not identify an instruction-following task outcome.
   examples:
   - Return exactly three labeled items in a specified order while respecting a word limit for each.
-  neighboring_task_ids: [language.writing, knowledge.extraction, agent.long_horizon]
+  neighboring_task_ids:
+  - language.writing
+  - knowledge.extraction
+  - agent.long_horizon
 - id: language.translation
   label: 'Language: translation'
   scope: Transfer supplied meaning from one language to another while preserving relevant register and nuance.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Translate text with attention to semantic fidelity, idioms, terminology, and audience.
   - Evaluate source-to-target meaning preservation for the stated language pair.
@@ -279,12 +341,15 @@ capabilities:
   - Transcribing spoken words into the same language is audio understanding.
   examples:
   - Translate a formal customer notice into Spanish while preserving its conditions and polite register.
-  neighboring_task_ids: [language.multilingual_chat, language.writing, audio.understanding]
+  neighboring_task_ids:
+  - language.multilingual_chat
+  - language.writing
+  - audio.understanding
 - id: language.multilingual_chat
   label: 'Language: multilingual chat'
   scope: Conduct contextually appropriate dialogue in one or more languages across conversational turns.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Understand and respond coherently in the evaluated language or code-switching setup.
   - Maintain conversational context, register, and relevant cultural or linguistic distinctions.
@@ -293,12 +358,16 @@ capabilities:
   - Speech timing and interruption handling belong to audio conversation when measured.
   examples:
   - Answer follow-up support questions in French while retaining details established earlier in the chat.
-  neighboring_task_ids: [language.translation, audio.conversation, language.instruction_following]
+  neighboring_task_ids:
+  - language.translation
+  - audio.conversation
+  - language.instruction_following
 - id: knowledge.extraction
   label: 'Knowledge: extraction'
-  scope: Identify and return specified facts, entities, or relationships from supplied material in a requested structure.
+  scope: Identify and return specified facts, entities, or relationships from supplied material in a requested
+    structure.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Map source content to requested fields while preserving values and relationships.
   - Represent ambiguous or missing values explicitly under the task's extraction contract.
@@ -307,12 +376,15 @@ capabilities:
   - Finding dispersed facts in an extended context is context retrieval when placement or length is central.
   examples:
   - Extract invoice dates, vendors, totals, and currencies into records without inventing missing amounts.
-  neighboring_task_ids: [knowledge.classification, context.retrieval, language.summarization]
+  neighboring_task_ids:
+  - knowledge.classification
+  - context.retrieval
+  - language.summarization
 - id: knowledge.classification
   label: 'Knowledge: classification'
   scope: Assign supplied items to defined categories using their content and the stated category criteria.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Choose labels for examples under a documented taxonomy or decision rule.
   - Assess distinctions between neighboring labels and handling of ambiguous cases.
@@ -321,40 +393,55 @@ capabilities:
   - Inventing a new taxonomy is outside classification under a supplied category set.
   examples:
   - Label support tickets as billing, access, or technical issues using the supplied definitions.
-  neighboring_task_ids: [knowledge.extraction, language.instruction_following, reasoning.general]
+  neighboring_task_ids:
+  - knowledge.extraction
+  - language.instruction_following
+  - reasoning.general
 - id: knowledge.rag
   label: 'Knowledge: rag'
   scope: Answer a question using evidence retrieved from an external corpus within a documented retrieval workflow.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Use retrieved passages or records to ground an answer and preserve their source attribution.
   - Assess retrieval relevance and answer support under the measured corpus, retriever, and context setup.
   exclusion_rules:
-  - Locating facts already supplied in a prompt is context retrieval unless external retrieval is part of the task.
+  - Locating facts already supplied in a prompt is context retrieval unless external retrieval is part of the
+    task.
   - A cited answer without a documented retrieval workflow does not establish RAG performance.
+  - Retrieving or ranking passages without generating an answer belongs to knowledge.retrieval.
   examples:
   - Answer a policy question from retrieved handbook sections and identify which section supports each condition.
-  neighboring_task_ids: [context.retrieval, research.fact_check, agent.tool_use]
+  neighboring_task_ids:
+  - context.retrieval
+  - research.fact_check
+  - agent.tool_use
+  - knowledge.retrieval
 - id: context.retrieval
   label: 'Context: retrieval'
-  scope: Locate and accurately recover relevant information from extended supplied context across its positions and distractions.
+  scope: Locate and accurately recover relevant information from extended supplied context across its positions
+    and distractions.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Find a requested fact or passage whose placement, context length, or competing content matters to the task.
   - Assess retrieval accuracy under the documented input length and information distribution.
   exclusion_rules:
   - Deriving a conclusion across retrieved facts is context reasoning when integration is required.
-  - Retrieving from a separate corpus belongs to knowledge.rag under its retrieval workflow.
+  - Retrieving or ranking records from a separate corpus belongs to knowledge.retrieval; answer generation
+    is assessed separately.
   examples:
   - Find an exception clause buried in a long supplied policy alongside similar but inapplicable clauses.
-  neighboring_task_ids: [context.reasoning, knowledge.extraction, knowledge.rag]
+  neighboring_task_ids:
+  - context.reasoning
+  - knowledge.extraction
+  - knowledge.rag
+  - knowledge.retrieval
 - id: context.reasoning
   label: 'Context: reasoning'
   scope: Integrate relationships or constraints distributed across extended supplied context to derive an answer.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Combine information from multiple parts of the input rather than merely retrieving a matching passage.
   - Assess derived conclusions under the recorded context length, placement, and dependency structure.
@@ -363,12 +450,15 @@ capabilities:
   - An advertised context window size alone does not establish reasoning across that window.
   examples:
   - Determine which contract deadline applies by combining amendments and exceptions spread across the input.
-  neighboring_task_ids: [context.retrieval, reasoning.general, research.synthesis]
+  neighboring_task_ids:
+  - context.retrieval
+  - reasoning.general
+  - research.synthesis
 - id: vision.question_answering
   label: 'Vision: question answering'
   scope: Answer questions about visual input by interpreting visible objects, text, relationships, or diagrams.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Derive an answer from image content relevant to the question.
   - Evaluate interpretation under the documented image resolution and visual complexity.
@@ -377,12 +467,16 @@ capabilities:
   - Creating or modifying image pixels belongs to image generation or editing.
   examples:
   - Explain which series increased most in a supplied chart and cite its visible values.
-  neighboring_task_ids: [vision.grounding, knowledge.extraction, reasoning.scientific]
+  neighboring_task_ids:
+  - vision.grounding
+  - knowledge.extraction
+  - reasoning.scientific
 - id: vision.grounding
   label: 'Vision: grounding'
-  scope: Localize a described visual entity or interface element to a region, coordinate, or other explicit visual reference.
+  scope: Localize a described visual entity or interface element to a region, coordinate, or other explicit
+    visual reference.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Match a description to the correct location in an image or screenshot.
   - Assess localization precision against the specified spatial output format or target region.
@@ -391,12 +485,15 @@ capabilities:
   - Completing an interface workflow through interactions requires computer-use evidence.
   examples:
   - Return the bounding box of the search field in a screenshot containing several similar controls.
-  neighboring_task_ids: [vision.question_answering, agent.computer_use, image.editing]
+  neighboring_task_ids:
+  - vision.question_answering
+  - agent.computer_use
+  - image.editing
 - id: image.generation
   label: 'Image: generation'
   scope: Create a still image from a requested description or reference-based composition brief.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Generate a new composition that follows specified subjects, relationships, style, or visible text.
   - Evaluate output fidelity and visual quality under the documented generation settings.
@@ -405,12 +502,16 @@ capabilities:
   - Generating temporal motion across frames belongs to video generation.
   examples:
   - Generate an illustrated poster with three specified objects and a requested title.
-  neighboring_task_ids: [image.editing, video.generation, coding.frontend]
+  neighboring_task_ids:
+  - image.editing
+  - video.generation
+  - coding.frontend
 - id: image.editing
   label: 'Image: editing'
-  scope: Modify an existing still image while satisfying requested changes and preserving specified source content.
+  scope: Modify an existing still image while satisfying requested changes and preserving specified source
+    content.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Apply localized or global changes such as object replacement, recoloring, or background transformation.
   - Assess both the requested edit and preservation of identity, geometry, or unaffected regions as specified.
@@ -419,12 +520,15 @@ capabilities:
   - Editing a clip with temporal consistency requirements belongs to video editing.
   examples:
   - Replace a product photo's background while retaining the product's shape and printed label.
-  neighboring_task_ids: [image.generation, video.editing, vision.grounding]
+  neighboring_task_ids:
+  - image.generation
+  - video.editing
+  - vision.grounding
 - id: audio.understanding
   label: 'Audio: understanding'
   scope: Interpret supplied audio to recover speech, events, speaker information, or other audible meaning.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Transcribe speech or answer questions grounded in audible content.
   - Identify sound events, speaker turns, or paralinguistic information under the stated recording conditions.
@@ -433,12 +537,15 @@ capabilities:
   - Interactive voice turn management requires audio-conversation evidence.
   examples:
   - Transcribe a recorded discussion and identify which speaker agreed to each action.
-  neighboring_task_ids: [audio.conversation, audio.speech_generation, language.translation]
+  neighboring_task_ids:
+  - audio.conversation
+  - audio.speech_generation
+  - language.translation
 - id: audio.speech_generation
   label: 'Audio: speech generation'
   scope: Produce intelligible spoken audio with requested verbal content, voice characteristics, or delivery.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Render requested speech with assessable pronunciation, prosody, or voice consistency.
   - Evaluate verbal fidelity and audio quality under the stated generation setup.
@@ -447,12 +554,16 @@ capabilities:
   - Musical composition or singing assessed as music belongs to music generation.
   examples:
   - Speak a supplied announcement with clear numbers, natural pauses, and the requested tone.
-  neighboring_task_ids: [audio.conversation, audio.understanding, music.generation]
+  neighboring_task_ids:
+  - audio.conversation
+  - audio.understanding
+  - music.generation
 - id: audio.conversation
   label: 'Audio: conversation'
-  scope: Sustain interactive spoken dialogue through listening, responding, timing, and management of voice turns.
+  scope: Sustain interactive spoken dialogue through listening, responding, timing, and management of voice
+    turns.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Maintain dialogue context while interpreting spoken input and generating relevant spoken responses.
   - Assess response timing, interruption handling, and turn continuity when documented in the setup.
@@ -461,12 +572,15 @@ capabilities:
   - Text-only multilingual dialogue belongs to multilingual chat.
   examples:
   - Conduct a voice support exchange, handle an interruption, and resume with the corrected request.
-  neighboring_task_ids: [audio.understanding, audio.speech_generation, language.multilingual_chat]
+  neighboring_task_ids:
+  - audio.understanding
+  - audio.speech_generation
+  - language.multilingual_chat
 - id: video.generation
   label: 'Video: generation'
   scope: Create a video sequence from a prompt or conditioning inputs with requested motion and temporal content.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Generate moving scenes that follow subject, action, camera, or continuity requirements.
   - Evaluate temporal consistency and any requested synchronized audio under the documented output setup.
@@ -475,12 +589,15 @@ capabilities:
   - A still image's visual quality alone does not establish motion generation ability.
   examples:
   - Generate a short clip of a cyclist turning a corner while preserving subject identity across frames.
-  neighboring_task_ids: [video.editing, image.generation, audio.speech_generation]
+  neighboring_task_ids:
+  - video.editing
+  - image.generation
+  - audio.speech_generation
 - id: video.editing
   label: 'Video: editing'
   scope: Modify an existing video while preserving specified source content and consistency across time.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Change clip content, appearance, timing, or composition according to an explicit edit request.
   - Assess preservation of unaffected content and continuity of the edit across relevant frames.
@@ -489,12 +606,15 @@ capabilities:
   - Altering a single still frame alone does not establish temporally consistent video editing.
   examples:
   - Remove a background object throughout a moving shot while preserving the foreground subject.
-  neighboring_task_ids: [video.generation, image.editing, vision.grounding]
+  neighboring_task_ids:
+  - video.generation
+  - image.editing
+  - vision.grounding
 - id: music.generation
   label: 'Music: generation'
   scope: Create musical audio with requested melodic, rhythmic, structural, instrumental, or vocal characteristics.
   status: active
-  rubric_version: '1.0'
+  rubric_version: '1.1'
   inclusion_rules:
   - Generate a composition or musical performance matching the supplied brief.
   - Assess musical coherence, requested structure, and audio quality under the measured setup.
@@ -503,4 +623,26 @@ capabilities:
   - Recognizing an instrument or transcribing existing audio is audio understanding.
   examples:
   - Generate an instrumental piece with a specified tempo, instrumentation, and contrasting second section.
-  neighboring_task_ids: [audio.speech_generation, audio.understanding, video.generation]
+  neighboring_task_ids:
+  - audio.speech_generation
+  - audio.understanding
+  - video.generation
+- id: knowledge.retrieval
+  label: 'Knowledge: retrieval'
+  scope: Retrieve or rank relevant records for a query from an external corpus or a supplied candidate set.
+  status: active
+  rubric_version: '1.1'
+  inclusion_rules:
+  - Assess semantic retrieval using query/document representations and a documented corpus.
+  - Rank supplied candidate documents by relevance under a documented reranking setup.
+  exclusion_rules:
+  - Recovering a fact from a single supplied long context belongs to context.retrieval.
+  - Generating and grounding an answer belongs to knowledge.rag; retrieval alone does not establish answer
+    quality.
+  examples:
+  - Rank policy passages for an exception question and report first-stage recall separately from candidate-ranking
+    quality.
+  neighboring_task_ids:
+  - context.retrieval
+  - knowledge.rag
+  - knowledge.classification

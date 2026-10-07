@@ -17,7 +17,7 @@ TASK_IDS = {
     'research.fact_check', 'research.synthesis',
     'language.writing', 'language.summarization', 'language.instruction_following',
     'language.translation', 'language.multilingual_chat',
-    'knowledge.extraction', 'knowledge.classification', 'knowledge.rag',
+    'knowledge.extraction', 'knowledge.classification', 'knowledge.rag', 'knowledge.retrieval',
     'context.retrieval', 'context.reasoning',
     'vision.question_answering', 'vision.grounding',
     'image.generation', 'image.editing',
@@ -39,11 +39,11 @@ def validator():
 
 def test_current_task_rubrics_are_complete_and_distinctive():
     records = tasks()
-    assert len(records) == len(TASK_IDS) == 36
+    assert len(records) == len(TASK_IDS) == 37
     assert {record['id'] for record in records} == TASK_IDS
     assert len({record['scope'] for record in records}) == len(records)
     for record in records:
-        assert record['rubric_version'] == '1.0'
+        assert record['rubric_version'] == '1.1'
         assert record['status'] == 'active'
         assert record['label'].strip() and record['scope'].strip()
         assert 'Task only;' not in record['scope']

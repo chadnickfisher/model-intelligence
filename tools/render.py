@@ -86,7 +86,8 @@ for name,rows in [('pricing',list(PR.values())),('access',list(AC.values()))]:
  wr(R/('data/'+name+'.md'),'\n'.join(lines)+'\n')
 
 task_rows=rd(R/'data/capability-taxonomy.yaml')['capabilities']
-lines=['# Task rubric','','Generated from [canonical task definitions](capability-taxonomy.yaml). Rubric 1.0 defines claim boundaries; it does not reclassify earlier judgments.','','Cost, provider, modality, effort and harness remain explicit operating conditions. Absence of evidence is unknown, not exclusion.','']
+rubric_versions=', '.join(sorted({task['rubric_version'] for task in task_rows}))
+lines=['# Task rubric','','Generated from [canonical task definitions](capability-taxonomy.yaml). Rubric '+rubric_versions+' defines claim boundaries; it does not reclassify earlier judgments.','','Cost, provider, modality, effort and harness remain explicit operating conditions. Absence of evidence is unknown, not exclusion.','']
 for task in task_rows:
  lines+=['## '+task['id']+' — '+task['label'],'',task['scope'],'']
  for label,key in [('Include','inclusion_rules'),('Exclude from this task','exclusion_rules'),('Examples','examples')]:

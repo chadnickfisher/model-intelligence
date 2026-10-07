@@ -9,7 +9,7 @@
       "const": "1.0"
     },
     "rubric_version": {
-      "const": "1.0"
+      "enum": ["1.0", "1.1"]
     },
     "domains": {
       "type": "array",
