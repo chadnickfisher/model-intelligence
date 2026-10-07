@@ -9,6 +9,11 @@ PRIVATE_DOCUMENTS = {
     'maintenance.md', 'current_state.md', 'architecture.md',
     'docs/bounded-research.md', 'docs/scoped-maintenance.md',
     'docs/package-workflow.md',
+    'docs/maintenance-pilot-scope.md', 'docs/research_and_mcp_plan.md',
+    'docs/research-work-unit-proposal.md', 'docs/retrieval-task-proposal.md',
+    'data/research-runs.yaml', 'data/research-runs.md',
+    'data/maintenance-passes.yaml', 'data/maintenance-passes.md',
+    'history/revisions.yaml', 'history/readme.md',
 }
 IGNORED_DIRECTORIES = PRIVATE_DIRECTORIES | {
     '.git', '.venv', '__pycache__', '.pytest_cache', 'node_modules',
@@ -20,6 +25,9 @@ def private_work_path(name):
     return (any(part in PRIVATE_DIRECTORIES for part in path.parts)
             or path.name in {'agents.md', 'agents.override.md'}
             or path.as_posix() in PRIVATE_DOCUMENTS
+            or path.parts[:2] == ('history', 'research')
+            or (path.parts and path.parts[0] == 'research' and path.as_posix() not in
+                {'research/coverage.md', 'research/coverage-gaps.yaml'})
             or path.parts[:2] == ('docs', 'working'))
 
 

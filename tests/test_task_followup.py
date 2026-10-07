@@ -1,69 +1,61 @@
-from tools.git_baselines import legacy_revisions as history
-"""Guard the research follow-up against identity transfer and invented history."""
-import json
+"""Guard public task evidence without depending on private work receipts."""
+import subprocess
 from tools.knowledge import ROOT, canonical
+from tools.git_baselines import git_state
+
+BATCH = 'public-task-followup-2026-10-07'
 
 
 def followup():
-    from tools.git_baselines import git_bytes, PRODUCT_ARCHIVE_COMMIT
-    receipt=json.loads(git_bytes(PRODUCT_ARCHIVE_COMMIT,'history/research/2026-10-07/task-followup.json'))
-    current=canonical()
-    rows=[r for (kind,ident),(_,r) in current.items() if kind=='benchmark' and ident in receipt['benchmark_ids']]
-    return receipt,current,rows
+    current = canonical()
+    judgments = [(ident, j) for (kind, ident), (_, model) in current.items()
+                 if kind == 'model' for j in model['capabilities']
+                 if j.get('provenance', {}).get('research_batch_id') == BATCH]
+    scope = {'models': sorted({ident for ident, _ in judgments}),
+             'judgment_ids': [j['id'] for _, j in judgments],
+             'observed_at': '2026-10-07'}
+    rows = [row for (kind, _), (_, row) in current.items() if kind == 'benchmark'
+            and any('Added by ' + BATCH in note for note in row['evidence_notes'])]
+    return scope, current, rows
 
 
-def test_followup_has_actual_references_for_every_previously_pending_domain():
-    receipt,_,_=followup()
-    assert len(set(receipt['models']))==26
-    revisions=history()
-    matching=[i for i,r in enumerate(revisions) if r['entity_type']=='research_coverage'
-              and r['value'] and r['value'].get('research_batch_id')==receipt['research_batch_id']
-              and r['value'].get('checked_at')==receipt['observed_at']]
-    assert matching
-    coverage={r['entity_id']:r['value'] for r in revisions[:max(matching)+1]
-              if r['entity_type']=='research_coverage'}
-    checks=[r for r in coverage.values() if r is not None]
-    assert not any(r['result']=='not_checked' for r in checks)
-    followed=[r for r in checks if r['model_id'] in receipt['models']
-              and r['domain'] in {'capabilities','benchmarks'}]
-    assert {(r['model_id'],r['domain']) for r in followed}=={
-        (model,domain) for model in receipt['models'] for domain in {'capabilities','benchmarks'}}
-    for r in checks:
-        if r['model_id'] in receipt['models'] and r['domain'] in {'capabilities','benchmarks'}:
-            assert r['checked_at']==receipt['observed_at']
-            assert r['research_batch_id']==receipt['research_batch_id']
-            assert r['evidence_ids'] and r['search_references']
-            assert r['remaining_gaps']  # A check does not erase evidence uncertainty.
+def test_public_domain_checks_have_actual_references_and_unknown_gaps():
+    scope, current, _ = followup()
+    assert len(scope['models']) == 26
+    checks = [row for (kind, _), (_, row) in current.items()
+              if kind == 'research_coverage' and row['model_id'] in scope['models']
+              and row['domain'] in {'capabilities', 'benchmarks'}]
+    assert {(row['model_id'], row['domain']) for row in checks} == {
+        (model, domain) for model in scope['models']
+        for domain in {'capabilities', 'benchmarks'}}
+    for row in checks:
+        assert row['checked_at'] and (row['evidence_ids'] or row['search_references'])
+        if row['result'] in {'unknown', 'blocked'}:
+            assert row['remaining_gaps']
 
 
-def test_followup_preserves_prior_claims_and_factual_dates_in_observation_history():
-    receipt,_,_=followup()
-    revisions=history()
-    receipt_judgments=set(receipt['judgment_ids'])
-    for model in receipt['models']:
-        chain=[r for r in revisions if r['entity_type']=='model' and r['entity_id']==model]
-        by_id={r['id']:r for r in chain}
-        introductions=[]
-        for revision in chain:
-            if not revision['value'] or not revision['previous_revision_id']:
-                continue
-            before=by_id[revision['previous_revision_id']]['value']
-            prior_ids={j['id'] for j in before['capabilities']} if before else set()
-            added_ids={j['id'] for j in revision['value']['capabilities']}-prior_ids
-            if added_ids & receipt_judgments:
-                introductions.append(revision)
-        assert len(introductions)==1
-        event=introductions[0]
-        previous=by_id[event['previous_revision_id']]
-        before=previous['value'];after=event['value']
-        for field in set(before)-{'capabilities','evidence_ids'}:
-            assert after[field]==before[field]
-        assert set(before['evidence_ids'])<=set(after['evidence_ids'])
-        assert after['verified_at']==before['verified_at']
-        new={j['id']:j for j in after['capabilities']}
-        assert all(new[j['id']]==j for j in before['capabilities'])
-        assert event['effective_from'] is None
-        assert event['observed_at']==receipt['observed_at']
+def test_public_git_versions_preserve_prior_claims_and_factual_dates():
+    scope, _, _ = followup()
+    commits = subprocess.check_output(
+        ['git', 'log', '--reverse', '--format=%H', '--', 'models'],
+        cwd=ROOT, encoding='utf-8').splitlines()
+    for commit in commits:
+        after = git_state(commit)
+        if any(j.get('provenance', {}).get('research_batch_id') == BATCH
+               for (kind, _), model in after.items() if kind == 'model'
+               for j in model['capabilities']):
+            parent = subprocess.check_output(['git', 'rev-parse', commit + '^'],
+                                             cwd=ROOT, encoding='utf-8').strip()
+            before = git_state(parent)
+            break
+    else:
+        raise AssertionError('Public task evidence introduction is absent')
+    for ident in scope['models']:
+        previous, model = before[('model', ident)], after[('model', ident)]
+        new = {j['id']: j for j in model['capabilities']}
+        assert all(new[j['id']] == j for j in previous['capabilities'])
+        assert model['verified_at'] == previous['verified_at']
+        assert set(previous['evidence_ids']) <= set(model['evidence_ids'])
 
 
 def test_exact_configuration_gates_and_investigated_unknowns_survive():

@@ -7,16 +7,23 @@ import tarfile
 import yaml
 from tools.knowledge import ROOT
 
-# Last committed full journal, used only to read pre-migration receipt boundaries.
-LEGACY_COMMIT = '11611137dae2f0b5cf1874e9d862f32a6058a3b6'
-PRODUCT_ARCHIVE_COMMIT = 'ce93efb4741873cb6ac04167376d3b1a07779d60'
+def first_file_commit(path, root=ROOT):
+    """Find public provenance by path, without depending on pre-rewrite SHAs."""
+    commits = subprocess.check_output(
+        ['git', 'log', '--reverse', '--diff-filter=A', '--format=%H', '--', path],
+        cwd=root, encoding='utf-8').splitlines()
+    if not commits:
+        raise ValueError('Public provenance file is absent from this history: ' + path)
+    return commits[0]
 def git_bytes(commit, path, root=ROOT):
     if not re.fullmatch(r'[a-f0-9]{7,40}', commit):
         raise ValueError('A pinned Git commit is required')
     return subprocess.check_output(['git', 'show', f'{commit}:{path}'], cwd=root)
 
 @lru_cache(maxsize=32)
-def legacy_revisions(root=ROOT, commit=LEGACY_COMMIT):
+def legacy_revisions(root=ROOT, commit=None):
+    if commit is None:
+        raise ValueError('Legacy work receipts require an explicit private archive commit')
     return yaml.load(git_bytes(commit, 'history/revisions.yaml', root),
                      Loader=getattr(yaml, 'CSafeLoader', yaml.SafeLoader))['records']
 

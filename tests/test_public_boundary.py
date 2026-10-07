@@ -13,6 +13,9 @@ from tools.public_boundary import private_work_path, public_files, tracked_work_
     'decisions/0001-working-process.md', '.local/research/receipt.yaml',
     'docs/working/handoff.md', 'docs/package-workflow.md', 'MAINTENANCE.md',
     'data/.codex/session.json',
+    'history/revisions.yaml', 'history/research/input.json',
+    'data/research-runs.yaml', 'data/maintenance-passes.md',
+    'research/maintenance-timing.yaml', 'docs/RESEARCH_AND_MCP_PLAN.md',
 ])
 def test_private_working_paths_are_reserved(path):
     assert private_work_path(path)
@@ -23,6 +26,9 @@ def test_public_application_and_evidence_remain_available():
     for path in ['streamlit_app.py', 'data/pricing.yaml', 'methodology.md',
                  'tools/validate.py', 'tests/test_cost.py', 'docs/change-tracking.md']:
         assert not private_work_path(path)
+    assert not private_work_path('research/coverage.md')
+    assert not private_work_path('research/coverage-gaps.yaml')
+    assert not private_work_path('history/migrations/2026-10-07-capabilities.yaml')
 
 
 def test_public_export_does_not_read_local_instructions(tmp_path):

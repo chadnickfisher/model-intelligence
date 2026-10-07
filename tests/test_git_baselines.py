@@ -99,15 +99,27 @@ def test_git_maintenance_carry_forward_requires_the_declared_commit():
     run['carry_forward'][0]['revision_id']='git-'+'c'*40
     assert any('commit differs' in e for e in pass_errors(run,state,state,None))
 
-def test_legacy_receipt_retains_its_own_evidence_boundary_without_live_journal():
-    current={k:r for k,(_,r) in canonical().items()}
-    from tools.git_baselines import PRODUCT_ARCHIVE_COMMIT
-    run=git_state(PRODUCT_ARCHIVE_COMMIT)[('maintenance_pass','maintenance-pass-pilot-2026-10-07-discovery')]
-    _,evidence,_=receipt_states(run,'maintenance_pass',current)
-    key=('access','access-ac968b718918b9b3')
-    assert evidence[key]['billing_class']=='unknown'
-    assert current[key]['billing_class']=='metered_api'
-    assert not (ROOT/'history/revisions.yaml').exists()
+def test_legacy_receipt_boundary_uses_only_a_synthetic_archive(tmp_path):
+    small_repo(tmp_path)
+    row = {'id': 'revision-base', 'entity_type': 'access', 'entity_id': 'route-example',
+           'value': {'id': 'route-example', 'billing_class': 'unknown'}}
+    write(tmp_path/'history/revisions.yaml', {'records': [row]})
+    base = commit(tmp_path)
+    run = {'id': 'maintenance-pass-synthetic', 'base_commit': base,
+           'baseline_revision_id': 'revision-base'}
+    write(tmp_path/'data/maintenance-passes.yaml', {'records': [run]})
+    write(tmp_path/'history/revisions.yaml', {'records': [row,
+          {'id': 'revision-receipt', 'entity_type': 'maintenance_pass',
+           'entity_id': run['id'], 'value': run}]})
+    frozen = commit(tmp_path)
+    write(tmp_path/'data/access.yaml', {'records': [
+          {'id': 'route-example', 'billing_class': 'metered_api'}]})
+    current = {key: value for key, (_, value) in canonical(tmp_path).items()}
+    _, evidence, _ = receipt_states({**run, 'evidence_commit': frozen},
+                                   'maintenance_pass', current, tmp_path)
+    assert evidence[('access', 'route-example')]['billing_class'] == 'unknown'
+    assert current[('access', 'route-example')]['billing_class'] == 'metered_api'
+
 
 def test_haiku_prompt_price_threshold_is_per_request_and_uses_exact_offer():
     state=canonical()
