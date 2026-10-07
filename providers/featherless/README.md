@@ -27,7 +27,7 @@ Verified: 2026-10-07
 
 ## Privacy data use
 
-- Not established in this baseline.
+- Provider pricing page states prompts and completions are never stored; metadata, training and legal-exception scope are not specified there.
 
 ## Notes
 

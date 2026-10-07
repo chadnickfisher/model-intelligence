@@ -1,7 +1,7 @@
 # North Small Translate
 
-**Creator:** Cohere · **Family:** North Translate · **Status:** unknown
-**Verified:** 2026-10-06 · **Release:** Unknown
+**Creator:** Cohere · **Family:** North Translate · **Status:** active
+**Verified:** 2026-10-06 · **Release:** 2026-09-10
 
 [Canonical data](profile.yaml) · [Methodology](../../../methodology.md) · [Catalog](../../../data/models.md)
 
@@ -55,12 +55,12 @@ Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unr
 
 | Field | Recorded value |
 |---|---|
-| architecture | Unknown / not established |
-| parameters | Unknown / not established |
+| architecture | decoder-only sparse MoE Transformer |
+| parameters | total billion: 218; active billion: 25 |
 | context window | 16000 |
 | maximum output | 16000 |
 | modalities | input: text; output: translated text |
-| language support | Unknown / not established |
+| language support | 50 |
 
 Specifications and provenance are qualified in [canonical data](profile.yaml). Published limits do not guarantee effective retrieval or local memory feasibility.
 

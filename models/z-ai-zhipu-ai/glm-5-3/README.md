@@ -78,7 +78,7 @@ Evidence notes: Confidence concerns this bounded claim, not a capability score.
 | architecture | MoE with DeepSeek-style sparse attention; same base model as GLM5.2, newer post-training |
 | parameters | total billion: 753; active billion: 40; scope: 753B HF serialized artifact, 40B rounded active from independent catalog; runtime maintainer says ~743B/39B. Preserve discrepancy.; exact parameter count: Unknown / not established |
 | context window | native tokens: 1000000; extended tokens: Unknown / not established; max output tokens: Unknown / not established; notes: Input plus generated output share capacity. Endpoint limits can differ. |
-| maximum output | Unknown / not established |
+| maximum output | 128K tokens |
 | modalities | input: text; output: text |
 | language support | supported: Unknown / not established; notes: Exact supported-language list not verified in this bounded pass. |
 

@@ -9,7 +9,9 @@ access_methods: []
 geographic_availability: []
 rate_limits: []
 caching_batching: []
-privacy_data_use: []
+privacy_data_use:
+- Provider pricing page states prompts and completions are never stored; metadata, training and legal-exception
+  scope are not specified there.
 reliability: []
 model_ids:
 - phi-4-mini-instruct

@@ -6,7 +6,7 @@ identity:
   creator: ElevenLabs
   family: Eleven
   version: '4'
-  release_date: null
+  release_date: '2026-09-28'
   latest_meaningful_update: null
   status: active
   model_types:
@@ -88,6 +88,13 @@ additional_specifications:
     evidence_ids:
     - src-58f6a44d1374
     - src-bcc14c31357b
+  maximum_input_characters:
+    value: 10000
+    status: documented
+    conditions:
+    - Text to Dialogue API; character input limit, not token context or guaranteed audio duration.
+    evidence_ids:
+    - src-58f6a44d1374
 licensing:
   name: commercial service terms and voice-rights restrictions
   commercial_use: null
@@ -173,6 +180,7 @@ evidence_ids:
 - src-bcc14c31357b
 - src-7c9b9d269f79
 - src-3351565d6f38
+- src-f98c5c7dbe17
 notes: []
 limitations:
 - Voice likeness/consent rights are separate from technical cloning capability.

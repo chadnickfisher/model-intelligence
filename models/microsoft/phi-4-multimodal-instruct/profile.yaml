@@ -73,15 +73,46 @@ specifications:
     - src-99b21e349ac9
   language_support:
     value:
-      supported: null
-      notes: Text and speech coverage differ; exact modality-specific lists were not fully verified.
+      text:
+      - Arabic
+      - Chinese
+      - Czech
+      - Danish
+      - Dutch
+      - English
+      - Finnish
+      - French
+      - German
+      - Hebrew
+      - Hungarian
+      - Italian
+      - Japanese
+      - Korean
+      - Norwegian
+      - Polish
+      - Portuguese
+      - Russian
+      - Spanish
+      - Swedish
+      - Thai
+      - Turkish
+      - Ukrainian
+      vision:
+      - English
+      audio:
+      - English
+      - Chinese
+      - German
+      - French
+      - Italian
+      - Japanese
+      - Spanish
+      - Portuguese
     status: documented
-    conditions: []
+    conditions:
+    - Supported languages differ by modality; noise and other languages may reduce speech performance.
     evidence_ids:
-    - src-3c2db7ec3521
     - src-29885c43e537
-    - src-2a442166513f
-    - src-99b21e349ac9
 additional_specifications:
   weights:
     value:
@@ -171,7 +202,7 @@ capabilities:
   assessment: conditional
   scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Multimodal adds image and audio input to a small text-output model.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-29885c43e537
   contradictory_evidence_ids: []
@@ -180,7 +211,9 @@ capabilities:
   known_failure_modes:
   - Speech-language coverage differs from text; long-session drift and misleading sensitive voice-attribute
     inferences.
-  evidence_notes: []
+  evidence_notes:
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:

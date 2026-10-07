@@ -112,7 +112,7 @@ capabilities:
   assessment: conditional
   scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: Consider when reasoning and tools must operate in a realtime speech session.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-cf6a8843c8fd
   contradictory_evidence_ids: []
@@ -127,6 +127,8 @@ capabilities:
   - 'Observation obs-d95f95883e10: Consider when reasoning and tools must operate in a realtime speech session.'
   - 'Potential risk (not a measured failure): Recognition errors in identifiers; latency-sensitive turn-taking;
     tool error recovery.'
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:

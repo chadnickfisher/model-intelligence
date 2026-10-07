@@ -188,7 +188,7 @@ capabilities:
   assessment: conditional
   scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: Useful specialist option; test Omni too for new general video workflows.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - obs-a1dcd03b9809
   contradictory_evidence_ids:
@@ -204,6 +204,8 @@ capabilities:
     blocks and variable latency occur.'
   - 'Observation obs-6dfa41ffcfec: Google now recommends Omni as default video option, reserving Veo for particular
     controls/legacy integration.'
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:

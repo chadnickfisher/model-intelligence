@@ -6,10 +6,18 @@ roles:
 - inference-provider
 api_compatibility: []
 access_methods: []
-geographic_availability: []
+geographic_availability:
+- Global endpoint has no specific inference-location commitment. EU and US regional endpoints carry a premium;
+  eligible models vary. EU table includes EU/EFTA datacenters.
+- Regional processing does not regionalize all metadata. Stateful Agents, Batch and Files are unavailable on
+  regional endpoints; only function calling is supported as a regional tool.
 rate_limits: []
 caching_batching: []
-privacy_data_use: []
+privacy_data_use:
+- Approved paid-plan ZDR covers supported stateless API calls across eligible models, excluding Labs. It is
+  separate from training opt-out.
+- Agents, Batch files, Conversations, Libraries, Files, Vibe Work and Chat remain outside ZDR. Default retention
+  and training preferences require separate policy confirmation.
 reliability: []
 model_ids:
 - devstral-small-2
@@ -50,6 +58,8 @@ evidence_ids:
 - src-b17514a392bd
 - src-b0218078301d
 - src-ece7a0a55f7b
+- src-63e8828c958e
+- src-0e909cdd599f
 notes:
 - 'creator: Mistral AI'
 - 'url: https://docs.mistral.ai/models/'

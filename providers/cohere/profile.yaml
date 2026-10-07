@@ -9,18 +9,18 @@ api_compatibility: []
 access_methods:
 - API trial/production, Model Vault dedicated instances, cloud partners and self-hosting.
 geographic_availability:
-- '{"status": "partial", "summary": "Private deployment permits customer-controlled geography; direct
-  API residency unverified."}'
+- '{"status": "partial", "summary": "Private deployment permits customer-controlled geography; direct API residency
+  unverified."}'
 - not_exhaustively_verified
 rate_limits:
-- '{"status": "partial", "summary": "Trial 1,000 calls/month; Command A+ trial 20 RPM, production contact
-  sales. Newer chat production keys can remain trial-limited."}'
+- '{"status": "partial", "summary": "Trial 1,000 calls/month; Command A+ trial 20 RPM, production contact sales.
+  Newer chat production keys can remain trial-limited."}'
 caching_batching: []
 privacy_data_use:
-- Cohere SaaS prompts/generations can be opted out of training; logged content normally deleted after
-  30 days with legal, contract, abuse and training exceptions. Approved zero retention is separately arranged.
-- Cohere does not receive content in private/third-party cloud deployments; partner policies and support
-  exceptions must be checked separately.
+- Cohere SaaS prompts/generations can be opted out of training; logged content normally deleted after 30 days
+  with legal, contract, abuse and training exceptions. Approved zero retention is separately arranged.
+- Cohere does not receive content in private/third-party cloud deployments; partner policies and support exceptions
+  must be checked separately.
 reliability: []
 model_ids:
 - cohere-command-a-plus
@@ -37,6 +37,7 @@ price_ids:
 - price-providers-cohere-embed-5-pro-cohere-d310d3a8de69
 - price-c975f4bc740e679c
 - price-f8067e6f48410d1c
+- price-cohere-embed-5-pro-model-vault-medium
 access_ids:
 - access-2d68e2f9c2b0b599
 - access-31bbc0a780fbd60a
@@ -62,5 +63,4 @@ notes:
   use.'
 limitations:
 - No native API residency, guaranteed minimum throughput, exact Fast SLA or measured uptime established.
-- Current status page has no separate Embed 5 component; operational status does not establish incident
-  absence.
+- Current status page has no separate Embed 5 component; operational status does not establish incident absence.

@@ -4308,3 +4308,91 @@ records:
   - Exact serving provider, fallback, measurement date and per-task runs unknown.
   evidence_notes:
   - Original evaluator page inspected; incomplete exact setup keeps confidence low.
+- schema_version: '1.0'
+  id: benchmark-fb02bb28efaaac58
+  model_id: qwen3-8-27b
+  judgment_ids:
+  - judgment-159ca9252e0e8eff
+  benchmark:
+    name: BFCL
+    version: v4
+    metric: Non-Live Overall
+    unit: percent
+    direction: higher
+  value: 87.87
+  model_version: Qwen3.8-27B base
+  harness: BFCL fine-tune handler; vLLM ROCm qwen3_xml
+  effort: reasoning enabled
+  provider_id: null
+  tools:
+  - BFCL function schemas
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-7e4211d2e766
+  conditions:
+  - BF16; 1 AMD MI300X 192GB; 262144 serving cap; temperature 0.001; 16 threads; seed 300.
+  limitations:
+  - 'Single setup; no quantized comparison or run variance. Refusal detection: 240 items.'
+  evidence_notes:
+  - Adapter-trained variants are separate; their refusal collapse is not attributed to base weights.
+- schema_version: '1.0'
+  id: benchmark-54ad23dc188cc63b
+  model_id: qwen3-8-27b
+  judgment_ids:
+  - judgment-159ca9252e0e8eff
+  benchmark:
+    name: BFCL
+    version: v4
+    metric: Refusal detection
+    unit: percent
+    direction: higher
+  value: 67.92
+  model_version: Qwen3.8-27B base
+  harness: BFCL fine-tune handler; vLLM ROCm qwen3_xml
+  effort: reasoning enabled
+  provider_id: null
+  tools:
+  - BFCL function schemas
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-7e4211d2e766
+  conditions:
+  - BF16; 1 AMD MI300X 192GB; 262144 serving cap; temperature 0.001; 16 threads; seed 300.
+  limitations:
+  - 'Single setup; no quantized comparison or run variance. Refusal detection: 240 items.'
+  evidence_notes:
+  - Adapter-trained variants are separate; their refusal collapse is not attributed to base weights.
+- schema_version: '1.0'
+  id: benchmark-78f871fa4b7d9ae6
+  model_id: llama-4-scout
+  judgment_ids:
+  - judgment-b0524d80aaeb6829
+  benchmark:
+    name: MaRV refactoring preference agreement
+    version: PROMISE 2026 study
+    metric: agreement with selected human refactoring preferences
+    unit: percent
+    direction: higher
+  value: 82.9
+  model_version: LLaMA 4 Scout; immutable revision unspecified
+  harness: Standardized low-context code-pair prompt through public API
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-3d8e22441afa
+  conditions:
+  - 121 of 146 selected Java pairs; 84 Extract Method and 62 Rename Variable.
+  - No explicit temperature or top_p; actual provider defaults and immutable checkpoint unspecified.
+  limitations:
+  - Filtered, human-approved examples; not detection of harmful refactorings.
+  - No repository-wide context or execution-based behavioral validation.
+  evidence_notes:
+  - Paper publication is not measurement date; preference agreement does not establish deep design judgment.

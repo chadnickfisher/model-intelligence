@@ -20,7 +20,7 @@ Verified: 2026-10-06
 
 ## Rate limits
 
-- {"status": "partial", "summary": "Current Studio quotas and Jamba2 API pricing unverified."}
+- Studio quotas remain account-specific and unverified. Jamba2 Mini API pricing and snapshot are separately documented in the model-qualified access/price records.
 
 ## Caching batching
 
@@ -46,4 +46,4 @@ Verified: 2026-10-06
 
 ## Sources
 
-[www.ai21.com](https://www.ai21.com/blog/introducing-jamba2/) · [www.ai21.com](https://www.ai21.com/jamba/) · [www.ai21.com](https://www.ai21.com/deployment/)
+[www.ai21.com](https://www.ai21.com/blog/introducing-jamba2/) · [www.ai21.com](https://www.ai21.com/jamba/) · [www.ai21.com](https://www.ai21.com/deployment/) · [https://docs.ai21.com/docs/jamba-foundation-models](https://docs.ai21.com/docs/jamba-foundation-models) · [https://www.ai21.com/pricing/](https://www.ai21.com/pricing/)

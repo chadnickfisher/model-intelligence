@@ -5,7 +5,7 @@ records:
   name: Jamba2 Mini
   creator: AI21 Labs
   family: Jamba
-  status: unknown
+  status: active
   local: available
   profile: models/ai21-labs/ai21-jamba2-mini/profile.yaml
   readme: models/ai21-labs/ai21-jamba2-mini/README.md
@@ -117,7 +117,7 @@ records:
   name: Embed 5 Pro
   creator: Cohere
   family: Embed
-  status: unknown
+  status: active
   local: unknown
   profile: models/cohere/cohere-embed-5-pro/profile.yaml
   readme: models/cohere/cohere-embed-5-pro/README.md
@@ -125,7 +125,7 @@ records:
   name: North Small Translate
   creator: Cohere
   family: North Translate
-  status: unknown
+  status: active
   local: available
   profile: models/cohere/cohere-north-small-translate/profile.yaml
   readme: models/cohere/cohere-north-small-translate/README.md

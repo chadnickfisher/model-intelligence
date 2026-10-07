@@ -15,7 +15,8 @@ Verified: 2026-10-06
 
 ## Geographic availability
 
-- Not established in this baseline.
+- Global endpoint has no specific inference-location commitment. EU and US regional endpoints carry a premium; eligible models vary. EU table includes EU/EFTA datacenters.
+- Regional processing does not regionalize all metadata. Stateful Agents, Batch and Files are unavailable on regional endpoints; only function calling is supported as a regional tool.
 
 ## Rate limits
 
@@ -27,7 +28,8 @@ Verified: 2026-10-06
 
 ## Privacy data use
 
-- Not established in this baseline.
+- Approved paid-plan ZDR covers supported stateless API calls across eligible models, excluding Labs. It is separate from training opt-out.
+- Agents, Batch files, Conversations, Libraries, Files, Vibe Work and Chat remain outside ZDR. Default retention and training preferences require separate policy confirmation.
 
 ## Notes
 
@@ -47,4 +49,4 @@ Verified: 2026-10-06
 
 ## Sources
 
-[docs.mistral.ai](https://docs.mistral.ai/models/) · [Mistral standard pricing](https://docs.mistral.ai/inference/pricing) · [mistral-small-2603 model page](https://docs.mistral.ai/models/mistral-small-4-0-26-03) · [mistral-medium-3-5 model page](https://docs.mistral.ai/models/mistral-medium-3-5-26-04)
+[docs.mistral.ai](https://docs.mistral.ai/models/) · [Mistral standard pricing](https://docs.mistral.ai/inference/pricing) · [mistral-small-2603 model page](https://docs.mistral.ai/models/mistral-small-4-0-26-03) · [mistral-medium-3-5 model page](https://docs.mistral.ai/models/mistral-medium-3-5-26-04) · [Mistral regional inference](https://docs.mistral.ai/inference/regional-inference) · [Mistral zero data retention](https://docs.mistral.ai/admin/monitor-comply/zero-data-retention)

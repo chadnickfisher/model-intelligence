@@ -7,7 +7,7 @@
 
 ## Task judgments
 
-### Multilingual visual chat (medium confidence)
+### Multilingual visual chat (low confidence)
 
 Established downloadable option for image QA and multilingual chat when custom terms fit.
 
@@ -26,6 +26,8 @@ Failure modes / limitations: Official instruction benchmarks used BF16, so quant
 Supporting sources: [Llama 4 Scout / Maverick model card](https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct) · [Llama 4 Maverick official card](https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct)
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented interface support alone is not task quality.
 
 ### Coding.repository_work (low confidence)
 

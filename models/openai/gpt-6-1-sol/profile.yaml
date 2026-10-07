@@ -200,7 +200,7 @@ capabilities:
   assessment: conditional
   scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Improved but requires checking sources and tool failures.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-f2dca02215ef
   contradictory_evidence_ids: []
@@ -214,6 +214,8 @@ capabilities:
   - 'contradictory evidence: This is a selected error-inducing set, not ordinary-use prevalence.'
   - 'Observation obs-c5c416a3125b: Improved but requires checking sources and tool failures.'
   - 'Potential risk (not a measured failure): Undisclosed search failure remains possible; fabricated certainty.'
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:

@@ -39,13 +39,13 @@ specifications:
     - src-d493892e40d2
     - src-5535da041415
   maximum_output:
-    value: null
-    status: unknown
-    conditions: []
+    value: 1000000
+    status: documented
+    conditions:
+    - Announced expansion from 64K output tokens; restricted rollout and exact public endpoint remain unresolved.
+    - Output allowance does not establish input context capacity.
     evidence_ids:
     - src-6381db252dee
-    - src-d493892e40d2
-    - src-5535da041415
   modalities:
     value:
       input:

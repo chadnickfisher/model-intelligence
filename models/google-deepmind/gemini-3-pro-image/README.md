@@ -94,6 +94,7 @@ Local conditions: Not established in this pass
 
 - Flex/Priority availability: pricing page lists rates but model capability page says unsupported.
 - Current model-card token-limit reconciliation
+- Older model card reports a November 2025 release; the carried May 2026 catalog date is not independently reconciled to an immutable checkpoint.
 
 ## Recorded price offers
 

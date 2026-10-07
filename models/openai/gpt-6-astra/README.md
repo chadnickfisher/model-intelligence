@@ -29,7 +29,7 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: supporting evidence: AA Terminal-Bench4.0: high54%, max59%; AutomationBench-AA high67%, max68%.; contradictory evidence: Higher effort is not uniformly better: AA-Omniscience high44 versus max43; GDP.pdf31% for both.; Observation obs-a91fd388dc88: Strong candidate when difficult end-to-end work justifies latency and token cost.; Potential risk (not a measured failure): Incorrect or out-of-scope actions remain possible; production safety monitors can stop legitimate work.
 
-### Scientific research (medium confidence)
+### Scientific research (low confidence)
 
 A strong escalation model for hard scientific workflows.
 
@@ -49,7 +49,7 @@ Supporting sources: [Introducing GPT-6.1 Sol](https://openai.com/index/introduci
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: supporting evidence: OpenAI reports68.1% on Terminal-Bench Science0.1 in the Sol comparison.; contradictory evidence: Substantial residual failures; vendor-run setting and benchmark version affect results.; Observation obs-8eab532ce0f9: A strong escalation model for hard scientific workflows.; Potential risk (not a measured failure): Confident wrong derivations or incomplete experiments require independent verification.
+Evidence notes: supporting evidence: OpenAI reports68.1% on Terminal-Bench Science0.1 in the Sol comparison.; contradictory evidence: Substantial residual failures; vendor-run setting and benchmark version affect results.; Observation obs-8eab532ce0f9: A strong escalation model for hard scientific workflows.; Potential risk (not a measured failure): Confident wrong derivations or incomplete experiments require independent verification.; Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented interface support alone is not task quality.
 
 ### Coding.debugging (medium confidence)
 

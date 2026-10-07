@@ -9,7 +9,12 @@ access_methods: []
 geographic_availability: []
 rate_limits: []
 caching_batching: []
-privacy_data_use: []
+privacy_data_use:
+- Unpaid Gemini API content may improve products and undergo human review. Paid-service content is not used
+  to improve products, but limited abuse/legal logging applies. EEA/Switzerland/UK receive paid data terms
+  for unpaid services.
+- Search and Maps grounding retain relevant prompts and outputs for 30 days. These Developer API rules do not
+  establish Vertex or consumer-product data handling.
 reliability: []
 model_ids:
 - gemini-3-1-pro-preview
@@ -84,6 +89,7 @@ evidence_ids:
 - src-2f3ae40d3bb7
 - src-3b883af04aa0
 - src-919b66e84fc3
+- src-a56c52f541d6
 notes:
 - 'pricing_source: g_price'
 limitations:

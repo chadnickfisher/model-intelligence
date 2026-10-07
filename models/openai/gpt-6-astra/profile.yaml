@@ -218,7 +218,7 @@ capabilities:
   assessment: conditional
   scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: A strong escalation model for hard scientific workflows.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-f2dca02215ef
   contradictory_evidence_ids: []
@@ -232,6 +232,8 @@ capabilities:
   - 'Observation obs-8eab532ce0f9: A strong escalation model for hard scientific workflows.'
   - 'Potential risk (not a measured failure): Confident wrong derivations or incomplete experiments require
     independent verification.'
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:

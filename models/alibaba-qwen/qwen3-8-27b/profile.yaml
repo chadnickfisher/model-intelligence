@@ -260,6 +260,32 @@ capabilities:
     research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate review_tests_frontend:frontend-arena-qwen3-8-27b; exact identity gates
       and original sources retained.
+- id: judgment-159ca9252e0e8eff
+  scope: direct
+  task_ids:
+  - agent.tool_use
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact base-checkpoint tool decisions in one reproducible setup.
+  judgment: Base Qwen3.8-27B supports tool-use evaluation with substantial refusal and multi-turn gaps; adapter
+    results do not transfer to the base.
+  confidence: low
+  supporting_evidence_ids:
+  - src-7e4211d2e766
+  contradictory_evidence_ids: []
+  conditions:
+  - BF16, one AMD MI300X 192GB; vLLM ROCm, qwen3_xml parser, reasoning enabled, temperature 0.001, seed 300.
+  known_failure_modes:
+  - Aggregate function-calling accuracy hides refusal and missing-parameter weaknesses.
+  evidence_notes:
+  - One hardware configuration and seed; measurement date and immutable base revision not pinned.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-broader-2026-10-07
+    method: Original public BFCL setup and base-checkpoint results inspected; derivative adapter measurements
+      kept separate.
 performance_characteristics: []
 access_ids:
 - access-190700cff4019fb5

@@ -192,7 +192,7 @@ capabilities:
   assessment: conditional
   scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Mini is suitable to evaluate for small, bounded instruction and simple coding tasks.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-147450d232b3
   contradictory_evidence_ids:
@@ -201,7 +201,9 @@ capabilities:
   - 23 supported text languages; verify APIs beyond common Python packages.
   known_failure_modes:
   - Card reports function-name/URL hallucination, long-chat drift and multilingual safety gaps.
-  evidence_notes: []
+  evidence_notes:
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:

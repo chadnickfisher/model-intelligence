@@ -7,7 +7,7 @@
 
 ## Task judgments
 
-### Compact audio image understanding (medium confidence)
+### Compact audio image understanding (low confidence)
 
 Multimodal adds image and audio input to a small text-output model.
 
@@ -26,6 +26,8 @@ Failure modes / limitations: Speech-language coverage differs from text; long-se
 Supporting sources: [Phi-4 Multimodal official card](https://huggingface.co/microsoft/Phi-4-multimodal-instruct)
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented interface support alone is not task quality.
 
 ### Vision.question_answering (low confidence)
 
@@ -58,7 +60,7 @@ Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unr
 | context window | native tokens: 131072; extended tokens: Unknown / not established; max output tokens: Unknown / not established; notes: Input plus generated output share capacity. Endpoint limits can differ. |
 | maximum output | Unknown / not established |
 | modalities | input: text; image; audio; output: text |
-| language support | supported: Unknown / not established; notes: Text and speech coverage differ; exact modality-specific lists were not fully verified. |
+| language support | text: Arabic; Chinese; Czech; Danish; Dutch; English; Finnish; French; German; Hebrew; Hungarian; Italian; Japanese; Korean; Norwegian; Polish; Portuguese; Russian; Spanish; Swedish; Thai; Turkish; Ukrainian; vision: English; audio: English; Chinese; German; French; Italian; Japanese; Spanish; Portuguese |
 
 Specifications and provenance are qualified in [canonical data](profile.yaml). Published limits do not guarantee effective retrieval or local memory feasibility.
 

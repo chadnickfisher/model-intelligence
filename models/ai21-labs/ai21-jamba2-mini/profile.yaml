@@ -8,7 +8,7 @@ identity:
   version: 2 Mini
   release_date: '2026-01-08'
   latest_meaningful_update: null
-  status: unknown
+  status: active
   model_types:
   - language-model
 specifications:
@@ -20,19 +20,21 @@ specifications:
     - src-cd9a80108d1d
     - src-dc01b961c57f
   parameters:
-    value: null
-    status: unknown
+    value:
+      total_billion: 52
+      active_billion: 12
+    status: documented
     conditions: []
     evidence_ids:
-    - src-cd9a80108d1d
-    - src-dc01b961c57f
+    - src-1f54470e1412
+    - src-df6753e4eed5
   context_window:
-    value: null
-    status: unknown
+    value: 256K tokens
+    status: documented
     conditions: []
     evidence_ids:
-    - src-cd9a80108d1d
-    - src-dc01b961c57f
+    - src-1f54470e1412
+    - src-df6753e4eed5
   maximum_output:
     value: null
     status: unknown
@@ -74,12 +76,16 @@ additional_specifications:
     - src-cd9a80108d1d
     - src-dc01b961c57f
   api_alias:
-    value: null
-    status: unknown
-    conditions: []
+    value:
+      aliases:
+      - jamba-mini
+      - jamba-mini-2
+      current_snapshot: jamba-mini-2-2026-01
+    status: documented
+    conditions:
+    - Rolling aliases resolved on 2026-10-07; later resolution can change.
     evidence_ids:
-    - src-cd9a80108d1d
-    - src-dc01b961c57f
+    - src-df6753e4eed5
   weights:
     value: open
     status: documented
@@ -172,8 +178,8 @@ evidence_ids:
 - src-cd9a80108d1d
 - src-dc01b961c57f
 - src-1f54470e1412
+- src-df6753e4eed5
 notes: []
 limitations:
 - Do not inherit context size, pricing or license from Jamba1.5/1.6.
-- Public download release does not establish a currently available direct API alias.
 - Not evaluated here against newer open models.

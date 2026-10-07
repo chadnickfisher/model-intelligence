@@ -7,7 +7,7 @@
 
 ## Task judgments
 
-### Everyday image generation (medium confidence)
+### Everyday image generation (low confidence)
 
 Latency-oriented image generation choice.
 
@@ -27,7 +27,7 @@ Supporting sources: [Introducing ChatGPT Images 2.5](https://openai.com/index/in
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: supporting evidence: Vendor positions Sunburst for finer editing control and Flare for faster generation.; contradictory evidence: No independent model-specific head-to-head recovered in this bounded pass; equal token prices do not imply equal cost per image.; Observation obs-144443616836: Latency-oriented image generation choice.; Potential risk (not a measured failure): Inspect text, local edits and identity consistency; these checks are prudent risk controls, not measured failure rates.
+Evidence notes: supporting evidence: Vendor positions Sunburst for finer editing control and Flare for faster generation.; contradictory evidence: No independent model-specific head-to-head recovered in this bounded pass; equal token prices do not imply equal cost per image.; Observation obs-144443616836: Latency-oriented image generation choice.; Potential risk (not a measured failure): Inspect text, local edits and identity consistency; these checks are prudent risk controls, not measured failure rates.; Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented interface support alone is not task quality.
 
 ### Image.editing (low confidence)
 

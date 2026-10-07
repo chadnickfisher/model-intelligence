@@ -29,7 +29,7 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: supporting evidence: AA max: Terminal-Bench4.0 rises44% to56% versus GPT-6 Sol; GDP.pdf25% to31%.; contradictory evidence: SciCode declines58% to54%; AA-LCR84% to83%. Newer is not better on every task.; Observation obs-e5d2a15ea501: Useful first comparison against Astra for routine complex work.; Potential risk (not a measured failure): Long-context misses and task-specific coding regressions.
 
-### Factual answers and tool backed research (medium confidence)
+### Factual answers and tool backed research (low confidence)
 
 Improved but requires checking sources and tool failures.
 
@@ -49,7 +49,7 @@ Supporting sources: [Introducing GPT-6.1 Sol](https://openai.com/index/introduci
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: supporting evidence: OpenAI difficult-prompt factual error rate:7.7% versus11.4% for GPT-6 Sol at low effort.; contradictory evidence: This is a selected error-inducing set, not ordinary-use prevalence.; Observation obs-c5c416a3125b: Improved but requires checking sources and tool failures.; Potential risk (not a measured failure): Undisclosed search failure remains possible; fabricated certainty.
+Evidence notes: supporting evidence: OpenAI difficult-prompt factual error rate:7.7% versus11.4% for GPT-6 Sol at low effort.; contradictory evidence: This is a selected error-inducing set, not ordinary-use prevalence.; Observation obs-c5c416a3125b: Improved but requires checking sources and tool failures.; Potential risk (not a measured failure): Undisclosed search failure remains possible; fabricated certainty.; Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented interface support alone is not task quality.
 
 ### Coding.scoped_edit (low confidence)
 

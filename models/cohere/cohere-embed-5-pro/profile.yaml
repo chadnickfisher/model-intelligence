@@ -8,7 +8,7 @@ identity:
   version: 5 Pro
   release_date: '2026-09-30'
   latest_meaningful_update: null
-  status: unknown
+  status: active
   model_types:
   - specialist
 specifications:
@@ -31,11 +31,20 @@ specifications:
     evidence_ids:
     - src-9d4f7ae81230
   maximum_output:
-    value: null
-    status: unknown
-    conditions: []
+    value:
+      embedding_dimensions:
+      - 256
+      - 512
+      - 768
+      - 1024
+      - 1536
+      - 2048
+      default_dimensions: 2048
+    status: documented
+    conditions:
+    - Embedding vector dimensions, not generated text tokens.
     evidence_ids:
-    - src-9d4f7ae81230
+    - src-9b35fe262e17
   modalities:
     value:
       input:
@@ -98,13 +107,13 @@ capabilities:
 - id: judgment-0e6e2979fb965898
   scope: direct
   task_ids:
-  - context.retrieval
+  - knowledge.retrieval
   related_task_ids: []
   assessment: conditional
   scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: Promising quality-focused retrieval option based on vendor tests; independent reproduction not
     verified.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - obs-752ea46df2f7
   contradictory_evidence_ids: []
@@ -112,6 +121,8 @@ capabilities:
   known_failure_modes: []
   evidence_notes:
   - 'Observation obs-752ea46df2f7: Public evidence observation'
+  - Vendor evidence concerns ranking external candidates. Exact first-stage recall and independent reproduction
+    remain unresolved; vendor-heavy evidence limits confidence.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -123,7 +134,7 @@ capabilities:
 - id: judgment-d02c0c4f21657798
   scope: direct
   task_ids:
-  - context.retrieval
+  - knowledge.retrieval
   related_task_ids: []
   assessment: conditional
   scope_note: Task-specific source investigation; original migration bundles remain unchanged.
@@ -142,6 +153,8 @@ capabilities:
     confidence.'
   - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
     coverage ledger.
+  - Vendor evidence concerns ranking external candidates. Exact first-stage recall and independent reproduction
+    remain unresolved; vendor-heavy evidence limits confidence.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -159,8 +172,10 @@ price_ids:
 - price-2c7f6bbbc4244653
 - price-providers-cohere-embed-5-pro-cohere-516f45ff44b6
 - price-providers-cohere-embed-5-pro-cohere-d310d3a8de69
+- price-cohere-embed-5-pro-model-vault-medium
 evidence_ids:
 - src-9d4f7ae81230
+- src-9b35fe262e17
 notes: []
 limitations:
 - Retrieval ranking quality is corpus-dependent.

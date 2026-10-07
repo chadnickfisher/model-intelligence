@@ -9,13 +9,21 @@ access_methods: []
 geographic_availability: []
 rate_limits: []
 caching_batching: []
-privacy_data_use: []
+privacy_data_use:
+- International Model Studio API defaults retain prompts/responses up to 30 days, with legal/security exceptions;
+  stateful data persists until deleted. No foundation-model training without separate consent.
+- Enterprise-approved workspace ZDR applies only to supported models outside Mainland China. Unsupported-model
+  calls fall back to standard retention; playground, agent/RAG orchestration, Batch and stateful Responses
+  are excluded.
+- ZDR transient encrypted caching may last 24 hours. Flagged safety content can remain up to two years, and
+  severe-risk circumstances can suspend eligibility.
 reliability: []
 model_ids: []
 price_ids: []
 access_ids: []
 evidence_ids:
 - src-661daa73f91c
+- src-b597b820ad90
 notes:
 - Official HF Qwen3.8 card links this service. Some card hosted entries say coming soon; current per-model
   availability not assumed.

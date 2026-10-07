@@ -1,19 +1,19 @@
 # Embed 5 Pro
 
-**Creator:** Cohere · **Family:** Embed · **Status:** unknown
+**Creator:** Cohere · **Family:** Embed · **Status:** active
 **Verified:** 2026-10-06 · **Release:** 2026-09-30
 
 [Canonical data](profile.yaml) · [Methodology](../../../methodology.md) · [Catalog](../../../data/models.md)
 
 ## Task judgments
 
-### Complex document retrieval offline indexing (medium confidence)
+### Complex document retrieval offline indexing (low confidence)
 
 Promising quality-focused retrieval option based on vendor tests; independent reproduction not verified.
 
 Scope: direct / conditional. One task reference; conclusion remains conditional, not an ability score.
 
-Direct task IDs: context.retrieval
+Direct task IDs: knowledge.retrieval
 
 Related task IDs (navigation only): Not established in this pass
 
@@ -27,15 +27,15 @@ Supporting sources: [Introducing Embed 5](https://cohere.com/blog/embed-5)
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Observation obs-752ea46df2f7: Public evidence observation
+Evidence notes: Observation obs-752ea46df2f7: Public evidence observation; Vendor evidence concerns ranking external candidates. Exact first-stage recall and independent reproduction remain unresolved; vendor-heavy evidence limits confidence.
 
-### Context.retrieval (low confidence)
+### Knowledge.retrieval (low confidence)
 
 Vendor ViDoRe V3 results support ranking a fixed candidate set of parsed documents; first-stage retrieval recall over a full index remains unknown.
 
 Scope: direct / conditional. Task-specific source investigation; original migration bundles remain unchanged.
 
-Direct task IDs: context.retrieval
+Direct task IDs: knowledge.retrieval
 
 Related task IDs (navigation only): Not established in this pass
 
@@ -49,7 +49,7 @@ Supporting sources: [Introducing Embed 5](https://cohere.com/blog/embed-5)
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not confidence.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not confidence.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.; Vendor evidence concerns ranking external candidates. Exact first-stage recall and independent reproduction remain unresolved; vendor-heavy evidence limits confidence.
 
 ## Specifications
 
@@ -58,7 +58,7 @@ Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unr
 | architecture | Unknown / not established |
 | parameters | Unknown / not established |
 | context window | 128000 |
-| maximum output | Unknown / not established |
+| maximum output | embedding dimensions: 256; 512; 768; 1024; 1536; 2048; default dimensions: 2048 |
 | modalities | input: text; image; fused text+image; output: embedding |
 | language support | 100+ |
 
@@ -66,7 +66,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-4 recorded access route(s); 3 model-specific price record(s).
+4 recorded access route(s); 4 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -101,7 +101,8 @@ Local conditions: Not established in this pass
 |---|---|---|---|---|
 | cohere | Standard / current | input: 0.12 USD / per 1 million tokens; image_input: 0.4 USD / per 1 million tokens | Not established in this pass | 2026-10-07 |
 | cohere | GA / current | input: 0.12 USD / per 1M tokens | Not established in this pass | 2026-10-06 |
-| cohere | Small dedicated instance / current | compute: 3 USD / per instance hour | Not established in this pass | 2026-10-06 |
+| cohere | Small / current | capacity_hour: 3 USD / per instance hour; capacity_month: 2000 USD / per instance month | Cohere-managed dedicated capacity; Fixed/Flex agreements and instance sizing apply. Annual quotes not extracted. No per-token equivalence. | 2026-10-07 |
+| cohere | Medium / current | capacity_hour: 5 USD / per instance hour; capacity_month: 3250 USD / per instance month | Cohere-managed dedicated capacity; Fixed/Flex agreements and instance sizing apply. Annual quotes not extracted. No per-token equivalence. | 2026-10-07 |
 
 ## Recorded access routes
 
@@ -112,4 +113,4 @@ Local conditions: Not established in this pass
 
 ## Sources
 
-[Introducing Embed 5](https://cohere.com/blog/embed-5)
+[Introducing Embed 5](https://cohere.com/blog/embed-5) · [https://docs.cohere.com/docs/cohere-embed](https://docs.cohere.com/docs/cohere-embed)

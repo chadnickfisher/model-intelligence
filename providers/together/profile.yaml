@@ -44,6 +44,7 @@ price_ids:
 - price-providers-gpt-oss-120b-together-4cacbb083b92
 - price-providers-kimi-k3-together-210d7bb86dfc
 - price-providers-minimax-m3-together-53e1dc39589c
+- price-kimi-k3-together-observed-2026-10-07
 access_ids:
 - access-0c4e2c188162e5da
 - access-7f63bbf641609190

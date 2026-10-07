@@ -177,7 +177,7 @@ capabilities:
   assessment: conditional
   scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Established downloadable option for image QA and multilingual chat when custom terms fit.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-8cb15ff6ddd4
   - src-65471a2c7ad5
@@ -186,7 +186,9 @@ capabilities:
   - Twelve explicitly supported languages; image evaluation up to five images.
   known_failure_modes:
   - Official instruction benchmarks used BF16, so quantized equivalence is unproven.
-  evidence_notes: []
+  evidence_notes:
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -204,7 +206,7 @@ capabilities:
   scope_note: Scope needs review; the original claim does not establish a specific task ability.
   judgment: Scout’s 10M advertised capacity is not enough evidence to prefer it for difficult long-document
     reasoning.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-8cb15ff6ddd4
   contradictory_evidence_ids:
@@ -213,7 +215,9 @@ capabilities:
   - Test position sensitivity and retrieval on real documents.
   known_failure_modes:
   - Very large KV memory and incomplete long-context reasoning reliability.
-  evidence_notes: []
+  evidence_notes:
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -223,12 +227,13 @@ capabilities:
     original_position: 1
     history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - id: judgment-b0524d80aaeb6829
-  scope: direct
-  task_ids:
+  scope: unresolved
+  task_ids: []
+  related_task_ids:
   - coding.review
-  related_task_ids: []
-  assessment: conditional
-  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  assessment: warning
+  scope_note: Filtered refactoring preference evidence does not establish actionable defect review under the
+    task rubric.
   judgment: Can assist with low-context refactoring preference review; does not establish deep design judgment.
   confidence: low
   supporting_evidence_ids:
@@ -239,6 +244,8 @@ capabilities:
   - Named release matches; preserve source-specific provider, snapshot and precision limitations.
   known_failure_modes:
   - Style shortcuts, missing context and conservative ties.
+  - The filtered study contains human-approved refactorings; preference agreement is not sensitivity to harmful
+    changes or actionable defect detection.
   evidence_notes:
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'

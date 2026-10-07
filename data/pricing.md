@@ -96,7 +96,7 @@ Generated from canonical YAML. Units, route conditions and dates are essential.
 | Inference Providers | hugging-face | prepaid-credits / Free / current | included_compute_credit: 0.1 USD / monthly credit | 2026-10-06 |
 | all HF compute | hugging-face | prepaid-credits / PRO / Team or Enterprise per seat / current | included_compute_credit: 2 USD / monthly included credit | 2026-10-06 |
 | gpt-oss-120b | together | metered-api / standard displayed serverless / current | input: 0.15 USD / per 1M tokens; output: 0.6 USD / per 1M tokens | 2026-10-06 |
-| kimi-k3 | together | metered-api / standard displayed serverless / current | input: 2.7 USD / per 1M tokens; cached_input: 0.27 USD / per 1M tokens; output: 13.5 USD / per 1M tokens | 2026-10-06 |
+| kimi-k3 | together | metered-api / displayed website promotion / current | input: 2.7 USD / per 1M tokens; cached_input: 0.27 USD / per 1M tokens; output: 13.5 USD / per 1M tokens | 2026-10-07 |
 | minimax-m3 | together | metered-api / standard displayed serverless / current | input: 0.3 USD / per 1M tokens; cached_input: 0.06 USD / per 1M tokens; output: 1.2 USD / per 1M tokens | 2026-10-06 |
 | NVIDIA HGX H100 | together | metered-api / on-demand / current | compute: 5.49 USD / per GPU hour | 2026-10-06 |
 | OpenAI GPT OSS 120B | fireworks | metered-api / Standard / current | input: 0.15 USD / per 1M tokens; cached_input: 0.015 USD / per 1M tokens; output: 0.6 USD / per 1M tokens | 2026-10-06 |
@@ -110,12 +110,12 @@ Generated from canonical YAML. Units, route conditions and dates are essential.
 | Cohere Rerank 3.5 | aws-bedrock | metered-api / On-demand / current | queries: 2 USD / per 1,000 queries | 2026-10-06 |
 | cohere-embed-5-pro | cohere | metered-api / GA / current | input: 0.12 USD / per 1M tokens | 2026-10-06 |
 | cohere-embed-5-fast | cohere | metered-api / GA / current | input: 0.08 USD / per 1M tokens | 2026-10-06 |
-| cohere-embed-5-pro | cohere | metered-api / Small dedicated instance / current | compute: 3 USD / per instance hour | 2026-10-06 |
+| cohere-embed-5-pro | cohere | mixed / Small / current | capacity_hour: 3 USD / per instance hour; capacity_month: 2000 USD / per instance month | 2026-10-07 |
 | FLUX 3 Image | bfl | metered-api / 1k approximately 1 megapixel / current | generation: 0.048 USD / per image | 2026-10-06 |
 | bfl-flux3-video | bfl | metered-api / t2v/i2v full render HD / current | generation: 0.17 USD / per output second | 2026-10-06 |
 | bfl-flux3-video | bfl | metered-api / t2v/i2v full render UHD / current | generation: 0.8 USD / per output second | 2026-10-06 |
 | FLUX.2 [klein] 4B | bfl | metered-api / first megapixel / current | generation: 0.014 USD / per image | 2026-10-06 |
-| elevenlabs-eleven-v4 | elevenlabs | metered-api / Free / PayGo displayed / current | text: 0.022 USD / per 1,000 characters | 2026-10-06 |
+| elevenlabs-eleven-v4 | elevenlabs | metered-api / Free / PayGo displayed / current | text: 0.022 USD / per 1,000 characters | 2026-10-07 |
 | eleven_v4_turbo | elevenlabs | metered-api / Free / PayGo displayed / current | text: 0.011 USD / per 1,000 characters | 2026-10-06 |
 | ElevenAPI subscription | elevenlabs | subscription / Starter / current | subscription: 6 USD / per month; first_month_promo: 1 USD / per month | 2026-10-06 |
 | xai-grok-4-7 | opencode-zen | metered-api / prompt <=200k / current | input: 2 USD / per 1M tokens; cached_input: 0.5 USD / per 1M tokens; output: 6 USD / per 1M tokens | 2026-10-06 |
@@ -171,5 +171,7 @@ Generated from canonical YAML. Units, route conditions and dates are essential.
 | claude-haiku-5-5 | anthropic | metered-api / Standard / >100k / current | input: 0.5 USD / per 1 million tokens; output: 2.5 USD / per 1 million tokens; cached_input: 0.05 USD / per 1 million tokens; cache_write_5m: 0.625 USD / per 1 million tokens; cache_write_1h: 1 USD / per 1 million tokens | 2026-10-07 |
 | claude-haiku-5-5 | anthropic | metered-api / Batch / <=100k / current | input: 0.05 USD / per 1 million tokens; output: 0.25 USD / per 1 million tokens | 2026-10-07 |
 | claude-haiku-5-5 | anthropic | metered-api / Batch / >100k / current | input: 0.25 USD / per 1 million tokens; output: 1.25 USD / per 1 million tokens | 2026-10-07 |
+| kimi-k3 | together | metered-api / documented serverless base rate / current | input: 3 USD / per 1M tokens; cached_input: 0.3 USD / per 1M tokens; output: 15 USD / per 1M tokens | 2026-10-07 |
+| cohere-embed-5-pro | cohere | mixed / Medium / current | capacity_hour: 5 USD / per instance hour; capacity_month: 3250 USD / per instance month | 2026-10-07 |
 
 [Canonical records with evidence and all conditions](pricing.yaml)

@@ -9,7 +9,12 @@ access_methods: []
 geographic_availability: []
 rate_limits: []
 caching_batching: []
-privacy_data_use: []
+privacy_data_use:
+- Unpaid AI Studio content may improve products and undergo human review. Paid data terms apply with an active
+  associated Cloud Billing project or Workspace enterprise account; EEA/Switzerland/UK also receive paid data
+  terms.
+- Paid-service content is not used to improve products; limited abuse/legal logging and grounding exceptions
+  remain.
 reliability: []
 model_ids:
 - gemini-3-1-pro-preview
@@ -55,6 +60,7 @@ evidence_ids:
 - src-3b883af04aa0
 - src-6381db252dee
 - src-919b66e84fc3
+- src-a56c52f541d6
 notes:
 - Experimentation interface; does not establish consumer app subscription entitlement.
 limitations:

@@ -7,7 +7,7 @@
 
 ## Task judgments
 
-### Directed short shots requiring first last frame or extensions (medium confidence)
+### Directed short shots requiring first last frame or extensions (low confidence)
 
 Useful specialist option; test Omni too for new general video workflows.
 
@@ -27,7 +27,7 @@ Supporting sources: [Generate videos with Veo 3.1 in Gemini API](https://ai.goog
 
 Contradictory or limiting sources: [Generate videos with Veo 3.1 in Gemini API](https://ai.google.dev/gemini-api/docs/veo) · [Video generation in the Gemini API](https://ai.google.dev/gemini-api/docs/video)
 
-Evidence notes: task-conditioned synthesis; no inference runs performed; Observation obs-a1dcd03b9809: Native audio, frame controls, reference images and extension fit directed short cinematic shots.; Observation obs-7d1f6921bea0: Multi-video reasoning unsupported; non-English unevaluated; audio processing/safety blocks and variable latency occur.; Observation obs-6dfa41ffcfec: Google now recommends Omni as default video option, reserving Veo for particular controls/legacy integration.
+Evidence notes: task-conditioned synthesis; no inference runs performed; Observation obs-a1dcd03b9809: Native audio, frame controls, reference images and extension fit directed short cinematic shots.; Observation obs-7d1f6921bea0: Multi-video reasoning unsupported; non-English unevaluated; audio processing/safety blocks and variable latency occur.; Observation obs-6dfa41ffcfec: Google now recommends Omni as default video option, reserving Veo for particular controls/legacy integration.; Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented interface support alone is not task quality.
 
 ### Video.generation (low confidence)
 

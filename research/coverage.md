@@ -10,11 +10,11 @@ Observed 2026-10-07. This is an inventory date, not a fresh verification date fo
 
 - models: 54
 - providers and access products: 44
-- capability judgments: 187
+- capability judgments: 188
 - performance judgments: 13
-- price records: 167
+- price records: 169
 - access routes: 324
-- public sources: 642
+- public sources: 651
 - evidence observations: 55
 
 See [coverage gaps](coverage-gaps.yaml) for source-specific limitations and [contradictions](../evidence/contradictions.yaml) for unresolved differences. Counts indicate coverage, not quality or completeness.

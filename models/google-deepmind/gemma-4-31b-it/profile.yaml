@@ -207,7 +207,7 @@ capabilities:
   scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Useful open-weight candidate when deployment control matters; select variant against memory and
     quality requirements.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - obs-277108d396be
   - obs-984e3b3ac410
@@ -229,6 +229,8 @@ capabilities:
     the Flash services measured here.'
   - 'Observation obs-cdfc4938876f: Independent configuration-specific results show model size and thinking
     mode do not create a simple ranking.'
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:

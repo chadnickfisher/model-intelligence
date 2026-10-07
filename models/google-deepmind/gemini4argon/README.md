@@ -80,7 +80,7 @@ Evidence notes: Benchmark costs are not typical user costs or provider tariffs.
 | architecture | Unknown / not established |
 | parameters | Unknown / not established |
 | context window | Unknown / not established |
-| maximum output | Unknown / not established |
+| maximum output | 1000000 |
 | modalities | input: text; image; output: text |
 | language support | Unknown / not established |
 

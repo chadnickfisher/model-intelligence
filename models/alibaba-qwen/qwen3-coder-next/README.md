@@ -7,7 +7,7 @@
 
 ## Task judgments
 
-### Local repository editing (medium confidence)
+### Local repository editing (low confidence)
 
 Useful coding-specialist candidate where non-thinking responses and permissive licensing matter.
 
@@ -26,6 +26,8 @@ Failure modes / limitations: General knowledge/reasoning quality is not establis
 Supporting sources: [Qwen3-Coder-Next model card](https://huggingface.co/Qwen/Qwen3-Coder-Next) · [Qwen3-Coder-Next technical report](https://arxiv.org/abs/2603.00729)
 
 Contradictory or limiting sources: [Qwen3-Coder-Next independently profiled](https://artificialanalysis.ai/models/qwen3-coder-next)
+
+Evidence notes: Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented interface support alone is not task quality.
 
 ### Coding.debugging (low confidence)
 

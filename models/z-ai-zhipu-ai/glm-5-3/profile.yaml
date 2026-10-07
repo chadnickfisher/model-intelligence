@@ -52,14 +52,11 @@ specifications:
     - src-d1e7ac1dfe19
     - src-7e6c3dd9add1
   maximum_output:
-    value: null
-    status: unknown
-    conditions: []
+    value: 128K tokens
+    status: documented
+    conditions:
+    - Hosted Z.ai API documentation; does not set a universal local-weight decode limit.
     evidence_ids:
-    - src-dc71eaf3c8b8
-    - src-4424584ee706
-    - src-26ed078844ac
-    - src-d1e7ac1dfe19
     - src-7e6c3dd9add1
   modalities:
     value:

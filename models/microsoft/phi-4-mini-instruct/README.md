@@ -7,7 +7,7 @@
 
 ## Task judgments
 
-### Low memory instruction tasks (medium confidence)
+### Low memory instruction tasks (low confidence)
 
 Mini is suitable to evaluate for small, bounded instruction and simple coding tasks.
 
@@ -26,6 +26,8 @@ Failure modes / limitations: Card reports function-name/URL hallucination, long-
 Supporting sources: [Phi-4 Mini / Multimodal model card](https://huggingface.co/microsoft/Phi-4-mini-instruct)
 
 Contradictory or limiting sources: [Phi4 Mini catalog audit](https://artificialanalysis.ai/models/phi-4-mini)
+
+Evidence notes: Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented interface support alone is not task quality.
 
 ### Reasoning.math (low confidence)
 

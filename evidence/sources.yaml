@@ -7376,3 +7376,103 @@ records:
   - Public page inspected; unreported setup remains unknown.
   claim_scope:
   - Claude on azure-foundry
+- id: src-ba85b2f3bd1e
+  url: https://docs.cohere.com/v1/changelog/command-a-plus-05-2026
+  title: Command A+ release notes
+  publisher: Cohere
+  source_type: primary
+  published_at: '2026-05-20'
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Exact release, MoE parameter counts and supported input/output limits.
+  limitations:
+  - Hardware guidance and throughput comparisons are vendor claims.
+- id: src-f98c5c7dbe17
+  url: https://elevenlabs.io/docs/changelog/2026/9/28
+  title: September 28, 2026 changelog
+  publisher: ElevenLabs
+  source_type: primary
+  published_at: '2026-09-28'
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Eleven v4 availability and separate Turbo endpoint.
+  limitations:
+  - Release announcement does not establish cross-language speech accuracy.
+- id: src-616a4e4e2b6f
+  url: https://deploymentsafety.openai.com/gpt-live/change-log
+  title: GPT-Live system card corrected safety evaluations
+  publisher: OpenAI
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - August 4, 2026 correction of previously reported evaluation values.
+  limitations:
+  - Adversarial evaluation sets are not prevalence-weighted production traffic; documentation correction is
+    not a dated weight regression.
+- id: src-7e4211d2e766
+  url: https://github.com/Nicolas-Formenton/qwen3.8-27b-finetune-eval
+  title: Qwen3.8-27B base and fine-tune tool-use evaluation
+  publisher: Nicolas Formenton
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Base-checkpoint BFCL v4 results and reproducible serving configuration.
+  limitations:
+  - One BF16 hardware setup and seed; no quantized variance study. Fine-tuned derivatives are distinct models.
+- id: src-2aca780af5aa
+  url: https://developers.openai.com/api/docs/guides/your-data
+  title: OpenAI API data controls
+  publisher: OpenAI
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Exact service policy; model and feature eligibility require separate checks.
+  limitations:
+  - API rules are separate from consumer and subscription-product policies.
+- id: src-a56c52f541d6
+  url: https://ai.google.dev/gemini-api/terms
+  title: Gemini API additional terms
+  publisher: Google
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Exact service policy; model and feature eligibility require separate checks.
+  limitations:
+  - Paid/unpaid, geography, billing setup and feature exceptions change data handling.
+- id: src-63e8828c958e
+  url: https://docs.mistral.ai/inference/regional-inference
+  title: Mistral regional inference
+  publisher: Mistral AI
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Exact service policy; model and feature eligibility require separate checks.
+  limitations:
+  - Region availability varies by model; control-plane storage differs from inference.
+- id: src-0e909cdd599f
+  url: https://docs.mistral.ai/admin/monitor-comply/zero-data-retention
+  title: Mistral zero data retention
+  publisher: Mistral AI
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Exact service policy; model and feature eligibility require separate checks.
+  limitations:
+  - Eligible paid stateless endpoints; approval required and Labs excluded.
+- id: src-b597b820ad90
+  url: https://www.alibabacloud.com/help/en/model-studio/data-retention-policy
+  title: Alibaba Cloud Model Studio data retention
+  publisher: Alibaba Cloud
+  source_type: primary
+  published_at: '2026-10-01'
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Exact service policy; model and feature eligibility require separate checks.
+  limitations:
+  - International-site enterprise API scope; model coverage and safety exceptions apply.

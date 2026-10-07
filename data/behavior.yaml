@@ -8050,3 +8050,43 @@ records:
   notes:
   - Suggested mitigations are not independently measured recovery.
   - No exact-model dated practitioner regression/fix reproduction located.
+- schema_version: '1.0'
+  id: behavior-1cda4926622435ba
+  model_ids:
+  - gpt-live-1
+  provider_id: openai
+  product: GPT-Live system card
+  model_version: GPT-Live-1 with delegation
+  harness: Voice-native adversarial production and synthetic safety evaluations
+  effort: null
+  claim: OpenAI identified a safety-evaluation backend configuration mismatch and reran the final release setup
+    on August 4. Corrected scores differ from previously published values; this is an evaluation correction,
+    not evidence of a production weight regression.
+  change_type: harness_change
+  metrics:
+  - kind: quality
+    measurement: Production illicit behavior 0.97 to 0.95; synthetic sexual content 0.97 to 0.95 and gore 0.97
+      to 0.93.
+  observed_at: '2026-10-07'
+  reported_at: '2026-08-04'
+  effective_from: null
+  status: resolved
+  fact_status: acknowledged
+  confidence: medium
+  supporting_evidence_ids:
+  - src-616a4e4e2b6f
+  contradictory_evidence_ids: []
+  official_acknowledgment: OpenAI system-card Appendix A labels statistically significant corrected-score regressions;
+    all remain above its launch standards.
+  fix:
+    published_at: '2026-08-04'
+    version: null
+    summary: Published evaluation correction; no production-model fix inferred.
+    evidence_ids:
+    - src-616a4e4e2b6f
+    measured_improvement: null
+  conditions:
+  - Adversarial sets, not prevalence-weighted production rates.
+  - Delegation is part of the evaluated deployment.
+  notes:
+  - Model revision, evaluation configuration and measurement dates remain incompletely specified.

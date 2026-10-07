@@ -6,24 +6,26 @@ identity:
   creator: Cohere
   family: North Translate
   version: '1.0'
-  release_date: null
+  release_date: '2026-09-10'
   latest_meaningful_update: null
-  status: unknown
+  status: active
   model_types:
   - specialist
 specifications:
   architecture:
-    value: null
-    status: unknown
+    value: decoder-only sparse MoE Transformer
+    status: documented
     conditions: []
     evidence_ids:
-    - src-1dac5785145f
+    - src-425ce7e07108
   parameters:
-    value: null
-    status: unknown
+    value:
+      total_billion: 218
+      active_billion: 25
+    status: documented
     conditions: []
     evidence_ids:
-    - src-1dac5785145f
+    - src-425ce7e07108
   context_window:
     value: 16000
     status: documented
@@ -47,11 +49,12 @@ specifications:
     evidence_ids:
     - src-1dac5785145f
   language_support:
-    value: null
-    status: unknown
-    conditions: []
+    value: 50
+    status: documented
+    conditions:
+    - Listed translation languages; regional variants retained by the source.
     evidence_ids:
-    - src-1dac5785145f
+    - src-425ce7e07108
 additional_specifications:
   parameters_total_billion:
     value: 218

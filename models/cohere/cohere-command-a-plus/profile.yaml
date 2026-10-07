@@ -13,19 +13,20 @@ identity:
   - language-model
 specifications:
   architecture:
-    value: null
-    status: unknown
+    value: sparse Mixture-of-Experts
+    status: documented
     conditions: []
     evidence_ids:
+    - src-ba85b2f3bd1e
     - src-4b5fc50d9047
-    - src-7a929ac1ccc5
   parameters:
-    value: null
-    status: unknown
+    value:
+      total_billion: 218
+      active_billion: 25
+    status: documented
     conditions: []
     evidence_ids:
-    - src-4b5fc50d9047
-    - src-7a929ac1ccc5
+    - src-ba85b2f3bd1e
   context_window:
     value: 128000
     status: documented
@@ -236,6 +237,7 @@ price_ids:
 evidence_ids:
 - src-4b5fc50d9047
 - src-7a929ac1ccc5
+- src-ba85b2f3bd1e
 notes: []
 limitations:
 - API free-trial limits differ from paid production Model Vault.

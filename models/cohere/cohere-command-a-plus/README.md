@@ -99,8 +99,8 @@ Evidence notes: Launch/pre-release testing; older index revision and comparison 
 
 | Field | Recorded value |
 |---|---|
-| architecture | Unknown / not established |
-| parameters | Unknown / not established |
+| architecture | sparse Mixture-of-Experts |
+| parameters | total billion: 218; active billion: 25 |
 | context window | 128000 |
 | maximum output | 64000 |
 | modalities | input: text; image; output: text |
@@ -153,4 +153,4 @@ Local conditions: Not established in this pass
 
 ## Sources
 
-[docs.cohere.com](https://docs.cohere.com/docs/command-a-plus) · [artificialanalysis.ai](https://artificialanalysis.ai/articles/cohere-launches-open-weights-model-command-a-more-than-a-year-since-the-command-a-release)
+[docs.cohere.com](https://docs.cohere.com/docs/command-a-plus) · [artificialanalysis.ai](https://artificialanalysis.ai/articles/cohere-launches-open-weights-model-command-a-more-than-a-year-since-the-command-a-release) · [Command A+ release notes](https://docs.cohere.com/v1/changelog/command-a-plus-05-2026)

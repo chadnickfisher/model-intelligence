@@ -4,7 +4,7 @@ Generated navigation. Read canonical profiles for evidence, conditions, and date
 
 | Name | Creator | Status | Local weights |
 |---|---|---|---|
-| [Jamba2 Mini](../models/ai21-labs/ai21-jamba2-mini/README.md) | AI21 Labs | unknown | available |
+| [Jamba2 Mini](../models/ai21-labs/ai21-jamba2-mini/README.md) | AI21 Labs | active | available |
 | [Qwen3.5-9B](../models/alibaba-qwen/qwen3-5-9b/README.md) | Alibaba / Qwen | active | available |
 | [Qwen3.8-2.4T-A95B](../models/alibaba-qwen/qwen3-8-2-4t-a95b/README.md) | Alibaba / Qwen | active | available |
 | [Qwen3.8-27B](../models/alibaba-qwen/qwen3-8-27b/README.md) | Alibaba / Qwen | active | available |
@@ -18,8 +18,8 @@ Generated navigation. Read canonical profiles for evidence, conditions, and date
 | [FLUX 3 Video](../models/black-forest-labs/bfl-flux3-video/README.md) | Black Forest Labs | preview | unknown |
 | [Command A+](../models/cohere/cohere-command-a-plus/README.md) | Cohere | preview | available |
 | [Embed 5 Fast](../models/cohere/cohere-embed-5-fast/README.md) | Cohere | active | available |
-| [Embed 5 Pro](../models/cohere/cohere-embed-5-pro/README.md) | Cohere | unknown | unknown |
-| [North Small Translate](../models/cohere/cohere-north-small-translate/README.md) | Cohere | unknown | available |
+| [Embed 5 Pro](../models/cohere/cohere-embed-5-pro/README.md) | Cohere | active | unknown |
+| [North Small Translate](../models/cohere/cohere-north-small-translate/README.md) | Cohere | active | available |
 | [DeepSeek-V4.1-Flash](../models/deepseek/deepseek-v4-1-flash/README.md) | DeepSeek | active | available |
 | [DeepSeek-V4-Pro-0813](../models/deepseek/deepseek-v4-pro-0813/README.md) | DeepSeek | active | available |
 | [Eleven v4](../models/elevenlabs/elevenlabs-eleven-v4/README.md) | ElevenLabs | active | unavailable |

@@ -7,7 +7,7 @@
 
 ## Task judgments
 
-### Natural simultaneous listening and speaking (medium confidence)
+### Natural simultaneous listening and speaking (low confidence)
 
 Use for conversational flow with a separately configured reasoning backend.
 
@@ -27,7 +27,7 @@ Supporting sources: [gpt-live-1 model specifications](https://developers.openai.
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: supporting evidence: Official full-duplex design supports overlapping listen/speak and backend delegation.; contradictory evidence: Strong reasoning may come from the backend, not this voice model; no independent task evaluation recovered.; Observation obs-4797f27441f5: Use for conversational flow with a separately configured reasoning backend.; Potential risk (not a measured failure): Noise, interruptions and backend failure can still impair interaction; exact accuracy unknown.
+Evidence notes: supporting evidence: Official full-duplex design supports overlapping listen/speak and backend delegation.; contradictory evidence: Strong reasoning may come from the backend, not this voice model; no independent task evaluation recovered.; Observation obs-4797f27441f5: Use for conversational flow with a separately configured reasoning backend.; Potential risk (not a measured failure): Noise, interruptions and backend failure can still impair interaction; exact accuracy unknown.; Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented interface support alone is not task quality.
 
 ### Agent.tool_use (low confidence)
 

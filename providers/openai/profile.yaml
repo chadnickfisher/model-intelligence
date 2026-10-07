@@ -10,7 +10,12 @@ access_methods: []
 geographic_availability: []
 rate_limits: []
 caching_batching: []
-privacy_data_use: []
+privacy_data_use:
+- API content is not used for training unless opted in. Default abuse logs retain content up to 30 days, with
+  legal and severe-risk exceptions; application-state retention is endpoint-specific.
+- ZDR and Modified Abuse Monitoring require approval. Models may become ineligible for particular customers;
+  Private Safety Processing and Safety Retention have separate conditions. Consumer subscriptions use separate
+  policies.
 reliability: []
 model_ids:
 - gpt-6-1-sol
@@ -129,6 +134,7 @@ evidence_ids:
 - src-e06185c2c32b
 - src-b954960ad3a2
 - src-3930e8dede76
+- src-2aca780af5aa
 notes: []
 limitations:
 - Privacy/data-use details were not fully verified in this baseline.

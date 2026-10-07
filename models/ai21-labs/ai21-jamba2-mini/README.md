@@ -1,6 +1,6 @@
 # Jamba2 Mini
 
-**Creator:** AI21 Labs · **Family:** Jamba · **Status:** unknown
+**Creator:** AI21 Labs · **Family:** Jamba · **Status:** active
 **Verified:** 2026-10-06 · **Release:** 2026-01-08
 
 [Canonical data](profile.yaml) · [Methodology](../../../methodology.md) · [Catalog](../../../data/models.md)
@@ -56,8 +56,8 @@ Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unr
 | Field | Recorded value |
 |---|---|
 | architecture | hybrid SSM-Transformer MoE |
-| parameters | Unknown / not established |
-| context window | Unknown / not established |
+| parameters | total billion: 52; active billion: 12 |
+| context window | 256K tokens |
 | maximum output | Unknown / not established |
 | modalities | input: text; output: text |
 | language support | Unknown / not established |
@@ -93,7 +93,6 @@ Local conditions: Not established in this pass
 ## Gaps and caveats
 
 - Do not inherit context size, pricing or license from Jamba1.5/1.6.
-- Public download release does not establish a currently available direct API alias.
 - Not evaluated here against newer open models.
 
 ## Recorded price offers
@@ -109,4 +108,4 @@ Local conditions: Not established in this pass
 
 ## Sources
 
-[www.ai21.com](https://www.ai21.com/blog/introducing-jamba2/) · [www.ai21.com](https://www.ai21.com/jamba/) · [https://huggingface.co/ai21labs/AI21-Jamba2-Mini](https://huggingface.co/ai21labs/AI21-Jamba2-Mini)
+[www.ai21.com](https://www.ai21.com/blog/introducing-jamba2/) · [www.ai21.com](https://www.ai21.com/jamba/) · [https://huggingface.co/ai21labs/AI21-Jamba2-Mini](https://huggingface.co/ai21labs/AI21-Jamba2-Mini) · [https://docs.ai21.com/docs/jamba-foundation-models](https://docs.ai21.com/docs/jamba-foundation-models)

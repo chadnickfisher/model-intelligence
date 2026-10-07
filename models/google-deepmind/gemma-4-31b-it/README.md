@@ -7,7 +7,7 @@
 
 ## Task judgments
 
-### Locally controlled multimodal coding assistant (medium confidence)
+### Locally controlled multimodal coding assistant (low confidence)
 
 Useful open-weight candidate when deployment control matters; select variant against memory and quality requirements.
 
@@ -27,7 +27,7 @@ Supporting sources: [Google Gemma 4 31B instruction-tuned weights](https://huggi
 
 Contradictory or limiting sources: [Artificial Analysis gemma-4-31b](https://artificialanalysis.ai/models/gemma-4-31b) · [Gemma 4 configuration comparison](https://artificialanalysis.ai/models/comparisons/gemma-4-26b-a4b-vs-gemma-4-31b-non-reasoning)
 
-Evidence notes: task-conditioned synthesis; no inference runs performed; Observation obs-277108d396be: Open downloadable weights and Apache 2.0 allow controlled deployment and tuning.; Observation obs-984e3b3ac410: Provider evaluates 31B IT as capable in coding and visual reasoning; smaller variants trade quality for resources.; Observation obs-fcfd1534c8b5: Independent hosted 31B reasoning throughput is substantially lower than the Flash services measured here.; Observation obs-cdfc4938876f: Independent configuration-specific results show model size and thinking mode do not create a simple ranking.
+Evidence notes: task-conditioned synthesis; no inference runs performed; Observation obs-277108d396be: Open downloadable weights and Apache 2.0 allow controlled deployment and tuning.; Observation obs-984e3b3ac410: Provider evaluates 31B IT as capable in coding and visual reasoning; smaller variants trade quality for resources.; Observation obs-fcfd1534c8b5: Independent hosted 31B reasoning throughput is substantially lower than the Flash services measured here.; Observation obs-cdfc4938876f: Independent configuration-specific results show model size and thinking mode do not create a simple ranking.; Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented interface support alone is not task quality.
 
 ### Knowledge.extraction (low confidence)
 

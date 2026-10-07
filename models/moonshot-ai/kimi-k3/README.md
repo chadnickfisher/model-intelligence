@@ -152,7 +152,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-6 recorded access route(s); 3 model-specific price record(s).
+6 recorded access route(s); 4 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -186,7 +186,8 @@ Local conditions: Batch 1, short/moderate context unless otherwise stated.; Weig
 |---|---|---|---|---|
 | fireworks | Standard / current | input: 3 USD / per 1M tokens; cached_input: 0.3 USD / per 1M tokens; output: 15 USD / per 1M tokens | Not established in this pass | 2026-10-06 |
 | fireworks | Priority / current | input: 3.75 USD / per 1M tokens; cached_input: 0.375 USD / per 1M tokens; output: 18.75 USD / per 1M tokens | Not established in this pass | 2026-10-06 |
-| together | standard displayed serverless / current | input: 2.7 USD / per 1M tokens; cached_input: 0.27 USD / per 1M tokens; output: 13.5 USD / per 1M tokens | Not established in this pass | 2026-10-06 |
+| together | displayed website promotion / current | input: 2.7 USD / per 1M tokens; cached_input: 0.27 USD / per 1M tokens; output: 13.5 USD / per 1M tokens | Together pricing page displays a PROMO tariff; duration, eligibility and exact effective dates are not specified. API model documentation separately lists 3/0.30/15 USD per million input/cached-input/output tokens. | 2026-10-07 |
+| together | documented serverless base rate / current | input: 3 USD / per 1M tokens; cached_input: 0.3 USD / per 1M tokens; output: 15 USD / per 1M tokens | API documentation base tariff; website simultaneously displays a lower promotional offer. Exact account eligibility and promotion expiry are unresolved. | 2026-10-07 |
 
 ## Recorded access routes
 

@@ -3378,7 +3378,7 @@ records:
   notes: []
 - schema_version: '1.0'
   id: price-providers-kimi-k3-together-210d7bb86dfc
-  verified_at: '2026-10-06'
+  verified_at: '2026-10-07'
   model_id: kimi-k3
   provider_id: together
   product: Serverless
@@ -3386,7 +3386,7 @@ records:
   billing_method: metered-api
   status: current
   region: not selectable in serverless
-  tier: standard displayed serverless
+  tier: displayed website promotion
   effective_from: null
   effective_to: null
   rates:
@@ -3408,10 +3408,14 @@ records:
   included_usage: []
   reset_cadence: null
   overage: []
-  conditions: []
+  conditions:
+  - Together pricing page displays a PROMO tariff; duration, eligibility and exact effective dates are not
+    specified. API model documentation separately lists 3/0.30/15 USD per million input/cached-input/output
+    tokens.
   evidence_ids:
   - src-2e19eb496679
-  notes: []
+  notes:
+  - Both sources inspected 2026-10-07. Do not infer that documentation base rates retired the website promotion.
 - schema_version: '1.0'
   id: price-providers-minimax-m3-together-53e1dc39589c
   verified_at: '2026-10-06'
@@ -3830,27 +3834,36 @@ records:
   notes: []
 - schema_version: '1.0'
   id: price-providers-cohere-embed-5-pro-cohere-d310d3a8de69
-  verified_at: '2026-10-06'
+  verified_at: '2026-10-07'
   model_id: cohere-embed-5-pro
   provider_id: cohere
   product: Model Vault
   model_label: Embed 5 Pro
-  billing_method: metered-api
+  billing_method: mixed
   status: current
   region: not specified
-  tier: Small dedicated instance
+  tier: Small
   effective_from: null
   effective_to: null
   rates:
-  - metric: compute
+  - metric: capacity_hour
     amount: 3
     currency: USD
     unit: per instance hour
-    conditions: []
+    conditions:
+    - Alternative capacity tariffs; do not add.
+  - metric: capacity_month
+    amount: 2000
+    currency: USD
+    unit: per instance month
+    conditions:
+    - Alternative capacity tariffs; do not add.
   included_usage: []
   reset_cadence: null
   overage: []
-  conditions: []
+  conditions:
+  - Cohere-managed dedicated capacity; Fixed/Flex agreements and instance sizing apply. Annual quotes not extracted.
+    No per-token equivalence.
   evidence_ids:
   - src-73e03ec6d5cd
   notes: []
@@ -3965,7 +3978,7 @@ records:
     equivalence.
 - schema_version: '1.0'
   id: price-providers-elevenlabs-eleven-v4-elevenlabs-9a8e2a2f9216
-  verified_at: '2026-10-06'
+  verified_at: '2026-10-07'
   model_id: elevenlabs-eleven-v4
   provider_id: elevenlabs
   product: ElevenAPI
@@ -3986,7 +3999,9 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - excluded
+  - Displayed temporary $0.022 per 1000 characters promotion until October 12, 2026; undiscounted displayed
+    rate $0.08. Exact ending instant is not specified.
+  - Prices exclude taxes, levies and duties; subscription allowances remain separate.
   evidence_ids:
   - src-bcc14c31357b
   notes: []
@@ -6050,4 +6065,78 @@ records:
   effective_to: null
   evidence_ids:
   - src-50846cd1ff36
+  notes: []
+- schema_version: '1.0'
+  id: price-kimi-k3-together-observed-2026-10-07
+  verified_at: '2026-10-07'
+  model_id: kimi-k3
+  provider_id: together
+  product: Serverless
+  model_label: moonshotai/Kimi-K3
+  billing_method: metered-api
+  status: current
+  region: not selectable in serverless
+  tier: documented serverless base rate
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 3
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.3
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  - metric: output
+    amount: 15
+    currency: USD
+    unit: per 1M tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - API documentation base tariff; website simultaneously displays a lower promotional offer. Exact account
+    eligibility and promotion expiry are unresolved.
+  evidence_ids:
+  - src-b0caa8675a4a
+  notes:
+  - Observed 2026-10-07; service effective change date unknown. Both conditional offers retained.
+- schema_version: '1.0'
+  id: price-cohere-embed-5-pro-model-vault-medium
+  verified_at: '2026-10-07'
+  model_id: cohere-embed-5-pro
+  provider_id: cohere
+  product: Model Vault
+  model_label: Embed 5 Pro
+  billing_method: mixed
+  status: current
+  region: not specified
+  tier: Medium
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: capacity_hour
+    amount: 5
+    currency: USD
+    unit: per instance hour
+    conditions:
+    - Alternative capacity tariffs; do not add.
+  - metric: capacity_month
+    amount: 3250
+    currency: USD
+    unit: per instance month
+    conditions:
+    - Alternative capacity tariffs; do not add.
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Cohere-managed dedicated capacity; Fixed/Flex agreements and instance sizing apply. Annual quotes not extracted.
+    No per-token equivalence.
+  evidence_ids:
+  - src-73e03ec6d5cd
   notes: []

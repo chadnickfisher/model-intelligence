@@ -1,7 +1,7 @@
 # FLUX 3 Video
 
 **Creator:** Black Forest Labs · **Family:** FLUX · **Status:** preview
-**Verified:** 2026-10-06 · **Release:** Unknown
+**Verified:** 2026-10-06 · **Release:** 2026-07-23
 
 [Canonical data](profile.yaml) · [Methodology](../../../methodology.md) · [Catalog](../../../data/models.md)
 

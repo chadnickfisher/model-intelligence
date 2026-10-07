@@ -4,9 +4,9 @@ as_of: '2026-10-07'
 counts:
   models: 54
   providers_and_access_products: 44
-  capability_judgments: 187
+  capability_judgments: 188
   performance_judgments: 13
-  price_records: 167
+  price_records: 169
   access_routes: 324
-  public_sources: 642
+  public_sources: 651
   evidence_observations: 55

@@ -804,15 +804,17 @@ records:
   - src-9d4f7ae81230
 - schema_version: '1.0'
   id: release-cohere-north-small-translate
-  verified_at: '2026-10-06'
+  verified_at: '2026-10-07'
   model_id: cohere-north-small-translate
   model_label: North Small Translate
   provider_id: null
   event_type: release
-  event_date: null
-  summary: Initial baseline records North Small Translate as unknown. Release date is unknown where null.
+  event_date: '2026-09-10'
+  summary: North Small Translate open-weight research release; noncommercial terms and separate commercial
+    arrangements apply.
   evidence_ids:
-  - src-1dac5785145f
+  - src-ce6b8a6b961e
+  - src-425ce7e07108
 - schema_version: '1.0'
   id: release-ai21-jamba2-mini
   verified_at: '2026-10-06'
@@ -827,28 +829,26 @@ records:
   - src-dc01b961c57f
 - schema_version: '1.0'
   id: release-bfl-flux3-video
-  verified_at: '2026-10-06'
+  verified_at: '2026-10-07'
   model_id: bfl-flux3-video
   model_label: FLUX 3 Video
   provider_id: null
   event_type: preview-or-announcement
-  event_date: null
-  summary: Initial baseline records FLUX 3 Video as preview. Release date is unknown where null.
+  event_date: '2026-07-23'
+  summary: FLUX.3 early-access announcement; exact current production-checkpoint quality remains unresolved.
   evidence_ids:
-  - src-57a05c45a0b1
-  - src-752c7dd560da
+  - src-1c251cf2a1e7
 - schema_version: '1.0'
   id: release-elevenlabs-eleven-v4
-  verified_at: '2026-10-06'
+  verified_at: '2026-10-07'
   model_id: elevenlabs-eleven-v4
   model_label: Eleven v4
   provider_id: null
   event_type: release
-  event_date: null
-  summary: Initial baseline records Eleven v4 as active. Release date is unknown where null.
+  event_date: '2026-09-28'
+  summary: Eleven v4 released for Text to Dialogue; v4 Turbo is a separate realtime variant.
   evidence_ids:
-  - src-58f6a44d1374
-  - src-bcc14c31357b
+  - src-f98c5c7dbe17
 - schema_version: '1.0'
   id: release-claude-haiku-5-5
   verified_at: '2026-10-07'

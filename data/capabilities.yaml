@@ -302,6 +302,34 @@ records:
     research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate review_tests_frontend:frontend-arena-qwen3-8-27b; exact identity gates
       and original sources retained.
+- model_id: qwen3-8-27b
+  profile: models/alibaba-qwen/qwen3-8-27b/profile.yaml
+  id: judgment-159ca9252e0e8eff
+  scope: direct
+  task_ids:
+  - agent.tool_use
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact base-checkpoint tool decisions in one reproducible setup.
+  judgment: Base Qwen3.8-27B supports tool-use evaluation with substantial refusal and multi-turn gaps; adapter
+    results do not transfer to the base.
+  confidence: low
+  supporting_evidence_ids:
+  - src-7e4211d2e766
+  contradictory_evidence_ids: []
+  conditions:
+  - BF16, one AMD MI300X 192GB; vLLM ROCm, qwen3_xml parser, reasoning enabled, temperature 0.001, seed 300.
+  known_failure_modes:
+  - Aggregate function-calling accuracy hides refusal and missing-parameter weaknesses.
+  evidence_notes:
+  - One hardware configuration and seed; measurement date and immutable base revision not pinned.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-broader-2026-10-07
+    method: Original public BFCL setup and base-checkpoint results inspected; derivative adapter measurements
+      kept separate.
 - model_id: qwen3-8-flash-next
   profile: models/alibaba-qwen/qwen3-8-flash-next/profile.yaml
   id: judgment-dfc392840f6a0569
@@ -376,7 +404,7 @@ records:
   assessment: conditional
   scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: Useful coding-specialist candidate where non-thinking responses and permissive licensing matter.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-71b3fd269cc8
   - src-fe191bd136cd
@@ -387,7 +415,9 @@ records:
   known_failure_modes:
   - General knowledge/reasoning quality is not established by SWE performance; small quantization may degrade
     code correctness.
-  evidence_notes: []
+  evidence_notes:
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -1892,13 +1922,13 @@ records:
   id: judgment-0e6e2979fb965898
   scope: direct
   task_ids:
-  - context.retrieval
+  - knowledge.retrieval
   related_task_ids: []
   assessment: conditional
   scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: Promising quality-focused retrieval option based on vendor tests; independent reproduction not
     verified.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - obs-752ea46df2f7
   contradictory_evidence_ids: []
@@ -1906,6 +1936,8 @@ records:
   known_failure_modes: []
   evidence_notes:
   - 'Observation obs-752ea46df2f7: Public evidence observation'
+  - Vendor evidence concerns ranking external candidates. Exact first-stage recall and independent reproduction
+    remain unresolved; vendor-heavy evidence limits confidence.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -1919,7 +1951,7 @@ records:
   id: judgment-d02c0c4f21657798
   scope: direct
   task_ids:
-  - context.retrieval
+  - knowledge.retrieval
   related_task_ids: []
   assessment: conditional
   scope_note: Task-specific source investigation; original migration bundles remain unchanged.
@@ -1938,6 +1970,8 @@ records:
     confidence.'
   - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
     coverage ledger.
+  - Vendor evidence concerns ranking external candidates. Exact first-stage recall and independent reproduction
+    remain unresolved; vendor-heavy evidence limits confidence.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -2159,7 +2193,7 @@ records:
   assessment: conditional
   scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Officially supersedes Preview and remains a capable text-agent option.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-b96a45c2e083
   - src-280758cc57a6
@@ -2169,7 +2203,9 @@ records:
   known_failure_modes:
   - Text-only; system-level results depend on DeepSeek Harness; no independent checkpoint-matched test established
     here.
-  evidence_notes: []
+  evidence_notes:
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -2899,7 +2935,7 @@ records:
   assessment: conditional
   scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: Well-matched interface; actual speech quality, turn taking and latency need task-specific verification.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - obs-c0b11ad9d793
   contradictory_evidence_ids:
@@ -2912,6 +2948,8 @@ records:
     calls is a suitable interface design for conversational agents.'
   - 'Observation obs-d67386e9f0d6: Hallucinations/timeouts remain; migration fails if unsupported thinking_level
     or proactive_audio:false is sent.'
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -3162,7 +3200,7 @@ records:
   scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Useful open-weight candidate when deployment control matters; select variant against memory and
     quality requirements.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - obs-277108d396be
   - obs-984e3b3ac410
@@ -3184,6 +3222,8 @@ records:
     the Flash services measured here.'
   - 'Observation obs-cdfc4938876f: Independent configuration-specific results show model size and thinking
     mode do not create a simple ranking.'
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -3297,7 +3337,7 @@ records:
   assessment: conditional
   scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: Useful specialist option; test Omni too for new general video workflows.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - obs-a1dcd03b9809
   contradictory_evidence_ids:
@@ -3313,6 +3353,8 @@ records:
     blocks and variable latency occur.'
   - 'Observation obs-6dfa41ffcfec: Google now recommends Omni as default video option, reserving Veo for particular
     controls/legacy integration.'
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -3363,7 +3405,7 @@ records:
   assessment: conditional
   scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Established downloadable option for image QA and multilingual chat when custom terms fit.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-8cb15ff6ddd4
   - src-65471a2c7ad5
@@ -3372,7 +3414,9 @@ records:
   - Twelve explicitly supported languages; image evaluation up to five images.
   known_failure_modes:
   - Official instruction benchmarks used BF16, so quantized equivalence is unproven.
-  evidence_notes: []
+  evidence_notes:
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -3424,7 +3468,7 @@ records:
   assessment: conditional
   scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Established downloadable option for image QA and multilingual chat when custom terms fit.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-8cb15ff6ddd4
   - src-65471a2c7ad5
@@ -3433,7 +3477,9 @@ records:
   - Twelve explicitly supported languages; image evaluation up to five images.
   known_failure_modes:
   - Official instruction benchmarks used BF16, so quantized equivalence is unproven.
-  evidence_notes: []
+  evidence_notes:
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -3453,7 +3499,7 @@ records:
   scope_note: Scope needs review; the original claim does not establish a specific task ability.
   judgment: Scout’s 10M advertised capacity is not enough evidence to prefer it for difficult long-document
     reasoning.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-8cb15ff6ddd4
   contradictory_evidence_ids:
@@ -3462,7 +3508,9 @@ records:
   - Test position sensitivity and retrieval on real documents.
   known_failure_modes:
   - Very large KV memory and incomplete long-context reasoning reliability.
-  evidence_notes: []
+  evidence_notes:
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -3474,12 +3522,13 @@ records:
 - model_id: llama-4-scout
   profile: models/meta/llama-4-scout/profile.yaml
   id: judgment-b0524d80aaeb6829
-  scope: direct
-  task_ids:
+  scope: unresolved
+  task_ids: []
+  related_task_ids:
   - coding.review
-  related_task_ids: []
-  assessment: conditional
-  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  assessment: warning
+  scope_note: Filtered refactoring preference evidence does not establish actionable defect review under the
+    task rubric.
   judgment: Can assist with low-context refactoring preference review; does not establish deep design judgment.
   confidence: low
   supporting_evidence_ids:
@@ -3490,6 +3539,8 @@ records:
   - Named release matches; preserve source-specific provider, snapshot and precision limitations.
   known_failure_modes:
   - Style shortcuts, missing context and conservative ties.
+  - The filtered study contains human-approved refactorings; preference agreement is not sensitivity to harmful
+    changes or actionable defect detection.
   evidence_notes:
   - Confidence concerns this bounded claim, not a capability score.
   observed_at: '2026-10-07'
@@ -3510,7 +3561,7 @@ records:
   assessment: conditional
   scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Mini is suitable to evaluate for small, bounded instruction and simple coding tasks.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-147450d232b3
   contradictory_evidence_ids:
@@ -3519,7 +3570,9 @@ records:
   - 23 supported text languages; verify APIs beyond common Python packages.
   known_failure_modes:
   - Card reports function-name/URL hallucination, long-chat drift and multilingual safety gaps.
-  evidence_notes: []
+  evidence_notes:
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -3571,7 +3624,7 @@ records:
   assessment: conditional
   scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Multimodal adds image and audio input to a small text-output model.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-29885c43e537
   contradictory_evidence_ids: []
@@ -3580,7 +3633,9 @@ records:
   known_failure_modes:
   - Speech-language coverage differs from text; long-session drift and misleading sensitive voice-attribute
     inferences.
-  evidence_notes: []
+  evidence_notes:
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -4431,7 +4486,7 @@ records:
   assessment: conditional
   scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Improved but requires checking sources and tool failures.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-f2dca02215ef
   contradictory_evidence_ids: []
@@ -4445,6 +4500,8 @@ records:
   - 'contradictory evidence: This is a selected error-inducing set, not ordinary-use prevalence.'
   - 'Observation obs-c5c416a3125b: Improved but requires checking sources and tool failures.'
   - 'Potential risk (not a measured failure): Undisclosed search failure remains possible; fabricated certainty.'
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -4697,7 +4754,7 @@ records:
   assessment: conditional
   scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: A strong escalation model for hard scientific workflows.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-f2dca02215ef
   contradictory_evidence_ids: []
@@ -4711,6 +4768,8 @@ records:
   - 'Observation obs-8eab532ce0f9: A strong escalation model for hard scientific workflows.'
   - 'Potential risk (not a measured failure): Confident wrong derivations or incomplete experiments require
     independent verification.'
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -5097,7 +5156,7 @@ records:
   assessment: conditional
   scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: Latency-oriented image generation choice.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-259c8fd88c0f
   - src-cee7a5257e77
@@ -5113,6 +5172,8 @@ records:
   - 'Observation obs-144443616836: Latency-oriented image generation choice.'
   - 'Potential risk (not a measured failure): Inspect text, local edits and identity consistency; these checks
     are prudent risk controls, not measured failure rates.'
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -5166,7 +5227,7 @@ records:
   assessment: conditional
   scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: Precision-oriented editing choice.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-259c8fd88c0f
   - src-1a9fcf8d6701
@@ -5182,6 +5243,8 @@ records:
   - 'Observation obs-b01421e4dbca: Precision-oriented editing choice.'
   - 'Potential risk (not a measured failure): Inspect text, local edits and identity consistency; these checks
     are prudent risk controls, not measured failure rates.'
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -5235,7 +5298,7 @@ records:
   assessment: conditional
   scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: Use for conversational flow with a separately configured reasoning backend.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-84d1a7712d6a
   - src-c84f0489248c
@@ -5250,6 +5313,8 @@ records:
   - 'Observation obs-4797f27441f5: Use for conversational flow with a separately configured reasoning backend.'
   - 'Potential risk (not a measured failure): Noise, interruptions and backend failure can still impair interaction;
     exact accuracy unknown.'
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -5604,7 +5669,7 @@ records:
   assessment: conditional
   scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: Consider when reasoning and tools must operate in a realtime speech session.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-cf6a8843c8fd
   contradictory_evidence_ids: []
@@ -5619,6 +5684,8 @@ records:
   - 'Observation obs-d95f95883e10: Consider when reasoning and tools must operate in a realtime speech session.'
   - 'Potential risk (not a measured failure): Recognition errors in identifiers; latency-sensitive turn-taking;
     tool error recovery.'
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:

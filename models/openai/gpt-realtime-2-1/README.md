@@ -7,7 +7,7 @@
 
 ## Task judgments
 
-### Tool using speech agents (medium confidence)
+### Tool using speech agents (low confidence)
 
 Consider when reasoning and tools must operate in a realtime speech session.
 
@@ -27,7 +27,7 @@ Supporting sources: [gpt-realtime-2.1 model specifications](https://developers.o
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: supporting evidence: Vendor documents stronger alphanumeric recognition, noise/silence and interruption behavior over Realtime2.; contradictory evidence: No independent version-matched evidence recovered; higher reasoning effort increases latency and output consumption.; Observation obs-d95f95883e10: Consider when reasoning and tools must operate in a realtime speech session.; Potential risk (not a measured failure): Recognition errors in identifiers; latency-sensitive turn-taking; tool error recovery.
+Evidence notes: supporting evidence: Vendor documents stronger alphanumeric recognition, noise/silence and interruption behavior over Realtime2.; contradictory evidence: No independent version-matched evidence recovered; higher reasoning effort increases latency and output consumption.; Observation obs-d95f95883e10: Consider when reasoning and tools must operate in a realtime speech session.; Potential risk (not a measured failure): Recognition errors in identifiers; latency-sensitive turn-taking; tool error recovery.; Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented interface support alone is not task quality.
 
 ### Agent.tool_use (low confidence)
 

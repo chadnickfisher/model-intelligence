@@ -6082,7 +6082,9 @@ records:
   status: documented_not_execution_tested
   availability: documented
   billing_class: dedicated_compute
-  price_ids: []
+  price_ids:
+  - price-providers-cohere-embed-5-pro-cohere-d310d3a8de69
+  - price-cohere-embed-5-pro-model-vault-medium
   restrictions: []
   evidence_ids:
   - src-9d4f7ae81230
@@ -10884,7 +10886,9 @@ records:
   status: documented_not_execution_tested
   availability: documented
   billing_class: metered_api
-  price_ids: []
+  price_ids:
+  - price-providers-kimi-k3-together-210d7bb86dfc
+  - price-kimi-k3-together-observed-2026-10-07
   restrictions: []
   evidence_ids:
   - src-ea26b12a0c82

@@ -7,7 +7,7 @@
 
 ## Task judgments
 
-### Text coding and reasoning (medium confidence)
+### Text coding and reasoning (low confidence)
 
 Officially supersedes Preview and remains a capable text-agent option.
 
@@ -26,6 +26,8 @@ Failure modes / limitations: Text-only; system-level results depend on DeepSeek 
 Supporting sources: [DeepSeek-V4-Pro-0813 model card](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813) · [DeepSeek live pricing and alias mapping](https://api-docs.deepseek.com/quick_start/pricing/)
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented interface support alone is not task quality.
 
 ### Coding.debugging (low confidence)
 

@@ -113,11 +113,13 @@ def test_unknown_media_subscriptions_and_route_missing(data):
     cases = [next(p for p in data['price'].values() if p['billing_method'] == 'subscription'),
              offer(data, 'gemini4argon', 'announced_intro'),
              offer(data, 'gpt-live-1'),
-             offer(data, 'veo-3-1-generate-preview', 'paid_standard'),
-             offer(data, 'kimi-k3', 'standard displayed serverless')]
+             offer(data, 'veo-3-1-generate-preview', 'paid_standard')]
     for p in cases:
         result = calc(data, p)
         assert not result['supported'] and result['reasons']
+    unlinked = deepcopy(offer(data, 'gpt-6-astra', condition='<=272000'))
+    unlinked['id'] = 'price-unlinked-test-fixture'
+    assert not calc(data, unlinked)['supported']
     p = deepcopy(offer(data, 'gpt-6-astra', condition='<=272000'))
     p['rates'][0]['amount'] = None
     assert not calc(data, p)['supported']

@@ -160,7 +160,7 @@ capabilities:
   assessment: conditional
   scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Officially supersedes Preview and remains a capable text-agent option.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-b96a45c2e083
   - src-280758cc57a6
@@ -170,7 +170,9 @@ capabilities:
   known_failure_modes:
   - Text-only; system-level results depend on DeepSeek Harness; no independent checkpoint-matched test established
     here.
-  evidence_notes: []
+  evidence_notes:
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:

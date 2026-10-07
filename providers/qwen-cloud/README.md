@@ -27,7 +27,9 @@ Verified: 2026-10-06
 
 ## Privacy data use
 
-- Not established in this baseline.
+- International Model Studio API defaults retain prompts/responses up to 30 days, with legal/security exceptions; stateful data persists until deleted. No foundation-model training without separate consent.
+- Enterprise-approved workspace ZDR applies only to supported models outside Mainland China. Unsupported-model calls fall back to standard retention; playground, agent/RAG orchestration, Batch and stateful Responses are excluded.
+- ZDR transient encrypted caching may last 24 hours. Flagged safety content can remain up to two years, and severe-risk circumstances can suspend eligibility.
 
 ## Notes
 
@@ -48,4 +50,4 @@ Verified: 2026-10-06
 
 ## Sources
 
-[www.qwencloud.com](https://www.qwencloud.com/)
+[www.qwencloud.com](https://www.qwencloud.com/) · [Alibaba Cloud Model Studio data retention](https://www.alibabacloud.com/help/en/model-studio/data-retention-policy)

@@ -170,7 +170,7 @@ capabilities:
   assessment: conditional
   scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Established downloadable option for image QA and multilingual chat when custom terms fit.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-8cb15ff6ddd4
   - src-65471a2c7ad5
@@ -179,7 +179,9 @@ capabilities:
   - Twelve explicitly supported languages; image evaluation up to five images.
   known_failure_modes:
   - Official instruction benchmarks used BF16, so quantized equivalence is unproven.
-  evidence_notes: []
+  evidence_notes:
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:

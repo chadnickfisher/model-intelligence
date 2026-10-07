@@ -34,16 +34,26 @@ specifications:
     - src-b88c4950bbf3
   context_window:
     value: 65536
-    status: documented
-    conditions: []
+    status: conflicting
+    conditions:
+    - Current Gemini Developer API input limit is 65536; the November 2025 model card instead describes up
+      to 1M context.
+    - The relationship between card capacity, endpoint limits and dated variants is unresolved; retain the
+      current endpoint value.
     evidence_ids:
     - src-21fe0d4c63a7
+    - src-d35a477c49c4
   maximum_output:
     value: 32768
-    status: documented
-    conditions: []
+    status: conflicting
+    conditions:
+    - Current Gemini Developer API output limit is 32768; the November 2025 model card instead describes 64K
+      output.
+    - The relationship between card capacity, endpoint limits and dated variants is unresolved; retain the
+      current endpoint value.
     evidence_ids:
     - src-21fe0d4c63a7
+    - src-d35a477c49c4
   modalities:
     value:
       input:
@@ -307,3 +317,5 @@ notes: []
 limitations:
 - 'Flex/Priority availability: pricing page lists rates but model capability page says unsupported.'
 - Current model-card token-limit reconciliation
+- Older model card reports a November 2025 release; the carried May 2026 catalog date is not independently
+  reconciled to an immutable checkpoint.

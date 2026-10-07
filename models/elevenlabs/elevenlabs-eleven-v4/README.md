@@ -1,7 +1,7 @@
 # Eleven v4
 
 **Creator:** ElevenLabs · **Family:** Eleven · **Status:** active
-**Verified:** 2026-10-06 · **Release:** Unknown
+**Verified:** 2026-10-06 · **Release:** 2026-09-28
 
 [Canonical data](profile.yaml) · [Methodology](../../../methodology.md) · [Catalog](../../../data/models.md)
 
@@ -100,7 +100,7 @@ Local conditions: Not established in this pass
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
-| elevenlabs | Free / PayGo displayed / current | text: 0.022 USD / per 1,000 characters | excluded | 2026-10-06 |
+| elevenlabs | Free / PayGo displayed / current | text: 0.022 USD / per 1,000 characters | Displayed temporary $0.022 per 1000 characters promotion until October 12, 2026; undiscounted displayed rate $0.08. Exact ending instant is not specified.; Prices exclude taxes, levies and duties; subscription allowances remain separate. | 2026-10-07 |
 
 ## Recorded access routes
 
@@ -110,4 +110,4 @@ Local conditions: Not established in this pass
 
 ## Sources
 
-[elevenlabs.io](https://elevenlabs.io/docs/overview/models) · [elevenlabs.io](https://elevenlabs.io/pricing/api) · [Eleven v4 Provider Voice Arena](https://artificialanalysis.ai/text-to-speech/models/eleven-v4) · [Text-to-speech evaluation methodology](https://artificialanalysis.ai/methodology/text-to-speech)
+[elevenlabs.io](https://elevenlabs.io/docs/overview/models) · [elevenlabs.io](https://elevenlabs.io/pricing/api) · [Eleven v4 Provider Voice Arena](https://artificialanalysis.ai/text-to-speech/models/eleven-v4) · [Text-to-speech evaluation methodology](https://artificialanalysis.ai/methodology/text-to-speech) · [September 28, 2026 changelog](https://elevenlabs.io/docs/changelog/2026/9/28)

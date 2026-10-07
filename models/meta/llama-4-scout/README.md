@@ -7,7 +7,7 @@
 
 ## Task judgments
 
-### Multilingual visual chat (medium confidence)
+### Multilingual visual chat (low confidence)
 
 Established downloadable option for image QA and multilingual chat when custom terms fit.
 
@@ -27,7 +27,9 @@ Supporting sources: [Llama 4 Scout / Maverick model card](https://huggingface.co
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-### Very long document work (medium confidence)
+Evidence notes: Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented interface support alone is not task quality.
+
+### Very long document work (low confidence)
 
 Scout’s 10M advertised capacity is not enough evidence to prefer it for difficult long-document reasoning.
 
@@ -47,21 +49,23 @@ Supporting sources: [Llama 4 Scout / Maverick model card](https://huggingface.co
 
 Contradictory or limiting sources: [Scout independent comparison](https://artificialanalysis.ai/models/comparisons/llama-4-scout-vs-llama-3-1-instruct-405b)
 
+Evidence notes: Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented interface support alone is not task quality.
+
 ### Coding.review (low confidence)
 
 Can assist with low-context refactoring preference review; does not establish deep design judgment.
 
-Scope: direct / conditional. Task-specific source claim under documented conditions; no transfer to other coding tasks.
+Scope: unresolved / warning. Filtered refactoring preference evidence does not establish actionable defect review under the task rubric.
 
-Direct task IDs: coding.review
+Direct task IDs: Not established in this pass
 
-Related task IDs (navigation only): Not established in this pass
+Related task IDs (navigation only): coding.review
 
 Judgment ID: judgment-b0524d80aaeb6829
 
 Conditions: Public API defaults; exact revision undisclosed; only two refactoring types.; Named release matches; preserve source-specific provider, snapshot and precision limitations.
 
-Failure modes / limitations: Style shortcuts, missing context and conservative ties.
+Failure modes / limitations: Style shortcuts, missing context and conservative ties.; The filtered study contains human-approved refactorings; preference agreement is not sensitivity to harmful changes or actionable defect detection.
 
 Supporting sources: [High Agreement, Shallow Reasoning: A Mixed-Method Study of LLMs in Refactoring Reviews](https://homepages.dcc.ufmg.br/~figueiredo/publications/promise2026preprint.pdf)
 

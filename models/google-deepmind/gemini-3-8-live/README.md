@@ -7,7 +7,7 @@
 
 ## Task judgments
 
-### Tool connected real time voice conversation (medium confidence)
+### Tool connected real time voice conversation (low confidence)
 
 Well-matched interface; actual speech quality, turn taking and latency need task-specific verification.
 
@@ -27,7 +27,7 @@ Supporting sources: [Gemini 3.8 Live API model documentation](https://ai.google.
 
 Contradictory or limiting sources: [Gemini 3.8 Audio model card](https://deepmind.google/models/model-cards/gemini-3-8-audio/) · [Gemini 3.8 Live API model documentation](https://ai.google.dev/gemini-api/docs/models/gemini-3.8-live)
 
-Evidence notes: task-conditioned synthesis; no inference runs performed; Observation obs-c0b11ad9d793: Streaming voice with interleaved reasoning and default non-blocking tool calls is a suitable interface design for conversational agents.; Observation obs-d67386e9f0d6: Hallucinations/timeouts remain; migration fails if unsupported thinking_level or proactive_audio:false is sent.
+Evidence notes: task-conditioned synthesis; no inference runs performed; Observation obs-c0b11ad9d793: Streaming voice with interleaved reasoning and default non-blocking tool calls is a suitable interface design for conversational agents.; Observation obs-d67386e9f0d6: Hallucinations/timeouts remain; migration fails if unsupported thinking_level or proactive_audio:false is sent.; Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented interface support alone is not task quality.
 
 ### Audio.conversation (low confidence)
 

@@ -91,6 +91,28 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
+### Agent.tool_use (low confidence)
+
+Base Qwen3.8-27B supports tool-use evaluation with substantial refusal and multi-turn gaps; adapter results do not transfer to the base.
+
+Scope: direct / conditional. Exact base-checkpoint tool decisions in one reproducible setup.
+
+Direct task IDs: agent.tool_use
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-159ca9252e0e8eff
+
+Conditions: BF16, one AMD MI300X 192GB; vLLM ROCm, qwen3_xml parser, reasoning enabled, temperature 0.001, seed 300.
+
+Failure modes / limitations: Aggregate function-calling accuracy hides refusal and missing-parameter weaknesses.
+
+Supporting sources: [Qwen3.8-27B base and fine-tune tool-use evaluation](https://github.com/Nicolas-Formenton/qwen3.8-27b-finetune-eval)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: One hardware configuration and seed; measurement date and immutable base revision not pinned.
+
 ## Specifications
 
 | Field | Recorded value |

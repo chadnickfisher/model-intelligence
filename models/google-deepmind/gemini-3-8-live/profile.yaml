@@ -54,7 +54,11 @@ specifications:
       - text
       - audio
     status: documented
-    conditions: []
+    conditions:
+    - The capability table lists text and audio, but Live sessions support AUDIO as the response modality;
+      text is available through optional output audio transcription.
+    - thinking_level is unsupported. Asynchronous function calling is the default; proactive audio is always
+      enabled, and video frames are included in turn coverage by default.
     evidence_ids:
     - src-04c98c33c883
   language_support:
@@ -207,7 +211,7 @@ capabilities:
   assessment: conditional
   scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: Well-matched interface; actual speech quality, turn taking and latency need task-specific verification.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - obs-c0b11ad9d793
   contradictory_evidence_ids:
@@ -220,6 +224,8 @@ capabilities:
     calls is a suitable interface design for conversational agents.'
   - 'Observation obs-d67386e9f0d6: Hallucinations/timeouts remain; migration fails if unsupported thinking_level
     or proactive_audio:false is sent.'
+  - Confidence limited by vendor-heavy task evidence and missing exact-task independent replication; documented
+    interface support alone is not task quality.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
