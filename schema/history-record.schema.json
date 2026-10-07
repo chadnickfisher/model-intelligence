@@ -33,7 +33,9 @@
         "behavior",
         "access_coverage",
         "benchmark",
-        "research_coverage"
+        "research_coverage",
+        "research_contract",
+        "research_run"
       ]
     },
     "entity_id": {

@@ -1,5 +1,4 @@
 """Readable card content from canonical findings; no new capability judgments."""
-import re
 from .data import claims, benchmark_findings, model_routes, route_kinds, route_label, billing_summary
 
 
@@ -17,8 +16,9 @@ def concrete_limits(values):
 
 
 def readable_conditions(values):
+    administrative={'exact_named_release_effort_retained'}
     return [v.replace('arena_rows', "the source's model configuration table")
-            for v in values if not re.fullmatch(r'[a-z0-9_]+',v)]
+            for v in values if v not in administrative]
 
 
 def card_watchouts(model, data, task=None, include_related=False):
@@ -39,14 +39,8 @@ def access_bullets(model,data):
 
 
 def complete_summary(text):
-    """Keep complete sentences and limiting statements, never a character prefix."""
-    sentences=[s.strip() for s in re.split(r'(?<=[.!?])\s+(?=[A-Z])',text.strip()) if s.strip()]
-    if not sentences:return ''
-    limiting=re.compile(r'\b(not|no|unknown|unresolved|unverified|only|however|but|limited|'
-                        r'uncertain|retract\w*|correct\w*|recipe|fix\w*|recover\w*|'
-                        r'propos\w*|suggest\w*|preliminary|reported|configuration)\b',re.I)
-    keep=[sentences[0]]+[s for s in sentences[1:] if limiting.search(s)]
-    return ' '.join(dict.fromkeys(keep))
+    """Preserve the full canonical claim, including qualifications and counterevidence."""
+    return text.strip()
 
 
 def observation_summary(record):

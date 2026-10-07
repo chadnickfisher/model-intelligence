@@ -84,3 +84,21 @@ for name,rows in [('pricing',list(PR.values())),('access',list(AC.values()))]:
   for a in rows:lines.append('| '+esc(a['model_id'] or a['product'])+' | '+esc(a['provider_id'])+' | '+esc(a['methods'])+' | '+esc(a['status'])+'; '+esc(a['restrictions'])+' |')
  lines+=['','[Canonical records with evidence and all conditions]('+name+'.yaml)']
  wr(R/('data/'+name+'.md'),'\n'.join(lines)+'\n')
+
+task_rows=rd(R/'data/capability-taxonomy.yaml')['capabilities']
+lines=['# Task rubric','','Generated from [canonical task definitions](capability-taxonomy.yaml). Rubric 1.0 defines claim boundaries; it does not reclassify earlier judgments.','','Cost, provider, modality, effort and harness remain explicit operating conditions. Absence of evidence is unknown, not exclusion.','']
+for task in task_rows:
+ lines+=['## '+task['id']+' — '+task['label'],'',task['scope'],'']
+ for label,key in [('Include','inclusion_rules'),('Exclude from this task','exclusion_rules'),('Examples','examples')]:
+  lines+=[label+':','']+['- '+rule for rule in task[key]]+['']
+ lines+=['Neighboring tasks: '+', '.join(task['neighboring_task_ids']),'']
+wr(R/'data/tasks.md','\n'.join(lines)+'\n')
+
+from tools.research_runs import completion
+run_rows=rd(R/'data/research-runs.yaml')['records']
+lines=['# Bounded research runs','','Generated from [canonical batch accounting](research-runs.yaml). [Contract and completion rules](../docs/bounded-research.md).','','Existing domain coverage does not establish field or task completion under this contract.','']
+if not run_rows:lines+=['No bounded research run has been recorded. Earlier research has not been retroactively certified.','']
+for run in run_rows:
+ report=completion(run)
+ lines+=['## '+run['id'],'','Targets: '+', '.join(run['target_model_ids']),'','Accounting complete: '+str(report['complete'])+'; pending: '+str(report['pending'])+'; blocked: '+str(report['blocked'])+'; investigated unknown: '+str(report['investigated_unknown']),'','Baseline commit: '+run['base_commit']+'; exact journal boundary: '+run['baseline_revision_id'],'']
+wr(R/'data/research-runs.md','\n'.join(lines)+'\n')

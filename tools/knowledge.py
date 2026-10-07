@@ -21,7 +21,9 @@ def canonical(root=ROOT):
                        ('release', 'data/releases.yaml'), ('source', 'evidence/sources.yaml'),
                        ('observation', 'evidence/observations.yaml'), ('behavior', 'data/behavior.yaml'),
                        ('access_coverage', 'data/access-coverage.yaml'), ('benchmark', 'data/benchmarks.yaml'),
-                       ('research_coverage', 'data/research-coverage.yaml')]:
+                       ('research_coverage', 'data/research-coverage.yaml'),
+                       ('research_contract', 'data/research-contract.yaml'),
+                       ('research_run', 'data/research-runs.yaml')]:
         for record in read(root / name)['records']:
             result[(kind, record['id'])] = (name, record)
     for record in read(root / 'data/capability-taxonomy.yaml')['capabilities']:
@@ -138,7 +140,9 @@ def capture(root, observed_at, reason, evidence_ids, effective_from=None):
     if not set(evidence_ids) <= known_evidence:
         raise ValueError('Capture evidence must resolve to a source, observation or migration record')
     changes = []
-    for key in sorted(set(current) | set(latest)):
+    # Runs freeze their supporting state at their own revision; capture all
+    # factual/source/task changes first, even when they share an observation date.
+    for key in sorted(set(current) | set(latest), key=lambda key: (key[0] == 'research_run', key)):
         kind, ident = key
         previous = latest.get(key)
         profile, value = current.get(key, (previous['canonical_path'] if previous else '', None))

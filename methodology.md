@@ -22,6 +22,17 @@ These labels attach to individual task judgments, not the model as a whole. A do
 
 ## How to judge capabilities
 
+Use the [task rubric](data/tasks.md) to determine whether the evidence concerns
+the selected task. Each definition supplies inclusion rules, boundary exclusions,
+examples and neighboring tasks. A task boundary is not a model exclusion: exclude
+a model only with positive mismatch evidence. Applicable tasks need a bounded
+assessment; investigated uncertainty remains explicit.
+
+New batches use the [bounded contract](docs/bounded-research.md) and separate
+[run accounting](data/research-runs.yaml). Completion is derived from required
+field checks, task decisions and source-category checks against a pinned baseline.
+Earlier four-domain coverage does not establish completion under this contract.
+
 State a concrete task and a bounded conclusion. Include sources, important conditions, observed or credibly reported failure modes, and contradictory evidence. Distinguish observations from inference and recommendations. Example: strong scoped-edit performance in a tool-enabled benchmark does not establish reliable architecture decisions or multi-hour autonomous stability.
 
 Do not average incompatible evaluations into a single score. Consider contamination, task selection, benchmark saturation, scoring sensitivity, model snapshots, tool access, context length, reasoning budget, quantization, and provider implementation. Model comparisons require matched conditions or explicit caveats.

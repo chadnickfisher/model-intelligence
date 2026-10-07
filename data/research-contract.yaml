@@ -1,0 +1,24 @@
+schema_version: '1.0'
+records:
+- id: research-contract-v1
+  version: '1.0'
+  rubric_version: '1.0'
+  domains: [capabilities, benchmarks, access_pricing, behavior]
+  source_categories: [primary, independent_evaluation, practitioner]
+  field_groups:
+    model:
+      capabilities: [identity, specifications, additional_specifications, capabilities, limitations, notes]
+      benchmarks: [performance_characteristics]
+      access_pricing: [licensing, local_inference]
+    provider:
+      access_pricing: [name, roles, access_methods, api_compatibility, geographic_availability, rate_limits, caching_batching, privacy_data_use, reliability, limitations, notes]
+    access:
+      access_pricing: [model_id, provider_id, product, methods, status, availability, billing_class, client_id, requires_account, subscription_includes_api, reset_cadence, restrictions, conditions, research_details, notes]
+    price:
+      access_pricing: [model_id, provider_id, product, tier, status, billing_method, region, rates, included_usage, overage, reset_cadence, conditions, effective_from, effective_to, notes]
+    benchmark:
+      benchmarks: [benchmark, value, evidence_class, model_version, harness, effort, provider_id, tools, measured_at, observed_at, conditions, limitations, evidence_notes]
+    behavior:
+      behavior: [claim, status, change_type, fact_status, confidence, model_version, provider_id, product, harness, effort, reported_at, observed_at, effective_from, conditions, metrics, official_acknowledgment, fix, research_details, notes]
+    release:
+      behavior: [event_type, event_date, provider_id, summary]

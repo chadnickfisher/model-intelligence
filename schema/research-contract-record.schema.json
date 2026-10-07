@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "const": "research-contract-v1"
+    },
+    "version": {
+      "const": "1.0"
+    },
+    "rubric_version": {
+      "const": "1.0"
+    },
+    "domains": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "capabilities",
+          "benchmarks",
+          "access_pricing",
+          "behavior"
+        ]
+      },
+      "uniqueItems": true,
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "source_categories": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "primary",
+          "independent_evaluation",
+          "practitioner"
+        ]
+      },
+      "uniqueItems": true,
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "field_groups": {
+      "type": "object",
+      "propertyNames": {"enum": ["model", "provider", "access", "price", "benchmark", "behavior", "release"]},
+      "required": [
+        "model",
+        "provider",
+        "access",
+        "price",
+        "benchmark",
+        "behavior",
+        "release"
+      ],
+      "additionalProperties": {
+        "type": "object",
+        "propertyNames": {
+          "enum": [
+            "capabilities",
+            "benchmarks",
+            "access_pricing",
+            "behavior"
+          ]
+        },
+        "additionalProperties": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "version",
+    "rubric_version",
+    "domains",
+    "source_categories",
+    "field_groups"
+  ],
+  "additionalProperties": false
+}

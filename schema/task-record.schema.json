@@ -6,7 +6,25 @@
     "id": {"type": "string", "pattern": "^[a-z]+\\.[a-z_]+$"},
     "label": {"type": "string", "minLength": 1},
     "scope": {"type": "string", "minLength": 1},
-    "status": {"enum": ["active", "retired"]}
+    "status": {"enum": ["active", "retired"]},
+    "rubric_version": {"const": "1.0"},
+    "inclusion_rules": {"$ref": "#/$defs/rules"},
+    "exclusion_rules": {"$ref": "#/$defs/rules"},
+    "examples": {"$ref": "#/$defs/rules"},
+    "neighboring_task_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^[a-z]+\\.[a-z_]+$"}
+    }
+  },
+  "$defs": {
+    "rules": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    }
   },
   "additionalProperties": false
 }

@@ -7,7 +7,7 @@ UNKNOWN = 'Unknown / not established'
 
 def load(root=ROOT):
     records = canonical(root)
-    result = {kind: {} for kind in ['model', 'provider', 'price', 'access', 'release', 'source', 'observation', 'task', 'alias', 'behavior', 'access_coverage', 'benchmark', 'research_coverage']}
+    result = {kind: {} for kind in ['model', 'provider', 'price', 'access', 'release', 'source', 'observation', 'task', 'alias', 'behavior', 'access_coverage', 'benchmark', 'research_coverage', 'research_contract', 'research_run']}
     result['paths'] = {}
     for (kind, ident), (path, record) in records.items():
         result[kind][ident] = record

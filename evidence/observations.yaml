@@ -1,5 +1,19 @@
 schema_version: '1.0'
 records:
+- id: obs-research-contract-v1
+  kind: editorial-methodology
+  summary: Define bounded research accounting and task inclusion/exclusion rules.
+  source_ids: []
+  observed_at: '2026-10-07'
+  configuration:
+  - Contract and rubric version 1.0; local schema validation only.
+  findings:
+  - Task definitions are editorial boundaries, not new model capability findings.
+  - Empty run records make no claim of fresh source investigation or completed research.
+  limitations:
+  - This observation cannot support factual model claims or applicability exclusions.
+  measurements: {}
+  publisher: null
 - id: obs-a91fd388dc88
   kind: research-synthesis
   summary: Strong candidate when difficult end-to-end work justifies latency and token cost.

@@ -1,7 +1,8 @@
 from copy import deepcopy
+import pytest
 from streamlit.testing.v1 import AppTest
 from explorer.data import load
-from explorer.presentation import task_card_evidence, card_watchouts, observation_summary, complete_summary
+from explorer.presentation import task_card_evidence, card_watchouts, observation_summary, complete_summary, readable_conditions
 from tools.knowledge import ROOT
 
 
@@ -71,8 +72,9 @@ model_card(data,model,'coding.frontend',details=False)
 def test_observation_summary_keeps_later_limits_and_distinguishes_published_fix():
     first='A practitioner observed a failure under the documented runtime '+('with the same configuration ' * 20)+'.'
     text=first+' A proposed fix is not independently verified. An unrelated introductory sentence.'
-    assert complete_summary(text).startswith(first)
-    assert complete_summary(text).endswith('A proposed fix is not independently verified.')
+    assert complete_summary(text)==text
+    assert complete_summary('  '+text+'  ')==text
+    assert complete_summary(' \n ')==''
     assert '…' not in complete_summary(text)
     record={'claim':text,'status':'unknown','fix':{'measured_improvement':None}}
     assert observation_summary(record).endswith('Current outcome unresolved.')
@@ -82,6 +84,38 @@ def test_observation_summary_keeps_later_limits_and_distinguishes_published_fix(
     assert any(e.label.startswith('Full observation & evidence:') for e in at.expander)
     assert any('Current outcome unresolved.' in m.value for m in at.markdown)
     assert not any('Published change: none' in m.value or 'Published change: proposed' in m.value for m in at.markdown)
+
+
+@pytest.mark.parametrize('record_id, qualification',[
+    ('behavior-48882f04dfc15338',
+     'Reporter explicitly cannot determine whether issue is model-specific or a vLLM distributed-executor defect.'),
+    ('behavior-43bd710be14825f8',
+     'Native W4A4/NVFP4 loading remains blocked by global-scale support in MLX MoE operations'),
+    ('behavior-5efb34ca46925fce',
+     'Same build with MRV2 restores 91.58%.'),
+    ('behavior-5a2416670e75187b',
+     'Current API docs still warn about audio-processing blocks and variable latency'),
+])
+def test_canonical_behavior_summary_preserves_qualifications(record_id, qualification):
+    record=load()['behavior'][record_id]
+    assert qualification in record['claim']
+    assert complete_summary(record['claim'])==record['claim']
+    assert observation_summary(record)==record['claim']+' Current outcome unresolved.'
+
+
+def test_readable_conditions_preserves_meaningful_values_and_only_omits_known_marker():
+    values=['reasoning','high','bf16','context_32768','exact_named_release_effort_retained',
+            'exact_named_release_effort_retained under this configuration',
+            'Configuration retained in arena_rows']
+    assert readable_conditions(values)==[
+        'reasoning','high','bf16','context_32768',
+        'exact_named_release_effort_retained under this configuration',
+        "Configuration retained in the source's model configuration table"]
+    conditions=next(b['conditions'] for b in load()['benchmark'].values()
+                    if 'exact_named_release_effort_retained' in b['conditions'])
+    assert readable_conditions(conditions)==[
+        value.replace('arena_rows',"the source's model configuration table")
+        for value in conditions if value!='exact_named_release_effort_retained']
 
 
 def test_palette_has_readable_contrast_and_mobile_wrapping_rule():

@@ -14,13 +14,14 @@ Initial snapshot: **53 model profiles**, **39 provider/client/access-product pro
 
 - [Model catalog](data/models.md): current coverage and links to profiles
 - [Provider catalog](data/providers.md): creators, hosts, gateways, and access products
-- [Capability index](data/capabilities.yaml): complete judgments, direct/related scope, evidence, conditions and confidence; [curated tasks](data/capability-taxonomy.yaml)
+- [Capability index](data/capabilities.yaml): complete judgments, direct/related scope, evidence, conditions and confidence; [task rubric](data/tasks.md)
 - [Pricing](data/pricing.md): dated offers, units, conditions, and provenance
 - [Access](data/access.md): subscription, API, download, local, and other routes
 - [Releases](data/releases.yaml) and [change history](changelog/2026-10.md)
 - [Methodology](methodology.md), [coverage gaps](research/coverage.md), and [maintenance plan](MAINTENANCE.md)
 - For agents: [AGENTS.md](AGENTS.md) and [repo-map.yaml](repo-map.yaml)
 - [Explicit observation history](history/README.md): preserved values and evidence; no invented earlier state
+- [Bounded research contract](docs/bounded-research.md) and [batch completion accounting](data/research-runs.md)
 
 ## What is canonical?
 
@@ -145,8 +146,10 @@ Original data and documentation use **CC BY 4.0**; original software uses **MIT*
 
 Research maintenance is **PAUSED as of 2026-10-06**. No daily research is scheduled or promised. The manually supplied October 7 research update retains actual source inspection dates; carry-forward facts retain their earlier verification dates. Repository observation dates do not imply fresh fact verification.
 
-The migration preserves 64 original capability records: 19 direct mappings, 34 compound bundles, 5 unresolved scope reviews and 6 relocated performance/deployment observations. Seven existing performance observations are also preserved. October 7 research adds 84 bounded direct judgments, for 142 complete capability claims and 13 performance observations. Confidence measures evidence support, not ability. A compound claim is never split into per-task endorsements; related tasks are navigation only. Warnings and missing evidence remain visible.
+The migration preserves 64 original capability records: 19 direct mappings, 34 compound bundles, 5 unresolved scope reviews and 6 relocated performance/deployment observations. Seven existing performance observations are also preserved. The first October 7 package added 84 bounded direct judgments; the follow-up added 26, bringing the current total to 168 capability claims and 13 performance observations. Confidence measures evidence support, not ability. A compound claim is never split into per-task endorsements; related tasks are navigation only. Warnings and missing evidence remain visible.
 
-The update includes 53 access audits, 176 new route observations, 68 structured benchmark measurements and 86 post-launch behavior records. Three identity-gated capability candidates remain archived without direct enrollment. All 53 models have four-domain coverage accounting; 52 capability/benchmark domain checks remain explicitly pending. Conditional tariffs and non-token units are preserved as route details when estimation is unsupported. See the [research integration report](research/2026-10-07-integration.md).
+The first update included 53 access audits, 176 new route observations, 68 structured benchmark measurements and 86 post-launch behavior records. The follow-up added 38 benchmark records and completed the 52 pending capability/benchmark domain checks. All 53 models now have checks in all four domains, with investigated unknowns retained. Three identity-gated capability candidates remain archived without direct enrollment. Conditional tariffs and non-token units are preserved as route details when estimation is unsupported. See the [initial integration report](research/2026-10-07-integration.md), [follow-up report](research/task-followup-2026-10-07.md), and [generated current inventory](data/coverage.yaml).
+
+The 36-task rubric now defines inclusion, exclusion, examples and neighboring tasks. A separate versioned batch checklist tracks factual fields, applicability decisions and source categories against a frozen baseline. Earlier domain checks are not retroactively certified as field-complete research. Observation summaries preserve full canonical claims and qualifications. These local correctness and workflow changes do not activate recurring maintenance.
 
 For manual research handoffs, use the [project importer and publisher](docs/package-workflow.md) and the [project update skill](.agents/skills/model-intelligence-update/SKILL.md). The helper defaults to dry run, separates raw research from reviewed data updates, and restricts repository, base commit and intended paths. It does not schedule work or repair unavailable download permissions.

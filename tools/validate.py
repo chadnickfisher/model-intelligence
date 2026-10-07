@@ -8,13 +8,14 @@ from jsonschema import Draft202012Validator, FormatChecker
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from tools.knowledge import canonical, history, judgment_index, scope_errors, snapshot, research_coverage_errors
+from tools.research_runs import baseline_state, run_errors, task_rubric_errors
 def read(p):return yaml.load(p.read_text(encoding='utf-8'),Loader=getattr(yaml,'CSafeLoader',yaml.SafeLoader))
 def records(p):return read(ROOT/p)['records']
 def run():
  errors=[];collections={}
  files={'model-profile':sorted(ROOT.glob('models/*/*/profile.yaml')),'provider-profile':sorted(ROOT.glob('providers/*/profile.yaml'))}
  for typ,paths in files.items():collections[typ]=[(p.relative_to(ROOT).as_posix(),read(p)) for p in paths]
- for typ,path in [('price-record','data/pricing.yaml'),('access-record','data/access.yaml'),('release-record','data/releases.yaml'),('source-record','evidence/sources.yaml'),('behavior-record','data/behavior.yaml'),('access-coverage-record','data/access-coverage.yaml'),('benchmark-record','data/benchmarks.yaml'),('research-coverage-record','data/research-coverage.yaml')]:collections[typ]=[(path,x) for x in records(path)]
+ for typ,path in [('price-record','data/pricing.yaml'),('access-record','data/access.yaml'),('release-record','data/releases.yaml'),('source-record','evidence/sources.yaml'),('behavior-record','data/behavior.yaml'),('access-coverage-record','data/access-coverage.yaml'),('benchmark-record','data/benchmarks.yaml'),('research-coverage-record','data/research-coverage.yaml'),('research-contract-record','data/research-contract.yaml'),('research-run-record','data/research-runs.yaml')]:collections[typ]=[(path,x) for x in records(path)]
  for typ,path,key in [('task-record','data/capability-taxonomy.yaml','capabilities'),('alias-record','data/aliases.yaml','records'),('history-record','history/revisions.yaml','records')]:collections[typ]=[(path,x) for x in read(ROOT/path)[key]]
  allids=set()
  for typ,items in collections.items():
@@ -47,7 +48,7 @@ def run():
   elif isinstance(x,list):
    for v in x:walk(v,where,historical)
  for typ,rows in collections.items():
-  for path,row in rows:walk(row,path+' '+row['id'],typ=='history-record')
+  for path,row in rows:walk(row,path+' '+row['id'],typ in {'history-record','research-run-record'})
  for row in observations:walk(row,'observation '+row['id'])
  prices_by_id={x['id']:x for _,x in collections['price-record']}
  access_by_id={x['id']:x for _,x in collections['access-record']}
@@ -73,6 +74,7 @@ def run():
   if not b['supporting_evidence_ids'] and not b['contradictory_evidence_ids']:errors.append(b['id']+': behavior adjudication needs supporting or contradictory evidence')
   if b['fix']['summary'] and not b['fix']['evidence_ids']:errors.append(b['id']+': published fix needs evidence')
  tasks={x['id'] for _,x in collections['task-record']}
+ errors.extend(task_rubric_errors([x for _,x in collections['task-record']]))
  judgments_by_model={m['id']:{j['id'] for j in m['capabilities']+m['performance_characteristics']} for _,m in collections['model-profile']}
  for _,b in collections['benchmark-record']:
   for ident in b['judgment_ids']:
@@ -100,7 +102,7 @@ def run():
   if (r['operation']=='baseline')!=(prior is None):errors.append('Incorrect baseline/update operation '+r['id'])
   if (r['operation']=='remove')!=(r['value'] is None):errors.append('Invalid removal value '+r['id'])
   latest[key]=r
-  type_schema={'model':'model-profile','provider':'provider-profile','price':'price-record','access':'access-record','release':'release-record','source':'source-record','task':'task-record','alias':'alias-record','behavior':'behavior-record','access_coverage':'access-coverage-record','benchmark':'benchmark-record','research_coverage':'research-coverage-record'}.get(r['entity_type'])
+  type_schema={'model':'model-profile','provider':'provider-profile','price':'price-record','access':'access-record','release':'release-record','source':'source-record','task':'task-record','alias':'alias-record','behavior':'behavior-record','access_coverage':'access-coverage-record','benchmark':'benchmark-record','research_coverage':'research-coverage-record','research_contract':'research-contract-record','research_run':'research-run-record'}.get(r['entity_type'])
   if type_schema and r['value'] is not None:
    validator=Draft202012Validator(json.loads((ROOT/'schema'/f'{type_schema}.schema.json').read_text()),format_checker=FormatChecker())
    for e in validator.iter_errors(r['value']):errors.append(f"Historical payload {r['id']}: {e.message}")
@@ -114,6 +116,12 @@ def run():
      if j['scope']!=original['classification']:errors.append('Original mapping scope differs '+j['id'])
  if preserved:errors.append('Migration originals missing from baseline history')
  current={key:value for key,(_,value) in canonical(ROOT).items()}
+ for _,research_run in collections['research-run-record']:
+  try:
+   run_revisions=[r for r in revisions if r['entity_type']=='research_run' and r['entity_id']==research_run['id']]
+   evidence_state=baseline_state(revisions,run_revisions[-1]['id']) if run_revisions and run_revisions[-1]['value']==research_run else current
+   errors.extend(run_errors(research_run,baseline_state(revisions,research_run['baseline_revision_id']),evidence_state))
+  except (KeyError,ValueError) as error:errors.append(research_run['id']+': invalid research baseline '+str(error))
  if snapshot(last_date,revisions)!=current:errors.append('History/current mismatch; capture canonical changes before publishing')
  for _,m in collections['model-profile']:
   if not m['evidence_ids']:errors.append(f"{m['id']}: no profile provenance")
