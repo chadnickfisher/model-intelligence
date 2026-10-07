@@ -9,15 +9,16 @@ api_compatibility: []
 access_methods:
 - Managed inference across creators; on-demand/service tiers, selected batch and provisioned modes.
 geographic_availability:
-- '{"status": "partial", "summary": "Regional, geography-cross-region and global inference are distinct; select
-  exact deployment before compliance comparison."}'
+- '{"status": "partial", "summary": "Regional, geography-cross-region and global inference are distinct;
+  select exact deployment before compliance comparison."}'
 - not_exhaustively_verified
 rate_limits:
 - '{"status": "partial", "summary": "Model, region and account-specific quotas unverified."}'
 caching_batching: []
 privacy_data_use:
-- '{"status": "public_verified", "summary": "Model providers lack access to deployment accounts, customer prompts/completions
-  and logs. Retention and abuse-monitoring exceptions need model/feature review."}'
+- AWS-operated deployment accounts isolate model providers from prompts, completions and logs. Default
+  zero retention has model/feature and flagged-CSAM exceptions; configure regional retention mode and
+  review exact model requirements.
 reliability: []
 model_ids:
 - claude-fable-5-1
@@ -50,8 +51,11 @@ evidence_ids:
 - src-4d070c5c8c67
 - src-752375ff0c97
 - src-e1910c5126bc
+- src-45084a6538d2
+- src-4db2307f55ee
 notes:
-- AWS bill, model terms and model access approval may apply. Cloud bill is distinct from creator's app subscription.
+- AWS bill, model terms and model access approval may apply. Cloud bill is distinct from creator's app
+  subscription.
 limitations:
 - Privacy/data-use details were not fully verified in this baseline.
 - Exact public or account-specific quotas were not established.

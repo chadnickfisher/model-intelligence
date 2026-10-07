@@ -37,9 +37,11 @@ specifications:
     evidence_ids:
     - src-521c059d5d6a
   maximum_output:
-    value: null
-    status: unknown
-    conditions: []
+    value:
+      videos_per_request: 1
+    status: documented
+    conditions:
+    - Video count for the standard Gemini Developer API preview; not a token output limit.
     evidence_ids:
     - src-521c059d5d6a
   modalities:

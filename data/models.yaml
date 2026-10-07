@@ -101,8 +101,8 @@ records:
   name: Embed 5 Fast
   creator: Cohere
   family: Embed
-  status: unknown
-  local: unknown
+  status: active
+  local: available
   profile: models/cohere/cohere-embed-5-fast/profile.yaml
   readme: models/cohere/cohere-embed-5-fast/README.md
 - id: cohere-embed-5-pro

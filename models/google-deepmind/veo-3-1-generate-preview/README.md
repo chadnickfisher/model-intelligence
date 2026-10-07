@@ -23,9 +23,9 @@ Conditions: Not established in this pass
 
 Failure modes / limitations: Not established in this pass
 
-Supporting sources: [Veo generation guide](https://ai.google.dev/gemini-api/docs/veo) · [Veo 3.1 API model documentation](https://ai.google.dev/gemini-api/docs/models/veo-3.1-generate-preview)
+Supporting sources: [Generate videos with Veo 3.1 in Gemini API](https://ai.google.dev/gemini-api/docs/veo) · [Veo 3.1 API model documentation](https://ai.google.dev/gemini-api/docs/models/veo-3.1-generate-preview)
 
-Contradictory or limiting sources: [Veo generation guide](https://ai.google.dev/gemini-api/docs/veo) · [Video generation overview](https://ai.google.dev/gemini-api/docs/video)
+Contradictory or limiting sources: [Generate videos with Veo 3.1 in Gemini API](https://ai.google.dev/gemini-api/docs/veo) · [Video generation in the Gemini API](https://ai.google.dev/gemini-api/docs/video)
 
 Evidence notes: task-conditioned synthesis; no inference runs performed; Observation obs-a1dcd03b9809: Native audio, frame controls, reference images and extension fit directed short cinematic shots.; Observation obs-7d1f6921bea0: Multi-video reasoning unsupported; non-English unevaluated; audio processing/safety blocks and variable latency occur.; Observation obs-6dfa41ffcfec: Google now recommends Omni as default video option, reserving Veo for particular controls/legacy integration.
 
@@ -67,7 +67,7 @@ Conditions: Not established in this pass
 
 Failure modes / limitations: Not established in this pass
 
-Supporting sources: [Veo generation guide](https://ai.google.dev/gemini-api/docs/veo)
+Supporting sources: [Generate videos with Veo 3.1 in Gemini API](https://ai.google.dev/gemini-api/docs/veo)
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
@@ -80,7 +80,7 @@ Evidence notes: Published range during peak periods, not independently measured 
 | architecture | Unknown / not established |
 | parameters | Unknown / not established |
 | context window | 1024 |
-| maximum output | Unknown / not established |
+| maximum output | videos per request: 1 |
 | modalities | input: text; image; prior_generated_video_for_extension; output: video; synchronized_audio |
 | language support | fully supported: English; other languages: not evaluated; may work with variable results; evidence ids: src-6fab7b07e4f3 |
 
@@ -134,4 +134,4 @@ Local conditions: Not established in this pass
 
 ## Sources
 
-[Veo generation guide](https://ai.google.dev/gemini-api/docs/veo) · [Gemini API rate limits](https://ai.google.dev/gemini-api/docs/rate-limits) · [Veo 3.1 API model documentation](https://ai.google.dev/gemini-api/docs/models/veo-3.1-generate-preview) · [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog) · [Veo detail-accuracy question and support reply](https://discuss.ai.google.dev/t/query-differences-in-details-of-decoration-between-veo-3-1-generate-preview-and-veo-3-1-fast-preview/108272)
+[Generate videos with Veo 3.1 in Gemini API](https://ai.google.dev/gemini-api/docs/veo) · [Gemini API rate limits](https://ai.google.dev/gemini-api/docs/rate-limits) · [Veo 3.1 API model documentation](https://ai.google.dev/gemini-api/docs/models/veo-3.1-generate-preview) · [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog) · [Veo detail-accuracy question and support reply](https://discuss.ai.google.dev/t/query-differences-in-details-of-decoration-between-veo-3-1-generate-preview-and-veo-3-1-fast-preview/108272)

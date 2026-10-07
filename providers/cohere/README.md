@@ -28,7 +28,8 @@ Verified: 2026-10-06
 
 ## Privacy data use
 
-- {"status": "public_verified", "summary": "Cohere-hosted de-identified input may be used in limited cases permitted by controls/terms; private customer deployments do not expose prompts to Cohere. Do not assume universal no-training."}
+- Cohere SaaS prompts/generations can be opted out of training; logged content normally deleted after 30 days with legal, contract, abuse and training exceptions. Approved zero retention is separately arranged.
+- Cohere does not receive content in private/third-party cloud deployments; partner policies and support exceptions must be checked separately.
 
 ## Notes
 
@@ -36,14 +37,15 @@ Verified: 2026-10-06
 
 ## Limitations
 
-- Not established in this baseline.
+- No native API residency, guaranteed minimum throughput, exact Fast SLA or measured uptime established.
+- Current status page has no separate Embed 5 component; operational status does not establish incident absence.
 
 ## Offers
 
-4 linked model(s), 9 access route(s), 7 price record(s).
+4 linked model(s), 9 access route(s), 9 price record(s).
 
 [Access](../../data/access.yaml) · [Pricing](../../data/pricing.yaml)
 
 ## Sources
 
-[cohere.com](https://cohere.com/pricing) · [docs.cohere.com](https://docs.cohere.com/docs/rate-limits) · [docs.cohere.com](https://docs.cohere.com/docs/command-a-plus) · [docs.cohere.com](https://docs.cohere.com/docs/north-small-translate-1.0) · [artificialanalysis.ai](https://artificialanalysis.ai/articles/cohere-launches-open-weights-model-command-a-more-than-a-year-since-the-command-a-release) · [cohere.com](https://cohere.com/blog/embed-5)
+[cohere.com](https://cohere.com/pricing) · [docs.cohere.com](https://docs.cohere.com/docs/rate-limits) · [docs.cohere.com](https://docs.cohere.com/docs/command-a-plus) · [docs.cohere.com](https://docs.cohere.com/docs/north-small-translate-1.0) · [artificialanalysis.ai](https://artificialanalysis.ai/articles/cohere-launches-open-weights-model-command-a-more-than-a-year-since-the-command-a-release) · [Introducing Embed 5](https://cohere.com/blog/embed-5) · [Enterprise Data Commitments](https://cohere.com/enterprise-data-commitments) · [Cohere Privacy Policy](https://cohere.com/privacy) · [Cohere Status Page](https://status.cohere.com/)

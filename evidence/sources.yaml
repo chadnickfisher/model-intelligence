@@ -146,8 +146,8 @@ records:
   accessed_at: '2026-10-06'
   claim_scope: []
   limitations:
-  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
-    with methodology, model mode, harness and date.
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores
+    vary with methodology, model mode, harness and date.
 - id: src-0ad851468a32
   url: https://artificialanalysis.ai/models/qwen3-8-max
   title: Qwen3.8 Max 0902 hosted profile
@@ -157,8 +157,8 @@ records:
   accessed_at: '2026-10-06'
   claim_scope: []
   limitations:
-  - Profile is the 0902 hosted variant; do not transfer its scores or prices to the August downloadable checkpoint
-    without equivalence evidence.
+  - Profile is the 0902 hosted variant; do not transfer its scores or prices to the August downloadable
+    checkpoint without equivalence evidence.
 - id: src-0af45d93e83c
   url: https://huggingface.co/Qwen/Qwen3.8-Flash-Next/blob/main/LICENSE
   title: Qwen Community License 1.0
@@ -232,7 +232,7 @@ records:
 - id: src-10e39629c3d3
   url: https://ai.google.dev/gemini-api/docs/rate-limits
   title: Gemini API rate limits
-  publisher: null
+  publisher: Google
   source_type: primary
   published_at: null
   accessed_at: '2026-10-07'
@@ -241,7 +241,10 @@ records:
   - preview restrictions
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
-  limitations: []
+  - Limits are project/model/tier specific; active limits are shown in AI Studio and not guaranteed. RPD
+    resets midnight Pacific. Spend-based limits depend on billing history and account standing.
+  limitations:
+  - No active project/account inspected and no exact Veo numeric quota established.
 - id: src-116c1a7f3be0
   url: https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash
   title: Gemini 3.8 Flash API model documentation
@@ -330,8 +333,8 @@ records:
   accessed_at: '2026-10-06'
   claim_scope: []
   limitations:
-  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
-    with methodology, model mode, harness and date.
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores
+    vary with methodology, model mode, harness and date.
 - id: src-1dac5785145f
   url: https://docs.cohere.com/docs/north-small-translate-1.0
   title: null
@@ -351,8 +354,8 @@ records:
   accessed_at: '2026-10-06'
   claim_scope: []
   limitations:
-  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
-    with methodology, model mode, harness and date.
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores
+    vary with methodology, model mode, harness and date.
 - id: src-2034e17f9f4e
   url: https://artificialanalysis.ai/models/deepseek-v4-1-flash
   title: DeepSeek V4.1 Flash max independently profiled
@@ -362,8 +365,8 @@ records:
   accessed_at: '2026-10-06'
   claim_scope: []
   limitations:
-  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
-    with methodology, model mode, harness and date.
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores
+    vary with methodology, model mode, harness and date.
 - id: src-21fe0d4c63a7
   url: https://ai.google.dev/gemini-api/docs/models/gemini-3-pro-image
   title: Nano Banana Pro API model documentation
@@ -430,8 +433,8 @@ records:
   accessed_at: '2026-10-06'
   claim_scope: []
   limitations:
-  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
-    with methodology, model mode, harness and date.
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores
+    vary with methodology, model mode, harness and date.
 - id: src-280758cc57a6
   url: https://api-docs.deepseek.com/quick_start/pricing/
   title: DeepSeek live pricing and alias mapping
@@ -673,8 +676,8 @@ records:
   accessed_at: '2026-10-06'
   claim_scope: []
   limitations:
-  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
-    with methodology, model mode, harness and date.
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores
+    vary with methodology, model mode, harness and date.
 - id: src-4424584ee706
   url: https://huggingface.co/zai-org/GLM-5.3
   title: GLM-5.3 model card
@@ -826,7 +829,7 @@ records:
 - id: src-521c059d5d6a
   url: https://ai.google.dev/gemini-api/docs/models/veo-3.1-generate-preview
   title: Veo 3.1 API model documentation
-  publisher: null
+  publisher: Google
   source_type: primary
   published_at: null
   accessed_at: '2026-10-07'
@@ -835,7 +838,11 @@ records:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
   - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
-  limitations: []
+  - Standard preview code, text/image inputs, video with audio output, 1,024 text-input tokens and one
+    output video are documented. Latest update is January 2026. AI Studio trial link is present.
+  limitations:
+  - Model card groups standard/Fast codes; latest update is month precision, not an immutable version
+    or weights-change proof.
 - id: src-525e7f64ea10
   url: https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/LICENSE
   title: null
@@ -994,7 +1001,7 @@ records:
   publisher: null
   source_type: independent-evaluation
   published_at: null
-  accessed_at: '2026-10-06'
+  accessed_at: '2026-10-07'
   claim_scope:
   - Haiku task-specific knowledge and long-context results; other composite is estimated
   limitations: []
@@ -1017,18 +1024,22 @@ records:
   accessed_at: '2026-10-06'
   claim_scope: []
   limitations:
-  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
-    with methodology, model mode, harness and date.
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores
+    vary with methodology, model mode, harness and date.
 - id: src-5f9e9fc2ef33
   url: https://ai.google.dev/gemini-api/docs/video
-  title: Video generation overview
-  publisher: null
+  title: Video generation in the Gemini API
+  publisher: Google
   source_type: primary
   published_at: '2026-06-30'
-  accessed_at: '2026-10-06'
+  accessed_at: '2026-10-07'
   claim_scope:
   - Google currently recommends Omni as default, Veo for particular controls
-  limitations: []
+  - Current guide promotes Omni for new video work and preserves Veo 3.1 for certain legacy extension
+    and last-frame workflows.
+  limitations:
+  - Vendor recommendation is not independent comparative quality evidence. Overview mentions generateContent
+    while dedicated Veo instructions use the separate generation workflow; retain exact route and method.
 - id: src-608eb672ebb7
   url: https://openai.com/index/introducing-gpt-6-sol-and-luna/
   title: Introducing GPT-6 Sol and Luna
@@ -1182,24 +1193,29 @@ records:
   limitations: []
 - id: src-6fab7b07e4f3
   url: https://ai.google.dev/gemini-api/docs/veo
-  title: Veo generation guide
-  publisher: null
+  title: Generate videos with Veo 3.1 in Gemini API
+  publisher: Google
   source_type: primary
   published_at: null
   accessed_at: '2026-10-07'
   claim_scope:
   - Veo duration, resolution, controls, languages, failure modes
   - Dated post-launch finding; retain its model, client, service or runtime scope.
+  - Documents frame/reference/extension controls, always-on audiovisual output, 4/6/8-second clips, 1080p/4K
+    and references requiring eight seconds, extension limited to 720p, English evaluated and other languages
+    unevaluated. Lists safety/audio blocks, two-day retention and published 11-second to six-minute latency.
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
+  - Vendor documentation and examples establish interface/conditions, not measured quality, deterministic
+    generation or all-product eligibility.
 - id: src-6fea481a4699
   url: https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html
   title: null
   publisher: null
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-06'
+  accessed_at: '2026-10-07'
   claim_scope: []
   limitations: []
 - id: src-7153ea4f2bae
@@ -1344,8 +1360,8 @@ records:
   accessed_at: '2026-10-06'
   claim_scope: []
   limitations:
-  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
-    with methodology, model mode, harness and date.
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores
+    vary with methodology, model mode, harness and date.
 - id: src-7a7fa65f65f1
   url: https://elevenlabs.io/docs/eleven-api/resources/zero-retention-mode
   title: null
@@ -1374,8 +1390,8 @@ records:
   accessed_at: '2026-10-06'
   claim_scope: []
   limitations:
-  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
-    with methodology, model mode, harness and date.
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores
+    vary with methodology, model mode, harness and date.
 - id: src-7e6c3dd9add1
   url: https://docs.z.ai/guides/llm/glm-5.3
   title: GLM5.3 endpoint guide
@@ -1404,7 +1420,7 @@ records:
   publisher: null
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-06'
+  accessed_at: '2026-10-07'
   claim_scope: []
   limitations: []
 - id: src-84d1a7712d6a
@@ -1449,13 +1465,16 @@ records:
   - Monetary rates not extractable; do not import AA snapshot as official current quote.
 - id: src-89852246e77a
   url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/zero-data-retention
-  title: null
-  publisher: null
+  title: Cloud zero data retention
+  publisher: Google
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-06'
-  claim_scope: []
-  limitations: []
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Managed GA/preGA models are not trained/fine-tuned on customer data without permission. Logging exceptions
+    and feature settings govern zero retention; Search-derived query retention3days, Maps30days.
+  limitations:
+  - Not every listed feature applies to Veo; no project exception verified.
 - id: src-8cb15ff6ddd4
   url: https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct
   title: Llama 4 Scout / Maverick model card
@@ -1468,8 +1487,8 @@ records:
   limitations: []
 - id: src-8eb2666e2af7
   url: https://ai.google.dev/gemini-api/docs/deprecations
-  title: Gemini API deprecations
-  publisher: null
+  title: Gemini deprecations
+  publisher: Google
   source_type: primary
   published_at: null
   accessed_at: '2026-10-07'
@@ -1477,7 +1496,11 @@ records:
   - Imagen 4 shutdown 2026-08-17
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
-  limitations: []
+  - Table lists standard/Fast preview release2025-10-15 and shutdown2026-10-22, recommending Gemini Omni1.1Flash.
+    Lite release2026-03-31 has the same shutdown.
+  limitations:
+  - HTML URL fetch failed on this continuation; .md route succeeded. Shutdown is a prospective documented
+    date, not observed outage.
 - id: src-905d5d7a5fb4
   url: https://docs.x.ai/developers/models
   title: null
@@ -1531,8 +1554,8 @@ records:
   accessed_at: '2026-10-06'
   claim_scope: []
   limitations:
-  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
-    with methodology, model mode, harness and date.
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores
+    vary with methodology, model mode, harness and date.
 - id: src-94efd6cf8bb7
   url: https://artificialanalysis.ai/models/comparisons/llama-4-scout-vs-llama-3-1-instruct-405b
   title: Scout independent comparison
@@ -1542,8 +1565,8 @@ records:
   accessed_at: '2026-10-06'
   claim_scope: []
   limitations:
-  - A 10M window does not establish reliable 10M retrieval or reasoning. Pricing/access columns are not used
-    as licensing authority.
+  - A 10M window does not establish reliable 10M retrieval or reasoning. Pricing/access columns are not
+    used as licensing authority.
 - id: src-96b521869e71
   url: https://www.microsoft.com/en-us/research/blog/phi-4-reasoning-vision-and-the-lessons-of-training-a-multimodal-reasoning-model/
   title: Microsoft selective vision-reasoning evaluation
@@ -1597,10 +1620,10 @@ records:
   - No usable matched independent performance evidence extracted in this bounded pass.
 - id: src-9d4f7ae81230
   url: https://cohere.com/blog/embed-5
-  title: null
-  publisher: null
+  title: Introducing Embed 5
+  publisher: Cohere
   source_type: primary
-  published_at: null
+  published_at: '2026-09-30'
   accessed_at: '2026-10-07'
   claim_scope:
   - Dated post-launch finding; retain its model, client, service or runtime scope.
@@ -1639,7 +1662,8 @@ records:
   published_at: null
   accessed_at: '2026-10-07'
   claim_scope:
-  - Command A+ 20 requests/min trial; 1000 calls/month for trial/new Chat variants; production contact sales.
+  - Command A+ 20 requests/min trial; 1000 calls/month for trial/new Chat variants; production contact
+    sales.
   - 'Embed 2000 inputs/min, image limits differ: 5 trial/400 production.'
   - Trial key monthly cap; no model-specific North Translate RPM row.
   limitations: []
@@ -1668,8 +1692,8 @@ records:
   accessed_at: '2026-10-06'
   claim_scope: []
   limitations:
-  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
-    with methodology, model mode, harness and date.
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores
+    vary with methodology, model mode, harness and date.
 - id: src-a8bf24d0415e
   url: https://docs.together.ai/docs/privacy-and-security
   title: null
@@ -1744,8 +1768,8 @@ records:
   accessed_at: '2026-10-06'
   claim_scope: []
   limitations:
-  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
-    with methodology, model mode, harness and date.
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores
+    vary with methodology, model mode, harness and date.
 - id: src-b17514a392bd
   url: https://docs.mistral.ai/inference/pricing
   title: Mistral standard pricing
@@ -1760,7 +1784,7 @@ records:
 - id: src-b88c4950bbf3
   url: https://ai.google.dev/gemini-api/docs/pricing
   title: Gemini Developer API pricing
-  publisher: null
+  publisher: Google
   source_type: primary
   published_at: null
   accessed_at: '2026-10-07'
@@ -1770,7 +1794,12 @@ records:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
   - Gemma4 free input/output/cache/storage; paid tier not available.
-  limitations: []
+  - Standard preview audio/video costs USD0.40 per second at720/1080p and0.60 at4K. Fast and Lite have
+    separate rates. Free tier unavailable; Lite4K explicitly unsupported. Only successful video generation
+    is billed.
+  limitations:
+  - Current advertised tariff does not establish historical effective dates, taxes, account entitlement,
+    monetary credits or actual bills.
 - id: src-b954960ad3a2
   url: https://chatgpt.com/pricing/
   title: ChatGPT pricing
@@ -2008,8 +2037,8 @@ records:
   accessed_at: '2026-10-06'
   claim_scope: []
   limitations:
-  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
-    with methodology, model mode, harness and date.
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores
+    vary with methodology, model mode, harness and date.
 - id: src-d35a477c49c4
   url: https://deepmind.google/models/model-cards/gemini-3-pro-image/
   title: Gemini 3 Pro Image model card
@@ -2191,8 +2220,8 @@ records:
   accessed_at: '2026-10-06'
   claim_scope: []
   limitations:
-  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores vary
-    with methodology, model mode, harness and date.
+  - Composite metric is not a task-specific universal ranking. Provider speed is not local speed. Scores
+    vary with methodology, model mode, harness and date.
 - id: src-e7129e9021b6
   url: https://huggingface.co/moonshotai/Kimi-K3
   title: Kimi K3 model card
@@ -2409,7 +2438,7 @@ records:
   publisher: null
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-06'
+  accessed_at: '2026-10-07'
   claim_scope:
   - Current models
   - multilingual and visual inputs
@@ -2547,8 +2576,8 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - Model-route aggregates combine different harness configurations. Mechanical bytes-only tasks; not semantic
-    correctness. Data inspected on access date; exact server checkpoint/quantization may be undisclosed.
+  - Model-route aggregates combine different harness configurations. Mechanical bytes-only tasks; not
+    semantic correctness. Data inspected on access date; exact server checkpoint/quantization may be undisclosed.
 - id: src-7224ceac93af
   url: https://github.com/alexshpunt/explicit-edit-benchmark/blob/main/docs/methodology.md
   title: Explicit Edit methodology
@@ -2559,8 +2588,8 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - First and final exactness differ; verifier feedback is adaptive, not independent retry. Methodology and
-    dataset views can change.
+  - First and final exactness differ; verifier feedback is adaptive, not independent retry. Methodology
+    and dataset views can change.
 - id: src-0c5ee375aae3
   url: https://github.com/alexshpunt/explicit-edit-benchmark/blob/main/docs/tasks.md
   title: Explicit Edit task definitions
@@ -2582,8 +2611,8 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - Two private production codebases; model-plus-harness results, not controlled base-model comparisons. Many
-    configurations have only one run.
+  - Two private production codebases; model-plus-harness results, not controlled base-model comparisons.
+    Many configurations have only one run.
 - id: src-02b09208ceab
   url: https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/results/README.md
   title: Bug Hunt Bench receipts and boundaries
@@ -2594,8 +2623,8 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - Public scores, per-bug indices, prompts and accounting; seeded repos, answer keys, model diffs and judge
-    transcripts remain withheld, limiting independent reproduction.
+  - Public scores, per-bug indices, prompts and accounting; seeded repos, answer keys, model diffs and
+    judge transcripts remain withheld, limiting independent reproduction.
 - id: src-0b72694a5dea
   url: https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/results/run-notes.md
   title: Bug Hunt Bench individual configuration caveats
@@ -2618,9 +2647,9 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - Small synthetic set; Codex subscription environment. Tests/harness/full outputs unpublished. Repair feedback
-    reveals failed hidden tests. Cross-repair pretends another model's code was the repair model's previous
-    answer.
+  - Small synthetic set; Codex subscription environment. Tests/harness/full outputs unpublished. Repair
+    feedback reveals failed hidden tests. Cross-repair pretends another model's code was the repair model's
+    previous answer.
 - id: src-60a4ffa68522
   url: https://arxiv.org/html/2606.07314v1
   title: QBugLM quantum software debugging
@@ -2631,9 +2660,9 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - Five 5-qubit circuit families with injected single bugs, simulation oracle, five repeats/config. Text contains
-    contradictory category phrasing and calls Qwen reasoning-capable despite its non-thinking checkpoint; retain
-    narrow measured findings with low confidence.
+  - Five 5-qubit circuit families with injected single bugs, simulation oracle, five repeats/config. Text
+    contains contradictory category phrasing and calls Qwen reasoning-capable despite its non-thinking
+    checkpoint; retain narrow measured findings with low confidence.
 - id: src-844ba1375784
   url: https://zenn.dev/nicktominaga/articles/closedcode-local-llm-benchmark?locale=en
   title: Local ClosedCode editing and CSV repair study
@@ -2644,8 +2673,8 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - Small single-file examples; limited repeats, AI-translated page; dated Ollama quantizations on ASUS GX10,
-    not all Qwen/gpt-oss deployments.
+  - Small single-file examples; limited repeats, AI-translated page; dated Ollama quantizations on ASUS
+    GX10, not all Qwen/gpt-oss deployments.
 - id: src-5b92e98d55fe
   url: https://aider.chat/docs/leaderboards/
   title: Aider Polyglot gpt-oss-120b result
@@ -2668,8 +2697,8 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - Single private Python/PySide6 codebase; author-reported results with model-assisted verification, no public
-    patches. Visible relative publication date only.
+  - Single private Python/PySide6 codebase; author-reported results with model-assisted verification,
+    no public patches. Visible relative publication date only.
 - id: src-297787337c0c
   url: https://www.reddit.com/r/DeepSeek/comments/1vnhvka/deepseek_v4_flash_0731_vs_deepseek_v4_pro_0813/
   title: DeepSeek V4 Pro 0813 implementation follow-up
@@ -2680,11 +2709,11 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - 15-item supplied fix plan, one private project. Mechanically checked claims are author reports, not independently
-    reproduced here.
+  - 15-item supplied fix plan, one private project. Mechanically checked claims are author reports, not
+    independently reproduced here.
   - Single private repository; diffs and results not independently reproduced. Scope-restricted instructions
-    already specified required regressions. Do not transfer oldFlash 0731 findings toV 4.1 Flash. Exact date
-    unresolved.
+    already specified required regressions. Do not transfer oldFlash 0731 findings toV 4.1 Flash. Exact
+    date unresolved.
 - id: src-57fee0d3a2b2
   url: https://arxiv.org/html/2608.18595v1
   title: OdinEval program repair
@@ -2695,8 +2724,8 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - 168 eligible Odin issues, one patch response, supplied source scope. Article describes planned full manifests;
-    artifact completeness not independently audited. Tests cannot prove full semantics.
+  - 168 eligible Odin issues, one patch response, supplied source scope. Article describes planned full
+    manifests; artifact completeness not independently audited. Tests cannot prove full semantics.
 - id: src-404846cf4d6a
   url: https://github.com/TheTom/offlabel/blob/main/models/qwen3.8-27b.md
   title: Qwen3.8-27B local deployment probes
@@ -2802,9 +2831,9 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - Live page/search snapshots disagree on run counts and aggregate ELO. Exact run dates, versions, tool budget
-    and execution-based test validity not established. Retain task examples as low-confidence leads, not categorical
-    ratings.
+  - Live page/search snapshots disagree on run counts and aggregate ELO. Exact run dates, versions, tool
+    budget and execution-based test validity not established. Retain task examples as low-confidence leads,
+    not categorical ratings.
 - id: src-d478029ae6e3
   url: https://github.com/DenCoy-cloud/Local-llm-coding-python-benchmark
   title: 'Reasoning vs Instruct: A Local Python Coding Benchmark Across Two 8B Model Families'
@@ -2909,8 +2938,8 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - Commercial review-product evaluation; pipeline, judge and filtering define precision. Small Signal set;
-    no universal failure rates. Historical Opus 5 tests are different snapshots.
+  - Commercial review-product evaluation; pipeline, judge and filtering define precision. Small Signal
+    set; no universal failure rates. Historical Opus 5 tests are different snapshots.
 - id: src-f0ec48c0d013
   url: https://www.coderabbit.ai/blog/sonnet-5-5-model-review
   title: 'Claude Sonnet 5.5 for code review: More catches than Sonnet 5, in half the time'
@@ -2933,8 +2962,8 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - Most comments not judged valid; independent validation still necessary. Different historical pipeline snapshots
-    cannot form a cross-model leaderboard.
+  - Most comments not judged valid; independent validation still necessary. Different historical pipeline
+    snapshots cannot form a cross-model leaderboard.
 - id: src-5427d679c7ea
   url: https://www.coderabbit.ai/blog/gpt-6-astra-code-review-evaluation
   title: 'GPT-6 Astra review: Code review results, privacy, and cost'
@@ -2945,8 +2974,8 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - Early directional product-harness result. Sample size, effort and false-positive rate not disclosed in
-    inspected article. Do not interpret as overall reviewer accuracy.
+  - Early directional product-harness result. Sample size, effort and false-positive rate not disclosed
+    in inspected article. Do not interpret as overall reviewer accuracy.
 - id: src-04881033b5ad
   url: https://entelligence.ai/blogs/gpt-6-astra-cost-1.6x-more-per-verified-bug-than-gpt-5.6-sol
   title: GPT-6 Astra Cost 1.6x More Per Verified Bug Than GPT-5.6 Sol
@@ -2958,8 +2987,8 @@ records:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
   - No full recall denominator, repository context or variance. Judges were contestants and showed self-preference.
-    Article asserts artifacts in bench/ but no directly usable artifact link was exposed in inspected page.
-    Commercial conflict. Contradicts a simple claim Astra always finds more than Sol.
+    Article asserts artifacts in bench/ but no directly usable artifact link was exposed in inspected
+    page. Commercial conflict. Contradicts a simple claim Astra always finds more than Sol.
 - id: src-9bfd85d12f58
   url: https://diffdojo.com/benchmark.html
   title: Living AI code review benchmark
@@ -2970,9 +2999,9 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - Mostly single planted issues; requirements tell model where to look. Holdout came from previously public-answer
-    library. Grader bias uncorrected. Parse failures treated as approve may accidentally inflate clean accuracy.
-    Do not compare to organic production-bug recall.
+  - Mostly single planted issues; requirements tell model where to look. Holdout came from previously
+    public-answer library. Grader bias uncorrected. Parse failures treated as approve may accidentally
+    inflate clean accuracy. Do not compare to organic production-bug recall.
 - id: src-3df062ca530b
   url: https://github.com/gemanor/jev-code-review-benchmark/blob/95932b43f227dc759a7147d4e2d371388a148eb8/README.md
   title: Can Jev make a code review agent cheaper and faster?
@@ -2983,8 +3012,8 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - Small constructed rule checks, saturated for both comparison models; not open-ended PR bug discovery. Family-clustered
-    examples not independent samples. Cheaper Gemini setting was rejected by API.
+  - Small constructed rule checks, saturated for both comparison models; not open-ended PR bug discovery.
+    Family-clustered examples not independent samples. Cheaper Gemini setting was rejected by API.
 - id: src-ec6c5c7dddc5
   url: https://www.coderabbit.ai/blog/nemotron-3-ultra-release
   title: 'Nemotron 3 Ultra: Coding workflows and code review benchmarks'
@@ -2995,9 +3024,9 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - Early/pre-release configuration and unspecified checkpoint hash; baseline is a mixture. June result needs
-    release-equivalence verification before promotion to current checkpoint. Retry burden and endpoint pricing
-    limit cost claims.
+  - Early/pre-release configuration and unspecified checkpoint hash; baseline is a mixture. June result
+    needs release-equivalence verification before promotion to current checkpoint. Retry burden and endpoint
+    pricing limit cost claims.
 - id: src-a8450f23b0f1
   url: https://arxiv.org/html/2605.02096v1
   title: Foundation Models as Oracles for Refactoring Correctness Detection
@@ -3008,9 +3037,9 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - 'Main set all buggy: reported accuracy equals recall, not precision. Gemma IT suffix/quantization and Gemini
-    immutable snapshot unspecified. Small Java witnesses do not establish whole-repository review. No transfer
-    from tested Phi 4-14 B or Llama 3.2 to requested variants.'
+  - 'Main set all buggy: reported accuracy equals recall, not precision. Gemma IT suffix/quantization
+    and Gemini immutable snapshot unspecified. Small Java witnesses do not establish whole-repository
+    review. No transfer from tested Phi 4-14 B or Llama 3.2 to requested variants.'
 - id: src-a0e67d807af9
   url: https://arxiv.org/html/2602.08146v1
   title: 'Test vs Mutant: Adversarial LLM Agents for Robust Unit Test Generation'
@@ -3022,8 +3051,8 @@ records:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
   - Eight-month-old task-specific evidence on the same named open checkpoint; provider precision and effort
-    unspecified. It demonstrates a particular multi-agent method, not unaided test-writing ability or production
-    coverage.
+    unspecified. It demonstrates a particular multi-agent method, not unaided test-writing ability or
+    production coverage.
 - id: src-995284168dc8
   url: https://arxiv.org/html/2603.23443v1
   title: Evaluating LLM-Based Test Generation Under Software Evolution
@@ -3034,9 +3063,9 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - Baseline 100% is selection, not population reliability. Six-month-old preprint; exact API snapshots, quantization/effort
-    unspecified. Gemini model label lacks Preview. Supports conditional failure-mode warnings, not current
-    cross-model ranking.
+  - Baseline 100% is selection, not population reliability. Six-month-old preprint; exact API snapshots,
+    quantization/effort unspecified. Gemini model label lacks Preview. Supports conditional failure-mode
+    warnings, not current cross-model ranking.
 - id: src-39c617007079
   url: https://arxiv.org/html/2607.02469v1
   title: 'TestEvo-Bench: An Executable and Live Benchmark for Test and Code Co-Evolution'
@@ -3047,9 +3076,9 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - Preview/API snapshot not pinned; cited model-card link is Gemini 3 Pro rather than 3.1. Main table uses
-    task averages, appendix cost table method averages; do not mix. Budget caps scored retrospectively, not
-    fresh budget-limited reruns. Evidence only until model mapping verified.
+  - Preview/API snapshot not pinned; cited model-card link is Gemini 3 Pro rather than 3.1. Main table
+    uses task averages, appendix cost table method averages; do not mix. Budget caps scored retrospectively,
+    not fresh budget-limited reruns. Evidence only until model mapping verified.
 - id: src-3d8e22441afa
   url: https://homepages.dcc.ufmg.br/~figueiredo/publications/promise2026preprint.pdf
   title: 'High Agreement, Shallow Reasoning: A Mixed-Method Study of LLMs in Refactoring Reviews'
@@ -3060,9 +3089,9 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - All selected ground-truth examples prefer refactored code; not balanced preference detection or bug recall.
-    API endpoint/revision unspecified. Older exact-family evidence cannot transfer to Maverick. Useful as low-confidence
-    review assistance only.
+  - All selected ground-truth examples prefer refactored code; not balanced preference detection or bug
+    recall. API endpoint/revision unspecified. Older exact-family evidence cannot transfer to Maverick.
+    Useful as low-confidence review assistance only.
 - id: src-d625f31662c2
   url: https://spectrumailab.com/blog/gpt-6-1-sol-reasoning-effort-test-2026
   title: GPT-6.1 Sol reasoning effort test on two builds
@@ -3074,8 +3103,8 @@ records:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
   - Author inspected source but did not rerun reported test/Lighthouse counts or frame rates. Some machine
-    workloads overlapped and test 1 isolation changed. Two builds cannot establish stable effort ranking. This
-    is output-generation evidence, not Sol acting as a reviewer.
+    workloads overlapped and test 1 isolation changed. Two builds cannot establish stable effort ranking.
+    This is output-generation evidence, not Sol acting as a reviewer.
 - id: src-46068a29c1b7
   url: https://www.reddit.com/r/ChatGPTCoding/comments/1wxql0j/i_compared_7_gpt_models_for_code_review_on_4_prs/
   title: Seven GPT models on four code-review PRs
@@ -3086,8 +3115,8 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - AI-assisted adjudication, private code, no effort/harness/bug denominator. Search dated 2 days ago but
-    page displayed 8 h ago; exact publication unresolved. Observation only, not recommendation-quality.
+  - AI-assisted adjudication, private code, no effort/harness/bug denominator. Search dated 2 days ago
+    but page displayed 8 h ago; exact publication unresolved. Observation only, not recommendation-quality.
 - id: src-ffd197059f58
   url: https://blog.kilo.ai/p/kimi-k3
   title: Kimi K3 versus Claude Fable 5 on ten UIs
@@ -3098,8 +3127,8 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - Visual preference study, not end-to-end backend/accessibility certification. Launch-week serving/cost observations
-    are stale. Comparator is Fable 5, not 5.1. July Arena#1 is historical, not current.
+  - Visual preference study, not end-to-end backend/accessibility certification. Launch-week serving/cost
+    observations are stale. Comparator is Fable 5, not 5.1. July Arena#1 is historical, not current.
 - id: src-22dab100d07f
   url: https://www.apex-testing.org/about
   title: About APEX Testing
@@ -3110,8 +3139,8 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations:
-  - Broad code-review category includes writing tests; use task names, not category aggregate. Evaluator identities
-    and full reproducibility details not established.
+  - Broad code-review category includes writing tests; use task names, not category aggregate. Evaluator
+    identities and full reproducibility details not established.
 - id: src-f907a4c418b5
   url: https://modeldial.com/en/method
   title: ModelDial evaluation methodology
@@ -3788,8 +3817,8 @@ records:
   limitations: []
 - id: src-f1078602a2b4
   url: https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing
-  title: Google Cloud Agent Platform generative AI pricing
-  publisher: null
+  title: Cloud generative AI pricing
+  publisher: Google
   source_type: primary
   published_at: null
   accessed_at: '2026-10-07'
@@ -3797,51 +3826,65 @@ records:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
   - Google provider-specific short/long-context token rates.
-  limitations: []
+  - Veo 3.1 table lists audio/video720/1080p0.40USD and4K0.60, video-only0.20/0.40; rendered unit is /1count.
+  limitations:
+  - This pass does not normalize count to seconds or establish actual deployment billing/capacity.
 - id: src-2cc31a5ba4fd
   url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions
-  title: Google Cloud model lifecycle
-  publisher: null
+  title: Cloud model versions
+  publisher: Google
   source_type: primary
   published_at: null
   accessed_at: '2026-10-07'
   claim_scope:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
-  limitations: []
+  - Cloud GA Veo 3.1 release2025-11-17 and retirement2026-11-17or later are listed.
+  limitations:
+  - Cloud lifecycle cannot replace Developer API shutdown dates.
 - id: src-d3e41dcc2800
   url: https://support.google.com/gemini/answer/16275805
-  title: Gemini Apps plan limits
-  publisher: null
+  title: Gemini Apps limits and upgrades
+  publisher: Google
   source_type: primary
   published_at: null
   accessed_at: '2026-10-07'
   claim_scope:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
-  limitations: []
+  - Documents plan/feature/country/age-dependent use and changing limits.
+  limitations:
+  - General consumer quota documentation cannot be inherited by Veo Developer API.
 - id: src-f661101cf480
   url: https://support.google.com/gemini/answer/16126339
   title: Generate videos with Gemini Apps
-  publisher: null
+  publisher: Google
   source_type: primary
   published_at: null
   accessed_at: '2026-10-07'
   claim_scope:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
-  limitations: []
+  - Current Gemini app video help names Omni and requires signed-in account plus qualifying plan/Workspace
+    eligibility and18+ for generation.
+  limitations:
+  - Does not establish present Veo entitlement or exact preview selector.
 - id: src-f40c983ca27f
   url: https://support.google.com/flow/answer/16526234?hl=en
   title: Google Flow credits
-  publisher: null
+  publisher: Google
   source_type: primary
   published_at: null
   accessed_at: '2026-10-07'
   claim_scope:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
-  limitations: []
+  - Credits are per generation, possibly multiple generations per request. Quality8s/Extend lists 100credits.
+    Daily50credits and subscription extra credits have separate reset/nonrollover rules; nonsubscribers
+    may be blocked at peak hours.
+  limitations:
+  - Feature guide contradicts Quality Extend support. Public rates vary by plan/variant and do not prove
+    exact preview mapping.
 - id: src-24717f621aa3
   url: https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/
   title: Gemini 3.1 Pro launch
@@ -4021,15 +4064,20 @@ records:
   limitations: []
 - id: src-2fae34e08da9
   url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate?hl=en
-  title: Google Cloud Veo 3.1 model IDs
-  publisher: null
+  title: Cloud Veo 3.1 model documentation
+  publisher: Google
   source_type: primary
   published_at: null
   accessed_at: '2026-10-07'
   claim_scope:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
-  limitations: []
+  - Cloud model veo-3.1-generate-001 is GA, supports text/image-conditioned audiovisual generation, up
+    to four videos,4/6/8s,24fps,720/1080p/4K,us-central1. Fixed quota and Provisioned Throughput supported;
+    batch and pay-as-you-go not supported.
+  limitations:
+  - Related Cloud GA endpoint differs from exact Developer API preview. Quota table renders50 tokens/min
+    for prediction requests; do not reinterpret unit as tested throughput.
 - id: src-18beea801ab8
   url: https://learn.chatgpt.com/docs/changelog
   title: ChatGPT and Codex changelog
@@ -4910,28 +4958,36 @@ records:
     by this integration.
 - id: src-6ce33a536b3f
   url: https://blog.google/innovation-and-ai/technology/developers-tools/veo-3-1-gemini-api/
-  title: January 13 Veo 3.1 update
-  publisher: null
+  title: Enhanced Veo 3.1 capabilities are now available in the Gemini API.
+  publisher: Original Reddit thread participants
   source_type: primary
-  published_at: null
+  published_at: '2026-01-13'
   accessed_at: '2026-10-07'
   claim_scope:
   - Dated post-launch finding; retain its model, client, service or runtime scope.
+  - API/Studio product manager announces improved reference identity/background handling, native portrait
+    references and improved 1080p/4K generation. Rollout includes Gemini API and Vertex AI.
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
+  - Dated product update is a vendor report, not a pinned weights change or controlled recovery from audio
+    complaints.
 - id: src-380f8d1fb515
   url: https://www.reddit.com/r/VEO3/comments/1tjhidu/veo_has_become_completely_useless_since_the_update/
-  title: Mixed Veo post-update experiences
-  publisher: null
+  title: Veo has become completely useless since the update
+  publisher: Original Reddit thread participants
   source_type: practitioner
   published_at: null
   accessed_at: '2026-10-07'
   claim_scope:
   - Dated post-launch finding; retain its model, client, service or runtime scope.
+  - Original thread includes failures, variant/product confusion and contradictory successful Omni-to-Veo
+    rollback reports.
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
+  - Relative timestamps do not establish an absolute publication day; Flow/app labels do not pin the standard
+    API. Anecdotes do not establish prevalence or causal regression.
 - id: src-d38284da2814
   url: https://github.com/openai/codex/issues/45347
   title: Astra September 13–14 post-fix instruction retention
@@ -5716,7 +5772,9 @@ records:
   accessed_at: '2026-10-07'
   claim_scope:
   - Exact Azure partner model listing verified.
-  limitations: []
+  limitations:
+  - Quick facts label Preview and text/image output, conflicting with vector-only description and creator
+    GA; do not import generation capabilities.
 - id: src-ab75f3e33962
   url: https://ai.azure.com/catalog/models/Cohere-Embed-V5-Pro
   title: https://ai.azure.com/catalog/models/Cohere-Embed-V5-Pro
@@ -5815,7 +5873,8 @@ records:
   published_at: null
   accessed_at: '2026-10-07'
   claim_scope:
-  - Both exact models on all Coding Plans; starts18 USD/month,5-hour andweekly quotas, per-model credit multipliers.
+  - Both exact models on all Coding Plans; starts18 USD/month,5-hour andweekly quotas, per-model credit
+    multipliers.
   limitations: []
 - id: src-cb03524547ec
   url: https://docs.z.ai/devpack/quick-start
@@ -5885,7 +5944,8 @@ records:
   published_at: null
   accessed_at: '2026-10-07'
   claim_scope:
-  - Exact kimi-k3 API,1M multimodal, always-on thinking; China top-up minimum10 CNY excludes15 CNY signup voucher.
+  - Exact kimi-k3 API,1M multimodal, always-on thinking; China top-up minimum10 CNY excludes15 CNY signup
+    voucher.
   limitations: []
 - id: src-c84785b7885b
   url: https://www.kimi.com/en/blog/kimi-k3
@@ -6026,7 +6086,8 @@ records:
   published_at: null
   accessed_at: '2026-10-07'
   claim_scope:
-  - Current English docs explicitly share monthly usage across API/Studio/Vibe; overage depends on PAYG setting.
+  - Current English docs explicitly share monthly usage across API/Studio/Vibe; overage depends on PAYG
+    setting.
   limitations: []
 - id: src-19e67a7be94f
   url: https://mistral.ai/pricing/
@@ -6036,7 +6097,8 @@ records:
   published_at: null
   accessed_at: '2026-10-07'
   claim_scope:
-  - Free plan includes 10 USD/month API credits; paid allowances and UI options require plan-specific interpretation.
+  - Free plan includes 10 USD/month API credits; paid allowances and UI options require plan-specific
+    interpretation.
   limitations: []
 - id: src-75b19d63bba9
   url: https://help.mistral.ai/en/articles/698531-why-am-i-hitting-api-rate-limits-and-how-do-i-increase-them
@@ -6383,3 +6445,774 @@ records:
   limitations:
   - Administrative research receipt; substantive capability and benchmark evidence is linked per canonical
     record.
+- id: src-095104f20b18
+  url: https://aimultiple.com/embedding-models
+  title: AIMultiple original embedding retrieval evaluation
+  publisher: Ekrem Sari / AIMultiple
+  source_type: independent-evaluation
+  published_at: '2026-10-01'
+  accessed_at: '2026-10-07'
+  limitations:
+  - Hosted weights not pinned; incomplete relevance labels; development set selected using BM25.
+  claim_scope:
+  - Embed 5 Fast short-passage retrieval; exact API configuration and label limitations.
+- id: src-9d3919791a72
+  url: https://www.datallmlab.com/blog/claude-haiku-4-5-review.html
+  title: DataLLM Lab Claude Haiku 4.5 short-function evaluation
+  publisher: Kevin Fan / DataLLM Lab
+  source_type: independent-evaluation
+  published_at: '2026-07-29'
+  accessed_at: '2026-10-07'
+  limitations:
+  - Commercial gateway author; nine saturated tasks; one attempt per task; unknown backend and immutable
+    model revision.
+  claim_scope:
+  - Original nine-function Python evaluation on July 29, 2026 through OpenRouter.
+- id: src-9be7b13428d4
+  url: https://www.datallmlab.com/blog/methodology.html
+  title: DataLLM Lab benchmark methodology
+  publisher: DataLLM Lab
+  source_type: primary
+  published_at: '2026-07-10'
+  accessed_at: '2026-10-07'
+  limitations:
+  - General methodology is not a new model measurement; routing may drop unsupported parameters.
+  claim_scope:
+  - Requested decoding settings and code execution harness; October 3, 2026 methodology correction.
+- id: src-e86418b60c92
+  url: https://github.com/anthropics/claude-code/issues/10029
+  title: Haiku 4.5 repeated-tool-call report
+  publisher: viodid / anthropics Claude Code issue tracker
+  source_type: practitioner
+  published_at: '2025-10-21'
+  accessed_at: '2026-10-07'
+  limitations:
+  - Single reporter and synthetic prompt; stochastic successes acknowledged; closed not planned is not
+    a verified fix.
+  claim_scope:
+  - Single public tool-loop reproduction using the pinned Haiku API ID.
+- id: src-1a70023a0f35
+  url: https://www.linkedin.com/posts/artificial-analysis_our-new-video-with-audio-leaderboard-is-now-activity-7425575840123596800-1ifZ
+  title: Artificial Analysis video-with-audio arena announcement
+  source_type: independent-evaluation
+  published_at: null
+  limitations:
+  - Original evaluator announcement shows a historical ordering, not a current numeric score, measurement
+    date, route configuration or quality-task diagnosis. Current leaderboard URL returned a retrieval
+    error.
+  publisher: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Artificial Analysis announces separate text-to-video and image-to-video audio arenas and identifies
+    Veo 3.1 Preview separately from Fast Preview and forthcoming non-preview Veo.
+- id: src-7af62fc0e9c4
+  url: https://tryveo.ai/blog/how-to-benchmark-ai-video-generators
+  title: TryVeo original video-render telemetry
+  source_type: practitioner
+  published_at: '2026-09-12'
+  limitations:
+  - Original platform operational measurement includes queueing. Prompt suite, duration, resolution, precision
+    and per-render settings are not established; this is not a quality benchmark or SLA.
+  publisher: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - 'TryVeo reports September 12, 2026 platform telemetry: 32 completed standard-preview renders with
+    a 101-second median and 166-second 90th percentile, measured from job start to finished file over
+    90 days.'
+- id: src-1ccfb1085c29
+  url: https://deepmind.google/models/veo/
+  title: Google DeepMind Veo family
+  source_type: primary
+  published_at: null
+  limitations:
+  - Family marketing and internal preference evaluation; several passages mix Veo 3 and Veo 3.1. Exact
+    Developer API deployment identity is not pinned.
+  publisher: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - The family page illustrates generation and editing controls and reports vendor human-preference evaluations
+    updated October 2025, including MovieGenBench and VBench I2V. It links original model-card and technical-report
+    PDFs.
+- id: src-f2d40a76ac91
+  url: https://storage.googleapis.com/deepmind-media/Model-Cards/Veo-3-Model-Card.pdf
+  title: Veo 3 model card updated January 2026
+  source_type: primary
+  published_at: '2026-01-13'
+  limitations:
+  - Family-level architecture description; no exact 3.1 checkpoint details or parameter count located.
+    Vendor evaluations remain separate from independent evidence.
+  publisher: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - The January 13, 2026 model card covers Veo 3 and subsequent versions. It describes latent diffusion
+    over audio/video representations, text/image inputs and video-with-audio output, plus complex-motion
+    consistency limitations.
+- id: src-6a0f80fc52e6
+  url: https://storage.googleapis.com/deepmind-media/veo/Veo-3-Tech-Report.pdf
+  title: Veo 3 technical report
+  source_type: primary
+  published_at: null
+  limitations:
+  - Text does not identify Veo 3.1 or disclose a parameter count; do not silently substitute Veo 3 architecture
+    for the exact preview endpoint.
+  publisher: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - The original Veo 3 technical report describes joint latent audio/video diffusion, respective autoencoders
+    and a transformer denoiser.
+- id: src-7dea3b226d0f
+  url: https://www.anthropic.com/legal/commercial-terms
+  title: Commercial Terms of Service
+  publisher: Anthropic
+  source_type: primary
+  published_at: '2025-06-17'
+  accessed_at: '2026-10-07'
+  limitations:
+  - Live public page; upstream content revision not pinned.
+  claim_scope:
+  - API use, customer applications, output ownership and restrictions; not public model weights.
+- id: src-70d96e780ce1
+  url: https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training
+  title: Commercial product training policy
+  publisher: Anthropic
+  source_type: primary
+  published_at: '2026-08-18'
+  accessed_at: '2026-10-07'
+  limitations:
+  - Live public page; upstream content revision not pinned.
+  claim_scope:
+  - Default no training for commercial products, explicit feedback/opt-in exceptions.
+- id: src-e7ad291536d1
+  url: https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training
+  title: Consumer product training policy
+  publisher: Anthropic
+  source_type: primary
+  published_at: '2026-03-16'
+  accessed_at: '2026-10-07'
+  limitations:
+  - Live public page; upstream content revision not pinned.
+  claim_scope:
+  - Free, Pro, Max and subscription-authenticated Claude Code; distinct from commercial API.
+- id: src-846f5cf1e705
+  url: https://privacy.claude.com/en/articles/8956058-i-have-a-zero-data-retention-agreement-with-anthropic-what-products-does-it-apply-to
+  title: Eligible commercial products for approved zero retention
+  publisher: Anthropic
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - Relative updated-yesterday label observed October 7; no immutable upstream version.
+  claim_scope:
+  - Organization-approved eligible APIs and Enterprise Code; safety/legal exceptions.
+- id: src-89e4a5e6eadc
+  url: https://www.anthropic.com/supported-countries
+  title: Supported Regions Policy
+  publisher: Anthropic
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - Live public page; upstream content revision not pinned.
+  claim_scope:
+  - Separate API and Claude.ai supported lists; ownership restriction.
+- id: src-ed2ea3ed3dc1
+  url: https://platform.claude.com/docs/en/api/rate-limits
+  title: Claude API rate limits
+  publisher: Anthropic
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - Live public page; upstream content revision not pinned.
+  claim_scope:
+  - Start/Build/Scale Haiku 4.5 maximum rates; token-bucket replenishment, monthly caps and new-account
+    exceptions.
+- id: src-6bd484fad5a5
+  url: https://support.claude.com/en/articles/8114521-how-can-i-access-the-claude-api
+  title: How can I access the Claude API?
+  publisher: Anthropic
+  source_type: primary
+  published_at: '2026-08-18'
+  accessed_at: '2026-10-07'
+  limitations:
+  - Live public page; upstream content revision not pinned.
+  claim_scope:
+  - How can I access the Claude API?
+- id: src-2085dff5045d
+  url: https://cohere.com/enterprise-data-commitments
+  title: Enterprise Data Commitments
+  publisher: Cohere
+  source_type: primary
+  published_at: '2025-12-05'
+  accessed_at: '2026-10-07'
+  limitations:
+  - Live public page; upstream content revision not pinned.
+  claim_scope:
+  - Hosted SaaS training opt-out, 30-day retention with exceptions, approved zero retention; private/partner
+    deployments separate.
+- id: src-4f7ce59a681f
+  url: https://cohere.com/privacy
+  title: Cohere Privacy Policy
+  publisher: Cohere
+  source_type: primary
+  published_at: '2026-05-01'
+  accessed_at: '2026-10-07'
+  limitations:
+  - Live public page; upstream content revision not pinned.
+  claim_scope:
+  - Trial, account and enterprise/end-user scope; enterprise content refers to data commitments.
+- id: src-20906c4e93ab
+  url: https://docs.cohere.com/docs/usage-policy
+  title: Cohere Usage Policy
+  publisher: Cohere
+  source_type: primary
+  published_at: '2024-11-21'
+  accessed_at: '2026-10-07'
+  limitations:
+  - Live public page; upstream content revision not pinned.
+  claim_scope:
+  - Cohere Usage Policy
+- id: src-5997639344dc
+  url: https://cohere.com/terms-of-use
+  title: Cohere Terms of Use
+  publisher: Cohere
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - Live public page; upstream content revision not pinned.
+  claim_scope:
+  - General/trial software terms; production subscription agreement may supersede.
+- id: src-d02c4ac36fa4
+  url: https://docs.cohere.com/docs/deployment-options-overview
+  title: Deployment Options Overview
+  publisher: Cohere
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - Live public page; upstream content revision not pinned.
+  claim_scope:
+  - Hosted API, private infrastructure and cloud platforms; not an exact Fast license or hardware requirement.
+- id: src-08e7fe157aae
+  url: https://docs.cohere.com/docs/cohere-on-aws
+  title: Cohere on AWS
+  publisher: Cohere
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - Live public page; upstream content revision not pinned.
+  claim_scope:
+  - Cohere on AWS
+- id: src-23c99c9b9680
+  url: https://docs.cohere.com/docs/amazon-sagemaker-setup-guide
+  title: Amazon SageMaker Setup Guide
+  publisher: Cohere
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - Live public page; upstream content revision not pinned.
+  claim_scope:
+  - IAM, Marketplace subscription, endpoint naming and no embedding batch transform; current example uses
+    Pro.
+- id: src-e9acd4aa3c25
+  url: https://aws.amazon.com/marketplace/pp/prodview-qffayhd7sgkja
+  title: Cohere Embed v5 - Fast
+  publisher: Cohere via AWS Marketplace
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - Vendor-authored listing; hardware infrastructure is billed separately. Generic delivery says batch
+    but model-specific input says no batch transform.
+  claim_scope:
+  - Exact Fast SageMaker listing version 1.0, software host/hour fees, request format and EULA.
+- id: src-38af72a909ec
+  url: https://d7umqicpi7263.cloudfront.net/eula/zwCNtAqh63qu23txoMgMBd1L0_4PGP3LJfCLJKgF1J4
+  title: Cohere Channel Partner Marketplace Terms
+  publisher: Cohere
+  source_type: primary
+  published_at: '2025-09-08'
+  accessed_at: '2026-10-07'
+  limitations:
+  - Live public page; upstream content revision not pinned.
+  claim_scope:
+  - Marketplace customer applications permitted subject to restrictions; no unrestricted weight redistribution
+    or modification.
+- id: src-68f4610ac91b
+  url: https://status.cohere.com/
+  title: Cohere Status Page
+  publisher: Cohere
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - Calendar content not extracted; current status cannot establish uptime or exact-model incident absence.
+  claim_scope:
+  - Current operational status; no distinct Embed 5 component in inspected page.
+- id: src-bfad09311a1c
+  url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/haiku-4-5
+  title: Claude Haiku 4.5 on Google Cloud
+  publisher: Google Cloud
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - Live public page; upstream content revision not pinned.
+  claim_scope:
+  - Exact partner model ID, regions and published regional/global quotas.
+- id: src-b03f06e4ffc9
+  url: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models
+  title: Claude models in Microsoft Foundry
+  publisher: Microsoft
+  source_type: primary
+  published_at: '2026-09-21'
+  accessed_at: '2026-10-07'
+  limitations:
+  - Live public page; upstream content revision not pinned.
+  claim_scope:
+  - Separate Azure-hosted and Anthropic-hosted Haiku 4.5 GA versions; deployment-specific rates and privacy.
+- id: src-07c29d610258
+  url: https://platform.claude.com/docs/en/build-with-claude/multilingual-support
+  title: Claude multilingual support
+  publisher: Anthropic
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - Live public page; upstream content revision not pinned.
+  claim_scope:
+  - Translated MMLU relative-to-English results with extended thinking; not translation or conversation
+    quality.
+- id: src-e495b08b40a6
+  url: https://arxiv.org/html/2603.22576v1
+  title: 'CAPITU: Instruction-Following in Brazilian Portuguese'
+  publisher: CAPITU authors
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - Named Haiku 4.5, unpinned serving revision/provider, unknown measurement date; limited language and
+    literary domain.
+  claim_scope:
+  - 200 single-turn prompts and 100 three-turn literary conversations; rule-based constraints at temperature
+    zero.
+- id: src-e7bbd7b591b2
+  url: https://arxiv.org/html/2601.12744v1
+  title: Vision Language Models for Optimization-Driven Intent Processing
+  publisher: Ahmed, Zhu and Choudhury
+  source_type: independent-evaluation
+  published_at: '2026-01-19'
+  accessed_at: '2026-10-07'
+  limitations:
+  - Compound workload cannot independently certify visual grounding or general mathematical ability; serving
+    revision/provider unknown.
+  claim_scope:
+  - 85 Gurobi optimization problems; joint visual extraction and code generation at temperature zero.
+- id: src-bfdf4f90e154
+  url: https://www.orcflo.com/orcflo-index/benchmarks/claude-haiku-4-5-2026-05-10
+  title: Claude Haiku 4.5 May 10 benchmark
+  publisher: ORCFLO
+  source_type: independent-evaluation
+  published_at: '2026-05-10'
+  accessed_at: '2026-10-07'
+  limitations:
+  - Commercial workflow provider; public page does not expose full prompts/responses, decoding or immutable
+    serving revision; no tools, multilingual or multimodal work.
+  claim_scope:
+  - Five cases per business-task category, English single-turn text and LLM judging.
+- id: src-61e1f4d1aadb
+  url: https://www.orcflo.com/orcflo-index/methodology
+  title: ORCFLO Index methodology
+  publisher: ORCFLO
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - Rolling methodology; detailed case report subscriber-only; judge overlap with contestants.
+  claim_scope:
+  - 'Current May 10 cohort: forty cases, eight categories, four independent LLM judges and unweighted
+    averages.'
+- id: src-2e03cb5a63cf
+  url: https://arxiv.org/html/2605.28876v1
+  title: 'LogDx-CI: Log Reduction for Root-Cause Diagnosis'
+  publisher: LogDx-CI author
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - AI-drafted ground truth checked by one author, no outside rescoring, corpus-tuned threshold, unpinned
+    Haiku revision.
+  claim_scope:
+  - Thirty-five public CI failure cases, deterministic diagnosis score, single-shot Haiku with specific
+    reduction methods.
+- id: src-5a27e3e4bac2
+  url: https://github.com/MarcinDudekDev/llm-review-bench
+  title: LLM review benchmark
+  publisher: MarcinDudekDev
+  source_type: practitioner
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - Review accuracy is one scored response per fixture; historical tool-enabled rounds are not comparable.
+    Adaptive-thinking explanation conflicts with official Haiku manual-thinking docs.
+  claim_scope:
+  - Two one-shot review fixtures; tools disabled, turn assertion, LLM rubric/judges.
+- id: src-ab8901f1a6fe
+  url: https://context-mode.com/docs/benchmarks
+  title: Context Mode launch benchmarks
+  publisher: Context Mode
+  source_type: practitioner
+  published_at: '2026-09-29'
+  accessed_at: '2026-10-07'
+  limitations:
+  - Gateway vendor selects published cost-saving workloads; subscription login has no per-token invoice.
+    Not independent model ranking.
+  claim_scope:
+  - Paired Claude Code 2.1.283 direct/gateway short-task runs, list-price token accounting.
+- id: src-4228c246c84d
+  url: https://arxiv.org/html/2606.04274v1
+  title: 'Long Live Fine-Tuning: Misinformation Response Classification on Reddit'
+  publisher: Study authors
+  source_type: independent-evaluation
+  published_at: '2026-06-02'
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - 900 comments; three-category response classification, not truth verification.
+  limitations:
+  - Vendor CLI, empty tools; decoding unexposed; April 2–9 serving window; dataset prefilter/annotation
+    and label sensitivity.
+- id: src-28f7598af662
+  url: https://arxiv.org/html/2605.26414v1
+  title: Reasoning, Code, or Both? Variations in Math Questions
+  publisher: Matthew Kutakh
+  source_type: independent-evaluation
+  published_at: '2026-05-26'
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - 1000 paired GSM-Symbolic problems; Anthropic API, temperature zero, eight-shot CoT.
+  limitations:
+  - Immutable API revision and measurement day unreported; prompt tuned in preliminary trials; familiar
+    benchmark; two collection runs.
+- id: src-88ad926ffd53
+  url: https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/claude-models/data-privacy
+  title: 'Claude models in Foundry: data, privacy and security'
+  publisher: Microsoft
+  source_type: primary
+  published_at: '2026-06-29'
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Anthropic-operated Marketplace offering; Azure-hosted and Anthropic-hosted processing differ.
+  limitations:
+  - Live policy; deployment option matters; exceptions-only safety review remains.
+- id: src-6042302df83d
+  url: https://arxiv.org/html/2608.20627v1
+  title: 'When Failures Propagate: Multi-hop RAG Diagnosis'
+  publisher: Study authors
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Injected-failure localization with Haiku; diagnostic score is not answer accuracy.
+  limitations:
+  - Mixed-model/content-corruption configurations; no exact-preview or general task superiority.
+- id: src-4313a1decc61
+  url: https://arxiv.org/html/2609.36550v1
+  title: Grounded Revision versus Prior Injection
+  publisher: Study authors
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Patent-claim revision with retrieval and locality metrics; not grounded question answering.
+  limitations:
+  - Compound legal writing workload; insufficient for independent RAG answer-quality judgment.
+- id: src-3044b3f1e225
+  url: https://platform.claude.com/docs/en/build-with-claude/claude-platform-on-aws
+  title: Claude Platform on AWS
+  publisher: Original service documentation
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Anthropic operation, separate organization, API/IAM, billing, data boundaries and Haiku geography
+    limitation.
+  limitations:
+  - Live public page; exact upstream revision and unpublished account terms unknown.
+- id: src-0882f00e6258
+  url: https://platform.claude.com/docs/en/api/overview
+  title: Claude API overview
+  publisher: Original service documentation
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Authentication, Messages/Batch interfaces and operator distinctions.
+  limitations:
+  - Live public page; exact upstream revision and unpublished account terms unknown.
+- id: src-45084a6538d2
+  url: https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html
+  title: Bedrock retention controls
+  publisher: Original service documentation
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Regional retention modes; pre-Fable Claude behavior unchanged; exact feature exceptions remain.
+  limitations:
+  - Live public page; exact upstream revision and unpublished account terms unknown.
+- id: src-4db2307f55ee
+  url: https://docs.aws.amazon.com/bedrock/latest/userguide/abuse-detection.html
+  title: Bedrock abuse detection
+  publisher: Original service documentation
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Default zero retention/operator access; listed model and flagged-CSAM exceptions.
+  limitations:
+  - Live public page; exact upstream revision and unpublished account terms unknown.
+- id: src-5a910d3cd807
+  url: https://docs.cohere.com/docs/model-vault/standard/pricing
+  title: Standard Vault pricing
+  publisher: Original service documentation
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Exact Fast Small/Medium host tariffs; separate Fixed/Flex commitments and additional capacity.
+  limitations:
+  - Live public page; exact upstream revision and unpublished account terms unknown.
+- id: src-bddd1463a71a
+  url: https://docs.cohere.com/docs/model-vault/standard/supported-models
+  title: Standard Vault supported models
+  publisher: Original service documentation
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Embed self-service family; exact GPUs and regional capacity require confirmation.
+  limitations:
+  - Live public page; exact upstream revision and unpublished account terms unknown.
+- id: src-ce7f65873843
+  url: https://www-cdn.anthropic.com/7aad69bf12627d42234e01ee7c36305dc2f6a970.pdf
+  title: Haiku 4.5 System Card
+  publisher: Original service documentation
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - February pretraining internet cutoff; hybrid reasoning/context-awareness and scoped safety tests,
+    not general task quality.
+  limitations:
+  - Live public page; exact upstream revision and unpublished account terms unknown.
+- id: src-f05529e3c192
+  url: https://ai.google.dev/gemini-api/terms.md
+  title: Gemini API Additional Terms of Service
+  publisher: Google
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - 'Effective 2026-03-23: developers/business use, 18+, available-region access, no competing-model development
+    or extraction, safety requirements. Google disclaims output ownership; paid prompts/responses not
+    used to improve products, while unpaid use differs. AI Studio paid treatment depends on account billing/Workspace;
+    EEA/UK/CH unpaid data handling follows paid rules.'
+  limitations:
+  - Service terms do not grant model-weight rights; conditional usage/output rights cannot be represented
+    as unconditional model licensing. .md route inspected after HTML fetch failed. Effective date is not
+    an established page publication date.
+- id: src-99460c82424a
+  url: https://developers.google.com/terms
+  title: Google APIs Terms of Service
+  publisher: Google
+  source_type: primary
+  published_at: '2021-11-09'
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Describes API client rights and obligations; prohibits API sublicensing, reverse engineering and substantially
+    identical third-party API services. APIs are supplied without general availability/reliability guarantees.
+  limitations:
+  - Additional Gemini terms take precedence in conflicts; output ownership is distinct from API or model-weight
+    rights.
+- id: src-4408d52321f6
+  url: https://ai.google.dev/gemini-api/docs/zdr?hl=en
+  title: Zero data retention in the Gemini Developer API
+  publisher: Google
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Paid prompts/responses are not used for product improvement. Abuse logging and feature-specific storage
+    remain; guaranteed enterprise zero-retention workloads are directed to Vertex AI. File storage must
+    be deleted or expires separately.
+  limitations:
+  - Provider-wide feature notes are not all supported by Veo; no account configuration verified.
+- id: src-5e08212c4da8
+  url: https://ai.google.dev/gemini-api/docs/usage-policies
+  title: Gemini API abuse monitoring
+  publisher: Google
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - API/AI Studio abuse policy documents55-day retention of prompts, context and outputs, automated/manual
+    review, policy-enforcement use, and possible limits/suspension.
+  limitations:
+  - General API policy, not a guarantee of Veo operation/video storage beyond its two-day download window.
+- id: src-061b34c3e182
+  url: https://ai.google.dev/gemini-api/docs/api-key
+  title: Using Gemini API keys
+  publisher: Google
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Authentication requires API keys associated with Cloud projects. New Studio keys use service-account
+    authorization keys; project permissions and active billing/quota are distinct.
+  limitations:
+  - Public instructions only; no credential, account or entitlement accessed.
+- id: src-c347c9eed77a
+  url: https://ai.google.dev/gemini-api/docs/available-regions
+  title: Google AI Studio and Gemini API available regions
+  publisher: Google
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Lists available countries/territories for Studio/API and requires18+ and age verification.
+  limitations:
+  - Available-region listing is not exact-model rollout, individual eligibility or unrestricted access.
+- id: src-23807cea284a
+  url: https://support.google.com/flow/answer/16352836
+  title: Flow models and supported features
+  publisher: Google
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Quality supports text/first/last-frame video; Ingredients, video editing and Extend are listed unsupported.
+    Guide says all Veo 3.1 eight-second videos must use Lite for extension. Omni and Gemini image models
+    power separate features.
+  limitations:
+  - Conflicts with Quality Extend credit table; Flow labels do not establish exact Developer API endpoint
+    identity.
+- id: src-a53c4a7e7b86
+  url: https://support.google.com/flow/answer/16353544?hl=en&ref_topic=16908930
+  title: Where Google Flow is available
+  publisher: Google
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Lists countries, 18+ eligibility and English recommendation. Uploaded-video edits/avatars unavailable
+    EEA/UK/CH; AI-credit purchases unavailable Japan; features vary by region.
+  limitations:
+  - UI language support is not measured Veo generation-language ability; consumer region restrictions
+    must not transfer to API.
+- id: src-6370b9c4476d
+  url: https://support.google.com/flow/answer/17025472
+  title: Manage your data in Flow
+  publisher: Google
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Flow collects interactions/outputs/usage/feedback; improvement toggle governs improvement use. Human-reviewed
+    disconnected data can be retained18months. Updated privacy notice effective2026-04-17newusers/05-19existingusers.
+  limitations:
+  - Individual settings not inspected; Flow policy differs from paid Developer API and Gemini app.
+- id: src-5b417f658dd0
+  url: https://support.google.com/gemini/answer/13594961
+  title: Gemini Apps Privacy Hub
+  publisher: Google
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Activity settings, feedback and temporary chats change retention/training use; reviewed disconnected
+    chats may be kept3years, temporary/off activity typically72hours.
+  limitations:
+  - Consumer-specific policy; settings/account not inspected and not paid API policy.
+- id: src-2d716211cf95
+  url: https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/
+  title: Veo 3.1 Ingredients to Video update
+  publisher: Original Reddit thread participants
+  source_type: primary
+  published_at: '2026-01-13'
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - 2026-01-13 announcement adds improved reference consistency, vertical reference-conditioned video
+    and1080p/4K upscaling across named products including Gemini API.
+  limitations:
+  - Vendor improvement claims and product rollout are not immutable weight versions or independent recovery
+    measurements.
+- id: src-c46ceda84ce2
+  url: https://discuss.ai.google.dev/t/veo-3-1-generation-succeeds-but-operation-retrieval-returns-403-permission-denied-6-6-operations/185737
+  title: Veo operation retrieval 403 report
+  publisher: Original Google AI Developers Forum participants (Google-hosted)
+  source_type: practitioner
+  published_at: '2026-09-28'
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - 2026-09-28 author reports six exact-standard-preview accepted jobs with403 retrieval. October1 support
+    reply suggests operation expiration after two days or incorrect operation names.
+  limitations:
+  - Attributable single-project report; no confirming follow-up, causal proof, prevalence or verified
+    recovery. Account identifiers omitted.
+- id: src-d729cde1c927
+  url: https://discuss.ai.google.dev/t/veo-3-1-reference-images-docs-say-available-api-says-not-supported/111853
+  title: Veo reference image docs/API mismatch
+  publisher: Original Google AI Developers Forum participants (Google-hosted)
+  source_type: practitioner
+  published_at: '2025-12-12'
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Dec12,2025 standard-preview reference-image400 report received explanation that9:16 references were
+    then unsupported. Later Feb/March2026 practitioners describe working formats and8-second restrictions.
+  limitations:
+  - Historical request/SDK/variant conditions differ; workaround reports are not controlled general model
+    recovery.
+- id: src-2dfae170518b
+  url: https://discuss.ai.google.dev/t/veo-3-1-last-frame-parameter-not-supported/107529
+  title: Veo last-frame SDK failure and recovery
+  publisher: Original Google AI Developers Forum participants (Google-hosted)
+  source_type: practitioner
+  published_at: '2025-10-16'
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Oct16,2025 exact-standard-preview SDK ValueError report. Dec9 author says library update resolved
+    it; Dec11 another user reports working code. Jan26 duration8s caveat follows.
+  limitations:
+  - SDK issue and attributable recovery, not weights change; exact library version and measured quality
+    improvement absent.
+- id: src-a46b08b514ab
+  url: https://github.com/microsoft/AVGen-Bench/blob/main/README.md
+  title: Microsoft AVGen-Bench original repository
+  publisher: Microsoft AVGen-Bench authors
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - T2AV benchmark lists Veo 3.1Quality and Fast separately with visual/audio/synchronization/text/face/music/speech/physics
+    metrics and failure examples. Evaluation modules and task-oriented prompts are documented.
+  limitations:
+  - Mutable main branch; no exact standard-preview provider/date/version mapping established in inspected
+    README. Composite ranking cannot imply general or text/OCR answering superiority.
+- id: src-f2cba52655a4
+  url: https://arxiv.org/html/2605.00873v2
+  title: 'BRITE: A Benchmark for Reliable and Interpretable T2V Evaluation on Implausible Scenarios'
+  publisher: Advait Tilak, Jiwon Choi, Nazifa Mouli and Wei Le (arXiv)
+  source_type: independent-evaluation
+  published_at: '2026-06-15'
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Original v2 study evaluates100 prompts per model using human-reviewed question annotations across
+    500 generated videos. Veo 3.1 setup is 8 seconds at720p. It tests subject/action adherence, audio
+    and synchronization for implausible scenes.
+  limitations:
+  - Consumer-facing interfaces and single seeds are explicit limitations. No exact standard-preview API
+    code/provider pin is established. Human QA about generated artifacts is not native model QA, mathematical
+    reasoning or scientific problem solving.

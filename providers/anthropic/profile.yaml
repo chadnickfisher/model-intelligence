@@ -5,12 +5,24 @@ name: Anthropic
 roles:
 - creator
 - inference-provider
-api_compatibility: []
-access_methods: []
-geographic_availability: []
-rate_limits: []
-caching_batching: []
-privacy_data_use: []
+api_compatibility:
+- Claude Messages API; consumer products and partner endpoints have separate authentication and billing.
+access_methods:
+- Commercial API key and billing account; consumer app/Code subscription sign-in is separate.
+geographic_availability:
+- Supported Regions Policy has separate API and Claude.ai lists; geography and ownership restrictions
+  apply.
+rate_limits:
+- Haiku 4.5 standard maximums depend on Start/Build/Scale tiers; new-account evaluation and organization
+  limits may be lower.
+caching_batching:
+- Haiku 4.5 cache minimum 4096 tokens; five-minute or one-hour TTL. Batch API tariff is separate from
+  interactive client usage.
+privacy_data_use:
+- Commercial products default to no model training; explicit feedback or opt-in exceptions apply. Consumer
+  Free/Pro/Max and their Code sessions have separate policies.
+- Approved zero retention applies only to eligible commercial APIs/products and Enterprise Code, with
+  safety/legal exceptions; no universal consumer guarantee.
 reliability: []
 model_ids:
 - claude-fable-5-1
@@ -79,7 +91,15 @@ evidence_ids:
 - src-5c510b458547
 - src-50846cd1ff36
 - src-58333316475e
+- src-7dea3b226d0f
+- src-70d96e780ce1
+- src-e7ad291536d1
+- src-846f5cf1e705
+- src-89e4a5e6eadc
+- src-ed2ea3ed3dc1
+- src-9a3bbc4f637b
 notes: []
 limitations:
-- Privacy/data-use details were not fully verified in this baseline.
-- Exact public or account-specific quotas were not established.
+- No account entitlement or private negotiated agreement inspected. Provider-wide fields do not imply
+  identical partner or client policies.
+- No provider-wide reliability/SLA established by the inspected policy pages.

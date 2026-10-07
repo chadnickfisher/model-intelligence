@@ -1941,7 +1941,8 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - 720p outputs billed at 5,792 tokens/second, approximately $0.10/second; not a flat quote for every resolution.
+  - 720p outputs billed at 5,792 tokens/second, approximately $0.10/second; not a flat quote for every
+    resolution.
   evidence_ids:
   - src-b88c4950bbf3
   notes: []
@@ -1973,7 +1974,8 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - Gemma 4 pricing section; paid tier unavailable. Quota limited, data-use terms differ from paid Gemini API.
+  - Gemma 4 pricing section; paid tier unavailable. Quota limited, data-use terms differ from paid Gemini
+    API.
   evidence_ids:
   - src-b88c4950bbf3
   notes: []
@@ -2145,8 +2147,8 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - Announced future introductory API price; cached input derived from explicit 95% discount. No exact public
-    endpoint or effective date verified.
+  - Announced future introductory API price; cached input derived from explicit 95% discount. No exact
+    public endpoint or effective date verified.
   evidence_ids:
   - src-6381db252dee
   notes:
@@ -2179,7 +2181,8 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - Announced price after introductory period; expiry date is not specified in the fetched main English announcement.
+  - Announced price after introductory period; expiry date is not specified in the fetched main English
+    announcement.
   evidence_ids:
   - src-6381db252dee
   notes:
@@ -2411,8 +2414,8 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other times.
-    Reasoning and final tokens contribute to output billing.
+  - Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other
+    times. Reasoning and final tokens contribute to output billing.
   evidence_ids:
   - src-280758cc57a6
   notes: []
@@ -2454,8 +2457,8 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other times.
-    Reasoning and final tokens contribute to output billing.
+  - Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other
+    times. Reasoning and final tokens contribute to output billing.
   evidence_ids:
   - src-280758cc57a6
   notes: []
@@ -2497,8 +2500,8 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other times.
-    Reasoning and final tokens contribute to output billing.
+  - Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other
+    times. Reasoning and final tokens contribute to output billing.
   evidence_ids:
   - src-280758cc57a6
   notes: []
@@ -2540,8 +2543,8 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other times.
-    Reasoning and final tokens contribute to output billing.
+  - Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other
+    times. Reasoning and final tokens contribute to output billing.
   evidence_ids:
   - src-280758cc57a6
   notes: []
@@ -3054,8 +3057,8 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - Higher-context pricing exists above 200k; exact boundary/rates require reconciliation with general page.
-    These are base displayed rates.
+  - Higher-context pricing exists above 200k; exact boundary/rates require reconciliation with general
+    page. These are base displayed rates.
   - not stated
   evidence_ids:
   - src-d14fea025626
@@ -3335,8 +3338,8 @@ records:
   reset_cadence: monthly
   overage: []
   conditions:
-  - Subscription price not verified; this is included compute credit, not subscription price. Inference pass-through
-    without markup.
+  - Subscription price not verified; this is included compute credit, not subscription price. Inference
+    pass-through without markup.
   evidence_ids:
   - src-64b25f3342fd
   notes: []
@@ -4648,8 +4651,8 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - Cache storage currently limited-time free. Former/current coding subscribers have protocol/account restrictions;
-    check exact key.
+  - Cache storage currently limited-time free. Former/current coding subscribers have protocol/account
+    restrictions; check exact key.
   evidence_ids:
   - src-7e6c3dd9add1
   - src-667e800254a1
@@ -4779,8 +4782,8 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - Cache storage currently limited-time free. Former/current coding subscribers have protocol/account restrictions;
-    check exact key.
+  - Cache storage currently limited-time free. Former/current coding subscribers have protocol/account
+    restrictions; check exact key.
   evidence_ids:
   - src-80c359151519
   - src-667e800254a1
@@ -5426,7 +5429,8 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - Canonical profile representative is BF16. Variant relation must be explicit, not silent checkpoint substitution.
+  - Canonical profile representative is BF16. Variant relation must be explicit, not silent checkpoint
+    substitution.
   evidence_ids:
   - src-9d8e52b601dc
   - src-0c70d291307a
@@ -5745,3 +5749,145 @@ records:
   - src-1f8330a8a801
   - src-6adb93b6cd05
   notes: []
+- schema_version: '1.0'
+  id: price-fdc3c3adcacb97cd
+  verified_at: '2026-10-07'
+  model_id: cohere-embed-5-fast
+  provider_id: aws-sagemaker
+  product: Cohere Embed v5 - Fast on SageMaker
+  model_label: Embed v5 Fast software version 1.0
+  billing_method: self-hosted
+  status: current
+  region: null
+  tier: ml.g5.xlarge
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: software_host
+    amount: 2.39
+    currency: USD
+    unit: per instance hour
+    conditions:
+    - Software fee only; additional AWS infrastructure charges apply.
+  included_usage: []
+  overage: []
+  reset_cadence: null
+  conditions:
+  - AWS Marketplace listing; exact selected instance; software plus separately billed infrastructure.
+  evidence_ids:
+  - src-e9acd4aa3c25
+  notes:
+  - No all-in inference price or token denominator inferred; other instance tariffs were not enumerated.
+- schema_version: '1.0'
+  id: price-e40eacbbb949f6ac
+  verified_at: '2026-10-07'
+  model_id: cohere-embed-5-fast
+  provider_id: aws-sagemaker
+  product: Cohere Embed v5 - Fast on SageMaker
+  model_label: Embed v5 Fast software version 1.0
+  billing_method: self-hosted
+  status: current
+  region: null
+  tier: ml.p5.4xlarge
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: software_host
+    amount: 3.36
+    currency: USD
+    unit: per instance hour
+    conditions:
+    - Software fee only; additional AWS infrastructure charges apply.
+  included_usage: []
+  overage: []
+  reset_cadence: null
+  conditions:
+  - AWS Marketplace listing; exact selected instance; software plus separately billed infrastructure.
+  evidence_ids:
+  - src-e9acd4aa3c25
+  notes:
+  - No all-in inference price or token denominator inferred; other instance tariffs were not enumerated.
+- schema_version: '1.0'
+  id: price-c975f4bc740e679c
+  verified_at: '2026-10-07'
+  model_id: cohere-embed-5-fast
+  provider_id: cohere
+  product: Standard Model Vault
+  model_label: Embed 5 Fast
+  billing_method: mixed
+  status: current
+  region: null
+  tier: Small
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: capacity_hour
+    amount: 3
+    currency: USD
+    unit: per instance hour
+    conditions:
+    - Alternative commitment/capacity tariffs; do not add these amounts together.
+  - metric: capacity_month
+    amount: 2000
+    currency: USD
+    unit: per instance month
+    conditions:
+    - Alternative commitment/capacity tariffs; do not add these amounts together.
+  - metric: capacity_year
+    amount: 20000
+    currency: USD
+    unit: per instance year
+    conditions:
+    - Alternative commitment/capacity tariffs; do not add these amounts together.
+  included_usage: []
+  overage:
+  - Flex additional capacity charged per instance-hour.
+  reset_cadence: null
+  conditions:
+  - Cohere-managed dedicated capacity; Fixed/Flex agreement and sizing apply; no per-token equivalence.
+  evidence_ids:
+  - src-5a910d3cd807
+  notes:
+  - Rates observed today; published effective-start date unknown.
+- schema_version: '1.0'
+  id: price-f8067e6f48410d1c
+  verified_at: '2026-10-07'
+  model_id: cohere-embed-5-fast
+  provider_id: cohere
+  product: Standard Model Vault
+  model_label: Embed 5 Fast
+  billing_method: mixed
+  status: current
+  region: null
+  tier: Medium
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: capacity_hour
+    amount: 5
+    currency: USD
+    unit: per instance hour
+    conditions:
+    - Alternative commitment/capacity tariffs; do not add these amounts together.
+  - metric: capacity_month
+    amount: 3250
+    currency: USD
+    unit: per instance month
+    conditions:
+    - Alternative commitment/capacity tariffs; do not add these amounts together.
+  - metric: capacity_year
+    amount: 32500
+    currency: USD
+    unit: per instance year
+    conditions:
+    - Alternative commitment/capacity tariffs; do not add these amounts together.
+  included_usage: []
+  overage:
+  - Flex additional capacity charged per instance-hour.
+  reset_cadence: null
+  conditions:
+  - Cohere-managed dedicated capacity; Fixed/Flex agreement and sizing apply; no per-token equivalence.
+  evidence_ids:
+  - src-5a910d3cd807
+  notes:
+  - Rates observed today; published effective-start date unknown.

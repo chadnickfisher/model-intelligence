@@ -3748,3 +3748,358 @@ records:
     date is not the measurement date.
   evidence_notes:
   - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-978d5d1cbfc2ea43
+  model_id: claude-haiku-4-5
+  judgment_ids:
+  - judgment-c01714fd674be14c
+  benchmark:
+    name: DataLLM short Python functions
+    version: null
+    metric: tasks passing all assertions
+    unit: tasks out of 9
+    direction: higher
+  value: 9
+  model_version: Claude Haiku 4.5; immutable API revision unknown
+  harness: Single-turn Python functions; Python 3 isolated execution; 12-second timeout
+  effort: null
+  provider_id: openrouter
+  tools: []
+  measured_at: '2026-07-29'
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-9d3919791a72
+  - src-9be7b13428d4
+  conditions:
+  - Requested temperature 0 and max_tokens 4000; one attempt per task; API errors alone retried.
+  limitations:
+  - Nine tasks, with 18 of 21 models saturated; no variance or contamination analysis.
+  - Hosted backend and exact decoding support unverified.
+  evidence_notes:
+  - Original public measurement; observed date is not a measurement date.
+- schema_version: '1.0'
+  id: benchmark-91c0fd3fc867b0c8
+  model_id: cohere-embed-5-fast
+  judgment_ids:
+  - judgment-cbfb9b59385271d6
+  benchmark:
+    name: AIMultiple embedding corpus retrieval
+    version: null
+    metric: nDCG@10
+    unit: fraction
+    direction: higher
+  value: 0.839
+  model_version: embed-v5.0-fast
+  harness: FinQA, CUAD, TechQA and MedRAG; 50 questions per corpus
+  effort: null
+  provider_id: cohere
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-095104f20b18
+  conditions:
+  - 200 queries, 225 recorded relevance pairs, four corpora totaling 341040 passages.
+  - Passages <=256 all-MiniLM-L6-v2 tokens; 2048 dimensions; search_query/search_document; cosine ranking.
+  - Evaluation truncation 8192 tokens is not the published model context limit.
+  limitations:
+  - BM25 development-set selection; only 20% question review; 87% retrieved pairs unjudged.
+  - Single API run and unpinned hosted weights; sampling confidence interval excludes run variance.
+  evidence_notes:
+  - Original public measurement; observed date is not a measurement date.
+  - 'Reported sampling 95% confidence interval: 0.802 to 0.875; does not express evidence confidence.'
+- schema_version: '1.0'
+  id: benchmark-e160608aa5979702
+  model_id: cohere-embed-5-fast
+  judgment_ids:
+  - judgment-cbfb9b59385271d6
+  benchmark:
+    name: AIMultiple embedding corpus retrieval
+    version: null
+    metric: Recall@10
+    unit: percent
+    direction: higher
+  value: 95.38
+  model_version: embed-v5.0-fast
+  harness: FinQA, CUAD, TechQA and MedRAG; 50 questions per corpus
+  effort: null
+  provider_id: cohere
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-095104f20b18
+  conditions:
+  - 200 queries, 225 recorded relevance pairs, four corpora totaling 341040 passages.
+  - Passages <=256 all-MiniLM-L6-v2 tokens; 2048 dimensions; search_query/search_document; cosine ranking.
+  - Evaluation truncation 8192 tokens is not the published model context limit.
+  limitations:
+  - BM25 development-set selection; only 20% question review; 87% retrieved pairs unjudged.
+  - Single API run and unpinned hosted weights; sampling confidence interval excludes run variance.
+  evidence_notes:
+  - Original public measurement; observed date is not a measurement date.
+- schema_version: '1.0'
+  id: benchmark-ba906dfc69f4b4d8
+  model_id: claude-haiku-4-5
+  judgment_ids:
+  - judgment-7156ae35731ec615
+  benchmark:
+    name: CAPITU
+    version: null
+    metric: single-turn strict prompt accuracy
+    unit: percent
+    direction: higher
+  value: 73.5
+  model_version: Claude Haiku 4.5; immutable revision unknown
+  harness: 200 literary prompts; deterministic constraint verifiers
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-e495b08b40a6
+  conditions:
+  - Temperature zero; accuracy requires every constraint in the original response.
+  limitations:
+  - Brazilian Portuguese literary context only; provider, serving revision and measurement date unknown.
+  evidence_notes:
+  - Recorded original setup; observation date is not the measurement date.
+- schema_version: '1.0'
+  id: benchmark-391bee7f74fddbd3
+  model_id: claude-haiku-4-5
+  judgment_ids:
+  - judgment-391bee7f74fddbd3
+  benchmark:
+    name: ORCFLO Writing
+    version: null
+    metric: mean LLM rubric score
+    unit: points out of 100
+    direction: higher
+  value: 89.0
+  model_version: Claude Haiku 4.5; immutable revision unknown
+  harness: Five English single-turn cases; mean of four LLM judges
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-bfdf4f90e154
+  - src-61e1f4d1aadb
+  conditions:
+  - Category score, not general model quality; four judges include contestant-vendor models.
+  limitations:
+  - Public prompts/responses, decoding and exact provider unknown; commercial evaluator, no replication.
+  - May 10 is the cohort/report date; exact experiment day is not independently established.
+  evidence_notes:
+  - Recorded original setup; observation date is not the measurement date.
+- schema_version: '1.0'
+  id: benchmark-d14d5e6960fa913c
+  model_id: claude-haiku-4-5
+  judgment_ids:
+  - judgment-d14d5e6960fa913c
+  benchmark:
+    name: ORCFLO Summarization
+    version: null
+    metric: mean LLM rubric score
+    unit: points out of 100
+    direction: higher
+  value: 84.5
+  model_version: Claude Haiku 4.5; immutable revision unknown
+  harness: Five English single-turn cases; mean of four LLM judges
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-bfdf4f90e154
+  - src-61e1f4d1aadb
+  conditions:
+  - Category score, not general model quality; four judges include contestant-vendor models.
+  limitations:
+  - Public prompts/responses, decoding and exact provider unknown; commercial evaluator, no replication.
+  - May 10 is the cohort/report date; exact experiment day is not independently established.
+  evidence_notes:
+  - Recorded original setup; observation date is not the measurement date.
+- schema_version: '1.0'
+  id: benchmark-623c7e8d247d4615
+  model_id: claude-haiku-4-5
+  judgment_ids:
+  - judgment-623c7e8d247d4615
+  benchmark:
+    name: ORCFLO Extraction
+    version: null
+    metric: mean LLM rubric score
+    unit: points out of 100
+    direction: higher
+  value: 84.5
+  model_version: Claude Haiku 4.5; immutable revision unknown
+  harness: Five English single-turn cases; mean of four LLM judges
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-bfdf4f90e154
+  - src-61e1f4d1aadb
+  conditions:
+  - Category score, not general model quality; four judges include contestant-vendor models.
+  limitations:
+  - Public prompts/responses, decoding and exact provider unknown; commercial evaluator, no replication.
+  - May 10 is the cohort/report date; exact experiment day is not independently established.
+  evidence_notes:
+  - Recorded original setup; observation date is not the measurement date.
+- schema_version: '1.0'
+  id: benchmark-9fea728e3f829e8e
+  model_id: claude-haiku-4-5
+  judgment_ids:
+  - judgment-4310e42c6be1639d
+  benchmark:
+    name: LogDx-CI
+    version: null
+    metric: diagnosis_score_v1_1
+    unit: fraction
+    direction: higher
+  value: 0.624
+  model_version: Claude Haiku 4.5; immutable revision unknown
+  harness: 35 CI failure cases; hybrid-grep-120k-rtk-tail; single-shot diagnosis JSON
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-2e03cb5a63cf
+  conditions:
+  - Case-count-weighted metric combining diagnosis and evidence recall; tuned 120k threshold.
+  limitations:
+  - AI-drafted ground truth, single-author checked; unknown serving revision and measurement date; not general
+    fix success.
+  evidence_notes:
+  - Recorded original setup; observation date is not the measurement date.
+- schema_version: '1.0'
+  id: benchmark-48202fa54f873b0b
+  model_id: claude-haiku-4-5
+  judgment_ids:
+  - judgment-e35ebbffc833ea6a
+  benchmark:
+    name: LLM review bench v1
+    version: null
+    metric: rubric review score
+    unit: points out of 10
+    direction: higher
+  value: 5.5
+  model_version: Haiku 4.5; immutable revision unknown
+  harness: Six-bug fixture, one-shot tools disabled, two blind LLM judges
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: practitioner_test
+  source_ids:
+  - src-5a27e3e4bac2
+  conditions:
+  - One scored review response; cost/latency repetitions do not enlarge scored quality sample.
+  limitations:
+  - Tiny practitioner fixture; source adaptive-thinking explanation is inconsistent with official support.
+  evidence_notes:
+  - Recorded original setup; observation date is not the measurement date.
+- schema_version: '1.0'
+  id: benchmark-889de5fb1a96f5d4
+  model_id: claude-haiku-4-5
+  judgment_ids:
+  - judgment-889de5fb1a96f5d4
+  benchmark:
+    name: Reddit misinformation response classification
+    version: null
+    metric: mean pooled macro-F1
+    unit: fraction
+    direction: higher
+  value: 0.5
+  model_version: claude-haiku-4-5-20251001
+  harness: 900 comments; universal three-label schema; stratified five-fold scoring
+  effort: null
+  provider_id: null
+  tools: []
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-4228c246c84d
+  conditions:
+  - Vendor CLI, empty tools; April 2–9 measurement window; SD 0.03 from fold composition.
+  limitations:
+  - Sampling parameters unexposed; annotation, prefilter and label sensitivity; labels include fact-check responses
+    but do not measure truth verification.
+  evidence_notes:
+  - Observed today; publication date is not the experiment date.
+- schema_version: '1.0'
+  id: benchmark-82d23a40db419ede
+  model_id: claude-haiku-4-5
+  judgment_ids:
+  - judgment-2e00e2f0e910045e
+  benchmark:
+    name: GSM-Symbolic original
+    version: null
+    metric: CoT numerical answer accuracy
+    unit: percent
+    direction: higher
+  value: 97.9
+  model_version: Claude Haiku 4.5; immutable revision unknown
+  harness: 1000 paired problems; eight-shot CoT; temperature zero
+  effort: null
+  provider_id: anthropic
+  tools: []
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-28f7598af662
+  conditions:
+  - Anthropic API; tuned format and prefill; CoT has no Python execution.
+  limitations:
+  - Serving revision and experiment day unknown; prompt tuning, familiar corpus and two collection runs; restricted
+    grade-school numerics.
+  evidence_notes:
+  - Observed today; publication date is not the experiment date.
+- schema_version: '1.0'
+  id: benchmark-e0b76bd735e8cdce
+  model_id: claude-haiku-4-5
+  judgment_ids:
+  - judgment-2e00e2f0e910045e
+  benchmark:
+    name: GSM-Symbolic modified
+    version: null
+    metric: CoT numerical answer accuracy
+    unit: percent
+    direction: higher
+  value: 96.6
+  model_version: Claude Haiku 4.5; immutable revision unknown
+  harness: 1000 paired problems; eight-shot CoT; temperature zero
+  effort: null
+  provider_id: anthropic
+  tools: []
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-28f7598af662
+  conditions:
+  - Anthropic API; tuned format and prefill; CoT has no Python execution.
+  limitations:
+  - Serving revision and experiment day unknown; prompt tuning, familiar corpus and two collection runs; restricted
+    grade-school numerics.
+  evidence_notes:
+  - Observed today; publication date is not the experiment date.

@@ -5,12 +5,20 @@ name: Claude Platform on AWS
 roles:
 - cloud-platform
 - access-product
-api_compatibility: []
-access_methods: []
-geographic_availability: []
-rate_limits: []
-caching_batching: []
-privacy_data_use: []
+api_compatibility:
+- Claude API request format; platform-specific SDK clients remain beta; OpenAI-compatible endpoints unavailable.
+access_methods:
+- Marketplace enrollment, separate Anthropic organization; AWS IAM SigV4 or platform API key.
+geographic_availability:
+- AWS commercial regions for gateway access; gateway region does not establish inference residency; Haiku
+  4.5 rejects inference_geo.
+rate_limits:
+- Anthropic usage tier and monthly spend caps apply; negotiated/account limits require confirmation.
+caching_batching:
+- Prompt caching and batch processing documented; use the exact model eligibility and separate tariff.
+privacy_data_use:
+- Anthropic is an independent data processor; approved zero retention is opt-in. Content is processed/stored
+  on AWS, with pre-September-18-2026 workspace exceptions.
 reliability: []
 model_ids:
 - claude-fable-5-1
@@ -34,7 +42,8 @@ evidence_ids:
 - src-2f9ece653a0f
 - src-f1078602a2b4
 - src-9b374de3e978
+- src-3044b3f1e225
 notes:
 - New public access-product identity; policies and account-specific entitlements remain unverified.
 limitations:
-- Do not inherit policies from a parent company or another product.
+- No private entitlement, negotiated throughput or SLA inspected.

@@ -73,6 +73,204 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-haiku; Confidence concerns this bounded claim, not a capability score.
 
+### Coding.scoped_edit (low confidence)
+
+One original hosted evaluation passes all nine short Python function tasks; this supports only small, self-contained implementation under that harness.
+
+Scope: direct / conditional. The measured workload fits this task; conclusion is limited to the recorded setup.
+
+Direct task IDs: coding.scoped_edit
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-c01714fd674be14c
+
+Conditions: Single-turn function signature and specification; nine hidden-assertion tasks; one attempt each.
+
+Failure modes / limitations: Small saturated suite does not establish repository, debugging, tool-use or production correctness.
+
+Supporting sources: [DataLLM Lab Claude Haiku 4.5 short-function evaluation](https://www.datallmlab.com/blog/claude-haiku-4-5-review.html) · [DataLLM Lab benchmark methodology](https://www.datallmlab.com/blog/methodology.html)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence reflects setup breadth, identity uncertainty and source limitations, not the score. No contradictory result located in this bounded pass does not establish agreement.
+
+### Language.instruction_following (low confidence)
+
+Portuguese literary constraint evaluation supports a warning about exact counts and structural constraints; use explicit output checks under this setup.
+
+Scope: direct / warning. The measured task fits this rubric boundary; no transfer to adjacent tasks.
+
+Direct task IDs: language.instruction_following
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-7156ae35731ec615
+
+Conditions: Temperature zero; 200 single-turn literary prompts and 100 three-turn conversations.
+
+Failure modes / limitations: Rule-based constraint compliance does not establish factual literary correctness or all-language instruction quality.
+
+Supporting sources: [CAPITU: Instruction-Following in Brazilian Portuguese](https://arxiv.org/html/2603.22576v1)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence reflects limited tasks, source/setup uncertainty and lack of independent replication; scores do not define confidence. Empty contradictory evidence means none was located in this bounded pass.
+
+### Language.writing (low confidence)
+
+Small English business-task evaluations support conditional drafting use; audience/style quality outside the five tested cases is unestablished.
+
+Scope: direct / conditional. The measured task fits this rubric boundary; no transfer to adjacent tasks.
+
+Direct task IDs: language.writing
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-391bee7f74fddbd3
+
+Conditions: May 10 cohort; English single-turn text; five cases in this category, four LLM judges.
+
+Failure modes / limitations: No public full response traces, immutable serving revision or independent replication.
+
+Supporting sources: [Claude Haiku 4.5 May 10 benchmark](https://www.orcflo.com/orcflo-index/benchmarks/claude-haiku-4-5-2026-05-10) · [ORCFLO Index methodology](https://www.orcflo.com/orcflo-index/methodology)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence reflects limited tasks, source/setup uncertainty and lack of independent replication; scores do not define confidence. Empty contradictory evidence means none was located in this bounded pass.
+
+### Language.summarization (low confidence)
+
+A small business summarization evaluation supports a limited, conditional conclusion; verify retained facts and qualifications for the target material.
+
+Scope: direct / conditional. The measured task fits this rubric boundary; no transfer to adjacent tasks.
+
+Direct task IDs: language.summarization
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-d14d5e6960fa913c
+
+Conditions: May 10 cohort; English single-turn text; five cases in this category, four LLM judges.
+
+Failure modes / limitations: No public full response traces, immutable serving revision or independent replication.
+
+Supporting sources: [Claude Haiku 4.5 May 10 benchmark](https://www.orcflo.com/orcflo-index/benchmarks/claude-haiku-4-5-2026-05-10) · [ORCFLO Index methodology](https://www.orcflo.com/orcflo-index/methodology)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence reflects limited tasks, source/setup uncertainty and lack of independent replication; scores do not define confidence. Empty contradictory evidence means none was located in this bounded pass.
+
+### Knowledge.extraction (low confidence)
+
+Five business extraction cases support a conditional structured-extraction conclusion; exact source types and public answer traces are incomplete.
+
+Scope: direct / conditional. The measured task fits this rubric boundary; no transfer to adjacent tasks.
+
+Direct task IDs: knowledge.extraction
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-623c7e8d247d4615
+
+Conditions: May 10 cohort; English single-turn text; five cases in this category, four LLM judges.
+
+Failure modes / limitations: No public full response traces, immutable serving revision or independent replication.
+
+Supporting sources: [Claude Haiku 4.5 May 10 benchmark](https://www.orcflo.com/orcflo-index/benchmarks/claude-haiku-4-5-2026-05-10) · [ORCFLO Index methodology](https://www.orcflo.com/orcflo-index/methodology)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence reflects limited tasks, source/setup uncertainty and lack of independent replication; scores do not define confidence. Empty contradictory evidence means none was located in this bounded pass.
+
+### Coding.debugging (low confidence)
+
+CI log diagnosis depends materially on the reduction method; evidence supports a bounded diagnostic use with preserved failure signals, not an autonomous fix guarantee.
+
+Scope: direct / conditional. The measured task fits this rubric boundary; no transfer to adjacent tasks.
+
+Direct task IDs: coding.debugging
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-4310e42c6be1639d
+
+Conditions: Thirty-five public GitHub Actions failures; single-shot Haiku diagnosis JSON, deterministic diagnosis_score_v1_1.
+
+Failure modes / limitations: Corpus-tuned threshold; AI-drafted ground truth checked by one author; no outside rescoring.
+
+Supporting sources: [LogDx-CI: Log Reduction for Root-Cause Diagnosis](https://arxiv.org/html/2605.28876v1)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence reflects limited tasks, source/setup uncertainty and lack of independent replication; scores do not define confidence. Empty contradictory evidence means none was located in this bounded pass.
+
+### Coding.review (low confidence)
+
+Two one-shot review fixtures support a warning about missed or unsupported findings; the small directional study cannot establish general review quality.
+
+Scope: direct / warning. The measured task fits this rubric boundary; no transfer to adjacent tasks.
+
+Direct task IDs: coding.review
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-e35ebbffc833ea6a
+
+Conditions: Tools disabled and one-turn assertion; one scored response per review fixture; LLM rubric and two blind judges.
+
+Failure modes / limitations: Unpinned CLI/backend and tiny review sample; source adaptive-thinking explanation conflicts with official manual-thinking support.
+
+Supporting sources: [LLM review benchmark](https://github.com/MarcinDudekDev/llm-review-bench)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence reflects limited tasks, source/setup uncertainty and lack of independent replication; scores do not define confidence. Empty contradictory evidence means none was located in this bounded pass.
+
+### Knowledge.classification (low confidence)
+
+In one 900-comment Reddit response classification study, pinned Haiku 4.5 achieved mean pooled macro-F1 0.50 with universal labels. Validate the label schema and class errors before use on similar discourse.
+
+Scope: direct / warning. The measured task fits this rubric boundary; no transfer to adjacent tasks.
+
+Direct task IDs: knowledge.classification
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-889de5fb1a96f5d4
+
+Conditions: claude-haiku-4-5-20251001 via vendor CLI; empty tools; April 2–9, 2026; sampling parameters unexposed.; Three response classes; fold-composition variability, not repeat-run model uncertainty.
+
+Failure modes / limitations: Belief-class misses; topic and label sensitivity; no surrounding thread context; corpus prefilter/annotation limits.
+
+Supporting sources: [Long Live Fine-Tuning: Misinformation Response Classification on Reddit](https://arxiv.org/html/2606.04274v1)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Direct task scope follows the reported output and metric; confidence is low because this is one bounded study with the stated setup limitations.
+
+### Reasoning.math (low confidence)
+
+One 1000-pair GSM-Symbolic study reports 97.9% original and 96.6% modified accuracy with eight-shot chain-of-thought. This supports grade-school numerical reasoning under that prompt, with broader math ability unresolved.
+
+Scope: direct / conditional. The measured task fits this rubric boundary; no transfer to adjacent tasks.
+
+Direct task IDs: reasoning.math
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-2e00e2f0e910045e
+
+Conditions: Anthropic API, temperature zero, eight-shot examples, tuned format and reasoning prefill; no code execution in CoT.
+
+Failure modes / limitations: Immutable revision unknown; prompt tuning and familiar corpus; two collection runs; numerical answer matching does not evaluate proofs.
+
+Supporting sources: [Reasoning, Code, or Both? Variations in Math Questions](https://arxiv.org/html/2605.26414v1)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Direct task scope follows the reported output and metric; confidence is low because this is one bounded study with the stated setup limitations.
+
 ## Specifications
 
 | Field | Recorded value |
@@ -96,15 +294,15 @@ Provider routes and subscriptions are separate. Read billing units, thresholds, 
 
 ## Licensing and local use
 
-License: Not established / proprietary terms must be checked
+License: Anthropic Commercial Terms for hosted API
 
-Restrictions: Not established in this pass
+Restrictions: Hosted commercial API may power customer applications, subject to terms, Usage Policy and Supported Regions Policy.; No public weight redistribution license established; resale of the service, competing-model training and reverse engineering require separate authorization.
 
-Commercial use: Unknown / not established
+Commercial use: Hosted API permitted subject to Commercial Terms and applicable policies; not an unrestricted weight license.
 
 Redistribution: Unknown / not established
 
-Hosted service: Unknown / not established
+Hosted service: Customer applications powered by the hosted API permitted subject to terms; direct service resale restricted.
 
 Local weights/runtime availability: unavailable
 
@@ -129,10 +327,10 @@ Local conditions: Not established in this pass
 - anthropic / Claude API: officially_documented_not_execution_tested. Not established in this pass
 - anthropic / Usage-based Claude Enterprise: Conditional consumer/client product; exact account entitlement unverified. Seat fee plus usage at API rates; this is a separately evidenced metered client route.
 - google-cloud / Gemini Enterprise Agent Platform (formerly Vertex AI): officially_documented_not_execution_tested. Not established in this pass
-- claude-platform-on-aws / Claude Platform on AWS: officially_documented_not_execution_tested. Not established in this pass
-- azure-foundry / Claude in Microsoft Foundry: officially_documented_not_execution_tested. Not established in this pass
+- claude-platform-on-aws / Claude Platform on AWS: officially_documented_not_execution_tested. Separate Anthropic organization and AWS Marketplace enrollment; gateway region does not pin inference. Haiku 4.5 rejects inference_geo.
+- azure-foundry / Claude in Microsoft Foundry: officially_documented_not_execution_tested. Foundry Claude is an Anthropic-operated Marketplace offering: Azure-hosted processing and Anthropic-hosted processing have distinct boundaries and safety-review exceptions.
 - anthropic / Claude apps: Conditional consumer/client product; exact account entitlement unverified. Official model launch says all users; current plan table lists Haiku on Free and paid plans. Quotas apply; no per-token consumer free tariff.
-- aws-bedrock / Amazon Bedrock: officially_documented_not_execution_tested. Not established in this pass
+- aws-bedrock / Amazon Bedrock: officially_documented_not_execution_tested. Runtime on-demand uses geo/global inference profiles; bare Haiku alias is Mantle-specific.; Haiku card lists Standard and Reserved; Priority and Flex unsupported.
 - anthropic / Claude Code terminal and IDE: Conditional consumer/client product; exact account entitlement unverified. Full model IDs can be selected subject to plan and organization permissions. Separate subscription sign-in from API-key/partner billing.
 - anthropic / Claude API: Active. quota: Tier/account-specific; exact numeric public tier table not captured
 - aws-bedrock / Amazon Bedrock: Listed by creator; independent provider pricing and regional entitlement not verified. Not established in this pass

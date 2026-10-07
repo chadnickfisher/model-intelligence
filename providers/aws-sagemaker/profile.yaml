@@ -4,17 +4,24 @@ verified_at: '2026-10-07'
 name: AWS SageMaker
 roles:
 - cloud-platform
-api_compatibility: []
-access_methods: []
+api_compatibility:
+- Cohere embedding request format served at the named SageMaker endpoint; model-specific batch transform
+  unsupported.
+access_methods:
+- Cohere Fast Marketplace subscription and IAM-authorized SageMaker endpoint deployment.
 geographic_availability: []
 rate_limits: []
 caching_batching: []
-privacy_data_use: []
+privacy_data_use:
+- Inspected Cohere Marketplace agreement limits Cohere data access to support exceptions; cloud processing,
+  storage and account configuration require partner review.
 reliability: []
 model_ids:
 - cohere-embed-5-fast
 - cohere-embed-5-pro
-price_ids: []
+price_ids:
+- price-fdc3c3adcacb97cd
+- price-e40eacbbb949f6ac
 access_ids:
 - access-4ebb9f82b08e79fa
 - access-a1aa0d0c1887982c
@@ -24,7 +31,10 @@ evidence_ids:
 - src-73e03ec6d5cd
 - src-9277f5b6b599
 - src-a03104fba002
+- src-e9acd4aa3c25
+- src-38af72a909ec
+- src-23c99c9b9680
 notes:
 - New public access-product identity; policies and account-specific entitlements remain unverified.
 limitations:
-- Do not inherit policies from a parent company or another product.
+- Exact regional quota, throughput, GPU minimum, SLA and cloud-account settings not established.

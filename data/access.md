@@ -157,10 +157,10 @@ Generated from canonical YAML. Units, route conditions and dates are essential.
 | claude-fable-5-1 | anthropic | client_product; chat_app; subscription_client | Conditional consumer/client product; exact account entitlement unverified; All paid plans can access, with materially different inclusion: Max and premium Team/legacy Enterprise seats include up to 50% of shared weekly usage; Pro and standard Team/legacy Enterprise seats use usage credits from first request. |
 | claude-fable-5-1 | anthropic | client_product; subscription_client | Conditional consumer/client product; exact account entitlement unverified; Seat fee plus usage at API rates; this is a separately evidenced metered client route. |
 | claude-haiku-4-5 | anthropic | hosted_api | officially_documented_not_execution_tested; Not established in this pass |
-| claude-haiku-4-5 | aws-bedrock | hosted_api | officially_documented_not_execution_tested; Not established in this pass |
+| claude-haiku-4-5 | aws-bedrock | hosted_api | officially_documented_not_execution_tested; Runtime on-demand uses geo/global inference profiles; bare Haiku alias is Mantle-specific.; Haiku card lists Standard and Reserved; Priority and Flex unsupported. |
 | claude-haiku-4-5 | google-cloud | hosted_api | officially_documented_not_execution_tested; Not established in this pass |
-| claude-haiku-4-5 | claude-platform-on-aws | hosted_api | officially_documented_not_execution_tested; Not established in this pass |
-| claude-haiku-4-5 | azure-foundry | hosted_api | officially_documented_not_execution_tested; Not established in this pass |
+| claude-haiku-4-5 | claude-platform-on-aws | hosted_api | officially_documented_not_execution_tested; Separate Anthropic organization and AWS Marketplace enrollment; gateway region does not pin inference. Haiku 4.5 rejects inference_geo. |
+| claude-haiku-4-5 | azure-foundry | hosted_api | officially_documented_not_execution_tested; Foundry Claude is an Anthropic-operated Marketplace offering: Azure-hosted processing and Anthropic-hosted processing have distinct boundaries and safety-review exceptions. |
 | claude-haiku-4-5 | anthropic | client_product; subscription_client | Conditional consumer/client product; exact account entitlement unverified; Full model IDs can be selected subject to plan and organization permissions. Separate subscription sign-in from API-key/partner billing. |
 | claude-haiku-4-5 | anthropic | client_product; chat_app; subscription_client | Conditional consumer/client product; exact account entitlement unverified; Official model launch says all users; current plan table lists Haiku on Free and paid plans. Quotas apply; no per-token consumer free tariff. |
 | claude-haiku-4-5 | anthropic | client_product; subscription_client | Conditional consumer/client product; exact account entitlement unverified; Seat fee plus usage at API rates; this is a separately evidenced metered client route. |
@@ -183,10 +183,10 @@ Generated from canonical YAML. Units, route conditions and dates are essential.
 | cohere-command-a-plus | cohere | hosted_api | documented_not_execution_tested; Not established in this pass |
 | cohere-command-a-plus | cohere | hosted_api | documented_not_execution_tested; Not established in this pass |
 | cohere-command-a-plus | azure-foundry | hosted_api | creator_catalog_lists_partner_model; provider_price_unverified; Not established in this pass |
-| cohere-embed-5-fast | cohere | hosted_api | documented_not_execution_tested; Not established in this pass |
+| cohere-embed-5-fast | cohere | hosted_api | documented_not_execution_tested; Trial keys are not for production/commercial use; production access requires organization-owner approval application. |
 | cohere-embed-5-fast | cohere | hosted_api | documented_not_execution_tested; Not established in this pass |
 | cohere-embed-5-fast | azure-foundry | hosted_api | exact_partner_catalog_listing; regional_price_unverified; Not established in this pass |
-| cohere-embed-5-fast | aws-sagemaker | hosted_api | creator_documented; deployment-specific ID; Not established in this pass |
+| cohere-embed-5-fast | aws-sagemaker | hosted_api | exact_fast_marketplace_listing; deployment-specific endpoint; Not established in this pass |
 | cohere-embed-5-pro | cohere | hosted_api | documented_not_execution_tested; Not established in this pass |
 | cohere-embed-5-pro | cohere | hosted_api | documented_not_execution_tested; Not established in this pass |
 | cohere-embed-5-pro | azure-foundry | hosted_api | exact_partner_catalog_listing; regional_price_unverified; Not established in this pass |

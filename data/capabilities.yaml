@@ -769,6 +769,270 @@ records:
     research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate review_tests_frontend:tests-haiku; exact identity gates and original
       sources retained.
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-c01714fd674be14c
+  scope: direct
+  task_ids:
+  - coding.scoped_edit
+  related_task_ids: []
+  assessment: conditional
+  scope_note: The measured workload fits this task; conclusion is limited to the recorded setup.
+  judgment: One original hosted evaluation passes all nine short Python function tasks; this supports only
+    small, self-contained implementation under that harness.
+  confidence: low
+  supporting_evidence_ids:
+  - src-9d3919791a72
+  - src-9be7b13428d4
+  contradictory_evidence_ids: []
+  conditions:
+  - Single-turn function signature and specification; nine hidden-assertion tasks; one attempt each.
+  known_failure_modes:
+  - Small saturated suite does not establish repository, debugging, tool-use or production correctness.
+  evidence_notes:
+  - Low confidence reflects setup breadth, identity uncertainty and source limitations, not the score. No contradictory
+    result located in this bounded pass does not establish agreement.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-pilot-2026-10-07-v1-1
+    method: Inspected public original reports; no inference or local benchmarking.
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-7156ae35731ec615
+  scope: direct
+  task_ids:
+  - language.instruction_following
+  related_task_ids: []
+  assessment: warning
+  scope_note: The measured task fits this rubric boundary; no transfer to adjacent tasks.
+  judgment: Portuguese literary constraint evaluation supports a warning about exact counts and structural
+    constraints; use explicit output checks under this setup.
+  confidence: low
+  supporting_evidence_ids:
+  - src-e495b08b40a6
+  contradictory_evidence_ids: []
+  conditions:
+  - Temperature zero; 200 single-turn literary prompts and 100 three-turn conversations.
+  known_failure_modes:
+  - Rule-based constraint compliance does not establish factual literary correctness or all-language instruction
+    quality.
+  evidence_notes:
+  - Low confidence reflects limited tasks, source/setup uncertainty and lack of independent replication; scores
+    do not define confidence. Empty contradictory evidence means none was located in this bounded pass.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-pilot-2026-10-07-v1-1
+    method: Inspected original public reports and recorded bounded searches; no inference or benchmark execution.
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-391bee7f74fddbd3
+  scope: direct
+  task_ids:
+  - language.writing
+  related_task_ids: []
+  assessment: conditional
+  scope_note: The measured task fits this rubric boundary; no transfer to adjacent tasks.
+  judgment: Small English business-task evaluations support conditional drafting use; audience/style quality
+    outside the five tested cases is unestablished.
+  confidence: low
+  supporting_evidence_ids:
+  - src-bfdf4f90e154
+  - src-61e1f4d1aadb
+  contradictory_evidence_ids: []
+  conditions:
+  - May 10 cohort; English single-turn text; five cases in this category, four LLM judges.
+  known_failure_modes:
+  - No public full response traces, immutable serving revision or independent replication.
+  evidence_notes:
+  - Low confidence reflects limited tasks, source/setup uncertainty and lack of independent replication; scores
+    do not define confidence. Empty contradictory evidence means none was located in this bounded pass.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-pilot-2026-10-07-v1-1
+    method: Inspected original public reports and recorded bounded searches; no inference or benchmark execution.
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-d14d5e6960fa913c
+  scope: direct
+  task_ids:
+  - language.summarization
+  related_task_ids: []
+  assessment: conditional
+  scope_note: The measured task fits this rubric boundary; no transfer to adjacent tasks.
+  judgment: A small business summarization evaluation supports a limited, conditional conclusion; verify retained
+    facts and qualifications for the target material.
+  confidence: low
+  supporting_evidence_ids:
+  - src-bfdf4f90e154
+  - src-61e1f4d1aadb
+  contradictory_evidence_ids: []
+  conditions:
+  - May 10 cohort; English single-turn text; five cases in this category, four LLM judges.
+  known_failure_modes:
+  - No public full response traces, immutable serving revision or independent replication.
+  evidence_notes:
+  - Low confidence reflects limited tasks, source/setup uncertainty and lack of independent replication; scores
+    do not define confidence. Empty contradictory evidence means none was located in this bounded pass.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-pilot-2026-10-07-v1-1
+    method: Inspected original public reports and recorded bounded searches; no inference or benchmark execution.
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-623c7e8d247d4615
+  scope: direct
+  task_ids:
+  - knowledge.extraction
+  related_task_ids: []
+  assessment: conditional
+  scope_note: The measured task fits this rubric boundary; no transfer to adjacent tasks.
+  judgment: Five business extraction cases support a conditional structured-extraction conclusion; exact source
+    types and public answer traces are incomplete.
+  confidence: low
+  supporting_evidence_ids:
+  - src-bfdf4f90e154
+  - src-61e1f4d1aadb
+  contradictory_evidence_ids: []
+  conditions:
+  - May 10 cohort; English single-turn text; five cases in this category, four LLM judges.
+  known_failure_modes:
+  - No public full response traces, immutable serving revision or independent replication.
+  evidence_notes:
+  - Low confidence reflects limited tasks, source/setup uncertainty and lack of independent replication; scores
+    do not define confidence. Empty contradictory evidence means none was located in this bounded pass.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-pilot-2026-10-07-v1-1
+    method: Inspected original public reports and recorded bounded searches; no inference or benchmark execution.
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-4310e42c6be1639d
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: The measured task fits this rubric boundary; no transfer to adjacent tasks.
+  judgment: CI log diagnosis depends materially on the reduction method; evidence supports a bounded diagnostic
+    use with preserved failure signals, not an autonomous fix guarantee.
+  confidence: low
+  supporting_evidence_ids:
+  - src-2e03cb5a63cf
+  contradictory_evidence_ids: []
+  conditions:
+  - Thirty-five public GitHub Actions failures; single-shot Haiku diagnosis JSON, deterministic diagnosis_score_v1_1.
+  known_failure_modes:
+  - Corpus-tuned threshold; AI-drafted ground truth checked by one author; no outside rescoring.
+  evidence_notes:
+  - Low confidence reflects limited tasks, source/setup uncertainty and lack of independent replication; scores
+    do not define confidence. Empty contradictory evidence means none was located in this bounded pass.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-pilot-2026-10-07-v1-1
+    method: Inspected original public reports and recorded bounded searches; no inference or benchmark execution.
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-e35ebbffc833ea6a
+  scope: direct
+  task_ids:
+  - coding.review
+  related_task_ids: []
+  assessment: warning
+  scope_note: The measured task fits this rubric boundary; no transfer to adjacent tasks.
+  judgment: Two one-shot review fixtures support a warning about missed or unsupported findings; the small
+    directional study cannot establish general review quality.
+  confidence: low
+  supporting_evidence_ids:
+  - src-5a27e3e4bac2
+  contradictory_evidence_ids: []
+  conditions:
+  - Tools disabled and one-turn assertion; one scored response per review fixture; LLM rubric and two blind
+    judges.
+  known_failure_modes:
+  - Unpinned CLI/backend and tiny review sample; source adaptive-thinking explanation conflicts with official
+    manual-thinking support.
+  evidence_notes:
+  - Low confidence reflects limited tasks, source/setup uncertainty and lack of independent replication; scores
+    do not define confidence. Empty contradictory evidence means none was located in this bounded pass.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-pilot-2026-10-07-v1-1
+    method: Inspected original public reports and recorded bounded searches; no inference or benchmark execution.
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-889de5fb1a96f5d4
+  scope: direct
+  task_ids:
+  - knowledge.classification
+  related_task_ids: []
+  assessment: warning
+  scope_note: The measured task fits this rubric boundary; no transfer to adjacent tasks.
+  judgment: In one 900-comment Reddit response classification study, pinned Haiku 4.5 achieved mean pooled
+    macro-F1 0.50 with universal labels. Validate the label schema and class errors before use on similar discourse.
+  confidence: low
+  supporting_evidence_ids:
+  - src-4228c246c84d
+  contradictory_evidence_ids: []
+  conditions:
+  - claude-haiku-4-5-20251001 via vendor CLI; empty tools; April 2–9, 2026; sampling parameters unexposed.
+  - Three response classes; fold-composition variability, not repeat-run model uncertainty.
+  known_failure_modes:
+  - Belief-class misses; topic and label sensitivity; no surrounding thread context; corpus prefilter/annotation
+    limits.
+  evidence_notes:
+  - Direct task scope follows the reported output and metric; confidence is low because this is one bounded
+    study with the stated setup limitations.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-pilot-2026-10-07-v1-1
+    method: Inspected original public reports and recorded bounded searches; no inference or benchmark execution.
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-2e00e2f0e910045e
+  scope: direct
+  task_ids:
+  - reasoning.math
+  related_task_ids: []
+  assessment: conditional
+  scope_note: The measured task fits this rubric boundary; no transfer to adjacent tasks.
+  judgment: One 1000-pair GSM-Symbolic study reports 97.9% original and 96.6% modified accuracy with eight-shot
+    chain-of-thought. This supports grade-school numerical reasoning under that prompt, with broader math ability
+    unresolved.
+  confidence: low
+  supporting_evidence_ids:
+  - src-28f7598af662
+  contradictory_evidence_ids: []
+  conditions:
+  - Anthropic API, temperature zero, eight-shot examples, tuned format and reasoning prefill; no code execution
+    in CoT.
+  known_failure_modes:
+  - Immutable revision unknown; prompt tuning and familiar corpus; two collection runs; numerical answer matching
+    does not evaluate proofs.
+  evidence_notes:
+  - Direct task scope follows the reported output and metric; confidence is low because this is one bounded
+    study with the stated setup limitations.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-pilot-2026-10-07-v1-1
+    method: Inspected original public reports and recorded bounded searches; no inference or benchmark execution.
 - model_id: claude-opus-5-5
   profile: models/anthropic/claude-opus-5-5/profile.yaml
   id: judgment-a58a16e37a99fdcb
@@ -1288,13 +1552,14 @@ records:
   id: judgment-afbdc8473c5cc5bd
   scope: direct
   task_ids:
-  - context.retrieval
+  - knowledge.retrieval
   related_task_ids: []
   assessment: conditional
-  scope_note: One task reference; conclusion remains conditional, not an ability score.
+  scope_note: Rubric 1.1 maps corpus retrieval to knowledge.retrieval. The stable ID, original conclusion and
+    evidence remain; confidence is lowered because cost/latency transfer still relies on vendor evidence.
   judgment: Candidate for query-time cost/latency savings, including Pro-index/Fast-query pairing; current
     comparative evidence is vendor-generated.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - obs-752ea46df2f7
   contradictory_evidence_ids: []
@@ -1302,6 +1567,8 @@ records:
   known_failure_modes: []
   evidence_notes:
   - 'Observation obs-752ea46df2f7: Public evidence observation'
+  - 'Pilot reassessment: no independent exact-setup latency evidence inspected; the independent corpus study
+    measures retrieval quality, not query-time savings. Earlier confidence remains in history.'
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -1315,10 +1582,11 @@ records:
   id: judgment-7e21faf82ca7635e
   scope: direct
   task_ids:
-  - context.retrieval
+  - knowledge.retrieval
   related_task_ids: []
   assessment: conditional
-  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  scope_note: Rubric 1.1 maps external-corpus retrieval and candidate ranking to knowledge.retrieval. Stable
+    judgment ID, original conclusion, confidence and evidence are preserved.
   judgment: Vendor ViDoRe V3 results support ranking a fixed candidate set of parsed documents; first-stage
     retrieval recall over a full index remains unknown.
   confidence: low
@@ -1341,6 +1609,34 @@ records:
     research_batch_id: public-task-followup-2026-10-07
     method: Inspected original model/evaluator sources and performed the recorded public search; no inference
       or benchmarking calls.
+- model_id: cohere-embed-5-fast
+  profile: models/cohere/cohere-embed-5-fast/profile.yaml
+  id: judgment-cbfb9b59385271d6
+  scope: direct
+  task_ids:
+  - knowledge.retrieval
+  related_task_ids: []
+  assessment: conditional
+  scope_note: The measured workload fits this task; conclusion is limited to the recorded setup.
+  judgment: An independent short-passage corpus study supports retrieval under its recorded query/document
+    configuration; incomplete labels and unpinned hosted weights limit transfer.
+  confidence: low
+  supporting_evidence_ids:
+  - src-095104f20b18
+  contradictory_evidence_ids: []
+  conditions:
+  - Cosine retrieval; search_query/search_document roles; 2048 dimensions; no reranking or generated answers.
+  known_failure_modes:
+  - Long-document, multilingual, multimodal and full RAG quality are not established by this setup.
+  evidence_notes:
+  - Low confidence reflects setup breadth, identity uncertainty and source limitations, not the score. No contradictory
+    result located in this bounded pass does not establish agreement.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-pilot-2026-10-07-v1-1
+    method: Inspected public original reports; no inference or local benchmarking.
 - model_id: cohere-embed-5-pro
   profile: models/cohere/cohere-embed-5-pro/profile.yaml
   id: judgment-0e6e2979fb965898

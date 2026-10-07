@@ -8,7 +8,7 @@ identity:
   version: 5 Fast
   release_date: '2026-09-30'
   latest_meaningful_update: null
-  status: unknown
+  status: active
   model_types:
   - specialist
 specifications:
@@ -31,11 +31,20 @@ specifications:
     evidence_ids:
     - src-9d4f7ae81230
   maximum_output:
-    value: null
-    status: unknown
-    conditions: []
+    value:
+      embedding_dimensions:
+      - 256
+      - 512
+      - 768
+      - 1024
+      - 1536
+      - 2048
+    status: documented
+    conditions:
+    - Vector dimension unit, not generated tokens; select a supported dimensionality. SageMaker listing
+      defaults to 1024.
     evidence_ids:
-    - src-9d4f7ae81230
+    - src-e9acd4aa3c25
   modalities:
     value:
       input:
@@ -62,11 +71,12 @@ additional_specifications:
     evidence_ids:
     - src-9d4f7ae81230
   api_alias:
-    value: null
-    status: unknown
-    conditions: []
+    value: embed-v5.0-fast
+    status: documented
+    conditions:
+    - Cohere Embed API identifier; immutable weights are not established.
     evidence_ids:
-    - src-9d4f7ae81230
+    - src-9b35fe262e17
   weights:
     value: private_deployment_available; public-weight_license_unverified
     status: documented
@@ -79,26 +89,36 @@ licensing:
   redistribution: null
   fine_tuning: null
   hosted_service: null
-  restrictions: []
+  restrictions:
+  - Trial keys cannot be used for production/commercial workloads. Production and private deployment rights
+    depend on the applicable agreement.
+  - Marketplace terms permit customer applications subject to restrictions; no unrestricted redistribution
+    or modification right established.
   evidence_ids:
   - src-9d4f7ae81230
+  - src-38af72a909ec
+  - src-73e03ec6d5cd
 local_inference:
-  availability: unknown
+  availability: available
   hardware_notes: []
-  conditions: []
+  conditions:
+  - Licensed private infrastructure/self-hosting described by creator; public weights, minimum VRAM and
+    fine-tuning rights not established.
   evidence_ids:
   - src-9d4f7ae81230
+  - src-d02c4ac36fa4
 capabilities:
 - id: judgment-afbdc8473c5cc5bd
   scope: direct
   task_ids:
-  - context.retrieval
+  - knowledge.retrieval
   related_task_ids: []
   assessment: conditional
-  scope_note: One task reference; conclusion remains conditional, not an ability score.
+  scope_note: Rubric 1.1 maps corpus retrieval to knowledge.retrieval. The stable ID, original conclusion
+    and evidence remain; confidence is lowered because cost/latency transfer still relies on vendor evidence.
   judgment: Candidate for query-time cost/latency savings, including Pro-index/Fast-query pairing; current
     comparative evidence is vendor-generated.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - obs-752ea46df2f7
   contradictory_evidence_ids: []
@@ -106,6 +126,8 @@ capabilities:
   known_failure_modes: []
   evidence_notes:
   - 'Observation obs-752ea46df2f7: Public evidence observation'
+  - 'Pilot reassessment: no independent exact-setup latency evidence inspected; the independent corpus
+    study measures retrieval quality, not query-time savings. Earlier confidence remains in history.'
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -117,10 +139,11 @@ capabilities:
 - id: judgment-7e21faf82ca7635e
   scope: direct
   task_ids:
-  - context.retrieval
+  - knowledge.retrieval
   related_task_ids: []
   assessment: conditional
-  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  scope_note: Rubric 1.1 maps external-corpus retrieval and candidate ranking to knowledge.retrieval.
+    Stable judgment ID, original conclusion, confidence and evidence are preserved.
   judgment: Vendor ViDoRe V3 results support ranking a fixed candidate set of parsed documents; first-stage
     retrieval recall over a full index remains unknown.
   confidence: low
@@ -132,10 +155,10 @@ capabilities:
   known_failure_modes:
   - This candidate-ranking result cannot establish full-index recall or all-language superiority.
   evidence_notes:
-  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
-    confidence.'
-  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
-    coverage ledger.
+  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are
+    not confidence.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded
+    in the coverage ledger.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -143,6 +166,32 @@ capabilities:
     research_batch_id: public-task-followup-2026-10-07
     method: Inspected original model/evaluator sources and performed the recorded public search; no inference
       or benchmarking calls.
+- id: judgment-cbfb9b59385271d6
+  scope: direct
+  task_ids:
+  - knowledge.retrieval
+  related_task_ids: []
+  assessment: conditional
+  scope_note: The measured workload fits this task; conclusion is limited to the recorded setup.
+  judgment: An independent short-passage corpus study supports retrieval under its recorded query/document
+    configuration; incomplete labels and unpinned hosted weights limit transfer.
+  confidence: low
+  supporting_evidence_ids:
+  - src-095104f20b18
+  contradictory_evidence_ids: []
+  conditions:
+  - Cosine retrieval; search_query/search_document roles; 2048 dimensions; no reranking or generated answers.
+  known_failure_modes:
+  - Long-document, multilingual, multimodal and full RAG quality are not established by this setup.
+  evidence_notes:
+  - Low confidence reflects setup breadth, identity uncertainty and source limitations, not the score.
+    No contradictory result located in this bounded pass does not establish agreement.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-pilot-2026-10-07-v1-1
+    method: Inspected public original reports; no inference or local benchmarking.
 performance_characteristics: []
 access_ids:
 - access-585031543ef7fcf8
@@ -152,6 +201,10 @@ access_ids:
 price_ids:
 - price-261d7144f200e9bd
 - price-providers-cohere-embed-5-fast-cohere-ca6b05775efe
+- price-fdc3c3adcacb97cd
+- price-e40eacbbb949f6ac
+- price-c975f4bc740e679c
+- price-f8067e6f48410d1c
 evidence_ids:
 - src-9d4f7ae81230
 notes: []

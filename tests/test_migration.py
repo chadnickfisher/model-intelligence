@@ -12,11 +12,19 @@ from tools.migrate_v2 import write_yaml
 def test_all_original_conclusions_and_evidence_survive():
     originals = read(ROOT / 'history/migrations/2026-10-07-capabilities.yaml')['records']
     current = canonical()
+    revisions = history()
     assert len([r for r in originals if r['original_collection'] == 'capabilities']) == 64
     assert len(originals) == 71
     for row in originals:
-        model = current[('model', row['model_id'])][1]
+        # Preservation belongs to the migration event. Later inspected evidence
+        # can revise confidence while the original value remains in history.
+        model = next(r['value'] for r in revisions
+                     if r['entity_type'] == 'model' and r['entity_id'] == row['model_id']
+                     and r['value'] and any(j['id'] == row['judgment_id']
+                         for j in r['value']['capabilities'] + r['value']['performance_characteristics']))
         claim = next(j for j in model['capabilities'] + model['performance_characteristics'] if j['id'] == row['judgment_id'])
+        live = current[('model', row['model_id'])][1]
+        assert any(j['id'] == row['judgment_id'] for j in live['capabilities'] + live['performance_characteristics'])
         for field, value in row['original'].items():
             assert (claim['provenance']['original_task'] if field == 'task' else claim[field]) == value
     scopes = [r['classification'] for r in originals if r['original_collection'] == 'capabilities']

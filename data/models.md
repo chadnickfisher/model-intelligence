@@ -16,7 +16,7 @@ Generated navigation. Read canonical profiles for evidence, conditions, and date
 | [Claude Sonnet 5.5](../models/anthropic/claude-sonnet-5-5/README.md) | Anthropic | active | unavailable |
 | [FLUX 3 Video](../models/black-forest-labs/bfl-flux3-video/README.md) | Black Forest Labs | preview | unknown |
 | [Command A+](../models/cohere/cohere-command-a-plus/README.md) | Cohere | preview | available |
-| [Embed 5 Fast](../models/cohere/cohere-embed-5-fast/README.md) | Cohere | unknown | unknown |
+| [Embed 5 Fast](../models/cohere/cohere-embed-5-fast/README.md) | Cohere | active | available |
 | [Embed 5 Pro](../models/cohere/cohere-embed-5-pro/README.md) | Cohere | unknown | unknown |
 | [North Small Translate](../models/cohere/cohere-north-small-translate/README.md) | Cohere | unknown | available |
 | [DeepSeek-V4.1-Flash](../models/deepseek/deepseek-v4-1-flash/README.md) | DeepSeek | active | available |

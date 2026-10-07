@@ -7,11 +7,11 @@ Verified: 2026-10-07
 
 ## Access methods
 
-- Not established in this baseline.
+- Cohere Fast Marketplace subscription and IAM-authorized SageMaker endpoint deployment.
 
 ## Api compatibility
 
-- Not established in this baseline.
+- Cohere embedding request format served at the named SageMaker endpoint; model-specific batch transform unsupported.
 
 ## Geographic availability
 
@@ -27,7 +27,7 @@ Verified: 2026-10-07
 
 ## Privacy data use
 
-- Not established in this baseline.
+- Inspected Cohere Marketplace agreement limits Cohere data access to support exceptions; cloud processing, storage and account configuration require partner review.
 
 ## Notes
 
@@ -35,14 +35,14 @@ Verified: 2026-10-07
 
 ## Limitations
 
-- Do not inherit policies from a parent company or another product.
+- Exact regional quota, throughput, GPU minimum, SLA and cloud-account settings not established.
 
 ## Offers
 
-2 linked model(s), 2 access route(s), 0 price record(s).
+2 linked model(s), 2 access route(s), 2 price record(s).
 
 [Access](../../data/access.yaml) · [Pricing](../../data/pricing.yaml)
 
 ## Sources
 
-[cohere.com](https://cohere.com/blog/embed-5) · [https://docs.cohere.com/docs/cohere-embed](https://docs.cohere.com/docs/cohere-embed) · [cohere.com](https://cohere.com/pricing) · [https://ai.azure.com/catalog/models/Cohere-Embed-V5-Fast](https://ai.azure.com/catalog/models/Cohere-Embed-V5-Fast) · [docs.cohere.com](https://docs.cohere.com/docs/rate-limits)
+[Introducing Embed 5](https://cohere.com/blog/embed-5) · [https://docs.cohere.com/docs/cohere-embed](https://docs.cohere.com/docs/cohere-embed) · [cohere.com](https://cohere.com/pricing) · [https://ai.azure.com/catalog/models/Cohere-Embed-V5-Fast](https://ai.azure.com/catalog/models/Cohere-Embed-V5-Fast) · [docs.cohere.com](https://docs.cohere.com/docs/rate-limits) · [Cohere Embed v5 - Fast](https://aws.amazon.com/marketplace/pp/prodview-qffayhd7sgkja) · [Cohere Channel Partner Marketplace Terms](https://d7umqicpi7263.cloudfront.net/eula/zwCNtAqh63qu23txoMgMBd1L0_4PGP3LJfCLJKgF1J4) · [Amazon SageMaker Setup Guide](https://docs.cohere.com/docs/amazon-sagemaker-setup-guide)

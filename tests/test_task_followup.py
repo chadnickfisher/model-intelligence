@@ -11,10 +11,21 @@ def followup():
 
 
 def test_followup_has_actual_references_for_every_previously_pending_domain():
-    receipt,current,_=followup()
+    receipt,_,_=followup()
     assert len(set(receipt['models']))==26
-    checks=[r for (kind,_),(_,r) in current.items() if kind=='research_coverage']
+    revisions=history()
+    matching=[i for i,r in enumerate(revisions) if r['entity_type']=='research_coverage'
+              and r['value'] and r['value'].get('research_batch_id')==receipt['research_batch_id']
+              and r['value'].get('checked_at')==receipt['observed_at']]
+    assert matching
+    coverage={r['entity_id']:r['value'] for r in revisions[:max(matching)+1]
+              if r['entity_type']=='research_coverage'}
+    checks=[r for r in coverage.values() if r is not None]
     assert not any(r['result']=='not_checked' for r in checks)
+    followed=[r for r in checks if r['model_id'] in receipt['models']
+              and r['domain'] in {'capabilities','benchmarks'}]
+    assert {(r['model_id'],r['domain']) for r in followed}=={
+        (model,domain) for model in receipt['models'] for domain in {'capabilities','benchmarks'}}
     for r in checks:
         if r['model_id'] in receipt['models'] and r['domain'] in {'capabilities','benchmarks'}:
             assert r['checked_at']==receipt['observed_at']
@@ -24,18 +35,33 @@ def test_followup_has_actual_references_for_every_previously_pending_domain():
 
 
 def test_followup_preserves_prior_claims_and_factual_dates_in_observation_history():
-    receipt,current,_=followup()
+    receipt,_,_=followup()
     revisions=history()
+    receipt_judgments=set(receipt['judgment_ids'])
     for model in receipt['models']:
         chain=[r for r in revisions if r['entity_type']=='model' and r['entity_id']==model]
-        latest=chain[-1]
-        previous=next(r for r in chain if r['id']==latest['previous_revision_id'])
-        before=previous['value'];after=current[('model',model)][1]
+        by_id={r['id']:r for r in chain}
+        introductions=[]
+        for revision in chain:
+            if not revision['value'] or not revision['previous_revision_id']:
+                continue
+            before=by_id[revision['previous_revision_id']]['value']
+            prior_ids={j['id'] for j in before['capabilities']} if before else set()
+            added_ids={j['id'] for j in revision['value']['capabilities']}-prior_ids
+            if added_ids & receipt_judgments:
+                introductions.append(revision)
+        assert len(introductions)==1
+        event=introductions[0]
+        previous=by_id[event['previous_revision_id']]
+        before=previous['value'];after=event['value']
+        for field in set(before)-{'capabilities','evidence_ids'}:
+            assert after[field]==before[field]
+        assert set(before['evidence_ids'])<=set(after['evidence_ids'])
         assert after['verified_at']==before['verified_at']
         new={j['id']:j for j in after['capabilities']}
         assert all(new[j['id']]==j for j in before['capabilities'])
-        assert latest['effective_from'] is None
-        assert latest['observed_at']==receipt['observed_at']
+        assert event['effective_from'] is None
+        assert event['observed_at']==receipt['observed_at']
 
 
 def test_exact_configuration_gates_and_investigated_unknowns_survive():

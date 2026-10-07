@@ -45,4 +45,4 @@ Verified: 2026-10-07
 
 ## Sources
 
-[Gemini 3.1 Pro launch](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/) · [Gemini Apps plan limits](https://support.google.com/gemini/answer/16275805)
+[Gemini 3.1 Pro launch](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/) · [Gemini Apps limits and upgrades](https://support.google.com/gemini/answer/16275805)

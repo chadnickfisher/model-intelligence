@@ -23,7 +23,7 @@ Conditions: Not established in this pass
 
 Failure modes / limitations: Not established in this pass
 
-Supporting sources: [cohere.com](https://cohere.com/blog/embed-5)
+Supporting sources: [Introducing Embed 5](https://cohere.com/blog/embed-5)
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
@@ -45,7 +45,7 @@ Conditions: RCP-nDCG@10 reranks fixed candidates; parsed text from eight ViDoRe 
 
 Failure modes / limitations: This candidate-ranking result cannot establish full-index recall or all-language superiority.
 
-Supporting sources: [cohere.com](https://cohere.com/blog/embed-5)
+Supporting sources: [Introducing Embed 5](https://cohere.com/blog/embed-5)
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
@@ -112,4 +112,4 @@ Local conditions: Not established in this pass
 
 ## Sources
 
-[cohere.com](https://cohere.com/blog/embed-5)
+[Introducing Embed 5](https://cohere.com/blog/embed-5)

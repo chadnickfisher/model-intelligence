@@ -391,109 +391,339 @@ records:
   id: research-coverage-claude-haiku-4-5-capabilities
   model_id: claude-haiku-4-5
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
+  research_batch_id: research-run-pilot-2026-10-07-v1-1
   checked_at: '2026-10-07'
   result: changed
   evidence_ids:
+  - src-07c29d610258
+  - src-28f7598af662
   - src-2bf9d5fecb2c
+  - src-2e03cb5a63cf
+  - src-4228c246c84d
   - src-4e6f4ff35504
+  - src-5a27e3e4bac2
+  - src-5c510b458547
+  - src-61e1f4d1aadb
   - src-995284168dc8
-  search_references: []
+  - src-9be7b13428d4
+  - src-9d3919791a72
+  - src-bfdf4f90e154
+  - src-ce7f65873843
+  - src-e1910c5126bc
+  - src-e495b08b40a6
+  - src-e99bd76836c1
+  - src-f3655eaf1407
+  search_references:
+  - query: '"Claude Haiku 4.5" benchmark coding reasoning long context evaluation'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://www.anthropic.com/news/claude-haiku-4-5
+    notes:
+    - Located original launch evaluations; inspected setup.
+  - query: '"Claude Haiku 4.5" GitHub issues tool use regression'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://github.com/anthropics/claude-code/issues/10029
+    notes:
+    - Inspected one original tool-loop report.
+  - query: '"Claude Haiku 4.5" review refactoring tests architecture benchmark'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://arxiv.org/html/2603.23443v1
+    - https://www.datallmlab.com/blog/claude-haiku-4-5-review.html
+    notes:
+    - Inspected test-fragility paper and original short-function evaluation.
+  - query: '"Claude Haiku 4.5" translation summarization multilingual benchmark evaluation'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://www.anthropic.com/news/claude-haiku-4-5
+    notes:
+    - Vendor multilingual setup inspected; task-specific independent candidates remain unreviewed.
+  - query: '"Claude Haiku 4.5" parameters architecture license model weights'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://platform.claude.com/docs/en/models/haiku-4-5/overview
+    notes:
+    - No exact parameter count or architecture established from inspected original docs.
+  - query: '"Claude Haiku 4.5" fact checking synthesis extraction classification vision grounding evaluation'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls: []
+    notes:
+    - Search located candidate studies, but task-specific papers were not inspected before stopping.
+  - query: '"Claude Haiku 4.5" language classification retrieval vision benchmark arxiv evaluation'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls: []
+    notes:
+    - Distinct continuation query; inspected primary/original reports recorded by field and task evidence.
+      Irrelevant sibling and composite results excluded.
+  - query: site:anthropic.com legal commercial terms Claude API redistribution fine tuning
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls: []
+    notes:
+    - Distinct continuation query; inspected primary/original reports recorded by field and task evidence.
+      Irrelevant sibling and composite results excluded.
+  - query: '"Claude Haiku 4.5" classification extraction summarization translation retrieval RAG evaluation
+      benchmark'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls: []
+    notes:
+    - Distinct continuation query; inspected primary/original reports recorded by field and task evidence.
+      Irrelevant sibling and composite results excluded.
+  - query: '"Claude Haiku 4.5" code review debugging repository planning tool use reliability benchmark'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls: []
+    notes:
+    - Distinct continuation query; inspected primary/original reports recorded by field and task evidence.
+      Irrelevant sibling and composite results excluded.
+  - query: '"Claude Haiku 4.5" translation multilingual fact checking scientific math vision grounding benchmark'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls: []
+    notes:
+    - Distinct continuation query; inspected primary/original reports recorded by field and task evidence.
+      Irrelevant sibling and composite results excluded.
+  - query: '"Claude Haiku 4.5" rate limits Google Cloud Microsoft Foundry regions API'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls: []
+    notes:
+    - Distinct continuation query; inspected primary/original reports recorded by field and task evidence.
+      Irrelevant sibling and composite results excluded.
   scope_notes:
-  - Targeted coding evidence and configuration/confidence review; other modalities/tasks not re-investigated.
+  - Extended bounded source inspection reconciles required fields and task decisions; documented edits remain
+    separate from investigated unknowns.
   remaining_gaps:
-  - No universal ability score; missing exact harness, effort or immutable checkpoint stays unknown.
-  - Unlisted tasks lack sufficient exact-release evidence.
+  - Source/setup gaps are retained in individual fields; completion accounting is not research adequacy.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-claude-haiku-4-5-benchmarks
   model_id: claude-haiku-4-5
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
+  research_batch_id: research-run-pilot-2026-10-07-v1-1
   checked_at: '2026-10-07'
   result: changed
   evidence_ids:
+  - src-28f7598af662
   - src-2bf9d5fecb2c
+  - src-2e03cb5a63cf
+  - src-4228c246c84d
   - src-4e6f4ff35504
+  - src-5a27e3e4bac2
+  - src-5c510b458547
+  - src-61e1f4d1aadb
   - src-995284168dc8
-  search_references: []
+  - src-9be7b13428d4
+  - src-9d3919791a72
+  - src-bfdf4f90e154
+  - src-e495b08b40a6
+  - src-e99bd76836c1
+  search_references:
+  - query: '"Claude Haiku 4.5" benchmark coding reasoning long context evaluation'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://www.anthropic.com/news/claude-haiku-4-5
+    notes:
+    - Located original launch evaluations; inspected setup.
+  - query: '"Claude Haiku 4.5" GitHub issues tool use regression'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://github.com/anthropics/claude-code/issues/10029
+    notes:
+    - Inspected one original tool-loop report.
+  - query: '"Claude Haiku 4.5" review refactoring tests architecture benchmark'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://arxiv.org/html/2603.23443v1
+    - https://www.datallmlab.com/blog/claude-haiku-4-5-review.html
+    notes:
+    - Inspected test-fragility paper and original short-function evaluation.
+  - query: '"Claude Haiku 4.5" translation summarization multilingual benchmark evaluation'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://www.anthropic.com/news/claude-haiku-4-5
+    notes:
+    - Vendor multilingual setup inspected; task-specific independent candidates remain unreviewed.
+  - query: '"Claude Haiku 4.5" parameters architecture license model weights'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://platform.claude.com/docs/en/models/haiku-4-5/overview
+    notes:
+    - No exact parameter count or architecture established from inspected original docs.
+  - query: '"Claude Haiku 4.5" fact checking synthesis extraction classification vision grounding evaluation'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls: []
+    notes:
+    - Search located candidate studies, but task-specific papers were not inspected before stopping.
   scope_notes:
-  - Targeted coding evidence and configuration/confidence review; other modalities/tasks not re-investigated.
+  - Extended bounded source inspection reconciles required fields and task decisions; documented edits remain
+    separate from investigated unknowns.
   remaining_gaps:
-  - No universal ability score; missing exact harness, effort or immutable checkpoint stays unknown.
-  - Unlisted tasks lack sufficient exact-release evidence.
+  - Source/setup gaps are retained in individual fields; completion accounting is not research adequacy.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-claude-haiku-4-5-access-pricing
   model_id: claude-haiku-4-5
   domain: access_pricing
-  research_batch_id: public-research-2026-10-07
+  research_batch_id: research-run-pilot-2026-10-07-v1-1
   checked_at: '2026-10-07'
   result: changed
   evidence_ids:
-  - src-e1910c5126bc
+  - src-0882f00e6258
+  - src-26606ff14841
+  - src-2f9ece653a0f
+  - src-3044b3f1e225
+  - src-45084a6538d2
+  - src-4db2307f55ee
   - src-50846cd1ff36
   - src-58333316475e
-  - src-26606ff14841
+  - src-6bd484fad5a5
+  - src-6fea481a4699
+  - src-70d96e780ce1
+  - src-7dea3b226d0f
+  - src-82c97913adaf
+  - src-846f5cf1e705
+  - src-88ad926ffd53
+  - src-89e4a5e6eadc
+  - src-9277f5b6b599
+  - src-9a3bbc4f637b
+  - src-b03f06e4ffc9
   - src-b2ab15dd01eb
+  - src-bfad09311a1c
+  - src-e1910c5126bc
+  - src-e7ad291536d1
+  - src-e99bd76836c1
+  - src-ed2ea3ed3dc1
+  - src-f1078602a2b4
   - src-f61234c4ee64
   - src-f64988fee771
-  - src-2f9ece653a0f
-  - src-f1078602a2b4
-  - src-e99bd76836c1
-  search_references: []
+  search_references:
+  - query: '"Claude Haiku 4.5" benchmark coding reasoning long context evaluation'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://www.anthropic.com/news/claude-haiku-4-5
+    notes:
+    - Located original launch evaluations; inspected setup.
+  - query: '"Claude Haiku 4.5" GitHub issues tool use regression'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://github.com/anthropics/claude-code/issues/10029
+    notes:
+    - Inspected one original tool-loop report.
+  - query: '"Claude Haiku 4.5" review refactoring tests architecture benchmark'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://arxiv.org/html/2603.23443v1
+    - https://www.datallmlab.com/blog/claude-haiku-4-5-review.html
+    notes:
+    - Inspected test-fragility paper and original short-function evaluation.
+  - query: '"Claude Haiku 4.5" translation summarization multilingual benchmark evaluation'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://www.anthropic.com/news/claude-haiku-4-5
+    notes:
+    - Vendor multilingual setup inspected; task-specific independent candidates remain unreviewed.
+  - query: '"Claude Haiku 4.5" parameters architecture license model weights'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://platform.claude.com/docs/en/models/haiku-4-5/overview
+    notes:
+    - No exact parameter count or architecture established from inspected original docs.
+  - query: '"Claude Haiku 4.5" fact checking synthesis extraction classification vision grounding evaluation'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls: []
+    notes:
+    - Search located candidate studies, but task-specific papers were not inspected before stopping.
   scope_notes:
-  - All-catalog public primary-source route investigation; not exhaustive global provider/account entitlement
-    verification.
+  - Extended bounded source inspection reconciles required fields and task decisions; documented edits remain
+    separate from investigated unknowns.
   remaining_gaps:
-  - Individual account access, live remaining quotas, partner discounts and all-region coverage not tested.
-  - Exact numeric Bedrock tariffs not recoverable from checked page; leave unknown rather than importing Anthropic
-    rates.
-  - '{"access_id": "access-proprietary-access-22-3", "action": "split_subscription_BYOK_and_metered_client_context",
-    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-haiku-4-5-anthropic-92db4721bd09",
-    "price-proprietary-claude-haiku-4-5-anthropic-9448cb8b044e"], "methods": ["CLI"], "model_id": "claude-haiku-4-5",
-    "product": "Claude Code terminal", "reason": "Claude subscription sign-in, API-key billing, partner billing,
-    included usage and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage;
-    batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan", "a-plans", "a-price"],
-    "unconditional_join_valid": false, "valid_API_join_only_when": "Anthropic API-key authentication or explicitly
-    documented API-rate Enterprise/usage-credit schedule; not the monthly subscription fee."}'
-  - '{"access_id": "access-proprietary-access-22-ide-3", "action": "split_subscription_BYOK_and_metered_client_context",
-    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-haiku-4-5-anthropic-92db4721bd09",
-    "price-proprietary-claude-haiku-4-5-anthropic-9448cb8b044e"], "methods": ["IDE"], "model_id": "claude-haiku-4-5",
-    "product": "Claude Code IDE integrations", "reason": "Claude subscription sign-in, API-key billing, partner
-    billing, included usage and usage credits are distinct. Usage-based Enterprise separately documents API-rate
-    usage; batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan", "a-plans",
-    "a-price"], "unconditional_join_valid": false, "valid_API_join_only_when": "Anthropic API-key authentication
-    or explicitly documented API-rate Enterprise/usage-credit schedule; not the monthly subscription fee."}'
-  - '{"access_id": "access-proprietary-access-23-1", "action": "split_subscription_BYOK_and_metered_client_context",
-    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-haiku-4-5-anthropic-92db4721bd09",
-    "price-proprietary-claude-haiku-4-5-anthropic-9448cb8b044e"], "methods": ["chat_subscription"], "model_id":
-    "claude-haiku-4-5", "product": "Claude apps", "reason": "Claude subscription sign-in, API-key billing,
-    partner billing, included usage and usage credits are distinct. Usage-based Enterprise separately documents
-    API-rate usage; batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan",
-    "a-plans", "a-price"], "unconditional_join_valid": false, "valid_API_join_only_when": "Anthropic API-key
-    authentication or explicitly documented API-rate Enterprise/usage-credit schedule; not the monthly subscription
-    fee."}'
-  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
-    not silently used in the estimator.
+  - Source/setup gaps are retained in individual fields; completion accounting is not research adequacy.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-claude-haiku-4-5-behavior
   model_id: claude-haiku-4-5
   domain: behavior
-  research_batch_id: public-research-2026-10-07
+  research_batch_id: research-run-pilot-2026-10-07-v1-1
   checked_at: '2026-10-07'
   result: changed
   evidence_ids:
+  - src-5c510b458547
   - src-79fe7e214fdd
   - src-9a3bbc4f637b
-  search_references: []
+  - src-e1910c5126bc
+  - src-e86418b60c92
+  - src-e99bd76836c1
+  - src-f3655eaf1407
+  search_references:
+  - query: '"Claude Haiku 4.5" benchmark coding reasoning long context evaluation'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://www.anthropic.com/news/claude-haiku-4-5
+    notes:
+    - Located original launch evaluations; inspected setup.
+  - query: '"Claude Haiku 4.5" GitHub issues tool use regression'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://github.com/anthropics/claude-code/issues/10029
+    notes:
+    - Inspected one original tool-loop report.
+  - query: '"Claude Haiku 4.5" review refactoring tests architecture benchmark'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://arxiv.org/html/2603.23443v1
+    - https://www.datallmlab.com/blog/claude-haiku-4-5-review.html
+    notes:
+    - Inspected test-fragility paper and original short-function evaluation.
+  - query: '"Claude Haiku 4.5" translation summarization multilingual benchmark evaluation'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://www.anthropic.com/news/claude-haiku-4-5
+    notes:
+    - Vendor multilingual setup inspected; task-specific independent candidates remain unreviewed.
+  - query: '"Claude Haiku 4.5" parameters architecture license model weights'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://platform.claude.com/docs/en/models/haiku-4-5/overview
+    notes:
+    - No exact parameter count or architecture established from inspected original docs.
+  - query: '"Claude Haiku 4.5" fact checking synthesis extraction classification vision grounding evaluation'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls: []
+    notes:
+    - Search located candidate studies, but task-specific papers were not inspected before stopping.
   scope_notes:
-  - Historical prompt-cache issue remains unresolved after checking the model-specific minimum.
-  - Date records the investigation, not proof that old incidents persist or all routes are covered.
+  - Extended bounded source inspection reconciles required fields and task decisions; documented edits remain
+    separate from investigated unknowns.
   remaining_gaps:
-  - Prompt length and cache breakpoints must be controlled; stale closure is not recovery.
-  - No new inference or independent reproduction was run.
+  - Source/setup gaps are retained in individual fields; completion accounting is not research adequacy.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-claude-opus-5-5-capabilities
@@ -864,161 +1094,289 @@ records:
   id: research-coverage-cohere-embed-5-fast-capabilities
   model_id: cohere-embed-5-fast
   domain: capabilities
-  research_batch_id: public-task-followup-2026-10-07
+  research_batch_id: research-run-pilot-2026-10-07-v1-1
   checked_at: '2026-10-07'
   result: changed
   evidence_ids:
+  - src-095104f20b18
+  - src-9b35fe262e17
   - src-9d4f7ae81230
+  - src-e9acd4aa3c25
   search_references:
-  - query: Cohere "Embed 5 Pro" "Embed 5 Fast" retrieval evaluation
+  - query: '"Embed 5 Fast" independent retrieval evaluation'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://aimultiple.com/embedding-models
+    notes:
+    - Inspected original corpus retrieval study.
+  - query: '"Embed 5 Fast" GitHub issues retrieval bug'
+    checked_at: '2026-10-07'
+    outcome: no_matched_sources
+    urls: []
+    notes:
+    - No original exact-model production bug report identified in this bounded search.
+  - query: site:github.com "embed-v5.0-fast" issue
+    checked_at: '2026-10-07'
+    outcome: no_matched_sources
+    urls: []
+    notes:
+    - No original exact-model incident body identified.
+  - query: '"Embed 5 Fast" architecture parameters license weights'
     checked_at: '2026-10-07'
     outcome: sources_found
     urls:
     - https://cohere.com/blog/embed-5
     notes:
-    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
-      sibling/ambiguous versions excluded.
+    - Original deployment claims inspected; public weight license and parameters unestablished.
+  - query: '"Embed 5 Fast" site:github.com bug regression'
+    checked_at: '2026-10-07'
+    outcome: no_matched_sources
+    urls: []
+    notes:
+    - No independently attributable exact-model regression identified.
+  - query: '"Embed 5 Fast" evaluation classification long context recall benchmark'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://docs.cohere.com/docs/cohere-embed
+    - https://aimultiple.com/embedding-models
+    notes:
+    - Classification interface and short-passage retrieval setup inspected; other quality tasks unresolved.
+  - query: site:cohere.com privacy terms production API Embed 5 data training
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls: []
+    notes:
+    - Distinct continuation query; inspected primary/original reports recorded by field and task evidence.
+      Irrelevant sibling and composite results excluded.
+  - query: '"Embed 5 Fast" classification clustering multimodal multilingual evaluation latency practitioner'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls: []
+    notes:
+    - Distinct continuation query; inspected primary/original reports recorded by field and task evidence.
+      Irrelevant sibling and composite results excluded.
+  - query: '"Embed 5 Fast" incidents bugs regression user report'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls: []
+    notes:
+    - Distinct continuation query; inspected primary/original reports recorded by field and task evidence.
+      Irrelevant sibling and composite results excluded.
+  - query: site:docs.cohere.com "Embed 5" "private" "vLLM"
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls: []
+    notes:
+    - Distinct continuation query; inspected primary/original reports recorded by field and task evidence.
+      Irrelevant sibling and composite results excluded.
+  - query: site:github.com/cohere-ai/cohere-python "embeddings" "merge_embed_responses"
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls: []
+    notes:
+    - Distinct continuation query; inspected primary/original reports recorded by field and task evidence.
+      Irrelevant sibling and composite results excluded.
+  - query: '"Embed 5 Fast" license self hosted fine tuning hardware'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls: []
+    notes:
+    - Distinct continuation query; inspected primary/original reports recorded by field and task evidence.
+      Irrelevant sibling and composite results excluded.
   scope_notes:
-  - Vendor ViDoRe V3 results support ranking a fixed candidate set of parsed documents; first-stage retrieval
-    recall over a full index remains unknown.
-  - RCP-nDCG@10 reranks fixed candidates; parsed text from eight ViDoRe V3 domains, not full-index recall.
+  - Extended bounded source inspection reconciles required fields and task decisions; documented edits remain
+    separate from investigated unknowns.
   remaining_gaps:
-  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
-  - Cross-model query/corpus compatibility requires the same output dimension; exact benchmark embedding dimension
-    not extracted.
+  - Source/setup gaps are retained in individual fields; completion accounting is not research adequacy.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-cohere-embed-5-fast-benchmarks
   model_id: cohere-embed-5-fast
   domain: benchmarks
-  research_batch_id: public-task-followup-2026-10-07
+  research_batch_id: research-run-pilot-2026-10-07-v1-1
   checked_at: '2026-10-07'
   result: changed
   evidence_ids:
+  - src-095104f20b18
   - src-9d4f7ae81230
   search_references:
-  - query: Cohere "Embed 5 Pro" "Embed 5 Fast" retrieval evaluation
+  - query: '"Embed 5 Fast" independent retrieval evaluation'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://aimultiple.com/embedding-models
+    notes:
+    - Inspected original corpus retrieval study.
+  - query: '"Embed 5 Fast" GitHub issues retrieval bug'
+    checked_at: '2026-10-07'
+    outcome: no_matched_sources
+    urls: []
+    notes:
+    - No original exact-model production bug report identified in this bounded search.
+  - query: site:github.com "embed-v5.0-fast" issue
+    checked_at: '2026-10-07'
+    outcome: no_matched_sources
+    urls: []
+    notes:
+    - No original exact-model incident body identified.
+  - query: '"Embed 5 Fast" architecture parameters license weights'
     checked_at: '2026-10-07'
     outcome: sources_found
     urls:
     - https://cohere.com/blog/embed-5
     notes:
-    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
-      sibling/ambiguous versions excluded.
+    - Original deployment claims inspected; public weight license and parameters unestablished.
+  - query: '"Embed 5 Fast" site:github.com bug regression'
+    checked_at: '2026-10-07'
+    outcome: no_matched_sources
+    urls: []
+    notes:
+    - No independently attributable exact-model regression identified.
+  - query: '"Embed 5 Fast" evaluation classification long context recall benchmark'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://docs.cohere.com/docs/cohere-embed
+    - https://aimultiple.com/embedding-models
+    notes:
+    - Classification interface and short-passage retrieval setup inspected; other quality tasks unresolved.
   scope_notes:
-  - Vendor ViDoRe V3 results support ranking a fixed candidate set of parsed documents; first-stage retrieval
-    recall over a full index remains unknown.
-  - RCP-nDCG@10 reranks fixed candidates; parsed text from eight ViDoRe V3 domains, not full-index recall.
+  - Extended bounded source inspection reconciles required fields and task decisions; documented edits remain
+    separate from investigated unknowns.
   remaining_gaps:
-  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
-  - Cross-model query/corpus compatibility requires the same output dimension; exact benchmark embedding dimension
-    not extracted.
+  - Source/setup gaps are retained in individual fields; completion accounting is not research adequacy.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-cohere-embed-5-fast-access-pricing
   model_id: cohere-embed-5-fast
   domain: access_pricing
-  research_batch_id: public-research-2026-10-07
+  research_batch_id: research-run-pilot-2026-10-07-v1-1
   checked_at: '2026-10-07'
   result: changed
   evidence_ids:
-  - src-9d4f7ae81230
-  - src-9b35fe262e17
+  - src-2085dff5045d
+  - src-23c99c9b9680
+  - src-38af72a909ec
+  - src-4f7ce59a681f
+  - src-5997639344dc
+  - src-5a910d3cd807
+  - src-68f4610ac91b
   - src-73e03ec6d5cd
+  - src-82c97913adaf
+  - src-88ad926ffd53
   - src-9277f5b6b599
+  - src-9b35fe262e17
+  - src-9d4f7ae81230
   - src-a03104fba002
-  search_references: []
+  - src-b03f06e4ffc9
+  - src-bddd1463a71a
+  - src-d02c4ac36fa4
+  - src-e9acd4aa3c25
+  search_references:
+  - query: '"Embed 5 Fast" independent retrieval evaluation'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://aimultiple.com/embedding-models
+    notes:
+    - Inspected original corpus retrieval study.
+  - query: '"Embed 5 Fast" GitHub issues retrieval bug'
+    checked_at: '2026-10-07'
+    outcome: no_matched_sources
+    urls: []
+    notes:
+    - No original exact-model production bug report identified in this bounded search.
+  - query: site:github.com "embed-v5.0-fast" issue
+    checked_at: '2026-10-07'
+    outcome: no_matched_sources
+    urls: []
+    notes:
+    - No original exact-model incident body identified.
+  - query: '"Embed 5 Fast" architecture parameters license weights'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://cohere.com/blog/embed-5
+    notes:
+    - Original deployment claims inspected; public weight license and parameters unestablished.
+  - query: '"Embed 5 Fast" site:github.com bug regression'
+    checked_at: '2026-10-07'
+    outcome: no_matched_sources
+    urls: []
+    notes:
+    - No independently attributable exact-model regression identified.
+  - query: '"Embed 5 Fast" evaluation classification long context recall benchmark'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://docs.cohere.com/docs/cohere-embed
+    - https://aimultiple.com/embedding-models
+    notes:
+    - Classification interface and short-passage retrieval setup inspected; other quality tasks unresolved.
   scope_notes:
-  - All-catalog public primary-source route investigation; not exhaustive global provider/account entitlement
-    verification.
+  - Extended bounded source inspection reconciles required fields and task decisions; documented edits remain
+    separate from investigated unknowns.
   remaining_gaps:
-  - Images-to-billed-token conversion and partner-specific costs remain unverified.
-  - No public downloadable weight repository verified for these proprietary embedding variants; self-hosting
-    availability is enterprise deployment, not automatic open weights.
-  - Existing text rate omits separate .40 USD/M image input charge. Add exact access joins and dedicated alternatives.
-  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
-    not silently used in the estimator.
+  - Source/setup gaps are retained in individual fields; completion accounting is not research adequacy.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-cohere-embed-5-fast-behavior
   model_id: cohere-embed-5-fast
   domain: behavior
-  research_batch_id: public-research-2026-10-07
+  research_batch_id: research-run-pilot-2026-10-07-v1-1
   checked_at: '2026-10-07'
   result: unknown
   evidence_ids:
-  - src-39861a48b3a2
+  - src-68f4610ac91b
   - src-9d4f7ae81230
   search_references:
-  - query: '"Embed 5 Fast" Cohere update'
+  - query: '"Embed 5 Fast" independent retrieval evaluation'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://aimultiple.com/embedding-models
+    notes:
+    - Inspected original corpus retrieval study.
+  - query: '"Embed 5 Fast" GitHub issues retrieval bug'
+    checked_at: '2026-10-07'
+    outcome: no_matched_sources
+    urls: []
+    notes:
+    - No original exact-model production bug report identified in this bounded search.
+  - query: site:github.com "embed-v5.0-fast" issue
+    checked_at: '2026-10-07'
+    outcome: no_matched_sources
+    urls: []
+    notes:
+    - No original exact-model incident body identified.
+  - query: '"Embed 5 Fast" architecture parameters license weights'
     checked_at: '2026-10-07'
     outcome: sources_found
     urls:
     - https://cohere.com/blog/embed-5
-    - https://docs.cohere.com/v1/changelog
     notes:
-    - 'Search timestamp: 2026-10-07T10:26:55.968Z'
-    - 'Scope: no_credible_postlaunch_report_found'
-  - query: '"Embed 5 Fast" issues bug regression'
+    - Original deployment claims inspected; public weight license and parameters unestablished.
+  - query: '"Embed 5 Fast" site:github.com bug regression'
+    checked_at: '2026-10-07'
+    outcome: no_matched_sources
+    urls: []
+    notes:
+    - No independently attributable exact-model regression identified.
+  - query: '"Embed 5 Fast" evaluation classification long context recall benchmark'
     checked_at: '2026-10-07'
     outcome: sources_found
     urls:
-    - https://cohere.com/blog/embed-5
-    - https://docs.cohere.com/v1/changelog
+    - https://docs.cohere.com/docs/cohere-embed
+    - https://aimultiple.com/embedding-models
     notes:
-    - 'Search timestamp: 2026-10-07T10:26:55.968Z'
-    - 'Scope: no_credible_postlaunch_report_found'
-  - query: '"Embed 5 Fast" site:cohere.com'
-    checked_at: '2026-10-07'
-    outcome: sources_found
-    urls:
-    - https://cohere.com/blog/embed-5
-    - https://docs.cohere.com/v1/changelog
-    notes:
-    - 'Search timestamp: 2026-10-07T10:28:26.508Z'
-    - 'Scope: no_credible_postlaunch_report_found'
-  - query: '"Embed 5 Fast" site:github.com issue'
-    checked_at: '2026-10-07'
-    outcome: sources_found
-    urls:
-    - https://cohere.com/blog/embed-5
-    - https://docs.cohere.com/v1/changelog
-    notes:
-    - 'Search timestamp: 2026-10-07T10:28:26.508Z'
-    - 'Scope: no_credible_postlaunch_report_found'
-  - query: '"Embed 5 Fast" latency error production'
-    checked_at: '2026-10-07'
-    outcome: sources_found
-    urls:
-    - https://cohere.com/blog/embed-5
-    - https://docs.cohere.com/v1/changelog
-    notes:
-    - 'Search timestamp: 2026-10-07T10:29:52.633Z'
-    - 'Scope: no_credible_postlaunch_report_found'
-  - query: '"Embed 5 Fast" "test" latency'
-    checked_at: '2026-10-07'
-    outcome: sources_found
-    urls:
-    - https://cohere.com/blog/embed-5
-    - https://docs.cohere.com/v1/changelog
-    notes:
-    - 'Search timestamp: 2026-10-07T10:32:24.200Z'
-    - 'Scope: no_credible_postlaunch_report_found'
-  - query: '"Embed 5 Fast" (bug OR issue OR latency OR regression) -site:cohere.com'
-    checked_at: '2026-10-07'
-    outcome: sources_found
-    urls:
-    - https://cohere.com/blog/embed-5
-    - https://docs.cohere.com/v1/changelog
-    notes:
-    - 'Search timestamp: 2026-10-07T10:32:54.647Z'
-    - 'Scope: no_credible_postlaunch_report_found'
+    - Classification interface and short-passage retrieval setup inspected; other quality tasks unresolved.
   scope_notes:
-  - No credible exact-model postlaunch incident or independent measured change found. Sept30 launch assertions
-    and reseller summaries are not postlaunch validation.
-  - Investigation/source-check date is not a new inference test or proof old incidents remain active.
+  - Extended bounded source inspection reconciles required fields and task decisions; documented edits remain
+    separate from investigated unknowns.
   remaining_gaps:
-  - Only seven days since release; generic SDK embedding issues predate this model and were not attributed.
+  - Source/setup gaps are retained in individual fields; completion accounting is not research adequacy.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-cohere-embed-5-pro-capabilities
@@ -5827,104 +6185,185 @@ records:
   id: research-coverage-veo-3-1-generate-preview-capabilities
   model_id: veo-3-1-generate-preview
   domain: capabilities
-  research_batch_id: public-task-followup-2026-10-07
+  research_batch_id: research-run-pilot-2026-10-07-v1-1
   checked_at: '2026-10-07'
   result: unknown
   evidence_ids:
   - src-521c059d5d6a
+  - src-6fab7b07e4f3
   - src-91a6d4ec7912
+  - src-1a70023a0f35
+  - src-5f9e9fc2ef33
+  - src-a46b08b514ab
+  - src-f2cba52655a4
   search_references:
-  - query: Veo 3.1 generate preview benchmark evaluation
+  - query: '"veo-3.1-generate-preview" coding reasoning tool calling chat classification retrieval benchmark'
     checked_at: '2026-10-07'
     outcome: sources_found
     urls:
-    - https://ai.google.dev/gemini-api/docs/models/veo-3.1-generate-preview
-    - https://discuss.ai.google.dev/t/query-differences-in-details-of-decoration-between-veo-3-1-generate-preview-and-veo-3-1-fast-preview/108272
+    - https://docs.routerbench.com/features/video-generation
+    - https://github.com/ex-takashima/google-veo3-1-mcp-server
     notes:
-    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
-      sibling/ambiguous versions excluded.
+    - Located wrapper interfaces and generic catalogs; rely on first-party native asynchronous video interface,
+      not unsupported catalog token limits.
+  - query: '"Veo 3.1" multilingual translation text OCR question answering benchmark'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://github.com/microsoft/AVGen-Bench/blob/main/README.md
+    - https://arxiv.org/abs/2605.00873
+    notes:
+    - Original audiovisual benchmark located; inspected README separates Quality/Fast but does not pin exact
+      preview identity. Scene text rendering differs from OCR question answering.
+  - query: site:ai.google.dev/gemini-api/terms Veo paid services generated content restrictions
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://ai.google.dev/gemini-api/terms.md
+    - https://ai.google.dev/gemini-api/docs/zdr?hl=en
+    - https://ai.google.dev/gemini-api/docs/usage-policies
+    notes:
+    - Current service terms/privacy actually read; distinct paid/unpaid/product scope retained.
+  - query: site:ai.google.dev "Veo" "fine-tuning" "weights"
+    checked_at: '2026-10-07'
+    outcome: no_matched_sources
+    urls: []
+    notes:
+    - No matched primary result; read service terms and exact model interface. No positive fine-tuning or weight
+      redistribution grant established.
+  - query: '"Veo 3.1" "January 13" improvements official'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/
+    - https://workspaceupdates.googleblog.com/2026/01/ingredients-to-video-portrait-vids.html?hl=en
+    notes:
+    - Read original Google update; distinguish API improvement announcement from model checkpoint and current
+      availability.
+  - query: '"veo-3.1-generate-preview" "fixed" "audio" October 2026'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://discuss.ai.google.dev/t/veo-3-1-reference-images-docs-say-available-api-says-not-supported/111853
+    - https://discuss.ai.google.dev/t/veo-3-1-last-frame-parameter-not-supported/107529
+    notes:
+    - Read original dated SDK/API failure/recovery threads; do not transfer recovered SDK incident to unresolved
+      audio processing.
+  - query: '"veo-3.1-generate-preview" benchmark "2026" reasoning instruction'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://tryveo.ai/blog/how-to-benchmark-ai-video-generators
+    - https://tanstack.com/ai/latest/docs/media/video-generation
+    notes:
+    - Located existing original render timing, integration guide and secondary catalogs. No exact-route general
+      reasoning or instruction-accuracy measurement established.
+  - query: site:ai.google.dev "Veo" "license" "commercial" "local"
+    checked_at: '2026-10-07'
+    outcome: no_matched_sources
+    urls: []
+    notes:
+    - No matched result. Current service/API terms inspected; do not infer weight license or local runnable
+      availability from hosted documentation.
   scope_notes:
-  - The preview route documents video generation, but exact-route measured detail accuracy remains unresolved.
-    Located Fast-model distortion reports do not establish failure of the standard model.
-  - Standard generate-preview identity; Fast sibling tests and unpinned consumer-surface comparisons excluded.
+  - Inspected native contract, current judgments and each pending task rubric. Added native interface exclusions
+    and task-specific unknowns using original studies without new endorsements.
+  - Investigated uncertainty retained; checked accounting does not certify factual completeness.
   remaining_gaps:
-  - No traceable exact-preview quality result with a disclosed configuration located; the forum support reply
-    is not a controlled comparison.
+  - Matched exact-route task evidence and comparative Omni judgment remain unresolved.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-veo-3-1-generate-preview-benchmarks
   model_id: veo-3-1-generate-preview
   domain: benchmarks
-  research_batch_id: public-task-followup-2026-10-07
+  research_batch_id: research-run-pilot-2026-10-07-v1-1
   checked_at: '2026-10-07'
   result: unknown
   evidence_ids:
-  - src-521c059d5d6a
-  - src-91a6d4ec7912
+  - src-1a70023a0f35
+  - src-7af62fc0e9c4
+  - src-1ccfb1085c29
+  - src-a46b08b514ab
+  - src-f2cba52655a4
   search_references:
-  - query: Veo 3.1 generate preview benchmark evaluation
+  - query: site.artificialanalysis.ai "Veo 3.1" "Preview" video arena
     checked_at: '2026-10-07'
     outcome: sources_found
     urls:
-    - https://ai.google.dev/gemini-api/docs/models/veo-3.1-generate-preview
+    - https://www.linkedin.com/posts/artificial-analysis_our-new-video-with-audio-leaderboard-is-now-activity-7425575840123596800-1ifZ
+    notes:
+    - Located original evaluator announcement; current leaderboard open failed.
+  - query: '"veo-3.1-generate-preview" independent evaluation benchmark detail accuracy'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://tryveo.ai/blog/how-to-benchmark-ai-video-generators
     - https://discuss.ai.google.dev/t/query-differences-in-details-of-decoration-between-veo-3-1-generate-preview-and-veo-3-1-fast-preview/108272
     notes:
-    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
-      sibling/ambiguous versions excluded.
+    - Located original endpoint-named render telemetry and original Fast-detail discussion; no matched exact-route
+      controlled quality measurement established.
+  - query: site.artificialanalysis.ai/video "Veo 3.1 Preview" "Audio"
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://www.linkedin.com/posts/artificial-analysis_our-new-video-with-audio-leaderboard-is-now-activity-7425575840123596800-1ifZ
+    notes:
+    - Original audio-arena announcement inspected; numeric current table unavailable.
   scope_notes:
-  - The preview route documents video generation, but exact-route measured detail accuracy remains unresolved.
-    Located Fast-model distortion reports do not establish failure of the standard model.
-  - Standard generate-preview identity; Fast sibling tests and unpinned consumer-surface comparisons excluded.
+  - Inspected original independent study/repository alongside prior preference/vendor/timing evidence, preserving
+    setup, evidence class and immutable-version uncertainty.
+  - Investigated uncertainty retained; checked accounting does not certify factual completeness.
   remaining_gaps:
-  - No traceable exact-preview quality result with a disclosed configuration located; the forum support reply
-    is not a controlled comparison.
+  - No complete current exact-endpoint controlled quality result; consumer BRITE and mutable AVGen are not
+    API-equivalent.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-veo-3-1-generate-preview-access-pricing
   model_id: veo-3-1-generate-preview
   domain: access_pricing
-  research_batch_id: public-research-2026-10-07
+  research_batch_id: research-run-pilot-2026-10-07-v1-1
   checked_at: '2026-10-07'
-  result: changed
+  result: unknown
   evidence_ids:
   - src-b88c4950bbf3
-  - src-10e39629c3d3
   - src-8eb2666e2af7
-  - src-f1078602a2b4
-  - src-d3e41dcc2800
-  - src-521c059d5d6a
+  - src-10e39629c3d3
+  - src-f05529e3c192
   - src-2fae34e08da9
-  - src-2cc31a5ba4fd
+  - src-f1078602a2b4
   - src-f40c983ca27f
+  - src-23807cea284a
   - src-f661101cf480
   search_references: []
   scope_notes:
-  - All-catalog public primary-source route investigation; not exhaustive global provider/account entitlement
-    verification.
+  - Inspected linked provider policies, Developer API tariffs, related Cloud GA lifecycle/prices, consumer
+    credits/eligibility, service licensing and local revisions.
+  - Investigated uncertainty retained; checked accounting does not certify factual completeness.
   remaining_gaps:
-  - Actual per-account quota, region eligibility, plan subscription and remaining credits are not known; no
-    account access or inference used.
-  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
-    not silently used in the estimator.
+  - Flow Extend conflict, exact product mapping, private limits, unconditional license flags and historical
+    source-token provenance remain unknown.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-veo-3-1-generate-preview-behavior
   model_id: veo-3-1-generate-preview
   domain: behavior
-  research_batch_id: public-research-2026-10-07
+  research_batch_id: research-run-pilot-2026-10-07-v1-1
   checked_at: '2026-10-07'
-  result: changed
+  result: unknown
   evidence_ids:
-  - src-380f8d1fb515
   - src-6ce33a536b3f
   - src-6fab7b07e4f3
+  - src-380f8d1fb515
+  - src-2dfae170518b
+  - src-c46ceda84ce2
   search_references: []
   scope_notes:
-  - Dated official January upgrade, current audio limitations and mixed post-update user reports were checked.
-  - Date records the investigation, not proof that old incidents persist or all routes are covered.
+  - Reviewed dated API rollout, present warnings, contrary practitioner replies, distinct SDK recovery and
+    local journal observation dates.
+  - Investigated uncertainty retained; checked accounting does not certify factual completeness.
   remaining_gaps:
-  - No general downgrade established; separate standard, Fast, Lite and consumer product routing.
-  - No new inference or independent reproduction was run.
+  - Unified causal layer, prevalence and same-cluster verified fix remain unresolved; historical assessment/source-event
+    metadata remain unknown.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-xai-grok-4-7-capabilities

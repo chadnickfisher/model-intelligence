@@ -9,17 +9,18 @@ api_compatibility: []
 access_methods:
 - API trial/production, Model Vault dedicated instances, cloud partners and self-hosting.
 geographic_availability:
-- '{"status": "partial", "summary": "Private deployment permits customer-controlled geography; direct API residency
-  unverified."}'
+- '{"status": "partial", "summary": "Private deployment permits customer-controlled geography; direct
+  API residency unverified."}'
 - not_exhaustively_verified
 rate_limits:
-- '{"status": "partial", "summary": "Trial 1,000 calls/month; Command A+ trial 20 RPM, production contact sales.
-  Newer chat production keys can remain trial-limited."}'
+- '{"status": "partial", "summary": "Trial 1,000 calls/month; Command A+ trial 20 RPM, production contact
+  sales. Newer chat production keys can remain trial-limited."}'
 caching_batching: []
 privacy_data_use:
-- '{"status": "public_verified", "summary": "Cohere-hosted de-identified input may be used in limited cases
-  permitted by controls/terms; private customer deployments do not expose prompts to Cohere. Do not assume
-  universal no-training."}'
+- Cohere SaaS prompts/generations can be opted out of training; logged content normally deleted after
+  30 days with legal, contract, abuse and training exceptions. Approved zero retention is separately arranged.
+- Cohere does not receive content in private/third-party cloud deployments; partner policies and support
+  exceptions must be checked separately.
 reliability: []
 model_ids:
 - cohere-command-a-plus
@@ -34,6 +35,8 @@ price_ids:
 - price-providers-cohere-embed-5-fast-cohere-ca6b05775efe
 - price-providers-cohere-embed-5-pro-cohere-516f45ff44b6
 - price-providers-cohere-embed-5-pro-cohere-d310d3a8de69
+- price-c975f4bc740e679c
+- price-f8067e6f48410d1c
 access_ids:
 - access-2d68e2f9c2b0b599
 - access-31bbc0a780fbd60a
@@ -51,7 +54,13 @@ evidence_ids:
 - src-1dac5785145f
 - src-7a929ac1ccc5
 - src-9d4f7ae81230
+- src-2085dff5045d
+- src-4f7ce59a681f
+- src-68f4610ac91b
 notes:
 - 'Licenses vary: Command A+ Apache-2.0; North Small Translate CC-BY-NC-4.0. Trial keys not for production/commercial
   use.'
-limitations: []
+limitations:
+- No native API residency, guaranteed minimum throughput, exact Fast SLA or measured uptime established.
+- Current status page has no separate Embed 5 component; operational status does not establish incident
+  absence.

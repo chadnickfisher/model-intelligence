@@ -28,7 +28,7 @@ Verified: 2026-10-06
 
 ## Privacy data use
 
-- {"status": "public_verified", "summary": "Model providers lack access to deployment accounts, customer prompts/completions and logs. Retention and abuse-monitoring exceptions need model/feature review."}
+- AWS-operated deployment accounts isolate model providers from prompts, completions and logs. Default zero retention has model/feature and flagged-CSAM exceptions; configure regional retention mode and review exact model requirements.
 
 ## Notes
 
@@ -47,4 +47,4 @@ Verified: 2026-10-06
 
 ## Sources
 
-[aws.amazon.com](https://aws.amazon.com/bedrock/pricing/) · [docs.aws.amazon.com](https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html) · [GPT-6 Astra: A new generation of intelligence](https://openai.com/index/gpt-6-astra/) · [Claude fable-5-1 specifications](https://platform.claude.com/docs/en/models/fable-5-1/overview) · [Claude opus-5-5 specifications](https://platform.claude.com/docs/en/models/opus-5-5/overview) · [Claude sonnet-5-5 specifications](https://platform.claude.com/docs/en/models/sonnet-5-5/overview) · [Claude haiku-4-5 specifications](https://platform.claude.com/docs/en/models/haiku-4-5/overview)
+[aws.amazon.com](https://aws.amazon.com/bedrock/pricing/) · [docs.aws.amazon.com](https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html) · [GPT-6 Astra: A new generation of intelligence](https://openai.com/index/gpt-6-astra/) · [Claude fable-5-1 specifications](https://platform.claude.com/docs/en/models/fable-5-1/overview) · [Claude opus-5-5 specifications](https://platform.claude.com/docs/en/models/opus-5-5/overview) · [Claude sonnet-5-5 specifications](https://platform.claude.com/docs/en/models/sonnet-5-5/overview) · [Claude haiku-4-5 specifications](https://platform.claude.com/docs/en/models/haiku-4-5/overview) · [Bedrock retention controls](https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html) · [Bedrock abuse detection](https://docs.aws.amazon.com/bedrock/latest/userguide/abuse-detection.html)

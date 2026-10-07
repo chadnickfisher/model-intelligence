@@ -163,5 +163,9 @@ Generated from canonical YAML. Units, route conditions and dates are essential.
 | qwen3-8-27b | featherless | metered-api / Standard / current | input: 0.4 USD / per 1 million tokens; output: 3 USD / per 1 million tokens; cached_input: 0.15 USD / per 1 million tokens | 2026-10-07 |
 | qwen3-8-flash-next | featherless | metered-api / Standard / current | input: 0.15 USD / per 1 million tokens; output: 0.5 USD / per 1 million tokens; cached_input: 0.03 USD / per 1 million tokens | 2026-10-07 |
 | qwen3-coder-next | novita | metered-api / Standard / current | input: 0.2 USD / per 1 million tokens; output: 1.5 USD / per 1 million tokens | 2026-10-07 |
+| cohere-embed-5-fast | aws-sagemaker | self-hosted / ml.g5.xlarge / current | software_host: 2.39 USD / per instance hour | 2026-10-07 |
+| cohere-embed-5-fast | aws-sagemaker | self-hosted / ml.p5.4xlarge / current | software_host: 3.36 USD / per instance hour | 2026-10-07 |
+| cohere-embed-5-fast | cohere | mixed / Small / current | capacity_hour: 3 USD / per instance hour; capacity_month: 2000 USD / per instance month; capacity_year: 20000 USD / per instance year | 2026-10-07 |
+| cohere-embed-5-fast | cohere | mixed / Medium / current | capacity_hour: 5 USD / per instance hour; capacity_month: 3250 USD / per instance month; capacity_year: 32500 USD / per instance year | 2026-10-07 |
 
 [Canonical records with evidence and all conditions](pricing.yaml)

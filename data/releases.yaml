@@ -9,8 +9,8 @@ records:
   provider_id: null
   event_type: shut_down
   event_date: '2026-09-24'
-  summary: '{"date": "2026-09-24", "model_ids": ["sora-2", "sora-2-pro"], "replacement": null, "scope": "OpenAI
-    Videos API and aliases/snapshots", "sources": ["oai-deprecations"], "status": "shut_down"}'
+  summary: '{"date": "2026-09-24", "model_ids": ["sora-2", "sora-2-pro"], "replacement": null, "scope":
+    "OpenAI Videos API and aliases/snapshots", "sources": ["oai-deprecations"], "status": "shut_down"}'
   evidence_ids:
   - src-bab0e18b2802
 - schema_version: '1.0'
@@ -21,8 +21,8 @@ records:
   provider_id: null
   event_type: shut_down
   event_date: '2026-09-24'
-  summary: '{"date": "2026-09-24", "model_ids": ["sora-2", "sora-2-pro"], "replacement": null, "scope": "OpenAI
-    Videos API and aliases/snapshots", "sources": ["oai-deprecations"], "status": "shut_down"}'
+  summary: '{"date": "2026-09-24", "model_ids": ["sora-2", "sora-2-pro"], "replacement": null, "scope":
+    "OpenAI Videos API and aliases/snapshots", "sources": ["oai-deprecations"], "status": "shut_down"}'
   evidence_ids:
   - src-bab0e18b2802
 - schema_version: '1.0'
@@ -70,8 +70,8 @@ records:
   event_type: deprecated
   event_date: '2027-02-26'
   summary: '{"model_ids": ["whisper-1", "gpt-4o-transcribe", "gpt-4o-mini-transcribe", "gpt-4o-transcribe-diarize"],
-    "replacement": ["gpt-live-transcribe", "gpt-transcribe"], "shutdown_date": "2027-02-26", "sources": ["oai-deprecations"],
-    "status": "deprecated"}'
+    "replacement": ["gpt-live-transcribe", "gpt-transcribe"], "shutdown_date": "2027-02-26", "sources":
+    ["oai-deprecations"], "status": "deprecated"}'
   evidence_ids:
   - src-bab0e18b2802
 - schema_version: '1.0'
@@ -83,8 +83,8 @@ records:
   event_type: deprecated
   event_date: '2027-02-26'
   summary: '{"model_ids": ["whisper-1", "gpt-4o-transcribe", "gpt-4o-mini-transcribe", "gpt-4o-transcribe-diarize"],
-    "replacement": ["gpt-live-transcribe", "gpt-transcribe"], "shutdown_date": "2027-02-26", "sources": ["oai-deprecations"],
-    "status": "deprecated"}'
+    "replacement": ["gpt-live-transcribe", "gpt-transcribe"], "shutdown_date": "2027-02-26", "sources":
+    ["oai-deprecations"], "status": "deprecated"}'
   evidence_ids:
   - src-bab0e18b2802
 - schema_version: '1.0'
@@ -96,8 +96,8 @@ records:
   event_type: deprecated
   event_date: '2027-02-26'
   summary: '{"model_ids": ["whisper-1", "gpt-4o-transcribe", "gpt-4o-mini-transcribe", "gpt-4o-transcribe-diarize"],
-    "replacement": ["gpt-live-transcribe", "gpt-transcribe"], "shutdown_date": "2027-02-26", "sources": ["oai-deprecations"],
-    "status": "deprecated"}'
+    "replacement": ["gpt-live-transcribe", "gpt-transcribe"], "shutdown_date": "2027-02-26", "sources":
+    ["oai-deprecations"], "status": "deprecated"}'
   evidence_ids:
   - src-bab0e18b2802
 - schema_version: '1.0'
@@ -109,8 +109,8 @@ records:
   event_type: deprecated
   event_date: '2027-02-26'
   summary: '{"model_ids": ["whisper-1", "gpt-4o-transcribe", "gpt-4o-mini-transcribe", "gpt-4o-transcribe-diarize"],
-    "replacement": ["gpt-live-transcribe", "gpt-transcribe"], "shutdown_date": "2027-02-26", "sources": ["oai-deprecations"],
-    "status": "deprecated"}'
+    "replacement": ["gpt-live-transcribe", "gpt-transcribe"], "shutdown_date": "2027-02-26", "sources":
+    ["oai-deprecations"], "status": "deprecated"}'
   evidence_ids:
   - src-bab0e18b2802
 - schema_version: '1.0'
@@ -412,8 +412,8 @@ records:
   provider_id: null
   event_type: release
   event_date: '2026-03-31'
-  summary: Initial baseline records Gemma 4 family (31B IT representative) as active. Release date is unknown
-    where null.
+  summary: Initial baseline records Gemma 4 family (31B IT representative) as active. Release date is
+    unknown where null.
   evidence_ids:
   - src-fc87bfb1eae7
   - src-10e39629c3d3
@@ -550,8 +550,8 @@ records:
   provider_id: null
   event_type: release
   event_date: '2025-04-05'
-  summary: Initial baseline records Llama 4 Maverick 17B-128E Instruct as active. Release date is unknown where
-    null.
+  summary: Initial baseline records Llama 4 Maverick 17B-128E Instruct as active. Release date is unknown
+    where null.
   evidence_ids:
   - src-5744ead18753
   - src-65471a2c7ad5
@@ -565,8 +565,8 @@ records:
   provider_id: null
   event_type: release
   event_date: '2025-04-05'
-  summary: Initial baseline records Llama 4 Scout 17B-16E Instruct as active. Release date is unknown where
-    null.
+  summary: Initial baseline records Llama 4 Scout 17B-16E Instruct as active. Release date is unknown
+    where null.
   evidence_ids:
   - src-5744ead18753
   - src-8cb15ff6ddd4
@@ -595,7 +595,8 @@ records:
   provider_id: null
   event_type: release
   event_date: null
-  summary: Initial baseline records Phi-4 Multimodal Instruct as active. Release date is unknown where null.
+  summary: Initial baseline records Phi-4 Multimodal Instruct as active. Release date is unknown where
+    null.
   evidence_ids:
   - src-3c2db7ec3521
   - src-29885c43e537
@@ -609,7 +610,8 @@ records:
   provider_id: null
   event_type: release
   event_date: '2026-03-04'
-  summary: Initial baseline records Phi-4-Reasoning-Vision-15B as active. Release date is unknown where null.
+  summary: Initial baseline records Phi-4-Reasoning-Vision-15B as active. Release date is unknown where
+    null.
   evidence_ids:
   - src-3c2db7ec3521
   - src-91f835e2db28
@@ -715,7 +717,8 @@ records:
   provider_id: null
   event_type: release
   event_date: '2026-06-04'
-  summary: Initial baseline records Nemotron3 Ultra 550B-A55B as active. Release date is unknown where null.
+  summary: Initial baseline records Nemotron3 Ultra 550B-A55B as active. Release date is unknown where
+    null.
   evidence_ids:
   - src-58bf94c165a9
   - src-c5a0afc263f8
@@ -795,7 +798,8 @@ records:
   provider_id: null
   event_type: release
   event_date: '2026-09-30'
-  summary: Initial baseline records Embed 5 Fast as unknown. Release date is unknown where null.
+  summary: Cohere announced Embed 5 Fast alongside Pro, with GA creator API and partner/private deployment
+    options.
   evidence_ids:
   - src-9d4f7ae81230
 - schema_version: '1.0'
