@@ -55,15 +55,17 @@ def test_raw_and_ready_packages_cannot_be_confused():
 
 def test_ready_payload_paths_hashes_and_code_guard():
     manifest={'package_type':'ready-update','repository':REPOSITORY,'branch':'main','base_commit':'a'*40,
-              'files':[{'path':'research/new.md','operation':'write','previous_sha256':None,'sha256':digest(b'ok')}]}
-    files={'package.json':json.dumps(manifest).encode(),'payload/research/new.md':b'ok'}
-    assert ready_update(files,['research/new.md'])==manifest
-    with pytest.raises(ValueError):ready_update(files,['research/other.md'])
-    files['payload/research/new.md']=b'changed'
-    with pytest.raises(ValueError):ready_update(files,['research/new.md'])
-    for path in ['tools/validate.py','.github/workflows/check.yml','schema/access.json','explorer/incoming.py']:
+              'files':[{'path':'evidence/new.yaml','operation':'write','previous_sha256':None,'sha256':digest(b'ok')}]}
+    files={'package.json':json.dumps(manifest).encode(),'payload/evidence/new.yaml':b'ok'}
+    assert ready_update(files,['evidence/new.yaml'])==manifest
+    with pytest.raises(ValueError):ready_update(files,['evidence/other.yaml'])
+    files['payload/evidence/new.yaml']=b'changed'
+    with pytest.raises(ValueError):ready_update(files,['evidence/new.yaml'])
+    for path in ['tools/validate.py','.github/workflows/check.yml','schema/access.json','explorer/incoming.py',
+                 'research/new.md','history/research/input.json','AGENTS.md']:
         manifest['files'][0]['path']=path
-        with pytest.raises(ValueError):ready_update({'package.json':json.dumps(manifest).encode()},[path])
+        with pytest.raises(ValueError,match='outside reviewed allowlist'):
+            ready_update({'package.json':json.dumps(manifest).encode(),'payload/'+path:b'ok'},[path])
 
 
 def test_prepare_is_idempotent_and_preflights_conflicts(tmp_path):
