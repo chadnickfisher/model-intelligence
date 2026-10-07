@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: devstral-small-2
 verified_at: '2026-10-06'
 identity:
@@ -15,8 +15,8 @@ specifications:
   architecture:
     value: Dense Ministral3-style decoder with vision
     status: documented
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-f2036f817d22
     - src-fd9a0c74ec31
     - src-1f59cd499805
@@ -27,8 +27,11 @@ specifications:
       scope: creator-declared count; see notes
       exact_parameter_count: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-fd9a0c74ec31
+    - src-1f59cd499805
   context_window:
     value:
       native_tokens: 262144
@@ -36,13 +39,19 @@ specifications:
       max_output_tokens: null
       notes: Input plus generated output share capacity. Endpoint limits can differ.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-fd9a0c74ec31
+    - src-1f59cd499805
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-fd9a0c74ec31
+    - src-1f59cd499805
   modalities:
     value:
       input:
@@ -51,15 +60,21 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-fd9a0c74ec31
+    - src-1f59cd499805
   language_support:
     value:
       supported: null
       notes: Exact supported-language list not verified in this bounded pass.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-fd9a0c74ec31
+    - src-1f59cd499805
 additional_specifications:
   weights:
     value:
@@ -68,8 +83,11 @@ additional_specifications:
       formats: null
       gate: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-fd9a0c74ec31
+    - src-1f59cd499805
   weight_only_floor_decimal_gb:
     value:
       bf16: 48
@@ -83,13 +101,16 @@ additional_specifications:
     - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
       storage of inactive experts.
     - Published maximum context is not a guarantee it fits on the suggested local machine.
-    evidence_ids: &id003
+    evidence_ids:
     - src-fd9a0c74ec31
   release_date_precision:
     value: day
     status: documented
     conditions: []
-    evidence_ids: *id002
+    evidence_ids:
+    - src-f2036f817d22
+    - src-fd9a0c74ec31
+    - src-1f59cd499805
 licensing:
   name: Apache-2.0
   commercial_use: allowed
@@ -114,9 +135,16 @@ local_inference:
   - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
     of inactive experts.
   - Published maximum context is not a guarantee it fits on the suggested local machine.
-  evidence_ids: *id003
+  evidence_ids:
+  - src-fd9a0c74ec31
 capabilities:
-- task: local-coding-agent
+- id: judgment-c9e6063835fd4526
+  scope: direct
+  task_ids:
+  - coding.repository_work
+  related_task_ids: []
+  assessment: conditional
+  scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: A sensible local SWE candidate with image input and Apache terms.
   confidence: medium
   supporting_evidence_ids:
@@ -128,11 +156,22 @@ capabilities:
   known_failure_modes:
   - Creator reports 68% SWE-bench Verified but only 22.5% Terminal Bench2; task breadth is uneven.
   evidence_notes: []
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: local-coding-agent
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-open-devstral-small-2-weights
 price_ids: []
-evidence_ids: *id002
+evidence_ids:
+- src-f2036f817d22
+- src-fd9a0c74ec31
+- src-1f59cd499805
 notes: []
 limitations:
 - No model inference or benchmark was run in this research pass.

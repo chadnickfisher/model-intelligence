@@ -8,6 +8,10 @@ canonical:
   evidence: evidence/sources.yaml
   observations: evidence/observations.yaml
   contradictions: evidence/contradictions.yaml
+  task_registry: data/capability-taxonomy.yaml
+  aliases: data/aliases.yaml
+  observation_history: history/revisions.yaml
+  migration_originals: history/migrations/2026-10-07-capabilities.yaml
 indexes:
   models: data/models.yaml
   providers: data/providers.yaml

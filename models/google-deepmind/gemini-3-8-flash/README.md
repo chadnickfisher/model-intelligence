@@ -11,6 +11,14 @@
 
 Strong candidate when throughput matters and outputs can be tested.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): vision.question_answering; coding.scoped_edit
+
+Judgment ID: judgment-262c08414297adcf
+
 Conditions: high reasoning; Google API; high; temperature 1; Google API; max output 65,536; high; Google API
 
 Failure modes / limitations: Not established in this pass
@@ -25,6 +33,14 @@ Evidence notes: task-conditioned synthesis; no inference runs performed; Observa
 
 Conditional; use tests and checkpointing rather than assuming benchmark coding strength transfers.
 
+Scope: direct / conditional. One task reference; conclusion remains conditional, not an ability score.
+
+Direct task IDs: agent.long_horizon
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-46e287976a5cc041
+
 Conditions: high; temperature 1; Google API; max output 65,536
 
 Failure modes / limitations: Not established in this pass
@@ -34,6 +50,28 @@ Supporting sources: [Vals AI gemini-3.8-flash](https://www.vals.ai/models/google
 Contradictory or limiting sources: [Vals AI gemini-3.8-flash](https://www.vals.ai/models/google_gemini-3.8-flash) · [Gemini 3.8 Flash model card](https://deepmind.google/models/model-cards/gemini-3-8-flash/)
 
 Evidence notes: task-conditioned synthesis; no inference runs performed; Observation obs-7445edb36893: Competitive contained coding tasks, with much weaker results on harder general terminal work.; Observation obs-623d3b669e5c: Provider discloses hallucinations, occasional timeouts, and increased tokens at higher effort; multilingual safety regressed versus 3.7.
+
+### Measured generation behavior (medium confidence)
+
+Fast streamed decoding in the observed benchmark service. Measurements: {"output_tokens_per_second": 241.9}. These describe the cited benchmark configuration only.
+
+Scope: performance / conditional. Cost, deployment or throughput observation; not a task capability.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-4d183583f2850a0e
+
+Conditions: high reasoning; Google API
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Artificial Analysis gemini-3-8-flash](https://artificialanalysis.ai/models/gemini-3-8-flash)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Excludes time to first token and tool-loop overhead; not an SLA.
 
 ## Specifications
 

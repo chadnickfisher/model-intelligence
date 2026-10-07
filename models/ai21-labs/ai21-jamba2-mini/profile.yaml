@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: ai21-jamba2-mini
 verified_at: '2026-10-06'
 identity:
@@ -15,25 +15,31 @@ specifications:
   architecture:
     value: hybrid SSM-Transformer MoE
     status: documented
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-cd9a80108d1d
     - src-dc01b961c57f
   parameters:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-cd9a80108d1d
+    - src-dc01b961c57f
   context_window:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-cd9a80108d1d
+    - src-dc01b961c57f
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-cd9a80108d1d
+    - src-dc01b961c57f
   modalities:
     value:
       input:
@@ -41,34 +47,46 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-cd9a80108d1d
+    - src-dc01b961c57f
   language_support:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-cd9a80108d1d
+    - src-dc01b961c57f
 additional_specifications:
   parameters_total_billion:
     value: 52
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-cd9a80108d1d
+    - src-dc01b961c57f
   parameters_active_billion:
     value: 12
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-cd9a80108d1d
+    - src-dc01b961c57f
   api_alias:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-cd9a80108d1d
+    - src-dc01b961c57f
   weights:
     value: open
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-cd9a80108d1d
+    - src-dc01b961c57f
 licensing:
   name: Apache-2.0
   commercial_use: null
@@ -76,14 +94,25 @@ licensing:
   fine_tuning: null
   hosted_service: null
   restrictions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-cd9a80108d1d
+  - src-dc01b961c57f
 local_inference:
   availability: available
   hardware_notes: []
   conditions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-cd9a80108d1d
+  - src-dc01b961c57f
 capabilities:
-- task: grounded-extraction-constrained-enterprise-question-answering
+- id: judgment-fbc9e2719df53c93
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - knowledge.extraction
+  - knowledge.rag
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Reasonable efficiency/steerability candidate from design and vendor evaluations; no current independent
     result established.
   confidence: low
@@ -95,10 +124,20 @@ capabilities:
   evidence_notes:
   - 'Observation obs-15662c63b9d6: Enterprise grounding/instruction-following focus and efficient non-reasoning
     architecture.'
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: grounded-extraction-constrained-enterprise-question-answering
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids: []
 price_ids: []
-evidence_ids: *id002
+evidence_ids:
+- src-cd9a80108d1d
+- src-dc01b961c57f
 notes: []
 limitations:
 - Do not inherit context size, pricing or license from Jamba1.5/1.6.

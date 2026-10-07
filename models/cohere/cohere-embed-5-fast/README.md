@@ -11,6 +11,14 @@
 
 Candidate for query-time cost/latency savings, including Pro-index/Fast-query pairing; current comparative evidence is vendor-generated.
 
+Scope: direct / conditional. One task reference; conclusion remains conditional, not an ability score.
+
+Direct task IDs: context.retrieval
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-afbdc8473c5cc5bd
+
 Conditions: Not established in this pass
 
 Failure modes / limitations: Not established in this pass

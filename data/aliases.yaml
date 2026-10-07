@@ -1,0 +1,6 @@
+schema_version: '2.0'
+notes:
+- No additional alias-to-checkpoint mapping was established in this migration.
+- API identifiers and rolling-alias caveats remain in model additional_specifications and notes.
+- Add evidence-backed mappings here, with id, alias, model_id, provider_id, effective_from and evidence_ids; capture history before publishing.
+records: []

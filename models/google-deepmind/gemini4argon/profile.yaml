@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: gemini4argon
 verified_at: '2026-10-06'
 identity:
@@ -17,26 +17,35 @@ specifications:
   architecture:
     value: null
     status: unknown
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-6381db252dee
     - src-d493892e40d2
     - src-5535da041415
   parameters:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-6381db252dee
+    - src-d493892e40d2
+    - src-5535da041415
   context_window:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-6381db252dee
+    - src-d493892e40d2
+    - src-5535da041415
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-6381db252dee
+    - src-d493892e40d2
+    - src-5535da041415
   modalities:
     value:
       input:
@@ -45,26 +54,38 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-6381db252dee
+    - src-d493892e40d2
+    - src-5535da041415
   language_support:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-6381db252dee
+    - src-d493892e40d2
+    - src-5535da041415
 additional_specifications:
   knowledge_cutoff:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-6381db252dee
+    - src-d493892e40d2
+    - src-5535da041415
   configuration:
     value:
       evaluated_reasoning_effort: high
       vals_evaluation_max_output_tokens: 262144
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-6381db252dee
+    - src-d493892e40d2
+    - src-5535da041415
   api_quota:
     value:
       rpm: null
@@ -72,28 +93,43 @@ additional_specifications:
       rpd: null
       reason: Restricted rollout; no public endpoint entitlement verified.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-6381db252dee
+    - src-d493892e40d2
+    - src-5535da041415
   canonical_endpoint:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-6381db252dee
+    - src-d493892e40d2
+    - src-5535da041415
   release_date_scope:
     value: announcement and selected Fairwind early-access rollout, not public API GA
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-6381db252dee
+    - src-d493892e40d2
+    - src-5535da041415
   language_list_complete:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-6381db252dee
+    - src-d493892e40d2
+    - src-5535da041415
   parameter_disclosure:
     value: not disclosed in fetched sources
     status: documented
     conditions: []
-    evidence_ids: *id002
+    evidence_ids:
+    - src-6381db252dee
+    - src-d493892e40d2
+    - src-5535da041415
 licensing:
   name: null
   commercial_use: null
@@ -101,14 +137,28 @@ licensing:
   fine_tuning: null
   hosted_service: null
   restrictions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-6381db252dee
+  - src-d493892e40d2
+  - src-5535da041415
 local_inference:
   availability: unavailable
   hardware_notes: []
   conditions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-6381db252dee
+  - src-d493892e40d2
+  - src-5535da041415
 capabilities:
-- task: long-horizon-coding-and-enterprise-agent-workflows-when-access-is-available
+- id: judgment-fa3a1a5a01173cf2
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - agent.long_horizon
+  - coding.repository_work
+  - agent.tool_use
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Promising early-access candidate; independent task results support coding potential but do not
     establish broad deployment reliability.
   confidence: medium
@@ -130,8 +180,21 @@ capabilities:
     access described as forthcoming.'
   - 'Observation obs-f5e1684ef252: Long tasks can be costly; independent evaluator reports high costs for CUA
     and code migration, using regular prices.'
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: long-horizon-coding-and-enterprise-agent-workflows-when-access-is-available
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics:
-- task: measured-generation-behavior
+- id: judgment-eeb7184ebb549554
+  scope: performance
+  task_ids: []
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Cost, deployment or throughput observation; not a task capability.
   judgment: 'Long tasks can be costly; independent evaluator reports high costs for CUA and code migration,
     using regular prices. Measurements: {"AA_output_tokens_index": 110000000, "AA_output_tokens_per_second":
     null}. These describe the cited benchmark configuration only.'
@@ -144,13 +207,24 @@ performance_characteristics:
   known_failure_modes: []
   evidence_notes:
   - Benchmark costs are not typical user costs or provider tariffs.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: measured-generation-behavior
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 access_ids:
 - access-proprietary-42
 - access-proprietary-42-google-ai-studio
 price_ids:
 - price-proprietary-gemini4argon-google-developer-api-29291504e924
 - price-proprietary-gemini4argon-google-developer-api-efc10b9f8cc2
-evidence_ids: *id002
+evidence_ids:
+- src-6381db252dee
+- src-d493892e40d2
+- src-5535da041415
 notes: []
 limitations:
 - Public API endpoint identifier and GA date

@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: qwen3-coder-next
 verified_at: '2026-10-06'
 identity:
@@ -15,8 +15,8 @@ specifications:
   architecture:
     value: Hybrid MoE Gated DeltaNet / gated attention
     status: documented
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-f2036f817d22
     - src-71b3fd269cc8
     - src-fe191bd136cd
@@ -28,8 +28,12 @@ specifications:
       scope: creator-declared count; see notes
       exact_parameter_count: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-71b3fd269cc8
+    - src-fe191bd136cd
+    - src-7c5fa24308a9
   context_window:
     value:
       native_tokens: 262144
@@ -37,13 +41,21 @@ specifications:
       max_output_tokens: null
       notes: Input plus generated output share capacity. Endpoint limits can differ.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-71b3fd269cc8
+    - src-fe191bd136cd
+    - src-7c5fa24308a9
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-71b3fd269cc8
+    - src-fe191bd136cd
+    - src-7c5fa24308a9
   modalities:
     value:
       input:
@@ -51,15 +63,23 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-71b3fd269cc8
+    - src-fe191bd136cd
+    - src-7c5fa24308a9
   language_support:
     value:
       supported: null
       notes: Exact supported-language list not verified in this bounded pass.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-71b3fd269cc8
+    - src-fe191bd136cd
+    - src-7c5fa24308a9
 additional_specifications:
   weights:
     value:
@@ -68,13 +88,21 @@ additional_specifications:
       formats: null
       gate: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-71b3fd269cc8
+    - src-fe191bd136cd
+    - src-7c5fa24308a9
   reasoning_mode:
     value: non-thinking checkpoint; internal agent skill does not mean exposed reasoning mode
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-71b3fd269cc8
+    - src-fe191bd136cd
+    - src-7c5fa24308a9
   weight_only_floor_decimal_gb:
     value:
       bf16: 160
@@ -88,12 +116,20 @@ additional_specifications:
     - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
       storage of inactive experts.
     - Published maximum context is not a guarantee it fits on the suggested local machine.
-    evidence_ids: *id002
+    evidence_ids:
+    - src-f2036f817d22
+    - src-71b3fd269cc8
+    - src-fe191bd136cd
+    - src-7c5fa24308a9
   release_date_precision:
     value: day
     status: documented
     conditions: []
-    evidence_ids: *id002
+    evidence_ids:
+    - src-f2036f817d22
+    - src-71b3fd269cc8
+    - src-fe191bd136cd
+    - src-7c5fa24308a9
 licensing:
   name: Apache-2.0
   commercial_use: allowed
@@ -118,9 +154,19 @@ local_inference:
   - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
     of inactive experts.
   - Published maximum context is not a guarantee it fits on the suggested local machine.
-  evidence_ids: *id002
+  evidence_ids:
+  - src-f2036f817d22
+  - src-71b3fd269cc8
+  - src-fe191bd136cd
+  - src-7c5fa24308a9
 capabilities:
-- task: local-repository-editing
+- id: judgment-6c53b662d08a63d0
+  scope: direct
+  task_ids:
+  - coding.repository_work
+  related_task_ids: []
+  assessment: conditional
+  scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: Useful coding-specialist candidate where non-thinking responses and permissive licensing matter.
   confidence: medium
   supporting_evidence_ids:
@@ -134,11 +180,23 @@ capabilities:
   - General knowledge/reasoning quality is not established by SWE performance; small quantization may degrade
     code correctness.
   evidence_notes: []
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: local-repository-editing
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-open-qwen3-coder-next-weights
 price_ids: []
-evidence_ids: *id002
+evidence_ids:
+- src-f2036f817d22
+- src-71b3fd269cc8
+- src-fe191bd136cd
+- src-7c5fa24308a9
 notes: []
 limitations:
 - No model inference or benchmark was run in this research pass.

@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: claude-fable-5-1
 verified_at: '2026-10-06'
 identity:
@@ -15,8 +15,8 @@ specifications:
   architecture:
     value: null
     status: unknown
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-ad9aa6f1b8ed
     - src-f3655eaf1407
     - src-bc2410652a3c
@@ -25,18 +25,33 @@ specifications:
   parameters:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-ad9aa6f1b8ed
+    - src-f3655eaf1407
+    - src-bc2410652a3c
+    - src-e7232d52f37f
+    - src-f10e40cc0139
   context_window:
     value: 1000000
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-ad9aa6f1b8ed
+    - src-f3655eaf1407
+    - src-bc2410652a3c
+    - src-e7232d52f37f
+    - src-f10e40cc0139
   maximum_output:
     value: 128000
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-ad9aa6f1b8ed
+    - src-f3655eaf1407
+    - src-bc2410652a3c
+    - src-e7232d52f37f
+    - src-f10e40cc0139
   modalities:
     value:
       input:
@@ -45,44 +60,84 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-ad9aa6f1b8ed
+    - src-f3655eaf1407
+    - src-bc2410652a3c
+    - src-e7232d52f37f
+    - src-f10e40cc0139
   language_support:
     value: Multilingual; exact inventory not specified
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-ad9aa6f1b8ed
+    - src-f3655eaf1407
+    - src-bc2410652a3c
+    - src-e7232d52f37f
+    - src-f10e40cc0139
 additional_specifications:
   knowledge_cutoff:
     value: 2026-06
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-ad9aa6f1b8ed
+    - src-f3655eaf1407
+    - src-bc2410652a3c
+    - src-e7232d52f37f
+    - src-f10e40cc0139
   weights:
     value: closed
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-ad9aa6f1b8ed
+    - src-f3655eaf1407
+    - src-bc2410652a3c
+    - src-e7232d52f37f
+    - src-f10e40cc0139
   thinking:
     value: adaptive always on
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-ad9aa6f1b8ed
+    - src-f3655eaf1407
+    - src-bc2410652a3c
+    - src-e7232d52f37f
+    - src-f10e40cc0139
   default_api_effort:
     value: high
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-ad9aa6f1b8ed
+    - src-f3655eaf1407
+    - src-bc2410652a3c
+    - src-e7232d52f37f
+    - src-f10e40cc0139
   api_id:
     value: claude-fable-5-1
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-ad9aa6f1b8ed
+    - src-f3655eaf1407
+    - src-bc2410652a3c
+    - src-e7232d52f37f
+    - src-f10e40cc0139
   training_cutoff:
     value: 2026-06
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-ad9aa6f1b8ed
+    - src-f3655eaf1407
+    - src-bc2410652a3c
+    - src-e7232d52f37f
+    - src-f10e40cc0139
   reasoning_efforts:
     value:
     - low
@@ -91,25 +146,45 @@ additional_specifications:
     - xhigh
     - max
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-ad9aa6f1b8ed
+    - src-f3655eaf1407
+    - src-bc2410652a3c
+    - src-e7232d52f37f
+    - src-f10e40cc0139
   earliest_retirement_date:
     value: '2027-09-01'
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-ad9aa6f1b8ed
+    - src-f3655eaf1407
+    - src-bc2410652a3c
+    - src-e7232d52f37f
+    - src-f10e40cc0139
   restrictions:
     value:
     - Always-on adaptive thinking.
     - Forced tool use rejected; preserved-thinking compatibility constraints apply.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-ad9aa6f1b8ed
+    - src-f3655eaf1407
+    - src-bc2410652a3c
+    - src-e7232d52f37f
+    - src-f10e40cc0139
   retirement_note:
     value: Earliest allowed retirement is not an announced shutdown.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-ad9aa6f1b8ed
+    - src-f3655eaf1407
+    - src-bc2410652a3c
+    - src-e7232d52f37f
+    - src-f10e40cc0139
 licensing:
   name: null
   commercial_use: null
@@ -117,14 +192,32 @@ licensing:
   fine_tuning: null
   hosted_service: null
   restrictions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-ad9aa6f1b8ed
+  - src-f3655eaf1407
+  - src-bc2410652a3c
+  - src-e7232d52f37f
+  - src-f10e40cc0139
 local_inference:
   availability: unavailable
   hardware_notes: []
   conditions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-ad9aa6f1b8ed
+  - src-f3655eaf1407
+  - src-bc2410652a3c
+  - src-e7232d52f37f
+  - src-f10e40cc0139
 capabilities:
-- task: long-horizon-reasoning-and-coding
+- id: judgment-7416a8c0468f622a
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - agent.long_horizon
+  - reasoning.general
+  - coding.repository_work
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Escalation candidate with strong evidence but expensive effort-sensitive operation.
   confidence: medium
   supporting_evidence_ids:
@@ -143,7 +236,21 @@ capabilities:
     operation.'
   - 'Potential risk (not a measured failure): Fallback changes model provenance; errors persist on document
     reasoning.'
-- task: cache-heavy-agents
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: long-horizon-reasoning-and-coding
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
+performance_characteristics:
+- id: judgment-b82fd561ee151f9f
+  scope: performance
+  task_ids: []
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Cost, deployment or throughput observation; not a task capability.
   judgment: Cache price cut can help context-heavy workflows, but task cost is workload-dependent.
   confidence: medium
   supporting_evidence_ids:
@@ -161,7 +268,14 @@ capabilities:
   - 'contradictory evidence: AA launch measurement reports20% higher cost/task despite cheaper cache reads.'
   - 'Observation obs-c5fa019c8d8a: Cache price cut can help context-heavy workflows, but task cost is workload-dependent.'
   - 'Potential risk (not a measured failure): Longer reasoning can erase cache savings.'
-performance_characteristics: []
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: cache-heavy-agents
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 1
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 access_ids:
 - access-proprietary-access-14
 - access-proprietary-access-15-aws-bedrock
@@ -173,7 +287,12 @@ access_ids:
 price_ids:
 - price-proprietary-claude-fable-5-1-anthropic-1c9e85bc3ee3
 - price-proprietary-claude-fable-5-1-anthropic-d31f844e1fa5
-evidence_ids: *id002
+evidence_ids:
+- src-ad9aa6f1b8ed
+- src-f3655eaf1407
+- src-bc2410652a3c
+- src-e7232d52f37f
+- src-f10e40cc0139
 notes: []
 limitations:
 - Undisclosed architecture and parameter count

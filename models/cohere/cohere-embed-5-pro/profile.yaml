@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: cohere-embed-5-pro
 verified_at: '2026-10-06'
 identity:
@@ -15,24 +15,27 @@ specifications:
   architecture:
     value: null
     status: unknown
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-9d4f7ae81230
   parameters:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-9d4f7ae81230
   context_window:
     value: 128000
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-9d4f7ae81230
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-9d4f7ae81230
   modalities:
     value:
       input:
@@ -42,13 +45,15 @@ specifications:
       output:
       - embedding
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-9d4f7ae81230
   language_support:
     value: 100+
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-9d4f7ae81230
 additional_specifications:
   dimensions:
     value:
@@ -59,18 +64,21 @@ additional_specifications:
     - 512
     - 256
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-9d4f7ae81230
   api_alias:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-9d4f7ae81230
   weights:
     value: private_deployment_available; public-weight_license_unverified
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-9d4f7ae81230
 licensing:
   name: commercial terms
   commercial_use: null
@@ -78,14 +86,22 @@ licensing:
   fine_tuning: null
   hosted_service: null
   restrictions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-9d4f7ae81230
 local_inference:
   availability: unknown
   hardware_notes: []
   conditions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-9d4f7ae81230
 capabilities:
-- task: complex-document-retrieval-offline-indexing
+- id: judgment-0e6e2979fb965898
+  scope: direct
+  task_ids:
+  - context.retrieval
+  related_task_ids: []
+  assessment: conditional
+  scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: Promising quality-focused retrieval option based on vendor tests; independent reproduction not
     verified.
   confidence: medium
@@ -96,12 +112,21 @@ capabilities:
   known_failure_modes: []
   evidence_notes:
   - 'Observation obs-752ea46df2f7: Public evidence observation'
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: complex-document-retrieval-offline-indexing
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids: []
 price_ids:
 - price-providers-cohere-embed-5-pro-cohere-516f45ff44b6
 - price-providers-cohere-embed-5-pro-cohere-d310d3a8de69
-evidence_ids: *id002
+evidence_ids:
+- src-9d4f7ae81230
 notes: []
 limitations:
 - Retrieval ranking quality is corpus-dependent.

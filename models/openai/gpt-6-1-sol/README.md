@@ -11,6 +11,14 @@
 
 Useful first comparison against Astra for routine complex work.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): coding.repository_work; context.reasoning
+
+Judgment ID: judgment-7d037d39575a5ff8
+
 Conditions: Same named max effort; harness and token usage differ across models.
 
 Failure modes / limitations: Lower SciCode and AA-LCR results than GPT-6 Sol in the cited max-effort comparison.
@@ -24,6 +32,14 @@ Evidence notes: supporting evidence: AA max: Terminal-Bench4.0 rises44% to56% ve
 ### Factual answers and tool backed research (medium confidence)
 
 Improved but requires checking sources and tool failures.
+
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): research.fact_check; research.synthesis
+
+Judgment ID: judgment-6485858c395995b9
 
 Conditions: Use current retrieval for changing facts.
 

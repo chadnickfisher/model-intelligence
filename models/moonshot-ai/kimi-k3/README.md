@@ -11,6 +11,14 @@
 
 Strong candidate for large-scale visual coding and tool-based knowledge work if cost and license are acceptable.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): agent.long_horizon; coding.repository_work; research.synthesis
+
+Judgment ID: judgment-ce599538fb19f653
+
 Conditions: Thinking is always on; preserve complete returned assistant messages including reasoning and tool fields.
 
 Failure modes / limitations: Harness-dependent benchmark results; visual tasks still fail; preserving long histories increases costs.

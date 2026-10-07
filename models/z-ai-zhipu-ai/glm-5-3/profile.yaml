@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: glm-5-3
 verified_at: '2026-10-06'
 identity:
@@ -15,8 +15,8 @@ specifications:
   architecture:
     value: MoE with DeepSeek-style sparse attention; same base model as GLM5.2, newer post-training
     status: documented
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-dc71eaf3c8b8
     - src-4424584ee706
     - src-26ed078844ac
@@ -30,8 +30,13 @@ specifications:
         ~743B/39B. Preserve discrepancy.
       exact_parameter_count: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-dc71eaf3c8b8
+    - src-4424584ee706
+    - src-26ed078844ac
+    - src-d1e7ac1dfe19
+    - src-7e6c3dd9add1
   context_window:
     value:
       native_tokens: 1000000
@@ -39,13 +44,23 @@ specifications:
       max_output_tokens: null
       notes: Input plus generated output share capacity. Endpoint limits can differ.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-dc71eaf3c8b8
+    - src-4424584ee706
+    - src-26ed078844ac
+    - src-d1e7ac1dfe19
+    - src-7e6c3dd9add1
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-dc71eaf3c8b8
+    - src-4424584ee706
+    - src-26ed078844ac
+    - src-d1e7ac1dfe19
+    - src-7e6c3dd9add1
   modalities:
     value:
       input:
@@ -53,15 +68,25 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-dc71eaf3c8b8
+    - src-4424584ee706
+    - src-26ed078844ac
+    - src-d1e7ac1dfe19
+    - src-7e6c3dd9add1
   language_support:
     value:
       supported: null
       notes: Exact supported-language list not verified in this bounded pass.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-dc71eaf3c8b8
+    - src-4424584ee706
+    - src-26ed078844ac
+    - src-d1e7ac1dfe19
+    - src-7e6c3dd9add1
 additional_specifications:
   weights:
     value:
@@ -70,8 +95,13 @@ additional_specifications:
       formats: null
       gate: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-dc71eaf3c8b8
+    - src-4424584ee706
+    - src-26ed078844ac
+    - src-d1e7ac1dfe19
+    - src-7e6c3dd9add1
   weight_only_floor_decimal_gb:
     value:
       bf16: 1506
@@ -85,18 +115,33 @@ additional_specifications:
     - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
       storage of inactive experts.
     - Published maximum context is not a guarantee it fits on the suggested local machine.
-    evidence_ids: *id002
+    evidence_ids:
+    - src-dc71eaf3c8b8
+    - src-4424584ee706
+    - src-26ed078844ac
+    - src-d1e7ac1dfe19
+    - src-7e6c3dd9add1
   release_date_reported:
     value: 2026-08
     status: documented
     conditions:
     - Source supplied a partial or non-day date; not promoted to an exact release date.
-    evidence_ids: *id002
+    evidence_ids:
+    - src-dc71eaf3c8b8
+    - src-4424584ee706
+    - src-26ed078844ac
+    - src-d1e7ac1dfe19
+    - src-7e6c3dd9add1
   release_date_precision:
     value: month
     status: documented
     conditions: []
-    evidence_ids: *id002
+    evidence_ids:
+    - src-dc71eaf3c8b8
+    - src-4424584ee706
+    - src-26ed078844ac
+    - src-d1e7ac1dfe19
+    - src-7e6c3dd9add1
 licensing:
   name: GLM-5.3 License
   commercial_use: conditional
@@ -122,9 +167,21 @@ local_inference:
   - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
     of inactive experts.
   - Published maximum context is not a guarantee it fits on the suggested local machine.
-  evidence_ids: *id002
+  evidence_ids:
+  - src-dc71eaf3c8b8
+  - src-4424584ee706
+  - src-26ed078844ac
+  - src-d1e7ac1dfe19
+  - src-7e6c3dd9add1
 capabilities:
-- task: long-horizon-text-coding
+- id: judgment-7617cc55522b828a
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - agent.long_horizon
+  - coding.repository_work
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Strong candidate for coding agents and text-based knowledge work with sufficient serving resources.
   confidence: medium
   supporting_evidence_ids:
@@ -137,6 +194,14 @@ capabilities:
   - Creator evaluations alter some anti-cheat checks and harnesses; cyber/terminal strengths do not establish
     visual capability.
   evidence_notes: []
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: long-horizon-text-coding
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-open-glm-5-3-weights
@@ -145,7 +210,12 @@ access_ids:
 price_ids:
 - price-open-glm-5-3-zai-api-a3d2f2e33a66
 - price-open-glm-5-3-mistral-api-2ee05cd2e1e9
-evidence_ids: *id002
+evidence_ids:
+- src-dc71eaf3c8b8
+- src-4424584ee706
+- src-26ed078844ac
+- src-d1e7ac1dfe19
+- src-7e6c3dd9add1
 notes: []
 limitations:
 - No model inference or benchmark was run in this research pass.

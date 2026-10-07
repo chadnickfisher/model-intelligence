@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: phi-4-reasoning-vision-15b
 verified_at: '2026-10-06'
 identity:
@@ -15,8 +15,8 @@ specifications:
   architecture:
     value: Dense Phi4-Reasoning backbone + SigLIP2 mid-fusion dynamic-resolution vision encoder
     status: documented
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-3c2db7ec3521
     - src-91f835e2db28
     - src-96b521869e71
@@ -28,8 +28,11 @@ specifications:
         compute.
       exact_parameter_count: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-91f835e2db28
+    - src-96b521869e71
   context_window:
     value:
       native_tokens: 16384
@@ -37,13 +40,19 @@ specifications:
       max_output_tokens: null
       notes: Input plus generated output share capacity. Endpoint limits can differ.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-91f835e2db28
+    - src-96b521869e71
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-91f835e2db28
+    - src-96b521869e71
   modalities:
     value:
       input:
@@ -52,16 +61,22 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-91f835e2db28
+    - src-96b521869e71
   language_support:
     value:
       supported:
       - English
       notes: Microsoft says not intended for multilingual use; other languages may degrade.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-91f835e2db28
+    - src-96b521869e71
 additional_specifications:
   weights:
     value:
@@ -70,8 +85,11 @@ additional_specifications:
       formats: null
       gate: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-91f835e2db28
+    - src-96b521869e71
   weight_only_floor_decimal_gb:
     value:
       bf16: 30
@@ -85,13 +103,16 @@ additional_specifications:
     - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
       storage of inactive experts.
     - Published maximum context is not a guarantee it fits on the suggested local machine.
-    evidence_ids: &id003
+    evidence_ids:
     - src-91f835e2db28
   release_date_precision:
     value: day
     status: documented
     conditions: []
-    evidence_ids: *id002
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-91f835e2db28
+    - src-96b521869e71
 licensing:
   name: MIT
   commercial_use: allowed
@@ -116,9 +137,18 @@ local_inference:
   - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
     of inactive experts.
   - Published maximum context is not a guarantee it fits on the suggested local machine.
-  evidence_ids: *id003
+  evidence_ids:
+  - src-91f835e2db28
 capabilities:
-- task: english-visual-math-and-grounding
+- id: judgment-3947e022646bea11
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - reasoning.math
+  - vision.question_answering
+  - vision.grounding
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: A compact specialist candidate for charts, visual math and GUI element grounding.
   confidence: low
   supporting_evidence_ids:
@@ -131,11 +161,22 @@ capabilities:
   known_failure_modes:
   - 16k window; hallucination/visual reasoning limitations; independent matched evaluation not verified.
   evidence_notes: []
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: english-visual-math-and-grounding
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-open-phi-4-reasoning-vision-15b-weights
 price_ids: []
-evidence_ids: *id002
+evidence_ids:
+- src-3c2db7ec3521
+- src-91f835e2db28
+- src-96b521869e71
 notes: []
 limitations:
 - No model inference or benchmark was run in this research pass.

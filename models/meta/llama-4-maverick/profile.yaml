@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: llama-4-maverick
 verified_at: '2026-10-06'
 identity:
@@ -15,8 +15,8 @@ specifications:
   architecture:
     value: Early-fusion multimodal MoE autoregressive Transformer
     status: documented
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-5744ead18753
     - src-65471a2c7ad5
     - src-8cb15ff6ddd4
@@ -28,8 +28,12 @@ specifications:
       scope: Creator-declared total and per-token active parameters.
       exact_parameter_count: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-5744ead18753
+    - src-65471a2c7ad5
+    - src-8cb15ff6ddd4
+    - src-7494e8051b41
   context_window:
     value:
       native_tokens: 1000000
@@ -37,13 +41,21 @@ specifications:
       max_output_tokens: null
       notes: Input plus generated output share capacity. Endpoint limits can differ.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-5744ead18753
+    - src-65471a2c7ad5
+    - src-8cb15ff6ddd4
+    - src-7494e8051b41
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-5744ead18753
+    - src-65471a2c7ad5
+    - src-8cb15ff6ddd4
+    - src-7494e8051b41
   modalities:
     value:
       input:
@@ -52,8 +64,12 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-5744ead18753
+    - src-65471a2c7ad5
+    - src-8cb15ff6ddd4
+    - src-7494e8051b41
   language_support:
     value:
       supported:
@@ -71,8 +87,12 @@ specifications:
       - Vietnamese
       notes: Other languages require additional tuning/evaluation and compliance.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-5744ead18753
+    - src-65471a2c7ad5
+    - src-8cb15ff6ddd4
+    - src-7494e8051b41
 additional_specifications:
   weights:
     value:
@@ -81,8 +101,12 @@ additional_specifications:
       formats: null
       gate: Hugging Face license acceptance / access gating
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-5744ead18753
+    - src-65471a2c7ad5
+    - src-8cb15ff6ddd4
+    - src-7494e8051b41
   weight_only_floor_decimal_gb:
     value:
       bf16: 800
@@ -96,13 +120,17 @@ additional_specifications:
     - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
       storage of inactive experts.
     - Published maximum context is not a guarantee it fits on the suggested local machine.
-    evidence_ids: &id003
+    evidence_ids:
     - src-65471a2c7ad5
   release_date_precision:
     value: day
     status: documented
     conditions: []
-    evidence_ids: *id002
+    evidence_ids:
+    - src-5744ead18753
+    - src-65471a2c7ad5
+    - src-8cb15ff6ddd4
+    - src-7494e8051b41
 licensing:
   name: Llama 4 Community License
   commercial_use: conditional
@@ -130,9 +158,17 @@ local_inference:
   - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
     of inactive experts.
   - Published maximum context is not a guarantee it fits on the suggested local machine.
-  evidence_ids: *id003
+  evidence_ids:
+  - src-65471a2c7ad5
 capabilities:
-- task: multilingual-visual-chat
+- id: judgment-c7238ff23167f60d
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - language.multilingual_chat
+  - vision.question_answering
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Established downloadable option for image QA and multilingual chat when custom terms fit.
   confidence: medium
   supporting_evidence_ids:
@@ -144,11 +180,23 @@ capabilities:
   known_failure_modes:
   - Official instruction benchmarks used BF16, so quantized equivalence is unproven.
   evidence_notes: []
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: multilingual-visual-chat
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-open-llama-4-maverick-weights
 price_ids: []
-evidence_ids: *id002
+evidence_ids:
+- src-5744ead18753
+- src-65471a2c7ad5
+- src-8cb15ff6ddd4
+- src-7494e8051b41
 notes: []
 limitations:
 - No model inference or benchmark was run in this research pass.

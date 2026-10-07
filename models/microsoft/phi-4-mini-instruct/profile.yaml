@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: phi-4-mini-instruct
 verified_at: '2026-10-06'
 identity:
@@ -15,8 +15,8 @@ specifications:
   architecture:
     value: Dense decoder-only GQA Transformer
     status: documented
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-3c2db7ec3521
     - src-147450d232b3
     - src-9f758a03b0f2
@@ -28,8 +28,12 @@ specifications:
       scope: Creator-declared complete model; multimodal active count depends on input modality.
       exact_parameter_count: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-147450d232b3
+    - src-9f758a03b0f2
+    - src-6c5f51c9393d
   context_window:
     value:
       native_tokens: 131072
@@ -37,13 +41,21 @@ specifications:
       max_output_tokens: null
       notes: Input plus generated output share capacity. Endpoint limits can differ.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-147450d232b3
+    - src-9f758a03b0f2
+    - src-6c5f51c9393d
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-147450d232b3
+    - src-9f758a03b0f2
+    - src-6c5f51c9393d
   modalities:
     value:
       input:
@@ -51,8 +63,12 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-147450d232b3
+    - src-9f758a03b0f2
+    - src-6c5f51c9393d
   language_support:
     value:
       supported:
@@ -81,8 +97,12 @@ specifications:
       - Ukrainian
       notes: This is Mini text-language list. Multimodal audio-language coverage must be checked separately.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-147450d232b3
+    - src-9f758a03b0f2
+    - src-6c5f51c9393d
 additional_specifications:
   weights:
     value:
@@ -91,8 +111,12 @@ additional_specifications:
       formats: null
       gate: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-147450d232b3
+    - src-9f758a03b0f2
+    - src-6c5f51c9393d
   weight_only_floor_decimal_gb:
     value:
       bf16: 7.6
@@ -106,18 +130,30 @@ additional_specifications:
     - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
       storage of inactive experts.
     - Published maximum context is not a guarantee it fits on the suggested local machine.
-    evidence_ids: *id002
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-147450d232b3
+    - src-9f758a03b0f2
+    - src-6c5f51c9393d
   release_date_reported:
     value: 2025-02
     status: documented
     conditions:
     - Source supplied a partial or non-day date; not promoted to an exact release date.
-    evidence_ids: *id002
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-147450d232b3
+    - src-9f758a03b0f2
+    - src-6c5f51c9393d
   release_date_precision:
     value: month
     status: documented
     conditions: []
-    evidence_ids: *id002
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-147450d232b3
+    - src-9f758a03b0f2
+    - src-6c5f51c9393d
 licensing:
   name: MIT
   commercial_use: allowed
@@ -141,9 +177,20 @@ local_inference:
   - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
     of inactive experts.
   - Published maximum context is not a guarantee it fits on the suggested local machine.
-  evidence_ids: *id002
+  evidence_ids:
+  - src-3c2db7ec3521
+  - src-147450d232b3
+  - src-9f758a03b0f2
+  - src-6c5f51c9393d
 capabilities:
-- task: low-memory-instruction-tasks
+- id: judgment-9eb4330410834153
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - language.instruction_following
+  - coding.scoped_edit
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Mini is suitable to evaluate for small, bounded instruction and simple coding tasks.
   confidence: medium
   supporting_evidence_ids:
@@ -155,11 +202,23 @@ capabilities:
   known_failure_modes:
   - Card reports function-name/URL hallucination, long-chat drift and multilingual safety gaps.
   evidence_notes: []
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: low-memory-instruction-tasks
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-open-phi-4-mini-instruct-weights
 price_ids: []
-evidence_ids: *id002
+evidence_ids:
+- src-3c2db7ec3521
+- src-147450d232b3
+- src-9f758a03b0f2
+- src-6c5f51c9393d
 notes: []
 limitations:
 - No model inference or benchmark was run in this research pass.

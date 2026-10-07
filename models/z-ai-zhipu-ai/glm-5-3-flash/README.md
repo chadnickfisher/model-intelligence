@@ -11,6 +11,14 @@
 
 Useful candidate where image-capable agents, MIT terms and lower token prices matter.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): vision.question_answering; agent.tool_use
+
+Judgment ID: judgment-df9e1cacb62e57ae
+
 Conditions: Exact hosted vs local runtime multimodal adapters differ; profile full task latency.
 
 Failure modes / limitations: Verbose reasoning and measured 53 tokens/sec can dominate latency; no guarantee of flagship GLM5.3 task parity.

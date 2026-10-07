@@ -11,6 +11,14 @@
 
 Strong QA candidate; selectively retrieve evidence rather than fill the entire context indiscriminately.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): reasoning.scientific; vision.question_answering; context.reasoning
+
+Judgment ID: judgment-6272f2a3a37dd45c
+
 Conditions: high; temperature 1; Google API; output 65,536; high; Google API
 
 Failure modes / limitations: Not established in this pass

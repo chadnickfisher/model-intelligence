@@ -1,0 +1,106 @@
+from copy import deepcopy
+from pathlib import Path
+from hashlib import sha256
+import shutil
+import subprocess
+import sys
+import pytest
+from tools.knowledge import ROOT, canonical, history, read, snapshot, scope_errors, capture, entity_history, capability_history, changes_between
+from tools.migrate_v2 import write_yaml
+
+
+def test_all_original_conclusions_and_evidence_survive():
+    originals = read(ROOT / 'history/migrations/2026-10-07-capabilities.yaml')['records']
+    current = canonical()
+    assert len([r for r in originals if r['original_collection'] == 'capabilities']) == 64
+    assert len(originals) == 71
+    for row in originals:
+        model = current[('model', row['model_id'])][1]
+        claim = next(j for j in model['capabilities'] + model['performance_characteristics'] if j['id'] == row['judgment_id'])
+        for field, value in row['original'].items():
+            assert (claim['provenance']['original_task'] if field == 'task' else claim[field]) == value
+    scopes = [r['classification'] for r in originals if r['original_collection'] == 'capabilities']
+    assert {s: scopes.count(s) for s in set(scopes)} == {'direct': 19, 'compound': 34, 'unresolved': 5, 'performance': 6}
+
+
+def test_index_retains_actual_claim_and_never_splits_bundle():
+    indexed = read(ROOT / 'data/capabilities.yaml')['records']
+    assert len(indexed) == 58
+    assert len({j['id'] for j in indexed}) == 58
+    current = canonical()
+    for j in indexed:
+        model = current[('model', j['model_id'])][1]
+        assert {k: v for k, v in j.items() if k not in ['model_id', 'profile']} == next(c for c in model['capabilities'] if c['id'] == j['id'])
+        if j['scope'] in ['compound', 'unresolved']:
+            assert j['task_ids'] == []
+        assert 'judgment' in j and 'known_failure_modes' in j and 'contradictory_evidence_ids' in j
+
+
+def copied_repo(tmp_path):
+    root = tmp_path / 'repo'
+    shutil.copytree(ROOT, root, ignore=shutil.ignore_patterns('.git', '__pycache__', '.pytest_cache'))
+    return root
+
+
+def test_unknown_task_rejected_by_validator_and_renderer(tmp_path):
+    root = copied_repo(tmp_path)
+    path = next(root.glob('models/*/*/profile.yaml'))
+    model = read(path)
+    model['capabilities'][0]['related_task_ids'].append('invented.leaderboard')
+    write_yaml(path, model)
+    before = (root / 'data/capability-taxonomy.yaml').read_bytes()
+    for tool in ['validate.py', 'render.py']:
+        r = subprocess.run([sys.executable, str(root / 'tools' / tool)], capture_output=True, text=True, encoding='utf-8')
+        assert r.returncode != 0
+        assert 'unknown task invented.leaderboard' in r.stdout + r.stderr
+    assert (root / 'data/capability-taxonomy.yaml').read_bytes() == before
+
+
+def test_no_autoregistration_and_reproducible_views():
+    def digest():
+        return {p.relative_to(ROOT).as_posix(): sha256(p.read_bytes()).hexdigest() for p in ROOT.rglob('*')
+                if p.is_file() and (p.name == 'README.md' or p.parent.name == 'data' or p.name == 'coverage.md')}
+    before = digest()
+    taxonomy = (ROOT / 'data/capability-taxonomy.yaml').read_bytes()
+    subprocess.run([sys.executable, str(ROOT / 'tools/render.py')], check=True, capture_output=True)
+    assert digest() == before
+    assert (ROOT / 'data/capability-taxonomy.yaml').read_bytes() == taxonomy
+
+
+def test_history_baseline_is_observation_not_backdated_availability():
+    assert snapshot('2026-10-06') == {}
+    assert snapshot('2026-10-07') == {k: v for k, (_, v) in canonical().items()}
+    assert all(r['observed_at'] == '2026-10-07' and r['effective_from'] is None for r in history())
+
+
+def test_history_preserves_price_and_claim_changes_and_tombstones(tmp_path):
+    root = copied_repo(tmp_path)
+    path = next(root.glob('models/*/*/profile.yaml'))
+    model = read(path); original = deepcopy(model)
+    model['capabilities'][0]['confidence'] = 'low'
+    model['capabilities'][0]['known_failure_modes'].append('Synthetic test observation')
+    write_yaml(path, model)
+    prices = read(root / 'data/pricing.yaml')
+    prices['records'][0]['rates'][0]['amount'] = None
+    write_yaml(root / 'data/pricing.yaml', prices)
+    changed = capture(root, '2026-10-08', 'Synthetic test change', ['src-67b4ce9b4e6a'])
+    assert {r['entity_type'] for r in changed} == {'model', 'price'}
+    journal = history(root)
+    assert snapshot('2026-10-07', journal)[('model', model['id'])] == original
+    assert snapshot('2026-10-08', journal)[('model', model['id'])] == model
+    assert entity_history('model', model['id'], journal)[1]['previous_revision_id'] == entity_history('model', model['id'], journal)[0]['id']
+    assert capability_history(model['id'], model['capabilities'][0]['id'], journal)[1]['value'][0]['confidence'] == 'low'
+    assert changes_between('2026-10-07', '2026-10-08', journal) == changed
+    assert capture(root, '2026-10-08', 'No change', ['src-67b4ce9b4e6a']) == []
+    path.unlink()
+    removal = capture(root, '2026-10-09', 'Synthetic removal', ['src-67b4ce9b4e6a'])
+    assert removal[0]['operation'] == 'remove'
+    assert ('model', model['id']) not in snapshot('2026-10-09', history(root))
+    assert ('model', model['id']) in snapshot('2026-10-08', history(root))
+    with pytest.raises(ValueError):
+        capture(root, '2026-10-06', 'Backdate', ['src-67b4ce9b4e6a'])
+
+
+def test_full_validation():
+    result = subprocess.run([sys.executable, str(ROOT / 'tools/validate.py')], capture_output=True, text=True, encoding='utf-8')
+    assert result.returncode == 0, result.stdout + result.stderr

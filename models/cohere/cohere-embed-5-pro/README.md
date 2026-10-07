@@ -11,6 +11,14 @@
 
 Promising quality-focused retrieval option based on vendor tests; independent reproduction not verified.
 
+Scope: direct / conditional. One task reference; conclusion remains conditional, not an ability score.
+
+Direct task IDs: context.retrieval
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-0e6e2979fb965898
+
 Conditions: Not established in this pass
 
 Failure modes / limitations: Not established in this pass

@@ -11,6 +11,14 @@
 
 Current first-party default worth evaluating, but independent quality evidence is missing in this pass.
 
+Scope: direct / conditional. One task reference; conclusion remains conditional, not an ability score.
+
+Direct task IDs: video.editing
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-173b944a1d1a6c4c
+
 Conditions: Not established in this pass
 
 Failure modes / limitations: Not established in this pass

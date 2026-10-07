@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: phi-4-multimodal-instruct
 verified_at: '2026-10-06'
 identity:
@@ -15,8 +15,8 @@ specifications:
   architecture:
     value: Phi-4 Mini dense language backbone with vision/audio encoders and modality-specific adapters
     status: documented
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-3c2db7ec3521
     - src-29885c43e537
     - src-2a442166513f
@@ -28,8 +28,12 @@ specifications:
       scope: Creator-declared complete model; multimodal active count depends on input modality.
       exact_parameter_count: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-29885c43e537
+    - src-2a442166513f
+    - src-99b21e349ac9
   context_window:
     value:
       native_tokens: 131072
@@ -37,13 +41,21 @@ specifications:
       max_output_tokens: null
       notes: Input plus generated output share capacity. Endpoint limits can differ.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-29885c43e537
+    - src-2a442166513f
+    - src-99b21e349ac9
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-29885c43e537
+    - src-2a442166513f
+    - src-99b21e349ac9
   modalities:
     value:
       input:
@@ -53,15 +65,23 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-29885c43e537
+    - src-2a442166513f
+    - src-99b21e349ac9
   language_support:
     value:
       supported: null
       notes: Text and speech coverage differ; exact modality-specific lists were not fully verified.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-29885c43e537
+    - src-2a442166513f
+    - src-99b21e349ac9
 additional_specifications:
   weights:
     value:
@@ -70,8 +90,12 @@ additional_specifications:
       formats: null
       gate: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-29885c43e537
+    - src-2a442166513f
+    - src-99b21e349ac9
   weight_only_floor_decimal_gb:
     value:
       bf16: 11.2
@@ -85,18 +109,30 @@ additional_specifications:
     - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
       storage of inactive experts.
     - Published maximum context is not a guarantee it fits on the suggested local machine.
-    evidence_ids: *id002
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-29885c43e537
+    - src-2a442166513f
+    - src-99b21e349ac9
   release_date_reported:
     value: 2025-02
     status: documented
     conditions:
     - Source supplied a partial or non-day date; not promoted to an exact release date.
-    evidence_ids: *id002
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-29885c43e537
+    - src-2a442166513f
+    - src-99b21e349ac9
   release_date_precision:
     value: month
     status: documented
     conditions: []
-    evidence_ids: *id002
+    evidence_ids:
+    - src-3c2db7ec3521
+    - src-29885c43e537
+    - src-2a442166513f
+    - src-99b21e349ac9
 licensing:
   name: MIT
   commercial_use: allowed
@@ -120,9 +156,20 @@ local_inference:
   - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
     of inactive experts.
   - Published maximum context is not a guarantee it fits on the suggested local machine.
-  evidence_ids: *id002
+  evidence_ids:
+  - src-3c2db7ec3521
+  - src-29885c43e537
+  - src-2a442166513f
+  - src-99b21e349ac9
 capabilities:
-- task: compact-audio-image-understanding
+- id: judgment-43dd1128b74944f9
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - audio.understanding
+  - vision.question_answering
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Multimodal adds image and audio input to a small text-output model.
   confidence: medium
   supporting_evidence_ids:
@@ -134,11 +181,23 @@ capabilities:
   - Speech-language coverage differs from text; long-session drift and misleading sensitive voice-attribute
     inferences.
   evidence_notes: []
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: compact-audio-image-understanding
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-open-phi-4-multimodal-instruct-weights
 price_ids: []
-evidence_ids: *id002
+evidence_ids:
+- src-3c2db7ec3521
+- src-29885c43e537
+- src-2a442166513f
+- src-99b21e349ac9
 notes: []
 limitations:
 - No model inference or benchmark was run in this research pass.

@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: mistral-medium-3-5
 verified_at: '2026-10-06'
 identity:
@@ -15,8 +15,8 @@ specifications:
   architecture:
     value: Dense multimodal decoder; unified instruction, reasoning and coding
     status: documented
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-23f19f916bbb
     - src-79280a1db5da
     - src-d2d60d683099
@@ -27,8 +27,11 @@ specifications:
       scope: creator-declared count; see notes
       exact_parameter_count: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-23f19f916bbb
+    - src-79280a1db5da
+    - src-d2d60d683099
   context_window:
     value:
       native_tokens: 262144
@@ -36,13 +39,19 @@ specifications:
       max_output_tokens: null
       notes: Input plus generated output share capacity. Endpoint limits can differ.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-23f19f916bbb
+    - src-79280a1db5da
+    - src-d2d60d683099
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-23f19f916bbb
+    - src-79280a1db5da
+    - src-d2d60d683099
   modalities:
     value:
       input:
@@ -51,15 +60,21 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-23f19f916bbb
+    - src-79280a1db5da
+    - src-d2d60d683099
   language_support:
     value:
       supported: null
       notes: Exact supported-language list not verified in this bounded pass.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-23f19f916bbb
+    - src-79280a1db5da
+    - src-d2d60d683099
 additional_specifications:
   weights:
     value:
@@ -68,8 +83,11 @@ additional_specifications:
       formats: null
       gate: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-23f19f916bbb
+    - src-79280a1db5da
+    - src-d2d60d683099
   weight_only_floor_decimal_gb:
     value:
       bf16: 256
@@ -83,12 +101,18 @@ additional_specifications:
     - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
       storage of inactive experts.
     - Published maximum context is not a guarantee it fits on the suggested local machine.
-    evidence_ids: *id002
+    evidence_ids:
+    - src-23f19f916bbb
+    - src-79280a1db5da
+    - src-d2d60d683099
   release_date_precision:
     value: day
     status: documented
     conditions: []
-    evidence_ids: *id002
+    evidence_ids:
+    - src-23f19f916bbb
+    - src-79280a1db5da
+    - src-d2d60d683099
 licensing:
   name: Modified MIT
   commercial_use: conditional
@@ -116,9 +140,19 @@ local_inference:
   - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
     of inactive experts.
   - Published maximum context is not a guarantee it fits on the suggested local machine.
-  evidence_ids: *id002
+  evidence_ids:
+  - src-23f19f916bbb
+  - src-79280a1db5da
+  - src-d2d60d683099
 capabilities:
-- task: unified-reasoning-coding
+- id: judgment-85878a81f8d11b0d
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - reasoning.general
+  - coding.repository_work
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Current Mistral candidate when one model must combine image input, coding and selectable reasoning.
   confidence: medium
   supporting_evidence_ids:
@@ -130,13 +164,24 @@ capabilities:
   known_failure_modes:
   - Official card warns early Transformers config and GGUF conversions from it degrade long-context performance.
   evidence_notes: []
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: unified-reasoning-coding
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-open-mistral-medium-3-5-weights
 - access-open-mistral-medium-3-5-mistral-api
 price_ids:
 - price-open-mistral-medium-3-5-mistral-api-ccb3cbd04b1a
-evidence_ids: *id002
+evidence_ids:
+- src-23f19f916bbb
+- src-79280a1db5da
+- src-d2d60d683099
 notes:
 - Replaces Medium3.1/Magistral in Le Chat and Devstral2 in Vibe; do not infer those products expose this exact
   configuration.

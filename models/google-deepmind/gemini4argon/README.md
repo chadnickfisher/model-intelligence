@@ -11,6 +11,14 @@
 
 Promising early-access candidate; independent task results support coding potential but do not establish broad deployment reliability.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): agent.long_horizon; coding.repository_work; agent.tool_use
+
+Judgment ID: judgment-fa3a1a5a01173cf2
+
 Conditions: Google; high reasoning; temperature 1; output cap 262144; Vals used $4/$20 regular token pricing, high effort; costs differ from announced promo
 
 Failure modes / limitations: Not established in this pass
@@ -20,6 +28,28 @@ Supporting sources: [Vals AI Gemini 4 Argon](https://www.vals.ai/models/google_g
 Contradictory or limiting sources: [Vals AI Gemini 4 Argon](https://www.vals.ai/models/google_gemini-4-argon) · [Introducing Gemini 4 Argon](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/) · [Gemini API model catalog](https://ai.google.dev/gemini-api/docs/models) · [Artificial Analysis Gemini 4 Argon High](https://artificialanalysis.ai/models/gemini-4-argon)
 
 Evidence notes: Public-source synthesis; no inference runs.; Observation obs-ac88874e3783: Independent early-access results are strong on code migration and terminal tasks but much weaker on CUA-bench and fully resolved ProgramBench.; Observation obs-917f279500bc: Announced Sep 30 for selected Fairwind defenders; general developer/consumer access described as forthcoming.; Observation obs-f5e1684ef252: Long tasks can be costly; independent evaluator reports high costs for CUA and code migration, using regular prices.
+
+### Measured generation behavior (medium confidence)
+
+Long tasks can be costly; independent evaluator reports high costs for CUA and code migration, using regular prices. Measurements: {"AA_output_tokens_index": 110000000, "AA_output_tokens_per_second": null}. These describe the cited benchmark configuration only.
+
+Scope: performance / conditional. Cost, deployment or throughput observation; not a task capability.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-eeb7184ebb549554
+
+Conditions: Vals used $4/$20 regular token pricing, high effort; costs differ from announced promo
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Vals AI Gemini 4 Argon](https://www.vals.ai/models/google_gemini-4-argon) · [Artificial Analysis Gemini 4 Argon High](https://artificialanalysis.ai/models/gemini-4-argon)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Benchmark costs are not typical user costs or provider tariffs.
 
 ## Specifications
 

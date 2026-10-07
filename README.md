@@ -12,12 +12,13 @@ Initial snapshot: **53 model profiles**, **39 provider/client/access-product pro
 
 - [Model catalog](data/models.md): current coverage and links to profiles
 - [Provider catalog](data/providers.md): creators, hosts, gateways, and access products
-- [Capability index](data/capabilities.yaml): task-specific judgments and confidence
+- [Capability index](data/capabilities.yaml): complete judgments, direct/related scope, evidence, conditions and confidence; [curated tasks](data/capability-taxonomy.yaml)
 - [Pricing](data/pricing.md): dated offers, units, conditions, and provenance
 - [Access](data/access.md): subscription, API, download, local, and other routes
 - [Releases](data/releases.yaml) and [change history](changelog/2026-10.md)
 - [Methodology](methodology.md), [coverage gaps](research/coverage.md), and [maintenance plan](MAINTENANCE.md)
 - For agents: [AGENTS.md](AGENTS.md) and [repo-map.yaml](repo-map.yaml)
+- [Explicit observation history](history/README.md): preserved values and evidence; no invented earlier state
 
 ## What is canonical?
 
@@ -39,6 +40,61 @@ Use public sources only. Propose a small change with evidence, exact model/provi
 
 Run `python tools/validate.py` to check schemas, IDs, references, and dated evidence. Run `python tools/render.py` to rebuild readable catalogs and profiles. These utilities validate and format local data only; they make no model calls or external network requests.
 
+## Local interactive explorer
+
+Use Python 3.12 (the tested runtime), from the repository root:
+
+```sh
+python -m venv .venv
+# macOS/Linux: source .venv/bin/activate
+# Windows PowerShell: .venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python -m streamlit run streamlit_app.py --browser.gatherUsageStats false
+```
+
+The explorer reads the same canonical YAML, with no database, copied app dataset,
+credentials, model endpoints or inference charges. It provides Model Explorer,
+Compare 2–5 Models, Capability Explorer, Cost Explorer, and Recent Changes. Tables,
+filters, expanders and a token-cost chart preserve unknown values and direct versus
+related evidence. Source links and canonical GitHub links accompany the records.
+All facts retain their verification dates; the app does not refresh external data.
+
+Cost Explorer estimates **text-token subtotals** only when an exact current price
+record has an explicit matching model/provider API route. Total input includes
+cached reads and cache writes; those are disjoint subsets, charged once. Output
+includes billable thinking. Select the actual offer/tier; no automatic batch/flex
+discount is applied. Documented context bands apply to the full request. Five-minute
+and one-hour cache writes use separate rates. Peak/off-peak offers require UTC time
+and holiday status where relevant. No currency exchange or subscription/token-price
+conversion is made. Unknown rates, unsupported units/conditions and missing route
+links explain why calculation is unavailable. Taxes, tools, storage, payment fees,
+regional uplifts, retries and additional modalities are outside the subtotal.
+
+Run the development checks after installing `requirements-dev.txt`:
+
+```sh
+python -m pip install -r requirements-dev.txt
+python tools/validate.py
+python tools/render.py
+python -m pytest -q
+```
+
+## Future Community Cloud deployment
+
+No hosted explorer has been deployed and there is no interactive public URL yet.
+For a later deployment, follow the
+[official Streamlit Community Cloud guide](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app):
+choose this public repository, branch `main`, entrypoint `streamlit_app.py`, and
+Python 3.12. Root `requirements.txt` supplies dependencies; no secrets or external
+services are needed. The repository is self-contained. Confirm the deployed app
+loads all five views before adding its real interactive URL to this README.
+Deployment requires a separate user decision; this repository publication does
+not register or deploy a hosted app. MCP remains a future query layer.
+
 ## Reuse and licensing
 
-No project-wide redistribution license has been selected for this initial baseline. Public visibility alone is not an open-source license. Upstream model licenses remain attached to their respective models and are not changed by this repository. Original research paraphrases sources and links to them rather than redistributing source documents or model weights.
+Original data and documentation use **CC BY 4.0**; original software uses **MIT**. See [license scope and full texts](LICENSE.md) and [attribution and third-party exclusions](NOTICE.md). Upstream model licenses remain attached to their respective models. Original research paraphrases sources and links to them rather than redistributing source documents or model weights.
+
+Research maintenance is **PAUSED as of 2026-10-06**. No daily research is scheduled or promised for October 7. Current facts remain last verified on October 6; migration observation dates are not fresh fact verification.
+
+The migration preserves 64 original capability records: 19 direct mappings, 34 compound bundles, 5 unresolved scope reviews and 6 relocated performance/deployment observations. Seven existing performance observations are also preserved. The generated capability index contains 58 complete claims; 13 observations reside in performance characteristics. Confidence measures evidence support, not ability. A compound claim is never split into per-task endorsements; related tasks are navigation only. Warnings and missing evidence remain visible.

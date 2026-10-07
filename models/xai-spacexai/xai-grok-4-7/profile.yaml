@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: xai-grok-4-7
 verified_at: '2026-10-06'
 identity:
@@ -15,8 +15,8 @@ specifications:
   architecture:
     value: null
     status: unknown
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-f1f9e55552d3
     - src-d14fea025626
     - src-905d5d7a5fb4
@@ -24,18 +24,30 @@ specifications:
   parameters:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f1f9e55552d3
+    - src-d14fea025626
+    - src-905d5d7a5fb4
+    - src-399a034698f6
   context_window:
     value: 500000
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f1f9e55552d3
+    - src-d14fea025626
+    - src-905d5d7a5fb4
+    - src-399a034698f6
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f1f9e55552d3
+    - src-d14fea025626
+    - src-905d5d7a5fb4
+    - src-399a034698f6
   modalities:
     value:
       input:
@@ -44,13 +56,21 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f1f9e55552d3
+    - src-d14fea025626
+    - src-905d5d7a5fb4
+    - src-399a034698f6
   language_support:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f1f9e55552d3
+    - src-d14fea025626
+    - src-905d5d7a5fb4
+    - src-399a034698f6
 additional_specifications:
   reasoning_efforts:
     value:
@@ -59,38 +79,66 @@ additional_specifications:
     - high
     - xhigh
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f1f9e55552d3
+    - src-d14fea025626
+    - src-905d5d7a5fb4
+    - src-399a034698f6
   default_effort:
     value: high
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f1f9e55552d3
+    - src-d14fea025626
+    - src-905d5d7a5fb4
+    - src-399a034698f6
   function_calling:
     value: true
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f1f9e55552d3
+    - src-d14fea025626
+    - src-905d5d7a5fb4
+    - src-399a034698f6
   structured_outputs:
     value: true
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f1f9e55552d3
+    - src-d14fea025626
+    - src-905d5d7a5fb4
+    - src-399a034698f6
   batch:
     value: false
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f1f9e55552d3
+    - src-d14fea025626
+    - src-905d5d7a5fb4
+    - src-399a034698f6
   api_alias:
     value: grok-4.7
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f1f9e55552d3
+    - src-d14fea025626
+    - src-905d5d7a5fb4
+    - src-399a034698f6
   weights:
     value: closed
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f1f9e55552d3
+    - src-d14fea025626
+    - src-905d5d7a5fb4
+    - src-399a034698f6
 licensing:
   name: proprietary service terms
   commercial_use: null
@@ -98,14 +146,29 @@ licensing:
   fine_tuning: null
   hosted_service: null
   restrictions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-f1f9e55552d3
+  - src-d14fea025626
+  - src-905d5d7a5fb4
+  - src-399a034698f6
 local_inference:
   availability: unavailable
   hardware_notes: []
   conditions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-f1f9e55552d3
+  - src-d14fea025626
+  - src-905d5d7a5fb4
+  - src-399a034698f6
 capabilities:
-- task: agentic-coding-and-knowledge-workflows
+- id: judgment-445f99a05ebe5177
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - coding.repository_work
+  - research.synthesis
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Credible candidate; medium confidence for task-fit. AA's xhigh snapshot improves Terminal-Bench
     4.0 from 21% (4.6 high) to 26%, but costs roughly twice per evaluated task.
   confidence: medium
@@ -117,7 +180,21 @@ capabilities:
   known_failure_modes: []
   evidence_notes:
   - 'Observation obs-281c2bae7ad0: AA Intelligence Index v4.3.2 and component tasks'
-- task: low-latency-assistance
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: agentic-coding-and-knowledge-workflows
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
+performance_characteristics:
+- id: judgment-4353bef7f2c69a6b
+  scope: performance
+  task_ids: []
+  related_task_ids: []
+  assessment: warning
+  scope_note: Cost, deployment or throughput observation; not a task capability.
   judgment: Not a latency-first default at high reasoning effort; evaluate low effort or alternatives.
   confidence: medium
   supporting_evidence_ids:
@@ -128,8 +205,20 @@ capabilities:
   known_failure_modes: []
   evidence_notes:
   - 'Observation obs-281c2bae7ad0: AA Intelligence Index v4.3.2 and component tasks'
-performance_characteristics:
-- task: measured-generation-behavior
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: low-latency-assistance
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 1
+    history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-8d9ae7f7de890d41
+  scope: performance
+  task_ids: []
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Cost, deployment or throughput observation; not a task capability.
   judgment: 'AA Intelligence Index v4.3.2 and component tasks Measurements: {"output_tokens_per_task": [81000,
     36000]}. These describe the cited benchmark configuration only.'
   confidence: medium
@@ -142,12 +231,24 @@ performance_characteristics:
   evidence_notes:
   - Different reasoning settings; broad quality gain is not across every task. Benchmark cost reflects its
     workload and cannot price user tasks.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: measured-generation-behavior
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 access_ids: []
 price_ids:
 - price-providers-xai-grok-4-7-xai-39519ba1474e
 - price-providers-xai-grok-4-7-opencode-zen-ad6a54b286af
 - price-providers-xai-grok-4-7-opencode-zen-5e46b5d4903b
-evidence_ids: *id002
+evidence_ids:
+- src-f1f9e55552d3
+- src-d14fea025626
+- src-905d5d7a5fb4
+- src-399a034698f6
 notes: []
 limitations:
 - Real-time facts require search tools; model alone has no live event access.

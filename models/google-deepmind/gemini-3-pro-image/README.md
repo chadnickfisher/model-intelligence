@@ -11,6 +11,14 @@
 
 Good candidate for reviewed design work; do not use output as faithful forensic restoration.
 
+Scope: direct / conditional. One task reference; conclusion remains conditional, not an ability score.
+
+Direct task IDs: image.generation
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-a8b91a879079b15e
+
 Conditions: December 2025 Nano Banana Pro version
 
 Failure modes / limitations: Not established in this pass

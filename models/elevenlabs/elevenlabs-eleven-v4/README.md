@@ -11,6 +11,14 @@
 
 Current documented flagship for expressive/cloned voices; credible shortlist candidate, but independent v4 preference/accuracy results not verified.
 
+Scope: direct / conditional. One task reference; conclusion remains conditional, not an ability score.
+
+Direct task IDs: audio.speech_generation
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-e6e019022a901615
+
 Conditions: Not established in this pass
 
 Failure modes / limitations: Not established in this pass

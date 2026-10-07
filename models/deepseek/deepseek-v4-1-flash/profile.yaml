@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: deepseek-v4-1-flash
 verified_at: '2026-10-06'
 identity:
@@ -16,8 +16,8 @@ specifications:
     value: Causal encoder-decoder MoE with CSA2, sparse indexing, mHC, Engram lookup memory and DSpark draft
       module
     status: documented
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-525e7f64ea10
     - src-5c348986a151
     - src-2034e17f9f4e
@@ -33,8 +33,12 @@ specifications:
       active_prefill_billion: 8
       active_decode_billion: 16
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-525e7f64ea10
+    - src-5c348986a151
+    - src-2034e17f9f4e
+    - src-280758cc57a6
   context_window:
     value:
       native_tokens: 1000000
@@ -43,13 +47,21 @@ specifications:
       notes: 384K is first-party API limit; weight-card generation example recommends >=256K budget, not a
         separate model hard limit.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-525e7f64ea10
+    - src-5c348986a151
+    - src-2034e17f9f4e
+    - src-280758cc57a6
   maximum_output:
     value: 384000
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-525e7f64ea10
+    - src-5c348986a151
+    - src-2034e17f9f4e
+    - src-280758cc57a6
   modalities:
     value:
       input:
@@ -58,15 +70,23 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-525e7f64ea10
+    - src-5c348986a151
+    - src-2034e17f9f4e
+    - src-280758cc57a6
   language_support:
     value:
       supported: null
       notes: Exact supported-language list not verified in this bounded pass.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-525e7f64ea10
+    - src-5c348986a151
+    - src-2034e17f9f4e
+    - src-280758cc57a6
 additional_specifications:
   weights:
     value:
@@ -75,13 +95,21 @@ additional_specifications:
       formats: null
       gate: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-525e7f64ea10
+    - src-5c348986a151
+    - src-2034e17f9f4e
+    - src-280758cc57a6
   reasoning_mode:
     value: API thinking/non-thinking; numerical effort 1–100 in weight card
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-525e7f64ea10
+    - src-5c348986a151
+    - src-2034e17f9f4e
+    - src-280758cc57a6
   weight_only_floor_decimal_gb:
     value:
       bf16: 1526
@@ -95,12 +123,20 @@ additional_specifications:
     - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
       storage of inactive experts.
     - Published maximum context is not a guarantee it fits on the suggested local machine.
-    evidence_ids: *id002
+    evidence_ids:
+    - src-525e7f64ea10
+    - src-5c348986a151
+    - src-2034e17f9f4e
+    - src-280758cc57a6
   release_date_precision:
     value: day
     status: documented
     conditions: []
-    evidence_ids: *id002
+    evidence_ids:
+    - src-525e7f64ea10
+    - src-5c348986a151
+    - src-2034e17f9f4e
+    - src-280758cc57a6
 licensing:
   name: MIT
   commercial_use: allowed
@@ -127,9 +163,21 @@ local_inference:
   - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
     of inactive experts.
   - Published maximum context is not a guarantee it fits on the suggested local machine.
-  evidence_ids: *id002
+  evidence_ids:
+  - src-525e7f64ea10
+  - src-5c348986a151
+  - src-2034e17f9f4e
+  - src-280758cc57a6
 capabilities:
-- task: input-heavy-tool-agents
+- id: judgment-c78023ee7891bfab
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - coding.repository_work
+  - coding.review
+  - agent.tool_use
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Promising cost-oriented candidate for long-context coding/review and image-grounded tool tasks.
   confidence: medium
   supporting_evidence_ids:
@@ -143,7 +191,21 @@ capabilities:
   - Creator DeepSWE results vary materially by harness; long traces, tool mistakes and invalid edits remain
     possible.
   evidence_notes: []
-- task: self-host-cost-savings
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: input-heavy-tool-agents
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
+performance_characteristics:
+- id: judgment-71e1895294a2759d
+  scope: performance
+  task_ids: []
+  related_task_ids: []
+  assessment: warning
+  scope_note: Cost, deployment or throughput observation; not a task capability.
   judgment: No automatic savings from open weights; utilization and infrastructure dominate.
   confidence: low
   supporting_evidence_ids:
@@ -154,14 +216,25 @@ capabilities:
   known_failure_modes:
   - Underutilized hardware can cost more than API access.
   evidence_notes: []
-performance_characteristics: []
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: self-host-cost-savings
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 1
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 access_ids:
 - access-open-deepseek-v4-1-flash-weights
 - access-open-deepseek-v4-1-flash-deepseek-api
 price_ids:
 - price-open-deepseek-v4-1-flash-deepseek-api-05c298aa0f32
 - price-open-deepseek-v4-1-flash-deepseek-api-60717c231a91
-evidence_ids: *id002
+evidence_ids:
+- src-525e7f64ea10
+- src-5c348986a151
+- src-2034e17f9f4e
+- src-280758cc57a6
 notes: []
 limitations:
 - No model inference or benchmark was run in this research pass.

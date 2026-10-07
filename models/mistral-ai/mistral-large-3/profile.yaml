@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: mistral-large-3
 verified_at: '2026-10-06'
 identity:
@@ -15,8 +15,8 @@ specifications:
   architecture:
     value: Granular MoE language model plus 2.5B vision encoder
     status: documented
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-f2036f817d22
     - src-f249e65005c1
     - src-e5d72ab8d32b
@@ -27,8 +27,11 @@ specifications:
       scope: creator-declared count; see notes
       exact_parameter_count: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-f249e65005c1
+    - src-e5d72ab8d32b
   context_window:
     value:
       native_tokens: 262144
@@ -36,13 +39,19 @@ specifications:
       max_output_tokens: null
       notes: Input plus generated output share capacity. Endpoint limits can differ.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-f249e65005c1
+    - src-e5d72ab8d32b
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-f249e65005c1
+    - src-e5d72ab8d32b
   modalities:
     value:
       input:
@@ -51,15 +60,21 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-f249e65005c1
+    - src-e5d72ab8d32b
   language_support:
     value:
       supported: null
       notes: Exact supported-language list not verified in this bounded pass.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-f249e65005c1
+    - src-e5d72ab8d32b
 additional_specifications:
   weights:
     value:
@@ -68,8 +83,11 @@ additional_specifications:
       formats: null
       gate: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-f249e65005c1
+    - src-e5d72ab8d32b
   weight_only_floor_decimal_gb:
     value:
       bf16: 1350
@@ -83,13 +101,16 @@ additional_specifications:
     - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
       storage of inactive experts.
     - Published maximum context is not a guarantee it fits on the suggested local machine.
-    evidence_ids: &id003
+    evidence_ids:
     - src-f249e65005c1
   release_date_precision:
     value: day
     status: documented
     conditions: []
-    evidence_ids: *id002
+    evidence_ids:
+    - src-f2036f817d22
+    - src-f249e65005c1
+    - src-e5d72ab8d32b
 licensing:
   name: Apache-2.0
   commercial_use: allowed
@@ -114,9 +135,16 @@ local_inference:
   - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
     of inactive experts.
   - Published maximum context is not a guarantee it fits on the suggested local machine.
-  evidence_ids: *id003
+  evidence_ids:
+  - src-f249e65005c1
 capabilities:
-- task: non-reasoning-multilingual-rag
+- id: judgment-98414fc2b50374ec
+  scope: direct
+  task_ids:
+  - knowledge.rag
+  related_task_ids: []
+  assessment: conditional
+  scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: A permissively licensed non-thinking option for enterprise document/chat pipelines with datacenter
     resources.
   confidence: medium
@@ -131,13 +159,24 @@ capabilities:
   - Card explicitly notes weaker strict reasoning than reasoning specialists and weaker vision than vision-first
     models.
   evidence_notes: []
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: non-reasoning-multilingual-rag
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-open-mistral-large-3-weights
 - access-open-mistral-large-3-mistral-api
 price_ids:
 - price-open-mistral-large-3-mistral-api-9f59b7cfe481
-evidence_ids: *id002
+evidence_ids:
+- src-f2036f817d22
+- src-f249e65005c1
+- src-e5d72ab8d32b
 notes: []
 limitations:
 - No model inference or benchmark was run in this research pass.

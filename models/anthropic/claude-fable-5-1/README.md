@@ -11,6 +11,14 @@
 
 Escalation candidate with strong evidence but expensive effort-sensitive operation.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): agent.long_horizon; reasoning.general; coding.repository_work
+
+Judgment ID: judgment-7416a8c0468f622a
+
 Conditions: Evaluated service includes safety fallback to other Claude models.
 
 Failure modes / limitations: Cited GDP.pdf all-pass result is26%; failed cases are not categorized in the retrieved comparison.
@@ -24,6 +32,14 @@ Evidence notes: supporting evidence: AA max/default fallback: Terminal-Bench4.0 
 ### Cache heavy agents (medium confidence)
 
 Cache price cut can help context-heavy workflows, but task cost is workload-dependent.
+
+Scope: performance / conditional. Cost, deployment or throughput observation; not a task capability.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-b82fd561ee151f9f
 
 Conditions: Vendor default-effort August traffic and AA max benchmark are different workloads, not directly contradictory arithmetic.
 

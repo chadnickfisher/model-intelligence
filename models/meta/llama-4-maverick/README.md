@@ -11,6 +11,14 @@
 
 Established downloadable option for image QA and multilingual chat when custom terms fit.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): language.multilingual_chat; vision.question_answering
+
+Judgment ID: judgment-c7238ff23167f60d
+
 Conditions: Twelve explicitly supported languages; image evaluation up to five images.
 
 Failure modes / limitations: Official instruction benchmarks used BF16, so quantized equivalence is unproven.

@@ -11,6 +11,14 @@
 
 Credible candidate; medium confidence for task-fit. AA's xhigh snapshot improves Terminal-Bench 4.0 from 21% (4.6 high) to 26%, but costs roughly twice per evaluated task.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): coding.repository_work; research.synthesis
+
+Judgment ID: judgment-445f99a05ebe5177
+
 Conditions: Grok4.7 xhigh vs Grok4.6 high, first-party API
 
 Failure modes / limitations: Not established in this pass
@@ -25,6 +33,14 @@ Evidence notes: Observation obs-281c2bae7ad0: AA Intelligence Index v4.3.2 and c
 
 Not a latency-first default at high reasoning effort; evaluate low effort or alternatives.
 
+Scope: performance / warning. Cost, deployment or throughput observation; not a task capability.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-4353bef7f2c69a6b
+
 Conditions: Grok4.7 xhigh vs Grok4.6 high, first-party API
 
 Failure modes / limitations: Not established in this pass
@@ -34,6 +50,28 @@ Supporting sources: [artificialanalysis.ai](https://artificialanalysis.ai/models
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
 Evidence notes: Observation obs-281c2bae7ad0: AA Intelligence Index v4.3.2 and component tasks
+
+### Measured generation behavior (medium confidence)
+
+AA Intelligence Index v4.3.2 and component tasks Measurements: {"output_tokens_per_task": [81000, 36000]}. These describe the cited benchmark configuration only.
+
+Scope: performance / conditional. Cost, deployment or throughput observation; not a task capability.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-8d9ae7f7de890d41
+
+Conditions: Grok4.7 xhigh vs Grok4.6 high, first-party API
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [artificialanalysis.ai](https://artificialanalysis.ai/models/comparisons/grok-4-7-vs-grok-4-6)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Different reasoning settings; broad quality gain is not across every task. Benchmark cost reflects its workload and cannot price user tasks.
 
 ## Specifications
 

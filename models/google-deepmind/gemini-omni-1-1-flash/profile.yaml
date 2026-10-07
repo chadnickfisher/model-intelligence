@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: gemini-omni-1-1-flash
 verified_at: '2026-10-06'
 identity:
@@ -16,27 +16,31 @@ specifications:
   architecture:
     value: null
     status: unknown
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-10e39629c3d3
     - src-3b883af04aa0
     - src-a24fd97eb3d0
   parameters:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-10e39629c3d3
+    - src-3b883af04aa0
+    - src-a24fd97eb3d0
   context_window:
     value: 1048576
     status: documented
-    conditions: *id001
-    evidence_ids: &id003
+    conditions: []
+    evidence_ids:
     - src-3b883af04aa0
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-3b883af04aa0
   modalities:
     value:
       input:
@@ -47,19 +51,26 @@ specifications:
       - video
       - native_audio
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-3b883af04aa0
   language_support:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-10e39629c3d3
+    - src-3b883af04aa0
+    - src-a24fd97eb3d0
 additional_specifications:
   knowledge_cutoff:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-10e39629c3d3
+    - src-3b883af04aa0
+    - src-a24fd97eb3d0
   configuration:
     value:
       api: Interactions API
@@ -67,8 +78,11 @@ additional_specifications:
       extension: true
       interpolation: true
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-10e39629c3d3
+    - src-3b883af04aa0
+    - src-a24fd97eb3d0
   api_quota:
     value:
       rpm: null
@@ -78,33 +92,51 @@ additional_specifications:
       evidence_ids:
       - src-10e39629c3d3
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-10e39629c3d3
+    - src-3b883af04aa0
+    - src-a24fd97eb3d0
   canonical_endpoint:
     value: gemini-omni-1.1-flash
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-10e39629c3d3
+    - src-3b883af04aa0
+    - src-a24fd97eb3d0
   context_limit_scope:
     value: Developer API context window
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-10e39629c3d3
+    - src-3b883af04aa0
+    - src-a24fd97eb3d0
   release_date_scope:
     value: API endpoint release
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-10e39629c3d3
+    - src-3b883af04aa0
+    - src-a24fd97eb3d0
   language_list_complete:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-10e39629c3d3
+    - src-3b883af04aa0
+    - src-a24fd97eb3d0
   parameter_disclosure:
     value: not disclosed in fetched public sources
     status: documented
     conditions: []
-    evidence_ids: *id002
+    evidence_ids:
+    - src-10e39629c3d3
+    - src-3b883af04aa0
+    - src-a24fd97eb3d0
 licensing:
   name: null
   commercial_use: null
@@ -112,14 +144,26 @@ licensing:
   fine_tuning: null
   hosted_service: null
   restrictions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-10e39629c3d3
+  - src-3b883af04aa0
+  - src-a24fd97eb3d0
 local_inference:
   availability: unavailable
   hardware_notes: []
   conditions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-10e39629c3d3
+  - src-3b883af04aa0
+  - src-a24fd97eb3d0
 capabilities:
-- task: iterative-short-video-editing
+- id: judgment-173b944a1d1a6c4c
+  scope: direct
+  task_ids:
+  - video.editing
+  related_task_ids: []
+  assessment: conditional
+  scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: Current first-party default worth evaluating, but independent quality evidence is missing in this
     pass.
   confidence: low
@@ -135,6 +179,14 @@ capabilities:
     workflow.'
   - 'Observation obs-b46d11e01909: Some edits of uploaded videos/recognizable people are regionally restricted;
     1080p/4K are upscaled.'
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: iterative-short-video-editing
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-proprietary-41
@@ -142,7 +194,10 @@ access_ids:
 - access-proprietary-41-google-consumer
 price_ids:
 - price-proprietary-gemini-omni-1-1-flash-google-developer-api-ea0b882ade35
-evidence_ids: *id002
+evidence_ids:
+- src-10e39629c3d3
+- src-3b883af04aa0
+- src-a24fd97eb3d0
 notes: []
 limitations:
 - Audio input support differs between overview/pricing and model table; not certified here

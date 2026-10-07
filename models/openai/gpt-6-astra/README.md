@@ -11,6 +11,14 @@
 
 Strong candidate when difficult end-to-end work justifies latency and token cost.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): coding.repository_work; agent.computer_use
+
+Judgment ID: judgment-fbf53a2171375503
+
 Conditions: AA harness/version and reasoning effort are material; these are not success probabilities for an arbitrary user task.
 
 Failure modes / limitations: AA terminal tasks still fail at high and max effort; OpenAI documents legitimate work being interrupted by safety monitoring.
@@ -24,6 +32,14 @@ Evidence notes: supporting evidence: AA Terminal-Bench4.0: high54%, max59%; Auto
 ### Scientific research (medium confidence)
 
 A strong escalation model for hard scientific workflows.
+
+Scope: direct / conditional. One task reference; conclusion remains conditional, not an ability score.
+
+Direct task IDs: reasoning.scientific
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-4e7af644a89ef0a9
 
 Conditions: Maximum effort; tool-enabled scientific terminal workflow.
 

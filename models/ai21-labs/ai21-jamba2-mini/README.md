@@ -11,6 +11,14 @@
 
 Reasonable efficiency/steerability candidate from design and vendor evaluations; no current independent result established.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): knowledge.extraction; knowledge.rag
+
+Judgment ID: judgment-fbc9e2719df53c93
+
 Conditions: Not established in this pass
 
 Failure modes / limitations: Not established in this pass

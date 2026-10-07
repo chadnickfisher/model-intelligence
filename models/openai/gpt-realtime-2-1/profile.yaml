@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: gpt-realtime-2-1
 verified_at: '2026-10-06'
 identity:
@@ -15,26 +15,35 @@ specifications:
   architecture:
     value: null
     status: unknown
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-cf6a8843c8fd
     - src-49e8d0577a5e
     - src-911ea99b80ae
   parameters:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-cf6a8843c8fd
+    - src-49e8d0577a5e
+    - src-911ea99b80ae
   context_window:
     value: 128000
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-cf6a8843c8fd
+    - src-49e8d0577a5e
+    - src-911ea99b80ae
   maximum_output:
     value: 32000
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-cf6a8843c8fd
+    - src-49e8d0577a5e
+    - src-911ea99b80ae
   modalities:
     value:
       input:
@@ -45,24 +54,36 @@ specifications:
       - text
       - audio
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-cf6a8843c8fd
+    - src-49e8d0577a5e
+    - src-911ea99b80ae
   language_support:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-cf6a8843c8fd
+    - src-49e8d0577a5e
+    - src-911ea99b80ae
 additional_specifications:
   knowledge_cutoff:
     value: '2024-09-30'
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-cf6a8843c8fd
+    - src-49e8d0577a5e
+    - src-911ea99b80ae
   weights:
     value: closed
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-cf6a8843c8fd
+    - src-49e8d0577a5e
+    - src-911ea99b80ae
 licensing:
   name: null
   commercial_use: null
@@ -70,14 +91,26 @@ licensing:
   fine_tuning: null
   hosted_service: null
   restrictions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-cf6a8843c8fd
+  - src-49e8d0577a5e
+  - src-911ea99b80ae
 local_inference:
   availability: unavailable
   hardware_notes: []
   conditions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-cf6a8843c8fd
+  - src-49e8d0577a5e
+  - src-911ea99b80ae
 capabilities:
-- task: tool-using-speech-agents
+- id: judgment-cf3c0c86e40306ed
+  scope: direct
+  task_ids:
+  - audio.conversation
+  related_task_ids: []
+  assessment: conditional
+  scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: Consider when reasoning and tools must operate in a realtime speech session.
   confidence: medium
   supporting_evidence_ids:
@@ -94,6 +127,14 @@ capabilities:
   - 'Observation obs-d95f95883e10: Consider when reasoning and tools must operate in a realtime speech session.'
   - 'Potential risk (not a measured failure): Recognition errors in identifiers; latency-sensitive turn-taking;
     tool error recovery.'
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: tool-using-speech-agents
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-proprietary-access-13
@@ -101,7 +142,10 @@ price_ids:
 - price-proprietary-gpt-realtime-2-1-openai-1ffaab4c4919
 - price-proprietary-gpt-realtime-2-1-openai-86fb999c9b89
 - price-proprietary-gpt-realtime-2-1-openai-b208bfb265cc
-evidence_ids: *id002
+evidence_ids:
+- src-cf6a8843c8fd
+- src-49e8d0577a5e
+- src-911ea99b80ae
 notes: []
 limitations:
 - Undisclosed architecture and parameter count

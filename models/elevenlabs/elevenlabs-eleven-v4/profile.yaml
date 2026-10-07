@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: elevenlabs-eleven-v4
 verified_at: '2026-10-06'
 identity:
@@ -15,25 +15,31 @@ specifications:
   architecture:
     value: null
     status: unknown
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-58f6a44d1374
     - src-bcc14c31357b
   parameters:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-58f6a44d1374
+    - src-bcc14c31357b
   context_window:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-58f6a44d1374
+    - src-bcc14c31357b
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-58f6a44d1374
+    - src-bcc14c31357b
   modalities:
     value:
       input:
@@ -42,34 +48,46 @@ specifications:
       - speech
       - multi-speaker dialogue
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-58f6a44d1374
+    - src-bcc14c31357b
   language_support:
     value: 90+
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-58f6a44d1374
+    - src-bcc14c31357b
 additional_specifications:
   max_characters_per_request:
     value: 10000
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-58f6a44d1374
+    - src-bcc14c31357b
   api:
     value: Text to Dialogue; Turbo sibling supports realtime WebSocket
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-58f6a44d1374
+    - src-bcc14c31357b
   api_alias:
     value: eleven_v4
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-58f6a44d1374
+    - src-bcc14c31357b
   weights:
     value: closed
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-58f6a44d1374
+    - src-bcc14c31357b
 licensing:
   name: commercial service terms and voice-rights restrictions
   commercial_use: null
@@ -77,14 +95,24 @@ licensing:
   fine_tuning: null
   hosted_service: null
   restrictions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-58f6a44d1374
+  - src-bcc14c31357b
 local_inference:
   availability: unavailable
   hardware_notes: []
   conditions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-58f6a44d1374
+  - src-bcc14c31357b
 capabilities:
-- task: expressive-multilingual-narration-and-dialogue
+- id: judgment-e6e019022a901615
+  scope: direct
+  task_ids:
+  - audio.speech_generation
+  related_task_ids: []
+  assessment: conditional
+  scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: Current documented flagship for expressive/cloned voices; credible shortlist candidate, but independent
     v4 preference/accuracy results not verified.
   confidence: low
@@ -95,11 +123,21 @@ capabilities:
   known_failure_modes: []
   evidence_notes:
   - 'Observation obs-7f1696b1081e: Current flagship multilingual synthesis and dialogue features.'
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: expressive-multilingual-narration-and-dialogue
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids: []
 price_ids:
 - price-providers-elevenlabs-eleven-v4-elevenlabs-9a8e2a2f9216
-evidence_ids: *id002
+evidence_ids:
+- src-58f6a44d1374
+- src-bcc14c31357b
 notes: []
 limitations:
 - Voice likeness/consent rights are separate from technical cloning capability.

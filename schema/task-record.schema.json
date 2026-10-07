@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["id", "label", "scope", "status"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z]+\\.[a-z_]+$"},
+    "label": {"type": "string", "minLength": 1},
+    "scope": {"type": "string", "minLength": 1},
+    "status": {"enum": ["active", "retired"]}
+  },
+  "additionalProperties": false
+}

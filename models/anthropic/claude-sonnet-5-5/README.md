@@ -11,6 +11,14 @@
 
 Strong terminal/task benchmark performer; tune effort rather than assuming maximum is best.
 
+Scope: direct / conditional. One task reference; conclusion remains conditional, not an ability score.
+
+Direct task IDs: coding.repository_work
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-8418f911db37869b
+
 Conditions: AA max/default fallback; creator and AA terminal scores differ because setups differ.
 
 Failure modes / limitations: Vendor reports two inspected max-effort FrontierCode cases with timeout or out-of-scope extra edits from expanded subagent review.
@@ -24,6 +32,14 @@ Evidence notes: supporting evidence: AA reports Terminal-Bench4.0 about64% at ma
 ### Cost sensitive professional workflows (medium confidence)
 
 Low per-token price is useful only when effort and total tokens are controlled.
+
+Scope: performance / conditional. Cost, deployment or throughput observation; not a task capability.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-d11bf2f6847f9b57
 
 Conditions: Different effort/workload distributions explain divergent conclusions; max is not app-default medium.
 

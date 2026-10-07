@@ -11,6 +11,14 @@
 
 Good low-token-price option for bounded, validated subtasks.
 
+Scope: unresolved / conditional. Scope needs review; the original claim does not establish a specific task ability.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): coding.scoped_edit; language.instruction_following
+
+Judgment ID: judgment-0c281701a4185869
+
 Conditions: Reasoning settings and harness matter; DeepSWE and Terminal-Bench are different tests.
 
 Failure modes / limitations: Only13% all-tests-pass on cited AA Terminal-Bench4.0 at max effort.

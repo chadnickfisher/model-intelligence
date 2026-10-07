@@ -11,6 +11,14 @@
 
 A sensible local SWE candidate with image input and Apache terms.
 
+Scope: direct / conditional. One task reference; conclusion remains conditional, not an ability score.
+
+Direct task IDs: coding.repository_work
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-c9e6063835fd4526
+
 Conditions: Use tested scaffold/tool parser; code changes still need tests and review.
 
 Failure modes / limitations: Creator reports 68% SWE-bench Verified but only 22.5% Terminal Bench2; task breadth is uneven.

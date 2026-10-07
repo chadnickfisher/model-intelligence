@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: cohere-north-small-translate
 verified_at: '2026-10-06'
 identity:
@@ -15,24 +15,27 @@ specifications:
   architecture:
     value: null
     status: unknown
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-1dac5785145f
   parameters:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1dac5785145f
   context_window:
     value: 16000
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1dac5785145f
   maximum_output:
     value: 16000
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1dac5785145f
   modalities:
     value:
       input:
@@ -40,44 +43,52 @@ specifications:
       output:
       - translated text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1dac5785145f
   language_support:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1dac5785145f
 additional_specifications:
   parameters_total_billion:
     value: 218
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1dac5785145f
   parameters_active_billion:
     value: 25
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1dac5785145f
   language_locale_variants:
     value: more than 50
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1dac5785145f
   hardware:
     value: 'W4A16: 2 H100 or 1 B200; FP8: 4 H100 or 2 B200'
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1dac5785145f
   api_alias:
     value: north-small-translate-1-0
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1dac5785145f
   weights:
     value: open
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1dac5785145f
 licensing:
   name: CC-BY-NC-4.0 for downloadable weights; commercial use requires separate authorization
   commercial_use: null
@@ -85,14 +96,22 @@ licensing:
   fine_tuning: null
   hosted_service: null
   restrictions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-1dac5785145f
 local_inference:
   availability: available
   hardware_notes: []
   conditions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-1dac5785145f
 capabilities:
-- task: self-hosted-enterprise-localization-research
+- id: judgment-315d51f450cac0a4
+  scope: direct
+  task_ids:
+  - language.translation
+  related_task_ids: []
+  assessment: conditional
+  scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: Purpose-built candidate, particularly listed tier-one languages. Hardware and noncommercial license
     substantially narrow free deployment usefulness.
   confidence: low
@@ -104,10 +123,19 @@ capabilities:
   evidence_notes:
   - 'Observation obs-516d65ed1c24: Purpose-built machine translation with listed tier-one languages and deployment
     formats.'
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: self-hosted-enterprise-localization-research
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids: []
 price_ids: []
-evidence_ids: *id002
+evidence_ids:
+- src-1dac5785145f
 notes: []
 limitations:
 - No independent translation-quality result verified in this pass.

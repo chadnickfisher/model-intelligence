@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: gemma-4-31b-it
 verified_at: '2026-10-06'
 identity:
@@ -17,7 +17,7 @@ specifications:
   architecture:
     value: Dense decoder transformer with alternating local/global attention
     status: documented
-    conditions: &id001 []
+    conditions: []
     evidence_ids:
     - src-fc87bfb1eae7
     - src-ded81031faae
@@ -26,8 +26,8 @@ specifications:
       total: 30700000000
       active: null
     status: documented
-    conditions: *id001
-    evidence_ids: &id003
+    conditions: []
+    evidence_ids:
     - src-fc87bfb1eae7
     - src-10e39629c3d3
     - src-10b631f7c7a9
@@ -37,14 +37,15 @@ specifications:
   context_window:
     value: 262144
     status: documented
-    conditions: *id001
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-fc87bfb1eae7
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-fc87bfb1eae7
   modalities:
     value:
       input:
@@ -54,8 +55,9 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-fc87bfb1eae7
   language_support:
     value:
       out_of_box: 35+
@@ -63,22 +65,40 @@ specifications:
       evidence_ids:
       - src-fc87bfb1eae7
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-fc87bfb1eae7
+    - src-10e39629c3d3
+    - src-10b631f7c7a9
+    - src-a24fd97eb3d0
+    - src-ded81031faae
+    - src-0835beeb534f
 additional_specifications:
   knowledge_cutoff:
     value: 2025-01
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-fc87bfb1eae7
+    - src-10e39629c3d3
+    - src-10b631f7c7a9
+    - src-a24fd97eb3d0
+    - src-ded81031faae
+    - src-0835beeb534f
   configuration:
     value:
       thinking: toggle within weights, not a separate model
       instruction_tuned_weights: google/gemma-4-31B-it
       pretrained_variant_available: true
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-fc87bfb1eae7
+    - src-10e39629c3d3
+    - src-10b631f7c7a9
+    - src-a24fd97eb3d0
+    - src-ded81031faae
+    - src-0835beeb534f
   api_quota:
     value:
       rpm: null
@@ -88,33 +108,69 @@ additional_specifications:
       evidence_ids:
       - src-10e39629c3d3
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-fc87bfb1eae7
+    - src-10e39629c3d3
+    - src-10b631f7c7a9
+    - src-a24fd97eb3d0
+    - src-ded81031faae
+    - src-0835beeb534f
   canonical_endpoint:
     value: gemma-4-31b-it
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-fc87bfb1eae7
+    - src-10e39629c3d3
+    - src-10b631f7c7a9
+    - src-a24fd97eb3d0
+    - src-ded81031faae
+    - src-0835beeb534f
   context_limit_scope:
     value: Published model context
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-fc87bfb1eae7
+    - src-10e39629c3d3
+    - src-10b631f7c7a9
+    - src-a24fd97eb3d0
+    - src-ded81031faae
+    - src-0835beeb534f
   release_date_scope:
     value: family release in Gemma release notes
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-fc87bfb1eae7
+    - src-10e39629c3d3
+    - src-10b631f7c7a9
+    - src-a24fd97eb3d0
+    - src-ded81031faae
+    - src-0835beeb534f
   language_list_complete:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-fc87bfb1eae7
+    - src-10e39629c3d3
+    - src-10b631f7c7a9
+    - src-a24fd97eb3d0
+    - src-ded81031faae
+    - src-0835beeb534f
   parameter_disclosure:
     value: official model card
     status: documented
     conditions: []
-    evidence_ids: *id003
+    evidence_ids:
+    - src-fc87bfb1eae7
+    - src-10e39629c3d3
+    - src-10b631f7c7a9
+    - src-a24fd97eb3d0
+    - src-ded81031faae
+    - src-0835beeb534f
 licensing:
   name: Apache-2.0
   commercial_use: null
@@ -122,14 +178,33 @@ licensing:
   fine_tuning: null
   hosted_service: null
   restrictions: []
-  evidence_ids: *id003
+  evidence_ids:
+  - src-fc87bfb1eae7
+  - src-10e39629c3d3
+  - src-10b631f7c7a9
+  - src-a24fd97eb3d0
+  - src-ded81031faae
+  - src-0835beeb534f
 local_inference:
   availability: available
   hardware_notes: []
   conditions: []
-  evidence_ids: *id003
+  evidence_ids:
+  - src-fc87bfb1eae7
+  - src-10e39629c3d3
+  - src-10b631f7c7a9
+  - src-a24fd97eb3d0
+  - src-ded81031faae
+  - src-0835beeb534f
 capabilities:
-- task: locally-controlled-multimodal-coding-assistant
+- id: judgment-091a48aa5bdf8901
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - coding.repository_work
+  - vision.question_answering
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Useful open-weight candidate when deployment control matters; select variant against memory and
     quality requirements.
   confidence: medium
@@ -154,8 +229,21 @@ capabilities:
     the Flash services measured here.'
   - 'Observation obs-cdfc4938876f: Independent configuration-specific results show model size and thinking
     mode do not create a simple ranking.'
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: locally-controlled-multimodal-coding-assistant
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics:
-- task: measured-generation-behavior
+- id: judgment-84acec95716599fe
+  scope: performance
+  task_ids: []
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Cost, deployment or throughput observation; not a task capability.
   judgment: 'Independent hosted 31B reasoning throughput is substantially lower than the Flash services measured
     here. Measurements: {"output_tokens_per_second": 35.6}. These describe the cited benchmark configuration
     only.'
@@ -168,12 +256,26 @@ performance_characteristics:
   known_failure_modes: []
   evidence_notes:
   - Provider/hardware affects speed; not a prediction of any user GPU.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: measured-generation-behavior
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 access_ids:
 - access-proprietary-40
 - access-proprietary-40-google-ai-studio
 price_ids:
 - price-proprietary-gemma-4-31b-it-google-developer-api-e292329c37fa
-evidence_ids: *id003
+evidence_ids:
+- src-fc87bfb1eae7
+- src-10e39629c3d3
+- src-10b631f7c7a9
+- src-a24fd97eb3d0
+- src-ded81031faae
+- src-0835beeb534f
 notes: []
 limitations:
 - Host-specific maximum output limit

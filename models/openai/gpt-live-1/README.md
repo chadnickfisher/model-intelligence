@@ -11,6 +11,14 @@
 
 Use for conversational flow with a separately configured reasoning backend.
 
+Scope: direct / conditional. One task reference; conclusion remains conditional, not an ability score.
+
+Direct task IDs: audio.conversation
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-cc90e4fddce2d650
+
 Conditions: Total cost includes both session duration and backend calls.
 
 Failure modes / limitations: Not established in this pass

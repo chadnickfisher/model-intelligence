@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: deepseek-v4-pro-0813
 verified_at: '2026-10-06'
 identity:
@@ -15,8 +15,8 @@ specifications:
   architecture:
     value: Sparse-attention MoE V4 backbone plus DSpark speculative decoder
     status: documented
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-f6adda98b53a
     - src-b96a45c2e083
     - src-280758cc57a6
@@ -28,8 +28,12 @@ specifications:
       scope: 1.6T backbone; HF full artifact rounds to 1.7T; exact all-component total not verified.
       exact_parameter_count: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f6adda98b53a
+    - src-b96a45c2e083
+    - src-280758cc57a6
+    - src-2bf74f8ecb84
   context_window:
     value:
       native_tokens: 1000000
@@ -37,13 +41,21 @@ specifications:
       max_output_tokens: 384000
       notes: Input plus generated output share capacity. Endpoint limits can differ.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f6adda98b53a
+    - src-b96a45c2e083
+    - src-280758cc57a6
+    - src-2bf74f8ecb84
   maximum_output:
     value: 384000
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f6adda98b53a
+    - src-b96a45c2e083
+    - src-280758cc57a6
+    - src-2bf74f8ecb84
   modalities:
     value:
       input:
@@ -51,15 +63,23 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f6adda98b53a
+    - src-b96a45c2e083
+    - src-280758cc57a6
+    - src-2bf74f8ecb84
   language_support:
     value:
       supported: null
       notes: Exact supported-language list not verified in this bounded pass.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f6adda98b53a
+    - src-b96a45c2e083
+    - src-280758cc57a6
+    - src-2bf74f8ecb84
 additional_specifications:
   weights:
     value:
@@ -68,8 +88,12 @@ additional_specifications:
       formats: null
       gate: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f6adda98b53a
+    - src-b96a45c2e083
+    - src-280758cc57a6
+    - src-2bf74f8ecb84
   weight_only_floor_decimal_gb:
     value:
       bf16: 3200
@@ -83,12 +107,20 @@ additional_specifications:
     - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
       storage of inactive experts.
     - Published maximum context is not a guarantee it fits on the suggested local machine.
-    evidence_ids: *id002
+    evidence_ids:
+    - src-f6adda98b53a
+    - src-b96a45c2e083
+    - src-280758cc57a6
+    - src-2bf74f8ecb84
   release_date_precision:
     value: day
     status: documented
     conditions: []
-    evidence_ids: *id002
+    evidence_ids:
+    - src-f6adda98b53a
+    - src-b96a45c2e083
+    - src-280758cc57a6
+    - src-2bf74f8ecb84
 licensing:
   name: MIT
   commercial_use: allowed
@@ -113,9 +145,20 @@ local_inference:
   - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
     of inactive experts.
   - Published maximum context is not a guarantee it fits on the suggested local machine.
-  evidence_ids: *id002
+  evidence_ids:
+  - src-f6adda98b53a
+  - src-b96a45c2e083
+  - src-280758cc57a6
+  - src-2bf74f8ecb84
 capabilities:
-- task: text-coding-and-reasoning
+- id: judgment-790070519743c4cd
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - coding.repository_work
+  - reasoning.general
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Officially supersedes Preview and remains a capable text-agent option.
   confidence: medium
   supporting_evidence_ids:
@@ -128,6 +171,14 @@ capabilities:
   - Text-only; system-level results depend on DeepSeek Harness; no independent checkpoint-matched test established
     here.
   evidence_notes: []
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: text-coding-and-reasoning
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-open-deepseek-v4-pro-0813-weights
@@ -135,7 +186,11 @@ access_ids:
 price_ids:
 - price-open-deepseek-v4-pro-0813-deepseek-api-66908c1c12ad
 - price-open-deepseek-v4-pro-0813-deepseek-api-1cba22453144
-evidence_ids: *id002
+evidence_ids:
+- src-f6adda98b53a
+- src-b96a45c2e083
+- src-280758cc57a6
+- src-2bf74f8ecb84
 notes: []
 limitations:
 - No model inference or benchmark was run in this research pass.

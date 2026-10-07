@@ -11,6 +11,14 @@
 
 Promising from official feature evidence; comparative quality confidence remains low.
 
+Scope: direct / conditional. One task reference; conclusion remains conditional, not an ability score.
+
+Direct task IDs: music.generation
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-81c45f869d24d386
+
 Conditions: Not established in this pass
 
 Failure modes / limitations: Not established in this pass

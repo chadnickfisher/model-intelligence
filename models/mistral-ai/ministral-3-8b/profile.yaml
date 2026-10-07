@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: ministral-3-8b
 verified_at: '2026-10-06'
 identity:
@@ -15,8 +15,8 @@ specifications:
   architecture:
     value: Dense 8.4B language model plus 0.4B vision encoder
     status: documented
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-f2036f817d22
     - src-e37726fea976
     - src-a6a9e3d9e616
@@ -27,8 +27,11 @@ specifications:
       scope: 8.4B LM + 0.4B vision; active_billion denotes dense LM, not per-image encoder compute.
       exact_parameter_count: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-e37726fea976
+    - src-a6a9e3d9e616
   context_window:
     value:
       native_tokens: 262144
@@ -36,13 +39,19 @@ specifications:
       max_output_tokens: null
       notes: Input plus generated output share capacity. Endpoint limits can differ.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-e37726fea976
+    - src-a6a9e3d9e616
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-e37726fea976
+    - src-a6a9e3d9e616
   modalities:
     value:
       input:
@@ -51,15 +60,21 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-e37726fea976
+    - src-a6a9e3d9e616
   language_support:
     value:
       supported: null
       notes: Exact supported-language list not verified in this bounded pass.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-e37726fea976
+    - src-a6a9e3d9e616
 additional_specifications:
   weights:
     value:
@@ -68,8 +83,11 @@ additional_specifications:
       formats: null
       gate: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-e37726fea976
+    - src-a6a9e3d9e616
   weight_only_floor_decimal_gb:
     value:
       bf16: 17.6
@@ -83,13 +101,16 @@ additional_specifications:
     - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
       storage of inactive experts.
     - Published maximum context is not a guarantee it fits on the suggested local machine.
-    evidence_ids: &id003
+    evidence_ids:
     - src-e37726fea976
   release_date_precision:
     value: day
     status: documented
     conditions: []
-    evidence_ids: *id002
+    evidence_ids:
+    - src-f2036f817d22
+    - src-e37726fea976
+    - src-a6a9e3d9e616
 licensing:
   name: Apache-2.0
   commercial_use: allowed
@@ -114,9 +135,18 @@ local_inference:
   - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
     of inactive experts.
   - Published maximum context is not a guarantee it fits on the suggested local machine.
-  evidence_ids: *id003
+  evidence_ids:
+  - src-e37726fea976
 capabilities:
-- task: edge-multilingual-chat
+- id: judgment-dada3e5e7dd7f855
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - language.multilingual_chat
+  - knowledge.extraction
+  - vision.question_answering
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Practical candidate for bounded local chat, extraction and image description.
   confidence: medium
   supporting_evidence_ids:
@@ -129,13 +159,24 @@ capabilities:
   known_failure_modes:
   - Complex autonomous planning and reasoning remain weaker; full 256k context can exceed edge memory.
   evidence_notes: []
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: edge-multilingual-chat
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-open-ministral-3-8b-weights
 - access-open-ministral-3-8b-mistral-api
 price_ids:
 - price-open-ministral-3-8b-mistral-api-e3e015fcc82e
-evidence_ids: *id002
+evidence_ids:
+- src-f2036f817d22
+- src-e37726fea976
+- src-a6a9e3d9e616
 notes: []
 limitations:
 - No model inference or benchmark was run in this research pass.

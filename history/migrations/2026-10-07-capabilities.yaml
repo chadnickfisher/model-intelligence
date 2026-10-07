@@ -1,0 +1,1560 @@
+schema_version: '2.0'
+id: capabilities-2026-10-07
+observed_at: '2026-10-07'
+baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+baseline_verified_at: '2026-10-06'
+reason: Task registry and scope migration; no new capability evidence or confidence changes.
+counts:
+  compound: 34
+  unresolved: 5
+  performance: 6
+  direct: 19
+  existing_performance: 7
+records:
+- judgment_id: judgment-fbc9e2719df53c93
+  model_id: ai21-jamba2-mini
+  profile: models/ai21-labs/ai21-jamba2-mini/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: grounded-extraction-constrained-enterprise-question-answering
+    judgment: Reasonable efficiency/steerability candidate from design and vendor evaluations; no current independent
+      result established.
+    confidence: low
+    supporting_evidence_ids:
+    - obs-15662c63b9d6
+    contradictory_evidence_ids: []
+    conditions: []
+    known_failure_modes: []
+    evidence_notes:
+    - 'Observation obs-15662c63b9d6: Enterprise grounding/instruction-following focus and efficient non-reasoning
+      architecture.'
+- judgment_id: judgment-89e9ac298c376d19
+  model_id: qwen3-5-9b
+  profile: models/alibaba-qwen/qwen3-5-9b/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: small-local-visual-assistant
+    judgment: Reasonable low-memory candidate for short visual QA, extraction and bounded assistant work.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-e0a64484787e
+    - src-7a37d210463f
+    contradictory_evidence_ids: []
+    conditions:
+    - Measure task accuracy at target image resolution and context.
+    known_failure_modes:
+    - Verbose reasoning can dominate latency; small-model factual and complex planning errors.
+    evidence_notes: []
+- judgment_id: judgment-5b2db26e97cc525c
+  model_id: qwen3-8-2-4t-a95b
+  profile: models/alibaba-qwen/qwen3-8-2-4t-a95b/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: large-scale-text-agents
+    judgment: A candidate for capable self-hosted text coding and work agents if infrastructure justifies it.
+    confidence: low
+    supporting_evidence_ids:
+    - src-2bc2cf30ffd5
+    contradictory_evidence_ids: []
+    conditions:
+    - Creator benchmarks use differing harnesses; hosted Qwen3.8 Max 0902 is a separate identity until mapped.
+    known_failure_modes:
+    - Substantial infrastructure burden; no image input in this checkpoint; official comparisons include modified
+      benchmark tasks.
+    evidence_notes: []
+- judgment_id: judgment-dadec61aa2e25c5d
+  model_id: qwen3-8-27b
+  profile: models/alibaba-qwen/qwen3-8-27b/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: local-multimodal-coding
+    judgment: A credible compact candidate for iterative code editing and image-grounded workflows.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-ca26bca182f6
+    - src-94984ea907dd
+    - src-fb8e00efa720
+    contradictory_evidence_ids:
+    - src-fb8e00efa720
+    conditions:
+    - Use supported thinking/template settings; compare medium and xhigh by whole-task cost.
+    known_failure_modes:
+    - Dependent tool-call ordering failures and runtime grammar issues were reported in one local setup.
+    evidence_notes: []
+- judgment_id: judgment-6db95607e291642c
+  model_id: qwen3-8-27b
+  profile: models/alibaba-qwen/qwen3-8-27b/profile.yaml
+  original_position: 1
+  original_collection: capabilities
+  classification: unresolved
+  original:
+    task: long-context-reasoning
+    judgment: Treat million-token mode as an extension to validate, rather than a proven local operating point.
+    confidence: low
+    supporting_evidence_ids:
+    - src-ca26bca182f6
+    contradictory_evidence_ids:
+    - src-94984ea907dd
+    conditions:
+    - Native 262,144; extension requires appropriate runtime configuration and memory.
+    known_failure_modes:
+    - Long reasoning traces, context pressure, retrieval misses.
+    evidence_notes: []
+- judgment_id: judgment-dfc392840f6a0569
+  model_id: qwen3-8-flash-next
+  profile: models/alibaba-qwen/qwen3-8-flash-next/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: efficient-agent-workers
+    judgment: Interesting for local tool-heavy workers when offloading and license terms fit.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-eb79656c925c
+    - src-0ab9540155b9
+    - src-fb8e00efa720
+    contradictory_evidence_ids:
+    - src-fb8e00efa720
+    conditions:
+    - Benchmark the exact quantized runtime; medium effort performed better than xhigh in one looping case.
+    known_failure_modes:
+    - Runtime-specific grammar failures, thinking loops, CPU/SSD bottlenecks.
+    evidence_notes: []
+- judgment_id: judgment-89c7c704304def1d
+  model_id: qwen3-8-flash-next
+  profile: models/alibaba-qwen/qwen3-8-flash-next/profile.yaml
+  original_position: 1
+  original_collection: capabilities
+  classification: performance
+  original:
+    task: commercial-coding-assistant-hosting
+    judgment: Do not assume permissive self-hosted commercial availability.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-0af45d93e83c
+    contradictory_evidence_ids: []
+    conditions:
+    - Check whether business is MaaS or an independent coding/office assistant.
+    known_failure_modes:
+    - License choice can block a deployment even when weights are downloadable.
+    evidence_notes:
+    - 'Conservative baseline confidence: broader convergence has not been independently audited.'
+- judgment_id: judgment-6c53b662d08a63d0
+  model_id: qwen3-coder-next
+  profile: models/alibaba-qwen/qwen3-coder-next/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: direct
+  original:
+    task: local-repository-editing
+    judgment: Useful coding-specialist candidate where non-thinking responses and permissive licensing matter.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-71b3fd269cc8
+    - src-fe191bd136cd
+    contradictory_evidence_ids:
+    - src-7c5fa24308a9
+    conditions:
+    - Use its coding chat template and supported tool parser; do not add thinking tokens.
+    known_failure_modes:
+    - General knowledge/reasoning quality is not established by SWE performance; small quantization may degrade
+      code correctness.
+    evidence_notes: []
+- judgment_id: judgment-7416a8c0468f622a
+  model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: long-horizon-reasoning-and-coding
+    judgment: Escalation candidate with strong evidence but expensive effort-sensitive operation.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-bc2410652a3c
+    contradictory_evidence_ids: []
+    conditions:
+    - Evaluated service includes safety fallback to other Claude models.
+    known_failure_modes:
+    - Cited GDP.pdf all-pass result is26%; failed cases are not categorized in the retrieved comparison.
+    evidence_notes:
+    - 'supporting evidence: AA max/default fallback: Terminal-Bench4.0 52%, HLE59%, AA-LCR85%; all improve
+      over Fable5 except some nearly flat tasks.'
+    - 'contradictory evidence: GDP.pdf only26%; these results do not make Fable universally preferable to newer
+      Opus/Sonnet.'
+    - 'Observation obs-8614ee721f1d: Escalation candidate with strong evidence but expensive effort-sensitive
+      operation.'
+    - 'Potential risk (not a measured failure): Fallback changes model provenance; errors persist on document
+      reasoning.'
+- judgment_id: judgment-b82fd561ee151f9f
+  model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  original_position: 1
+  original_collection: capabilities
+  classification: performance
+  original:
+    task: cache-heavy-agents
+    judgment: Cache price cut can help context-heavy workflows, but task cost is workload-dependent.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-e7232d52f37f
+    - src-f10e40cc0139
+    contradictory_evidence_ids: []
+    conditions:
+    - Vendor default-effort August traffic and AA max benchmark are different workloads, not directly contradictory
+      arithmetic.
+    known_failure_modes:
+    - AA reports higher benchmark task cost despite lower cached-token rates.
+    evidence_notes:
+    - 'Conservative baseline confidence: broader convergence has not been independently audited.'
+    - 'supporting evidence: Vendor reports25% typical and up to45% highly agentic savings versus Fable5.'
+    - 'contradictory evidence: AA launch measurement reports20% higher cost/task despite cheaper cache reads.'
+    - 'Observation obs-c5fa019c8d8a: Cache price cut can help context-heavy workflows, but task cost is workload-dependent.'
+    - 'Potential risk (not a measured failure): Longer reasoning can erase cache savings.'
+- judgment_id: judgment-86b4ad915dcef6a0
+  model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: fast-bounded-coding-and-assistant-subtasks
+    judgment: Useful responsive model when limited task scope and validation matter.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-e99bd76836c1
+    - src-5c510b458547
+    contradictory_evidence_ids: []
+    conditions:
+    - Vendor partner testimonials are selected marketing evidence, not independent controlled replications.
+    known_failure_modes:
+    - Low cited non-reasoning HLE and AA-LCR performance; specific errors not categorized in retrieved page.
+    evidence_notes:
+    - 'supporting evidence: Vendor SWE-bench Verified73.3%,500 tasks,50 trials, custom prompt and large thinking
+      budget; launch partners report responsive coding.'
+    - 'contradictory evidence: AA non-reasoning HLE4%, AA-LCR50%; older near-frontier claims must not be generalized
+      to2026 hardest work.'
+    - 'Observation obs-ca2b56257797: Useful responsive model when limited task scope and validation matter.'
+    - 'Potential risk (not a measured failure): Hard reasoning and long-context misses; weaker date freshness.'
+- judgment_id: judgment-a58a16e37a99fdcb
+  model_id: claude-opus-5-5
+  profile: models/anthropic/claude-opus-5-5/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: agentic-coding-and-knowledge-work
+    judgment: Strong balanced candidate for sustained open-ended professional work.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-4950ff35950b
+    - src-0dd3bed5c7dd
+    - src-4d070c5c8c67
+    contradictory_evidence_ids: []
+    conditions:
+    - Independent benchmark harness; default fallback makes this a served configuration, not isolated weights.
+    known_failure_modes:
+    - Cited Terminal-Bench4.0 all-tests-pass result leaves about40% of tasks unsuccessful.
+    evidence_notes:
+    - 'supporting evidence: AA max/default fallback: Terminal-Bench4.0 59.6%; SciCode66.9%; HLE61.4%.'
+    - 'contradictory evidence: About40% of terminal benchmark tasks still fail; task-specific leaders differ.'
+    - 'Observation obs-ec41174a4588: Strong balanced candidate for sustained open-ended professional work.'
+    - 'Potential risk (not a measured failure): Residual prompt-injection vulnerability and out-of-scope actions;
+      always-on thinking affects latency.'
+- judgment_id: judgment-8418f911db37869b
+  model_id: claude-sonnet-5-5
+  profile: models/anthropic/claude-sonnet-5-5/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: direct
+  original:
+    task: coding-at-different-effort-budgets
+    judgment: Strong terminal/task benchmark performer; tune effort rather than assuming maximum is best.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-4d947df5f3d7
+    - src-4e3ca8a95d36
+    contradictory_evidence_ids: []
+    conditions:
+    - AA max/default fallback; creator and AA terminal scores differ because setups differ.
+    known_failure_modes:
+    - Vendor reports two inspected max-effort FrontierCode cases with timeout or out-of-scope extra edits from
+      expanded subagent review.
+    evidence_notes:
+    - 'supporting evidence: AA reports Terminal-Bench4.0 about64% at max and knowledge-work results near Opus5.5.'
+    - 'contradictory evidence: Anthropic FrontierCode: max46.2%, xhigh52.1%; extra subagent reviews caused
+      timeout or out-of-scope edits.'
+    - 'Observation obs-3416d44a445c: Strong terminal/task benchmark performer; tune effort rather than assuming
+      maximum is best.'
+    - 'Potential risk (not a measured failure): Overworking, scope expansion, timeouts and large reasoning
+      bills.'
+- judgment_id: judgment-d11bf2f6847f9b57
+  model_id: claude-sonnet-5-5
+  profile: models/anthropic/claude-sonnet-5-5/profile.yaml
+  original_position: 1
+  original_collection: capabilities
+  classification: performance
+  original:
+    task: cost-sensitive-professional-workflows
+    judgment: Low per-token price is useful only when effort and total tokens are controlled.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-4e3ca8a95d36
+    - src-4d947df5f3d7
+    contradictory_evidence_ids: []
+    conditions:
+    - Different effort/workload distributions explain divergent conclusions; max is not app-default medium.
+    known_failure_modes:
+    - AA max-effort run used approximately193k output tokens/task and higher benchmark cost than predecessor.
+    evidence_notes:
+    - 'Conservative baseline confidence: broader convergence has not been independently audited.'
+    - 'supporting evidence: Vendor reports up to30% less cost/task than Sonnet5 in its testing.'
+    - 'contradictory evidence: AA max uses approximately193k output tokens/task and costs$7.60/task, about50%
+      above Sonnet5 on its suite.'
+    - 'Observation obs-8ed2b3f90f11: Low per-token price is useful only when effort and total tokens are controlled.'
+    - 'Potential risk (not a measured failure): Subscription allowance or API budget can be exhausted by long
+      reasoning.'
+- judgment_id: judgment-da95efcb747baa7e
+  model_id: bfl-flux3-video
+  profile: models/black-forest-labs/bfl-flux3-video/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: short-audiovisual-generation-and-keyframed-continuation
+    judgment: Feature-rich candidate where synchronized sound and pinned frames matter; quality judgment remains
+      low confidence without independent testing.
+    confidence: low
+    supporting_evidence_ids:
+    - obs-aa0038a13410
+    contradictory_evidence_ids: []
+    conditions: []
+    known_failure_modes: []
+    evidence_notes:
+    - 'Observation obs-aa0038a13410: Short audiovisual generation, pinned keyframes and continuation capabilities
+      publicly documented.'
+- judgment_id: judgment-d3d856d23e638edc
+  model_id: cohere-command-a-plus
+  profile: models/cohere/cohere-command-a-plus/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: private-multilingual-rag-and-enterprise-agents
+    judgment: Useful candidate where controllable deployment and abstention matter. Independent launch testing
+      found 86% non-hallucination but only 9% knowledge accuracy; high abstention is not universal correctness.
+    confidence: medium
+    supporting_evidence_ids:
+    - obs-4dd631a08c77
+    contradictory_evidence_ids: []
+    conditions: []
+    known_failure_modes: []
+    evidence_notes:
+    - 'Observation obs-4dd631a08c77: Public evidence observation'
+- judgment_id: judgment-9e8f4c9fa81f59ba
+  model_id: cohere-command-a-plus
+  profile: models/cohere/cohere-command-a-plus/profile.yaml
+  original_position: 1
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: hard-scientific-reasoning-agentic-coding
+    judgment: Launch testing showed gaps on hardest tasks; do not infer frontier quality from hardware efficiency.
+    confidence: medium
+    supporting_evidence_ids:
+    - obs-4dd631a08c77
+    contradictory_evidence_ids: []
+    conditions: []
+    known_failure_modes: []
+    evidence_notes:
+    - 'Observation obs-4dd631a08c77: Public evidence observation'
+- judgment_id: judgment-9404c729731567f2
+  model_id: cohere-command-a-plus
+  profile: models/cohere/cohere-command-a-plus/profile.yaml
+  original_position: 0
+  original_collection: performance_characteristics
+  classification: performance
+  original:
+    task: measured-generation-behavior
+    judgment: 'Public evidence observation Measurements: {"output_tokens_per_second": 281}. These describe
+      the cited benchmark configuration only.'
+    confidence: medium
+    supporting_evidence_ids:
+    - obs-4dd631a08c77
+    contradictory_evidence_ids: []
+    conditions: []
+    known_failure_modes: []
+    evidence_notes:
+    - Launch/pre-release testing; older index revision and comparison set. Abstention can drive non-hallucination
+      result.
+- judgment_id: judgment-afbdc8473c5cc5bd
+  model_id: cohere-embed-5-fast
+  profile: models/cohere/cohere-embed-5-fast/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: direct
+  original:
+    task: high-volume-interactive-retrieval
+    judgment: Candidate for query-time cost/latency savings, including Pro-index/Fast-query pairing; current
+      comparative evidence is vendor-generated.
+    confidence: medium
+    supporting_evidence_ids:
+    - obs-752ea46df2f7
+    contradictory_evidence_ids: []
+    conditions: []
+    known_failure_modes: []
+    evidence_notes:
+    - 'Observation obs-752ea46df2f7: Public evidence observation'
+- judgment_id: judgment-0e6e2979fb965898
+  model_id: cohere-embed-5-pro
+  profile: models/cohere/cohere-embed-5-pro/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: direct
+  original:
+    task: complex-document-retrieval-offline-indexing
+    judgment: Promising quality-focused retrieval option based on vendor tests; independent reproduction not
+      verified.
+    confidence: medium
+    supporting_evidence_ids:
+    - obs-752ea46df2f7
+    contradictory_evidence_ids: []
+    conditions: []
+    known_failure_modes: []
+    evidence_notes:
+    - 'Observation obs-752ea46df2f7: Public evidence observation'
+- judgment_id: judgment-315d51f450cac0a4
+  model_id: cohere-north-small-translate
+  profile: models/cohere/cohere-north-small-translate/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: direct
+  original:
+    task: self-hosted-enterprise-localization-research
+    judgment: Purpose-built candidate, particularly listed tier-one languages. Hardware and noncommercial license
+      substantially narrow free deployment usefulness.
+    confidence: low
+    supporting_evidence_ids:
+    - obs-516d65ed1c24
+    contradictory_evidence_ids: []
+    conditions: []
+    known_failure_modes: []
+    evidence_notes:
+    - 'Observation obs-516d65ed1c24: Purpose-built machine translation with listed tier-one languages and deployment
+      formats.'
+- judgment_id: judgment-c78023ee7891bfab
+  model_id: deepseek-v4-1-flash
+  profile: models/deepseek/deepseek-v4-1-flash/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: input-heavy-tool-agents
+    judgment: Promising cost-oriented candidate for long-context coding/review and image-grounded tool tasks.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-5c348986a151
+    - src-2034e17f9f4e
+    - src-280758cc57a6
+    contradictory_evidence_ids: []
+    conditions:
+    - Check maximum reasoning effort versus task cost; preserve correct prompt encoding.
+    known_failure_modes:
+    - Creator DeepSWE results vary materially by harness; long traces, tool mistakes and invalid edits remain
+      possible.
+    evidence_notes: []
+- judgment_id: judgment-71e1895294a2759d
+  model_id: deepseek-v4-1-flash
+  profile: models/deepseek/deepseek-v4-1-flash/profile.yaml
+  original_position: 1
+  original_collection: capabilities
+  classification: performance
+  original:
+    task: self-host-cost-savings
+    judgment: No automatic savings from open weights; utilization and infrastructure dominate.
+    confidence: low
+    supporting_evidence_ids:
+    - src-5c348986a151
+    contradictory_evidence_ids: []
+    conditions:
+    - Compare full GPU/RAM/operator cost with actual cached API token mix.
+    known_failure_modes:
+    - Underutilized hardware can cost more than API access.
+    evidence_notes: []
+- judgment_id: judgment-790070519743c4cd
+  model_id: deepseek-v4-pro-0813
+  profile: models/deepseek/deepseek-v4-pro-0813/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: text-coding-and-reasoning
+    judgment: Officially supersedes Preview and remains a capable text-agent option.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-b96a45c2e083
+    - src-280758cc57a6
+    contradictory_evidence_ids: []
+    conditions:
+    - Use 0813 evidence, not April preview scores; reasoning low/high/max changes behavior.
+    known_failure_modes:
+    - Text-only; system-level results depend on DeepSeek Harness; no independent checkpoint-matched test established
+      here.
+    evidence_notes: []
+- judgment_id: judgment-e6e019022a901615
+  model_id: elevenlabs-eleven-v4
+  profile: models/elevenlabs/elevenlabs-eleven-v4/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: direct
+  original:
+    task: expressive-multilingual-narration-and-dialogue
+    judgment: Current documented flagship for expressive/cloned voices; credible shortlist candidate, but independent
+      v4 preference/accuracy results not verified.
+    confidence: low
+    supporting_evidence_ids:
+    - obs-7f1696b1081e
+    contradictory_evidence_ids: []
+    conditions: []
+    known_failure_modes: []
+    evidence_notes:
+    - 'Observation obs-7f1696b1081e: Current flagship multilingual synthesis and dialogue features.'
+- judgment_id: judgment-6272f2a3a37dd45c
+  model_id: gemini-3-1-pro-preview
+  profile: models/google-deepmind/gemini-3-1-pro-preview/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: difficult-science-visual-qa-and-long-documents
+    judgment: Strong QA candidate; selectively retrieve evidence rather than fill the entire context indiscriminately.
+    confidence: medium
+    supporting_evidence_ids:
+    - obs-2ee68e334fde
+    contradictory_evidence_ids:
+    - obs-dc03c35a1b80
+    - obs-e8f1075592de
+    conditions:
+    - high; temperature 1; Google API; output 65,536
+    - high; Google API
+    known_failure_modes: []
+    evidence_notes:
+    - task-conditioned synthesis; no inference runs performed
+    - 'Observation obs-2ee68e334fde: Strong closed-form science and multimodal QA in current Vals snapshot.'
+    - 'Observation obs-dc03c35a1b80: Effective long-context retrieval degrades near the advertised maximum.'
+    - 'Observation obs-e8f1075592de: Strong QA does not transfer uniformly to open-ended agents.'
+- judgment_id: judgment-06ddf2c86085a946
+  model_id: gemini-3-5-flash-lite
+  profile: models/google-deepmind/gemini-3-5-flash-lite/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: high-volume-parsing-classification-and-bounded-subagent-work
+    judgment: Reasonable economical starting point, with validation and escalation for difficult cases.
+    confidence: medium
+    supporting_evidence_ids:
+    - obs-16516ab6f54e
+    - obs-8b65b1136da3
+    contradictory_evidence_ids:
+    - obs-04efb4d01f02
+    - obs-8b65b1136da3
+    conditions:
+    - high; temperature 1; output 65,536
+    known_failure_modes: []
+    evidence_notes:
+    - task-conditioned synthesis; no inference runs performed
+    - 'Observation obs-16516ab6f54e: Measured decode speed supports throughput-sensitive experimentation.'
+    - 'Observation obs-8b65b1136da3: Useful bounded coding capability with weaker difficult agent performance.'
+    - 'Observation obs-04efb4d01f02: Large context is not equal to reliable exhaustive retrieval.'
+- judgment_id: judgment-f7f4e9d19bb0fd4e
+  model_id: gemini-3-5-flash-lite
+  profile: models/google-deepmind/gemini-3-5-flash-lite/profile.yaml
+  original_position: 0
+  original_collection: performance_characteristics
+  classification: performance
+  original:
+    task: measured-generation-behavior
+    judgment: 'Measured decode speed supports throughput-sensitive experimentation. Measurements: {"output_tokens_per_second":
+      341.5}. These describe the cited benchmark configuration only.'
+    confidence: medium
+    supporting_evidence_ids:
+    - obs-16516ab6f54e
+    contradictory_evidence_ids: []
+    conditions: []
+    known_failure_modes: []
+    evidence_notes:
+    - API snapshot; no end-to-end latency or local execution claim.
+- judgment_id: judgment-262c08414297adcf
+  model_id: gemini-3-8-flash
+  profile: models/google-deepmind/gemini-3-8-flash/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: fast-multimodal-assistant-and-bounded-coding-tasks
+    judgment: Strong candidate when throughput matters and outputs can be tested.
+    confidence: medium
+    supporting_evidence_ids:
+    - obs-62d94da56cdb
+    - obs-7445edb36893
+    - obs-a6b7a76a516c
+    contradictory_evidence_ids:
+    - obs-623d3b669e5c
+    - obs-7445edb36893
+    conditions:
+    - high reasoning; Google API
+    - high; temperature 1; Google API; max output 65,536
+    - high; Google API
+    known_failure_modes: []
+    evidence_notes:
+    - task-conditioned synthesis; no inference runs performed
+    - 'Observation obs-62d94da56cdb: Fast streamed decoding in the observed benchmark service.'
+    - 'Observation obs-7445edb36893: Competitive contained coding tasks, with much weaker results on harder
+      general terminal work.'
+    - 'Observation obs-a6b7a76a516c: Supports demanding visual/scientific question answering in independent
+      evaluation.'
+    - 'Observation obs-623d3b669e5c: Provider discloses hallucinations, occasional timeouts, and increased
+      tokens at higher effort; multilingual safety regressed versus 3.7.'
+- judgment_id: judgment-46e287976a5cc041
+  model_id: gemini-3-8-flash
+  profile: models/google-deepmind/gemini-3-8-flash/profile.yaml
+  original_position: 1
+  original_collection: capabilities
+  classification: direct
+  original:
+    task: unsupervised-long-horizon-terminal-execution
+    judgment: Conditional; use tests and checkpointing rather than assuming benchmark coding strength transfers.
+    confidence: medium
+    supporting_evidence_ids:
+    - obs-7445edb36893
+    contradictory_evidence_ids:
+    - obs-7445edb36893
+    - obs-623d3b669e5c
+    conditions:
+    - high; temperature 1; Google API; max output 65,536
+    known_failure_modes: []
+    evidence_notes:
+    - task-conditioned synthesis; no inference runs performed
+    - 'Observation obs-7445edb36893: Competitive contained coding tasks, with much weaker results on harder
+      general terminal work.'
+    - 'Observation obs-623d3b669e5c: Provider discloses hallucinations, occasional timeouts, and increased
+      tokens at higher effort; multilingual safety regressed versus 3.7.'
+- judgment_id: judgment-4d183583f2850a0e
+  model_id: gemini-3-8-flash
+  profile: models/google-deepmind/gemini-3-8-flash/profile.yaml
+  original_position: 0
+  original_collection: performance_characteristics
+  classification: performance
+  original:
+    task: measured-generation-behavior
+    judgment: 'Fast streamed decoding in the observed benchmark service. Measurements: {"output_tokens_per_second":
+      241.9}. These describe the cited benchmark configuration only.'
+    confidence: medium
+    supporting_evidence_ids:
+    - obs-62d94da56cdb
+    contradictory_evidence_ids: []
+    conditions:
+    - high reasoning; Google API
+    known_failure_modes: []
+    evidence_notes:
+    - Excludes time to first token and tool-loop overhead; not an SLA.
+- judgment_id: judgment-6eac9d7c589429f2
+  model_id: gemini-3-8-live
+  profile: models/google-deepmind/gemini-3-8-live/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: direct
+  original:
+    task: tool-connected-real-time-voice-conversation
+    judgment: Well-matched interface; actual speech quality, turn taking and latency need task-specific verification.
+    confidence: medium
+    supporting_evidence_ids:
+    - obs-c0b11ad9d793
+    contradictory_evidence_ids:
+    - obs-d67386e9f0d6
+    conditions: []
+    known_failure_modes: []
+    evidence_notes:
+    - task-conditioned synthesis; no inference runs performed
+    - 'Observation obs-c0b11ad9d793: Streaming voice with interleaved reasoning and default non-blocking tool
+      calls is a suitable interface design for conversational agents.'
+    - 'Observation obs-d67386e9f0d6: Hallucinations/timeouts remain; migration fails if unsupported thinking_level
+      or proactive_audio:false is sent.'
+- judgment_id: judgment-a8b91a879079b15e
+  model_id: gemini-3-pro-image
+  profile: models/google-deepmind/gemini-3-pro-image/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: direct
+  original:
+    task: visual-concepts-mockups-and-text-heavy-image-drafts
+    judgment: Good candidate for reviewed design work; do not use output as faithful forensic restoration.
+    confidence: medium
+    supporting_evidence_ids:
+    - obs-bbe38314fda9
+    - obs-c3991e29aaff
+    contradictory_evidence_ids:
+    - obs-c3991e29aaff
+    conditions:
+    - December 2025 Nano Banana Pro version
+    known_failure_modes: []
+    evidence_notes:
+    - task-conditioned synthesis; no inference runs performed
+    - 'Observation obs-bbe38314fda9: Grounded image creation and text/layout control are supported; results
+      require review.'
+    - 'Observation obs-c3991e29aaff: Independent low-level vision study found attractive reconstructed detail
+      but lower reference-based fidelity than specialists.'
+- judgment_id: judgment-173b944a1d1a6c4c
+  model_id: gemini-omni-1-1-flash
+  profile: models/google-deepmind/gemini-omni-1-1-flash/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: direct
+  original:
+    task: iterative-short-video-editing
+    judgment: Current first-party default worth evaluating, but independent quality evidence is missing in
+      this pass.
+    confidence: low
+    supporting_evidence_ids:
+    - obs-3386dd991c55
+    contradictory_evidence_ids:
+    - obs-b46d11e01909
+    conditions: []
+    known_failure_modes: []
+    evidence_notes:
+    - task-conditioned synthesis; no inference runs performed
+    - 'Observation obs-3386dd991c55: Conversational short-video editing and mixed inputs support an iterative
+      workflow.'
+    - 'Observation obs-b46d11e01909: Some edits of uploaded videos/recognizable people are regionally restricted;
+      1080p/4K are upscaled.'
+- judgment_id: judgment-fa3a1a5a01173cf2
+  model_id: gemini4argon
+  profile: models/google-deepmind/gemini4argon/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: long-horizon-coding-and-enterprise-agent-workflows-when-access-is-available
+    judgment: Promising early-access candidate; independent task results support coding potential but do not
+      establish broad deployment reliability.
+    confidence: medium
+    supporting_evidence_ids:
+    - obs-ac88874e3783
+    contradictory_evidence_ids:
+    - obs-ac88874e3783
+    - obs-917f279500bc
+    - obs-f5e1684ef252
+    conditions:
+    - Google; high reasoning; temperature 1; output cap 262144
+    - Vals used $4/$20 regular token pricing, high effort; costs differ from announced promo
+    known_failure_modes: []
+    evidence_notes:
+    - Public-source synthesis; no inference runs.
+    - 'Observation obs-ac88874e3783: Independent early-access results are strong on code migration and terminal
+      tasks but much weaker on CUA-bench and fully resolved ProgramBench.'
+    - 'Observation obs-917f279500bc: Announced Sep 30 for selected Fairwind defenders; general developer/consumer
+      access described as forthcoming.'
+    - 'Observation obs-f5e1684ef252: Long tasks can be costly; independent evaluator reports high costs for
+      CUA and code migration, using regular prices.'
+- judgment_id: judgment-eeb7184ebb549554
+  model_id: gemini4argon
+  profile: models/google-deepmind/gemini4argon/profile.yaml
+  original_position: 0
+  original_collection: performance_characteristics
+  classification: performance
+  original:
+    task: measured-generation-behavior
+    judgment: 'Long tasks can be costly; independent evaluator reports high costs for CUA and code migration,
+      using regular prices. Measurements: {"AA_output_tokens_index": 110000000, "AA_output_tokens_per_second":
+      null}. These describe the cited benchmark configuration only.'
+    confidence: medium
+    supporting_evidence_ids:
+    - obs-f5e1684ef252
+    contradictory_evidence_ids: []
+    conditions:
+    - Vals used $4/$20 regular token pricing, high effort; costs differ from announced promo
+    known_failure_modes: []
+    evidence_notes:
+    - Benchmark costs are not typical user costs or provider tariffs.
+- judgment_id: judgment-091a48aa5bdf8901
+  model_id: gemma-4-31b-it
+  profile: models/google-deepmind/gemma-4-31b-it/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: locally-controlled-multimodal-coding-assistant
+    judgment: Useful open-weight candidate when deployment control matters; select variant against memory and
+      quality requirements.
+    confidence: medium
+    supporting_evidence_ids:
+    - obs-277108d396be
+    - obs-984e3b3ac410
+    contradictory_evidence_ids:
+    - obs-fcfd1534c8b5
+    - obs-cdfc4938876f
+    conditions:
+    - instruction-tuned; provider evaluation
+    - reasoning
+    - different weights and reasoning configurations
+    known_failure_modes: []
+    evidence_notes:
+    - task-conditioned synthesis; no inference runs performed
+    - 'Observation obs-277108d396be: Open downloadable weights and Apache 2.0 allow controlled deployment and
+      tuning.'
+    - 'Observation obs-984e3b3ac410: Provider evaluates 31B IT as capable in coding and visual reasoning; smaller
+      variants trade quality for resources.'
+    - 'Observation obs-fcfd1534c8b5: Independent hosted 31B reasoning throughput is substantially lower than
+      the Flash services measured here.'
+    - 'Observation obs-cdfc4938876f: Independent configuration-specific results show model size and thinking
+      mode do not create a simple ranking.'
+- judgment_id: judgment-84acec95716599fe
+  model_id: gemma-4-31b-it
+  profile: models/google-deepmind/gemma-4-31b-it/profile.yaml
+  original_position: 0
+  original_collection: performance_characteristics
+  classification: performance
+  original:
+    task: measured-generation-behavior
+    judgment: 'Independent hosted 31B reasoning throughput is substantially lower than the Flash services measured
+      here. Measurements: {"output_tokens_per_second": 35.6}. These describe the cited benchmark configuration
+      only.'
+    confidence: medium
+    supporting_evidence_ids:
+    - obs-fcfd1534c8b5
+    contradictory_evidence_ids: []
+    conditions:
+    - reasoning
+    known_failure_modes: []
+    evidence_notes:
+    - Provider/hardware affects speed; not a prediction of any user GPU.
+- judgment_id: judgment-81c45f869d24d386
+  model_id: lyria-3-5
+  profile: models/google-deepmind/lyria-3-5/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: direct
+  original:
+    task: prompted-full-song-concept-drafts
+    judgment: Promising from official feature evidence; comparative quality confidence remains low.
+    confidence: low
+    supporting_evidence_ids:
+    - obs-d42491a5f0c8
+    - obs-62a4e6b29fd2
+    contradictory_evidence_ids:
+    - obs-4bde1c37710c
+    conditions: []
+    known_failure_modes: []
+    evidence_notes:
+    - task-conditioned synthesis; no inference runs performed
+    - 'Observation obs-d42491a5f0c8: Full songs include prompted verses, choruses, bridges and lyrics; developer
+      guidance supports structural prompts.'
+    - 'Observation obs-62a4e6b29fd2: Google reports improved audio fidelity and lyric-prompt adherence versus
+      Lyria 2.'
+    - 'Observation obs-4bde1c37710c: Single-turn generation, variable duration/output, blocked artist-voice/copyrighted-lyric
+      prompts and SynthID watermark constrain workflows.'
+- judgment_id: judgment-f36c958097d5b875
+  model_id: veo-3-1-generate-preview
+  profile: models/google-deepmind/veo-3-1-generate-preview/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: direct
+  original:
+    task: directed-short-shots-requiring-first-last-frame-or-extensions
+    judgment: Useful specialist option; test Omni too for new general video workflows.
+    confidence: medium
+    supporting_evidence_ids:
+    - obs-a1dcd03b9809
+    contradictory_evidence_ids:
+    - obs-7d1f6921bea0
+    - obs-6dfa41ffcfec
+    conditions: []
+    known_failure_modes: []
+    evidence_notes:
+    - task-conditioned synthesis; no inference runs performed
+    - 'Observation obs-a1dcd03b9809: Native audio, frame controls, reference images and extension fit directed
+      short cinematic shots.'
+    - 'Observation obs-7d1f6921bea0: Multi-video reasoning unsupported; non-English unevaluated; audio processing/safety
+      blocks and variable latency occur.'
+    - 'Observation obs-6dfa41ffcfec: Google now recommends Omni as default video option, reserving Veo for
+      particular controls/legacy integration.'
+- judgment_id: judgment-8e62e348ffe18201
+  model_id: veo-3-1-generate-preview
+  profile: models/google-deepmind/veo-3-1-generate-preview/profile.yaml
+  original_position: 0
+  original_collection: performance_characteristics
+  classification: performance
+  original:
+    task: measured-generation-behavior
+    judgment: 'Multi-video reasoning unsupported; non-English unevaluated; audio processing/safety blocks and
+      variable latency occur. Measurements: {"published_latency_min_seconds": 11, "published_latency_max_seconds":
+      360}. These describe the cited benchmark configuration only.'
+    confidence: medium
+    supporting_evidence_ids:
+    - obs-7d1f6921bea0
+    contradictory_evidence_ids: []
+    conditions: []
+    known_failure_modes: []
+    evidence_notes:
+    - Published range during peak periods, not independently measured or guaranteed.
+- judgment_id: judgment-c7238ff23167f60d
+  model_id: llama-4-maverick
+  profile: models/meta/llama-4-maverick/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: multilingual-visual-chat
+    judgment: Established downloadable option for image QA and multilingual chat when custom terms fit.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-8cb15ff6ddd4
+    - src-65471a2c7ad5
+    contradictory_evidence_ids: []
+    conditions:
+    - Twelve explicitly supported languages; image evaluation up to five images.
+    known_failure_modes:
+    - Official instruction benchmarks used BF16, so quantized equivalence is unproven.
+    evidence_notes: []
+- judgment_id: judgment-3bdbe688baf73a67
+  model_id: llama-4-scout
+  profile: models/meta/llama-4-scout/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: multilingual-visual-chat
+    judgment: Established downloadable option for image QA and multilingual chat when custom terms fit.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-8cb15ff6ddd4
+    - src-65471a2c7ad5
+    contradictory_evidence_ids: []
+    conditions:
+    - Twelve explicitly supported languages; image evaluation up to five images.
+    known_failure_modes:
+    - Official instruction benchmarks used BF16, so quantized equivalence is unproven.
+    evidence_notes: []
+- judgment_id: judgment-9a9a7a9cb18c9163
+  model_id: llama-4-scout
+  profile: models/meta/llama-4-scout/profile.yaml
+  original_position: 1
+  original_collection: capabilities
+  classification: unresolved
+  original:
+    task: very-long-document-work
+    judgment: Scout’s 10M advertised capacity is not enough evidence to prefer it for difficult long-document
+      reasoning.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-8cb15ff6ddd4
+    contradictory_evidence_ids:
+    - src-94efd6cf8bb7
+    conditions:
+    - Test position sensitivity and retrieval on real documents.
+    known_failure_modes:
+    - Very large KV memory and incomplete long-context reasoning reliability.
+    evidence_notes: []
+- judgment_id: judgment-9eb4330410834153
+  model_id: phi-4-mini-instruct
+  profile: models/microsoft/phi-4-mini-instruct/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: low-memory-instruction-tasks
+    judgment: Mini is suitable to evaluate for small, bounded instruction and simple coding tasks.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-147450d232b3
+    contradictory_evidence_ids:
+    - src-9f758a03b0f2
+    conditions:
+    - 23 supported text languages; verify APIs beyond common Python packages.
+    known_failure_modes:
+    - Card reports function-name/URL hallucination, long-chat drift and multilingual safety gaps.
+    evidence_notes: []
+- judgment_id: judgment-43dd1128b74944f9
+  model_id: phi-4-multimodal-instruct
+  profile: models/microsoft/phi-4-multimodal-instruct/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: compact-audio-image-understanding
+    judgment: Multimodal adds image and audio input to a small text-output model.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-29885c43e537
+    contradictory_evidence_ids: []
+    conditions:
+    - Use supported modality adapters; it does not generate audio.
+    known_failure_modes:
+    - Speech-language coverage differs from text; long-session drift and misleading sensitive voice-attribute
+      inferences.
+    evidence_notes: []
+- judgment_id: judgment-3947e022646bea11
+  model_id: phi-4-reasoning-vision-15b
+  profile: models/microsoft/phi-4-reasoning-vision-15b/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: english-visual-math-and-grounding
+    judgment: A compact specialist candidate for charts, visual math and GUI element grounding.
+    confidence: low
+    supporting_evidence_ids:
+    - src-91f835e2db28
+    - src-96b521869e71
+    contradictory_evidence_ids:
+    - src-96b521869e71
+    conditions:
+    - English-focused; selective thinking can save compute but benchmark all required task types.
+    known_failure_modes:
+    - 16k window; hallucination/visual reasoning limitations; independent matched evaluation not verified.
+    evidence_notes: []
+- judgment_id: judgment-733be35f32bab45e
+  model_id: minimax-m3
+  profile: models/minimax/minimax-m3/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: multimodal-long-context-work
+    judgment: A candidate for cost-sensitive image/video coding and work agents; compare using the >512k price
+      band when relevant.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-06645d3950f1
+    - src-418bc9a9adc1
+    - src-40c9ce9b4812
+    contradictory_evidence_ids: []
+    conditions:
+    - Thinking can be enabled, adaptive or disabled; paid hosting terms are separate from weight license.
+    known_failure_modes:
+    - Long-context requests cost more; reported attention speedups are creator comparisons against M2, not
+      universal application speedups.
+    evidence_notes: []
+- judgment_id: judgment-c9e6063835fd4526
+  model_id: devstral-small-2
+  profile: models/mistral-ai/devstral-small-2/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: direct
+  original:
+    task: local-coding-agent
+    judgment: A sensible local SWE candidate with image input and Apache terms.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-fd9a0c74ec31
+    - src-1f59cd499805
+    contradictory_evidence_ids: []
+    conditions:
+    - Use tested scaffold/tool parser; code changes still need tests and review.
+    known_failure_modes:
+    - Creator reports 68% SWE-bench Verified but only 22.5% Terminal Bench2; task breadth is uneven.
+    evidence_notes: []
+- judgment_id: judgment-dada3e5e7dd7f855
+  model_id: ministral-3-8b
+  profile: models/mistral-ai/ministral-3-8b/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: edge-multilingual-chat
+    judgment: Practical candidate for bounded local chat, extraction and image description.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-e37726fea976
+    - src-a6a9e3d9e616
+    contradictory_evidence_ids:
+    - src-a6a9e3d9e616
+    conditions:
+    - Choose the Instruct versus separate Reasoning checkpoint deliberately.
+    known_failure_modes:
+    - Complex autonomous planning and reasoning remain weaker; full 256k context can exceed edge memory.
+    evidence_notes: []
+- judgment_id: judgment-98414fc2b50374ec
+  model_id: mistral-large-3
+  profile: models/mistral-ai/mistral-large-3/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: direct
+  original:
+    task: non-reasoning-multilingual-rag
+    judgment: A permissively licensed non-thinking option for enterprise document/chat pipelines with datacenter
+      resources.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-f249e65005c1
+    - src-e5d72ab8d32b
+    contradictory_evidence_ids:
+    - src-e5d72ab8d32b
+    conditions:
+    - Keep tool schemas bounded and validate image aspect-ratio handling.
+    known_failure_modes:
+    - Card explicitly notes weaker strict reasoning than reasoning specialists and weaker vision than vision-first
+      models.
+    evidence_notes: []
+- judgment_id: judgment-85878a81f8d11b0d
+  model_id: mistral-medium-3-5
+  profile: models/mistral-ai/mistral-medium-3-5/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: unified-reasoning-coding
+    judgment: Current Mistral candidate when one model must combine image input, coding and selectable reasoning.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-79280a1db5da
+    - src-d2d60d683099
+    contradictory_evidence_ids: []
+    conditions:
+    - Verify license eligibility and corrected long-context configuration.
+    known_failure_modes:
+    - Official card warns early Transformers config and GGUF conversions from it degrade long-context performance.
+    evidence_notes: []
+- judgment_id: judgment-c17556d4544c4c48
+  model_id: mistral-small-4
+  profile: models/mistral-ai/mistral-small-4/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: latency-sensitive-enterprise-assistant
+    judgment: Useful candidate for concise multilingual extraction, tool use and mixed chat/reasoning.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-dcba779ffa90
+    - src-1cea80c18ff6
+    contradictory_evidence_ids: []
+    conditions:
+    - Toggle none/high reasoning per request and compare end-to-end success.
+    known_failure_modes:
+    - Creator broad best-in-class claims are not established by independent task-matched evidence; quantization
+      and cache memory matter.
+    evidence_notes: []
+- judgment_id: judgment-ce599538fb19f653
+  model_id: kimi-k3
+  profile: models/moonshot-ai/kimi-k3/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: long-horizon-multimodal-agents
+    judgment: Strong candidate for large-scale visual coding and tool-based knowledge work if cost and license
+      are acceptable.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-e7129e9021b6
+    - src-5d65f998595a
+    contradictory_evidence_ids: []
+    conditions:
+    - Thinking is always on; preserve complete returned assistant messages including reasoning and tool fields.
+    known_failure_modes:
+    - Harness-dependent benchmark results; visual tasks still fail; preserving long histories increases costs.
+    evidence_notes: []
+- judgment_id: judgment-dfd880eb4d1991c5
+  model_id: nemotron-3-ultra
+  profile: models/nvidia/nemotron-3-ultra/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: performance
+  original:
+    task: high-throughput-text-agents
+    judgment: A strong deployment candidate for low-latency text agents on suitable NVIDIA infrastructure.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-c5a0afc263f8
+    - src-9950acce03ed
+    contradictory_evidence_ids:
+    - src-9950acce03ed
+    conditions:
+    - NVFP4 and runtime support are material; distinguish prerelease service speed from local hardware.
+    known_failure_modes:
+    - High-end math/physics reasoning still weak on some tasks; no native vision input.
+    evidence_notes: []
+- judgment_id: judgment-7d037d39575a5ff8
+  model_id: gpt-6-1-sol
+  profile: models/openai/gpt-6-1-sol/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: coding-and-document-reasoning-at-constrained-spend
+    judgment: Useful first comparison against Astra for routine complex work.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-fafcf655e0d8
+    contradictory_evidence_ids: []
+    conditions:
+    - Same named max effort; harness and token usage differ across models.
+    known_failure_modes:
+    - Lower SciCode and AA-LCR results than GPT-6 Sol in the cited max-effort comparison.
+    evidence_notes:
+    - 'supporting evidence: AA max: Terminal-Bench4.0 rises44% to56% versus GPT-6 Sol; GDP.pdf25% to31%.'
+    - 'contradictory evidence: SciCode declines58% to54%; AA-LCR84% to83%. Newer is not better on every task.'
+    - 'Observation obs-e5d2a15ea501: Useful first comparison against Astra for routine complex work.'
+    - 'Potential risk (not a measured failure): Long-context misses and task-specific coding regressions.'
+- judgment_id: judgment-6485858c395995b9
+  model_id: gpt-6-1-sol
+  profile: models/openai/gpt-6-1-sol/profile.yaml
+  original_position: 1
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: factual-answers-and-tool-backed-research
+    judgment: Improved but requires checking sources and tool failures.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-f2dca02215ef
+    contradictory_evidence_ids: []
+    conditions:
+    - Use current retrieval for changing facts.
+    known_failure_modes:
+    - Vendor selected error-inducing prompts still produce factual errors; this is not typical-use prevalence.
+    evidence_notes:
+    - 'supporting evidence: OpenAI difficult-prompt factual error rate:7.7% versus11.4% for GPT-6 Sol at low
+      effort.'
+    - 'contradictory evidence: This is a selected error-inducing set, not ordinary-use prevalence.'
+    - 'Observation obs-c5c416a3125b: Improved but requires checking sources and tool failures.'
+    - 'Potential risk (not a measured failure): Undisclosed search failure remains possible; fabricated certainty.'
+- judgment_id: judgment-fbf53a2171375503
+  model_id: gpt-6-astra
+  profile: models/openai/gpt-6-astra/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: complex-coding-and-computer-workflows
+    judgment: Strong candidate when difficult end-to-end work justifies latency and token cost.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-97b73e99f5cd
+    - src-ea74e2fffbc5
+    contradictory_evidence_ids: []
+    conditions:
+    - AA harness/version and reasoning effort are material; these are not success probabilities for an arbitrary
+      user task.
+    known_failure_modes:
+    - AA terminal tasks still fail at high and max effort; OpenAI documents legitimate work being interrupted
+      by safety monitoring.
+    evidence_notes:
+    - 'supporting evidence: AA Terminal-Bench4.0: high54%, max59%; AutomationBench-AA high67%, max68%.'
+    - 'contradictory evidence: Higher effort is not uniformly better: AA-Omniscience high44 versus max43; GDP.pdf31%
+      for both.'
+    - 'Observation obs-a91fd388dc88: Strong candidate when difficult end-to-end work justifies latency and
+      token cost.'
+    - 'Potential risk (not a measured failure): Incorrect or out-of-scope actions remain possible; production
+      safety monitors can stop legitimate work.'
+- judgment_id: judgment-4e7af644a89ef0a9
+  model_id: gpt-6-astra
+  profile: models/openai/gpt-6-astra/profile.yaml
+  original_position: 1
+  original_collection: capabilities
+  classification: direct
+  original:
+    task: scientific-research
+    judgment: A strong escalation model for hard scientific workflows.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-f2dca02215ef
+    contradictory_evidence_ids: []
+    conditions:
+    - Maximum effort; tool-enabled scientific terminal workflow.
+    known_failure_modes: []
+    evidence_notes:
+    - 'supporting evidence: OpenAI reports68.1% on Terminal-Bench Science0.1 in the Sol comparison.'
+    - 'contradictory evidence: Substantial residual failures; vendor-run setting and benchmark version affect
+      results.'
+    - 'Observation obs-8eab532ce0f9: A strong escalation model for hard scientific workflows.'
+    - 'Potential risk (not a measured failure): Confident wrong derivations or incomplete experiments require
+      independent verification.'
+- judgment_id: judgment-0c281701a4185869
+  model_id: gpt-6-luna
+  profile: models/openai/gpt-6-luna/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: unresolved
+  original:
+    task: focused-high-volume-tasks
+    judgment: Good low-token-price option for bounded, validated subtasks.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-ffef271f5600
+    - src-608eb672ebb7
+    contradictory_evidence_ids: []
+    conditions:
+    - Reasoning settings and harness matter; DeepSWE and Terminal-Bench are different tests.
+    known_failure_modes:
+    - Only13% all-tests-pass on cited AA Terminal-Bench4.0 at max effort.
+    evidence_notes:
+    - 'supporting evidence: AA max AA-LCR83%; vendor DeepSWE66.6% in its own setup.'
+    - 'contradictory evidence: AA max Terminal-Bench4.0 only13%, GDP.pdf23%; narrower competence than price
+      marketing suggests.'
+    - 'Observation obs-18449a135e8c: Good low-token-price option for bounded, validated subtasks.'
+    - 'Potential risk (not a measured failure): Brittle long-horizon work; weak factual calibration; use deterministic
+      checks.'
+- judgment_id: judgment-399c0b738f152d10
+  model_id: gpt-image-2-5-flare
+  profile: models/openai/gpt-image-2-5-flare/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: direct
+  original:
+    task: everyday-image-generation
+    judgment: Latency-oriented image generation choice.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-259c8fd88c0f
+    - src-cee7a5257e77
+    - src-285d61f371cf
+    contradictory_evidence_ids: []
+    conditions:
+    - Quality, resolution, reference images and retries change consumption.
+    known_failure_modes: []
+    evidence_notes:
+    - 'supporting evidence: Vendor positions Sunburst for finer editing control and Flare for faster generation.'
+    - 'contradictory evidence: No independent model-specific head-to-head recovered in this bounded pass; equal
+      token prices do not imply equal cost per image.'
+    - 'Observation obs-144443616836: Latency-oriented image generation choice.'
+    - 'Potential risk (not a measured failure): Inspect text, local edits and identity consistency; these checks
+      are prudent risk controls, not measured failure rates.'
+- judgment_id: judgment-5ae64605b3a4b23e
+  model_id: gpt-image-2-5-sunburst
+  profile: models/openai/gpt-image-2-5-sunburst/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: direct
+  original:
+    task: image-editing
+    judgment: Precision-oriented editing choice.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-259c8fd88c0f
+    - src-1a9fcf8d6701
+    - src-285d61f371cf
+    contradictory_evidence_ids: []
+    conditions:
+    - Quality, resolution, reference images and retries change consumption.
+    known_failure_modes: []
+    evidence_notes:
+    - 'supporting evidence: Vendor positions Sunburst for finer editing control and Flare for faster generation.'
+    - 'contradictory evidence: No independent model-specific head-to-head recovered in this bounded pass; equal
+      token prices do not imply equal cost per image.'
+    - 'Observation obs-b01421e4dbca: Precision-oriented editing choice.'
+    - 'Potential risk (not a measured failure): Inspect text, local edits and identity consistency; these checks
+      are prudent risk controls, not measured failure rates.'
+- judgment_id: judgment-cc90e4fddce2d650
+  model_id: gpt-live-1
+  profile: models/openai/gpt-live-1/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: direct
+  original:
+    task: natural-simultaneous-listening-and-speaking
+    judgment: Use for conversational flow with a separately configured reasoning backend.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-84d1a7712d6a
+    - src-c84f0489248c
+    contradictory_evidence_ids: []
+    conditions:
+    - Total cost includes both session duration and backend calls.
+    known_failure_modes: []
+    evidence_notes:
+    - 'supporting evidence: Official full-duplex design supports overlapping listen/speak and backend delegation.'
+    - 'contradictory evidence: Strong reasoning may come from the backend, not this voice model; no independent
+      task evaluation recovered.'
+    - 'Observation obs-4797f27441f5: Use for conversational flow with a separately configured reasoning backend.'
+    - 'Potential risk (not a measured failure): Noise, interruptions and backend failure can still impair interaction;
+      exact accuracy unknown.'
+- judgment_id: judgment-f8a05ea09b9472ae
+  model_id: gpt-oss-120b
+  profile: models/openai/gpt-oss-120b/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: unresolved
+  original:
+    task: local-private-text-reasoning-and-adaptation
+    judgment: Consider for self-hosting and customization; modern frontier agent equivalence is unsupported.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-f85326ed9ab1
+    - src-06e7619eb6a4
+    - src-6d85ece3b497
+    contradictory_evidence_ids: []
+    conditions:
+    - Harmony formatting required; hosted provider quantization/output caps may differ from native weights.
+    known_failure_modes:
+    - Cited high-effort service scores0% on Terminal-Bench4.0 and AutomationBench-AA.
+    evidence_notes:
+    - 'supporting evidence: Open weights with disclosed MoE design and commercially permissive license; deployment
+      guidance fits80GB memory.'
+    - 'contradictory evidence: AA high: Terminal-Bench4.0 and AutomationBench-AA both0%; AA-LCR52%. Older launch
+      benchmarks target different capabilities.'
+    - 'Observation obs-c3ae88e5cf4d: Consider for self-hosting and customization; modern frontier agent equivalence
+      is unsupported.'
+    - 'Potential risk (not a measured failure): Long-horizon failure, hallucination and language weakness;
+      self-hosting does not add missing vision/audio.'
+- judgment_id: judgment-0606c9a07a405395
+  model_id: gpt-oss-20b
+  profile: models/openai/gpt-oss-20b/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: unresolved
+  original:
+    task: local-private-text-reasoning-and-adaptation
+    judgment: Consider for self-hosting and customization; modern frontier agent equivalence is unsupported.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-4fb7165743ee
+    - src-06e7619eb6a4
+    - src-6d85ece3b497
+    contradictory_evidence_ids: []
+    conditions:
+    - Harmony formatting required; hosted provider quantization/output caps may differ from native weights.
+    known_failure_modes:
+    - Cited high-effort service scores0% on Terminal-Bench4.0 and AutomationBench-AA.
+    evidence_notes:
+    - 'supporting evidence: Open weights with disclosed MoE design and commercially permissive license; deployment
+      guidance fits16GB memory.'
+    - 'contradictory evidence: AA high: Terminal-Bench4.0 and AutomationBench-AA both0%; AA-LCR35%. Older launch
+      benchmarks target different capabilities.'
+    - 'Observation obs-30265198a1a8: Consider for self-hosting and customization; modern frontier agent equivalence
+      is unsupported.'
+    - 'Potential risk (not a measured failure): Long-horizon failure, hallucination and language weakness;
+      self-hosting does not add missing vision/audio.'
+- judgment_id: judgment-cf3c0c86e40306ed
+  model_id: gpt-realtime-2-1
+  profile: models/openai/gpt-realtime-2-1/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: direct
+  original:
+    task: tool-using-speech-agents
+    judgment: Consider when reasoning and tools must operate in a realtime speech session.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-cf6a8843c8fd
+    contradictory_evidence_ids: []
+    conditions:
+    - Audio-token pricing cannot be compared directly with Live session-minute pricing.
+    known_failure_modes: []
+    evidence_notes:
+    - 'supporting evidence: Vendor documents stronger alphanumeric recognition, noise/silence and interruption
+      behavior over Realtime2.'
+    - 'contradictory evidence: No independent version-matched evidence recovered; higher reasoning effort increases
+      latency and output consumption.'
+    - 'Observation obs-d95f95883e10: Consider when reasoning and tools must operate in a realtime speech session.'
+    - 'Potential risk (not a measured failure): Recognition errors in identifiers; latency-sensitive turn-taking;
+      tool error recovery.'
+- judgment_id: judgment-445f99a05ebe5177
+  model_id: xai-grok-4-7
+  profile: models/xai-spacexai/xai-grok-4-7/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: agentic-coding-and-knowledge-workflows
+    judgment: Credible candidate; medium confidence for task-fit. AA's xhigh snapshot improves Terminal-Bench
+      4.0 from 21% (4.6 high) to 26%, but costs roughly twice per evaluated task.
+    confidence: medium
+    supporting_evidence_ids:
+    - obs-281c2bae7ad0
+    contradictory_evidence_ids: []
+    conditions:
+    - Grok4.7 xhigh vs Grok4.6 high, first-party API
+    known_failure_modes: []
+    evidence_notes:
+    - 'Observation obs-281c2bae7ad0: AA Intelligence Index v4.3.2 and component tasks'
+- judgment_id: judgment-4353bef7f2c69a6b
+  model_id: xai-grok-4-7
+  profile: models/xai-spacexai/xai-grok-4-7/profile.yaml
+  original_position: 1
+  original_collection: capabilities
+  classification: performance
+  original:
+    task: low-latency-assistance
+    judgment: Not a latency-first default at high reasoning effort; evaluate low effort or alternatives.
+    confidence: medium
+    supporting_evidence_ids:
+    - obs-281c2bae7ad0
+    contradictory_evidence_ids: []
+    conditions:
+    - Grok4.7 xhigh vs Grok4.6 high, first-party API
+    known_failure_modes: []
+    evidence_notes:
+    - 'Observation obs-281c2bae7ad0: AA Intelligence Index v4.3.2 and component tasks'
+- judgment_id: judgment-8d9ae7f7de890d41
+  model_id: xai-grok-4-7
+  profile: models/xai-spacexai/xai-grok-4-7/profile.yaml
+  original_position: 0
+  original_collection: performance_characteristics
+  classification: performance
+  original:
+    task: measured-generation-behavior
+    judgment: 'AA Intelligence Index v4.3.2 and component tasks Measurements: {"output_tokens_per_task": [81000,
+      36000]}. These describe the cited benchmark configuration only.'
+    confidence: medium
+    supporting_evidence_ids:
+    - obs-281c2bae7ad0
+    contradictory_evidence_ids: []
+    conditions:
+    - Grok4.7 xhigh vs Grok4.6 high, first-party API
+    known_failure_modes: []
+    evidence_notes:
+    - Different reasoning settings; broad quality gain is not across every task. Benchmark cost reflects its
+      workload and cannot price user tasks.
+- judgment_id: judgment-7617cc55522b828a
+  model_id: glm-5-3
+  profile: models/z-ai-zhipu-ai/glm-5-3/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: long-horizon-text-coding
+    judgment: Strong candidate for coding agents and text-based knowledge work with sufficient serving resources.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-4424584ee706
+    - src-26ed078844ac
+    contradictory_evidence_ids: []
+    conditions:
+    - Preserve reasoning/template semantics; compare max effort using complete-task budgets.
+    known_failure_modes:
+    - Creator evaluations alter some anti-cheat checks and harnesses; cyber/terminal strengths do not establish
+      visual capability.
+    evidence_notes: []
+- judgment_id: judgment-df9e1cacb62e57ae
+  model_id: glm-5-3-flash
+  profile: models/z-ai-zhipu-ai/glm-5-3-flash/profile.yaml
+  original_position: 0
+  original_collection: capabilities
+  classification: compound
+  original:
+    task: cost-constrained-multimodal-agents
+    judgment: Useful candidate where image-capable agents, MIT terms and lower token prices matter.
+    confidence: medium
+    supporting_evidence_ids:
+    - src-5302786105ea
+    - src-b02205ef3bed
+    - src-667e800254a1
+    contradictory_evidence_ids: []
+    conditions:
+    - Exact hosted vs local runtime multimodal adapters differ; profile full task latency.
+    known_failure_modes:
+    - Verbose reasoning and measured 53 tokens/sec can dominate latency; no guarantee of flagship GLM5.3 task
+      parity.
+    evidence_notes: []

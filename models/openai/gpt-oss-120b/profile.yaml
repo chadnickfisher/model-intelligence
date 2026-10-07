@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: gpt-oss-120b
 verified_at: '2026-10-06'
 identity:
@@ -16,8 +16,8 @@ specifications:
     value: Mixture-of-experts Transformer; alternating dense/local sparse attention; grouped-query attention;
       RoPE
     status: documented
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-1b711f47aa6a
     - src-f85326ed9ab1
     - src-06e7619eb6a4
@@ -27,18 +27,30 @@ specifications:
       total: 117000000000
       active: 5100000000
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1b711f47aa6a
+    - src-f85326ed9ab1
+    - src-06e7619eb6a4
+    - src-6d85ece3b497
   context_window:
     value: 131072
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1b711f47aa6a
+    - src-f85326ed9ab1
+    - src-06e7619eb6a4
+    - src-6d85ece3b497
   maximum_output:
     value: 131072
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1b711f47aa6a
+    - src-f85326ed9ab1
+    - src-06e7619eb6a4
+    - src-6d85ece3b497
   modalities:
     value:
       input:
@@ -46,52 +58,88 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1b711f47aa6a
+    - src-f85326ed9ab1
+    - src-06e7619eb6a4
+    - src-6d85ece3b497
   language_support:
     value: Mostly English training; multilingual quality varies
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1b711f47aa6a
+    - src-f85326ed9ab1
+    - src-06e7619eb6a4
+    - src-6d85ece3b497
 additional_specifications:
   knowledge_cutoff:
     value: '2024-06-01'
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1b711f47aa6a
+    - src-f85326ed9ab1
+    - src-06e7619eb6a4
+    - src-6d85ece3b497
   weights:
     value: open
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1b711f47aa6a
+    - src-f85326ed9ab1
+    - src-06e7619eb6a4
+    - src-6d85ece3b497
   layers:
     value: 36
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1b711f47aa6a
+    - src-f85326ed9ab1
+    - src-06e7619eb6a4
+    - src-6d85ece3b497
   total_experts:
     value: 128
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1b711f47aa6a
+    - src-f85326ed9ab1
+    - src-06e7619eb6a4
+    - src-6d85ece3b497
   active_experts_per_token:
     value: 4
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1b711f47aa6a
+    - src-f85326ed9ab1
+    - src-06e7619eb6a4
+    - src-6d85ece3b497
   reasoning_efforts:
     value:
     - low
     - medium
     - high
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1b711f47aa6a
+    - src-f85326ed9ab1
+    - src-06e7619eb6a4
+    - src-6d85ece3b497
   reference_memory_gb:
     value: 80
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-1b711f47aa6a
+    - src-f85326ed9ab1
+    - src-06e7619eb6a4
+    - src-6d85ece3b497
 licensing:
   name: Apache-2.0
   commercial_use: null
@@ -99,15 +147,30 @@ licensing:
   fine_tuning: null
   hosted_service: null
   restrictions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-1b711f47aa6a
+  - src-f85326ed9ab1
+  - src-06e7619eb6a4
+  - src-6d85ece3b497
 local_inference:
   availability: available
   hardware_notes:
   - 'Published reference memory: 80 GB; runtime/context overhead and configuration must be checked.'
   conditions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-1b711f47aa6a
+  - src-f85326ed9ab1
+  - src-06e7619eb6a4
+  - src-6d85ece3b497
 capabilities:
-- task: local-private-text-reasoning-and-adaptation
+- id: judgment-f8a05ea09b9472ae
+  scope: unresolved
+  task_ids: []
+  related_task_ids:
+  - reasoning.general
+  - agent.long_horizon
+  assessment: conditional
+  scope_note: Scope needs review; the original claim does not establish a specific task ability.
   judgment: Consider for self-hosting and customization; modern frontier agent equivalence is unsupported.
   confidence: medium
   supporting_evidence_ids:
@@ -128,6 +191,14 @@ capabilities:
     is unsupported.'
   - 'Potential risk (not a measured failure): Long-horizon failure, hallucination and language weakness; self-hosting
     does not add missing vision/audio.'
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: local-private-text-reasoning-and-adaptation
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-proprietary-access-26
@@ -139,7 +210,11 @@ price_ids:
 - price-providers-gpt-oss-120b-together-4cacbb083b92
 - price-providers-gpt-oss-120b-groq-d03d282ce7d7
 - price-providers-gpt-oss-120b-cerebras-26391efc6d01
-evidence_ids: *id002
+evidence_ids:
+- src-1b711f47aa6a
+- src-f85326ed9ab1
+- src-06e7619eb6a4
+- src-6d85ece3b497
 notes: []
 limitations:
 - Deployment-specific latency, maximum usable context and total RAM depend on quantization/runtime/KV cache

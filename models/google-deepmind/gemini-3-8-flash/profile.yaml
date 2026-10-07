@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: gemini-3-8-flash
 verified_at: '2026-10-06'
 identity:
@@ -18,8 +18,8 @@ specifications:
   architecture:
     value: null
     status: unknown
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-c4c7ba8fda18
     - src-10e39629c3d3
     - src-116c1a7f3be0
@@ -27,19 +27,24 @@ specifications:
   parameters:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-c4c7ba8fda18
+    - src-10e39629c3d3
+    - src-116c1a7f3be0
+    - src-a24fd97eb3d0
   context_window:
     value: 1048576
     status: documented
-    conditions: *id001
-    evidence_ids: &id003
+    conditions: []
+    evidence_ids:
     - src-116c1a7f3be0
   maximum_output:
     value: 65536
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-116c1a7f3be0
   modalities:
     value:
       input:
@@ -51,13 +56,18 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-116c1a7f3be0
   language_support:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-c4c7ba8fda18
+    - src-10e39629c3d3
+    - src-116c1a7f3be0
+    - src-a24fd97eb3d0
 additional_specifications:
   knowledge_cutoff:
     value:
@@ -66,8 +76,12 @@ additional_specifications:
       evidence_ids:
       - src-c4c7ba8fda18
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-c4c7ba8fda18
+    - src-10e39629c3d3
+    - src-116c1a7f3be0
+    - src-a24fd97eb3d0
   configuration:
     value:
       thinking_levels:
@@ -82,8 +96,12 @@ additional_specifications:
       - priority
       note: Effort and service tiers are configurations, not additional models.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-c4c7ba8fda18
+    - src-10e39629c3d3
+    - src-116c1a7f3be0
+    - src-a24fd97eb3d0
   api_quota:
     value:
       rpm: null
@@ -93,33 +111,57 @@ additional_specifications:
       evidence_ids:
       - src-10e39629c3d3
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-c4c7ba8fda18
+    - src-10e39629c3d3
+    - src-116c1a7f3be0
+    - src-a24fd97eb3d0
   canonical_endpoint:
     value: gemini-3.8-flash
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-c4c7ba8fda18
+    - src-10e39629c3d3
+    - src-116c1a7f3be0
+    - src-a24fd97eb3d0
   context_limit_scope:
     value: Exact Gemini Developer API input limit
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-c4c7ba8fda18
+    - src-10e39629c3d3
+    - src-116c1a7f3be0
+    - src-a24fd97eb3d0
   release_date_scope:
     value: API endpoint release
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-c4c7ba8fda18
+    - src-10e39629c3d3
+    - src-116c1a7f3be0
+    - src-a24fd97eb3d0
   language_list_complete:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-c4c7ba8fda18
+    - src-10e39629c3d3
+    - src-116c1a7f3be0
+    - src-a24fd97eb3d0
   parameter_disclosure:
     value: not disclosed in fetched public sources
     status: documented
     conditions: []
-    evidence_ids: *id002
+    evidence_ids:
+    - src-c4c7ba8fda18
+    - src-10e39629c3d3
+    - src-116c1a7f3be0
+    - src-a24fd97eb3d0
 licensing:
   name: null
   commercial_use: null
@@ -127,14 +169,29 @@ licensing:
   fine_tuning: null
   hosted_service: null
   restrictions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-c4c7ba8fda18
+  - src-10e39629c3d3
+  - src-116c1a7f3be0
+  - src-a24fd97eb3d0
 local_inference:
   availability: unavailable
   hardware_notes: []
   conditions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-c4c7ba8fda18
+  - src-10e39629c3d3
+  - src-116c1a7f3be0
+  - src-a24fd97eb3d0
 capabilities:
-- task: fast-multimodal-assistant-and-bounded-coding-tasks
+- id: judgment-262c08414297adcf
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - vision.question_answering
+  - coding.scoped_edit
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Strong candidate when throughput matters and outputs can be tested.
   confidence: medium
   supporting_evidence_ids:
@@ -157,7 +214,21 @@ capabilities:
   - 'Observation obs-a6b7a76a516c: Supports demanding visual/scientific question answering in independent evaluation.'
   - 'Observation obs-623d3b669e5c: Provider discloses hallucinations, occasional timeouts, and increased tokens
     at higher effort; multilingual safety regressed versus 3.7.'
-- task: unsupervised-long-horizon-terminal-execution
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: fast-multimodal-assistant-and-bounded-coding-tasks
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-46e287976a5cc041
+  scope: direct
+  task_ids:
+  - agent.long_horizon
+  related_task_ids: []
+  assessment: conditional
+  scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: Conditional; use tests and checkpointing rather than assuming benchmark coding strength transfers.
   confidence: medium
   supporting_evidence_ids:
@@ -174,8 +245,21 @@ capabilities:
     terminal work.'
   - 'Observation obs-623d3b669e5c: Provider discloses hallucinations, occasional timeouts, and increased tokens
     at higher effort; multilingual safety regressed versus 3.7.'
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: unsupervised-long-horizon-terminal-execution
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 1
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics:
-- task: measured-generation-behavior
+- id: judgment-4d183583f2850a0e
+  scope: performance
+  task_ids: []
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Cost, deployment or throughput observation; not a task capability.
   judgment: 'Fast streamed decoding in the observed benchmark service. Measurements: {"output_tokens_per_second":
     241.9}. These describe the cited benchmark configuration only.'
   confidence: medium
@@ -187,6 +271,14 @@ performance_characteristics:
   known_failure_modes: []
   evidence_notes:
   - Excludes time to first token and tool-loop overhead; not an SLA.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: measured-generation-behavior
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 access_ids:
 - access-proprietary-33
 - access-proprietary-33-google-ai-studio
@@ -196,7 +288,11 @@ price_ids:
 - price-proprietary-gemini-3-8-flash-google-developer-api-15580e4c6b8b
 - price-proprietary-gemini-3-8-flash-google-developer-api-f9f44895e35b
 - price-proprietary-gemini-3-8-flash-google-developer-api-1bad64d36c74
-evidence_ids: *id002
+evidence_ids:
+- src-c4c7ba8fda18
+- src-10e39629c3d3
+- src-116c1a7f3be0
+- src-a24fd97eb3d0
 notes: []
 limitations:
 - Full language coverage list

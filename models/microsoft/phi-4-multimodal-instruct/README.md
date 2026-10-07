@@ -11,6 +11,14 @@
 
 Multimodal adds image and audio input to a small text-output model.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): audio.understanding; vision.question_answering
+
+Judgment ID: judgment-43dd1128b74944f9
+
 Conditions: Use supported modality adapters; it does not generate audio.
 
 Failure modes / limitations: Speech-language coverage differs from text; long-session drift and misleading sensitive voice-attribute inferences.

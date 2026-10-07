@@ -11,6 +11,14 @@
 
 Useful specialist option; test Omni too for new general video workflows.
 
+Scope: direct / conditional. One task reference; conclusion remains conditional, not an ability score.
+
+Direct task IDs: video.generation
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-f36c958097d5b875
+
 Conditions: Not established in this pass
 
 Failure modes / limitations: Not established in this pass
@@ -20,6 +28,28 @@ Supporting sources: [Veo generation guide](https://ai.google.dev/gemini-api/docs
 Contradictory or limiting sources: [Veo generation guide](https://ai.google.dev/gemini-api/docs/veo) · [Video generation overview](https://ai.google.dev/gemini-api/docs/video)
 
 Evidence notes: task-conditioned synthesis; no inference runs performed; Observation obs-a1dcd03b9809: Native audio, frame controls, reference images and extension fit directed short cinematic shots.; Observation obs-7d1f6921bea0: Multi-video reasoning unsupported; non-English unevaluated; audio processing/safety blocks and variable latency occur.; Observation obs-6dfa41ffcfec: Google now recommends Omni as default video option, reserving Veo for particular controls/legacy integration.
+
+### Measured generation behavior (medium confidence)
+
+Multi-video reasoning unsupported; non-English unevaluated; audio processing/safety blocks and variable latency occur. Measurements: {"published_latency_min_seconds": 11, "published_latency_max_seconds": 360}. These describe the cited benchmark configuration only.
+
+Scope: performance / conditional. Cost, deployment or throughput observation; not a task capability.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-8e62e348ffe18201
+
+Conditions: Not established in this pass
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Veo generation guide](https://ai.google.dev/gemini-api/docs/veo)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Published range during peak periods, not independently measured or guaranteed.
 
 ## Specifications
 

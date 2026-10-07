@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: claude-haiku-4-5
 verified_at: '2026-10-06'
 identity:
@@ -15,8 +15,8 @@ specifications:
   architecture:
     value: null
     status: unknown
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-e1910c5126bc
     - src-f3655eaf1407
     - src-e99bd76836c1
@@ -24,18 +24,30 @@ specifications:
   parameters:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-e1910c5126bc
+    - src-f3655eaf1407
+    - src-e99bd76836c1
+    - src-5c510b458547
   context_window:
     value: 200000
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-e1910c5126bc
+    - src-f3655eaf1407
+    - src-e99bd76836c1
+    - src-5c510b458547
   maximum_output:
     value: 64000
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-e1910c5126bc
+    - src-f3655eaf1407
+    - src-e99bd76836c1
+    - src-5c510b458547
   modalities:
     value:
       input:
@@ -44,60 +56,104 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-e1910c5126bc
+    - src-f3655eaf1407
+    - src-e99bd76836c1
+    - src-5c510b458547
   language_support:
     value: Multilingual; exact inventory not specified
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-e1910c5126bc
+    - src-f3655eaf1407
+    - src-e99bd76836c1
+    - src-5c510b458547
 additional_specifications:
   knowledge_cutoff:
     value: 2025-02
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-e1910c5126bc
+    - src-f3655eaf1407
+    - src-e99bd76836c1
+    - src-5c510b458547
   weights:
     value: closed
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-e1910c5126bc
+    - src-f3655eaf1407
+    - src-e99bd76836c1
+    - src-5c510b458547
   thinking:
     value: manual extended thinking
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-e1910c5126bc
+    - src-f3655eaf1407
+    - src-e99bd76836c1
+    - src-5c510b458547
   default_api_effort:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-e1910c5126bc
+    - src-f3655eaf1407
+    - src-e99bd76836c1
+    - src-5c510b458547
   api_id:
     value: claude-haiku-4-5-20251001
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-e1910c5126bc
+    - src-f3655eaf1407
+    - src-e99bd76836c1
+    - src-5c510b458547
   training_cutoff:
     value: 2025-07
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-e1910c5126bc
+    - src-f3655eaf1407
+    - src-e99bd76836c1
+    - src-5c510b458547
   earliest_retirement_date:
     value: '2026-10-15'
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-e1910c5126bc
+    - src-f3655eaf1407
+    - src-e99bd76836c1
+    - src-5c510b458547
   restrictions:
     value:
     - Manual extended-thinking budget; adaptive effort parameter unsupported.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-e1910c5126bc
+    - src-f3655eaf1407
+    - src-e99bd76836c1
+    - src-5c510b458547
   retirement_note:
     value: Earliest allowed retirement is not an announced shutdown.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-e1910c5126bc
+    - src-f3655eaf1407
+    - src-e99bd76836c1
+    - src-5c510b458547
 licensing:
   name: null
   commercial_use: null
@@ -105,14 +161,29 @@ licensing:
   fine_tuning: null
   hosted_service: null
   restrictions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-e1910c5126bc
+  - src-f3655eaf1407
+  - src-e99bd76836c1
+  - src-5c510b458547
 local_inference:
   availability: unavailable
   hardware_notes: []
   conditions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-e1910c5126bc
+  - src-f3655eaf1407
+  - src-e99bd76836c1
+  - src-5c510b458547
 capabilities:
-- task: fast-bounded-coding-and-assistant-subtasks
+- id: judgment-86b4ad915dcef6a0
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - coding.scoped_edit
+  - language.instruction_following
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Useful responsive model when limited task scope and validation matter.
   confidence: medium
   supporting_evidence_ids:
@@ -130,6 +201,14 @@ capabilities:
     to2026 hardest work.'
   - 'Observation obs-ca2b56257797: Useful responsive model when limited task scope and validation matter.'
   - 'Potential risk (not a measured failure): Hard reasoning and long-context misses; weaker date freshness.'
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: fast-bounded-coding-and-assistant-subtasks
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-proprietary-access-20
@@ -142,7 +221,11 @@ access_ids:
 price_ids:
 - price-proprietary-claude-haiku-4-5-anthropic-92db4721bd09
 - price-proprietary-claude-haiku-4-5-anthropic-9448cb8b044e
-evidence_ids: *id002
+evidence_ids:
+- src-e1910c5126bc
+- src-f3655eaf1407
+- src-e99bd76836c1
+- src-5c510b458547
 notes: []
 limitations:
 - Undisclosed architecture and parameter count

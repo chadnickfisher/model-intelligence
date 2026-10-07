@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: gpt-6-1-sol
 verified_at: '2026-10-06'
 identity:
@@ -15,8 +15,8 @@ specifications:
   architecture:
     value: null
     status: unknown
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-5906a70e58c6
     - src-0e5ba6524c75
     - src-49e8d0577a5e
@@ -25,18 +25,33 @@ specifications:
   parameters:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-5906a70e58c6
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-fafcf655e0d8
+    - src-f2dca02215ef
   context_window:
     value: 1050000
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-5906a70e58c6
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-fafcf655e0d8
+    - src-f2dca02215ef
   maximum_output:
     value: 128000
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-5906a70e58c6
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-fafcf655e0d8
+    - src-f2dca02215ef
   modalities:
     value:
       input:
@@ -45,24 +60,44 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-5906a70e58c6
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-fafcf655e0d8
+    - src-f2dca02215ef
   language_support:
     value: Multilingual; exact inventory not specified
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-5906a70e58c6
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-fafcf655e0d8
+    - src-f2dca02215ef
 additional_specifications:
   knowledge_cutoff:
     value: '2026-04-30'
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-5906a70e58c6
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-fafcf655e0d8
+    - src-f2dca02215ef
   weights:
     value: closed
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-5906a70e58c6
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-fafcf655e0d8
+    - src-f2dca02215ef
   reasoning_efforts:
     value:
     - low
@@ -71,22 +106,37 @@ additional_specifications:
     - xhigh
     - max
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-5906a70e58c6
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-fafcf655e0d8
+    - src-f2dca02215ef
   tool_calling:
     value: Responses API; Sol/Astra Chat Completions does not support tools. Luna Chat Completions function
       calling requires none effort.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-5906a70e58c6
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-fafcf655e0d8
+    - src-f2dca02215ef
   restrictions:
     value:
     - none/minimal reasoning unsupported.
     - Chat Completions has no tool calling; use Responses.
     - Fast mode unavailable with EU data residency.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-5906a70e58c6
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-fafcf655e0d8
+    - src-f2dca02215ef
 licensing:
   name: null
   commercial_use: null
@@ -94,14 +144,31 @@ licensing:
   fine_tuning: null
   hosted_service: null
   restrictions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-5906a70e58c6
+  - src-0e5ba6524c75
+  - src-49e8d0577a5e
+  - src-fafcf655e0d8
+  - src-f2dca02215ef
 local_inference:
   availability: unavailable
   hardware_notes: []
   conditions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-5906a70e58c6
+  - src-0e5ba6524c75
+  - src-49e8d0577a5e
+  - src-fafcf655e0d8
+  - src-f2dca02215ef
 capabilities:
-- task: coding-and-document-reasoning-at-constrained-spend
+- id: judgment-7d037d39575a5ff8
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - coding.repository_work
+  - context.reasoning
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Useful first comparison against Astra for routine complex work.
   confidence: medium
   supporting_evidence_ids:
@@ -116,7 +183,22 @@ capabilities:
   - 'contradictory evidence: SciCode declines58% to54%; AA-LCR84% to83%. Newer is not better on every task.'
   - 'Observation obs-e5d2a15ea501: Useful first comparison against Astra for routine complex work.'
   - 'Potential risk (not a measured failure): Long-context misses and task-specific coding regressions.'
-- task: factual-answers-and-tool-backed-research
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: coding-and-document-reasoning-at-constrained-spend
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-6485858c395995b9
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - research.fact_check
+  - research.synthesis
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Improved but requires checking sources and tool failures.
   confidence: medium
   supporting_evidence_ids:
@@ -132,6 +214,14 @@ capabilities:
   - 'contradictory evidence: This is a selected error-inducing set, not ordinary-use prevalence.'
   - 'Observation obs-c5c416a3125b: Improved but requires checking sources and tool failures.'
   - 'Potential risk (not a measured failure): Undisclosed search failure remains possible; fabricated certainty.'
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: factual-answers-and-tool-backed-research
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 1
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-proprietary-access-1-1
@@ -145,7 +235,12 @@ price_ids:
 - price-proprietary-gpt-6-1-sol-openai-4aad5754e49e
 - price-proprietary-gpt-6-1-sol-openai-9819b7b75d61
 - price-proprietary-gpt-6-1-sol-openai-7809f5982047
-evidence_ids: *id002
+evidence_ids:
+- src-5906a70e58c6
+- src-0e5ba6524c75
+- src-49e8d0577a5e
+- src-fafcf655e0d8
+- src-f2dca02215ef
 notes: []
 limitations:
 - Undisclosed architecture and parameter count

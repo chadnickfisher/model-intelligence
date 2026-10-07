@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: gpt-6-astra
 verified_at: '2026-10-06'
 identity:
@@ -15,8 +15,8 @@ specifications:
   architecture:
     value: null
     status: unknown
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-67b4ce9b4e6a
     - src-0e5ba6524c75
     - src-49e8d0577a5e
@@ -26,18 +26,36 @@ specifications:
   parameters:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-67b4ce9b4e6a
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-97b73e99f5cd
+    - src-ea74e2fffbc5
+    - src-f2dca02215ef
   context_window:
     value: 1050000
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-67b4ce9b4e6a
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-97b73e99f5cd
+    - src-ea74e2fffbc5
+    - src-f2dca02215ef
   maximum_output:
     value: 128000
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-67b4ce9b4e6a
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-97b73e99f5cd
+    - src-ea74e2fffbc5
+    - src-f2dca02215ef
   modalities:
     value:
       input:
@@ -46,24 +64,48 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-67b4ce9b4e6a
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-97b73e99f5cd
+    - src-ea74e2fffbc5
+    - src-f2dca02215ef
   language_support:
     value: Multilingual; exact inventory not specified
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-67b4ce9b4e6a
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-97b73e99f5cd
+    - src-ea74e2fffbc5
+    - src-f2dca02215ef
 additional_specifications:
   knowledge_cutoff:
     value: '2026-04-30'
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-67b4ce9b4e6a
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-97b73e99f5cd
+    - src-ea74e2fffbc5
+    - src-f2dca02215ef
   weights:
     value: closed
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-67b4ce9b4e6a
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-97b73e99f5cd
+    - src-ea74e2fffbc5
+    - src-f2dca02215ef
   reasoning_efforts:
     value:
     - low
@@ -72,22 +114,40 @@ additional_specifications:
     - xhigh
     - max
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-67b4ce9b4e6a
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-97b73e99f5cd
+    - src-ea74e2fffbc5
+    - src-f2dca02215ef
   tool_calling:
     value: Responses API; Sol/Astra Chat Completions does not support tools. Luna Chat Completions function
       calling requires none effort.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-67b4ce9b4e6a
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-97b73e99f5cd
+    - src-ea74e2fffbc5
+    - src-f2dca02215ef
   restrictions:
     value:
     - No none effort; custom temperature/top_p/logprobs unsupported.
     - Tool calling requires Responses API.
     - Safety monitoring may stop API work for review.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-67b4ce9b4e6a
+    - src-0e5ba6524c75
+    - src-49e8d0577a5e
+    - src-97b73e99f5cd
+    - src-ea74e2fffbc5
+    - src-f2dca02215ef
 licensing:
   name: null
   commercial_use: null
@@ -95,14 +155,33 @@ licensing:
   fine_tuning: null
   hosted_service: null
   restrictions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-67b4ce9b4e6a
+  - src-0e5ba6524c75
+  - src-49e8d0577a5e
+  - src-97b73e99f5cd
+  - src-ea74e2fffbc5
+  - src-f2dca02215ef
 local_inference:
   availability: unavailable
   hardware_notes: []
   conditions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-67b4ce9b4e6a
+  - src-0e5ba6524c75
+  - src-49e8d0577a5e
+  - src-97b73e99f5cd
+  - src-ea74e2fffbc5
+  - src-f2dca02215ef
 capabilities:
-- task: complex-coding-and-computer-workflows
+- id: judgment-fbf53a2171375503
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - coding.repository_work
+  - agent.computer_use
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Strong candidate when difficult end-to-end work justifies latency and token cost.
   confidence: medium
   supporting_evidence_ids:
@@ -123,7 +202,21 @@ capabilities:
     cost.'
   - 'Potential risk (not a measured failure): Incorrect or out-of-scope actions remain possible; production
     safety monitors can stop legitimate work.'
-- task: scientific-research
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: complex-coding-and-computer-workflows
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-4e7af644a89ef0a9
+  scope: direct
+  task_ids:
+  - reasoning.scientific
+  related_task_ids: []
+  assessment: conditional
+  scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: A strong escalation model for hard scientific workflows.
   confidence: medium
   supporting_evidence_ids:
@@ -139,6 +232,14 @@ capabilities:
   - 'Observation obs-8eab532ce0f9: A strong escalation model for hard scientific workflows.'
   - 'Potential risk (not a measured failure): Confident wrong derivations or incomplete experiments require
     independent verification.'
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: scientific-research
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 1
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-proprietary-access-1-0
@@ -155,7 +256,13 @@ price_ids:
 - price-proprietary-gpt-6-astra-openai-e68876e21c23
 - price-proprietary-gpt-6-astra-openai-4a3725464c5e
 - price-proprietary-gpt-6-astra-openai-749a19560f3b
-evidence_ids: *id002
+evidence_ids:
+- src-67b4ce9b4e6a
+- src-0e5ba6524c75
+- src-49e8d0577a5e
+- src-97b73e99f5cd
+- src-ea74e2fffbc5
+- src-f2dca02215ef
 notes: []
 limitations:
 - Undisclosed architecture and parameter count

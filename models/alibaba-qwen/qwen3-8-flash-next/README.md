@@ -11,6 +11,14 @@
 
 Interesting for local tool-heavy workers when offloading and license terms fit.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): agent.tool_use; coding.repository_work
+
+Judgment ID: judgment-dfc392840f6a0569
+
 Conditions: Benchmark the exact quantized runtime; medium effort performed better than xhigh in one looping case.
 
 Failure modes / limitations: Runtime-specific grammar failures, thinking loops, CPU/SSD bottlenecks.
@@ -22,6 +30,14 @@ Contradictory or limiting sources: [Single-R9700 Qwen3.8 comparison](https://www
 ### Commercial coding assistant hosting (medium confidence)
 
 Do not assume permissive self-hosted commercial availability.
+
+Scope: performance / warning. Cost, deployment or throughput observation; not a task capability.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-89c7c704304def1d
 
 Conditions: Check whether business is MaaS or an independent coding/office assistant.
 

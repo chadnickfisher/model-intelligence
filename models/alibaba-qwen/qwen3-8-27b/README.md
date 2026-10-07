@@ -11,6 +11,14 @@
 
 A credible compact candidate for iterative code editing and image-grounded workflows.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): coding.scoped_edit; vision.question_answering
+
+Judgment ID: judgment-dadec61aa2e25c5d
+
 Conditions: Use supported thinking/template settings; compare medium and xhigh by whole-task cost.
 
 Failure modes / limitations: Dependent tool-call ordering failures and runtime grammar issues were reported in one local setup.
@@ -22,6 +30,14 @@ Contradictory or limiting sources: [Single-R9700 Qwen3.8 comparison](https://www
 ### Long context reasoning (low confidence)
 
 Treat million-token mode as an extension to validate, rather than a proven local operating point.
+
+Scope: unresolved / warning. Scope needs review; the original claim does not establish a specific task ability.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): context.reasoning
+
+Judgment ID: judgment-6db95607e291642c
 
 Conditions: Native 262,144; extension requires appropriate runtime configuration and memory.
 

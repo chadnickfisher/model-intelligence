@@ -11,6 +11,14 @@
 
 Well-matched interface; actual speech quality, turn taking and latency need task-specific verification.
 
+Scope: direct / conditional. One task reference; conclusion remains conditional, not an ability score.
+
+Direct task IDs: audio.conversation
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-6eac9d7c589429f2
+
 Conditions: Not established in this pass
 
 Failure modes / limitations: Not established in this pass

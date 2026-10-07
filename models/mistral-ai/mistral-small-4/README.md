@@ -11,6 +11,14 @@
 
 Useful candidate for concise multilingual extraction, tool use and mixed chat/reasoning.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): knowledge.extraction; agent.tool_use; language.multilingual_chat
+
+Judgment ID: judgment-c17556d4544c4c48
+
 Conditions: Toggle none/high reasoning per request and compare end-to-end success.
 
 Failure modes / limitations: Creator broad best-in-class claims are not established by independent task-matched evidence; quantization and cache memory matter.

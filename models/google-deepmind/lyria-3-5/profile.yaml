@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: lyria-3-5
 verified_at: '2026-10-06'
 identity:
@@ -15,14 +15,14 @@ specifications:
   architecture:
     value: Latent diffusion over temporal audio latents
     status: documented
-    conditions: &id001 []
+    conditions: []
     evidence_ids:
     - src-adf03d8b2d85
   parameters:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: &id003
+    conditions: []
+    evidence_ids:
     - src-10e39629c3d3
     - src-ef50a5784fac
     - src-a24fd97eb3d0
@@ -31,14 +31,15 @@ specifications:
   context_window:
     value: 131072
     status: documented
-    conditions: *id001
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-ef50a5784fac
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-ef50a5784fac
   modalities:
     value:
       input:
@@ -48,19 +49,30 @@ specifications:
       - audio_MP3
       - lyrics_text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-ef50a5784fac
   language_support:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-10e39629c3d3
+    - src-ef50a5784fac
+    - src-a24fd97eb3d0
+    - src-adf03d8b2d85
+    - src-85f93e060d0d
 additional_specifications:
   knowledge_cutoff:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-10e39629c3d3
+    - src-ef50a5784fac
+    - src-a24fd97eb3d0
+    - src-adf03d8b2d85
+    - src-85f93e060d0d
   configuration:
     value:
       api: Interactions API
@@ -69,8 +81,13 @@ additional_specifications:
       batch: false
       reasoning_api: false
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-10e39629c3d3
+    - src-ef50a5784fac
+    - src-a24fd97eb3d0
+    - src-adf03d8b2d85
+    - src-85f93e060d0d
   api_quota:
     value:
       rpm: null
@@ -80,33 +97,63 @@ additional_specifications:
       evidence_ids:
       - src-10e39629c3d3
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-10e39629c3d3
+    - src-ef50a5784fac
+    - src-a24fd97eb3d0
+    - src-adf03d8b2d85
+    - src-85f93e060d0d
   canonical_endpoint:
     value: lyria-3.5
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-10e39629c3d3
+    - src-ef50a5784fac
+    - src-a24fd97eb3d0
+    - src-adf03d8b2d85
+    - src-85f93e060d0d
   context_limit_scope:
     value: Exact Gemini Developer API input limit
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-10e39629c3d3
+    - src-ef50a5784fac
+    - src-a24fd97eb3d0
+    - src-adf03d8b2d85
+    - src-85f93e060d0d
   release_date_scope:
     value: API endpoint release
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-10e39629c3d3
+    - src-ef50a5784fac
+    - src-a24fd97eb3d0
+    - src-adf03d8b2d85
+    - src-85f93e060d0d
   language_list_complete:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-10e39629c3d3
+    - src-ef50a5784fac
+    - src-a24fd97eb3d0
+    - src-adf03d8b2d85
+    - src-85f93e060d0d
   parameter_disclosure:
     value: not disclosed in fetched public sources
     status: documented
     conditions: []
-    evidence_ids: *id003
+    evidence_ids:
+    - src-10e39629c3d3
+    - src-ef50a5784fac
+    - src-a24fd97eb3d0
+    - src-adf03d8b2d85
+    - src-85f93e060d0d
 licensing:
   name: null
   commercial_use: null
@@ -114,14 +161,30 @@ licensing:
   fine_tuning: null
   hosted_service: null
   restrictions: []
-  evidence_ids: *id003
+  evidence_ids:
+  - src-10e39629c3d3
+  - src-ef50a5784fac
+  - src-a24fd97eb3d0
+  - src-adf03d8b2d85
+  - src-85f93e060d0d
 local_inference:
   availability: unavailable
   hardware_notes: []
   conditions: []
-  evidence_ids: *id003
+  evidence_ids:
+  - src-10e39629c3d3
+  - src-ef50a5784fac
+  - src-a24fd97eb3d0
+  - src-adf03d8b2d85
+  - src-85f93e060d0d
 capabilities:
-- task: prompted-full-song-concept-drafts
+- id: judgment-81c45f869d24d386
+  scope: direct
+  task_ids:
+  - music.generation
+  related_task_ids: []
+  assessment: conditional
+  scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: Promising from official feature evidence; comparative quality confidence remains low.
   confidence: low
   supporting_evidence_ids:
@@ -139,6 +202,14 @@ capabilities:
     Lyria 2.'
   - 'Observation obs-4bde1c37710c: Single-turn generation, variable duration/output, blocked artist-voice/copyrighted-lyric
     prompts and SynthID watermark constrain workflows.'
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: prompted-full-song-concept-drafts
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-proprietary-38
@@ -146,7 +217,12 @@ access_ids:
 - access-proprietary-38-google-consumer
 price_ids:
 - price-proprietary-lyria-3-5-google-developer-api-158952f245f5
-evidence_ids: *id003
+evidence_ids:
+- src-10e39629c3d3
+- src-ef50a5784fac
+- src-a24fd97eb3d0
+- src-adf03d8b2d85
+- src-85f93e060d0d
 notes: []
 limitations:
 - Hard maximum duration

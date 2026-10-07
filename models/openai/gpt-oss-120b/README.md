@@ -11,6 +11,14 @@
 
 Consider for self-hosting and customization; modern frontier agent equivalence is unsupported.
 
+Scope: unresolved / conditional. Scope needs review; the original claim does not establish a specific task ability.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): reasoning.general; agent.long_horizon
+
+Judgment ID: judgment-f8a05ea09b9472ae
+
 Conditions: Harmony formatting required; hosted provider quantization/output caps may differ from native weights.
 
 Failure modes / limitations: Cited high-effort service scores0% on Terminal-Bench4.0 and AutomationBench-AA.

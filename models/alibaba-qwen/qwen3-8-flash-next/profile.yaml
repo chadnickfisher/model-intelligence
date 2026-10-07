@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: qwen3-8-flash-next
 verified_at: '2026-10-06'
 identity:
@@ -15,8 +15,8 @@ specifications:
   architecture:
     value: 'Hybrid MoE: Gated DeltaNet, Qwen Sparse Attention, n-gram lookup embeddings, gated residual, MTP'
     status: documented
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-0af45d93e83c
     - src-eb79656c925c
     - src-fb8e00efa720
@@ -32,8 +32,12 @@ specifications:
         ngram_embeddings: 51
         mtp: 4
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-0af45d93e83c
+    - src-eb79656c925c
+    - src-fb8e00efa720
+    - src-0ab9540155b9
   context_window:
     value:
       native_tokens: 262144
@@ -41,13 +45,21 @@ specifications:
       max_output_tokens: null
       notes: Input plus generated output share capacity. Endpoint limits can differ.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-0af45d93e83c
+    - src-eb79656c925c
+    - src-fb8e00efa720
+    - src-0ab9540155b9
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-0af45d93e83c
+    - src-eb79656c925c
+    - src-fb8e00efa720
+    - src-0ab9540155b9
   modalities:
     value:
       input:
@@ -57,15 +69,23 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-0af45d93e83c
+    - src-eb79656c925c
+    - src-fb8e00efa720
+    - src-0ab9540155b9
   language_support:
     value:
       supported: null
       notes: Exact supported-language list not verified in this bounded pass.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-0af45d93e83c
+    - src-eb79656c925c
+    - src-fb8e00efa720
+    - src-0ab9540155b9
 additional_specifications:
   weights:
     value:
@@ -74,8 +94,12 @@ additional_specifications:
       formats: null
       gate: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-0af45d93e83c
+    - src-eb79656c925c
+    - src-fb8e00efa720
+    - src-0ab9540155b9
   weight_only_floor_decimal_gb:
     value:
       bf16: 360
@@ -89,13 +113,17 @@ additional_specifications:
     - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
       storage of inactive experts.
     - Published maximum context is not a guarantee it fits on the suggested local machine.
-    evidence_ids: &id003
+    evidence_ids:
     - src-fb8e00efa720
   release_date_precision:
     value: day
     status: documented
     conditions: []
-    evidence_ids: *id002
+    evidence_ids:
+    - src-0af45d93e83c
+    - src-eb79656c925c
+    - src-fb8e00efa720
+    - src-0ab9540155b9
 licensing:
   name: Qwen Community License 1.0
   commercial_use: conditional
@@ -124,9 +152,17 @@ local_inference:
   - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
     of inactive experts.
   - Published maximum context is not a guarantee it fits on the suggested local machine.
-  evidence_ids: *id003
+  evidence_ids:
+  - src-fb8e00efa720
 capabilities:
-- task: efficient-agent-workers
+- id: judgment-dfc392840f6a0569
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - agent.tool_use
+  - coding.repository_work
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Interesting for local tool-heavy workers when offloading and license terms fit.
   confidence: medium
   supporting_evidence_ids:
@@ -140,7 +176,21 @@ capabilities:
   known_failure_modes:
   - Runtime-specific grammar failures, thinking loops, CPU/SSD bottlenecks.
   evidence_notes: []
-- task: commercial-coding-assistant-hosting
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: efficient-agent-workers
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
+performance_characteristics:
+- id: judgment-89c7c704304def1d
+  scope: performance
+  task_ids: []
+  related_task_ids: []
+  assessment: warning
+  scope_note: Cost, deployment or throughput observation; not a task capability.
   judgment: Do not assume permissive self-hosted commercial availability.
   confidence: medium
   supporting_evidence_ids:
@@ -152,11 +202,22 @@ capabilities:
   - License choice can block a deployment even when weights are downloadable.
   evidence_notes:
   - 'Conservative baseline confidence: broader convergence has not been independently audited.'
-performance_characteristics: []
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: commercial-coding-assistant-hosting
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 1
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 access_ids:
 - access-open-qwen3-8-flash-next-weights
 price_ids: []
-evidence_ids: *id002
+evidence_ids:
+- src-0af45d93e83c
+- src-eb79656c925c
+- src-fb8e00efa720
+- src-0ab9540155b9
 notes: []
 limitations:
 - No model inference or benchmark was run in this research pass.

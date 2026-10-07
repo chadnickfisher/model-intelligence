@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: cohere-command-a-plus
 verified_at: '2026-10-06'
 identity:
@@ -15,25 +15,31 @@ specifications:
   architecture:
     value: null
     status: unknown
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-4b5fc50d9047
     - src-7a929ac1ccc5
   parameters:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-4b5fc50d9047
+    - src-7a929ac1ccc5
   context_window:
     value: 128000
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-4b5fc50d9047
+    - src-7a929ac1ccc5
   maximum_output:
     value: 64000
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-4b5fc50d9047
+    - src-7a929ac1ccc5
   modalities:
     value:
       input:
@@ -42,44 +48,60 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-4b5fc50d9047
+    - src-7a929ac1ccc5
   language_support:
     value: 48
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-4b5fc50d9047
+    - src-7a929ac1ccc5
 additional_specifications:
   parameters_total_billion:
     value: 218
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-4b5fc50d9047
+    - src-7a929ac1ccc5
   parameters_active_billion:
     value: 25
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-4b5fc50d9047
+    - src-7a929ac1ccc5
   knowledge_cutoff:
     value: '2025-04-01'
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-4b5fc50d9047
+    - src-7a929ac1ccc5
   hardware:
     value: 1 B200 or 2 H100 at W4A4
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-4b5fc50d9047
+    - src-7a929ac1ccc5
   api_alias:
     value: command-a-plus-05-2026
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-4b5fc50d9047
+    - src-7a929ac1ccc5
   weights:
     value: open
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-4b5fc50d9047
+    - src-7a929ac1ccc5
 licensing:
   name: Apache-2.0
   commercial_use: null
@@ -87,14 +109,25 @@ licensing:
   fine_tuning: null
   hosted_service: null
   restrictions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-4b5fc50d9047
+  - src-7a929ac1ccc5
 local_inference:
   availability: available
   hardware_notes: []
   conditions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-4b5fc50d9047
+  - src-7a929ac1ccc5
 capabilities:
-- task: private-multilingual-rag-and-enterprise-agents
+- id: judgment-d3d856d23e638edc
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - knowledge.rag
+  - agent.tool_use
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Useful candidate where controllable deployment and abstention matter. Independent launch testing
     found 86% non-hallucination but only 9% knowledge accuracy; high abstention is not universal correctness.
   confidence: medium
@@ -105,7 +138,22 @@ capabilities:
   known_failure_modes: []
   evidence_notes:
   - 'Observation obs-4dd631a08c77: Public evidence observation'
-- task: hard-scientific-reasoning-agentic-coding
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: private-multilingual-rag-and-enterprise-agents
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-9e8f4c9fa81f59ba
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - reasoning.scientific
+  - coding.repository_work
+  assessment: warning
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Launch testing showed gaps on hardest tasks; do not infer frontier quality from hardware efficiency.
   confidence: medium
   supporting_evidence_ids:
@@ -115,8 +163,21 @@ capabilities:
   known_failure_modes: []
   evidence_notes:
   - 'Observation obs-4dd631a08c77: Public evidence observation'
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: hard-scientific-reasoning-agentic-coding
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 1
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics:
-- task: measured-generation-behavior
+- id: judgment-9404c729731567f2
+  scope: performance
+  task_ids: []
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Cost, deployment or throughput observation; not a task capability.
   judgment: 'Public evidence observation Measurements: {"output_tokens_per_second": 281}. These describe the
     cited benchmark configuration only.'
   confidence: medium
@@ -128,9 +189,19 @@ performance_characteristics:
   evidence_notes:
   - Launch/pre-release testing; older index revision and comparison set. Abstention can drive non-hallucination
     result.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: measured-generation-behavior
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 access_ids: []
 price_ids: []
-evidence_ids: *id002
+evidence_ids:
+- src-4b5fc50d9047
+- src-7a929ac1ccc5
 notes: []
 limitations:
 - API free-trial limits differ from paid production Model Vault.

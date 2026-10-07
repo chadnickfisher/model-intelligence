@@ -11,6 +11,14 @@
 
 Feature-rich candidate where synchronized sound and pinned frames matter; quality judgment remains low confidence without independent testing.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): video.generation; audio.speech_generation
+
+Judgment ID: judgment-da95efcb747baa7e
+
 Conditions: Not established in this pass
 
 Failure modes / limitations: Not established in this pass

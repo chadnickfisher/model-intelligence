@@ -11,6 +11,14 @@
 
 A candidate for capable self-hosted text coding and work agents if infrastructure justifies it.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): coding.repository_work; agent.tool_use
+
+Judgment ID: judgment-5b2db26e97cc525c
+
 Conditions: Creator benchmarks use differing harnesses; hosted Qwen3.8 Max 0902 is a separate identity until mapped.
 
 Failure modes / limitations: Substantial infrastructure burden; no image input in this checkpoint; official comparisons include modified benchmark tasks.

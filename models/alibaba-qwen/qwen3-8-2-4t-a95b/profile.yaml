@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: qwen3-8-2-4t-a95b
 verified_at: '2026-10-06'
 identity:
@@ -15,8 +15,8 @@ specifications:
   architecture:
     value: Hybrid MoE Gated DeltaNet / gated attention; 512 experts, 10 routed plus one shared active
     status: documented
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-fbaa665d7533
     - src-2bc2cf30ffd5
   parameters:
@@ -26,8 +26,10 @@ specifications:
       scope: creator-declared count; see notes
       exact_parameter_count: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-fbaa665d7533
+    - src-2bc2cf30ffd5
   context_window:
     value:
       native_tokens: 262144
@@ -35,13 +37,17 @@ specifications:
       max_output_tokens: null
       notes: Input plus generated output share capacity. Endpoint limits can differ.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-fbaa665d7533
+    - src-2bc2cf30ffd5
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-fbaa665d7533
+    - src-2bc2cf30ffd5
   modalities:
     value:
       input:
@@ -49,15 +55,19 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-fbaa665d7533
+    - src-2bc2cf30ffd5
   language_support:
     value:
       supported: null
       notes: Exact supported-language list not verified in this bounded pass.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-fbaa665d7533
+    - src-2bc2cf30ffd5
 additional_specifications:
   weights:
     value:
@@ -66,8 +76,10 @@ additional_specifications:
       formats: null
       gate: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-fbaa665d7533
+    - src-2bc2cf30ffd5
   weight_only_floor_decimal_gb:
     value:
       bf16: 4800
@@ -81,18 +93,24 @@ additional_specifications:
     - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
       storage of inactive experts.
     - Published maximum context is not a guarantee it fits on the suggested local machine.
-    evidence_ids: *id002
+    evidence_ids:
+    - src-fbaa665d7533
+    - src-2bc2cf30ffd5
   release_date_reported:
     value: 2026-08
     status: documented
     conditions:
     - Source supplied a partial or non-day date; not promoted to an exact release date.
-    evidence_ids: *id002
+    evidence_ids:
+    - src-fbaa665d7533
+    - src-2bc2cf30ffd5
   release_date_precision:
     value: month
     status: documented
     conditions: []
-    evidence_ids: *id002
+    evidence_ids:
+    - src-fbaa665d7533
+    - src-2bc2cf30ffd5
 licensing:
   name: Qwen3.8-Max License
   commercial_use: conditional
@@ -120,9 +138,18 @@ local_inference:
   - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
     of inactive experts.
   - Published maximum context is not a guarantee it fits on the suggested local machine.
-  evidence_ids: *id002
+  evidence_ids:
+  - src-fbaa665d7533
+  - src-2bc2cf30ffd5
 capabilities:
-- task: large-scale-text-agents
+- id: judgment-5b2db26e97cc525c
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - coding.repository_work
+  - agent.tool_use
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: A candidate for capable self-hosted text coding and work agents if infrastructure justifies it.
   confidence: low
   supporting_evidence_ids:
@@ -134,11 +161,21 @@ capabilities:
   - Substantial infrastructure burden; no image input in this checkpoint; official comparisons include modified
     benchmark tasks.
   evidence_notes: []
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: large-scale-text-agents
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-open-qwen3-8-2-4t-a95b-weights
 price_ids: []
-evidence_ids: *id002
+evidence_ids:
+- src-fbaa665d7533
+- src-2bc2cf30ffd5
 notes: []
 limitations:
 - No model inference or benchmark was run in this research pass.

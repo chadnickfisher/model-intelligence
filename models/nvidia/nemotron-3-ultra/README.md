@@ -11,6 +11,14 @@
 
 A strong deployment candidate for low-latency text agents on suitable NVIDIA infrastructure.
 
+Scope: performance / conditional. Cost, deployment or throughput observation; not a task capability.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-dfd880eb4d1991c5
+
 Conditions: NVFP4 and runtime support are material; distinguish prerelease service speed from local hardware.
 
 Failure modes / limitations: High-end math/physics reasoning still weak on some tasks; no native vision input.

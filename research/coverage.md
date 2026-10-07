@@ -10,7 +10,8 @@ Unresolved coverage priorities include stable independent evidence for very new 
 
 - models: 53
 - providers and access products: 39
-- capability judgments: 64
+- capability judgments: 58
+- performance judgments: 13
 - price records: 122
 - access routes: 140
 - public sources: 225

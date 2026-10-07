@@ -11,6 +11,14 @@
 
 Current Mistral candidate when one model must combine image input, coding and selectable reasoning.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): reasoning.general; coding.repository_work
+
+Judgment ID: judgment-85878a81f8d11b0d
+
 Conditions: Verify license eligibility and corrected long-context configuration.
 
 Failure modes / limitations: Official card warns early Transformers config and GGUF conversions from it degrade long-context performance.

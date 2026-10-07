@@ -11,6 +11,14 @@
 
 Practical candidate for bounded local chat, extraction and image description.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): language.multilingual_chat; knowledge.extraction; vision.question_answering
+
+Judgment ID: judgment-dada3e5e7dd7f855
+
 Conditions: Choose the Instruct versus separate Reasoning checkpoint deliberately.
 
 Failure modes / limitations: Complex autonomous planning and reasoning remain weaker; full 256k context can exceed edge memory.

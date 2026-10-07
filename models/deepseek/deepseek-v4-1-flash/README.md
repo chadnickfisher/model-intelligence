@@ -11,6 +11,14 @@
 
 Promising cost-oriented candidate for long-context coding/review and image-grounded tool tasks.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): coding.repository_work; coding.review; agent.tool_use
+
+Judgment ID: judgment-c78023ee7891bfab
+
 Conditions: Check maximum reasoning effort versus task cost; preserve correct prompt encoding.
 
 Failure modes / limitations: Creator DeepSWE results vary materially by harness; long traces, tool mistakes and invalid edits remain possible.
@@ -22,6 +30,14 @@ Contradictory or limiting sources: None separately identified in this pass; this
 ### Self host cost savings (low confidence)
 
 No automatic savings from open weights; utilization and infrastructure dominate.
+
+Scope: performance / warning. Cost, deployment or throughput observation; not a task capability.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-71e1895294a2759d
 
 Conditions: Compare full GPU/RAM/operator cost with actual cached API token mix.
 

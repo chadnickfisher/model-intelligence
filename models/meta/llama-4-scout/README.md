@@ -11,6 +11,14 @@
 
 Established downloadable option for image QA and multilingual chat when custom terms fit.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): language.multilingual_chat; vision.question_answering
+
+Judgment ID: judgment-3bdbe688baf73a67
+
 Conditions: Twelve explicitly supported languages; image evaluation up to five images.
 
 Failure modes / limitations: Official instruction benchmarks used BF16, so quantized equivalence is unproven.
@@ -22,6 +30,14 @@ Contradictory or limiting sources: None separately identified in this pass; this
 ### Very long document work (medium confidence)
 
 Scout’s 10M advertised capacity is not enough evidence to prefer it for difficult long-document reasoning.
+
+Scope: unresolved / warning. Scope needs review; the original claim does not establish a specific task ability.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): context.reasoning
+
+Judgment ID: judgment-9a9a7a9cb18c9163
 
 Conditions: Test position sensitivity and retrieval on real documents.
 

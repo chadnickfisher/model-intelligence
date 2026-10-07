@@ -11,6 +11,14 @@
 
 Mini is suitable to evaluate for small, bounded instruction and simple coding tasks.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): language.instruction_following; coding.scoped_edit
+
+Judgment ID: judgment-9eb4330410834153
+
 Conditions: 23 supported text languages; verify APIs beyond common Python packages.
 
 Failure modes / limitations: Card reports function-name/URL hallucination, long-chat drift and multilingual safety gaps.

@@ -11,6 +11,14 @@
 
 Latency-oriented image generation choice.
 
+Scope: direct / conditional. One task reference; conclusion remains conditional, not an ability score.
+
+Direct task IDs: image.generation
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-399c0b738f152d10
+
 Conditions: Quality, resolution, reference images and retries change consumption.
 
 Failure modes / limitations: Not established in this pass

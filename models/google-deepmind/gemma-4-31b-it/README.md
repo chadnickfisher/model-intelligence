@@ -11,6 +11,14 @@
 
 Useful open-weight candidate when deployment control matters; select variant against memory and quality requirements.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): coding.repository_work; vision.question_answering
+
+Judgment ID: judgment-091a48aa5bdf8901
+
 Conditions: instruction-tuned; provider evaluation; reasoning; different weights and reasoning configurations
 
 Failure modes / limitations: Not established in this pass
@@ -20,6 +28,28 @@ Supporting sources: [Google Gemma 4 31B instruction-tuned weights](https://huggi
 Contradictory or limiting sources: [Artificial Analysis gemma-4-31b](https://artificialanalysis.ai/models/gemma-4-31b) · [Gemma 4 configuration comparison](https://artificialanalysis.ai/models/comparisons/gemma-4-26b-a4b-vs-gemma-4-31b-non-reasoning)
 
 Evidence notes: task-conditioned synthesis; no inference runs performed; Observation obs-277108d396be: Open downloadable weights and Apache 2.0 allow controlled deployment and tuning.; Observation obs-984e3b3ac410: Provider evaluates 31B IT as capable in coding and visual reasoning; smaller variants trade quality for resources.; Observation obs-fcfd1534c8b5: Independent hosted 31B reasoning throughput is substantially lower than the Flash services measured here.; Observation obs-cdfc4938876f: Independent configuration-specific results show model size and thinking mode do not create a simple ranking.
+
+### Measured generation behavior (medium confidence)
+
+Independent hosted 31B reasoning throughput is substantially lower than the Flash services measured here. Measurements: {"output_tokens_per_second": 35.6}. These describe the cited benchmark configuration only.
+
+Scope: performance / conditional. Cost, deployment or throughput observation; not a task capability.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-84acec95716599fe
+
+Conditions: reasoning
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Artificial Analysis gemma-4-31b](https://artificialanalysis.ai/models/gemma-4-31b)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Provider/hardware affects speed; not a prediction of any user GPU.
 
 ## Specifications
 

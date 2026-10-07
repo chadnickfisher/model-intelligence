@@ -11,6 +11,14 @@
 
 Useful candidate where controllable deployment and abstention matter. Independent launch testing found 86% non-hallucination but only 9% knowledge accuracy; high abstention is not universal correctness.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): knowledge.rag; agent.tool_use
+
+Judgment ID: judgment-d3d856d23e638edc
+
 Conditions: Not established in this pass
 
 Failure modes / limitations: Not established in this pass
@@ -25,6 +33,14 @@ Evidence notes: Observation obs-4dd631a08c77: Public evidence observation
 
 Launch testing showed gaps on hardest tasks; do not infer frontier quality from hardware efficiency.
 
+Scope: compound / warning. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): reasoning.scientific; coding.repository_work
+
+Judgment ID: judgment-9e8f4c9fa81f59ba
+
 Conditions: Not established in this pass
 
 Failure modes / limitations: Not established in this pass
@@ -34,6 +50,28 @@ Supporting sources: [artificialanalysis.ai](https://artificialanalysis.ai/articl
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
 Evidence notes: Observation obs-4dd631a08c77: Public evidence observation
+
+### Measured generation behavior (medium confidence)
+
+Public evidence observation Measurements: {"output_tokens_per_second": 281}. These describe the cited benchmark configuration only.
+
+Scope: performance / conditional. Cost, deployment or throughput observation; not a task capability.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-9404c729731567f2
+
+Conditions: Not established in this pass
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [artificialanalysis.ai](https://artificialanalysis.ai/articles/cohere-launches-open-weights-model-command-a-more-than-a-year-since-the-command-a-release)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Launch/pre-release testing; older index revision and comparison set. Abstention can drive non-hallucination result.
 
 ## Specifications
 

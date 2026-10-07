@@ -11,6 +11,14 @@
 
 Consider when reasoning and tools must operate in a realtime speech session.
 
+Scope: direct / conditional. One task reference; conclusion remains conditional, not an ability score.
+
+Direct task IDs: audio.conversation
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-cf3c0c86e40306ed
+
 Conditions: Audio-token pricing cannot be compared directly with Live session-minute pricing.
 
 Failure modes / limitations: Not established in this pass

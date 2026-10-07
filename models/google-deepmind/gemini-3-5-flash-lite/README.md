@@ -11,6 +11,14 @@
 
 Reasonable economical starting point, with validation and escalation for difficult cases.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): knowledge.extraction; knowledge.classification; agent.tool_use
+
+Judgment ID: judgment-06ddf2c86085a946
+
 Conditions: high; temperature 1; output 65,536
 
 Failure modes / limitations: Not established in this pass
@@ -20,6 +28,28 @@ Supporting sources: [Artificial Analysis gemini-3-5-flash-lite](https://artifici
 Contradictory or limiting sources: [Gemini 3.5 Flash-Lite model card](https://deepmind.google/models/model-cards/gemini-3-5-flash-lite/) · [Vals AI gemini-3.5-flash-lite](https://www.vals.ai/models/google_gemini-3.5-flash-lite)
 
 Evidence notes: task-conditioned synthesis; no inference runs performed; Observation obs-16516ab6f54e: Measured decode speed supports throughput-sensitive experimentation.; Observation obs-8b65b1136da3: Useful bounded coding capability with weaker difficult agent performance.; Observation obs-04efb4d01f02: Large context is not equal to reliable exhaustive retrieval.
+
+### Measured generation behavior (medium confidence)
+
+Measured decode speed supports throughput-sensitive experimentation. Measurements: {"output_tokens_per_second": 341.5}. These describe the cited benchmark configuration only.
+
+Scope: performance / conditional. Cost, deployment or throughput observation; not a task capability.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-f7f4e9d19bb0fd4e
+
+Conditions: Not established in this pass
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Artificial Analysis gemini-3-5-flash-lite](https://artificialanalysis.ai/models/gemini-3-5-flash-lite)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: API snapshot; no end-to-end latency or local execution claim.
 
 ## Specifications
 

@@ -11,6 +11,14 @@
 
 Useful coding-specialist candidate where non-thinking responses and permissive licensing matter.
 
+Scope: direct / conditional. One task reference; conclusion remains conditional, not an ability score.
+
+Direct task IDs: coding.repository_work
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-6c53b662d08a63d0
+
 Conditions: Use its coding chat template and supported tool parser; do not add thinking tokens.
 
 Failure modes / limitations: General knowledge/reasoning quality is not established by SWE performance; small quantization may degrade code correctness.

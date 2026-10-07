@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: gemini-3-8-live
 verified_at: '2026-10-06'
 identity:
@@ -16,15 +16,15 @@ specifications:
   architecture:
     value: Gemini 3 Pro-derived sparse MoE transformer; audio-specific changes undisclosed
     status: documented
-    conditions: &id001 []
+    conditions: []
     evidence_ids:
     - src-744e7330e24d
     - src-4c04e11c8a1b
   parameters:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: &id003
+    conditions: []
+    evidence_ids:
     - src-25e1e7c2305d
     - src-10e39629c3d3
     - src-04c98c33c883
@@ -34,14 +34,15 @@ specifications:
   context_window:
     value: 131072
     status: documented
-    conditions: *id001
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-04c98c33c883
   maximum_output:
     value: 65536
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-04c98c33c883
   modalities:
     value:
       input:
@@ -53,8 +54,9 @@ specifications:
       - text
       - audio
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-04c98c33c883
   language_support:
     value:
       supported_count: 70
@@ -62,14 +64,26 @@ specifications:
       evidence_ids:
       - src-25e1e7c2305d
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-25e1e7c2305d
+    - src-10e39629c3d3
+    - src-04c98c33c883
+    - src-a24fd97eb3d0
+    - src-744e7330e24d
+    - src-4c04e11c8a1b
 additional_specifications:
   knowledge_cutoff:
     value: 2025-01
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-25e1e7c2305d
+    - src-10e39629c3d3
+    - src-04c98c33c883
+    - src-a24fd97eb3d0
+    - src-744e7330e24d
+    - src-4c04e11c8a1b
   configuration:
     value:
       interleaved_reasoning: true
@@ -79,8 +93,14 @@ additional_specifications:
       distinct_related_endpoint: gemini-3.8-live-extended-thinking
       note: Extended Thinking is a distinct exposed endpoint, not a supported thinking_level on gemini-3.8-live.
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-25e1e7c2305d
+    - src-10e39629c3d3
+    - src-04c98c33c883
+    - src-a24fd97eb3d0
+    - src-744e7330e24d
+    - src-4c04e11c8a1b
   api_quota:
     value:
       rpm: null
@@ -90,33 +110,69 @@ additional_specifications:
       evidence_ids:
       - src-10e39629c3d3
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-25e1e7c2305d
+    - src-10e39629c3d3
+    - src-04c98c33c883
+    - src-a24fd97eb3d0
+    - src-744e7330e24d
+    - src-4c04e11c8a1b
   canonical_endpoint:
     value: gemini-3.8-live
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-25e1e7c2305d
+    - src-10e39629c3d3
+    - src-04c98c33c883
+    - src-a24fd97eb3d0
+    - src-744e7330e24d
+    - src-4c04e11c8a1b
   context_limit_scope:
     value: Exact Gemini Developer API input limit
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-25e1e7c2305d
+    - src-10e39629c3d3
+    - src-04c98c33c883
+    - src-a24fd97eb3d0
+    - src-744e7330e24d
+    - src-4c04e11c8a1b
   release_date_scope:
     value: API endpoint release
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-25e1e7c2305d
+    - src-10e39629c3d3
+    - src-04c98c33c883
+    - src-a24fd97eb3d0
+    - src-744e7330e24d
+    - src-4c04e11c8a1b
   language_list_complete:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-25e1e7c2305d
+    - src-10e39629c3d3
+    - src-04c98c33c883
+    - src-a24fd97eb3d0
+    - src-744e7330e24d
+    - src-4c04e11c8a1b
   parameter_disclosure:
     value: not disclosed in fetched public sources
     status: documented
     conditions: []
-    evidence_ids: *id003
+    evidence_ids:
+    - src-25e1e7c2305d
+    - src-10e39629c3d3
+    - src-04c98c33c883
+    - src-a24fd97eb3d0
+    - src-744e7330e24d
+    - src-4c04e11c8a1b
 licensing:
   name: null
   commercial_use: null
@@ -124,14 +180,32 @@ licensing:
   fine_tuning: null
   hosted_service: null
   restrictions: []
-  evidence_ids: *id003
+  evidence_ids:
+  - src-25e1e7c2305d
+  - src-10e39629c3d3
+  - src-04c98c33c883
+  - src-a24fd97eb3d0
+  - src-744e7330e24d
+  - src-4c04e11c8a1b
 local_inference:
   availability: unavailable
   hardware_notes: []
   conditions: []
-  evidence_ids: *id003
+  evidence_ids:
+  - src-25e1e7c2305d
+  - src-10e39629c3d3
+  - src-04c98c33c883
+  - src-a24fd97eb3d0
+  - src-744e7330e24d
+  - src-4c04e11c8a1b
 capabilities:
-- task: tool-connected-real-time-voice-conversation
+- id: judgment-6eac9d7c589429f2
+  scope: direct
+  task_ids:
+  - audio.conversation
+  related_task_ids: []
+  assessment: conditional
+  scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: Well-matched interface; actual speech quality, turn taking and latency need task-specific verification.
   confidence: medium
   supporting_evidence_ids:
@@ -146,6 +220,14 @@ capabilities:
     calls is a suitable interface design for conversational agents.'
   - 'Observation obs-d67386e9f0d6: Hallucinations/timeouts remain; migration fails if unsupported thinking_level
     or proactive_audio:false is sent.'
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: tool-connected-real-time-voice-conversation
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-proprietary-39
@@ -153,7 +235,13 @@ access_ids:
 - access-proprietary-39-google-consumer
 price_ids:
 - price-proprietary-gemini-3-8-live-google-developer-api-a963ebdabef6
-evidence_ids: *id003
+evidence_ids:
+- src-25e1e7c2305d
+- src-10e39629c3d3
+- src-04c98c33c883
+- src-a24fd97eb3d0
+- src-744e7330e24d
+- src-4c04e11c8a1b
 notes: []
 limitations:
 - Independent 3.8 Live task quality and latency measurements

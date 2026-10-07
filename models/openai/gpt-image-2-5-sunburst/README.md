@@ -11,6 +11,14 @@
 
 Precision-oriented editing choice.
 
+Scope: direct / conditional. One task reference; conclusion remains conditional, not an ability score.
+
+Direct task IDs: image.editing
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-5ae64605b3a4b23e
+
 Conditions: Quality, resolution, reference images and retries change consumption.
 
 Failure modes / limitations: Not established in this pass

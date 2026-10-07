@@ -11,6 +11,14 @@
 
 Purpose-built candidate, particularly listed tier-one languages. Hardware and noncommercial license substantially narrow free deployment usefulness.
 
+Scope: direct / conditional. One task reference; conclusion remains conditional, not an ability score.
+
+Direct task IDs: language.translation
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-315d51f450cac0a4
+
 Conditions: Not established in this pass
 
 Failure modes / limitations: Not established in this pass

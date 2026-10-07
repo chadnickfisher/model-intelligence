@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: gemini-3-pro-image
 verified_at: '2026-10-06'
 identity:
@@ -16,15 +16,15 @@ specifications:
   architecture:
     value: null
     status: unknown
-    conditions: &id001 []
+    conditions: []
     evidence_ids:
     - src-d35a477c49c4
     - src-4c04e11c8a1b
   parameters:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: &id003
+    conditions: []
+    evidence_ids:
     - src-5d0514efd100
     - src-10e39629c3d3
     - src-21fe0d4c63a7
@@ -35,14 +35,15 @@ specifications:
   context_window:
     value: 65536
     status: documented
-    conditions: *id001
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-21fe0d4c63a7
   maximum_output:
     value: 32768
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-21fe0d4c63a7
   modalities:
     value:
       input:
@@ -52,8 +53,9 @@ specifications:
       - text
       - image
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-21fe0d4c63a7
   language_support:
     value:
       recommended:
@@ -76,14 +78,28 @@ specifications:
       evidence_ids:
       - src-5d0514efd100
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-5d0514efd100
+    - src-10e39629c3d3
+    - src-21fe0d4c63a7
+    - src-a24fd97eb3d0
+    - src-d35a477c49c4
+    - src-4c04e11c8a1b
+    - src-b88c4950bbf3
 additional_specifications:
   knowledge_cutoff:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-5d0514efd100
+    - src-10e39629c3d3
+    - src-21fe0d4c63a7
+    - src-a24fd97eb3d0
+    - src-d35a477c49c4
+    - src-4c04e11c8a1b
+    - src-b88c4950bbf3
   configuration:
     value:
       thinking_supported: true
@@ -94,8 +110,15 @@ additional_specifications:
       flex: null
       priority: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-5d0514efd100
+    - src-10e39629c3d3
+    - src-21fe0d4c63a7
+    - src-a24fd97eb3d0
+    - src-d35a477c49c4
+    - src-4c04e11c8a1b
+    - src-b88c4950bbf3
   api_quota:
     value:
       rpm: null
@@ -105,33 +128,75 @@ additional_specifications:
       evidence_ids:
       - src-10e39629c3d3
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-5d0514efd100
+    - src-10e39629c3d3
+    - src-21fe0d4c63a7
+    - src-a24fd97eb3d0
+    - src-d35a477c49c4
+    - src-4c04e11c8a1b
+    - src-b88c4950bbf3
   canonical_endpoint:
     value: gemini-3-pro-image
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-5d0514efd100
+    - src-10e39629c3d3
+    - src-21fe0d4c63a7
+    - src-a24fd97eb3d0
+    - src-d35a477c49c4
+    - src-4c04e11c8a1b
+    - src-b88c4950bbf3
   context_limit_scope:
     value: Exact Gemini Developer API input limit
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-5d0514efd100
+    - src-10e39629c3d3
+    - src-21fe0d4c63a7
+    - src-a24fd97eb3d0
+    - src-d35a477c49c4
+    - src-4c04e11c8a1b
+    - src-b88c4950bbf3
   release_date_scope:
     value: API endpoint release
     status: documented
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-5d0514efd100
+    - src-10e39629c3d3
+    - src-21fe0d4c63a7
+    - src-a24fd97eb3d0
+    - src-d35a477c49c4
+    - src-4c04e11c8a1b
+    - src-b88c4950bbf3
   language_list_complete:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id003
+    conditions: []
+    evidence_ids:
+    - src-5d0514efd100
+    - src-10e39629c3d3
+    - src-21fe0d4c63a7
+    - src-a24fd97eb3d0
+    - src-d35a477c49c4
+    - src-4c04e11c8a1b
+    - src-b88c4950bbf3
   parameter_disclosure:
     value: not disclosed in fetched public sources
     status: documented
     conditions: []
-    evidence_ids: *id003
+    evidence_ids:
+    - src-5d0514efd100
+    - src-10e39629c3d3
+    - src-21fe0d4c63a7
+    - src-a24fd97eb3d0
+    - src-d35a477c49c4
+    - src-4c04e11c8a1b
+    - src-b88c4950bbf3
 licensing:
   name: null
   commercial_use: null
@@ -139,14 +204,34 @@ licensing:
   fine_tuning: null
   hosted_service: null
   restrictions: []
-  evidence_ids: *id003
+  evidence_ids:
+  - src-5d0514efd100
+  - src-10e39629c3d3
+  - src-21fe0d4c63a7
+  - src-a24fd97eb3d0
+  - src-d35a477c49c4
+  - src-4c04e11c8a1b
+  - src-b88c4950bbf3
 local_inference:
   availability: unavailable
   hardware_notes: []
   conditions: []
-  evidence_ids: *id003
+  evidence_ids:
+  - src-5d0514efd100
+  - src-10e39629c3d3
+  - src-21fe0d4c63a7
+  - src-a24fd97eb3d0
+  - src-d35a477c49c4
+  - src-4c04e11c8a1b
+  - src-b88c4950bbf3
 capabilities:
-- task: visual-concepts-mockups-and-text-heavy-image-drafts
+- id: judgment-a8b91a879079b15e
+  scope: direct
+  task_ids:
+  - image.generation
+  related_task_ids: []
+  assessment: conditional
+  scope_note: One task reference; conclusion remains conditional, not an ability score.
   judgment: Good candidate for reviewed design work; do not use output as faithful forensic restoration.
   confidence: medium
   supporting_evidence_ids:
@@ -163,6 +248,14 @@ capabilities:
     review.'
   - 'Observation obs-c3991e29aaff: Independent low-level vision study found attractive reconstructed detail
     but lower reference-based fidelity than specialists.'
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: visual-concepts-mockups-and-text-heavy-image-drafts
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-proprietary-36
@@ -171,7 +264,14 @@ access_ids:
 price_ids:
 - price-proprietary-gemini-3-pro-image-google-developer-api-3c200e46dbab
 - price-proprietary-gemini-3-pro-image-google-developer-api-d065c9f3a69a
-evidence_ids: *id003
+evidence_ids:
+- src-5d0514efd100
+- src-10e39629c3d3
+- src-21fe0d4c63a7
+- src-a24fd97eb3d0
+- src-d35a477c49c4
+- src-4c04e11c8a1b
+- src-b88c4950bbf3
 notes: []
 limitations:
 - 'Flex/Priority availability: pricing page lists rates but model capability page says unsupported.'

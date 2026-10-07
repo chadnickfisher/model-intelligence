@@ -11,6 +11,14 @@
 
 Reasonable low-memory candidate for short visual QA, extraction and bounded assistant work.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): vision.question_answering; knowledge.extraction
+
+Judgment ID: judgment-89e9ac298c376d19
+
 Conditions: Measure task accuracy at target image resolution and context.
 
 Failure modes / limitations: Verbose reasoning can dominate latency; small-model factual and complex planning errors.

@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: minimax-m3
 verified_at: '2026-10-06'
 identity:
@@ -15,8 +15,8 @@ specifications:
   architecture:
     value: Native multimodal MoE with MiniMax Sparse Attention
     status: documented
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-6a511cb9176a
     - src-06645d3950f1
     - src-418bc9a9adc1
@@ -28,8 +28,12 @@ specifications:
       scope: creator-declared count; see notes
       exact_parameter_count: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-6a511cb9176a
+    - src-06645d3950f1
+    - src-418bc9a9adc1
+    - src-40c9ce9b4812
   context_window:
     value:
       native_tokens: 1000000
@@ -37,13 +41,21 @@ specifications:
       max_output_tokens: null
       notes: Input plus generated output share capacity. Endpoint limits can differ.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-6a511cb9176a
+    - src-06645d3950f1
+    - src-418bc9a9adc1
+    - src-40c9ce9b4812
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-6a511cb9176a
+    - src-06645d3950f1
+    - src-418bc9a9adc1
+    - src-40c9ce9b4812
   modalities:
     value:
       input:
@@ -53,15 +65,23 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-6a511cb9176a
+    - src-06645d3950f1
+    - src-418bc9a9adc1
+    - src-40c9ce9b4812
   language_support:
     value:
       supported: null
       notes: Exact supported-language list not verified in this bounded pass.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-6a511cb9176a
+    - src-06645d3950f1
+    - src-418bc9a9adc1
+    - src-40c9ce9b4812
 additional_specifications:
   weights:
     value:
@@ -70,8 +90,12 @@ additional_specifications:
       formats: null
       gate: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-6a511cb9176a
+    - src-06645d3950f1
+    - src-418bc9a9adc1
+    - src-40c9ce9b4812
   weight_only_floor_decimal_gb:
     value:
       bf16: 856
@@ -85,18 +109,30 @@ additional_specifications:
     - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
       storage of inactive experts.
     - Published maximum context is not a guarantee it fits on the suggested local machine.
-    evidence_ids: *id002
+    evidence_ids:
+    - src-6a511cb9176a
+    - src-06645d3950f1
+    - src-418bc9a9adc1
+    - src-40c9ce9b4812
   release_date_reported:
     value: 2026-06
     status: documented
     conditions:
     - Source supplied a partial or non-day date; not promoted to an exact release date.
-    evidence_ids: *id002
+    evidence_ids:
+    - src-6a511cb9176a
+    - src-06645d3950f1
+    - src-418bc9a9adc1
+    - src-40c9ce9b4812
   release_date_precision:
     value: month
     status: documented
     conditions: []
-    evidence_ids: *id002
+    evidence_ids:
+    - src-6a511cb9176a
+    - src-06645d3950f1
+    - src-418bc9a9adc1
+    - src-40c9ce9b4812
 licensing:
   name: MiniMax Community License
   commercial_use: conditional
@@ -125,9 +161,21 @@ local_inference:
   - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
     of inactive experts.
   - Published maximum context is not a guarantee it fits on the suggested local machine.
-  evidence_ids: *id002
+  evidence_ids:
+  - src-6a511cb9176a
+  - src-06645d3950f1
+  - src-418bc9a9adc1
+  - src-40c9ce9b4812
 capabilities:
-- task: multimodal-long-context-work
+- id: judgment-733be35f32bab45e
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - coding.repository_work
+  - agent.tool_use
+  - context.reasoning
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: A candidate for cost-sensitive image/video coding and work agents; compare using the >512k price
     band when relevant.
   confidence: medium
@@ -142,6 +190,14 @@ capabilities:
   - Long-context requests cost more; reported attention speedups are creator comparisons against M2, not universal
     application speedups.
   evidence_notes: []
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: multimodal-long-context-work
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-open-minimax-m3-weights
@@ -152,7 +208,11 @@ price_ids:
 - price-open-minimax-m3-minimax-api-bb9117221622
 - price-open-minimax-m3-minimax-api-3a2d3f3837bf
 - price-providers-minimax-m3-together-53e1dc39589c
-evidence_ids: *id002
+evidence_ids:
+- src-6a511cb9176a
+- src-06645d3950f1
+- src-418bc9a9adc1
+- src-40c9ce9b4812
 notes: []
 limitations:
 - No model inference or benchmark was run in this research pass.

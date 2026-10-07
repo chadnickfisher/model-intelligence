@@ -11,6 +11,14 @@
 
 A permissively licensed non-thinking option for enterprise document/chat pipelines with datacenter resources.
 
+Scope: direct / conditional. One task reference; conclusion remains conditional, not an ability score.
+
+Direct task IDs: knowledge.rag
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-98414fc2b50374ec
+
 Conditions: Keep tool schemas bounded and validate image aspect-ratio handling.
 
 Failure modes / limitations: Card explicitly notes weaker strict reasoning than reasoning specialists and weaker vision than vision-first models.

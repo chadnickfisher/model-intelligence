@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: qwen3-5-9b
 verified_at: '2026-10-06'
 identity:
@@ -15,8 +15,8 @@ specifications:
   architecture:
     value: Dense hybrid Gated DeltaNet / gated attention with vision encoder
     status: documented
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-f2036f817d22
     - src-e0a64484787e
     - src-7a37d210463f
@@ -27,8 +27,11 @@ specifications:
       scope: 9B language model; approximately 9.7B in independent complete-model catalog.
       exact_parameter_count: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-e0a64484787e
+    - src-7a37d210463f
   context_window:
     value:
       native_tokens: 262144
@@ -36,13 +39,19 @@ specifications:
       max_output_tokens: null
       notes: Input plus generated output share capacity. Endpoint limits can differ.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-e0a64484787e
+    - src-7a37d210463f
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-e0a64484787e
+    - src-7a37d210463f
   modalities:
     value:
       input:
@@ -52,15 +61,21 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-e0a64484787e
+    - src-7a37d210463f
   language_support:
     value:
       supported: null
       notes: Exact supported-language list not verified in this bounded pass.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-e0a64484787e
+    - src-7a37d210463f
 additional_specifications:
   weights:
     value:
@@ -69,8 +84,11 @@ additional_specifications:
       formats: null
       gate: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-f2036f817d22
+    - src-e0a64484787e
+    - src-7a37d210463f
   weight_only_floor_decimal_gb:
     value:
       bf16: 18
@@ -84,18 +102,27 @@ additional_specifications:
     - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
       storage of inactive experts.
     - Published maximum context is not a guarantee it fits on the suggested local machine.
-    evidence_ids: *id002
+    evidence_ids:
+    - src-f2036f817d22
+    - src-e0a64484787e
+    - src-7a37d210463f
   release_date_reported:
     value: 2026-03
     status: documented
     conditions:
     - Source supplied a partial or non-day date; not promoted to an exact release date.
-    evidence_ids: *id002
+    evidence_ids:
+    - src-f2036f817d22
+    - src-e0a64484787e
+    - src-7a37d210463f
   release_date_precision:
     value: month
     status: documented
     conditions: []
-    evidence_ids: *id002
+    evidence_ids:
+    - src-f2036f817d22
+    - src-e0a64484787e
+    - src-7a37d210463f
 licensing:
   name: Apache-2.0
   commercial_use: allowed
@@ -121,9 +148,19 @@ local_inference:
   - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
     of inactive experts.
   - Published maximum context is not a guarantee it fits on the suggested local machine.
-  evidence_ids: *id002
+  evidence_ids:
+  - src-f2036f817d22
+  - src-e0a64484787e
+  - src-7a37d210463f
 capabilities:
-- task: small-local-visual-assistant
+- id: judgment-89e9ac298c376d19
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - vision.question_answering
+  - knowledge.extraction
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Reasonable low-memory candidate for short visual QA, extraction and bounded assistant work.
   confidence: medium
   supporting_evidence_ids:
@@ -135,11 +172,22 @@ capabilities:
   known_failure_modes:
   - Verbose reasoning can dominate latency; small-model factual and complex planning errors.
   evidence_notes: []
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: small-local-visual-assistant
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
 - access-open-qwen3-5-9b-weights
 price_ids: []
-evidence_ids: *id002
+evidence_ids:
+- src-f2036f817d22
+- src-e0a64484787e
+- src-7a37d210463f
 notes: []
 limitations:
 - No model inference or benchmark was run in this research pass.

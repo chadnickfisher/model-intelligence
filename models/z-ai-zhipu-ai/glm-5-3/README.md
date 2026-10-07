@@ -11,6 +11,14 @@
 
 Strong candidate for coding agents and text-based knowledge work with sufficient serving resources.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): agent.long_horizon; coding.repository_work
+
+Judgment ID: judgment-7617cc55522b828a
+
 Conditions: Preserve reasoning/template semantics; compare max effort using complete-task budgets.
 
 Failure modes / limitations: Creator evaluations alter some anti-cheat checks and harnesses; cyber/terminal strengths do not establish visual capability.

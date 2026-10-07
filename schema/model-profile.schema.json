@@ -5,7 +5,7 @@
   "type": "object",
   "properties": {
     "schema_version": {
-      "const": "1.0"
+      "const": "2.0"
     },
     "id": {
       "type": "string",
@@ -400,9 +400,6 @@
       "items": {
         "type": "object",
         "properties": {
-          "task": {
-            "type": "string"
-          },
           "judgment": {
             "type": "string"
           },
@@ -446,17 +443,105 @@
             "items": {
               "type": "string"
             }
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^judgment-[a-f0-9]{16}$"
+          },
+          "scope": {
+            "enum": [
+              "direct",
+              "compound",
+              "unresolved",
+              "performance"
+            ]
+          },
+          "task_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z]+\\.[a-z_]+$"
+            },
+            "uniqueItems": true
+          },
+          "related_task_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z]+\\.[a-z_]+$"
+            },
+            "uniqueItems": true
+          },
+          "assessment": {
+            "enum": [
+              "conditional",
+              "warning",
+              "unknown",
+              "weak"
+            ]
+          },
+          "scope_note": {
+            "type": "string",
+            "minLength": 1
+          },
+          "observed_at": {
+            "type": "string",
+            "format": "date"
+          },
+          "effective_from": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "provenance": {
+            "type": "object",
+            "required": [
+              "migration_id",
+              "original_task",
+              "baseline_commit",
+              "original_position",
+              "history_path"
+            ],
+            "properties": {
+              "migration_id": {
+                "type": "string"
+              },
+              "original_task": {
+                "type": "string"
+              },
+              "baseline_commit": {
+                "type": "string"
+              },
+              "original_position": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "history_path": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
           }
         },
         "required": [
-          "task",
           "judgment",
           "confidence",
           "supporting_evidence_ids",
           "contradictory_evidence_ids",
           "conditions",
           "known_failure_modes",
-          "evidence_notes"
+          "evidence_notes",
+          "id",
+          "scope",
+          "task_ids",
+          "related_task_ids",
+          "assessment",
+          "scope_note",
+          "observed_at",
+          "effective_from",
+          "provenance"
         ],
         "additionalProperties": false
       }
@@ -466,9 +551,6 @@
       "items": {
         "type": "object",
         "properties": {
-          "task": {
-            "type": "string"
-          },
           "judgment": {
             "type": "string"
           },
@@ -512,17 +594,105 @@
             "items": {
               "type": "string"
             }
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^judgment-[a-f0-9]{16}$"
+          },
+          "scope": {
+            "enum": [
+              "direct",
+              "compound",
+              "unresolved",
+              "performance"
+            ]
+          },
+          "task_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z]+\\.[a-z_]+$"
+            },
+            "uniqueItems": true
+          },
+          "related_task_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z]+\\.[a-z_]+$"
+            },
+            "uniqueItems": true
+          },
+          "assessment": {
+            "enum": [
+              "conditional",
+              "warning",
+              "unknown",
+              "weak"
+            ]
+          },
+          "scope_note": {
+            "type": "string",
+            "minLength": 1
+          },
+          "observed_at": {
+            "type": "string",
+            "format": "date"
+          },
+          "effective_from": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "provenance": {
+            "type": "object",
+            "required": [
+              "migration_id",
+              "original_task",
+              "baseline_commit",
+              "original_position",
+              "history_path"
+            ],
+            "properties": {
+              "migration_id": {
+                "type": "string"
+              },
+              "original_task": {
+                "type": "string"
+              },
+              "baseline_commit": {
+                "type": "string"
+              },
+              "original_position": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "history_path": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
           }
         },
         "required": [
-          "task",
           "judgment",
           "confidence",
           "supporting_evidence_ids",
           "contradictory_evidence_ids",
           "conditions",
           "known_failure_modes",
-          "evidence_notes"
+          "evidence_notes",
+          "id",
+          "scope",
+          "task_ids",
+          "related_task_ids",
+          "assessment",
+          "scope_note",
+          "observed_at",
+          "effective_from",
+          "provenance"
         ],
         "additionalProperties": false
       }

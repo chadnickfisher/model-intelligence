@@ -11,6 +11,14 @@
 
 Officially supersedes Preview and remains a capable text-agent option.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): coding.repository_work; reasoning.general
+
+Judgment ID: judgment-790070519743c4cd
+
 Conditions: Use 0813 evidence, not April preview scores; reasoning low/high/max changes behavior.
 
 Failure modes / limitations: Text-only; system-level results depend on DeepSeek Harness; no independent checkpoint-matched test established here.

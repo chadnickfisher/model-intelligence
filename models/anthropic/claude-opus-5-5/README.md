@@ -11,6 +11,14 @@
 
 Strong balanced candidate for sustained open-ended professional work.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): coding.repository_work; research.synthesis
+
+Judgment ID: judgment-a58a16e37a99fdcb
+
 Conditions: Independent benchmark harness; default fallback makes this a served configuration, not isolated weights.
 
 Failure modes / limitations: Cited Terminal-Bench4.0 all-tests-pass result leaves about40% of tasks unsuccessful.

@@ -11,6 +11,14 @@
 
 Useful responsive model when limited task scope and validation matter.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): coding.scoped_edit; language.instruction_following
+
+Judgment ID: judgment-86b4ad915dcef6a0
+
 Conditions: Vendor partner testimonials are selected marketing evidence, not independent controlled replications.
 
 Failure modes / limitations: Low cited non-reasoning HLE and AA-LCR performance; specific errors not categorized in retrieved page.

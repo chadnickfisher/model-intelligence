@@ -11,6 +11,14 @@
 
 A compact specialist candidate for charts, visual math and GUI element grounding.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): reasoning.math; vision.question_answering; vision.grounding
+
+Judgment ID: judgment-3947e022646bea11
+
 Conditions: English-focused; selective thinking can save compute but benchmark all required task types.
 
 Failure modes / limitations: 16k window; hallucination/visual reasoning limitations; independent matched evaluation not verified.

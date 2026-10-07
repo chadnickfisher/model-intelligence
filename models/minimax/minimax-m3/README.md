@@ -11,6 +11,14 @@
 
 A candidate for cost-sensitive image/video coding and work agents; compare using the >512k price band when relevant.
 
+Scope: compound / conditional. Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): coding.repository_work; agent.tool_use; context.reasoning
+
+Judgment ID: judgment-733be35f32bab45e
+
 Conditions: Thinking can be enabled, adaptive or disabled; paid hosting terms are separate from weight license.
 
 Failure modes / limitations: Long-context requests cost more; reported attention speedups are creator comparisons against M2, not universal application speedups.

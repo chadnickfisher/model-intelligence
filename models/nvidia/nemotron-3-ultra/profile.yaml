@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: nemotron-3-ultra
 verified_at: '2026-10-06'
 identity:
@@ -15,8 +15,8 @@ specifications:
   architecture:
     value: Mamba2 / attention hybrid LatentMoE with MTP
     status: documented
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-58bf94c165a9
     - src-c5a0afc263f8
     - src-9950acce03ed
@@ -27,8 +27,11 @@ specifications:
       scope: creator-declared count; see notes
       exact_parameter_count: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-58bf94c165a9
+    - src-c5a0afc263f8
+    - src-9950acce03ed
   context_window:
     value:
       native_tokens: 1048576
@@ -36,13 +39,19 @@ specifications:
       max_output_tokens: null
       notes: Input plus generated output share capacity. Endpoint limits can differ.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-58bf94c165a9
+    - src-c5a0afc263f8
+    - src-9950acce03ed
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-58bf94c165a9
+    - src-c5a0afc263f8
+    - src-9950acce03ed
   modalities:
     value:
       input:
@@ -50,8 +59,11 @@ specifications:
       output:
       - text
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-58bf94c165a9
+    - src-c5a0afc263f8
+    - src-9950acce03ed
   language_support:
     value:
       supported:
@@ -67,8 +79,11 @@ specifications:
       - Chinese
       notes: Creator-declared supported languages.
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-58bf94c165a9
+    - src-c5a0afc263f8
+    - src-9950acce03ed
 additional_specifications:
   weights:
     value:
@@ -79,8 +94,11 @@ additional_specifications:
       - NVFP4 separate checkpoint
       gate: null
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-58bf94c165a9
+    - src-c5a0afc263f8
+    - src-9950acce03ed
   weight_only_floor_decimal_gb:
     value:
       bf16: 1100
@@ -94,13 +112,16 @@ additional_specifications:
     - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate
       storage of inactive experts.
     - Published maximum context is not a guarantee it fits on the suggested local machine.
-    evidence_ids: &id003
+    evidence_ids:
     - src-c5a0afc263f8
   release_date_precision:
     value: day
     status: documented
     conditions: []
-    evidence_ids: *id002
+    evidence_ids:
+    - src-58bf94c165a9
+    - src-c5a0afc263f8
+    - src-9950acce03ed
 licensing:
   name: OpenMDW-1.1
   commercial_use: allowed
@@ -128,9 +149,16 @@ local_inference:
   - Offloading changes RAM/VRAM allocation and throughput; low active parameter count does not eliminate storage
     of inactive experts.
   - Published maximum context is not a guarantee it fits on the suggested local machine.
-  evidence_ids: *id003
-capabilities:
-- task: high-throughput-text-agents
+  evidence_ids:
+  - src-c5a0afc263f8
+capabilities: []
+performance_characteristics:
+- id: judgment-dfd880eb4d1991c5
+  scope: performance
+  task_ids: []
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Cost, deployment or throughput observation; not a task capability.
   judgment: A strong deployment candidate for low-latency text agents on suitable NVIDIA infrastructure.
   confidence: medium
   supporting_evidence_ids:
@@ -143,11 +171,21 @@ capabilities:
   known_failure_modes:
   - High-end math/physics reasoning still weak on some tasks; no native vision input.
   evidence_notes: []
-performance_characteristics: []
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: high-throughput-text-agents
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 access_ids:
 - access-open-nemotron-3-ultra-weights
 price_ids: []
-evidence_ids: *id002
+evidence_ids:
+- src-58bf94c165a9
+- src-c5a0afc263f8
+- src-9950acce03ed
 notes:
 - Creator releases training data and recipes in addition to weights; completeness of full reproducible training
   source was not audited.

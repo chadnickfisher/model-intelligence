@@ -1,4 +1,4 @@
-schema_version: '1.0'
+schema_version: '2.0'
 id: bfl-flux3-video
 verified_at: '2026-10-06'
 identity:
@@ -15,25 +15,31 @@ specifications:
   architecture:
     value: null
     status: unknown
-    conditions: &id001 []
-    evidence_ids: &id002
+    conditions: []
+    evidence_ids:
     - src-57a05c45a0b1
     - src-752c7dd560da
   parameters:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-57a05c45a0b1
+    - src-752c7dd560da
   context_window:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-57a05c45a0b1
+    - src-752c7dd560da
   maximum_output:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-57a05c45a0b1
+    - src-752c7dd560da
   modalities:
     value:
       input:
@@ -44,52 +50,70 @@ specifications:
       - video
       - synchronized audio
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-57a05c45a0b1
+    - src-752c7dd560da
   language_support:
     value: null
     status: unknown
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-57a05c45a0b1
+    - src-752c7dd560da
 additional_specifications:
   max_video_seconds:
     value: 20
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-57a05c45a0b1
+    - src-752c7dd560da
   max_resolution:
     value: 3840 x 2176 (16:9 UHD)
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-57a05c45a0b1
+    - src-752c7dd560da
   fps:
     value: 24
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-57a05c45a0b1
+    - src-752c7dd560da
   modes:
     value:
     - t2v
     - i2v
     - v2v
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-57a05c45a0b1
+    - src-752c7dd560da
   reference_keyframes_max:
     value: 10
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-57a05c45a0b1
+    - src-752c7dd560da
   api_alias:
     value: flux-3-video
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-57a05c45a0b1
+    - src-752c7dd560da
   weights:
     value: hosted_video_model; separate Action open-weight mode not evaluated
     status: documented
-    conditions: *id001
-    evidence_ids: *id002
+    conditions: []
+    evidence_ids:
+    - src-57a05c45a0b1
+    - src-752c7dd560da
 licensing:
   name: API service terms; no blanket open-source claim
   commercial_use: null
@@ -97,14 +121,25 @@ licensing:
   fine_tuning: null
   hosted_service: null
   restrictions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-57a05c45a0b1
+  - src-752c7dd560da
 local_inference:
   availability: unknown
   hardware_notes: []
   conditions: []
-  evidence_ids: *id002
+  evidence_ids:
+  - src-57a05c45a0b1
+  - src-752c7dd560da
 capabilities:
-- task: short-audiovisual-generation-and-keyframed-continuation
+- id: judgment-da95efcb747baa7e
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - video.generation
+  - audio.speech_generation
+  assessment: conditional
+  scope_note: Original bundle retained as one claim. Related tasks are navigation, not individual conclusions.
   judgment: Feature-rich candidate where synchronized sound and pinned frames matter; quality judgment remains
     low confidence without independent testing.
   confidence: low
@@ -116,12 +151,22 @@ capabilities:
   evidence_notes:
   - 'Observation obs-aa0038a13410: Short audiovisual generation, pinned keyframes and continuation capabilities
     publicly documented.'
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    migration_id: capabilities-2026-10-07
+    original_task: short-audiovisual-generation-and-keyframed-continuation
+    baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
+    original_position: 0
+    history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids: []
 price_ids:
 - price-providers-bfl-flux3-video-bfl-772aa13dfb82
 - price-providers-bfl-flux3-video-bfl-c4a4dfe8876e
-evidence_ids: *id002
+evidence_ids:
+- src-57a05c45a0b1
+- src-752c7dd560da
 notes: []
 limitations:
 - Preview can change.
