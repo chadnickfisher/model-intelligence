@@ -338,17 +338,24 @@ capabilities:
   assessment: conditional
   scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
   judgment: Useful validated-review candidate; more effort changes recall and noise rather than improving both.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-a0149a24853a
   contradictory_evidence_ids: []
   conditions:
   - Use the recorded CodeRabbit pipeline mixes; verify on representative PRs.
   - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  - Standard and Max combine multiple pipeline effort settings rather than one API effort.
+  - Actionable-only recall excludes valid findings outside changed lines; aggregate gains hide different missed
+    bugs.
   known_failure_modes:
   - Known bugs missed; many actionable comments did not pass the judge.
   evidence_notes:
   - Confidence concerns this bounded claim, not a capability score.
+  - CodeRabbit evaluated 80 common OSS bug patterns and 13 harder Signal cases; higher effort did not consistently
+    improve review quality.
+  - Low confidence reflects the inspected evaluator, corpus/pipeline dependence and unpublished replication
+    inputs; it is not a low ability rating.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -364,6 +371,7 @@ access_ids:
 - access-80726a4797297727
 - access-88060cd75ad9c4fd
 - access-a5b96dc5b68f2bb1
+- access-c705739827b0670f
 - access-e54a01965f6e1cf1
 - access-efe64fb09d83013c
 - access-proprietary-access-16

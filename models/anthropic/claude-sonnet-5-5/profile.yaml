@@ -374,17 +374,23 @@ capabilities:
   assessment: conditional
   scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
   judgment: Promising faster review option, with weaker hard-case coverage than Opus 5.5 in the matched subset.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-f0ec48c0d013
   contradictory_evidence_ids: []
   conditions:
   - Quality conclusion limited to judged Signal cases.
   - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  - Thinking toggles apply across a mixed-effort review pipeline; smaller models handle summaries and verification.
+  - The larger OSS run supports latency and comment volume only while judge scoring is pending.
   known_failure_modes:
   - Do not treat unjudged OSS comment reductions as quality gains.
   evidence_notes:
   - Confidence concerns this bounded claim, not a capability score.
+  - CodeRabbit judged 13 Signal cases; thinking-on caught 6 while thinking-off caught 5. The 44-PR OSS run
+    still lacked quality scoring.
+  - Low confidence reflects the inspected evaluator, corpus/pipeline dependence and unpublished replication
+    inputs; it is not a low ability rating.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -428,6 +434,7 @@ performance_characteristics:
 access_ids:
 - access-3f77ae5286ee9409
 - access-7a57b99f53529297
+- access-9bb1c08c0f723360
 - access-b81c493a57c47077
 - access-bc02766c2fbe0c2e
 - access-c32876dd4871b040

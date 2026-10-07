@@ -875,3 +875,187 @@ records:
     canonical_path: data/task-assessments.yaml
     operation: add
   id: change-49d5d89988e0eec8
+- observed_at: '2026-10-07'
+  summary: Correct Anthropic price uncertainty, Foundry hosting conditions and bounded review evidence; full
+    catalog review remains pending
+  evidence_ids:
+  - src-2f822bc8e7fe
+  - src-4e3ca8a95d36
+  - src-50846cd1ff36
+  - src-752375ff0c97
+  - src-a0149a24853a
+  - src-dc337252fd3b
+  - src-f0ec48c0d013
+  changed_entities:
+  - entity_type: access
+    entity_id: access-48aed6747f506833
+    canonical_path: data/access.yaml
+    operation: update
+  - entity_type: access
+    entity_id: access-568f8734df706003
+    canonical_path: data/access.yaml
+    operation: update
+  - entity_type: access
+    entity_id: access-9bb1c08c0f723360
+    canonical_path: data/access.yaml
+    operation: add
+  - entity_type: access
+    entity_id: access-c705739827b0670f
+    canonical_path: data/access.yaml
+    operation: add
+  - entity_type: access
+    entity_id: access-d68727250fd716dc
+    canonical_path: data/access.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-349d571fb75c9f5b
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-c295246b6af2937c
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: model
+    entity_id: claude-fable-5-1
+    canonical_path: models/anthropic/claude-fable-5-1/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: claude-opus-5-5
+    canonical_path: models/anthropic/claude-opus-5-5/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: claude-sonnet-5-5
+    canonical_path: models/anthropic/claude-sonnet-5-5/profile.yaml
+    operation: update
+  - entity_type: price
+    entity_id: price-proprietary-claude-fable-5-1-anthropic-1c9e85bc3ee3
+    canonical_path: data/pricing.yaml
+    operation: update
+  - entity_type: price
+    entity_id: price-proprietary-claude-fable-5-1-anthropic-d31f844e1fa5
+    canonical_path: data/pricing.yaml
+    operation: update
+  - entity_type: price
+    entity_id: price-proprietary-claude-opus-5-5-anthropic-a9d5d3dc77e4
+    canonical_path: data/pricing.yaml
+    operation: update
+  - entity_type: price
+    entity_id: price-proprietary-claude-opus-5-5-anthropic-c64de5cd2551
+    canonical_path: data/pricing.yaml
+    operation: update
+  - entity_type: price
+    entity_id: price-proprietary-claude-sonnet-5-5-anthropic-706ffb2ac9c2
+    canonical_path: data/pricing.yaml
+    operation: update
+  - entity_type: price
+    entity_id: price-proprietary-claude-sonnet-5-5-anthropic-ed2559301c6f
+    canonical_path: data/pricing.yaml
+    operation: update
+  - entity_type: research_coverage
+    entity_id: research-coverage-claude-fable-5-1-access-pricing
+    canonical_path: data/research-coverage.yaml
+    operation: update
+  - entity_type: research_coverage
+    entity_id: research-coverage-claude-fable-5-1-benchmarks
+    canonical_path: data/research-coverage.yaml
+    operation: update
+  - entity_type: research_coverage
+    entity_id: research-coverage-claude-fable-5-1-capabilities
+    canonical_path: data/research-coverage.yaml
+    operation: update
+  - entity_type: research_coverage
+    entity_id: research-coverage-claude-opus-5-5-access-pricing
+    canonical_path: data/research-coverage.yaml
+    operation: update
+  - entity_type: research_coverage
+    entity_id: research-coverage-claude-opus-5-5-benchmarks
+    canonical_path: data/research-coverage.yaml
+    operation: update
+  - entity_type: research_coverage
+    entity_id: research-coverage-claude-opus-5-5-capabilities
+    canonical_path: data/research-coverage.yaml
+    operation: update
+  - entity_type: research_coverage
+    entity_id: research-coverage-claude-sonnet-5-5-access-pricing
+    canonical_path: data/research-coverage.yaml
+    operation: update
+  - entity_type: research_coverage
+    entity_id: research-coverage-claude-sonnet-5-5-benchmarks
+    canonical_path: data/research-coverage.yaml
+    operation: update
+  - entity_type: research_coverage
+    entity_id: research-coverage-claude-sonnet-5-5-capabilities
+    canonical_path: data/research-coverage.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-50846cd1ff36
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-752375ff0c97
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-dc337252fd3b
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-659e8986461ba44d
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-67a65e885b931721
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-810abaab83618943
+    canonical_path: data/task-assessments.yaml
+    operation: add
+  id: change-cdb203787f7a8913
+- observed_at: '2026-10-07'
+  summary: Propagate unresolved Sonnet cache tariff across Anthropic-rated routes and clarify reviewed evidence
+    scope
+  evidence_ids:
+  - src-2f822bc8e7fe
+  - src-50846cd1ff36
+  - src-752375ff0c97
+  - src-a0149a24853a
+  - src-f0ec48c0d013
+  changed_entities:
+  - entity_type: access
+    entity_id: access-3f77ae5286ee9409
+    canonical_path: data/access.yaml
+    operation: update
+  - entity_type: access
+    entity_id: access-b81c493a57c47077
+    canonical_path: data/access.yaml
+    operation: update
+  - entity_type: access
+    entity_id: access-bc02766c2fbe0c2e
+    canonical_path: data/access.yaml
+    operation: update
+  - entity_type: model
+    entity_id: claude-fable-5-1
+    canonical_path: models/anthropic/claude-fable-5-1/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: claude-opus-5-5
+    canonical_path: models/anthropic/claude-opus-5-5/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: claude-sonnet-5-5
+    canonical_path: models/anthropic/claude-sonnet-5-5/profile.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-659e8986461ba44d
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-67a65e885b931721
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-810abaab83618943
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  id: change-41464733b7ea1d7d

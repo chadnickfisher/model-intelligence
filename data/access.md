@@ -152,7 +152,7 @@ Generated from canonical YAML. Units, route conditions and dates are essential.
 | claude-fable-5-1 | aws-bedrock | hosted_api | officially_documented_not_execution_tested; Not established in this pass |
 | claude-fable-5-1 | google-cloud | hosted_api | officially_documented_not_execution_tested; Not established in this pass |
 | claude-fable-5-1 | claude-platform-on-aws | hosted_api | officially_documented_not_execution_tested; Not established in this pass |
-| claude-fable-5-1 | azure-foundry | hosted_api | officially_documented_not_execution_tested; Not established in this pass |
+| claude-fable-5-1 | azure-foundry | hosted_api | officially_documented_not_execution_tested; Message Batches, Models API and server-side fallback are unsupported on Foundry.; New computer/browser toolsets are unsupported; older beta computer tools are separate. |
 | claude-fable-5-1 | anthropic | client_product; subscription_client | Conditional consumer/client product; exact account entitlement unverified; Full model IDs can be selected subject to plan and organization permissions. Separate subscription sign-in from API-key/partner billing. |
 | claude-fable-5-1 | anthropic | client_product; chat_app; subscription_client | Conditional consumer/client product; exact account entitlement unverified; All paid plans can access, with materially different inclusion: Max and premium Team/legacy Enterprise seats include up to 50% of shared weekly usage; Pro and standard Team/legacy Enterprise seats use usage credits from first request. |
 | claude-fable-5-1 | anthropic | client_product; subscription_client | Conditional consumer/client product; exact account entitlement unverified; Seat fee plus usage at API rates; this is a separately evidenced metered client route. |
@@ -168,7 +168,7 @@ Generated from canonical YAML. Units, route conditions and dates are essential.
 | claude-opus-5-5 | aws-bedrock | hosted_api | officially_documented_not_execution_tested; Not established in this pass |
 | claude-opus-5-5 | google-cloud | hosted_api | officially_documented_not_execution_tested; Not established in this pass |
 | claude-opus-5-5 | claude-platform-on-aws | hosted_api | officially_documented_not_execution_tested; Not established in this pass |
-| claude-opus-5-5 | azure-foundry | hosted_api | officially_documented_not_execution_tested; Not established in this pass |
+| claude-opus-5-5 | azure-foundry | hosted_api | officially_documented_not_execution_tested; Message Batches, Models API and server-side fallback are unsupported on Foundry.; New computer/browser toolsets are unsupported; older beta computer tools are separate.; Code execution, Files API, Agent Skills and programmatic tool calling are unsupported on Azure hosting.; Azure hosting permits only basic web_search_20250305 and web_fetch_20250910 tools. |
 | claude-opus-5-5 | anthropic | client_product; subscription_client | Conditional consumer/client product; exact account entitlement unverified; Full model IDs can be selected subject to plan and organization permissions. Separate subscription sign-in from API-key/partner billing. |
 | claude-opus-5-5 | anthropic | client_product; chat_app; subscription_client | Conditional consumer/client product; exact account entitlement unverified; Pro, Max, Team and Enterprise; no Free Opus entitlement. |
 | claude-opus-5-5 | anthropic | client_product; subscription_client | Conditional consumer/client product; exact account entitlement unverified; Seat fee plus usage at API rates; this is a separately evidenced metered client route. |
@@ -176,7 +176,7 @@ Generated from canonical YAML. Units, route conditions and dates are essential.
 | claude-sonnet-5-5 | aws-bedrock | hosted_api | officially_documented_not_execution_tested; Not established in this pass |
 | claude-sonnet-5-5 | google-cloud | hosted_api | officially_documented_not_execution_tested; Not established in this pass |
 | claude-sonnet-5-5 | claude-platform-on-aws | hosted_api | officially_documented_not_execution_tested; Not established in this pass |
-| claude-sonnet-5-5 | azure-foundry | hosted_api | officially_documented_not_execution_tested; Not established in this pass |
+| claude-sonnet-5-5 | azure-foundry | hosted_api | officially_documented_not_execution_tested; Message Batches, Models API and server-side fallback are unsupported on Foundry.; New computer/browser toolsets are unsupported; older beta computer tools are separate.; Code execution, Files API, Agent Skills and programmatic tool calling are unsupported on Azure hosting.; Azure hosting permits only basic web_search_20250305 and web_fetch_20250910 tools.; Sonnet 5.5 supports Global Standard only; US Data Zone is unavailable. |
 | claude-sonnet-5-5 | anthropic | client_product; subscription_client | Conditional consumer/client product; exact account entitlement unverified; Full model IDs can be selected subject to plan and organization permissions. Separate subscription sign-in from API-key/partner billing. |
 | claude-sonnet-5-5 | anthropic | client_product; chat_app; subscription_client | Conditional consumer/client product; exact account entitlement unverified; 5.5 app model is documented; current plan table lists Sonnet for Free and paid plans. Exact Free picker routing/remaining allowance not verified. |
 | claude-sonnet-5-5 | anthropic | client_product; subscription_client | Conditional consumer/client product; exact account entitlement unverified; Seat fee plus usage at API rates; this is a separately evidenced metered client route. |
@@ -326,5 +326,7 @@ Generated from canonical YAML. Units, route conditions and dates are essential.
 | claude-haiku-5-5 | azure-foundry | API | Active; Exact account quota, entitlement and negotiated conditions unknown. |
 | claude-haiku-5-5 | azure-foundry | API | Active; Exact account quota, entitlement and negotiated conditions unknown. |
 | claude-haiku-5-5 | claude-platform-on-aws | API | Active; Exact account quota, entitlement and negotiated conditions unknown. |
+| claude-opus-5-5 | azure-foundry | hosted_api | officially_documented_not_execution_tested; Message Batches, Models API and server-side fallback are unsupported on Foundry.; New computer/browser toolsets are unsupported; older beta computer tools are separate. |
+| claude-sonnet-5-5 | azure-foundry | hosted_api | officially_documented_not_execution_tested; Message Batches, Models API and server-side fallback are unsupported on Foundry.; New computer/browser toolsets are unsupported; older beta computer tools are separate. |
 
 [Canonical records with evidence and all conditions](access.yaml)

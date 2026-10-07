@@ -111,3 +111,11 @@ records:
   - src-4b5fc50d9047
   - src-1dac5785145f
   verified_at: '2026-10-06'
+- id: conflict-348c3fd8aac7
+  summary: 'Conflicting current documentation: Sonnet 5.5 overview and pricing table list USD 0.20 per million
+    cache-read tokens; pricing-page multiplier section says USD 0.10. Actual billed rate unresolved.'
+  evidence_ids:
+  - src-752375ff0c97
+  - src-50846cd1ff36
+  - src-4e3ca8a95d36
+  verified_at: '2026-10-07'

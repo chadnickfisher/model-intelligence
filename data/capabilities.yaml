@@ -642,7 +642,7 @@ records:
   assessment: conditional
   scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
   judgment: Can surface known issues but needs validation; lower tested effort was preferable in this pipeline.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-2f822bc8e7fe
   - src-3df062ca530b
@@ -650,10 +650,16 @@ records:
   conditions:
   - Separate tiny rule checking from open-ended review.
   - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  - Low/High are evaluator pipeline configurations, not established single API effort values.
+  - The evaluation corpus and scoring pipeline limit external reproducibility.
   known_failure_modes:
   - Substantial judge-rejected commentary and misses; higher reasoning did not improve aggregate results.
   evidence_notes:
   - Confidence concerns this bounded claim, not a capability score.
+  - CodeRabbit evaluated 45 review tasks with 105 known issues; lower and higher configurations traded recall,
+    precision and comment load.
+  - Low confidence reflects the inspected evaluator, corpus/pipeline dependence and unpublished replication
+    inputs; it is not a low ability rating.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -1420,17 +1426,24 @@ records:
   assessment: conditional
   scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
   judgment: Useful validated-review candidate; more effort changes recall and noise rather than improving both.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-a0149a24853a
   contradictory_evidence_ids: []
   conditions:
   - Use the recorded CodeRabbit pipeline mixes; verify on representative PRs.
   - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  - Standard and Max combine multiple pipeline effort settings rather than one API effort.
+  - Actionable-only recall excludes valid findings outside changed lines; aggregate gains hide different missed
+    bugs.
   known_failure_modes:
   - Known bugs missed; many actionable comments did not pass the judge.
   evidence_notes:
   - Confidence concerns this bounded claim, not a capability score.
+  - CodeRabbit evaluated 80 common OSS bug patterns and 13 harder Signal cases; higher effort did not consistently
+    improve review quality.
+  - Low confidence reflects the inspected evaluator, corpus/pipeline dependence and unpublished replication
+    inputs; it is not a low ability rating.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:
@@ -1614,17 +1627,23 @@ records:
   assessment: conditional
   scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
   judgment: Promising faster review option, with weaker hard-case coverage than Opus 5.5 in the matched subset.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-f0ec48c0d013
   contradictory_evidence_ids: []
   conditions:
   - Quality conclusion limited to judged Signal cases.
   - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  - Thinking toggles apply across a mixed-effort review pipeline; smaller models handle summaries and verification.
+  - The larger OSS run supports latency and comment volume only while judge scoring is pending.
   known_failure_modes:
   - Do not treat unjudged OSS comment reductions as quality gains.
   evidence_notes:
   - Confidence concerns this bounded claim, not a capability score.
+  - CodeRabbit judged 13 Signal cases; thinking-on caught 6 while thinking-off caught 5. The 44-PR OSS run
+    still lacked quality scoring.
+  - Low confidence reflects the inspected evaluator, corpus/pipeline dependence and unpublished replication
+    inputs; it is not a low ability rating.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:

@@ -825,7 +825,9 @@ records:
   - caching and batch pricing reference
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
-  limitations: []
+  limitations:
+  - Sonnet 5.5 cache-read tariff is inconsistent between the current pricing table/overview and the pricing-page
+    multiplier prose.
 - id: src-521c059d5d6a
   url: https://ai.google.dev/gemini-api/docs/models/veo-3.1-generate-preview
   title: Veo 3.1 API model documentation
@@ -1305,7 +1307,9 @@ records:
   - migration restrictions
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
-  limitations: []
+  limitations:
+  - Sonnet 5.5 cache-read tariff is inconsistent between the current pricing table/overview and the pricing-page
+    multiplier prose.
 - id: src-752c7dd560da
   url: https://docs.bfl.ai/quick_start/pricing
   title: null
@@ -7363,7 +7367,7 @@ records:
   - Claude on google-cloud
 - id: src-dc337252fd3b
   url: https://platform.claude.com/docs/en/build-with-claude/claude-in-microsoft-foundry
-  title: Claude on azure-foundry
+  title: Claude in Microsoft Foundry
   publisher: Anthropic
   source_type: primary
   published_at: null

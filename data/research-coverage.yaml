@@ -264,108 +264,54 @@ records:
   id: research-coverage-claude-fable-5-1-capabilities
   model_id: claude-fable-5-1
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
+  research_batch_id: anthropic-source-review-2026-10-07
   checked_at: '2026-10-07'
   result: changed
   evidence_ids:
-  - src-02b09208ceab
-  - src-0b72694a5dea
-  - src-2bf9d5fecb2c
   - src-2f822bc8e7fe
-  - src-3df062ca530b
-  - src-4e6f4ff35504
-  - src-ad78a04807f9
-  - src-b6ffa931564a
-  - src-c7eceee3e7d1
   search_references: []
   scope_notes:
-  - Targeted coding evidence and configuration/confidence review; other modalities/tasks not re-investigated.
+  - Reviewed original code-review evaluation and confidence rationale. Other judgments and benchmark records
+    carry forward without refreshed verification.
   remaining_gaps:
-  - No universal ability score; missing exact harness, effort or immutable checkpoint stays unknown.
-  - Unlisted tasks lack sufficient exact-release evidence.
+  - Full-load field and all-task assessment remain pending.
+  - Missing harness, tools, measurement dates and exact reproduction remain unknown.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-claude-fable-5-1-benchmarks
   model_id: claude-fable-5-1
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
+  research_batch_id: anthropic-source-review-2026-10-07
   checked_at: '2026-10-07'
   result: changed
   evidence_ids:
-  - src-02b09208ceab
-  - src-0b72694a5dea
-  - src-2bf9d5fecb2c
   - src-2f822bc8e7fe
-  - src-3df062ca530b
-  - src-4e6f4ff35504
-  - src-ad78a04807f9
-  - src-b6ffa931564a
-  - src-c7eceee3e7d1
   search_references: []
   scope_notes:
-  - Targeted coding evidence and configuration/confidence review; other modalities/tasks not re-investigated.
+  - Reviewed original code-review evaluation and confidence rationale. Other judgments and benchmark records
+    carry forward without refreshed verification.
   remaining_gaps:
-  - No universal ability score; missing exact harness, effort or immutable checkpoint stays unknown.
-  - Unlisted tasks lack sufficient exact-release evidence.
+  - Full-load field and all-task assessment remain pending.
+  - Missing harness, tools, measurement dates and exact reproduction remain unknown.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-claude-fable-5-1-access-pricing
   model_id: claude-fable-5-1
   domain: access_pricing
-  research_batch_id: public-research-2026-10-07
+  research_batch_id: anthropic-source-review-2026-10-07
   checked_at: '2026-10-07'
   result: changed
   evidence_ids:
-  - src-ad9aa6f1b8ed
+  - src-dc337252fd3b
   - src-50846cd1ff36
-  - src-58333316475e
-  - src-26606ff14841
-  - src-b2ab15dd01eb
-  - src-f61234c4ee64
-  - src-294ac6d01ed0
-  - src-2f9ece653a0f
-  - src-f1078602a2b4
-  - src-9b374de3e978
+  - src-ad9aa6f1b8ed
   search_references: []
   scope_notes:
-  - All-catalog public primary-source route investigation; not exhaustive global provider/account entitlement
-    verification.
+  - Targeted first-party rates and Foundry hosting/billing corrections. Other providers, subscriptions and
+    limits retain prior checks.
   remaining_gaps:
-  - Individual account access, live remaining quotas, partner discounts and all-region coverage not tested.
-  - Exact numeric Bedrock tariffs not recoverable from checked page; leave unknown rather than importing Anthropic
-    rates.
-  - '{"access_id": "access-proprietary-access-22-0", "action": "split_subscription_BYOK_and_metered_client_context",
-    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-fable-5-1-anthropic-1c9e85bc3ee3",
-    "price-proprietary-claude-fable-5-1-anthropic-d31f844e1fa5"], "methods": ["CLI"], "model_id": "claude-fable-5-1",
-    "product": "Claude Code terminal", "reason": "Claude subscription sign-in, API-key billing, partner billing,
-    included usage and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage;
-    batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan", "a-plans", "a-price",
-    "a-fable-plan"], "specific_correction": "Pro/standard seats do not include Fable 5.1 in base allowance;
-    Max/premium seat inclusion capped at 50% of shared weekly allowance.", "unconditional_join_valid": false,
-    "valid_API_join_only_when": "Anthropic API-key authentication or explicitly documented API-rate Enterprise/usage-credit
-    schedule; not the monthly subscription fee."}'
-  - '{"access_id": "access-proprietary-access-22-ide-0", "action": "split_subscription_BYOK_and_metered_client_context",
-    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-fable-5-1-anthropic-1c9e85bc3ee3",
-    "price-proprietary-claude-fable-5-1-anthropic-d31f844e1fa5"], "methods": ["IDE"], "model_id": "claude-fable-5-1",
-    "product": "Claude Code IDE integrations", "reason": "Claude subscription sign-in, API-key billing, partner
-    billing, included usage and usage credits are distinct. Usage-based Enterprise separately documents API-rate
-    usage; batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan", "a-plans",
-    "a-price", "a-fable-plan"], "specific_correction": "Pro/standard seats do not include Fable 5.1 in base
-    allowance; Max/premium seat inclusion capped at 50% of shared weekly allowance.", "unconditional_join_valid":
-    false, "valid_API_join_only_when": "Anthropic API-key authentication or explicitly documented API-rate
-    Enterprise/usage-credit schedule; not the monthly subscription fee."}'
-  - '{"access_id": "access-proprietary-access-25", "action": "split_subscription_BYOK_and_metered_client_context",
-    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-fable-5-1-anthropic-1c9e85bc3ee3",
-    "price-proprietary-claude-fable-5-1-anthropic-d31f844e1fa5"], "methods": ["chat_subscription"], "model_id":
-    "claude-fable-5-1", "product": "Claude apps", "reason": "Claude subscription sign-in, API-key billing,
-    partner billing, included usage and usage credits are distinct. Usage-based Enterprise separately documents
-    API-rate usage; batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan",
-    "a-plans", "a-price", "a-fable-plan"], "specific_correction": "Pro/standard seats do not include Fable
-    5.1 in base allowance; Max/premium seat inclusion capped at 50% of shared weekly allowance.", "unconditional_join_valid":
-    false, "valid_API_join_only_when": "Anthropic API-key authentication or explicitly documented API-rate
-    Enterprise/usage-credit schedule; not the monthly subscription fee."}'
-  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
-    not silently used in the estimator.
+  - Full-load field and all-task assessment remain pending.
+  - Individual eligibility and account quotas were not tested.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-claude-fable-5-1-behavior
@@ -729,98 +675,54 @@ records:
   id: research-coverage-claude-opus-5-5-capabilities
   model_id: claude-opus-5-5
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
+  research_batch_id: anthropic-source-review-2026-10-07
   checked_at: '2026-10-07'
   result: changed
   evidence_ids:
-  - src-02b09208ceab
-  - src-0b72694a5dea
-  - src-0dd3bed5c7dd
-  - src-2bf9d5fecb2c
-  - src-4e6f4ff35504
   - src-a0149a24853a
-  - src-ad78a04807f9
   search_references: []
   scope_notes:
-  - Targeted coding evidence and configuration/confidence review; other modalities/tasks not re-investigated.
+  - Reviewed original code-review evaluation and confidence rationale. Other judgments and benchmark records
+    carry forward without refreshed verification.
   remaining_gaps:
-  - No universal ability score; missing exact harness, effort or immutable checkpoint stays unknown.
-  - Unlisted tasks lack sufficient exact-release evidence.
+  - Full-load field and all-task assessment remain pending.
+  - Missing harness, tools, measurement dates and exact reproduction remain unknown.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-claude-opus-5-5-benchmarks
   model_id: claude-opus-5-5
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
+  research_batch_id: anthropic-source-review-2026-10-07
   checked_at: '2026-10-07'
   result: changed
   evidence_ids:
-  - src-02b09208ceab
-  - src-0b72694a5dea
-  - src-0dd3bed5c7dd
-  - src-2bf9d5fecb2c
-  - src-4e6f4ff35504
   - src-a0149a24853a
-  - src-ad78a04807f9
   search_references: []
   scope_notes:
-  - Targeted coding evidence and configuration/confidence review; other modalities/tasks not re-investigated.
+  - Reviewed original code-review evaluation and confidence rationale. Other judgments and benchmark records
+    carry forward without refreshed verification.
   remaining_gaps:
-  - No universal ability score; missing exact harness, effort or immutable checkpoint stays unknown.
-  - Unlisted tasks lack sufficient exact-release evidence.
+  - Full-load field and all-task assessment remain pending.
+  - Missing harness, tools, measurement dates and exact reproduction remain unknown.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-claude-opus-5-5-access-pricing
   model_id: claude-opus-5-5
   domain: access_pricing
-  research_batch_id: public-research-2026-10-07
+  research_batch_id: anthropic-source-review-2026-10-07
   checked_at: '2026-10-07'
   result: changed
   evidence_ids:
-  - src-4d070c5c8c67
+  - src-dc337252fd3b
   - src-50846cd1ff36
-  - src-58333316475e
-  - src-26606ff14841
-  - src-b2ab15dd01eb
-  - src-f61234c4ee64
-  - src-1120b9b8680d
-  - src-2f9ece653a0f
-  - src-f1078602a2b4
-  - src-2f9466008c6e
+  - src-4d070c5c8c67
   search_references: []
   scope_notes:
-  - All-catalog public primary-source route investigation; not exhaustive global provider/account entitlement
-    verification.
+  - Targeted first-party rates and Foundry hosting/billing corrections. Other providers, subscriptions and
+    limits retain prior checks.
   remaining_gaps:
-  - Individual account access, live remaining quotas, partner discounts and all-region coverage not tested.
-  - Exact numeric Bedrock tariffs not recoverable from checked page; leave unknown rather than importing Anthropic
-    rates.
-  - '{"access_id": "access-proprietary-access-22-1", "action": "split_subscription_BYOK_and_metered_client_context",
-    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-opus-5-5-anthropic-a9d5d3dc77e4",
-    "price-proprietary-claude-opus-5-5-anthropic-c64de5cd2551"], "methods": ["CLI"], "model_id": "claude-opus-5-5",
-    "product": "Claude Code terminal", "reason": "Claude subscription sign-in, API-key billing, partner billing,
-    included usage and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage;
-    batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan", "a-plans", "a-price"],
-    "unconditional_join_valid": false, "valid_API_join_only_when": "Anthropic API-key authentication or explicitly
-    documented API-rate Enterprise/usage-credit schedule; not the monthly subscription fee."}'
-  - '{"access_id": "access-proprietary-access-22-ide-1", "action": "split_subscription_BYOK_and_metered_client_context",
-    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-opus-5-5-anthropic-a9d5d3dc77e4",
-    "price-proprietary-claude-opus-5-5-anthropic-c64de5cd2551"], "methods": ["IDE"], "model_id": "claude-opus-5-5",
-    "product": "Claude Code IDE integrations", "reason": "Claude subscription sign-in, API-key billing, partner
-    billing, included usage and usage credits are distinct. Usage-based Enterprise separately documents API-rate
-    usage; batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan", "a-plans",
-    "a-price"], "unconditional_join_valid": false, "valid_API_join_only_when": "Anthropic API-key authentication
-    or explicitly documented API-rate Enterprise/usage-credit schedule; not the monthly subscription fee."}'
-  - '{"access_id": "access-proprietary-access-24", "action": "split_subscription_BYOK_and_metered_client_context",
-    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-opus-5-5-anthropic-a9d5d3dc77e4",
-    "price-proprietary-claude-opus-5-5-anthropic-c64de5cd2551"], "methods": ["chat_subscription"], "model_id":
-    "claude-opus-5-5", "product": "Claude apps", "reason": "Claude subscription sign-in, API-key billing, partner
-    billing, included usage and usage credits are distinct. Usage-based Enterprise separately documents API-rate
-    usage; batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan", "a-plans",
-    "a-price"], "unconditional_join_valid": false, "valid_API_join_only_when": "Anthropic API-key authentication
-    or explicitly documented API-rate Enterprise/usage-credit schedule; not the monthly subscription fee."}'
-  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
-    not silently used in the estimator.
+  - Full-load field and all-task assessment remain pending.
+  - Individual eligibility and account quotas were not tested.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-claude-opus-5-5-behavior
@@ -846,101 +748,59 @@ records:
   id: research-coverage-claude-sonnet-5-5-capabilities
   model_id: claude-sonnet-5-5
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
+  research_batch_id: anthropic-source-review-2026-10-07
   checked_at: '2026-10-07'
   result: changed
   evidence_ids:
-  - src-02b09208ceab
-  - src-0b72694a5dea
-  - src-2bf9d5fecb2c
-  - src-4e3ca8a95d36
-  - src-4e6f4ff35504
-  - src-ad78a04807f9
   - src-f0ec48c0d013
+  - src-4e3ca8a95d36
   search_references: []
   scope_notes:
-  - Targeted coding evidence and configuration/confidence review; other modalities/tasks not re-investigated.
+  - Reviewed original code-review evaluation and confidence rationale. Other judgments and benchmark records
+    carry forward without refreshed verification.
   remaining_gaps:
-  - No universal ability score; missing exact harness, effort or immutable checkpoint stays unknown.
-  - Unlisted tasks lack sufficient exact-release evidence.
+  - Full-load field and all-task assessment remain pending.
+  - Missing harness, tools, measurement dates and exact reproduction remain unknown.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-claude-sonnet-5-5-benchmarks
   model_id: claude-sonnet-5-5
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
+  research_batch_id: anthropic-source-review-2026-10-07
   checked_at: '2026-10-07'
   result: changed
   evidence_ids:
-  - src-02b09208ceab
-  - src-0b72694a5dea
-  - src-2bf9d5fecb2c
-  - src-4e3ca8a95d36
-  - src-4e6f4ff35504
-  - src-ad78a04807f9
   - src-f0ec48c0d013
+  - src-4e3ca8a95d36
   search_references: []
   scope_notes:
-  - Targeted coding evidence and configuration/confidence review; other modalities/tasks not re-investigated.
+  - Reviewed original code-review evaluation and confidence rationale. Other judgments and benchmark records
+    carry forward without refreshed verification.
+  - Corrected FrontierCode identity and vendor reporting class; retained numeric scores.
   remaining_gaps:
-  - No universal ability score; missing exact harness, effort or immutable checkpoint stays unknown.
-  - Unlisted tasks lack sufficient exact-release evidence.
+  - Full-load field and all-task assessment remain pending.
+  - Missing harness, tools, measurement dates and exact reproduction remain unknown.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-claude-sonnet-5-5-access-pricing
   model_id: claude-sonnet-5-5
   domain: access_pricing
-  research_batch_id: public-research-2026-10-07
+  research_batch_id: anthropic-source-review-2026-10-07
   checked_at: '2026-10-07'
   result: changed
   evidence_ids:
-  - src-752375ff0c97
+  - src-dc337252fd3b
   - src-50846cd1ff36
-  - src-58333316475e
-  - src-26606ff14841
-  - src-b2ab15dd01eb
-  - src-f61234c4ee64
-  - src-0470ca77e23d
-  - src-2f9ece653a0f
-  - src-f1078602a2b4
-  - src-4e3ca8a95d36
-  - src-90f4749affde
-  - src-8d6f49bb7111
+  - src-752375ff0c97
   search_references: []
   scope_notes:
-  - All-catalog public primary-source route investigation; not exhaustive global provider/account entitlement
-    verification.
+  - Targeted first-party rates and Foundry hosting/billing corrections. Other providers, subscriptions and
+    limits retain prior checks.
   remaining_gaps:
-  - Individual account access, live remaining quotas, partner discounts and all-region coverage not tested.
-  - Exact numeric Bedrock tariffs not recoverable from checked page; leave unknown rather than importing Anthropic
-    rates.
-  - '{"access_id": "access-proprietary-access-22-2", "action": "split_subscription_BYOK_and_metered_client_context",
-    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-sonnet-5-5-anthropic-706ffb2ac9c2",
-    "price-proprietary-claude-sonnet-5-5-anthropic-ed2559301c6f"], "methods": ["CLI"], "model_id": "claude-sonnet-5-5",
-    "product": "Claude Code terminal", "reason": "Claude subscription sign-in, API-key billing, partner billing,
-    included usage and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage;
-    batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan", "a-plans", "a-price"],
-    "unconditional_join_valid": false, "valid_API_join_only_when": "Anthropic API-key authentication or explicitly
-    documented API-rate Enterprise/usage-credit schedule; not the monthly subscription fee."}'
-  - '{"access_id": "access-proprietary-access-22-ide-2", "action": "split_subscription_BYOK_and_metered_client_context",
-    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-sonnet-5-5-anthropic-706ffb2ac9c2",
-    "price-proprietary-claude-sonnet-5-5-anthropic-ed2559301c6f"], "methods": ["IDE"], "model_id": "claude-sonnet-5-5",
-    "product": "Claude Code IDE integrations", "reason": "Claude subscription sign-in, API-key billing, partner
-    billing, included usage and usage credits are distinct. Usage-based Enterprise separately documents API-rate
-    usage; batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan", "a-plans",
-    "a-price"], "unconditional_join_valid": false, "valid_API_join_only_when": "Anthropic API-key authentication
-    or explicitly documented API-rate Enterprise/usage-credit schedule; not the monthly subscription fee."}'
-  - '{"access_id": "access-proprietary-access-23-0", "action": "split_subscription_BYOK_and_metered_client_context",
-    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-sonnet-5-5-anthropic-706ffb2ac9c2",
-    "price-proprietary-claude-sonnet-5-5-anthropic-ed2559301c6f"], "methods": ["chat_subscription"], "model_id":
-    "claude-sonnet-5-5", "product": "Claude apps", "reason": "Claude subscription sign-in, API-key billing,
-    partner billing, included usage and usage credits are distinct. Usage-based Enterprise separately documents
-    API-rate usage; batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan",
-    "a-plans", "a-price"], "unconditional_join_valid": false, "valid_API_join_only_when": "Anthropic API-key
-    authentication or explicitly documented API-rate Enterprise/usage-credit schedule; not the monthly subscription
-    fee."}'
-  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
-    not silently used in the estimator.
+  - Full-load field and all-task assessment remain pending.
+  - Individual eligibility and account quotas were not tested.
+  - 'Conflicting current documentation: Sonnet 5.5 overview and pricing table list USD 0.20 per million cache-read
+    tokens; pricing-page multiplier section says USD 0.10. Actual billed rate unresolved.'
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-claude-sonnet-5-5-behavior

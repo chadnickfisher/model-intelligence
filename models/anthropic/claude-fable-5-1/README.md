@@ -95,7 +95,7 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
-### Coding.review (medium confidence)
+### Coding.review (low confidence)
 
 Can surface known issues but needs validation; lower tested effort was preferable in this pipeline.
 
@@ -107,7 +107,7 @@ Related task IDs (navigation only): Not established in this pass
 
 Judgment ID: judgment-cf376fda86010ad5
 
-Conditions: Separate tiny rule checking from open-ended review.; Named release matches; preserve source-specific provider, snapshot and precision limitations.
+Conditions: Separate tiny rule checking from open-ended review.; Named release matches; preserve source-specific provider, snapshot and precision limitations.; Low/High are evaluator pipeline configurations, not established single API effort values.; The evaluation corpus and scoring pipeline limit external reproducibility.
 
 Failure modes / limitations: Substantial judge-rejected commentary and misses; higher reasoning did not improve aggregate results.
 
@@ -115,7 +115,7 @@ Supporting sources: [Fable 5.1 review: Coding tests and code review results](htt
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.; CodeRabbit evaluated 45 review tasks with 105 known issues; lower and higher configurations traded recall, precision and comment load.; Low confidence reflects the inspected evaluator, corpus/pipeline dependence and unpublished replication inputs; it is not a low ability rating.
 
 ### Cache heavy agents (medium confidence)
 
@@ -187,15 +187,15 @@ Local conditions: Not established in this pass
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
-| anthropic | Standard / current | input: 10 USD / per 1 million tokens; output: 50 USD / per 1 million tokens; cached_input: 0.25 USD / per 1 million tokens; cache_write_5m: 12.5 USD / per 1 million tokens; cache_write_1h: 20 USD / per 1 million tokens | Not established in this pass | 2026-10-06 |
-| anthropic | Batch / current | input: 5.0 USD / per 1 million tokens; output: 25.0 USD / per 1 million tokens | Not established in this pass | 2026-10-06 |
+| anthropic | Standard / current | input: 10 USD / per 1 million tokens; output: 50 USD / per 1 million tokens; cached_input: 0.25 USD / per 1 million tokens; cache_write_5m: 12.5 USD / per 1 million tokens; cache_write_1h: 20 USD / per 1 million tokens | Not established in this pass | 2026-10-07 |
+| anthropic | Batch / current | input: 5.0 USD / per 1 million tokens; output: 25.0 USD / per 1 million tokens | Not established in this pass | 2026-10-07 |
 
 ## Recorded access routes
 
 - aws-bedrock / Amazon Bedrock: officially_documented_not_execution_tested. Not established in this pass
 - anthropic / Usage-based Claude Enterprise: Conditional consumer/client product; exact account entitlement unverified. Seat fee plus usage at API rates; this is a separately evidenced metered client route.
 - google-cloud / Gemini Enterprise Agent Platform (formerly Vertex AI): officially_documented_not_execution_tested. Not established in this pass
-- azure-foundry / Claude in Microsoft Foundry: officially_documented_not_execution_tested. Not established in this pass
+- azure-foundry / Claude in Microsoft Foundry / Hosted on Anthropic: officially_documented_not_execution_tested. Message Batches, Models API and server-side fallback are unsupported on Foundry.; New computer/browser toolsets are unsupported; older beta computer tools are separate.
 - anthropic / Claude apps / Cowork / Claude Code: Conditional consumer/client product; exact account entitlement unverified. All paid plans can access, with materially different inclusion: Max and premium Team/legacy Enterprise seats include up to 50% of shared weekly usage; Pro and standard Team/legacy Enterprise seats use usage credits from first request.
 - claude-platform-on-aws / Claude Platform on AWS: officially_documented_not_execution_tested. Not established in this pass
 - anthropic / Claude Code terminal and IDE: Conditional consumer/client product; exact account entitlement unverified. Full model IDs can be selected subject to plan and organization permissions. Separate subscription sign-in from API-key/partner billing.

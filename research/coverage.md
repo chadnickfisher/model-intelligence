@@ -13,7 +13,7 @@ Observed 2026-10-07. This is an inventory date, not a fresh verification date fo
 - capability judgments: 187
 - performance judgments: 13
 - price records: 167
-- access routes: 322
+- access routes: 324
 - public sources: 642
 - evidence observations: 55
 

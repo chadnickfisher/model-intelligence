@@ -1042,7 +1042,7 @@ records:
   notes: []
 - schema_version: '1.0'
   id: price-proprietary-claude-fable-5-1-anthropic-1c9e85bc3ee3
-  verified_at: '2026-10-06'
+  verified_at: '2026-10-07'
   model_id: claude-fable-5-1
   provider_id: anthropic
   product: null
@@ -1089,7 +1089,7 @@ records:
   notes: []
 - schema_version: '1.0'
   id: price-proprietary-claude-fable-5-1-anthropic-d31f844e1fa5
-  verified_at: '2026-10-06'
+  verified_at: '2026-10-07'
   model_id: claude-fable-5-1
   provider_id: anthropic
   product: null
@@ -1121,7 +1121,7 @@ records:
   - 50% input/output discount; cache/tool charges should be checked separately
 - schema_version: '1.0'
   id: price-proprietary-claude-opus-5-5-anthropic-a9d5d3dc77e4
-  verified_at: '2026-10-06'
+  verified_at: '2026-10-07'
   model_id: claude-opus-5-5
   provider_id: anthropic
   product: null
@@ -1168,7 +1168,7 @@ records:
   notes: []
 - schema_version: '1.0'
   id: price-proprietary-claude-opus-5-5-anthropic-c64de5cd2551
-  verified_at: '2026-10-06'
+  verified_at: '2026-10-07'
   model_id: claude-opus-5-5
   provider_id: anthropic
   product: null
@@ -1200,7 +1200,7 @@ records:
   - 50% input/output discount; cache/tool charges should be checked separately
 - schema_version: '1.0'
   id: price-proprietary-claude-sonnet-5-5-anthropic-706ffb2ac9c2
-  verified_at: '2026-10-06'
+  verified_at: '2026-10-07'
   model_id: claude-sonnet-5-5
   provider_id: anthropic
   product: null
@@ -1223,10 +1223,12 @@ records:
     unit: per 1 million tokens
     conditions: []
   - metric: cached_input
-    amount: 0.2
+    amount: null
     currency: USD
     unit: per 1 million tokens
-    conditions: []
+    conditions:
+    - 'Conflicting current documentation: Sonnet 5.5 overview and pricing table list USD 0.20 per million
+      cache-read tokens; pricing-page multiplier section says USD 0.10. Actual billed rate unresolved.'
   - metric: cache_write_5m
     amount: 2.5
     currency: USD
@@ -1247,7 +1249,7 @@ records:
   notes: []
 - schema_version: '1.0'
   id: price-proprietary-claude-sonnet-5-5-anthropic-ed2559301c6f
-  verified_at: '2026-10-06'
+  verified_at: '2026-10-07'
   model_id: claude-sonnet-5-5
   provider_id: anthropic
   product: null

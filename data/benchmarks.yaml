@@ -1132,56 +1132,58 @@ records:
   judgment_ids:
   - judgment-cb9aeb423bbdc834
   benchmark:
-    name: Explicit Edit
-    version: v2
-    metric: max effort model-route score
+    name: FrontierCode
+    version: 1.1 (Main)
+    metric: merge-ready task accuracy
     unit: percent
     direction: higher
   value: 46.2
-  model_version: null
+  model_version: claude-sonnet-5-5
   harness: null
-  effort: null
+  effort: max
   provider_id: null
   tools: null
   measured_at: null
   observed_at: '2026-10-07'
-  evidence_class: independent_quality
+  evidence_class: vendor_claim
   source_ids:
   - src-4e3ca8a95d36
   conditions:
-  - Claude Code FrontierCode1.1; vendor comparison at max versus xhigh.
+  - Anthropic launch-page result for FrontierCode 1.1 main set at max effort.
   limitations:
-  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  - Vendor-reported result; no independently reproduced run inspected.
+  - Exact harness build, tools, provider endpoint and measurement date remain unverified.
   evidence_notes:
-  - '{"max_score": 46.2, "xhigh_score": 52.1}'
+  - Corrected test identity and evidence class from the original reporting page; numeric result unchanged.
 - schema_version: '1.0'
   id: benchmark-c295246b6af2937c
   model_id: claude-sonnet-5-5
   judgment_ids:
   - judgment-cb9aeb423bbdc834
   benchmark:
-    name: Explicit Edit
-    version: v2
-    metric: xhigh effort model-route score
+    name: FrontierCode
+    version: 1.1 (Main)
+    metric: merge-ready task accuracy
     unit: percent
     direction: higher
   value: 52.1
-  model_version: null
+  model_version: claude-sonnet-5-5
   harness: null
-  effort: null
+  effort: xhigh
   provider_id: null
   tools: null
   measured_at: null
   observed_at: '2026-10-07'
-  evidence_class: independent_quality
+  evidence_class: vendor_claim
   source_ids:
   - src-4e3ca8a95d36
   conditions:
-  - Claude Code FrontierCode1.1; vendor comparison at max versus xhigh.
+  - Anthropic launch-page result for FrontierCode 1.1 main set at xhigh effort.
   limitations:
-  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  - Vendor-reported result; no independently reproduced run inspected.
+  - Exact harness build, tools, provider endpoint and measurement date remain unverified.
   evidence_notes:
-  - '{"max_score": 46.2, "xhigh_score": 52.1}'
+  - Corrected test identity and evidence class from the original reporting page; numeric result unchanged.
 - schema_version: '1.0'
   id: benchmark-ac7d2d91379a30b6
   model_id: claude-sonnet-5-5

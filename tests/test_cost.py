@@ -68,15 +68,25 @@ def test_minimax_priority_boundary(data):
 
 
 def test_cache_write_ttls_and_missing_cache(data):
-    p = offer(data, 'claude-sonnet-5-5')
+    p = offer(data, 'claude-opus-5-5')
     r = calc(data, p, cached_tokens=400, cache_write_5m_tokens=100, cache_write_1h_tokens=100)
-    assert r['supported'] and Decimal(r['total']) == Decimal('0.01153')
+    assert r['supported'] and Decimal(r['total']) == Decimal('0.02298')
     assert not calc(data, p, cache_write_tokens=100)['supported']
     batch = offer(data, 'claude-sonnet-5-5', 'Batch')
     assert calc(data, batch)['supported']
     assert not calc(data, batch, cached_tokens=1)['supported']
     deepseek = offer(data, 'deepseek-v4-1-flash', 'off_peak')
     assert not calc(data, deepseek, cache_write_tokens=100, request_time=datetime(2026, 10, 7, 12, tzinfo=timezone.utc))['supported']
+
+
+def test_conflicting_cache_tariff_blocks_only_requested_cache_reads(data):
+    p = offer(data, 'claude-sonnet-5-5')
+    ordinary = calc(data, p)
+    assert ordinary['supported'] and Decimal(ordinary['total']) == Decimal('0.012')
+    assert calc(data, p, cache_write_5m_tokens=100)['supported']
+    cached = calc(data, p, cached_tokens=1)
+    assert not cached['supported']
+    assert any('No documented numeric cached rate' in reason for reason in cached['reasons'])
 
 
 def test_batch_flex_are_exact_offers(data):

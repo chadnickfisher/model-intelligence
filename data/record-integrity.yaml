@@ -152,7 +152,7 @@ records:
 - entity_type: access
   entity_id: access-3f77ae5286ee9409
   canonical_path: data/access.yaml
-  value_hash: ab1d294ff7934fbed05787b77ed1963b60874b26e8868475fa9d17059b55a1a6
+  value_hash: 80f306f61114678ae49ad3299721b5ff91426abf354a2d43dd631e3d5265072f
 - entity_type: access
   entity_id: access-40b7a0c0bc209539
   canonical_path: data/access.yaml
@@ -180,7 +180,7 @@ records:
 - entity_type: access
   entity_id: access-48aed6747f506833
   canonical_path: data/access.yaml
-  value_hash: a1a35143b7abb8308581ad769927c224d161d71fce5829783beb8186dbfd1b0d
+  value_hash: 5138d784ac0ab56ef45ef9eeaedd3f53a57c6ea3a3dc9415a8db146e79575a77
 - entity_type: access
   entity_id: access-4df322a979cb940f
   canonical_path: data/access.yaml
@@ -224,7 +224,7 @@ records:
 - entity_type: access
   entity_id: access-568f8734df706003
   canonical_path: data/access.yaml
-  value_hash: 8bf726739162eb925b7b74a704b039bda6aceb5ff4500676de58b115963f40c2
+  value_hash: 9601f16786ad2a8a25606b7b00eb916e918bfe76a39075d71c751a47eb82f17b
 - entity_type: access
   entity_id: access-585031543ef7fcf8
   canonical_path: data/access.yaml
@@ -386,6 +386,10 @@ records:
   canonical_path: data/access.yaml
   value_hash: 9a105e3268f39c50c2a90d273e1457018ee3407fdbde4ac64dc2a18421ec9064
 - entity_type: access
+  entity_id: access-9bb1c08c0f723360
+  canonical_path: data/access.yaml
+  value_hash: d42313225eda225662391e6252cf123bf9677b8eaaf56751be349e2cd1263edd
+- entity_type: access
   entity_id: access-9e33330feaa5faf2
   canonical_path: data/access.yaml
   value_hash: edc35b16e21f86abf8a9331685e2433353f47f86f906d2d4162f9656df486025
@@ -500,7 +504,7 @@ records:
 - entity_type: access
   entity_id: access-b81c493a57c47077
   canonical_path: data/access.yaml
-  value_hash: fd89a205069ff987fb9881b80c3ac3dd84a42dbbd3d2c63e9a9bad3e908dc79c
+  value_hash: b5c8856838a25f5885720199f0823b3f7b5ed6f25807665575c1423caa8bb333
 - entity_type: access
   entity_id: access-b84b37d6412fabfe
   canonical_path: data/access.yaml
@@ -516,7 +520,7 @@ records:
 - entity_type: access
   entity_id: access-bc02766c2fbe0c2e
   canonical_path: data/access.yaml
-  value_hash: 68f77c8fe24f0273b52ee5ab0b7ae6370e539b83bb1015033f47302faf1be19c
+  value_hash: 6fd202da140c5e8ffc43558d9718f901da9c7de3910d12baf3449c545f3b0ea7
 - entity_type: access
   entity_id: access-bd4da0ba500e4461
   canonical_path: data/access.yaml
@@ -562,6 +566,10 @@ records:
   canonical_path: data/access.yaml
   value_hash: c1ae2a5aacfcf9488c4e683c1fd918965db6d033e24487d6a58a977d2ce97835
 - entity_type: access
+  entity_id: access-c705739827b0670f
+  canonical_path: data/access.yaml
+  value_hash: 34ce0b5a4d34ea867872ff3f46b5e47a9cb5e90ef19895b3acdb754968be922f
+- entity_type: access
   entity_id: access-cca1c97ff43c61ba
   canonical_path: data/access.yaml
   value_hash: e6bea612a033343b96caf2a3fb2a9ad24f5f296412dd01cefa19fce53564ecd9
@@ -584,7 +592,7 @@ records:
 - entity_type: access
   entity_id: access-d68727250fd716dc
   canonical_path: data/access.yaml
-  value_hash: 1ef06181ce6ff40485211965eca5b9732488812b8cd8885eb78d45a6c5eb754f
+  value_hash: e67485ee4f7f689ec0d59d67c66009adbddbe95f0e551d1a6373a8a4a34e4d02
 - entity_type: access
   entity_id: access-d806a0c3a1f82a84
   canonical_path: data/access.yaml
@@ -1916,7 +1924,7 @@ records:
 - entity_type: benchmark
   entity_id: benchmark-349d571fb75c9f5b
   canonical_path: data/benchmarks.yaml
-  value_hash: 0f246dae5c4b40b124e4fd4ae5a9d7f96d816d9dfc364d73eb2c1563c8268859
+  value_hash: c765e594419f253c8186f59e3d62e08315b156e92a1a2f8af6507ba435431ee8
 - entity_type: benchmark
   entity_id: benchmark-36aea37771cfac3e
   canonical_path: data/benchmarks.yaml
@@ -2260,7 +2268,7 @@ records:
 - entity_type: benchmark
   entity_id: benchmark-c295246b6af2937c
   canonical_path: data/benchmarks.yaml
-  value_hash: dec8cc627c65d00493cf4f97e0d9c548a650ee8526a67efb6f1854baa13bcbbd
+  value_hash: 05b97f3a71c49038640552d79ee56f65918d7521b7dc5b76430d646eeb030277
 - entity_type: benchmark
   entity_id: benchmark-c5c424b3a73c6a5c
   canonical_path: data/benchmarks.yaml
@@ -2376,7 +2384,7 @@ records:
 - entity_type: model
   entity_id: claude-fable-5-1
   canonical_path: models/anthropic/claude-fable-5-1/profile.yaml
-  value_hash: 6be20be85decc74a319367a5f88380d86e818aa02c86a8ae389a7065c6f1ccca
+  value_hash: 8862c8de58a7a8186f3c727e47904fc610e02443a59afa79094afbdd32fbaadd
 - entity_type: model
   entity_id: claude-haiku-4-5
   canonical_path: models/anthropic/claude-haiku-4-5/profile.yaml
@@ -2388,11 +2396,11 @@ records:
 - entity_type: model
   entity_id: claude-opus-5-5
   canonical_path: models/anthropic/claude-opus-5-5/profile.yaml
-  value_hash: 91bcc4cd3c442f0d74bf13529148d906267c18db4593445bc9ac360b2c712231
+  value_hash: 4a1b383e9f7ac9e0b0940c986a80e1c232b09c178fda5bc6354fab1f560db895
 - entity_type: model
   entity_id: claude-sonnet-5-5
   canonical_path: models/anthropic/claude-sonnet-5-5/profile.yaml
-  value_hash: 77fc6a0b6d6afe3ecaedeebef68069da11be8864f160dc94bcf5eabaaa20329e
+  value_hash: 3712991b1af7c3fb9b9f7d004904ea9afc62e9c3db37e48a3047d56accd32a65
 - entity_type: model
   entity_id: cohere-command-a-plus
   canonical_path: models/cohere/cohere-command-a-plus/profile.yaml
@@ -3060,11 +3068,11 @@ records:
 - entity_type: price
   entity_id: price-proprietary-claude-fable-5-1-anthropic-1c9e85bc3ee3
   canonical_path: data/pricing.yaml
-  value_hash: e8829fd193da46fd4e6e8a96198b89f8ce7f0f8d63e0c0ac2bf369e63c1ee1bc
+  value_hash: 784466fe2e509eaebb98fe16116527b5f7782f858229b429d4a8a8a0e44ed6b2
 - entity_type: price
   entity_id: price-proprietary-claude-fable-5-1-anthropic-d31f844e1fa5
   canonical_path: data/pricing.yaml
-  value_hash: 7f01d468f7870bd8256c38137e1a3075e5a492528a5d97121addfcc6c5264d39
+  value_hash: 45ce26df690792b527f5f57c6ba44209a349b1774cbdd75ec64fe4e0c7fdcbe5
 - entity_type: price
   entity_id: price-proprietary-claude-haiku-4-5-anthropic-92db4721bd09
   canonical_path: data/pricing.yaml
@@ -3080,11 +3088,11 @@ records:
 - entity_type: price
   entity_id: price-proprietary-claude-opus-5-5-anthropic-a9d5d3dc77e4
   canonical_path: data/pricing.yaml
-  value_hash: 30f0362e0a520f2dea528812adc16c4f80e6813611e246193b7cf6dbe52aee98
+  value_hash: c652dc08e35bd95cae423d470c0d45d143db4d80d994074c4d3e6c0a52b6b534
 - entity_type: price
   entity_id: price-proprietary-claude-opus-5-5-anthropic-c64de5cd2551
   canonical_path: data/pricing.yaml
-  value_hash: 37911064827c0874187e4820950f4b261ccbcc3001ae428941e9cb3fd235913a
+  value_hash: 6ff54235964decb6c78f62fa3aab36dd7aa2ef20d1810b4b4d1f51b9ba0c0568
 - entity_type: price
   entity_id: price-proprietary-claude-pro-annual-anthropic-33c209c5815b
   canonical_path: data/pricing.yaml
@@ -3096,11 +3104,11 @@ records:
 - entity_type: price
   entity_id: price-proprietary-claude-sonnet-5-5-anthropic-706ffb2ac9c2
   canonical_path: data/pricing.yaml
-  value_hash: bc7dbc1d84746c0cd15170034539837a59c4df815d623bc73e5451685ee5b222
+  value_hash: d031192832d500828c3cb748bc09673b713b6838f5d0ee78f53777741be31a56
 - entity_type: price
   entity_id: price-proprietary-claude-sonnet-5-5-anthropic-ed2559301c6f
   canonical_path: data/pricing.yaml
-  value_hash: ee8a93d864056f2f6f4ae5eb8876247899ed11bb918db46441e147c204793248
+  value_hash: d78116c7ee7bdd74d6e68bfe73bd0bb90debd30bb8723b53b9c6b7eee9d7a1e3
 - entity_type: price
   entity_id: price-proprietary-gemini-3-1-pro-preview-google-developer-api-0363b1d20999
   canonical_path: data/pricing.yaml
@@ -3936,7 +3944,7 @@ records:
 - entity_type: research_coverage
   entity_id: research-coverage-claude-fable-5-1-access-pricing
   canonical_path: data/research-coverage.yaml
-  value_hash: eb2976a104cc93ea79af6d26935eac0ccacb9a7e5fc29579b8b6f78a79e6d079
+  value_hash: c0eaf3e8e70a2b42b78dc1b6ec5c2056c4014514451d47795496671ae33f2827
 - entity_type: research_coverage
   entity_id: research-coverage-claude-fable-5-1-behavior
   canonical_path: data/research-coverage.yaml
@@ -3944,11 +3952,11 @@ records:
 - entity_type: research_coverage
   entity_id: research-coverage-claude-fable-5-1-benchmarks
   canonical_path: data/research-coverage.yaml
-  value_hash: f0be36c0f072c70e616eb82e1d68445b2ee7f75319356ea97e827132804ce5b8
+  value_hash: 1c3a1e14f52d2ddee520cf78214beddc3701069b27316ed59c3ac5c20a756013
 - entity_type: research_coverage
   entity_id: research-coverage-claude-fable-5-1-capabilities
   canonical_path: data/research-coverage.yaml
-  value_hash: 42501ddc85188a660f48a9446338c2548711d0aa083f0d94f3296a7503e4148d
+  value_hash: 49eedc629c2a597e29ef2b34a229c61cd2bd8fc799192d7955a8d4372eced8df
 - entity_type: research_coverage
   entity_id: research-coverage-claude-haiku-4-5-access-pricing
   canonical_path: data/research-coverage.yaml
@@ -3984,7 +3992,7 @@ records:
 - entity_type: research_coverage
   entity_id: research-coverage-claude-opus-5-5-access-pricing
   canonical_path: data/research-coverage.yaml
-  value_hash: ee52138b2815a0420ca5ce23adea3fbf529a6072cd5950ff103f83502847c9f3
+  value_hash: 4516233b7f4d92a9cafc183b97143e010f59d006d2bf3d0fa756c18cd45e4d8a
 - entity_type: research_coverage
   entity_id: research-coverage-claude-opus-5-5-behavior
   canonical_path: data/research-coverage.yaml
@@ -3992,15 +4000,15 @@ records:
 - entity_type: research_coverage
   entity_id: research-coverage-claude-opus-5-5-benchmarks
   canonical_path: data/research-coverage.yaml
-  value_hash: ad27d89fff864f8d43a79914142fba0609e6439dc3cad6fea57a37a9c4b0d7fd
+  value_hash: 353cb3997b724780eea3f658bfca08112cc7fa4af106831cbe700b19ce8553e1
 - entity_type: research_coverage
   entity_id: research-coverage-claude-opus-5-5-capabilities
   canonical_path: data/research-coverage.yaml
-  value_hash: 3fe627595e74dce6992d585d83ab0983ceef606c303a7b9f8cc844a79f8884f7
+  value_hash: f1609a4eb7bb114533054d197d9cbd546dafec149dc07a6779ea4342e3fc5452
 - entity_type: research_coverage
   entity_id: research-coverage-claude-sonnet-5-5-access-pricing
   canonical_path: data/research-coverage.yaml
-  value_hash: d916984dbb662f83137dc08f75a34fa0aca4f2256e38b3ec6430036fe884aa23
+  value_hash: 97575cbb659004753c36ff83f5ed36ec68e73879995df047089275b11f107b45
 - entity_type: research_coverage
   entity_id: research-coverage-claude-sonnet-5-5-behavior
   canonical_path: data/research-coverage.yaml
@@ -4008,11 +4016,11 @@ records:
 - entity_type: research_coverage
   entity_id: research-coverage-claude-sonnet-5-5-benchmarks
   canonical_path: data/research-coverage.yaml
-  value_hash: c75700a6beb3cbe789ca57de73aacf08ce76ff40572db65055a63e7d6a8c00fe
+  value_hash: b65699284859e1b1428980ed60659aee3fa84350e434b4fdf7d605cb65cf36c6
 - entity_type: research_coverage
   entity_id: research-coverage-claude-sonnet-5-5-capabilities
   canonical_path: data/research-coverage.yaml
-  value_hash: 2b61eab3617333158c22a113e3d2eed469f5c57bccb77971a1342d198d7377fc
+  value_hash: c117a9fb6250c3a27a6182fd7b0bd605c26dd080e6bf6b0c4a759f7ecaf17662
 - entity_type: research_coverage
   entity_id: research-coverage-cohere-command-a-plus-access-pricing
   canonical_path: data/research-coverage.yaml
@@ -5620,7 +5628,7 @@ records:
 - entity_type: source
   entity_id: src-50846cd1ff36
   canonical_path: evidence/sources.yaml
-  value_hash: b2390ac20d8ba7ed272b064121e3a8db17393ec0f5e17b15852d6c1bcb973d01
+  value_hash: 48dcd6947ae4454ddca0f77162fecad17ca6e77a3da666da043dea184a74e5d0
 - entity_type: source
   entity_id: src-521c059d5d6a
   canonical_path: evidence/sources.yaml
@@ -6012,7 +6020,7 @@ records:
 - entity_type: source
   entity_id: src-752375ff0c97
   canonical_path: evidence/sources.yaml
-  value_hash: 51d1daad5f34d47724e8664909e4397f4c65683573ae6278fb4602c131b5f409
+  value_hash: 8969aa8bd673689738d142b7d6bb14638fd464dc86710543c4cbe60bf2fa7b97
 - entity_type: source
   entity_id: src-752c7dd560da
   canonical_path: evidence/sources.yaml
@@ -6920,7 +6928,7 @@ records:
 - entity_type: source
   entity_id: src-dc337252fd3b
   canonical_path: evidence/sources.yaml
-  value_hash: cdc3afe6592d29bdfeee54d658a14ccc014895d23ad33025f219b6b395255a1d
+  value_hash: 4b9e6acf37487595c0579c6502b39b69faefa3bb9bd540012835cb00a127dfd3
 - entity_type: source
   entity_id: src-dc71eaf3c8b8
   canonical_path: evidence/sources.yaml
@@ -7746,9 +7754,17 @@ records:
   canonical_path: data/task-assessments.yaml
   value_hash: cf7419340c0a0d756c96a5986d34a58f5e6e1978891392909a3fb67dacdfe00c
 - entity_type: task_assessment
+  entity_id: task-assessment-659e8986461ba44d
+  canonical_path: data/task-assessments.yaml
+  value_hash: f6b81d13adcc3dcfe960087d2896eb62eec13d5c0f6d5d1efbc9da0ade96ae5a
+- entity_type: task_assessment
   entity_id: task-assessment-65e2a10ff1dca3a8
   canonical_path: data/task-assessments.yaml
   value_hash: ac98e05f707d5910de345b6e58c42b2b6a3ee172bc6e00876b6fd83abc9a1c81
+- entity_type: task_assessment
+  entity_id: task-assessment-67a65e885b931721
+  canonical_path: data/task-assessments.yaml
+  value_hash: 54b6af462905bb3ef8e72d63a76b25313ce3d2ba340fc9e32ea8b8e337b942a7
 - entity_type: task_assessment
   entity_id: task-assessment-6b5d42fcbe23e5cf
   canonical_path: data/task-assessments.yaml
@@ -7817,6 +7833,10 @@ records:
   entity_id: task-assessment-80f11fd57f7d5baf
   canonical_path: data/task-assessments.yaml
   value_hash: 3c8444962826ebbcf625227a902af704f2c38d0b3f6bce19b3931b62d35f1523
+- entity_type: task_assessment
+  entity_id: task-assessment-810abaab83618943
+  canonical_path: data/task-assessments.yaml
+  value_hash: 1e4171ba261fa98ee4ab85330dac2d3f01c7e11c42544204b839f39868574717
 - entity_type: task_assessment
   entity_id: task-assessment-817062ef38ffa534
   canonical_path: data/task-assessments.yaml

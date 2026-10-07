@@ -355,7 +355,7 @@ capabilities:
   assessment: conditional
   scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
   judgment: Can surface known issues but needs validation; lower tested effort was preferable in this pipeline.
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-2f822bc8e7fe
   - src-3df062ca530b
@@ -363,10 +363,16 @@ capabilities:
   conditions:
   - Separate tiny rule checking from open-ended review.
   - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  - Low/High are evaluator pipeline configurations, not established single API effort values.
+  - The evaluation corpus and scoring pipeline limit external reproducibility.
   known_failure_modes:
   - Substantial judge-rejected commentary and misses; higher reasoning did not improve aggregate results.
   evidence_notes:
   - Confidence concerns this bounded claim, not a capability score.
+  - CodeRabbit evaluated 45 review tasks with 105 known issues; lower and higher configurations traded recall,
+    precision and comment load.
+  - Low confidence reflects the inspected evaluator, corpus/pipeline dependence and unpublished replication
+    inputs; it is not a low ability rating.
   observed_at: '2026-10-07'
   effective_from: null
   provenance:

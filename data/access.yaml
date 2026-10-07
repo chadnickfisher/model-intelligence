@@ -3969,45 +3969,36 @@ records:
   model_id: claude-fable-5-1
   provider_id: azure-foundry
   model_label: claude-fable-5-1
-  product: Claude in Microsoft Foundry
+  product: Claude in Microsoft Foundry / Hosted on Anthropic
   methods:
   - hosted_api
   status: officially_documented_not_execution_tested
   availability: documented
   billing_class: metered_api
   price_ids: []
-  restrictions: []
+  restrictions:
+  - Message Batches, Models API and server-side fallback are unsupported on Foundry.
+  - New computer/browser toolsets are unsupported; older beta computer tools are separate.
   evidence_ids:
-  - src-ad9aa6f1b8ed
+  - src-dc337252fd3b
   - src-50846cd1ff36
-  - src-58333316475e
-  - src-26606ff14841
-  - src-b2ab15dd01eb
-  - src-f61234c4ee64
-  - src-294ac6d01ed0
-  - src-2f9ece653a0f
-  - src-f1078602a2b4
-  - src-9b374de3e978
+  - src-ad9aa6f1b8ed
   notes:
   - 'Research route class: hosted_metered_api'
   - Source documented; inference execution and individual eligibility were not tested.
   client_id: null
-  requires_account: null
+  requires_account: true
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Postpaid hourly marketplace metering; monthly invoice.
-  - Do not conflate Claude Platform on AWS with partner-operated Amazon Bedrock.
-  - Negotiated discount and eligible US processing surcharge may apply.
+  - Azure subscription, resource permissions and deployment provisioning required.
+  - Azure Marketplace meters postpaid CCUs; negotiated discount may affect conversion.
   research_details:
     research_provider_id: azure-foundry
-    product: Claude in Microsoft Foundry
+    product: Claude in Microsoft Foundry / Hosted on Anthropic
     route_class: hosted_metered_api
     provider_model_alias: claude-fable-5-1
     status: officially_documented_not_execution_tested
-    research_source_ids:
-    - a-claude-fable-5-1
-    - a-price
     pricing:
     - tier: standard_token_to_CCU_conversion
       currency: USD
@@ -4027,9 +4018,15 @@ records:
       currency: USD
       amount: 0.01
     conditions:
-    - Postpaid hourly marketplace metering; monthly invoice.
-    - Do not conflate Claude Platform on AWS with partner-operated Amazon Bedrock.
-    - Negotiated discount and eligible US processing surcharge may apply.
+    - Azure subscription, resource permissions and deployment provisioning required.
+    - Azure Marketplace meters postpaid CCUs; negotiated discount may affect conversion.
+    context: 1000000
+    deployment_name: Configurable deployment name passed as the model parameter.
+    billing_marketplace: Azure Marketplace
+    hosting_option: Anthropic
+    deployment_types:
+    - Global Standard
+    data_processing: Anthropic-operated inference on Anthropic infrastructure.
 - schema_version: '1.0'
   id: access-e2e0da8fe6a5ebd8
   verified_at: '2026-10-07'
@@ -4984,45 +4981,39 @@ records:
   model_id: claude-opus-5-5
   provider_id: azure-foundry
   model_label: claude-opus-5-5
-  product: Claude in Microsoft Foundry
+  product: Claude in Microsoft Foundry / Hosted on Azure
   methods:
   - hosted_api
   status: officially_documented_not_execution_tested
   availability: documented
   billing_class: metered_api
   price_ids: []
-  restrictions: []
+  restrictions:
+  - Message Batches, Models API and server-side fallback are unsupported on Foundry.
+  - New computer/browser toolsets are unsupported; older beta computer tools are separate.
+  - Code execution, Files API, Agent Skills and programmatic tool calling are unsupported on Azure hosting.
+  - Azure hosting permits only basic web_search_20250305 and web_fetch_20250910 tools.
   evidence_ids:
-  - src-4d070c5c8c67
+  - src-dc337252fd3b
   - src-50846cd1ff36
-  - src-58333316475e
-  - src-26606ff14841
-  - src-b2ab15dd01eb
-  - src-f61234c4ee64
-  - src-1120b9b8680d
-  - src-2f9ece653a0f
-  - src-f1078602a2b4
-  - src-2f9466008c6e
+  - src-4d070c5c8c67
   notes:
   - 'Research route class: hosted_metered_api'
   - Source documented; inference execution and individual eligibility were not tested.
   client_id: null
-  requires_account: null
+  requires_account: true
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Postpaid hourly marketplace metering; monthly invoice.
-  - Do not conflate Claude Platform on AWS with partner-operated Amazon Bedrock.
-  - Negotiated discount and eligible US processing surcharge may apply.
+  - Azure subscription, resource permissions and deployment provisioning required.
+  - Azure Marketplace meters postpaid CCUs; negotiated discount may affect conversion.
+  - US Data Zone Standard uses a 1.1 multiplier on token categories.
   research_details:
     research_provider_id: azure-foundry
-    product: Claude in Microsoft Foundry
+    product: Claude in Microsoft Foundry / Hosted on Azure
     route_class: hosted_metered_api
     provider_model_alias: claude-opus-5-5
     status: officially_documented_not_execution_tested
-    research_source_ids:
-    - a-claude-opus-5-5
-    - a-price
     pricing:
     - tier: standard_token_to_CCU_conversion
       currency: USD
@@ -5042,9 +5033,18 @@ records:
       currency: USD
       amount: 0.01
     conditions:
-    - Postpaid hourly marketplace metering; monthly invoice.
-    - Do not conflate Claude Platform on AWS with partner-operated Amazon Bedrock.
-    - Negotiated discount and eligible US processing surcharge may apply.
+    - Azure subscription, resource permissions and deployment provisioning required.
+    - Azure Marketplace meters postpaid CCUs; negotiated discount may affect conversion.
+    - US Data Zone Standard uses a 1.1 multiplier on token categories.
+    context: 1000000
+    deployment_name: Configurable deployment name passed as the model parameter.
+    billing_marketplace: Azure Marketplace
+    hosting_option: Azure
+    deployment_types:
+    - Global Standard
+    - US Data Zone Standard
+    data_processing: Prompts and completions remain on Azure; usage metadata and safety-flagged content
+      may egress to Anthropic.
 - schema_version: '1.0'
   id: access-e54a01965f6e1cf1
   verified_at: '2026-10-07'
@@ -5242,10 +5242,12 @@ records:
       rates:
         input: 2
         output: 10
-        cached_input: 0.2
+        cached_input: null
         cache_write_5m: 2.5
         cache_write_1h: 4
-      conditions: []
+      conditions:
+      - 'Conflicting current documentation: Sonnet 5.5 overview and pricing table list USD 0.20 per million
+        cache-read tokens; pricing-page multiplier section says USD 0.10. Actual billed rate unresolved.'
     - tier: batch
       currency: USD
       unit: per_1M_tokens
@@ -5445,12 +5447,14 @@ records:
       rates:
         input: 2
         output: 10
-        cached_input: 0.2
+        cached_input: null
         cache_write_5m: 2.5
         cache_write_1h: 4
       conditions:
       - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through
         marketplace.
+      - 'Conflicting current documentation: Sonnet 5.5 overview and pricing table list USD 0.20 per million
+        cache-read tokens; pricing-page multiplier section says USD 0.10. Actual billed rate unresolved.'
     account_entitlement_verified: false
     invoice_unit:
       name: Claude Consumption Unit
@@ -5466,47 +5470,39 @@ records:
   model_id: claude-sonnet-5-5
   provider_id: azure-foundry
   model_label: claude-sonnet-5-5
-  product: Claude in Microsoft Foundry
+  product: Claude in Microsoft Foundry / Hosted on Azure
   methods:
   - hosted_api
   status: officially_documented_not_execution_tested
   availability: documented
   billing_class: metered_api
   price_ids: []
-  restrictions: []
+  restrictions:
+  - Message Batches, Models API and server-side fallback are unsupported on Foundry.
+  - New computer/browser toolsets are unsupported; older beta computer tools are separate.
+  - Code execution, Files API, Agent Skills and programmatic tool calling are unsupported on Azure hosting.
+  - Azure hosting permits only basic web_search_20250305 and web_fetch_20250910 tools.
+  - Sonnet 5.5 supports Global Standard only; US Data Zone is unavailable.
   evidence_ids:
-  - src-752375ff0c97
+  - src-dc337252fd3b
   - src-50846cd1ff36
-  - src-58333316475e
-  - src-26606ff14841
-  - src-b2ab15dd01eb
-  - src-f61234c4ee64
-  - src-0470ca77e23d
-  - src-2f9ece653a0f
-  - src-f1078602a2b4
-  - src-4e3ca8a95d36
-  - src-90f4749affde
-  - src-8d6f49bb7111
+  - src-752375ff0c97
   notes:
   - 'Research route class: hosted_metered_api'
   - Source documented; inference execution and individual eligibility were not tested.
   client_id: null
-  requires_account: null
+  requires_account: true
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Postpaid hourly marketplace metering; monthly invoice.
-  - Do not conflate Claude Platform on AWS with partner-operated Amazon Bedrock.
-  - Negotiated discount and eligible US processing surcharge may apply.
+  - Azure subscription, resource permissions and deployment provisioning required.
+  - Azure Marketplace meters postpaid CCUs; negotiated discount may affect conversion.
   research_details:
     research_provider_id: azure-foundry
-    product: Claude in Microsoft Foundry
+    product: Claude in Microsoft Foundry / Hosted on Azure
     route_class: hosted_metered_api
     provider_model_alias: claude-sonnet-5-5
     status: officially_documented_not_execution_tested
-    research_source_ids:
-    - a-claude-sonnet-5-5
-    - a-price
     pricing:
     - tier: standard_token_to_CCU_conversion
       currency: USD
@@ -5514,21 +5510,30 @@ records:
       rates:
         input: 2
         output: 10
-        cached_input: 0.2
+        cached_input: null
         cache_write_5m: 2.5
         cache_write_1h: 4
       conditions:
       - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through
         marketplace.
+      - 'Conflicting current documentation: Sonnet 5.5 overview and pricing table list USD 0.20 per million
+        cache-read tokens; pricing-page multiplier section says USD 0.10. Actual billed rate unresolved.'
     account_entitlement_verified: false
     invoice_unit:
       name: Claude Consumption Unit
       currency: USD
       amount: 0.01
     conditions:
-    - Postpaid hourly marketplace metering; monthly invoice.
-    - Do not conflate Claude Platform on AWS with partner-operated Amazon Bedrock.
-    - Negotiated discount and eligible US processing surcharge may apply.
+    - Azure subscription, resource permissions and deployment provisioning required.
+    - Azure Marketplace meters postpaid CCUs; negotiated discount may affect conversion.
+    context: 1000000
+    deployment_name: Configurable deployment name passed as the model parameter.
+    billing_marketplace: Azure Marketplace
+    hosting_option: Azure
+    deployment_types:
+    - Global Standard
+    data_processing: Prompts and completions remain on Azure; usage metadata and safety-flagged content
+      may egress to Anthropic.
 - schema_version: '1.0'
   id: access-f8b1175b0cecaf06
   verified_at: '2026-10-07'
@@ -5672,10 +5677,12 @@ records:
       rates:
         input: 2
         output: 10
-        cached_input: 0.2
+        cached_input: null
         cache_write_5m: 2.5
         cache_write_1h: 4
-      conditions: []
+      conditions:
+      - 'Conflicting current documentation: Sonnet 5.5 overview and pricing table list USD 0.20 per million
+        cache-read tokens; pricing-page multiplier section says USD 0.10. Actual billed rate unresolved.'
 - schema_version: '1.0'
   id: access-a6400ce8b73cbe5b
   verified_at: '2026-10-07'
@@ -13762,3 +13769,133 @@ records:
   - src-ed2ea3ed3dc1
   notes:
   - No account access or inference was used to verify the public offering.
+- schema_version: '1.0'
+  id: access-c705739827b0670f
+  verified_at: '2026-10-07'
+  model_id: claude-opus-5-5
+  provider_id: azure-foundry
+  model_label: claude-opus-5-5
+  product: Claude in Microsoft Foundry / Hosted on Anthropic
+  methods:
+  - hosted_api
+  status: officially_documented_not_execution_tested
+  availability: documented
+  billing_class: metered_api
+  price_ids: []
+  restrictions:
+  - Message Batches, Models API and server-side fallback are unsupported on Foundry.
+  - New computer/browser toolsets are unsupported; older beta computer tools are separate.
+  evidence_ids:
+  - src-dc337252fd3b
+  - src-50846cd1ff36
+  - src-4d070c5c8c67
+  notes:
+  - 'Research route class: hosted_metered_api'
+  - Source documented; inference execution and individual eligibility were not tested.
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Azure subscription, resource permissions and deployment provisioning required.
+  - Azure Marketplace meters postpaid CCUs; negotiated discount may affect conversion.
+  research_details:
+    research_provider_id: azure-foundry
+    product: Claude in Microsoft Foundry / Hosted on Anthropic
+    route_class: hosted_metered_api
+    provider_model_alias: claude-opus-5-5
+    status: officially_documented_not_execution_tested
+    pricing:
+    - tier: standard_token_to_CCU_conversion
+      currency: USD
+      unit: per_1M_tokens
+      rates:
+        input: 4
+        output: 20
+        cached_input: 0.2
+        cache_write_5m: 5
+        cache_write_1h: 8
+      conditions:
+      - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through
+        marketplace.
+    account_entitlement_verified: false
+    invoice_unit:
+      name: Claude Consumption Unit
+      currency: USD
+      amount: 0.01
+    conditions:
+    - Azure subscription, resource permissions and deployment provisioning required.
+    - Azure Marketplace meters postpaid CCUs; negotiated discount may affect conversion.
+    context: 1000000
+    deployment_name: Configurable deployment name passed as the model parameter.
+    billing_marketplace: Azure Marketplace
+    hosting_option: Anthropic
+    deployment_types:
+    - Global Standard
+    data_processing: Anthropic-operated inference on Anthropic infrastructure.
+- schema_version: '1.0'
+  id: access-9bb1c08c0f723360
+  verified_at: '2026-10-07'
+  model_id: claude-sonnet-5-5
+  provider_id: azure-foundry
+  model_label: claude-sonnet-5-5
+  product: Claude in Microsoft Foundry / Hosted on Anthropic
+  methods:
+  - hosted_api
+  status: officially_documented_not_execution_tested
+  availability: documented
+  billing_class: metered_api
+  price_ids: []
+  restrictions:
+  - Message Batches, Models API and server-side fallback are unsupported on Foundry.
+  - New computer/browser toolsets are unsupported; older beta computer tools are separate.
+  evidence_ids:
+  - src-dc337252fd3b
+  - src-50846cd1ff36
+  - src-752375ff0c97
+  notes:
+  - 'Research route class: hosted_metered_api'
+  - Source documented; inference execution and individual eligibility were not tested.
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: null
+  conditions:
+  - Azure subscription, resource permissions and deployment provisioning required.
+  - Azure Marketplace meters postpaid CCUs; negotiated discount may affect conversion.
+  research_details:
+    research_provider_id: azure-foundry
+    product: Claude in Microsoft Foundry / Hosted on Anthropic
+    route_class: hosted_metered_api
+    provider_model_alias: claude-sonnet-5-5
+    status: officially_documented_not_execution_tested
+    pricing:
+    - tier: standard_token_to_CCU_conversion
+      currency: USD
+      unit: per_1M_tokens
+      rates:
+        input: 2
+        output: 10
+        cached_input: null
+        cache_write_5m: 2.5
+        cache_write_1h: 4
+      conditions:
+      - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through
+        marketplace.
+      - 'Conflicting current documentation: Sonnet 5.5 overview and pricing table list USD 0.20 per million
+        cache-read tokens; pricing-page multiplier section says USD 0.10. Actual billed rate unresolved.'
+    account_entitlement_verified: false
+    invoice_unit:
+      name: Claude Consumption Unit
+      currency: USD
+      amount: 0.01
+    conditions:
+    - Azure subscription, resource permissions and deployment provisioning required.
+    - Azure Marketplace meters postpaid CCUs; negotiated discount may affect conversion.
+    context: 1000000
+    deployment_name: Configurable deployment name passed as the model parameter.
+    billing_marketplace: Azure Marketplace
+    hosting_option: Anthropic
+    deployment_types:
+    - Global Standard
+    data_processing: Anthropic-operated inference on Anthropic infrastructure.

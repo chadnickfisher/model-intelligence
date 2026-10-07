@@ -117,7 +117,7 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
-### Coding.review (medium confidence)
+### Coding.review (low confidence)
 
 Promising faster review option, with weaker hard-case coverage than Opus 5.5 in the matched subset.
 
@@ -129,7 +129,7 @@ Related task IDs (navigation only): Not established in this pass
 
 Judgment ID: judgment-116a3f541aaf26e7
 
-Conditions: Quality conclusion limited to judged Signal cases.; Named release matches; preserve source-specific provider, snapshot and precision limitations.
+Conditions: Quality conclusion limited to judged Signal cases.; Named release matches; preserve source-specific provider, snapshot and precision limitations.; Thinking toggles apply across a mixed-effort review pipeline; smaller models handle summaries and verification.; The larger OSS run supports latency and comment volume only while judge scoring is pending.
 
 Failure modes / limitations: Do not treat unjudged OSS comment reductions as quality gains.
 
@@ -137,7 +137,7 @@ Supporting sources: [Claude Sonnet 5.5 for code review: More catches than Sonnet
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.; CodeRabbit judged 13 Signal cases; thinking-on caught 6 while thinking-off caught 5. The 44-PR OSS run still lacked quality scoring.; Low confidence reflects the inspected evaluator, corpus/pipeline dependence and unpublished replication inputs; it is not a low ability rating.
 
 ### Cost sensitive professional workflows (medium confidence)
 
@@ -176,7 +176,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-15 recorded access route(s); 2 model-specific price record(s).
+16 recorded access route(s); 2 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -209,18 +209,19 @@ Local conditions: Not established in this pass
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
-| anthropic | Standard / current | input: 2 USD / per 1 million tokens; output: 10 USD / per 1 million tokens; cached_input: 0.2 USD / per 1 million tokens; cache_write_5m: 2.5 USD / per 1 million tokens; cache_write_1h: 4 USD / per 1 million tokens | Not established in this pass | 2026-10-06 |
-| anthropic | Batch / current | input: 1.0 USD / per 1 million tokens; output: 5.0 USD / per 1 million tokens | Not established in this pass | 2026-10-06 |
+| anthropic | Standard / current | input: 2 USD / per 1 million tokens; output: 10 USD / per 1 million tokens; cached_input: unknown USD / per 1 million tokens; cache_write_5m: 2.5 USD / per 1 million tokens; cache_write_1h: 4 USD / per 1 million tokens | Not established in this pass | 2026-10-07 |
+| anthropic | Batch / current | input: 1.0 USD / per 1 million tokens; output: 5.0 USD / per 1 million tokens | Not established in this pass | 2026-10-07 |
 
 ## Recorded access routes
 
 - claude-platform-on-aws / Claude Platform on AWS: officially_documented_not_execution_tested. Not established in this pass
 - aws-bedrock / Amazon Bedrock: officially_documented_not_execution_tested. Not established in this pass
+- azure-foundry / Claude in Microsoft Foundry / Hosted on Anthropic: officially_documented_not_execution_tested. Message Batches, Models API and server-side fallback are unsupported on Foundry.; New computer/browser toolsets are unsupported; older beta computer tools are separate.
 - anthropic / Usage-based Claude Enterprise: Conditional consumer/client product; exact account entitlement unverified. Seat fee plus usage at API rates; this is a separately evidenced metered client route.
 - anthropic / Claude API: officially_documented_not_execution_tested. Not established in this pass
 - google-cloud / Gemini Enterprise Agent Platform (formerly Vertex AI): officially_documented_not_execution_tested. Not established in this pass
 - anthropic / Claude apps: Conditional consumer/client product; exact account entitlement unverified. 5.5 app model is documented; current plan table lists Sonnet for Free and paid plans. Exact Free picker routing/remaining allowance not verified.
-- azure-foundry / Claude in Microsoft Foundry: officially_documented_not_execution_tested. Not established in this pass
+- azure-foundry / Claude in Microsoft Foundry / Hosted on Azure: officially_documented_not_execution_tested. Message Batches, Models API and server-side fallback are unsupported on Foundry.; New computer/browser toolsets are unsupported; older beta computer tools are separate.; Code execution, Files API, Agent Skills and programmatic tool calling are unsupported on Azure hosting.; Azure hosting permits only basic web_search_20250305 and web_fetch_20250910 tools.; Sonnet 5.5 supports Global Standard only; US Data Zone is unavailable.
 - anthropic / Claude Code terminal and IDE: Conditional consumer/client product; exact account entitlement unverified. Full model IDs can be selected subject to plan and organization permissions. Separate subscription sign-in from API-key/partner billing.
 - anthropic / Claude API: Active. quota: Tier/account-specific; exact numeric public tier table not captured
 - aws-bedrock / Amazon Bedrock: Listed by creator; independent provider pricing and regional entitlement not verified. Not established in this pass
