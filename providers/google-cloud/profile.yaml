@@ -35,6 +35,7 @@ model_ids:
 - lyria-3-5
 - veo-3-1-generate-preview
 - xai-grok-4-7
+- claude-haiku-5-5
 price_ids:
 - price-providers-cloud-model-inference-google-cloud-fee290a05c24
 access_ids:
@@ -55,6 +56,7 @@ access_ids:
 - access-proprietary-access-17-google-cloud
 - access-proprietary-access-19-google-cloud
 - access-proprietary-access-21-google-cloud
+- access-ac0b3925edff9ff5
 evidence_ids:
 - src-89852246e77a
 - src-ad9aa6f1b8ed

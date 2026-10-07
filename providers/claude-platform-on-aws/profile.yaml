@@ -10,8 +10,8 @@ api_compatibility:
 access_methods:
 - Marketplace enrollment, separate Anthropic organization; AWS IAM SigV4 or platform API key.
 geographic_availability:
-- AWS commercial regions for gateway access; gateway region does not establish inference residency; Haiku
-  4.5 rejects inference_geo.
+- AWS commercial regions for gateway access; gateway region does not establish inference residency; Haiku 4.5
+  rejects inference_geo.
 rate_limits:
 - Anthropic usage tier and monthly spend caps apply; negotiated/account limits require confirmation.
 caching_batching:
@@ -25,12 +25,14 @@ model_ids:
 - claude-haiku-4-5
 - claude-opus-5-5
 - claude-sonnet-5-5
+- claude-haiku-5-5
 price_ids: []
 access_ids:
 - access-3f77ae5286ee9409
 - access-61b9c27d7c3e7330
 - access-7a46f3d42eb501a3
 - access-a5b96dc5b68f2bb1
+- access-df2beae03d5e857d
 evidence_ids:
 - src-ad9aa6f1b8ed
 - src-50846cd1ff36

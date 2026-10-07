@@ -4103,3 +4103,206 @@ records:
     grade-school numerics.
   evidence_notes:
   - Observed today; publication date is not the experiment date.
+- schema_version: '1.0'
+  id: benchmark-1c18d7ce5e1bbd58
+  model_id: claude-haiku-5-5
+  judgment_ids:
+  - judgment-b1c7dd3088dba162
+  benchmark:
+    name: OSWorld
+    version: '2.1'
+    metric: accuracy
+    unit: percent
+    direction: higher
+  value: 72.4
+  model_version: claude-haiku-5-5
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-cdb1d51fae04
+  conditions:
+  - OSWorld is the offline subset.
+  limitations:
+  - Measurement date, effort and complete run configuration unknown; system card failed inspection.
+  - No comparison or narrow-task inference from a shared benchmark name.
+  evidence_notes:
+  - Retained as creator claim, separate from independent results.
+- schema_version: '1.0'
+  id: benchmark-be8acf4305714add
+  model_id: claude-haiku-5-5
+  judgment_ids:
+  - judgment-2a8d07b5d42de50a
+  benchmark:
+    name: HLE
+    version: null
+    metric: accuracy
+    unit: percent
+    direction: higher
+  value: 45.9
+  model_version: claude-haiku-5-5
+  harness: null
+  effort: null
+  provider_id: null
+  tools: []
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-cdb1d51fae04
+  conditions:
+  - Creator launch table; exact task/harness scope required.
+  limitations:
+  - Measurement date, effort and complete run configuration unknown; system card failed inspection.
+  - No comparison or narrow-task inference from a shared benchmark name.
+  evidence_notes:
+  - Retained as creator claim, separate from independent results.
+- schema_version: '1.0'
+  id: benchmark-4003965d6bea5a48
+  model_id: claude-haiku-5-5
+  judgment_ids:
+  - judgment-2a8d07b5d42de50a
+  benchmark:
+    name: HLE
+    version: null
+    metric: accuracy
+    unit: percent
+    direction: higher
+  value: 57.4
+  model_version: claude-haiku-5-5
+  harness: null
+  effort: null
+  provider_id: null
+  tools:
+  - Unspecified tools
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-cdb1d51fae04
+  conditions:
+  - Creator launch table; exact task/harness scope required.
+  limitations:
+  - Measurement date, effort and complete run configuration unknown; system card failed inspection.
+  - No comparison or narrow-task inference from a shared benchmark name.
+  evidence_notes:
+  - Retained as creator claim, separate from independent results.
+- schema_version: '1.0'
+  id: benchmark-3bc03f02f03efb69
+  model_id: claude-haiku-5-5
+  judgment_ids:
+  - judgment-f7c3002252f74a20
+  benchmark:
+    name: Chartography
+    version: null
+    metric: accuracy
+    unit: percent
+    direction: higher
+  value: 46.4
+  model_version: claude-haiku-5-5
+  harness: null
+  effort: null
+  provider_id: null
+  tools: []
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-cdb1d51fae04
+  conditions:
+  - Creator launch table; exact task/harness scope required.
+  limitations:
+  - Measurement date, effort and complete run configuration unknown; system card failed inspection.
+  - No comparison or narrow-task inference from a shared benchmark name.
+  evidence_notes:
+  - Retained as creator claim, separate from independent results.
+- schema_version: '1.0'
+  id: benchmark-b3fd41b3e28b580c
+  model_id: claude-haiku-5-5
+  judgment_ids: []
+  benchmark:
+    name: Terminal-Bench
+    version: '4.0'
+    metric: accuracy
+    unit: percent
+    direction: higher
+  value: 39.2
+  model_version: claude-haiku-5-5
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-cdb1d51fae04
+  conditions:
+  - Creator launch table; exact task/harness scope required.
+  limitations:
+  - Measurement date, effort and complete run configuration unknown; system card failed inspection.
+  - No comparison or narrow-task inference from a shared benchmark name.
+  evidence_notes:
+  - Retained as creator claim, separate from independent results.
+- schema_version: '1.0'
+  id: benchmark-819a736dbe98ffff
+  model_id: claude-haiku-5-5
+  judgment_ids: []
+  benchmark:
+    name: FrontierCode
+    version: 1.1 Main
+    metric: accuracy
+    unit: percent
+    direction: higher
+  value: 46.4
+  model_version: claude-haiku-5-5
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-cdb1d51fae04
+  conditions:
+  - Creator launch table; exact task/harness scope required.
+  limitations:
+  - Measurement date, effort and complete run configuration unknown; system card failed inspection.
+  - No comparison or narrow-task inference from a shared benchmark name.
+  evidence_notes:
+  - Retained as creator claim, separate from independent results.
+- schema_version: '1.0'
+  id: benchmark-b2faa817d8c223c8
+  model_id: claude-haiku-5-5
+  judgment_ids: []
+  benchmark:
+    name: Artificial Analysis Intelligence Index
+    version: 4.3.2
+    metric: composite index
+    unit: index points
+    direction: higher
+  value: 34
+  model_version: claude-haiku-5-5
+  harness: null
+  effort: medium with default fallback
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-dc1c9e6b2717
+  - src-1ea3e75f96c3
+  conditions:
+  - Numeric result appears in FAQ; dashboard breakdown unavailable.
+  - Fallback identity/configuration unresolved.
+  limitations:
+  - Composite does not directly endorse any individual task.
+  - Exact serving provider, fallback, measurement date and per-task runs unknown.
+  evidence_notes:
+  - Original evaluator page inspected; incomplete exact setup keeps confidence low.

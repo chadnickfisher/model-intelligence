@@ -7250,3 +7250,125 @@ records:
   - Current model page; API limits are not measured task performance.
   claim_scope:
   - Exact model identity, specifications and lifecycle
+- id: src-cdb1d51fae04
+  url: https://www.anthropic.com/claude-haiku-5-5
+  title: Haiku 5.5 launch
+  publisher: Anthropic
+  source_type: primary
+  published_at: '2026-10-07'
+  accessed_at: '2026-10-07'
+  limitations:
+  - Creator evaluations and selected customer testimonials; incomplete setup and no independent replication.
+  claim_scope:
+  - Haiku 5.5 launch
+- id: src-e471bc2bb72f
+  url: https://platform.claude.com/docs/en/models/haiku-5-5/migration-guide
+  title: Haiku 5.5 migration guide
+  publisher: Anthropic
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - Public page inspected; unreported setup remains unknown.
+  claim_scope:
+  - Haiku 5.5 migration guide
+- id: src-8ac74a7d6b30
+  url: https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-haiku-5-5
+  title: Haiku 5.5 prompting guide
+  publisher: Anthropic
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - Public page inspected; unreported setup remains unknown.
+  claim_scope:
+  - Haiku 5.5 prompting guide
+- id: src-dc1c9e6b2717
+  url: https://artificialanalysis.ai/models/claude-haiku-5-5-medium
+  title: Haiku 5.5 medium with fallback evaluation
+  publisher: Artificial Analysis
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - FAQ reports composite 34; plots and task breakdown not publicly available in inspected body. Fallback configuration
+    unresolved; composite cannot endorse individual tasks.
+  claim_scope:
+  - Haiku 5.5 medium with fallback evaluation
+- id: src-1ea3e75f96c3
+  url: https://artificialanalysis.ai/methodology/intelligence-benchmarking
+  title: Intelligence benchmarking methodology
+  publisher: Artificial Analysis
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - General suite methodology; exact model run settings and measurement date remain unknown.
+  claim_scope:
+  - Intelligence benchmarking methodology
+- id: src-dc06fff663d6
+  url: https://www.reddit.com/r/ClaudeAI/comments/1x06d3z/claude_haiku_55_official_prompting_guide/
+  title: Launch-day prompting discussion
+  publisher: r/ClaudeAI contributors
+  source_type: practitioner
+  published_at: '2026-10-07'
+  accessed_at: '2026-10-07'
+  limitations:
+  - Community paraphrase of official guide, not a reproduced model test or independent fix evidence.
+  claim_scope:
+  - Launch-day prompting discussion
+- id: src-99f7f1fb215d
+  url: https://aws.amazon.com/blogs/machine-learning/introducing-claude-haiku-5-5-on-aws/
+  title: Haiku 5.5 AWS launch
+  publisher: Amazon Web Services
+  source_type: primary
+  published_at: '2026-10-07'
+  accessed_at: '2026-10-07'
+  limitations:
+  - Public page inspected; unreported setup remains unknown.
+  claim_scope:
+  - Haiku 5.5 AWS launch
+- id: src-bb4952bada00
+  url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/haiku-5-5
+  title: Haiku 5.5 Google Cloud model card
+  publisher: Google Cloud
+  source_type: primary
+  published_at: '2026-10-07'
+  accessed_at: '2026-10-07'
+  limitations:
+  - Public page inspected; unreported setup remains unknown.
+  claim_scope:
+  - Haiku 5.5 Google Cloud model card
+- id: src-f34fd90d33e8
+  url: https://platform.claude.com/docs/en/build-with-claude/claude-in-amazon-bedrock
+  title: Claude on aws-bedrock
+  publisher: Anthropic
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - Public page inspected; unreported setup remains unknown.
+  claim_scope:
+  - Claude on aws-bedrock
+- id: src-8cb4ce8e8a24
+  url: https://platform.claude.com/docs/en/build-with-claude/claude-on-vertex-ai
+  title: Claude on google-cloud
+  publisher: Anthropic
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - Public page inspected; unreported setup remains unknown.
+  claim_scope:
+  - Claude on google-cloud
+- id: src-dc337252fd3b
+  url: https://platform.claude.com/docs/en/build-with-claude/claude-in-microsoft-foundry
+  title: Claude on azure-foundry
+  publisher: Anthropic
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - Public page inspected; unreported setup remains unknown.
+  claim_scope:
+  - Claude on azure-foundry

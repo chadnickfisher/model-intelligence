@@ -320,5 +320,11 @@ Generated from canonical YAML. Units, route conditions and dates are essential.
 | xai-grok-4-7 | xai | chat | documented_not_execution_tested; Not established in this pass |
 | xai-grok-4-7 | xai | hosted_api | shared_API_allowance_described_but_exact_auth_entitlement_unverified; Not established in this pass |
 | xai-grok-4-7 | xai | chat_subscription | documented_not_execution_tested; Not established in this pass |
+| claude-haiku-5-5 | anthropic | API | Active; Exact account quota, entitlement and negotiated conditions unknown. |
+| claude-haiku-5-5 | aws-bedrock | API | Active; Exact account quota, entitlement and negotiated conditions unknown. |
+| claude-haiku-5-5 | google-cloud | API | Active; Exact account quota, entitlement and negotiated conditions unknown. |
+| claude-haiku-5-5 | azure-foundry | API | Active; Exact account quota, entitlement and negotiated conditions unknown. |
+| claude-haiku-5-5 | azure-foundry | API | Active; Exact account quota, entitlement and negotiated conditions unknown. |
+| claude-haiku-5-5 | claude-platform-on-aws | API | Active; Exact account quota, entitlement and negotiated conditions unknown. |
 
 [Canonical records with evidence and all conditions](access.yaml)

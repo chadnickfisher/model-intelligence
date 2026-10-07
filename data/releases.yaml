@@ -849,3 +849,16 @@ records:
   evidence_ids:
   - src-58f6a44d1374
   - src-bcc14c31357b
+- schema_version: '1.0'
+  id: release-claude-haiku-5-5
+  verified_at: '2026-10-07'
+  model_id: claude-haiku-5-5
+  model_label: Claude Haiku 5.5
+  provider_id: null
+  event_type: release
+  event_date: '2026-10-07'
+  summary: New distinct release with pinned dateless API ID; prior Haiku remains separate.
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-cdb1d51fae04
+  - src-9332683246db

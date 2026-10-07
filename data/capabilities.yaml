@@ -1033,6 +1033,258 @@ records:
     origin: research
     research_batch_id: research-run-pilot-2026-10-07-v1-1
     method: Inspected original public reports and recorded bounded searches; no inference or benchmark execution.
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-27ba5595ff0f118f
+  scope: direct
+  task_ids:
+  - knowledge.classification
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Limited to the stated task and inspected evidence; no universal ranking.
+  judgment: Candidate for short label-assignment requests; creator positioning supports a conditional trial,
+    not measured accuracy across label sets.
+  confidence: low
+  supporting_evidence_ids:
+  - src-d69b0e2a2d12
+  contradictory_evidence_ids: []
+  conditions:
+  - Launch-day public evidence; exact deployment must match the recorded setup.
+  known_failure_modes:
+  - Independent task-specific replication and production acceptance remain unknown.
+  evidence_notes:
+  - Low confidence because source/setup support is sparse or vendor-heavy; no contrary result located in this
+    bounded pass is not agreement.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-haiku-5-5-2026-10-07
+    method: Public original-source inspection against rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-fad82c58efab1580
+  scope: direct
+  task_ids:
+  - knowledge.extraction
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Limited to the stated task and inspected evidence; no universal ranking.
+  judgment: Candidate for bounded extraction from supplied material; no independently inspected extraction
+    dataset establishes general reliability.
+  confidence: low
+  supporting_evidence_ids:
+  - src-d69b0e2a2d12
+  contradictory_evidence_ids: []
+  conditions:
+  - Launch-day public evidence; exact deployment must match the recorded setup.
+  known_failure_modes:
+  - Independent task-specific replication and production acceptance remain unknown.
+  evidence_notes:
+  - Low confidence because source/setup support is sparse or vendor-heavy; no contrary result located in this
+    bounded pass is not agreement.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-haiku-5-5-2026-10-07
+    method: Public original-source inspection against rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-8550661dd3250cd7
+  scope: direct
+  task_ids:
+  - language.summarization
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Limited to the stated task and inspected evidence; no universal ranking.
+  judgment: Candidate for short summaries; creator launch claims remain unreplicated under a specified fidelity
+    evaluation.
+  confidence: low
+  supporting_evidence_ids:
+  - src-cdb1d51fae04
+  contradictory_evidence_ids: []
+  conditions:
+  - Launch-day public evidence; exact deployment must match the recorded setup.
+  known_failure_modes:
+  - Independent task-specific replication and production acceptance remain unknown.
+  evidence_notes:
+  - Low confidence because source/setup support is sparse or vendor-heavy; no contrary result located in this
+    bounded pass is not agreement.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-haiku-5-5-2026-10-07
+    method: Public original-source inspection against rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-b1c7dd3088dba162
+  scope: direct
+  task_ids:
+  - agent.computer_use
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Limited to the stated task and inspected evidence; no universal ranking.
+  judgment: Conditional computer operation evidence is limited to the vendor OSWorld 2.1 offline subset (72.4%);
+    harness and effort are incompletely specified.
+  confidence: low
+  supporting_evidence_ids:
+  - src-cdb1d51fae04
+  contradictory_evidence_ids: []
+  conditions:
+  - Launch-day public evidence; exact deployment must match the recorded setup.
+  known_failure_modes:
+  - Independent task-specific replication and production acceptance remain unknown.
+  evidence_notes:
+  - Low confidence because source/setup support is sparse or vendor-heavy; no contrary result located in this
+    bounded pass is not agreement.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-haiku-5-5-2026-10-07
+    method: Public original-source inspection against rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-2a8d07b5d42de50a
+  scope: direct
+  task_ids:
+  - reasoning.general
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Limited to the stated task and inspected evidence; no universal ranking.
+  judgment: Vendor HLE results provide narrow academic reasoning evidence (45.9% without tools, 57.4% with
+    tools), with unresolved effort and measurement dates.
+  confidence: low
+  supporting_evidence_ids:
+  - src-cdb1d51fae04
+  contradictory_evidence_ids: []
+  conditions:
+  - Launch-day public evidence; exact deployment must match the recorded setup.
+  known_failure_modes:
+  - Independent task-specific replication and production acceptance remain unknown.
+  evidence_notes:
+  - Low confidence because source/setup support is sparse or vendor-heavy; no contrary result located in this
+    bounded pass is not agreement.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-haiku-5-5-2026-10-07
+    method: Public original-source inspection against rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-f7c3002252f74a20
+  scope: direct
+  task_ids:
+  - vision.question_answering
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Limited to the stated task and inspected evidence; no universal ranking.
+  judgment: Vendor Chartography result (46.4%, no tools) supports only a conditional chart-question trial;
+    visual grounding and general image reliability remain unknown.
+  confidence: low
+  supporting_evidence_ids:
+  - src-cdb1d51fae04
+  contradictory_evidence_ids: []
+  conditions:
+  - Launch-day public evidence; exact deployment must match the recorded setup.
+  known_failure_modes:
+  - Independent task-specific replication and production acceptance remain unknown.
+  evidence_notes:
+  - Low confidence because source/setup support is sparse or vendor-heavy; no contrary result located in this
+    bounded pass is not agreement.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-haiku-5-5-2026-10-07
+    method: Public original-source inspection against rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-5c1cc68fa486d6fe
+  scope: direct
+  task_ids:
+  - agent.tool_use
+  related_task_ids: []
+  assessment: warning
+  scope_note: Limited to the stated task and inspected evidence; no universal ranking.
+  judgment: 'Warning: structured JSON with thinking disabled can skip a required tool; creator suggests adaptive
+    thinking or explicit tool choice.'
+  confidence: low
+  supporting_evidence_ids:
+  - src-8ac74a7d6b30
+  contradictory_evidence_ids: []
+  conditions:
+  - Effort and prompt length matter; no transfer to arbitrary harnesses.
+  known_failure_modes:
+  - Creator-reported limitation; frequency and independent recovery unknown.
+  evidence_notes:
+  - Low confidence because source/setup support is sparse or vendor-heavy; no contrary result located in this
+    bounded pass is not agreement.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-haiku-5-5-2026-10-07
+    method: Public original-source inspection against rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-92f36cfb1da4e0f4
+  scope: direct
+  task_ids:
+  - agent.long_horizon
+  related_task_ids: []
+  assessment: warning
+  scope_note: Limited to the stated task and inspected evidence; no universal ranking.
+  judgment: 'Warning: long agent prompts at low effort can stop early; creator mitigation is prompting or higher
+    effort, without independently measured recovery.'
+  confidence: low
+  supporting_evidence_ids:
+  - src-8ac74a7d6b30
+  contradictory_evidence_ids: []
+  conditions:
+  - Effort and prompt length matter; no transfer to arbitrary harnesses.
+  known_failure_modes:
+  - Creator-reported limitation; frequency and independent recovery unknown.
+  evidence_notes:
+  - Low confidence because source/setup support is sparse or vendor-heavy; no contrary result located in this
+    bounded pass is not agreement.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-haiku-5-5-2026-10-07
+    method: Public original-source inspection against rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-d5a912ae74e8e488
+  scope: direct
+  task_ids:
+  - coding.repository_work
+  related_task_ids: []
+  assessment: warning
+  scope_note: Limited to the stated task and inspected evidence; no universal ranking.
+  judgment: 'Warning: the creator reports code changes can be declared complete without verification at low/medium
+    effort; broad repository correctness remains unknown.'
+  confidence: low
+  supporting_evidence_ids:
+  - src-8ac74a7d6b30
+  contradictory_evidence_ids: []
+  conditions:
+  - Effort and prompt length matter; no transfer to arbitrary harnesses.
+  known_failure_modes:
+  - Creator-reported limitation; frequency and independent recovery unknown.
+  evidence_notes:
+  - Low confidence because source/setup support is sparse or vendor-heavy; no contrary result located in this
+    bounded pass is not agreement.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-haiku-5-5-2026-10-07
+    method: Public original-source inspection against rubric 1.1
 - model_id: claude-opus-5-5
   profile: models/anthropic/claude-opus-5-5/profile.yaml
   id: judgment-a58a16e37a99fdcb

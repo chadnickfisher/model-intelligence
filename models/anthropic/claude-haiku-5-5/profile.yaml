@@ -16,61 +16,402 @@ specifications:
     value: null
     status: unknown
     conditions:
-    - Pending the declared full initial load.
-    evidence_ids: []
+    - No exact architecture disclosed in the inspected model page or public search.
+    evidence_ids:
+    - src-d69b0e2a2d12
   parameters:
     value: null
     status: unknown
     conditions:
-    - Pending the declared full initial load.
-    evidence_ids: []
+    - No exact parameter count disclosed.
+    evidence_ids:
+    - src-d69b0e2a2d12
   context_window:
-    value: null
-    status: unknown
+    value: 1000000
+    status: documented
     conditions:
-    - Pending the declared full initial load.
-    evidence_ids: []
+    - Published token capacity; effective retrieval not established.
+    evidence_ids:
+    - src-d69b0e2a2d12
   maximum_output:
-    value: null
-    status: unknown
+    value: 128000
+    status: documented
     conditions:
-    - Pending the declared full initial load.
-    evidence_ids: []
+    - Thinking consumes the output budget.
+    evidence_ids:
+    - src-d69b0e2a2d12
   modalities:
-    value: null
-    status: unknown
-    conditions:
-    - Pending the declared full initial load.
-    evidence_ids: []
+    value:
+      input:
+      - text
+      - image
+      output:
+      - text
+    status: documented
+    conditions: []
+    evidence_ids:
+    - src-d69b0e2a2d12
   language_support:
+    value: Multilingual; exact language inventory unknown
+    status: documented
+    conditions:
+    - Family overview documents multilingual support; language-specific quality remains unknown.
+    evidence_ids:
+    - src-d69b0e2a2d12
+additional_specifications:
+  api_id:
+    value: claude-haiku-5-5
+    status: documented
+    conditions:
+    - Creator documents a pinned dateless model ID; serving infrastructure may still change.
+    evidence_ids:
+    - src-9332683246db
+    - src-e471bc2bb72f
+  thinking:
+    value: adaptive
+    status: documented
+    conditions: []
+    evidence_ids:
+    - src-d69b0e2a2d12
+    - src-e471bc2bb72f
+  default_api_effort:
+    value: medium
+    status: documented
+    conditions: []
+    evidence_ids:
+    - src-d69b0e2a2d12
+  knowledge_cutoff:
+    value: 2026-06
+    status: documented
+    conditions: []
+    evidence_ids:
+    - src-d69b0e2a2d12
+  training_cutoff:
+    value: 2026-06
+    status: documented
+    conditions: []
+    evidence_ids:
+    - src-d69b0e2a2d12
+  batch_max_output:
+    value: 300000
+    status: documented
+    conditions:
+    - Message Batches beta; output-300k-2026-03-24 header.
+    evidence_ids:
+    - src-d69b0e2a2d12
+  earliest_retirement_date:
+    value: '2027-10-07'
+    status: documented
+    conditions:
+    - Earliest commitment, not an announced shutdown.
+    evidence_ids:
+    - src-d69b0e2a2d12
+  weights:
     value: null
     status: unknown
     conditions:
-    - Pending the declared full initial load.
-    evidence_ids: []
-additional_specifications: {}
+    - No public weights/license located; local deployment not established.
+    evidence_ids:
+    - src-d69b0e2a2d12
+  restrictions:
+    value:
+    - No assistant prefill; omit temperature/top_p/top_k.
+    - Thinking replay is account-bound and sensitive to changes in prior conversation.
+    status: documented
+    conditions: []
+    evidence_ids:
+    - src-e471bc2bb72f
 licensing:
-  name: null
-  commercial_use: null
+  name: Proprietary commercial service terms
+  commercial_use: API use to power customer products subject to commercial terms and usage/region policies.
   redistribution: null
   fine_tuning: null
-  hosted_service: null
+  hosted_service: Permitted customer applications; resale requires approval under commercial terms.
   restrictions:
-  - Pending source review.
-  evidence_ids: []
+  - Commercial and consumer terms differ.
+  - No weight redistribution license or exact-model fine-tuning offer located.
+  evidence_ids:
+  - src-7dea3b226d0f
 local_inference:
   availability: unknown
   hardware_notes: []
   conditions:
-  - Pending public weights/availability investigation.
-  evidence_ids: []
-capabilities: []
+  - No public weights/runtime located. Hosted API does not establish local inference.
+  evidence_ids:
+  - src-d69b0e2a2d12
+capabilities:
+- id: judgment-27ba5595ff0f118f
+  scope: direct
+  task_ids:
+  - knowledge.classification
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Limited to the stated task and inspected evidence; no universal ranking.
+  judgment: Candidate for short label-assignment requests; creator positioning supports a conditional trial,
+    not measured accuracy across label sets.
+  confidence: low
+  supporting_evidence_ids:
+  - src-d69b0e2a2d12
+  contradictory_evidence_ids: []
+  conditions:
+  - Launch-day public evidence; exact deployment must match the recorded setup.
+  known_failure_modes:
+  - Independent task-specific replication and production acceptance remain unknown.
+  evidence_notes:
+  - Low confidence because source/setup support is sparse or vendor-heavy; no contrary result located in this
+    bounded pass is not agreement.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-haiku-5-5-2026-10-07
+    method: Public original-source inspection against rubric 1.1
+- id: judgment-fad82c58efab1580
+  scope: direct
+  task_ids:
+  - knowledge.extraction
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Limited to the stated task and inspected evidence; no universal ranking.
+  judgment: Candidate for bounded extraction from supplied material; no independently inspected extraction
+    dataset establishes general reliability.
+  confidence: low
+  supporting_evidence_ids:
+  - src-d69b0e2a2d12
+  contradictory_evidence_ids: []
+  conditions:
+  - Launch-day public evidence; exact deployment must match the recorded setup.
+  known_failure_modes:
+  - Independent task-specific replication and production acceptance remain unknown.
+  evidence_notes:
+  - Low confidence because source/setup support is sparse or vendor-heavy; no contrary result located in this
+    bounded pass is not agreement.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-haiku-5-5-2026-10-07
+    method: Public original-source inspection against rubric 1.1
+- id: judgment-8550661dd3250cd7
+  scope: direct
+  task_ids:
+  - language.summarization
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Limited to the stated task and inspected evidence; no universal ranking.
+  judgment: Candidate for short summaries; creator launch claims remain unreplicated under a specified fidelity
+    evaluation.
+  confidence: low
+  supporting_evidence_ids:
+  - src-cdb1d51fae04
+  contradictory_evidence_ids: []
+  conditions:
+  - Launch-day public evidence; exact deployment must match the recorded setup.
+  known_failure_modes:
+  - Independent task-specific replication and production acceptance remain unknown.
+  evidence_notes:
+  - Low confidence because source/setup support is sparse or vendor-heavy; no contrary result located in this
+    bounded pass is not agreement.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-haiku-5-5-2026-10-07
+    method: Public original-source inspection against rubric 1.1
+- id: judgment-b1c7dd3088dba162
+  scope: direct
+  task_ids:
+  - agent.computer_use
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Limited to the stated task and inspected evidence; no universal ranking.
+  judgment: Conditional computer operation evidence is limited to the vendor OSWorld 2.1 offline subset (72.4%);
+    harness and effort are incompletely specified.
+  confidence: low
+  supporting_evidence_ids:
+  - src-cdb1d51fae04
+  contradictory_evidence_ids: []
+  conditions:
+  - Launch-day public evidence; exact deployment must match the recorded setup.
+  known_failure_modes:
+  - Independent task-specific replication and production acceptance remain unknown.
+  evidence_notes:
+  - Low confidence because source/setup support is sparse or vendor-heavy; no contrary result located in this
+    bounded pass is not agreement.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-haiku-5-5-2026-10-07
+    method: Public original-source inspection against rubric 1.1
+- id: judgment-2a8d07b5d42de50a
+  scope: direct
+  task_ids:
+  - reasoning.general
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Limited to the stated task and inspected evidence; no universal ranking.
+  judgment: Vendor HLE results provide narrow academic reasoning evidence (45.9% without tools, 57.4% with
+    tools), with unresolved effort and measurement dates.
+  confidence: low
+  supporting_evidence_ids:
+  - src-cdb1d51fae04
+  contradictory_evidence_ids: []
+  conditions:
+  - Launch-day public evidence; exact deployment must match the recorded setup.
+  known_failure_modes:
+  - Independent task-specific replication and production acceptance remain unknown.
+  evidence_notes:
+  - Low confidence because source/setup support is sparse or vendor-heavy; no contrary result located in this
+    bounded pass is not agreement.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-haiku-5-5-2026-10-07
+    method: Public original-source inspection against rubric 1.1
+- id: judgment-f7c3002252f74a20
+  scope: direct
+  task_ids:
+  - vision.question_answering
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Limited to the stated task and inspected evidence; no universal ranking.
+  judgment: Vendor Chartography result (46.4%, no tools) supports only a conditional chart-question trial;
+    visual grounding and general image reliability remain unknown.
+  confidence: low
+  supporting_evidence_ids:
+  - src-cdb1d51fae04
+  contradictory_evidence_ids: []
+  conditions:
+  - Launch-day public evidence; exact deployment must match the recorded setup.
+  known_failure_modes:
+  - Independent task-specific replication and production acceptance remain unknown.
+  evidence_notes:
+  - Low confidence because source/setup support is sparse or vendor-heavy; no contrary result located in this
+    bounded pass is not agreement.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-haiku-5-5-2026-10-07
+    method: Public original-source inspection against rubric 1.1
+- id: judgment-5c1cc68fa486d6fe
+  scope: direct
+  task_ids:
+  - agent.tool_use
+  related_task_ids: []
+  assessment: warning
+  scope_note: Limited to the stated task and inspected evidence; no universal ranking.
+  judgment: 'Warning: structured JSON with thinking disabled can skip a required tool; creator suggests adaptive
+    thinking or explicit tool choice.'
+  confidence: low
+  supporting_evidence_ids:
+  - src-8ac74a7d6b30
+  contradictory_evidence_ids: []
+  conditions:
+  - Effort and prompt length matter; no transfer to arbitrary harnesses.
+  known_failure_modes:
+  - Creator-reported limitation; frequency and independent recovery unknown.
+  evidence_notes:
+  - Low confidence because source/setup support is sparse or vendor-heavy; no contrary result located in this
+    bounded pass is not agreement.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-haiku-5-5-2026-10-07
+    method: Public original-source inspection against rubric 1.1
+- id: judgment-92f36cfb1da4e0f4
+  scope: direct
+  task_ids:
+  - agent.long_horizon
+  related_task_ids: []
+  assessment: warning
+  scope_note: Limited to the stated task and inspected evidence; no universal ranking.
+  judgment: 'Warning: long agent prompts at low effort can stop early; creator mitigation is prompting or higher
+    effort, without independently measured recovery.'
+  confidence: low
+  supporting_evidence_ids:
+  - src-8ac74a7d6b30
+  contradictory_evidence_ids: []
+  conditions:
+  - Effort and prompt length matter; no transfer to arbitrary harnesses.
+  known_failure_modes:
+  - Creator-reported limitation; frequency and independent recovery unknown.
+  evidence_notes:
+  - Low confidence because source/setup support is sparse or vendor-heavy; no contrary result located in this
+    bounded pass is not agreement.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-haiku-5-5-2026-10-07
+    method: Public original-source inspection against rubric 1.1
+- id: judgment-d5a912ae74e8e488
+  scope: direct
+  task_ids:
+  - coding.repository_work
+  related_task_ids: []
+  assessment: warning
+  scope_note: Limited to the stated task and inspected evidence; no universal ranking.
+  judgment: 'Warning: the creator reports code changes can be declared complete without verification at low/medium
+    effort; broad repository correctness remains unknown.'
+  confidence: low
+  supporting_evidence_ids:
+  - src-8ac74a7d6b30
+  contradictory_evidence_ids: []
+  conditions:
+  - Effort and prompt length matter; no transfer to arbitrary harnesses.
+  known_failure_modes:
+  - Creator-reported limitation; frequency and independent recovery unknown.
+  evidence_notes:
+  - Low confidence because source/setup support is sparse or vendor-heavy; no contrary result located in this
+    bounded pass is not agreement.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-haiku-5-5-2026-10-07
+    method: Public original-source inspection against rubric 1.1
 performance_characteristics: []
-access_ids: []
-price_ids: []
+access_ids:
+- access-e049c0bfd67b6a3e
+- access-f2773a94fb2d7d75
+- access-ac0b3925edff9ff5
+- access-761e37eeb75fe437
+- access-63e388531e15b97b
+- access-df2beae03d5e857d
+price_ids:
+- price-729ac6158cd411fd
+- price-033812acbb533c13
+- price-851b345d1ce20f50
+- price-ff990a87ae69bd0a
 evidence_ids:
+- src-1ea3e75f96c3
+- src-3044b3f1e225
+- src-50846cd1ff36
+- src-7dea3b226d0f
+- src-89e4a5e6eadc
+- src-8ac74a7d6b30
+- src-8cb4ce8e8a24
+- src-9332683246db
+- src-99f7f1fb215d
+- src-9a3bbc4f637b
+- src-bb4952bada00
+- src-cdb1d51fae04
 - src-d69b0e2a2d12
+- src-dc06fff663d6
+- src-dc1c9e6b2717
+- src-dc337252fd3b
+- src-e471bc2bb72f
+- src-ed2ea3ed3dc1
+- src-f34fd90d33e8
 notes:
-- New release identity only; full assessment pending.
+- Full bounded initial assessment; all required fields and tasks accounted for with investigated unknowns.
+- Haiku 4.5 remains a separate model; its judgments and behavior were not transferred.
 limitations:
-- Do not transfer Haiku 4.5 judgments to this release.
+- Launch-day evidence; most task-specific independent results and dated practitioner failure/fix reports remain
+  unknown.
+- System-card PDF failed inspection twice; detailed evaluation configuration not established.
+- Partner tariffs and account eligibility are not inferred from first-party prices.

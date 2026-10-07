@@ -10,25 +10,25 @@ api_compatibility:
 access_methods:
 - Commercial API key and billing account; consumer app/Code subscription sign-in is separate.
 geographic_availability:
-- Supported Regions Policy has separate API and Claude.ai lists; geography and ownership restrictions
-  apply.
+- Supported Regions Policy has separate API and Claude.ai lists; geography and ownership restrictions apply.
 rate_limits:
-- Haiku 4.5 standard maximums depend on Start/Build/Scale tiers; new-account evaluation and organization
-  limits may be lower.
+- Haiku 4.5 standard maximums depend on Start/Build/Scale tiers; new-account evaluation and organization limits
+  may be lower.
 caching_batching:
-- Haiku 4.5 cache minimum 4096 tokens; five-minute or one-hour TTL. Batch API tariff is separate from
-  interactive client usage.
+- Haiku 4.5 cache minimum 4096 tokens; five-minute or one-hour TTL. Batch API tariff is separate from interactive
+  client usage.
 privacy_data_use:
 - Commercial products default to no model training; explicit feedback or opt-in exceptions apply. Consumer
   Free/Pro/Max and their Code sessions have separate policies.
-- Approved zero retention applies only to eligible commercial APIs/products and Enterprise Code, with
-  safety/legal exceptions; no universal consumer guarantee.
+- Approved zero retention applies only to eligible commercial APIs/products and Enterprise Code, with safety/legal
+  exceptions; no universal consumer guarantee.
 reliability: []
 model_ids:
 - claude-fable-5-1
 - claude-haiku-4-5
 - claude-opus-5-5
 - claude-sonnet-5-5
+- claude-haiku-5-5
 price_ids:
 - price-proprietary-claude-fable-5-1-anthropic-1c9e85bc3ee3
 - price-proprietary-claude-fable-5-1-anthropic-d31f844e1fa5
@@ -41,6 +41,10 @@ price_ids:
 - price-proprietary-claude-pro-monthly-anthropic-2d6b2b18c5d7
 - price-proprietary-claude-sonnet-5-5-anthropic-706ffb2ac9c2
 - price-proprietary-claude-sonnet-5-5-anthropic-ed2559301c6f
+- price-729ac6158cd411fd
+- price-033812acbb533c13
+- price-851b345d1ce20f50
+- price-ff990a87ae69bd0a
 access_ids:
 - access-05e43d3e1d4cbb21
 - access-19e1cfd25b21093c
@@ -74,6 +78,7 @@ access_ids:
 - access-proprietary-access-23-1
 - access-proprietary-access-24
 - access-proprietary-access-25
+- access-e049c0bfd67b6a3e
 evidence_ids:
 - src-ad9aa6f1b8ed
 - src-f3655eaf1407
@@ -100,6 +105,6 @@ evidence_ids:
 - src-9a3bbc4f637b
 notes: []
 limitations:
-- No account entitlement or private negotiated agreement inspected. Provider-wide fields do not imply
-  identical partner or client policies.
+- No account entitlement or private negotiated agreement inspected. Provider-wide fields do not imply identical
+  partner or client policies.
 - No provider-wide reliability/SLA established by the inspected policy pages.

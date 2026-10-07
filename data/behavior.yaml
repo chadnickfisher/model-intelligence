@@ -7982,3 +7982,71 @@ records:
   research_details:
     layer: audio_filter_or_service_or_harness_unresolved
     weights_change_established: false
+- schema_version: '1.0'
+  id: behavior-7b737b41c12a1613
+  model_ids:
+  - claude-haiku-5-5
+  provider_id: anthropic
+  product: Claude API
+  model_version: claude-haiku-5-5
+  harness: null
+  effort: low/medium
+  claim: Creator reports early stopping in long low-effort agent prompts and missing verification of code changes
+    at low/medium effort.
+  change_type: product_change
+  metrics: []
+  observed_at: '2026-10-07'
+  reported_at: null
+  effective_from: null
+  status: unknown
+  fact_status: acknowledged
+  confidence: low
+  supporting_evidence_ids:
+  - src-8ac74a7d6b30
+  contradictory_evidence_ids: []
+  official_acknowledgment: Creator guide documents behavior; exact original event date unspecified.
+  fix:
+    published_at: null
+    version: null
+    summary: null
+    evidence_ids: []
+    measured_improvement: null
+  conditions:
+  - Creator API scope; partner feature compatibility differs.
+  notes:
+  - Suggested mitigations are not independently measured recovery.
+  - No exact-model dated practitioner regression/fix reproduction located.
+- schema_version: '1.0'
+  id: behavior-24c645e83fd64401
+  model_ids:
+  - claude-haiku-5-5
+  provider_id: anthropic
+  product: Claude API
+  model_version: claude-haiku-5-5
+  harness: null
+  effort: null
+  claim: Creator documents new thinking/tokenizer and toolset behavior; unadapted Haiku 4.5 request patterns
+    can return 400 errors.
+  change_type: product_change
+  metrics: []
+  observed_at: '2026-10-07'
+  reported_at: null
+  effective_from: null
+  status: unknown
+  fact_status: acknowledged
+  confidence: low
+  supporting_evidence_ids:
+  - src-e471bc2bb72f
+  contradictory_evidence_ids: []
+  official_acknowledgment: Creator guide documents behavior; exact original event date unspecified.
+  fix:
+    published_at: null
+    version: null
+    summary: null
+    evidence_ids: []
+    measured_improvement: null
+  conditions:
+  - Creator API scope; partner feature compatibility differs.
+  notes:
+  - Suggested mitigations are not independently measured recovery.
+  - No exact-model dated practitioner regression/fix reproduction located.

@@ -13587,3 +13587,178 @@ records:
     product: Grok 4.7 Fast in Cursor / Grok Build
     conditions: Same model on faster infrastructure, billed through client plan; expressly not public
       xAI API and not included in free Grok Build.
+- schema_version: '1.0'
+  id: access-e049c0bfd67b6a3e
+  verified_at: '2026-10-07'
+  model_id: claude-haiku-5-5
+  model_label: claude-haiku-5-5
+  provider_id: anthropic
+  product: Claude API
+  methods:
+  - API
+  status: Active
+  availability: documented
+  billing_class: metered_api
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: null
+  restrictions:
+  - Exact account quota, entitlement and negotiated conditions unknown.
+  conditions:
+  - Haiku 5.5 uses a 512-token prompt-cache minimum.
+  - Tier/account limits apply; published limits are maximums, not guaranteed capacity.
+  price_ids:
+  - price-729ac6158cd411fd
+  - price-033812acbb533c13
+  - price-851b345d1ce20f50
+  - price-ff990a87ae69bd0a
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-50846cd1ff36
+  - src-e471bc2bb72f
+  - src-ed2ea3ed3dc1
+  - src-9a3bbc4f637b
+  - src-7dea3b226d0f
+  - src-89e4a5e6eadc
+  notes:
+  - No account access or inference was used to verify the public offering.
+- schema_version: '1.0'
+  id: access-f2773a94fb2d7d75
+  verified_at: '2026-10-07'
+  model_id: claude-haiku-5-5
+  model_label: claude-haiku-5-5
+  provider_id: aws-bedrock
+  product: Amazon Bedrock Mantle
+  methods:
+  - API
+  status: Active
+  availability: documented
+  billing_class: metered_api
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: null
+  restrictions:
+  - Exact account quota, entitlement and negotiated conditions unknown.
+  conditions:
+  - anthropic.claude-haiku-5-5; newer computer/browser toolsets and structured outputs unavailable in inspected
+    guide.
+  - Global versus regional routing differs; exact regional tariff unknown.
+  price_ids: []
+  evidence_ids:
+  - src-f34fd90d33e8
+  - src-99f7f1fb215d
+  notes:
+  - No account access or inference was used to verify the public offering.
+- schema_version: '1.0'
+  id: access-ac0b3925edff9ff5
+  verified_at: '2026-10-07'
+  model_id: claude-haiku-5-5
+  model_label: claude-haiku-5-5
+  provider_id: google-cloud
+  product: Gemini Enterprise Agent Platform
+  methods:
+  - API
+  status: Active
+  availability: documented
+  billing_class: metered_api
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: null
+  restrictions:
+  - Exact account quota, entitlement and negotiated conditions unknown.
+  conditions:
+  - claude-haiku-5-5; global and US/EU multi-region routes.
+  - Card advertises batch predictions while Anthropic guide excludes Message Batches API; distinct APIs, no
+    universal batch parity.
+  - Google Cloud data handling; exact retention guarantees not established by this model card.
+  price_ids: []
+  evidence_ids:
+  - src-bb4952bada00
+  - src-8cb4ce8e8a24
+  notes:
+  - No account access or inference was used to verify the public offering.
+- schema_version: '1.0'
+  id: access-761e37eeb75fe437
+  verified_at: '2026-10-07'
+  model_id: claude-haiku-5-5
+  model_label: claude-haiku-5-5
+  provider_id: azure-foundry
+  product: Microsoft Foundry / Azure-hosted Claude
+  methods:
+  - API
+  status: Active
+  availability: documented
+  billing_class: metered_api
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: null
+  restrictions:
+  - Exact account quota, entitlement and negotiated conditions unknown.
+  conditions:
+  - claude-haiku-5-5 default deployment; custom deployment names may differ.
+  - CCU billing via Azure Marketplace; exact tariff and model-specific eligibility unknown.
+  - Computer/browser toolsets and Message Batches unsupported in inspected guide.
+  price_ids: []
+  evidence_ids:
+  - src-dc337252fd3b
+  notes:
+  - No account access or inference was used to verify the public offering.
+- schema_version: '1.0'
+  id: access-63e388531e15b97b
+  verified_at: '2026-10-07'
+  model_id: claude-haiku-5-5
+  model_label: claude-haiku-5-5
+  provider_id: azure-foundry
+  product: Microsoft Foundry / Anthropic-hosted Claude
+  methods:
+  - API
+  status: Active
+  availability: documented
+  billing_class: metered_api
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: null
+  restrictions:
+  - Exact account quota, entitlement and negotiated conditions unknown.
+  conditions:
+  - Distinct hosting location; do not apply Azure-hosted content residency statement automatically.
+  - Exact CCU tariff and availability to an individual account unknown.
+  price_ids: []
+  evidence_ids:
+  - src-dc337252fd3b
+  notes:
+  - No account access or inference was used to verify the public offering.
+- schema_version: '1.0'
+  id: access-df2beae03d5e857d
+  verified_at: '2026-10-07'
+  model_id: claude-haiku-5-5
+  model_label: claude-haiku-5-5
+  provider_id: claude-platform-on-aws
+  product: Claude Platform on AWS
+  methods:
+  - API
+  status: Active
+  availability: documented
+  billing_class: metered_api
+  client_id: null
+  requires_account: true
+  subscription_includes_api: null
+  reset_cadence: null
+  restrictions:
+  - Exact account quota, entitlement and negotiated conditions unknown.
+  conditions:
+  - claude-haiku-5-5; AWS Marketplace billing and separate account.
+  - ZDR is opt-in; no universal retention guarantee.
+  - Newer computer/browser toolsets unavailable.
+  price_ids: []
+  evidence_ids:
+  - src-3044b3f1e225
+  - src-99f7f1fb215d
+  - src-ed2ea3ed3dc1
+  notes:
+  - No account access or inference was used to verify the public offering.

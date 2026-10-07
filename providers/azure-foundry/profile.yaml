@@ -10,20 +10,18 @@ access_methods:
 - Models sold by Azure and partner offerings must be distinguished; region, Global and DataZone deployments
   differ.
 geographic_availability:
-- '{"status": "partial", "summary": "Standard processing within selected geography; Global may process
-  in any supported geography; DataZone within defined US/EU zone. At-rest geography differs from inference
-  location."}'
+- '{"status": "partial", "summary": "Standard processing within selected geography; Global may process in any
+  supported geography; DataZone within defined US/EU zone. At-rest geography differs from inference location."}'
 - not_exhaustively_verified
 rate_limits:
 - '{"status": "partial", "summary": "Per-model/deployment/account quotas and prices not verified."}'
 caching_batching: []
 privacy_data_use:
-- '{"status": "public_verified", "summary": "Reviewed policy covers models sold by Azure: no base-model
-  training on prompts/completions. Stateful features can store data; flagged abuse may trigger storage/human
-  review. Modified monitoring requires approval."}'
+- '{"status": "public_verified", "summary": "Reviewed policy covers models sold by Azure: no base-model training
+  on prompts/completions. Stateful features can store data; flagged abuse may trigger storage/human review.
+  Modified monitoring requires approval."}'
 - Claude Marketplace offers are operated by Anthropic as an independent processor; Azure-hosted and Anthropic-hosted
-  processing differ, with exceptions-only safety review. Models sold by Azure policy does not cover this
-  route.
+  processing differ, with exceptions-only safety review. Models sold by Azure policy does not cover this route.
 reliability: []
 model_ids:
 - claude-fable-5-1
@@ -43,6 +41,7 @@ model_ids:
 - phi-4-mini-instruct
 - phi-4-multimodal-instruct
 - phi-4-reasoning-vision-15b
+- claude-haiku-5-5
 price_ids:
 - price-providers-models-sold-by-azure-azure-foundry-ca5e6135e123
 access_ids:
@@ -68,6 +67,8 @@ access_ids:
 - access-proprietary-access-19-azure-foundry
 - access-proprietary-access-21-azure-foundry
 - access-proprietary-access-6-azure-foundry
+- access-761e37eeb75fe437
+- access-63e388531e15b97b
 evidence_ids:
 - src-82c97913adaf
 - src-3b2d0dcdbe22

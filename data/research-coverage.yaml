@@ -6490,55 +6490,166 @@ records:
   id: research-coverage-claude-haiku-5-5-capabilities
   model_id: claude-haiku-5-5
   domain: capabilities
-  research_batch_id: new-model-intake-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: research-run-haiku-5-5-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-d69b0e2a2d12
+  - src-cdb1d51fae04
+  - src-dc1c9e6b2717
+  search_references: &id001
+  - query: site:anthropic.com "Haiku 5.5"
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://www.anthropic.com/claude-haiku-5-5
+    notes:
+    - Public original sources inspected where cited; sibling and paraphrased findings did not establish exact-model
+      test evidence.
+  - query: site:platform.claude.com "claude-haiku-5-5"
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://platform.claude.com/docs/en/models/haiku-5-5/migration-guide
+    notes:
+    - Public original sources inspected where cited; sibling and paraphrased findings did not establish exact-model
+      test evidence.
+  - query: site:platform.claude.com/docs/en/models/haiku-5-5/overview "Specifications"
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://platform.claude.com/docs/en/models/haiku-5-5/overview
+    notes:
+    - Public original sources inspected where cited; sibling and paraphrased findings did not establish exact-model
+      test evidence.
+  - query: '"Claude Haiku 5.5" benchmark evaluation independent'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://artificialanalysis.ai/models/claude-haiku-5-5-medium
+    notes:
+    - Public original sources inspected where cited; sibling and paraphrased findings did not establish exact-model
+      test evidence.
+  - query: '"claude-haiku-5-5" issue bug failure'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://www.reddit.com/r/ClaudeAI/comments/1x06d3z/claude_haiku_55_official_prompting_guide/
+    notes:
+    - Public original sources inspected where cited; sibling and paraphrased findings did not establish exact-model
+      test evidence.
+  - query: '"Claude Haiku 5.5" classification extraction summarization translation long context evaluation'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://www.anthropic.com/claude-haiku-5-5
+    notes:
+    - Public original sources inspected where cited; sibling and paraphrased findings did not establish exact-model
+      test evidence.
+  - query: '"claude-haiku-5-5" site:github.com/anthropics/claude-code/issues'
+    checked_at: '2026-10-07'
+    outcome: no_matched_sources
+    urls: []
+    notes:
+    - Public original sources inspected where cited; sibling and paraphrased findings did not establish exact-model
+      test evidence.
+  - query: '"Claude Haiku 5.5" model weights parameters architecture fine tuning'
+    checked_at: '2026-10-07'
+    outcome: no_matched_sources
+    urls: []
+    notes:
+    - Public original sources inspected where cited; sibling and paraphrased findings did not establish exact-model
+      test evidence.
+  - query: '"Claude Haiku 5.5" site:github.com "bug" "2026"'
+    checked_at: '2026-10-07'
+    outcome: no_matched_sources
+    urls: []
+    notes:
+    - Public original sources inspected where cited; sibling and paraphrased findings did not establish exact-model
+      test evidence.
+  - query: '"Claude Haiku 5.5" rate limits privacy data retention model weights'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://platform.claude.com/docs/en/api/rate-limits
+    notes:
+    - Public original sources inspected where cited; sibling and paraphrased findings did not establish exact-model
+      test evidence.
+  - query: '"claude-haiku-5-5" "issue" "regression" OR "400" OR "empty"'
+    checked_at: '2026-10-07'
+    outcome: no_matched_sources
+    urls: []
+    notes:
+    - Public original sources inspected where cited; sibling and paraphrased findings did not establish exact-model
+      test evidence.
+  - query: '"Claude Haiku 5.5" "summarization" OR "classification" OR "extraction" independent evaluation'
+    checked_at: '2026-10-07'
+    outcome: no_matched_sources
+    urls: []
+    notes:
+    - Public original sources inspected where cited; sibling and paraphrased findings did not establish exact-model
+      test evidence.
   scope_notes:
-  - New identity intake; full research pending.
+  - Initial exact-model load reconciles required fields and task decisions; unknowns and inaccessible optional
+    system-card details remain explicit.
   remaining_gaps:
-  - Pending bounded initial load.
+  - Launch-day independent/practitioner/setup gaps remain; completion is check accounting.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-claude-haiku-5-5-benchmarks
   model_id: claude-haiku-5-5
   domain: benchmarks
-  research_batch_id: new-model-intake-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: research-run-haiku-5-5-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-cdb1d51fae04
+  - src-dc1c9e6b2717
+  - src-1ea3e75f96c3
+  search_references: *id001
   scope_notes:
-  - New identity intake; full research pending.
+  - Initial exact-model load reconciles required fields and task decisions; unknowns and inaccessible optional
+    system-card details remain explicit.
   remaining_gaps:
-  - Pending bounded initial load.
+  - Launch-day independent/practitioner/setup gaps remain; completion is check accounting.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-claude-haiku-5-5-access-pricing
   model_id: claude-haiku-5-5
   domain: access_pricing
-  research_batch_id: new-model-intake-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: research-run-haiku-5-5-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-50846cd1ff36
+  - src-7dea3b226d0f
+  - src-ed2ea3ed3dc1
+  - src-f34fd90d33e8
+  - src-8cb4ce8e8a24
+  - src-dc337252fd3b
+  - src-3044b3f1e225
+  search_references: *id001
   scope_notes:
-  - New identity intake; full research pending.
+  - Initial exact-model load reconciles required fields and task decisions; unknowns and inaccessible optional
+    system-card details remain explicit.
   remaining_gaps:
-  - Pending bounded initial load.
+  - Launch-day independent/practitioner/setup gaps remain; completion is check accounting.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-claude-haiku-5-5-behavior
   model_id: claude-haiku-5-5
   domain: behavior
-  research_batch_id: new-model-intake-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: research-run-haiku-5-5-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-8ac74a7d6b30
+  - src-e471bc2bb72f
+  - src-dc06fff663d6
+  search_references: *id001
   scope_notes:
-  - New identity intake; full research pending.
+  - Initial exact-model load reconciles required fields and task decisions; unknowns and inaccessible optional
+    system-card details remain explicit.
   remaining_gaps:
-  - Pending bounded initial load.
+  - Launch-day independent/practitioner/setup gaps remain; completion is check accounting.
   blocked_reason: null
