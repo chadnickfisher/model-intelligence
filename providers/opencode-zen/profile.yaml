@@ -22,16 +22,18 @@ privacy_data_use:
 - '{"status": "public_verified", "summary": "Model-route specific. Go docs list Grok 4.7/4.6 30-day retention,
   GLM/Kimi/MiniMax selected routes zero days; no training for those listed routes."}'
 reliability: []
-model_ids: []
+model_ids:
+- xai-grok-4-7
 price_ids:
-- price-providers-xai-grok-4-7-opencode-zen-ad6a54b286af
-- price-providers-xai-grok-4-7-opencode-zen-5e46b5d4903b
-- price-providers-zen-credit-purchase-opencode-zen-9481cbb7a771
 - price-providers-go-opencode-zen-14d71524fa38
 - price-providers-go-opencode-zen-b0161cc92e8a
+- price-providers-xai-grok-4-7-opencode-zen-5e46b5d4903b
+- price-providers-xai-grok-4-7-opencode-zen-ad6a54b286af
+- price-providers-zen-credit-purchase-opencode-zen-9481cbb7a771
 access_ids:
-- access-providers-access-opencode-zen
+- access-86bfd2b4f9464334
 - access-providers-access-opencode-go
+- access-providers-access-opencode-zen
 evidence_ids:
 - src-13da216438ac
 - src-772c9fd668f0

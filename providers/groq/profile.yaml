@@ -24,6 +24,10 @@ model_ids:
 - gpt-oss-120b
 - gpt-oss-20b
 price_ids:
+- price-5c05bbd1c94ea88a
+- price-74d1c52ff9012332
+- price-79c8f1def0837f0f
+- price-bf8551d32284bebd
 - price-proprietary-gpt-oss-120b-groq-0f327a7e8dbf
 - price-proprietary-gpt-oss-120b-groq-cf02720da9d9
 - price-proprietary-gpt-oss-20b-groq-38ccf87aa66a
@@ -31,6 +35,10 @@ price_ids:
 - price-providers-speech-to-text-api-groq-9400c198843b
 - price-providers-tts-api-groq-a4d381fb1bc9
 access_ids:
+- access-245f490d996c15bd
+- access-36f2b86695893834
+- access-66b82db57afc8498
+- access-fdaee42db3f59c36
 - access-proprietary-access-27
 - access-proprietary-access-30
 - access-providers-access-groq-developer

@@ -121,8 +121,13 @@ capabilities:
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
-access_ids: []
+access_ids:
+- access-4ebb9f82b08e79fa
+- access-a58f921635e0103b
+- access-bd7b5c0e0b88f15a
+- access-db280e3f6545e4c7
 price_ids:
+- price-2c7f6bbbc4244653
 - price-providers-cohere-embed-5-pro-cohere-516f45ff44b6
 - price-providers-cohere-embed-5-pro-cohere-d310d3a8de69
 evidence_ids:

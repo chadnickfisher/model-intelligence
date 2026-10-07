@@ -29,6 +29,28 @@ Contradictory or limiting sources: [Vals AI Gemini 4 Argon](https://www.vals.ai/
 
 Evidence notes: Public-source synthesis; no inference runs.; Observation obs-ac88874e3783: Independent early-access results are strong on code migration and terminal tasks but much weaker on CUA-bench and fully resolved ProgramBench.; Observation obs-917f279500bc: Announced Sep 30 for selected Fairwind defenders; general developer/consumer access described as forthcoming.; Observation obs-f5e1684ef252: Long tasks can be costly; independent evaluator reports high costs for CUA and code migration, using regular prices.
 
+### Coding.frontend (low confidence)
+
+Use relative preference evidence to shortlist this exact configuration for frontend trials; do not infer tests or review strength.
+
+Scope: direct / conditional. Task-specific source claim under documented conditions; no transfer to other coding tasks.
+
+Direct task IDs: coding.frontend
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-0134f7d02c624e6b
+
+Conditions: Frontend generation under hosted Arena configurations; Relative user-preference evidence only; production acceptance requires executable behavior, accessibility, security and maintenance checks.; Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider checkpoint hashes.; exact_named_release_effort_retained
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Code Arena WebDev Frontend](https://arena.ai/leaderboard/code/webdev/frontend) · [Arena FAQ](https://arena.ai/faq)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-gemini4argon; Confidence concerns this bounded claim, not a capability score.
+
 ### Measured generation behavior (medium confidence)
 
 Long tasks can be costly; independent evaluator reports high costs for CUA and code migration, using regular prices. Measurements: {"AA_output_tokens_index": 110000000, "AA_output_tokens_per_second": null}. These describe the cited benchmark configuration only.
@@ -66,7 +88,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-2 recorded access route(s); 2 model-specific price record(s).
+4 recorded access route(s); 2 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -108,6 +130,8 @@ Local conditions: Not established in this pass
 
 ## Recorded access routes
 
+- google-developer-api / Gemini 4 Argon: restricted_rollout_announced_broad_API_not_verified. Not established in this pass
+- google-ai / Google AI Ultra: Conditional consumer/client product; exact account entitlement unverified. Named for future broad rollout. Current general subscriber entitlement not established.
 - google-developer-api / first-party-api: documented route; account eligibility unverified. Not established in this pass
 - google-ai-studio / Google AI Studio: Distribution documented; exact model selector, rollout, regional and subscription entitlement may vary.. Not established in this pass
 

@@ -237,12 +237,16 @@ performance_characteristics:
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
 access_ids:
+- access-5b305a3f9eab1800
+- access-63f7d34dabfae5d3
+- access-856cb85ada3c3a32
+- access-b747dfdee4cd4439
 - access-proprietary-37
 - access-proprietary-37-google-ai-studio
 price_ids:
+- price-proprietary-veo-3-1-generate-preview-google-developer-api-281d4f4cc193
 - price-proprietary-veo-3-1-generate-preview-google-developer-api-a0950450f4b5
 - price-proprietary-veo-3-1-generate-preview-google-developer-api-fdc0b33bf21d
-- price-proprietary-veo-3-1-generate-preview-google-developer-api-281d4f4cc193
 evidence_ids:
 - src-6fab7b07e4f3
 - src-10e39629c3d3

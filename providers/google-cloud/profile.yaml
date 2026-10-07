@@ -23,12 +23,34 @@ privacy_data_use:
 reliability: []
 model_ids:
 - claude-fable-5-1
+- claude-haiku-4-5
 - claude-opus-5-5
 - claude-sonnet-5-5
-- claude-haiku-4-5
+- gemini-3-1-pro-preview
+- gemini-3-5-flash-lite
+- gemini-3-8-flash
+- gemini-3-8-live
+- gemini-3-pro-image
+- gemini-omni-1-1-flash
+- lyria-3-5
+- veo-3-1-generate-preview
+- xai-grok-4-7
 price_ids:
 - price-providers-cloud-model-inference-google-cloud-fee290a05c24
 access_ids:
+- access-24c6a305d07c8ce0
+- access-31784893c7841e82
+- access-40b7a0c0bc209539
+- access-51e50c52598dd165
+- access-5b305a3f9eab1800
+- access-5f7e3a72405e1a66
+- access-701fd08f27b1c232
+- access-a75e26c0c2f61a5d
+- access-abb3d2e18b51895f
+- access-c32876dd4871b040
+- access-f1dc4d68cea5394f
+- access-f4890ae6442309c6
+- access-f6fe69964e7f6830
 - access-proprietary-access-15-google-cloud
 - access-proprietary-access-17-google-cloud
 - access-proprietary-access-19-google-cloud

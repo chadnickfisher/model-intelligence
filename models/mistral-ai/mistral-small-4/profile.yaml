@@ -173,9 +173,14 @@ capabilities:
     history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
-- access-open-mistral-small-4-weights
+- access-4141e6b7c6caba29
+- access-5fc2b9e6cb949ac9
+- access-b99529bc23286dfa
 - access-open-mistral-small-4-mistral-api
+- access-open-mistral-small-4-weights
 price_ids:
+- price-b7f0187ed34bd90f
+- price-bf5e328818668852
 - price-open-mistral-small-4-mistral-api-2c982a02c545
 evidence_ids:
 - src-f2036f817d22

@@ -44,7 +44,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-3 recorded access route(s); 1 model-specific price record(s).
+6 recorded access route(s); 1 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -83,6 +83,9 @@ Local conditions: Not established in this pass
 
 ## Recorded access routes
 
+- google-cloud / Gemini Enterprise Agent Platform: exact_model_route_unverified. Not established in this pass
+- google-developer-api / Gemini Developer API / Google AI Studio: officially_documented_not_execution_tested. Not established in this pass
+- google-ai / Gemini app / Flow Music / Google Vids: Conditional consumer/client product; exact account entitlement unverified. Lyria 3.5 explicitly documented for all users globally in Gemini web/mobile; Flow Music, AI Studio and Vids also named. No fixed generation count verified.
 - google-developer-api / first-party-api: documented route; account eligibility unverified. Not established in this pass
 - google-ai-studio / Google AI Studio: Distribution documented; exact model selector, rollout, regional and subscription entitlement may vary.. Not established in this pass
 - google-consumer / Gemini app / Google AI plans: Distribution documented; exact model selector, rollout, regional and subscription entitlement may vary.. Not established in this pass

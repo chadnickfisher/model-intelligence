@@ -12,16 +12,16 @@ caching_batching: []
 privacy_data_use: []
 reliability: []
 model_ids:
-- gemini-3-8-flash
 - gemini-3-1-pro-preview
 - gemini-3-5-flash-lite
-- gemini-3-pro-image
-- veo-3-1-generate-preview
-- lyria-3-5
+- gemini-3-8-flash
 - gemini-3-8-live
-- gemma-4-31b-it
+- gemini-3-pro-image
 - gemini-omni-1-1-flash
 - gemini4argon
+- gemma-4-31b-it
+- lyria-3-5
+- veo-3-1-generate-preview
 price_ids: []
 access_ids:
 - access-proprietary-33-google-ai-studio

@@ -222,13 +222,164 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-a2765fe12608a3e5
+  scope: direct
+  task_ids:
+  - coding.architecture
+  related_task_ids: []
+  assessment: warning
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Budgeted architectural reconstruction showed incomplete dependency coverage; require independent
+    map/constraint checks.
+  confidence: low
+  supporting_evidence_ids:
+  - src-df1367bde451
+  contradictory_evidence_ids: []
+  conditions:
+  - Three procedurally generated Python pipeline codebases; one run each, 20-action budget, JSON belief probes
+    every three actions; temperature 0. Tests architectural reconstruction, not greenfield design.
+  known_failure_modes:
+  - Sparse exploration limited recall. All models scored zero on invariant matching; structured externalization
+    confounds comprehension.
+  evidence_notes:
+  - Preliminary small synthetic corpus; no variance estimate. Authors attribute the Gemini result mainly to
+    exploration, not inability to understand code.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A01'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate architecture_refactoring:A01; exact identity gates and original sources
+      retained.
+- id: judgment-1d266c9e048c900c
+  scope: direct
+  task_ids:
+  - coding.refactoring
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Can reduce targeted Java smells in a guided workflow; API preservation needs separate validation.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-5050197ff013
+  contradictory_evidence_ids: []
+  conditions:
+  - REFINE static-analysis/planning/transformation/verification workflow, PMD 7.10.0, Java 17; file-only context,
+    no dependencies/tests/build configuration; 160k estimated input preflight cap.
+  known_failure_modes:
+  - Deletion-heavy outputs; 71 public-method-removal cases. Critical assert/fail preservation only 57.1%, shared
+    across all evaluated models.
+  evidence_notes:
+  - Static proxies do not prove executable equivalence. Broader quality metrics inconsistent; generated candidates
+    were not integrated into repositories. Exact reasoning/sampling settings not established.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R04'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate architecture_refactoring:R04; exact identity gates and original sources
+      retained.
+- id: judgment-56301dccb85b54ac
+  scope: direct
+  task_ids:
+  - coding.frontend
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Use relative preference evidence to shortlist this exact configuration for frontend trials; do
+    not infer tests or review strength.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  contradictory_evidence_ids: []
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  known_failure_modes: []
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-gemini-3-1-pro-preview'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:frontend-arena-gemini-3-1-pro-preview; exact identity
+      gates and original sources retained.
+- id: judgment-04629f12518519a6
+  scope: direct
+  task_ids:
+  - coding.review
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Strong result on compact Java refactoring defect identification, bounded to the April API snapshot.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-a8450f23b0f1
+  contradictory_evidence_ids: []
+  conditions:
+  - Default API; behavior-change findings require executable witnesses.
+  - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  known_failure_modes:
+  - One generated witness failed to compile; main dataset lacks clean negatives.
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-gemini31'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:review-gemini31; exact identity gates and original
+      sources retained.
+- id: judgment-05030fb3bfa6c2e7
+  scope: direct
+  task_ids:
+  - coding.tests
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Useful for focused executable distinguishing tests on tiny Java changes.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-a8450f23b0f1
+  contradictory_evidence_ids: []
+  conditions:
+  - April API snapshot; 41 behavioral-change examples.
+  - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  known_failure_modes:
+  - Not evidence of complete repository regression coverage.
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-gemini31'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:tests-gemini31; exact identity gates and original
+      sources retained.
 performance_characteristics: []
 access_ids:
+- access-13993b616413e4a7
+- access-a56aad4911ae37ea
+- access-abb3d2e18b51895f
+- access-b84b37d6412fabfe
 - access-proprietary-34
 - access-proprietary-34-google-ai-studio
-- access-proprietary-34-google-consumer
 - access-proprietary-34-google-antigravity
 - access-proprietary-34-google-cli
+- access-proprietary-34-google-consumer
 price_ids:
 - price-proprietary-gemini-3-1-pro-preview-google-developer-api-0363b1d20999
 - price-proprietary-gemini-3-1-pro-preview-google-developer-api-6666cc8d3986

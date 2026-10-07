@@ -22,19 +22,48 @@ privacy_data_use:
   Modified monitoring requires approval."}'
 reliability: []
 model_ids:
-- gpt-6-astra
 - claude-fable-5-1
+- claude-haiku-4-5
 - claude-opus-5-5
 - claude-sonnet-5-5
-- claude-haiku-4-5
+- cohere-command-a-plus
+- cohere-embed-5-fast
+- cohere-embed-5-pro
+- gpt-6-1-sol
+- gpt-6-astra
+- gpt-6-luna
+- gpt-image-2-5-flare
+- gpt-image-2-5-sunburst
+- gpt-live-1
+- gpt-realtime-2-1
+- phi-4-mini-instruct
+- phi-4-multimodal-instruct
+- phi-4-reasoning-vision-15b
 price_ids:
 - price-providers-models-sold-by-azure-azure-foundry-ca5e6135e123
 access_ids:
-- access-proprietary-access-6-azure-foundry
+- access-07bf870b8a2b3269
+- access-23ee420238d5323d
+- access-48aed6747f506833
+- access-4df322a979cb940f
+- access-4f38855edac192f0
+- access-4f9b3bc4f09b659a
+- access-568f8734df706003
+- access-8602df8a11308536
+- access-87bd0309c7628c7b
+- access-a52f9c294f41f9f3
+- access-a58f921635e0103b
+- access-ac968b718918b9b3
+- access-c3c66fc2cdabb605
+- access-cca1c97ff43c61ba
+- access-d68727250fd716dc
+- access-df73254ae1e94fed
+- access-ee87beb65d488313
 - access-proprietary-access-15-azure-foundry
 - access-proprietary-access-17-azure-foundry
 - access-proprietary-access-19-azure-foundry
 - access-proprietary-access-21-azure-foundry
+- access-proprietary-access-6-azure-foundry
 evidence_ids:
 - src-82c97913adaf
 - src-3b2d0dcdbe22

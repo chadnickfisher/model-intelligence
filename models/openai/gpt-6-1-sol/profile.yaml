@@ -222,19 +222,215 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 1
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-98fd19b09613391e
+  scope: direct
+  task_ids:
+  - coding.scoped_edit
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Useful evidence for exact, fully specified file changes in the measured tooling; semantic edits
+    remain unestablished.
+  confidence: low
+  supporting_evidence_ids:
+  - src-a28910d24d02
+  - src-7224ceac93af
+  - src-0c5ee375aae3
+  contradictory_evidence_ids: []
+  conditions:
+  - 'Provider route: openai-codex; 3 contributing harness families; detailed effort mix not extracted.'
+  - API/checkpoint identity follows source's exact named model; underlying quantization not supplied.
+  - 226 tasks; shell/native editing tools allowed.
+  - Score combines 75% initial exactness and 25% final exactness after permitted recovery.
+  - Record describes a model route with mixed harnesses; do not interpret as pass@1 or a causal model ranking.
+  known_failure_modes: []
+  evidence_notes:
+  - No matched independent contradictory evaluation located. This source establishes a narrow measured route,
+    not a general ability ranking.
+  - 'Potential transfer risk, not measured semantic failure: test-free byte matching does not establish a correct
+    code change.'
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-1-sol-scoped-mechanical'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate scoped_debugging:gpt-6-1-sol-scoped-mechanical; exact identity gates
+      and original sources retained.
+- id: judgment-c6d6c0d605aaa494
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Can repair a subset of hidden repository defects; use as an assisted audit, not a completeness
+    guarantee.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  contradictory_evidence_ids: []
+  conditions:
+  - Codex0.159.0; max is not the account's highest setting (ultra also existed).
+  - 'Harness: Codex CLI; effort: max; effort evidence: first_party.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  known_failure_modes:
+  - Many planted defects remained unresolved in the measured runs.
+  - Run variance and harness differences prevent fine-grained cross-model ranking.
+  evidence_notes:
+  - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
+    quality.
+  - No matched independent contradiction located; partial successes and misses coexist.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-1-sol-debug-bughunt'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate scoped_debugging:gpt-6-1-sol-debug-bughunt; exact identity gates and
+      original sources retained.
+- id: judgment-a5e619c615a3a665
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Promising for small Python repairs when concrete failing examples are available.
+  confidence: low
+  supporting_evidence_ids:
+  - src-0de3942764ff
+  contradictory_evidence_ids: []
+  conditions:
+  - Codex subscription environment, medium effort; seven failed samples from other models, twice each.
+  - One repair round; at most six failed tests/errors disclosed; Python3.12 standard library.
+  known_failure_modes:
+  - No failures observed in14attempts; this is too small and feedback-rich to establish general reliability.
+  evidence_notes:
+  - Different code scale from Bug Hunt Bench; both findings should coexist.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-1-sol-debug-small-python'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate scoped_debugging:gpt-6-1-sol-debug-small-python; exact identity gates
+      and original sources retained.
+- id: judgment-8573c4b7da9f04dd
+  scope: direct
+  task_ids:
+  - coding.frontend
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Use relative preference evidence to shortlist this exact configuration for frontend trials; do
+    not infer tests or review strength.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  contradictory_evidence_ids: []
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  known_failure_modes: []
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-gpt-6-1-sol'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:frontend-arena-gpt-6-1-sol; exact identity gates
+      and original sources retained.
+- id: judgment-445903182a61db95
+  scope: direct
+  task_ids:
+  - coding.tests
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Higher-effort builds showed meaningful test design, but author-reported pass claims remain unverified.
+  confidence: low
+  supporting_evidence_ids:
+  - src-d625f31662c2
+  contradictory_evidence_ids: []
+  conditions:
+  - CodexCLI 0.159.0; two frontend builds, one run/effort.
+  - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  known_failure_modes:
+  - No full independent execution audit; low effort may omit real tests.
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-sol61'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:tests-sol61; exact identity gates and original
+      sources retained.
+- id: judgment-2fb42e70216e4400
+  scope: direct
+  task_ids:
+  - coding.frontend
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Frontend output can look convincing before maintainability and validation are satisfactory.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-d625f31662c2
+  - src-4e6f4ff35504
+  contradictory_evidence_ids: []
+  conditions:
+  - Effort-sensitive Codex harness; inspect artifacts and actually run acceptance checks.
+  - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  known_failure_modes:
+  - Dense low-effort source; false localhost-running summaries.
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-sol61-practitioner'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:frontend-sol61-practitioner; exact identity gates
+      and original sources retained.
 performance_characteristics: []
 access_ids:
+- access-06659d6cd50c99d7
+- access-99c94d22aaaa6562
+- access-9af83833b8b43505
+- access-a8ab60a3548c5c83
+- access-ac50ceb38fd301c9
+- access-c3c66fc2cdabb605
 - access-proprietary-access-1-1
 - access-proprietary-access-3-1
 - access-proprietary-access-4-1
 - access-proprietary-access-4-ide-1
 - access-proprietary-access-5-0
 price_ids:
-- price-proprietary-gpt-6-1-sol-openai-d3ef0d0fec3c
-- price-proprietary-gpt-6-1-sol-openai-6c4abf3b3f1c
 - price-proprietary-gpt-6-1-sol-openai-4aad5754e49e
-- price-proprietary-gpt-6-1-sol-openai-9819b7b75d61
+- price-proprietary-gpt-6-1-sol-openai-6c4abf3b3f1c
 - price-proprietary-gpt-6-1-sol-openai-7809f5982047
+- price-proprietary-gpt-6-1-sol-openai-9819b7b75d61
+- price-proprietary-gpt-6-1-sol-openai-d3ef0d0fec3c
 evidence_ids:
 - src-5906a70e58c6
 - src-0e5ba6524c75

@@ -27,6 +27,116 @@ Supporting sources: [DeepSeek-V4-Pro-0813 model card](https://huggingface.co/dee
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
+### Coding.debugging (low confidence)
+
+A supplied fix plan can make this snapshot useful for supervised repair; independent bug discovery remains less certain.
+
+Scope: direct / conditional. Task-specific source claim under documented conditions; no transfer to other coding tasks.
+
+Direct task IDs: coding.debugging
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-abdefeccf40296a5
+
+Conditions: One private Python/PySide6 project;15-item plan with locations and expected behavior; opencode1.18.16,MCP,LSP.
+
+Failure modes / limitations: Earlier read-only hunt found1/3known latent bugs.; Follow-up implementation omitted a portability fallback and expanded one parameter across17call sites.
+
+Supporting sources: [DeepSeek V4 Pro 0813 implementation follow-up](https://www.reddit.com/r/DeepSeek/comments/1vnhvka/deepseek_v4_flash_0731_vs_deepseek_v4_pro_0813/)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Author reports unchanged preexisting failures and no new static errors. No public code independently checked; do not inherit oldFlash0731results intoV4.1.; The analysis report bounds independent bug discovery; it does not contradict repair after locations are supplied.; Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:deepseek-v4-pro-0813-debug-planned-fixes; Confidence concerns this bounded claim, not a capability score.
+
+### Coding.architecture (low confidence)
+
+Useful structural-review/planning candidate, with materially variable coverage requiring verification.
+
+Scope: direct / conditional. Task-specific source claim under documented conditions; no transfer to other coding tasks.
+
+Direct task IDs: coding.architecture
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-69601f8f65af2a8c
+
+Conditions: Opencode 1.18.16, identical fresh read-only sessions, code graph/search/history, MCP/LSP; six task types; architecture review targeted 7k-line module. Claims checked by another model and verifier.
+
+Failure modes / limitations: Depth varied 2.7x across repeated architecture runs; Pro missed 2 of 3 known latent bugs.
+
+Supporting sources: [DeepSeek V4 Pro 0813 code-analysis experiment](https://www.reddit.com/r/DeepSeek/comments/1vnc7u7/deepseek_v4_flash_0731_vs_deepseek_v4_pro_0813_i/)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: No public code/logs; cross-task 95.9% claim accuracy is not architecture-specific. Reject author's inference that references are safe without verification.; Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A04; Confidence concerns this bounded claim, not a capability score.
+
+### Coding.frontend (medium confidence)
+
+Use relative preference evidence to shortlist this exact configuration for frontend trials; do not infer tests or review strength.
+
+Scope: direct / conditional. Task-specific source claim under documented conditions; no transfer to other coding tasks.
+
+Direct task IDs: coding.frontend
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-ebf0fffcc7897fe9
+
+Conditions: Frontend generation under hosted Arena configurations; Relative user-preference evidence only; production acceptance requires executable behavior, accessibility, security and maintenance checks.; Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider checkpoint hashes.; exact_named_release_effort_retained
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Code Arena WebDev Frontend](https://arena.ai/leaderboard/code/webdev/frontend) · [Arena FAQ](https://arena.ai/faq)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-deepseek-v4-pro-0813; Confidence concerns this bounded claim, not a capability score.
+
+### Coding.review (medium confidence)
+
+Candidate for focused diff review with parser validation and independent checking.
+
+Scope: direct / conditional. Task-specific source claim under documented conditions; no transfer to other coding tasks.
+
+Direct task IDs: coding.review
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-ab69f47538efa196
+
+Conditions: Use exact 0813 endpoint; no transfer to moving deepseek-chat alias.; Named release matches; preserve source-specific provider, snapshot and precision limitations.
+
+Failure modes / limitations: Missed planted issues and deceptive tests; malformed responses can silently approve.
+
+Supporting sources: [Living AI code review benchmark](https://diffdojo.com/benchmark.html)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-deepseek0813; Confidence concerns this bounded claim, not a capability score.
+
+### Coding.tests (low confidence)
+
+One controlled private-project report supports regression-test generation from explicit fix plans.
+
+Scope: direct / conditional. Task-specific source claim under documented conditions; no transfer to other coding tasks.
+
+Direct task IDs: coding.tests
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-2dc5f95e9caa652e
+
+Conditions: OpenCode 1.18.16; Python/PySide 6; required tests specified.; Named release matches; preserve source-specific provider, snapshot and precision limitations.
+
+Failure modes / limitations: Concurrency case omitted.
+
+Supporting sources: [DeepSeek V4 Pro 0813 implementation follow-up](https://www.reddit.com/r/DeepSeek/comments/1vnhvka/deepseek_v4_flash_0731_vs_deepseek_v4_pro_0813/)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-deepseek0813; Confidence concerns this bounded claim, not a capability score.
+
 ## Specifications
 
 | Field | Recorded value |
@@ -42,7 +152,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-2 recorded access route(s); 2 model-specific price record(s).
+4 recorded access route(s); 3 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -75,13 +185,16 @@ Local conditions: Batch 1, short/moderate context unless otherwise stated.; Weig
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
-| deepseek-api | peak / current | input: 1.32 USD / per_1000000_tokens; output: 3.96 USD / per_1000000_tokens; cached_input: 0.044 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other times. Reasoning and final tokens contribute to output billing. | 2026-10-06 |
+| together | Standard / current | input: 1.32 USD / per 1 million tokens; output: 3.96 USD / per 1 million tokens; cached_input: 0.13 USD / per 1 million tokens | Together cache pricing is provider-specific; do not copy DeepSeek cache tariff. | 2026-10-07 |
 | deepseek-api | off_peak / current | input: 0.66 USD / per_1000000_tokens; output: 1.98 USD / per_1000000_tokens; cached_input: 0.022 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other times. Reasoning and final tokens contribute to output billing. | 2026-10-06 |
+| deepseek-api | peak / current | input: 1.32 USD / per_1000000_tokens; output: 3.96 USD / per_1000000_tokens; cached_input: 0.044 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other times. Reasoning and final tokens contribute to output billing. | 2026-10-06 |
 
 ## Recorded access routes
 
-- hugging-face / weight_distribution: documented route; account eligibility unverified. identity_note: Hugging Face hosts artifacts; the creator is DeepSeek
+- together / hosted metered api: documented_not_execution_tested. Not established in this pass
+- deepseek-api / DeepSeek API: documented_not_execution_tested. Not established in this pass
 - deepseek-api / hosted_api: documented route; account eligibility unverified. Not established in this pass
+- hugging-face / weight_distribution: documented route; account eligibility unverified. identity_note: Hugging Face hosts artifacts; the creator is DeepSeek
 
 ## Sources
 

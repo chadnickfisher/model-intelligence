@@ -265,9 +265,13 @@ performance_characteristics:
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
 access_ids:
+- access-26b160a51b88f282
+- access-313f8f51e65be23a
 - access-proprietary-40
 - access-proprietary-40-google-ai-studio
 price_ids:
+- price-6f21ecfa33a59e52
+- price-fcbb10b42e2ddc8b
 - price-proprietary-gemma-4-31b-it-google-developer-api-e292329c37fa
 evidence_ids:
 - src-fc87bfb1eae7

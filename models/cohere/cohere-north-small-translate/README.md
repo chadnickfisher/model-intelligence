@@ -44,7 +44,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-0 recorded access route(s); 0 model-specific price record(s).
+2 recorded access route(s); 1 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -78,9 +78,12 @@ Local conditions: Not established in this pass
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
+| cohere | Capped free evaluation / tier / current | input: 0 USD / per 1 million tokens; output: 0 USD / per 1 million tokens | Capped free evaluation; contact sales for production. | 2026-10-07 |
 
 ## Recorded access routes
 
+- cohere / Creator Hugging Face Space: documented_not_execution_tested. Not established in this pass
+- cohere / Cohere Chat V2 / V1 / Chat Completions: documented_not_execution_tested. Not established in this pass
 
 ## Sources
 

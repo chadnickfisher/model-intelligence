@@ -179,13 +179,163 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-abdefeccf40296a5
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: A supplied fix plan can make this snapshot useful for supervised repair; independent bug discovery
+    remains less certain.
+  confidence: low
+  supporting_evidence_ids:
+  - src-297787337c0c
+  contradictory_evidence_ids: []
+  conditions:
+  - One private Python/PySide6 project;15-item plan with locations and expected behavior; opencode1.18.16,MCP,LSP.
+  known_failure_modes:
+  - Earlier read-only hunt found1/3known latent bugs.
+  - Follow-up implementation omitted a portability fallback and expanded one parameter across17call sites.
+  evidence_notes:
+  - Author reports unchanged preexisting failures and no new static errors. No public code independently checked;
+    do not inherit oldFlash0731results intoV4.1.
+  - The analysis report bounds independent bug discovery; it does not contradict repair after locations are
+    supplied.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:deepseek-v4-pro-0813-debug-planned-fixes'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate scoped_debugging:deepseek-v4-pro-0813-debug-planned-fixes; exact identity
+      gates and original sources retained.
+- id: judgment-69601f8f65af2a8c
+  scope: direct
+  task_ids:
+  - coding.architecture
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Useful structural-review/planning candidate, with materially variable coverage requiring verification.
+  confidence: low
+  supporting_evidence_ids:
+  - src-571c66bcc438
+  contradictory_evidence_ids: []
+  conditions:
+  - Opencode 1.18.16, identical fresh read-only sessions, code graph/search/history, MCP/LSP; six task types;
+    architecture review targeted 7k-line module. Claims checked by another model and verifier.
+  known_failure_modes:
+  - Depth varied 2.7x across repeated architecture runs; Pro missed 2 of 3 known latent bugs.
+  evidence_notes:
+  - No public code/logs; cross-task 95.9% claim accuracy is not architecture-specific. Reject author's inference
+    that references are safe without verification.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A04'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate architecture_refactoring:A04; exact identity gates and original sources
+      retained.
+- id: judgment-ebf0fffcc7897fe9
+  scope: direct
+  task_ids:
+  - coding.frontend
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Use relative preference evidence to shortlist this exact configuration for frontend trials; do
+    not infer tests or review strength.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  contradictory_evidence_ids: []
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  known_failure_modes: []
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-deepseek-v4-pro-0813'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:frontend-arena-deepseek-v4-pro-0813; exact identity
+      gates and original sources retained.
+- id: judgment-ab69f47538efa196
+  scope: direct
+  task_ids:
+  - coding.review
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Candidate for focused diff review with parser validation and independent checking.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-9bfd85d12f58
+  contradictory_evidence_ids: []
+  conditions:
+  - Use exact 0813 endpoint; no transfer to moving deepseek-chat alias.
+  - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  known_failure_modes:
+  - Missed planted issues and deceptive tests; malformed responses can silently approve.
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-deepseek0813'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:review-deepseek0813; exact identity gates and original
+      sources retained.
+- id: judgment-2dc5f95e9caa652e
+  scope: direct
+  task_ids:
+  - coding.tests
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: One controlled private-project report supports regression-test generation from explicit fix plans.
+  confidence: low
+  supporting_evidence_ids:
+  - src-297787337c0c
+  contradictory_evidence_ids: []
+  conditions:
+  - OpenCode 1.18.16; Python/PySide 6; required tests specified.
+  - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  known_failure_modes:
+  - Concurrency case omitted.
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-deepseek0813'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:tests-deepseek0813; exact identity gates and original
+      sources retained.
 performance_characteristics: []
 access_ids:
-- access-open-deepseek-v4-pro-0813-weights
+- access-0c4e2c188162e5da
+- access-d0b394926b71241f
 - access-open-deepseek-v4-pro-0813-deepseek-api
+- access-open-deepseek-v4-pro-0813-weights
 price_ids:
-- price-open-deepseek-v4-pro-0813-deepseek-api-66908c1c12ad
+- price-ea0dd92a78528826
 - price-open-deepseek-v4-pro-0813-deepseek-api-1cba22453144
+- price-open-deepseek-v4-pro-0813-deepseek-api-66908c1c12ad
 evidence_ids:
 - src-f6adda98b53a
 - src-b96a45c2e083

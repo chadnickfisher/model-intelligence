@@ -40,7 +40,7 @@ Verified: 2026-10-06
 
 ## Offers
 
-10 linked model(s), 10 access route(s), 17 price record(s).
+10 linked model(s), 20 access route(s), 18 price record(s).
 
 [Access](../../data/access.yaml) · [Pricing](../../data/pricing.yaml)
 

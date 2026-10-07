@@ -190,8 +190,11 @@ capabilities:
     history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
+- access-1451bc03a5c0b1c0
+- access-8209caa91d8d75ad
 - access-open-llama-4-maverick-weights
-price_ids: []
+price_ids:
+- price-e795792e1db1a71f
 evidence_ids:
 - src-5744ead18753
 - src-65471a2c7ad5

@@ -243,6 +243,160 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-cb9aeb423bbdc834
+  scope: direct
+  task_ids:
+  - coding.scoped_edit
+  related_task_ids: []
+  assessment: warning
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: For bounded changes, maximum effort can expand scope and reduce merge-readiness.
+  confidence: low
+  supporting_evidence_ids:
+  - src-4e3ca8a95d36
+  contradictory_evidence_ids: []
+  conditions:
+  - Claude Code FrontierCode1.1; vendor comparison at max versus xhigh.
+  known_failure_modes:
+  - Two inspected cases linked expanded subagent review to timeout or extra edits.
+  evidence_notes:
+  - Inspected failure cases are direct scoped-edit evidence; aggregate FrontierCode is not reclassified into
+    every coding task.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:claude-sonnet-5-5-scoped-max-warning'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate scoped_debugging:claude-sonnet-5-5-scoped-max-warning; exact identity
+      gates and original sources retained.
+- id: judgment-fb34061351983c89
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Can repair a subset of hidden repository defects; use as an assisted audit, not a completeness
+    guarantee.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  contradictory_evidence_ids: []
+  conditions:
+  - claude-sonnet-5-5[1m]; Claude Code2.1.283; compaction occurred.
+  - 'Harness: Claude Code; effort: max; effort evidence: first_party.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  known_failure_modes:
+  - Many planted defects remained unresolved in the measured runs.
+  - Run variance and harness differences prevent fine-grained cross-model ranking.
+  evidence_notes:
+  - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
+    quality.
+  - No matched independent contradiction located; partial successes and misses coexist.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:claude-sonnet-5-5-debug-bughunt'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate scoped_debugging:claude-sonnet-5-5-debug-bughunt; exact identity gates
+      and original sources retained.
+- id: judgment-6a100733d93912cd
+  scope: direct
+  task_ids:
+  - coding.architecture
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Promising for architecture audits, based on a selected customer report with undisclosed evaluation
+    details.
+  confidence: low
+  supporting_evidence_ids:
+  - src-4e3ca8a95d36
+  contradictory_evidence_ids: []
+  conditions:
+  - Vendor-curated early-access testimonial; multi-hour work; effort, prompts, code and scoring unpublished.
+  known_failure_modes:
+  - No case-specific failures disclosed.
+  evidence_notes:
+  - Supports architecture analysis candidacy, not general architecture-design reliability.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A02'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate architecture_refactoring:A02; exact identity gates and original sources
+      retained.
+- id: judgment-6696d66817b015d5
+  scope: direct
+  task_ids:
+  - coding.frontend
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Use relative preference evidence to shortlist this exact configuration for frontend trials; do
+    not infer tests or review strength.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  contradictory_evidence_ids: []
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  known_failure_modes: []
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-claude-sonnet-5-5'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:frontend-arena-claude-sonnet-5-5; exact identity
+      gates and original sources retained.
+- id: judgment-116a3f541aaf26e7
+  scope: direct
+  task_ids:
+  - coding.review
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Promising faster review option, with weaker hard-case coverage than Opus 5.5 in the matched subset.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-f0ec48c0d013
+  contradictory_evidence_ids: []
+  conditions:
+  - Quality conclusion limited to judged Signal cases.
+  - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  known_failure_modes:
+  - Do not treat unjudged OSS comment reductions as quality gains.
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-sonnet55'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:review-sonnet55; exact identity gates and original
+      sources retained.
 performance_characteristics:
 - id: judgment-d11bf2f6847f9b57
   scope: performance
@@ -277,10 +431,18 @@ performance_characteristics:
     original_position: 1
     history_path: history/migrations/2026-10-07-capabilities.yaml
 access_ids:
+- access-3f77ae5286ee9409
+- access-7a57b99f53529297
+- access-b81c493a57c47077
+- access-bc02766c2fbe0c2e
+- access-c32876dd4871b040
+- access-d49db2bebe900f35
+- access-d68727250fd716dc
+- access-f8b1175b0cecaf06
 - access-proprietary-access-18
 - access-proprietary-access-19-aws-bedrock
-- access-proprietary-access-19-google-cloud
 - access-proprietary-access-19-azure-foundry
+- access-proprietary-access-19-google-cloud
 - access-proprietary-access-22-2
 - access-proprietary-access-22-ide-2
 - access-proprietary-access-23-0

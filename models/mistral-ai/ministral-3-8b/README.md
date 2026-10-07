@@ -27,6 +27,28 @@ Supporting sources: [Ministral 3 8B Instruct model card](https://huggingface.co/
 
 Contradictory or limiting sources: [Ministral3 8B independently profiled](https://artificialanalysis.ai/models/ministral-3-8b)
 
+### Coding.refactoring (low confidence)
+
+A local candidate for small Python simplifications; tiny flawed benchmark cannot justify broader claims.
+
+Scope: direct / conditional. Task-specific source claim under documented conditions; no transfer to other coding tasks.
+
+Direct task IDs: coding.refactoring
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-c95618e6317eb57c
+
+Conditions: Compact verbose Python code; three repetitions; Ollama 0.20.0, RTX 4060 8GB,Windows 10; instruct temperature 0; unit-test gating then Gemma 3 judge.
+
+Failure modes / limitations: D5 is among seven universally failing tasks attributed to benchmark defects. Do not treat nominal 60% as calibrated ability.
+
+Supporting sources: [Reasoning vs Instruct: A Local Python Coding Benchmark Across Two 8B Model Families](https://github.com/DenCoy-cloud/Local-llm-coding-python-benchmark)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Tiny function-level slice; no architecture/repository inference. PDF/ZIP artifacts listed, but advertised root CSV returned 404. Qwen3.5-9B was replaced by Qwen3-8B, despite misleading internal key; no transfer.; Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R07; Confidence concerns this bounded claim, not a capability score.
+
 ## Specifications
 
 | Field | Recorded value |
@@ -42,7 +64,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-2 recorded access route(s); 1 model-specific price record(s).
+5 recorded access route(s); 2 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -74,12 +96,16 @@ Local conditions: Batch 1, short/moderate context unless otherwise stated.; Weig
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
-| mistral-api | standard / current | input: 0.15 USD / per_1000000_tokens; output: 0.15 USD / per_1000000_tokens; cached_input: 0.015 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | Default standard tier; regional inference, batch and priority may have different rates. | 2026-10-06 |
+| mistral-api | Standard / current | input: 0.15 USD / per 1 million tokens; output: 0.15 USD / per 1 million tokens; cached_input: 0.015 USD / per 1 million tokens | Rates are standard. Batch/priority/regional tiers distinct; do not infer a default account tier. | 2026-10-07 |
+| mistral-api | standard / historical | input: 0.15 USD / per_1000000_tokens; output: 0.15 USD / per_1000000_tokens; cached_input: 0.015 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | Default standard tier; regional inference, batch and priority may have different rates. | 2026-10-06 |
 
 ## Recorded access routes
 
-- hugging-face / weight_distribution: documented route; account eligibility unverified. identity_note: Hugging Face hosts artifacts; the creator is Mistral AI
+- fireworks / On-demand GPU deployment: documented_not_execution_tested. Not established in this pass
+- mistral-api / Mistral API Standard: documented_not_execution_tested. Not established in this pass
+- mistral-api / Mistral plan included API usage: documented_not_execution_tested. Not established in this pass
 - mistral-api / hosted_api: documented route; account eligibility unverified. Not established in this pass
+- hugging-face / weight_distribution: documented route; account eligibility unverified. identity_note: Hugging Face hosts artifacts; the creator is Mistral AI
 
 ## Sources
 

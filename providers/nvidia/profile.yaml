@@ -11,9 +11,11 @@ rate_limits: []
 caching_batching: []
 privacy_data_use: []
 reliability: []
-model_ids: []
+model_ids:
+- nemotron-3-ultra
 price_ids: []
-access_ids: []
+access_ids:
+- access-bfda58b1f1e87f34
 evidence_ids:
 - src-58bf94c165a9
 - src-c5a0afc263f8

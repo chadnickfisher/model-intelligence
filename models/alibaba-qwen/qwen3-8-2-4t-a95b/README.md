@@ -42,7 +42,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-1 recorded access route(s); 0 model-specific price record(s).
+3 recorded access route(s); 2 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -75,9 +75,13 @@ Local conditions: Batch 1, short/moderate context unless otherwise stated.; Weig
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
+| novita | Standard / current | input: 2 USD / per 1 million tokens; output: 6 USD / per 1 million tokens; cached_input: 0.25 USD / per 1 million tokens | Not established in this pass | 2026-10-07 |
+| together | Standard / current | input: 2 USD / per 1 million tokens; output: 6 USD / per 1 million tokens | Not established in this pass | 2026-10-07 |
 
 ## Recorded access routes
 
+- novita / Serverless inference: officially_documented_not_execution_tested. Not established in this pass
+- together / Serverless inference: officially_documented_not_execution_tested. Not established in this pass
 - hugging-face / weight_distribution: documented route; account eligibility unverified. identity_note: Hugging Face hosts artifacts; the creator is Alibaba / Qwen
 
 ## Sources

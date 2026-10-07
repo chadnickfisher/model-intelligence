@@ -42,7 +42,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-2 recorded access route(s); 1 model-specific price record(s).
+5 recorded access route(s); 3 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -74,12 +74,17 @@ Local conditions: Batch 1, short/moderate context unless otherwise stated.; Weig
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
-| mistral-api | standard / current | input: 0.15 USD / per_1000000_tokens; output: 0.6 USD / per_1000000_tokens; cached_input: 0.015 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | Default standard tier; regional inference, batch and priority may have different rates. | 2026-10-06 |
+| openrouter | Standard / current | input: 0.15 USD / per 1 million tokens; output: 0.6 USD / per 1 million tokens | Gateway-listed base rate; provider routing/regional variants and credit-purchase fees separate. | 2026-10-07 |
+| mistral-api | Standard / current | input: 0.15 USD / per 1 million tokens; output: 0.6 USD / per 1 million tokens; cached_input: 0.015 USD / per 1 million tokens | Rates are standard. Batch/priority/regional tiers distinct; do not infer a default account tier. | 2026-10-07 |
+| mistral-api | standard / historical | input: 0.15 USD / per_1000000_tokens; output: 0.6 USD / per_1000000_tokens; cached_input: 0.015 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | Default standard tier; regional inference, batch and priority may have different rates. | 2026-10-06 |
 
 ## Recorded access routes
 
-- hugging-face / weight_distribution: documented route; account eligibility unverified. identity_note: Hugging Face hosts artifacts; the creator is Mistral AI
+- mistral-api / Mistral plan included API usage: documented_not_execution_tested. Not established in this pass
+- mistral-api / Mistral API Standard: documented_not_execution_tested. Not established in this pass
+- openrouter / gateway metered api: documented_not_execution_tested. Not established in this pass
 - mistral-api / hosted_api: documented route; account eligibility unverified. Not established in this pass
+- hugging-face / weight_distribution: documented route; account eligibility unverified. identity_note: Hugging Face hosts artifacts; the creator is Mistral AI
 
 ## Sources
 

@@ -47,6 +47,50 @@ Supporting sources: [Qwen3.8-27B model card](https://huggingface.co/Qwen/Qwen3.8
 
 Contradictory or limiting sources: [Qwen3.8 27B xhigh independently profiled](https://artificialanalysis.ai/models/qwen3-8-27b)
 
+### Coding.debugging (low confidence)
+
+Long local debugging chats need enough context for the model's own output.
+
+Scope: direct / warning. Task-specific source claim under documented conditions; no transfer to other coding tasks.
+
+Direct task IDs: coding.debugging
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-74505ce6779ad313
+
+Conditions: TheTom/offlabel,stockllama.cpp,Q4_K_M;12-turn debugging loop at16,384context.
+
+Failure modes / limitations: Empty content from turn6 as remaining context shrank;32,768context control completed without truncation.
+
+Supporting sources: [Qwen3.8-27B local deployment probes](https://github.com/TheTom/offlabel/blob/main/models/qwen3.8-27b.md)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: A configuration-specific continuity warning, not a measured code-correctness score; hardware/quant/template changes require recheck.; Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:qwen3-8-27b-debug-context-warning; Confidence concerns this bounded claim, not a capability score.
+
+### Coding.frontend (medium confidence)
+
+Use relative preference evidence to shortlist this exact configuration for frontend trials; do not infer tests or review strength.
+
+Scope: direct / conditional. Task-specific source claim under documented conditions; no transfer to other coding tasks.
+
+Direct task IDs: coding.frontend
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-5d5b9be0c4200c38
+
+Conditions: Frontend generation under hosted Arena configurations; Relative user-preference evidence only; production acceptance requires executable behavior, accessibility, security and maintenance checks.; Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider checkpoint hashes.; exact_named_release_effort_retained
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Code Arena WebDev Frontend](https://arena.ai/leaderboard/code/webdev/frontend) · [Arena FAQ](https://arena.ai/faq)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-qwen3-8-27b; Confidence concerns this bounded claim, not a capability score.
+
 ## Specifications
 
 | Field | Recorded value |
@@ -62,7 +106,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-1 recorded access route(s); 0 model-specific price record(s).
+3 recorded access route(s); 2 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -94,9 +138,13 @@ Local conditions: Batch 1, short/moderate context unless otherwise stated.; Weig
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
+| novita | Standard / current | input: 0.42 USD / per 1 million tokens; output: 3 USD / per 1 million tokens; cached_input: 0.085 USD / per 1 million tokens | Not established in this pass | 2026-10-07 |
+| featherless | Standard / current | input: 0.4 USD / per 1 million tokens; output: 3 USD / per 1 million tokens; cached_input: 0.15 USD / per 1 million tokens | Not established in this pass | 2026-10-07 |
 
 ## Recorded access routes
 
+- novita / Serverless inference: officially_documented_not_execution_tested. Not established in this pass
+- featherless / Featherless Developer: officially_documented_not_execution_tested. Not established in this pass
 - hugging-face / weight_distribution: documented route; account eligibility unverified. identity_note: Hugging Face hosts artifacts; the creator is Alibaba / Qwen
 
 ## Sources

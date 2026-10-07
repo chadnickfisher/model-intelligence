@@ -42,7 +42,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-1 recorded access route(s); 0 model-specific price record(s).
+2 recorded access route(s); 0 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -77,6 +77,7 @@ Local conditions: Batch 1, short/moderate context unless otherwise stated.; Weig
 
 ## Recorded access routes
 
+- azure-foundry / Microsoft Foundry model catalog: documented_not_execution_tested. Not established in this pass
 - hugging-face / weight_distribution: documented route; account eligibility unverified. identity_note: Microsoft created the model; Hugging Face hosts artifacts.
 
 ## Sources

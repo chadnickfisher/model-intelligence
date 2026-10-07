@@ -1,0 +1,30 @@
+schema_version: '1.0'
+id: aws-sagemaker
+verified_at: '2026-10-07'
+name: AWS SageMaker
+roles:
+- cloud-platform
+api_compatibility: []
+access_methods: []
+geographic_availability: []
+rate_limits: []
+caching_batching: []
+privacy_data_use: []
+reliability: []
+model_ids:
+- cohere-embed-5-fast
+- cohere-embed-5-pro
+price_ids: []
+access_ids:
+- access-4ebb9f82b08e79fa
+- access-a1aa0d0c1887982c
+evidence_ids:
+- src-9d4f7ae81230
+- src-9b35fe262e17
+- src-73e03ec6d5cd
+- src-9277f5b6b599
+- src-a03104fba002
+notes:
+- New public access-product identity; policies and account-specific entitlements remain unverified.
+limitations:
+- Do not inherit policies from a parent company or another product.

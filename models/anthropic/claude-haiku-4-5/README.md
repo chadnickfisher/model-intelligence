@@ -29,6 +29,50 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: supporting evidence: Vendor SWE-bench Verified73.3%,500 tasks,50 trials, custom prompt and large thinking budget; launch partners report responsive coding.; contradictory evidence: AA non-reasoning HLE4%, AA-LCR50%; older near-frontier claims must not be generalized to2026 hardest work.; Observation obs-ca2b56257797: Useful responsive model when limited task scope and validation matter.; Potential risk (not a measured failure): Hard reasoning and long-context misses; weaker date freshness.
 
+### Coding.frontend (medium confidence)
+
+Use relative preference evidence to shortlist this exact configuration for frontend trials; do not infer tests or review strength.
+
+Scope: direct / conditional. Task-specific source claim under documented conditions; no transfer to other coding tasks.
+
+Direct task IDs: coding.frontend
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-db0341f19aa38f54
+
+Conditions: Frontend generation under hosted Arena configurations; Relative user-preference evidence only; production acceptance requires executable behavior, accessibility, security and maintenance checks.; Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider checkpoint hashes.; exact_named_release_effort_retained
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Code Arena WebDev Frontend](https://arena.ai/leaderboard/code/webdev/frontend) · [Arena FAQ](https://arena.ai/faq)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-claude-haiku-4-5; Confidence concerns this bounded claim, not a capability score.
+
+### Coding.tests (low confidence)
+
+Generated tests require semantic checks after code changes, even when original-program tests pass.
+
+Scope: direct / warning. Task-specific source claim under documented conditions; no transfer to other coding tasks.
+
+Direct task IDs: coding.tests
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-19237c319f0876ad
+
+Conditions: Two-shot snippet workflow; dated API experiment; not ClaudeCode.; Named release matches; preserve source-specific provider, snapshot and precision limitations.
+
+Failure modes / limitations: Behavioral changes materially reduced test pass rate.
+
+Supporting sources: [Evaluating LLM-Based Test Generation Under Software Evolution](https://arxiv.org/html/2603.23443v1)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-haiku; Confidence concerns this bounded claim, not a capability score.
+
 ## Specifications
 
 | Field | Recorded value |
@@ -44,7 +88,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-7 recorded access route(s); 2 model-specific price record(s).
+15 recorded access route(s); 2 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -82,10 +126,18 @@ Local conditions: Not established in this pass
 
 ## Recorded access routes
 
+- anthropic / Claude API: officially_documented_not_execution_tested. Not established in this pass
+- anthropic / Usage-based Claude Enterprise: Conditional consumer/client product; exact account entitlement unverified. Seat fee plus usage at API rates; this is a separately evidenced metered client route.
+- google-cloud / Gemini Enterprise Agent Platform (formerly Vertex AI): officially_documented_not_execution_tested. Not established in this pass
+- claude-platform-on-aws / Claude Platform on AWS: officially_documented_not_execution_tested. Not established in this pass
+- azure-foundry / Claude in Microsoft Foundry: officially_documented_not_execution_tested. Not established in this pass
+- anthropic / Claude apps: Conditional consumer/client product; exact account entitlement unverified. Official model launch says all users; current plan table lists Haiku on Free and paid plans. Quotas apply; no per-token consumer free tariff.
+- aws-bedrock / Amazon Bedrock: officially_documented_not_execution_tested. Not established in this pass
+- anthropic / Claude Code terminal and IDE: Conditional consumer/client product; exact account entitlement unverified. Full model IDs can be selected subject to plan and organization permissions. Separate subscription sign-in from API-key/partner billing.
 - anthropic / Claude API: Active. quota: Tier/account-specific; exact numeric public tier table not captured
 - aws-bedrock / Amazon Bedrock: Listed by creator; independent provider pricing and regional entitlement not verified. Not established in this pass
-- google-cloud / Google Cloud: Listed by creator; independent provider pricing and regional entitlement not verified. Not established in this pass
 - azure-foundry / Microsoft Foundry / Azure: Listed by creator; independent provider pricing and regional entitlement not verified. Not established in this pass
+- google-cloud / Google Cloud: Listed by creator; independent provider pricing and regional entitlement not verified. Not established in this pass
 - anthropic / Claude Code terminal: All paid Claude plans include Code; API-credit billing is a separate option. quota: Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
 - anthropic / Claude Code IDE integrations: documented route; account eligibility unverified. Not established in this pass
 - anthropic / Claude apps: Sonnet/Haiku families on Free and paid plans; version selection can change. quota: Rolling5h window; paid plans additionally weekly caps; no fixed message count

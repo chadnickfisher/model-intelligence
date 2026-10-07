@@ -19,7 +19,9 @@ def canonical(root=ROOT):
             result[(kind, record['id'])] = (path.relative_to(root).as_posix(), record)
     for kind, name in [('price', 'data/pricing.yaml'), ('access', 'data/access.yaml'),
                        ('release', 'data/releases.yaml'), ('source', 'evidence/sources.yaml'),
-                       ('observation', 'evidence/observations.yaml')]:
+                       ('observation', 'evidence/observations.yaml'), ('behavior', 'data/behavior.yaml'),
+                       ('access_coverage', 'data/access-coverage.yaml'), ('benchmark', 'data/benchmarks.yaml'),
+                       ('research_coverage', 'data/research-coverage.yaml')]:
         for record in read(root / name)['records']:
             result[(kind, record['id'])] = (name, record)
     for record in read(root / 'data/capability-taxonomy.yaml')['capabilities']:
@@ -55,6 +57,36 @@ def scope_errors(model, tasks):
 
 def history(root=ROOT):
     return read(root / 'history/revisions.yaml')['records']
+
+
+def research_coverage_errors(records, model_ids, sources):
+    """Check accounting and provenance. This cannot certify the adequacy of research."""
+    expected={(m,d) for m in model_ids for d in ['capabilities','benchmarks','access_pricing','behavior']}
+    found=set();errors=[]
+    for r in records:
+        key=(r['model_id'],r['domain']);label=r['id']
+        if key in found:errors.append(label+': duplicate model/domain coverage')
+        found.add(key)
+        if r['result']=='not_checked':
+            if r['checked_at'] or r['evidence_ids'] or r['search_references']:
+                errors.append(label+': unchecked coverage cannot claim a source check')
+            if not r['remaining_gaps']:errors.append(label+': unchecked domain needs a remaining gap')
+            continue
+        if not r['checked_at']:errors.append(label+': checked result needs an actual check date')
+        elif r['checked_at']>date.today().isoformat():errors.append(label+': check date is in the future')
+        if r['result']=='blocked' and not r['blocked_reason']:errors.append(label+': blocked check needs a reason')
+        if r['result']!='blocked' and not r['evidence_ids'] and not r['search_references']:
+            errors.append(label+': actual check needs source or search references')
+        for ident in r['evidence_ids']:
+            source=sources.get(ident)
+            if not source or not r['checked_at'] or source['accessed_at']<r['checked_at']:
+                errors.append(label+': source inspection predates the claimed check '+ident)
+        for search in r['search_references']:
+            if search['checked_at']!=r['checked_at']:errors.append(label+': search/check dates differ')
+        if r['result'] in {'unknown','blocked'} and not r['remaining_gaps']:
+            errors.append(label+': unresolved result needs remaining gaps')
+    if found!=expected:errors.append('Research coverage must account for every catalog model in all four domains')
+    return errors
 
 def snapshot(as_of, records=None):
     """Knowledge observed by this date. Effective dates never backdate observation."""
@@ -112,7 +144,17 @@ def capture(root, observed_at, reason, evidence_ids, effective_from=None):
         profile, value = current.get(key, (previous['canonical_path'] if previous else '', None))
         if previous is not None and previous['value'] == value:
             continue
-        ids = evidence_ids + (value.get('evidence_ids', value.get('source_ids', [])) if value else [])
+        def relevant_evidence(obj):
+            if isinstance(obj, dict):
+                for field, nested in obj.items():
+                    if field in {'evidence_ids', 'source_ids', 'supporting_evidence_ids', 'contradictory_evidence_ids'} and isinstance(nested, list):
+                        yield from (s for s in nested if isinstance(s, str) and s in known_evidence)
+                    else:
+                        yield from relevant_evidence(nested)
+            elif isinstance(obj, list):
+                for nested in obj:
+                    yield from relevant_evidence(nested)
+        ids = evidence_ids + list(relevant_evidence(value if value is not None else previous['value']))
         revision = {'entity_type': kind, 'entity_id': ident, 'canonical_path': profile,
                     'observed_at': observed_at, 'effective_from': effective_from,
                     'operation': 'remove' if value is None else 'baseline' if previous is None else 'update',

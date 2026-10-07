@@ -1,0 +1,45 @@
+schema_version: '1.0'
+id: google-ai
+verified_at: '2026-10-07'
+name: Google AI consumer plans
+roles:
+- access-product
+api_compatibility: []
+access_methods: []
+geographic_availability: []
+rate_limits: []
+caching_batching: []
+privacy_data_use: []
+reliability: []
+model_ids:
+- gemini-3-1-pro-preview
+- gemini-3-5-flash-lite
+- gemini-3-8-flash
+- gemini-3-8-live
+- gemini-3-pro-image
+- gemini-omni-1-1-flash
+- gemini4argon
+- lyria-3-5
+- veo-3-1-generate-preview
+price_ids: []
+access_ids:
+- access-0791ca3b09446ea6
+- access-2b80d225e65ac4a8
+- access-42e20aeb4ffad0b4
+- access-50e60bc9ec344497
+- access-63f7d34dabfae5d3
+- access-856cb85ada3c3a32
+- access-8b358b31f448ab98
+- access-a56aad4911ae37ea
+- access-b42d2606c03cf832
+- access-b624204b5ed8fd3a
+- access-b84b37d6412fabfe
+- access-b9ee55d7bde9cadb
+- access-de56c906b98cef0f
+evidence_ids:
+- src-24717f621aa3
+- src-d3e41dcc2800
+notes:
+- New public access-product identity; policies and account-specific entitlements remain unverified.
+limitations:
+- Do not inherit policies from a parent company or another product.

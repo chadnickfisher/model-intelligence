@@ -11,9 +11,11 @@ rate_limits: []
 caching_batching: []
 privacy_data_use: []
 reliability: []
-model_ids: []
+model_ids:
+- mistral-medium-3-5
 price_ids: []
-access_ids: []
+access_ids:
+- access-0b140e18b825f285
 evidence_ids:
 - src-f2036f817d22
 - src-fd9a0c74ec31

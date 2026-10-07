@@ -44,7 +44,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-0 recorded access route(s); 2 model-specific price record(s).
+4 recorded access route(s); 3 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -77,11 +77,16 @@ Local conditions: Not established in this pass
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
+| cohere | Standard / current | input: 0.12 USD / per 1 million tokens; image_input: 0.4 USD / per 1 million tokens | Not established in this pass | 2026-10-07 |
 | cohere | GA / current | input: 0.12 USD / per 1M tokens | Not established in this pass | 2026-10-06 |
 | cohere | Small dedicated instance / current | compute: 3 USD / per instance hour | Not established in this pass | 2026-10-06 |
 
 ## Recorded access routes
 
+- aws-sagemaker / dedicated compute: creator_documented; deployment-specific ID. Not established in this pass
+- azure-foundry / hosted deployment: exact_partner_catalog_listing; regional_price_unverified. Not established in this pass
+- cohere / Model Vault: documented_not_execution_tested. Not established in this pass
+- cohere / Cohere Embed API: documented_not_execution_tested. Not established in this pass
 
 ## Sources
 

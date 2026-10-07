@@ -166,11 +166,14 @@ capabilities:
     history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
-- access-proprietary-access-9
+- access-4f9b3bc4f09b659a
+- access-bd76c19e1325590c
+- access-e887c91741f703e7
 - access-proprietary-access-10
+- access-proprietary-access-9
 price_ids:
-- price-proprietary-gpt-image-2-5-flare-openai-f37e16009992
 - price-proprietary-gpt-image-2-5-flare-openai-ac94b6b07830
+- price-proprietary-gpt-image-2-5-flare-openai-f37e16009992
 - price-proprietary-gpt-image-2-5-flare-openai-f6731f24dc2e
 evidence_ids:
 - src-cee7a5257e77

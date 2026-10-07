@@ -144,6 +144,9 @@ capabilities:
     history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
+- access-75763dfe80bc3dfa
+- access-b70e525c16e7f196
+- access-ee87beb65d488313
 - access-proprietary-access-11
 - access-proprietary-access-12
 price_ids:

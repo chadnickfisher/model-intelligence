@@ -172,11 +172,49 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-e66b1386a6d0363d
+  scope: direct
+  task_ids:
+  - coding.frontend
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Use relative preference evidence to shortlist this exact configuration for frontend trials; do
+    not infer tests or review strength.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  contradictory_evidence_ids: []
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  known_failure_modes: []
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-mistral-medium-3-5'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:frontend-arena-mistral-medium-3-5; exact identity
+      gates and original sources retained.
 performance_characteristics: []
 access_ids:
-- access-open-mistral-medium-3-5-weights
+- access-0b140e18b825f285
+- access-4f402095b0f4b2b4
+- access-d4336bab86e8aed3
+- access-fa86a41526c1543e
 - access-open-mistral-medium-3-5-mistral-api
+- access-open-mistral-medium-3-5-weights
 price_ids:
+- price-80f389b248c5136f
+- price-9116cf1e4d596d1a
 - price-open-mistral-medium-3-5-mistral-api-ccb3cbd04b1a
 evidence_ids:
 - src-23f19f916bbb

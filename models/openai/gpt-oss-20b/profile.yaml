@@ -199,12 +199,112 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-46cdaaca49f8b491
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: weak
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Weak for autonomous whole-repository bug hunting in this measured route; other repair settings
+    remain open.
+  confidence: low
+  supporting_evidence_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  contradictory_evidence_ids: []
+  conditions:
+  - Groq pinned via OpenRouter with fallbacks disabled; effort field dropped, provider default unknown.
+  - 'Harness: Claude Code / OpenRouter; effort: default; effort evidence: inert_default.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  known_failure_modes:
+  - No planted defects fixed across three runs; early stopping/report-writing failures observed.
+  - Missing route accounting prevents verified context-regime parity.
+  evidence_notes:
+  - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
+    quality.
+  - No matched independent contradiction located; partial successes and misses coexist.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-oss-20b-debug-bughunt'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate scoped_debugging:gpt-oss-20b-debug-bughunt; exact identity gates and
+      original sources retained.
+- id: judgment-3d019877a961e79d
+  scope: direct
+  task_ids:
+  - coding.review
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Useful local assistant for tiny Java refactoring checks; insufficient as a sole correctness gate.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-a8450f23b0f1
+  contradictory_evidence_ids: []
+  conditions:
+  - Ollama on Mac Mini M4 Pro with 64 GB RAM; temperature 0.5; paired full snippets. The Ollama version was
+    not specified.
+  - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  known_failure_modes:
+  - Compilation errors missed; false alarms on clean refactorings.
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-oss20'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:review-oss20; exact identity gates and original
+      sources retained.
+- id: judgment-23a0f803b142f5ba
+  scope: direct
+  task_ids:
+  - coding.tests
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Can generate small distinguishing Java regression witnesses; broader evolved-code tests remain
+    fragile.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-a8450f23b0f1
+  - src-995284168dc8
+  contradictory_evidence_ids: []
+  conditions:
+  - Keep compiled-witness and two-shot mutation protocols separate.
+  - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  known_failure_modes:
+  - Wrong assertions, missed behavioral changes and disrupted coverage.
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-oss20'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:tests-oss20; exact identity gates and original
+      sources retained.
 performance_characteristics: []
 access_ids:
+- access-36f2b86695893834
+- access-fdaee42db3f59c36
 - access-proprietary-access-29
 - access-proprietary-access-30
 - access-proprietary-access-31
 price_ids:
+- price-5c05bbd1c94ea88a
+- price-74d1c52ff9012332
 - price-proprietary-gpt-oss-20b-groq-38ccf87aa66a
 evidence_ids:
 - src-0dc6c2d41a2c

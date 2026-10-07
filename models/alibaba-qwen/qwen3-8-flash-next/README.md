@@ -27,6 +27,28 @@ Supporting sources: [Qwen3.8-Flash-Next model card](https://huggingface.co/Qwen/
 
 Contradictory or limiting sources: [Single-R9700 Qwen3.8 comparison](https://www.reddit.com/r/Qwen_AI/comments/1wxshto/qwen3827b_vs_qwen38flashnext_as_agent_workers_on/)
 
+### Coding.frontend (low confidence)
+
+Use relative preference evidence to shortlist this exact configuration for frontend trials; do not infer tests or review strength.
+
+Scope: direct / conditional. Task-specific source claim under documented conditions; no transfer to other coding tasks.
+
+Direct task IDs: coding.frontend
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-2e3d7688d669fd57
+
+Conditions: Frontend generation under hosted Arena configurations; Relative user-preference evidence only; production acceptance requires executable behavior, accessibility, security and maintenance checks.; Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider checkpoint hashes.; exact_named_release_effort_retained
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Code Arena WebDev Frontend](https://arena.ai/leaderboard/code/webdev/frontend) · [Arena FAQ](https://arena.ai/faq)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-qwen3-8-flash-next; Confidence concerns this bounded claim, not a capability score.
+
 ### Commercial coding assistant hosting (medium confidence)
 
 Do not assume permissive self-hosted commercial availability.
@@ -64,7 +86,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-1 recorded access route(s); 0 model-specific price record(s).
+2 recorded access route(s); 1 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -96,9 +118,11 @@ Local conditions: Batch 1, short/moderate context unless otherwise stated.; Weig
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
+| featherless | Standard / current | input: 0.15 USD / per 1 million tokens; output: 0.5 USD / per 1 million tokens; cached_input: 0.03 USD / per 1 million tokens | Not established in this pass | 2026-10-07 |
 
 ## Recorded access routes
 
+- featherless / Featherless Developer: officially_documented_not_execution_tested. Not established in this pass
 - hugging-face / weight_distribution: documented route; account eligibility unverified. identity_note: Hugging Face hosts artifacts; the creator is Alibaba / Qwen
 
 ## Sources

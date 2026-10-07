@@ -1364,7 +1364,7 @@ records:
   product: openai/gpt-oss-120b
   model_label: gpt-oss-120b
   billing_method: metered-api
-  status: current
+  status: historical
   region: null
   tier: Developer / on-demand
   effective_from: null
@@ -1387,7 +1387,9 @@ records:
   - Tool charges; enterprise provisioned capacity
   evidence_ids:
   - src-027b0340f566
-  notes: []
+  notes:
+  - Superseded by dated 2026-10-07 model/provider price observation; service-effective change date remains
+    unknown.
 - schema_version: '1.0'
   id: price-proprietary-gpt-oss-120b-groq-cf02720da9d9
   verified_at: '2026-10-06'
@@ -1396,7 +1398,7 @@ records:
   product: null
   model_label: gpt-oss-120b
   billing_method: metered-api
-  status: current
+  status: historical
   region: null
   tier: Cached input
   effective_from: null
@@ -1413,7 +1415,9 @@ records:
   conditions: []
   evidence_ids:
   - src-775e6c7ffc21
-  notes: []
+  notes:
+  - Superseded by dated 2026-10-07 model/provider price observation; service-effective change date remains
+    unknown.
 - schema_version: '1.0'
   id: price-proprietary-gpt-oss-20b-groq-38ccf87aa66a
   verified_at: '2026-10-06'
@@ -1422,7 +1426,7 @@ records:
   product: openai/gpt-oss-20b
   model_label: gpt-oss-20b
   billing_method: metered-api
-  status: current
+  status: historical
   region: null
   tier: Developer / on-demand
   effective_from: null
@@ -1445,7 +1449,9 @@ records:
   - Tool charges; enterprise provisioned capacity
   evidence_ids:
   - src-027b0340f566
-  notes: []
+  notes:
+  - Superseded by dated 2026-10-07 model/provider price observation; service-effective change date remains
+    unknown.
 - schema_version: '1.0'
   id: price-proprietary-gemini-3-8-flash-google-developer-api-15580e4c6b8b
   verified_at: '2026-10-06'
@@ -2547,7 +2553,7 @@ records:
   product: glm-5.3
   model_label: glm-5-3
   billing_method: metered-api
-  status: current
+  status: historical
   region: null
   tier: standard
   effective_from: null
@@ -2580,7 +2586,9 @@ records:
   - Cached-input storage currently labeled limited-time free; promotional expired rates are excluded.
   evidence_ids:
   - src-667e800254a1
-  notes: []
+  notes:
+  - Superseded by dated 2026-10-07 model/provider price observation; service-effective change date remains
+    unknown.
 - schema_version: '1.0'
   id: price-open-glm-5-3-flash-zai-api-d4cf1d58c48f
   verified_at: '2026-10-06'
@@ -2589,7 +2597,7 @@ records:
   product: glm-5.3-flash
   model_label: glm-5-3-flash
   billing_method: metered-api
-  status: current
+  status: historical
   region: null
   tier: standard
   effective_from: null
@@ -2622,7 +2630,9 @@ records:
   - Cached-input storage currently labeled limited-time free; promotional expired rates are excluded.
   evidence_ids:
   - src-667e800254a1
-  notes: []
+  notes:
+  - Superseded by dated 2026-10-07 model/provider price observation; service-effective change date remains
+    unknown.
 - schema_version: '1.0'
   id: price-open-minimax-m3-minimax-api-cfa19bcf4e29
   verified_at: '2026-10-06'
@@ -2799,7 +2809,7 @@ records:
   product: null
   model_label: mistral-large-3
   billing_method: metered-api
-  status: current
+  status: historical
   region: null
   tier: standard
   effective_from: null
@@ -2832,7 +2842,9 @@ records:
   - Default standard tier; regional inference, batch and priority may have different rates.
   evidence_ids:
   - src-b17514a392bd
-  notes: []
+  notes:
+  - Superseded by dated 2026-10-07 model/provider price observation; service-effective change date remains
+    unknown.
 - schema_version: '1.0'
   id: price-open-mistral-medium-3-5-mistral-api-ccb3cbd04b1a
   verified_at: '2026-10-06'
@@ -2841,7 +2853,7 @@ records:
   product: mistral-medium-3-5
   model_label: mistral-medium-3-5
   billing_method: metered-api
-  status: current
+  status: historical
   region: null
   tier: standard
   effective_from: null
@@ -2874,7 +2886,9 @@ records:
   - Default standard tier; regional inference, batch and priority may have different rates.
   evidence_ids:
   - src-b17514a392bd
-  notes: []
+  notes:
+  - Superseded by dated 2026-10-07 model/provider price observation; service-effective change date remains
+    unknown.
 - schema_version: '1.0'
   id: price-open-mistral-small-4-mistral-api-2c982a02c545
   verified_at: '2026-10-06'
@@ -2883,7 +2897,7 @@ records:
   product: mistral-small-2603
   model_label: mistral-small-4
   billing_method: metered-api
-  status: current
+  status: historical
   region: null
   tier: standard
   effective_from: null
@@ -2916,7 +2930,9 @@ records:
   - Default standard tier; regional inference, batch and priority may have different rates.
   evidence_ids:
   - src-b17514a392bd
-  notes: []
+  notes:
+  - Superseded by dated 2026-10-07 model/provider price observation; service-effective change date remains
+    unknown.
 - schema_version: '1.0'
   id: price-open-ministral-3-8b-mistral-api-e3e015fcc82e
   verified_at: '2026-10-06'
@@ -2925,7 +2941,7 @@ records:
   product: null
   model_label: ministral-3-8b
   billing_method: metered-api
-  status: current
+  status: historical
   region: null
   tier: standard
   effective_from: null
@@ -2958,7 +2974,9 @@ records:
   - Default standard tier; regional inference, batch and priority may have different rates.
   evidence_ids:
   - src-b17514a392bd
-  notes: []
+  notes:
+  - Superseded by dated 2026-10-07 model/provider price observation; service-effective change date remains
+    unknown.
 - schema_version: '1.0'
   id: price-open-glm-5-3-mistral-api-2ee05cd2e1e9
   verified_at: '2026-10-06'
@@ -2967,7 +2985,7 @@ records:
   product: null
   model_label: glm-5-3
   billing_method: metered-api
-  status: current
+  status: historical
   region: null
   tier: standard
   effective_from: null
@@ -3000,7 +3018,9 @@ records:
   - Default standard tier; regional inference, batch and priority may have different rates.
   evidence_ids:
   - src-b17514a392bd
-  notes: []
+  notes:
+  - Superseded by dated 2026-10-07 model/provider price observation; service-effective change date remains
+    unknown.
 - schema_version: '1.0'
   id: price-providers-xai-grok-4-7-xai-39519ba1474e
   verified_at: '2026-10-06'
@@ -3608,7 +3628,7 @@ records:
   product: API
   model_label: openai/gpt-oss-120b
   billing_method: metered-api
-  status: current
+  status: historical
   region: not specified
   tier: Developer
   effective_from: null
@@ -3630,7 +3650,9 @@ records:
   conditions: []
   evidence_ids:
   - src-027b0340f566
-  notes: []
+  notes:
+  - Superseded by dated 2026-10-07 model/provider price observation; service-effective change date remains
+    unknown.
 - schema_version: '1.0'
   id: price-providers-speech-to-text-api-groq-9400c198843b
   verified_at: '2026-10-06'
@@ -4265,4 +4287,1461 @@ records:
   conditions: []
   evidence_ids:
   - src-dc01b961c57f
+  notes: []
+- schema_version: '1.0'
+  id: price-913f903099f9536f
+  verified_at: '2026-10-07'
+  model_id: ai21-jamba2-mini
+  provider_id: ai21
+  product: AI21 Studio
+  model_label: jamba-mini-2-2026-01
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0.4
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-df6753e4eed5
+  - src-904602c680fc
+  - src-10764583d10d
+  - src-cd9a80108d1d
+  notes: []
+- schema_version: '1.0'
+  id: price-2a94f1cd774c37c2
+  verified_at: '2026-10-07'
+  model_id: cohere-command-a-plus
+  provider_id: cohere
+  product: hosted evaluation api
+  model_label: command-a-plus-05-2026
+  billing_method: free
+  status: current
+  region: null
+  tier: Capped free evaluation / tier
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Free capped evaluation; production-key label alone does not remove newer-model restrictions.
+  evidence_ids:
+  - src-4b5fc50d9047
+  - src-e95264542f67
+  - src-73e03ec6d5cd
+  - src-a03104fba002
+  notes: []
+- schema_version: '1.0'
+  id: price-261d7144f200e9bd
+  verified_at: '2026-10-07'
+  model_id: cohere-embed-5-fast
+  provider_id: cohere
+  product: Cohere Embed API
+  model_label: embed-v5.0-fast
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.08
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: image_input
+    amount: 0.4
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-9d4f7ae81230
+  - src-9b35fe262e17
+  - src-73e03ec6d5cd
+  - src-9277f5b6b599
+  - src-a03104fba002
+  notes: []
+- schema_version: '1.0'
+  id: price-2c7f6bbbc4244653
+  verified_at: '2026-10-07'
+  model_id: cohere-embed-5-pro
+  provider_id: cohere
+  product: Cohere Embed API
+  model_label: embed-v5.0-pro
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.12
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: image_input
+    amount: 0.4
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-9d4f7ae81230
+  - src-9b35fe262e17
+  - src-73e03ec6d5cd
+  - src-ab75f3e33962
+  - src-a03104fba002
+  notes: []
+- schema_version: '1.0'
+  id: price-426d592774fefebd
+  verified_at: '2026-10-07'
+  model_id: cohere-north-small-translate
+  provider_id: cohere
+  product: Cohere Chat V2 / V1 / Chat Completions
+  model_label: north-small-translate-1-0
+  billing_method: free
+  status: current
+  region: null
+  tier: Capped free evaluation / tier
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Capped free evaluation; contact sales for production.
+  evidence_ids:
+  - src-1dac5785145f
+  - src-e95264542f67
+  - src-a03104fba002
+  - src-425ce7e07108
+  notes: []
+- schema_version: '1.0'
+  id: price-2a73a8f57ef581d1
+  verified_at: '2026-10-07'
+  model_id: deepseek-v4-1-flash
+  provider_id: together
+  product: hosted metered api
+  model_label: deepseek-ai/DeepSeek-V4.1-Flash
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.3
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 1.2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.006
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Together cache pricing is provider-specific; do not copy DeepSeek cache tariff.
+  evidence_ids:
+  - src-280758cc57a6
+  - src-b0caa8675a4a
+  - src-95ebabb9d4ec
+  notes: []
+- schema_version: '1.0'
+  id: price-ea0dd92a78528826
+  verified_at: '2026-10-07'
+  model_id: deepseek-v4-pro-0813
+  provider_id: together
+  product: hosted metered api
+  model_label: deepseek-ai/DeepSeek-V4-Pro-0813
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 1.32
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 3.96
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.13
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Together cache pricing is provider-specific; do not copy DeepSeek cache tariff.
+  evidence_ids:
+  - src-280758cc57a6
+  - src-b0caa8675a4a
+  - src-95ebabb9d4ec
+  notes: []
+- schema_version: '1.0'
+  id: price-6f21ecfa33a59e52
+  verified_at: '2026-10-07'
+  model_id: gemma-4-31b-it
+  provider_id: google-developer-api
+  product: hosted free tier api
+  model_label: gemma-4-31b-it
+  billing_method: free
+  status: current
+  region: null
+  tier: Capped free evaluation / tier
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Free tier subject to quotas; paid tier not available for this model. Free-tier data can improve Google
+    products.
+  evidence_ids:
+  - src-f42878a20d06
+  - src-b88c4950bbf3
+  - src-8e9cfa8a1129
+  - src-0ef09481d565
+  notes: []
+- schema_version: '1.0'
+  id: price-fcbb10b42e2ddc8b
+  verified_at: '2026-10-07'
+  model_id: gemma-4-31b-it
+  provider_id: novita
+  product: hosted metered api
+  model_label: google/gemma-4-31b-it
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.14
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0.4
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-f42878a20d06
+  - src-b88c4950bbf3
+  - src-8e9cfa8a1129
+  - src-0ef09481d565
+  notes: []
+- schema_version: '1.0'
+  id: price-814b56fe1a8fcbb9
+  verified_at: '2026-10-07'
+  model_id: glm-5-3
+  provider_id: zai-api
+  product: hosted metered api
+  model_label: glm-5.3
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 1.4
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 4.4
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.26
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Cache storage currently limited-time free. Former/current coding subscribers have protocol/account restrictions;
+    check exact key.
+  evidence_ids:
+  - src-7e6c3dd9add1
+  - src-667e800254a1
+  - src-6e8a610bfcad
+  - src-cb03524547ec
+  - src-808951346360
+  - src-4cecb0fd2f3d
+  - src-b0caa8675a4a
+  - src-57a0e065d1e9
+  notes: []
+- schema_version: '1.0'
+  id: price-cbe1b2acd258f2a6
+  verified_at: '2026-10-07'
+  model_id: glm-5-3
+  provider_id: together
+  product: hosted metered api
+  model_label: zai-org/GLM-5.3
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 1.4
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 4.4
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.26
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-7e6c3dd9add1
+  - src-667e800254a1
+  - src-6e8a610bfcad
+  - src-cb03524547ec
+  - src-808951346360
+  - src-4cecb0fd2f3d
+  - src-b0caa8675a4a
+  - src-57a0e065d1e9
+  notes: []
+- schema_version: '1.0'
+  id: price-98b03467d6f38abc
+  verified_at: '2026-10-07'
+  model_id: glm-5-3
+  provider_id: mistral-api
+  product: hosted metered api
+  model_label: zai-glm-5-3
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 1.4
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 4.4
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.14
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-7e6c3dd9add1
+  - src-667e800254a1
+  - src-6e8a610bfcad
+  - src-cb03524547ec
+  - src-808951346360
+  - src-4cecb0fd2f3d
+  - src-b0caa8675a4a
+  - src-57a0e065d1e9
+  notes: []
+- schema_version: '1.0'
+  id: price-b0d2f0ccb6138508
+  verified_at: '2026-10-07'
+  model_id: glm-5-3-flash
+  provider_id: zai-api
+  product: hosted metered api
+  model_label: glm-5.3-flash
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.15
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.03
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Cache storage currently limited-time free. Former/current coding subscribers have protocol/account restrictions;
+    check exact key.
+  evidence_ids:
+  - src-80c359151519
+  - src-667e800254a1
+  - src-6e8a610bfcad
+  - src-cb03524547ec
+  - src-808951346360
+  - src-4cecb0fd2f3d
+  - src-b0caa8675a4a
+  notes: []
+- schema_version: '1.0'
+  id: price-2b7097891fc708e3
+  verified_at: '2026-10-07'
+  model_id: glm-5-3-flash
+  provider_id: together
+  product: hosted metered api
+  model_label: zai-org/GLM-5.3-Flash
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.15
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.03
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-80c359151519
+  - src-667e800254a1
+  - src-6e8a610bfcad
+  - src-cb03524547ec
+  - src-808951346360
+  - src-4cecb0fd2f3d
+  - src-b0caa8675a4a
+  notes: []
+- schema_version: '1.0'
+  id: price-79c8f1def0837f0f
+  verified_at: '2026-10-07'
+  model_id: gpt-oss-120b
+  provider_id: groq
+  product: hosted metered api
+  model_label: openai/gpt-oss-120b
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.15
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0.6
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.075
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Cached input is derived50% published discount on successful exact-prefix cache hits.
+  evidence_ids:
+  - src-033fa0bf122f
+  - src-1b711f47aa6a
+  - src-027b0340f566
+  - src-c03a6de01b20
+  - src-33b0ee85f128
+  - src-b0caa8675a4a
+  - src-95ebabb9d4ec
+  notes: []
+- schema_version: '1.0'
+  id: price-bf8551d32284bebd
+  verified_at: '2026-10-07'
+  model_id: gpt-oss-120b
+  provider_id: groq
+  product: hosted free tier api
+  model_label: openai/gpt-oss-120b
+  billing_method: free
+  status: current
+  region: null
+  tier: Capped free evaluation / tier
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Free account quotas, not infinite free usage.
+  evidence_ids:
+  - src-033fa0bf122f
+  - src-1b711f47aa6a
+  - src-027b0340f566
+  - src-c03a6de01b20
+  - src-33b0ee85f128
+  - src-b0caa8675a4a
+  - src-95ebabb9d4ec
+  notes: []
+- schema_version: '1.0'
+  id: price-5b7a42fdf5531076
+  verified_at: '2026-10-07'
+  model_id: gpt-oss-120b
+  provider_id: together
+  product: hosted metered api
+  model_label: openai/gpt-oss-120b
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.15
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0.6
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-033fa0bf122f
+  - src-1b711f47aa6a
+  - src-027b0340f566
+  - src-c03a6de01b20
+  - src-33b0ee85f128
+  - src-b0caa8675a4a
+  - src-95ebabb9d4ec
+  notes: []
+- schema_version: '1.0'
+  id: price-5c05bbd1c94ea88a
+  verified_at: '2026-10-07'
+  model_id: gpt-oss-20b
+  provider_id: groq
+  product: hosted metered api
+  model_label: openai/gpt-oss-20b
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.075
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0.3
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.0375
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Cached input is derived50% published discount on successful exact-prefix cache hits.
+  evidence_ids:
+  - src-033fa0bf122f
+  - src-0dc6c2d41a2c
+  - src-027b0340f566
+  - src-c03a6de01b20
+  - src-33b0ee85f128
+  - src-b0caa8675a4a
+  - src-95ebabb9d4ec
+  notes: []
+- schema_version: '1.0'
+  id: price-74d1c52ff9012332
+  verified_at: '2026-10-07'
+  model_id: gpt-oss-20b
+  provider_id: groq
+  product: hosted free tier api
+  model_label: openai/gpt-oss-20b
+  billing_method: free
+  status: current
+  region: null
+  tier: Capped free evaluation / tier
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Free account quotas, not infinite free usage.
+  evidence_ids:
+  - src-033fa0bf122f
+  - src-0dc6c2d41a2c
+  - src-027b0340f566
+  - src-c03a6de01b20
+  - src-33b0ee85f128
+  - src-b0caa8675a4a
+  - src-95ebabb9d4ec
+  notes: []
+- schema_version: '1.0'
+  id: price-e795792e1db1a71f
+  verified_at: '2026-10-07'
+  model_id: llama-4-maverick
+  provider_id: novita
+  product: hosted metered api
+  model_label: meta-llama/llama-4-maverick-17b-128e-instruct-fp8
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.27
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0.85
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-4281e218a491
+  - src-1f8330a8a801
+  - src-3865f58cb533
+  - src-fe77d146b253
+  - src-65471a2c7ad5
+  notes: []
+- schema_version: '1.0'
+  id: price-cb51214b8cd407bd
+  verified_at: '2026-10-07'
+  model_id: llama-4-scout
+  provider_id: novita
+  product: hosted metered api
+  model_label: meta-llama/llama-4-scout-17b-16e-instruct
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.18
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0.59
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-be28806b3aaf
+  - src-1f8330a8a801
+  - src-3865f58cb533
+  - src-fe77d146b253
+  - src-8cb15ff6ddd4
+  notes: []
+- schema_version: '1.0'
+  id: price-f8443530181b2e7f
+  verified_at: '2026-10-07'
+  model_id: minimax-m3
+  provider_id: together
+  product: hosted metered api
+  model_label: MiniMaxAI/MiniMax-M3
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.3
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 1.2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.06
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-40c9ce9b4812
+  - src-b32fa74d1c5e
+  - src-21da6fa2f19b
+  - src-ed4a42cc9fe4
+  - src-10f4cd418227
+  - src-b0caa8675a4a
+  - src-06645d3950f1
+  notes: []
+- schema_version: '1.0'
+  id: price-dcb4c2434229c9de
+  verified_at: '2026-10-07'
+  model_id: ministral-3-8b
+  provider_id: mistral-api
+  product: Mistral API Standard
+  model_label: ministral-8b-2512
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.15
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0.15
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.015
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Rates are standard. Batch/priority/regional tiers distinct; do not infer a default account tier.
+  evidence_ids:
+  - src-8ef7d9384aab
+  - src-b17514a392bd
+  - src-8c6f12737c66
+  - src-19e67a7be94f
+  - src-75b19d63bba9
+  - src-1b188ddc85cc
+  - src-f5a5dc8f8871
+  notes: []
+- schema_version: '1.0'
+  id: price-7c9f7ef4bbf9fc8a
+  verified_at: '2026-10-07'
+  model_id: mistral-large-3
+  provider_id: mistral-api
+  product: Mistral API Standard
+  model_label: mistral-large-2512
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 1.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.05
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Rates are standard. Batch/priority/regional tiers distinct; do not infer a default account tier.
+  evidence_ids:
+  - src-3ab28585a19b
+  - src-b17514a392bd
+  - src-8c6f12737c66
+  - src-19e67a7be94f
+  - src-75b19d63bba9
+  - src-0ad785899e50
+  - src-f5a5dc8f8871
+  notes: []
+- schema_version: '1.0'
+  id: price-9116cf1e4d596d1a
+  verified_at: '2026-10-07'
+  model_id: mistral-medium-3-5
+  provider_id: mistral-api
+  product: Mistral API Standard
+  model_label: mistral-medium-3-5
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 1.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 7.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.15
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Rates are standard. Batch/priority/regional tiers distinct; do not infer a default account tier.
+  evidence_ids:
+  - src-ece7a0a55f7b
+  - src-b17514a392bd
+  - src-8c6f12737c66
+  - src-19e67a7be94f
+  - src-75b19d63bba9
+  - src-a075140ce45f
+  - src-dc947e0150b9
+  - src-79280a1db5da
+  notes: []
+- schema_version: '1.0'
+  id: price-80f389b248c5136f
+  verified_at: '2026-10-07'
+  model_id: mistral-medium-3-5
+  provider_id: openrouter
+  product: gateway metered api
+  model_label: mistralai/mistral-medium-3-5
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 1.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 7.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Gateway-listed base rate; provider routing/regional variants and credit-purchase fees separate.
+  evidence_ids:
+  - src-ece7a0a55f7b
+  - src-b17514a392bd
+  - src-8c6f12737c66
+  - src-19e67a7be94f
+  - src-75b19d63bba9
+  - src-a075140ce45f
+  - src-dc947e0150b9
+  - src-79280a1db5da
+  notes: []
+- schema_version: '1.0'
+  id: price-bf5e328818668852
+  verified_at: '2026-10-07'
+  model_id: mistral-small-4
+  provider_id: mistral-api
+  product: Mistral API Standard
+  model_label: mistral-small-2603
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.15
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0.6
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.015
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Rates are standard. Batch/priority/regional tiers distinct; do not infer a default account tier.
+  evidence_ids:
+  - src-b0218078301d
+  - src-b17514a392bd
+  - src-8c6f12737c66
+  - src-19e67a7be94f
+  - src-75b19d63bba9
+  - src-1d3b66fea11a
+  - src-dcba779ffa90
+  notes: []
+- schema_version: '1.0'
+  id: price-b7f0187ed34bd90f
+  verified_at: '2026-10-07'
+  model_id: mistral-small-4
+  provider_id: openrouter
+  product: gateway metered api
+  model_label: mistralai/mistral-small-2603
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.15
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0.6
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Gateway-listed base rate; provider routing/regional variants and credit-purchase fees separate.
+  evidence_ids:
+  - src-b0218078301d
+  - src-b17514a392bd
+  - src-8c6f12737c66
+  - src-19e67a7be94f
+  - src-75b19d63bba9
+  - src-1d3b66fea11a
+  - src-dcba779ffa90
+  notes: []
+- schema_version: '1.0'
+  id: price-59c8f7b228f5d878
+  verified_at: '2026-10-07'
+  model_id: nemotron-3-ultra
+  provider_id: fireworks
+  product: hosted metered api
+  model_label: accounts/fireworks/models/nemotron-3-ultra-nvfp4
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.6
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 2.4
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.12
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Canonical profile representative is BF16. Variant relation must be explicit, not silent checkpoint substitution.
+  evidence_ids:
+  - src-9d8e52b601dc
+  - src-0c70d291307a
+  - src-cc6d3cc44a13
+  - src-d79bd46f15b8
+  - src-f5a5dc8f8871
+  notes: []
+- schema_version: '1.0'
+  id: price-087141f302d23361
+  verified_at: '2026-10-07'
+  model_id: phi-4-mini-instruct
+  provider_id: featherless
+  product: Featherless Developer
+  model_label: microsoft/Phi-4-mini-instruct
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.32
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.016
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 1.4
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Exact listing serves32K even though descriptive model text says 128K. Developer plan cap cannot increase
+    a model-specific limit. HF router billing not inferred from direct plan.
+  evidence_ids:
+  - src-69feae49f83a
+  - src-2a043397371b
+  - src-3865f58cb533
+  - src-f3fc9545f9da
+  - src-4ca560b8430b
+  - src-147450d232b3
+  - src-9182f506d099
+  - src-954d4b68455d
+  - src-53532c0e2a15
+  notes: []
+- schema_version: '1.0'
+  id: price-c14d4d19ea148050
+  verified_at: '2026-10-07'
+  model_id: qwen3-5-9b
+  provider_id: together
+  product: Serverless inference
+  model_label: Qwen/Qwen3.5-9B
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.17
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0.25
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-c0cfa3f3179f
+  - src-b0caa8675a4a
+  - src-1738285cd510
+  - src-eec7142cd474
+  notes: []
+- schema_version: '1.0'
+  id: price-5ed9dca3ad3c2b0a
+  verified_at: '2026-10-07'
+  model_id: qwen3-8-2-4t-a95b
+  provider_id: novita
+  product: Serverless inference
+  model_label: qwen/qwen3.8-2.4t-a95b
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 6
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.25
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-8c28c814ff86
+  - src-1f8330a8a801
+  - src-6adb93b6cd05
+  - src-b0caa8675a4a
+  - src-2e19eb496679
+  notes: []
+- schema_version: '1.0'
+  id: price-8b5959154ac389c4
+  verified_at: '2026-10-07'
+  model_id: qwen3-8-2-4t-a95b
+  provider_id: together
+  product: Serverless inference
+  model_label: Qwen/Qwen3.8-2.4T-A95B
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 6
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-8c28c814ff86
+  - src-1f8330a8a801
+  - src-6adb93b6cd05
+  - src-b0caa8675a4a
+  - src-2e19eb496679
+  notes: []
+- schema_version: '1.0'
+  id: price-123887c9e26b3679
+  verified_at: '2026-10-07'
+  model_id: qwen3-8-27b
+  provider_id: novita
+  product: Serverless inference
+  model_label: qwen/qwen3.8-27b
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.42
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 3
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.085
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-1387aa93357b
+  - src-56514a209a60
+  - src-53532c0e2a15
+  - src-841ace79531b
+  - src-1f8330a8a801
+  - src-6adb93b6cd05
+  notes: []
+- schema_version: '1.0'
+  id: price-540341b37cb401a6
+  verified_at: '2026-10-07'
+  model_id: qwen3-8-27b
+  provider_id: featherless
+  product: Featherless Developer
+  model_label: Qwen/Qwen3.8-27B
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.4
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 3
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.15
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-1387aa93357b
+  - src-56514a209a60
+  - src-53532c0e2a15
+  - src-841ace79531b
+  - src-1f8330a8a801
+  - src-6adb93b6cd05
+  notes: []
+- schema_version: '1.0'
+  id: price-d49362ec4fa96bb4
+  verified_at: '2026-10-07'
+  model_id: qwen3-8-flash-next
+  provider_id: featherless
+  product: Featherless Developer
+  model_label: Qwen/Qwen3.8-Flash-Next
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.15
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 0.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.03
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-ffb0cc48ebb8
+  - src-56514a209a60
+  - src-194278ff9824
+  - src-9438a221690c
+  - src-53532c0e2a15
+  - src-3d2297d8525e
+  notes: []
+- schema_version: '1.0'
+  id: price-9387515cd0547270
+  verified_at: '2026-10-07'
+  model_id: qwen3-coder-next
+  provider_id: novita
+  product: Serverless inference
+  model_label: qwen/qwen3-coder-next
+  billing_method: metered-api
+  status: current
+  region: null
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 0.2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 1.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions: []
+  evidence_ids:
+  - src-75860ab90ce6
+  - src-1f8330a8a801
+  - src-6adb93b6cd05
   notes: []

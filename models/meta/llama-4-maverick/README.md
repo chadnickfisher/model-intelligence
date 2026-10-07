@@ -42,7 +42,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-1 recorded access route(s); 0 model-specific price record(s).
+3 recorded access route(s); 1 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -75,9 +75,12 @@ Local conditions: Batch 1, short/moderate context unless otherwise stated.; Weig
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
+| novita | Standard / current | input: 0.27 USD / per 1 million tokens; output: 0.85 USD / per 1 million tokens | Not established in this pass | 2026-10-07 |
 
 ## Recorded access routes
 
+- fireworks / hosted deployment: exact model family listing observed; deployment offer/price not promoted from catalog. Not established in this pass
+- novita / hosted metered api: documented_not_execution_tested. Not established in this pass
 - hugging-face / weight_distribution: documented route; account eligibility unverified. identity_note: Meta created the model; Hugging Face hosts gated artifacts.
 
 ## Sources

@@ -103,6 +103,29 @@
       "items": {
         "type": "string"
       }
+    },
+    "availability": {
+      "enum": [
+        "documented",
+        "unknown",
+        "unavailable",
+        "deprecated"
+      ]
+    },
+    "billing_class": {
+      "enum": [
+        "metered_api",
+        "subscription",
+        "free_allowance",
+        "download_weights",
+        "self_hosted",
+        "dedicated_compute",
+        "unknown"
+      ]
+    },
+    "research_details": {
+      "type": "object",
+      "description": "Preserved source research observation; unnormalized fields do not become implied capability or calculator inputs."
     }
   },
   "required": [

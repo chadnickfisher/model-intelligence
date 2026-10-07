@@ -22,7 +22,20 @@ PEAK_CONDITION = 'Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding C
 def routes_for_price(price, access):
     return [a for a in access if price['id'] in a['price_ids']
             and a['provider_id'] == price['provider_id'] and a['model_id'] == price['model_id']
+            and a.get('availability') not in {'unknown', 'unavailable', 'deprecated'}
+            and not any(s in a['status'].lower() for s in ['not yet available','no first-party hosted entitlement','deprecated','unavailable'])
             and any('api' in method.lower() for method in a['methods']) and a['evidence_ids']]
+
+
+def estimate_runs(price, access, *, runs=1, **request):
+    """Independent identical requests. Never aggregate prompt tokens across runs for tiers."""
+    if isinstance(runs, bool) or not isinstance(runs, int) or runs < 1:
+        return {'supported':False, 'reasons':['Runs must be a positive integer']}
+    result = estimate(price, access, **request)
+    if not result['supported']: return result
+    return {**result, 'per_run':result['total'], 'runs':runs,
+            'total':str(Decimal(result['total']) * runs),
+            'assumptions':['Identical independent runs; cache tokens are specified per run. No reuse discount is inferred.']}
 
 
 def threshold(text):
@@ -67,6 +80,23 @@ def estimate(price, access, *, input_tokens, output_tokens, cached_tokens=0, cac
     routes = routes_for_price(price, access)
     if not routes:
         errors.append('No explicit model/provider API access route links to this price record')
+    else:
+        compatible=[];limit_errors=[]
+        for route in routes:
+            details=route.get('research_details',{});route_errors=[]
+            for field,quantity in [('context',input_tokens+output_tokens),('served_context_label',input_tokens+output_tokens),('max_output',output_tokens)]:
+                value=details.get(field)
+                if value is None:continue
+                match=re.fullmatch(r'([\d,]+)([kKmM])?',str(value).strip())
+                if not match:
+                    route_errors.append('Cannot interpret documented route '+field+' limit: '+str(value))
+                    continue
+                limit=int(match[1].replace(',',''))*({'k':1000,'m':1000000}.get((match[2] or '').lower(),1))
+                if quantity>limit:route_errors.append('Request exceeds documented route '+field+' limit: '+str(value))
+            if route_errors:limit_errors.extend(route_errors)
+            else:compatible.append(route)
+        if not compatible:errors.extend(limit_errors)
+        routes=compatible
     as_of = as_of or date.today().isoformat()
     date.fromisoformat(as_of)
     if as_of < price['verified_at'] and not price['effective_from']:

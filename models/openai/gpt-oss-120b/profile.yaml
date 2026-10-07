@@ -199,17 +199,148 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-5f82e79ab532e98f
+  scope: direct
+  task_ids:
+  - coding.scoped_edit
+  related_task_ids: []
+  assessment: warning
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Can solve some small editing exercises, but this older diff-based setup needs repair and format
+    validation.
+  confidence: low
+  supporting_evidence_ids:
+  - src-5b92e98d55fe
+  contradictory_evidence_ids: []
+  conditions:
+  - Aider0.85.3.dev; OpenRouter; high effort; diff format;225Polyglot exercises;2025-08-06.
+  known_failure_modes:
+  - Only31/225 passed initially;94/225 after second pass.
+  - 79.1% well-formed cases;47 cases had malformed responses.
+  evidence_notes:
+  - Old immutable-checkpoint evidence; current provider/harness parity unverified.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-oss-120b-scoped-aider'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate scoped_debugging:gpt-oss-120b-scoped-aider; exact identity gates and
+      original sources retained.
+- id: judgment-3f23cd037accf1ae
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: weak
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Weak for autonomous whole-repository bug hunting in this measured route; other repair settings
+    remain open.
+  confidence: low
+  supporting_evidence_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  contradictory_evidence_ids: []
+  conditions:
+  - Groq pinned via OpenRouter with fallbacks disabled; effort field dropped, provider default unknown.
+  - 'Harness: Claude Code / OpenRouter; effort: default; effort evidence: inert_default.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  known_failure_modes:
+  - No planted defects fixed across three runs; early stopping/report-writing failures observed.
+  - Missing route accounting prevents verified context-regime parity.
+  evidence_notes:
+  - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
+    quality.
+  - No matched independent contradiction located; partial successes and misses coexist.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-oss-120b-debug-bughunt'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate scoped_debugging:gpt-oss-120b-debug-bughunt; exact identity gates and
+      original sources retained.
+- id: judgment-e2b504d398235939
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: A viable candidate for constrained single-file repair with visible tests.
+  confidence: low
+  supporting_evidence_ids:
+  - src-844ba1375784
+  contradictory_evidence_ids: []
+  conditions:
+  - ClosedCode/Ollama,high effort,ASUSGX10; exact quantization not stated.
+  known_failure_modes:
+  - Single synthetic CSV case cannot establish broad reliability.
+  evidence_notes:
+  - The zero-score whole-repository audit used a different host/effort/harness. It bounds transfer rather than
+    disproving this local result.
+  - 'Related caution source: bughunt-data. It is not a controlled contradiction because the task size, route,
+    effort and harness differ.'
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-oss-120b-debug-local-csv'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate scoped_debugging:gpt-oss-120b-debug-local-csv; exact identity gates and
+      original sources retained.
+- id: judgment-38c7d3ecbd4a7108
+  scope: direct
+  task_ids:
+  - coding.tests
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: A viable backbone for mutation-guided Java test generation when the full feedback harness is retained.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-a0e67d807af9
+  contradictory_evidence_ids: []
+  conditions:
+  - Five-action adversarial method; source metrics are method-level, not bare-model pass rates.
+  - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  known_failure_modes:
+  - Much lower fault detection in simpler generation harnesses; coverage is incomplete.
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-oss120'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:tests-oss120; exact identity gates and original
+      sources retained.
 performance_characteristics: []
 access_ids:
+- access-245f490d996c15bd
+- access-66b82db57afc8498
+- access-7f63bbf641609190
 - access-proprietary-access-26
 - access-proprietary-access-27
 - access-proprietary-access-28
 price_ids:
+- price-5b7a42fdf5531076
+- price-79c8f1def0837f0f
+- price-bf8551d32284bebd
 - price-proprietary-gpt-oss-120b-groq-0f327a7e8dbf
 - price-proprietary-gpt-oss-120b-groq-cf02720da9d9
-- price-providers-gpt-oss-120b-together-4cacbb083b92
-- price-providers-gpt-oss-120b-groq-d03d282ce7d7
 - price-providers-gpt-oss-120b-cerebras-26391efc6d01
+- price-providers-gpt-oss-120b-groq-d03d282ce7d7
+- price-providers-gpt-oss-120b-together-4cacbb083b92
 evidence_ids:
 - src-1b711f47aa6a
 - src-f85326ed9ab1

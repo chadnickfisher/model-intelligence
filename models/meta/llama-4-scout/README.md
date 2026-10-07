@@ -47,6 +47,28 @@ Supporting sources: [Llama 4 Scout / Maverick model card](https://huggingface.co
 
 Contradictory or limiting sources: [Scout independent comparison](https://artificialanalysis.ai/models/comparisons/llama-4-scout-vs-llama-3-1-instruct-405b)
 
+### Coding.review (low confidence)
+
+Can assist with low-context refactoring preference review; does not establish deep design judgment.
+
+Scope: direct / conditional. Task-specific source claim under documented conditions; no transfer to other coding tasks.
+
+Direct task IDs: coding.review
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-b0524d80aaeb6829
+
+Conditions: Public API defaults; exact revision undisclosed; only two refactoring types.; Named release matches; preserve source-specific provider, snapshot and precision limitations.
+
+Failure modes / limitations: Style shortcuts, missing context and conservative ties.
+
+Supporting sources: [High Agreement, Shallow Reasoning: A Mixed-Method Study of LLMs in Refactoring Reviews](https://homepages.dcc.ufmg.br/~figueiredo/publications/promise2026preprint.pdf)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-scout; Confidence concerns this bounded claim, not a capability score.
+
 ## Specifications
 
 | Field | Recorded value |
@@ -62,7 +84,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-1 recorded access route(s); 0 model-specific price record(s).
+3 recorded access route(s); 1 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -94,9 +116,12 @@ Local conditions: Batch 1, short/moderate context unless otherwise stated.; Weig
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
+| novita | Standard / current | input: 0.18 USD / per 1 million tokens; output: 0.59 USD / per 1 million tokens | Not established in this pass | 2026-10-07 |
 
 ## Recorded access routes
 
+- novita / hosted metered api: documented_not_execution_tested. Not established in this pass
+- fireworks / hosted deployment: exact model family listing observed; deployment offer/price not promoted from catalog. Not established in this pass
 - hugging-face / weight_distribution: documented route; account eligibility unverified. identity_note: Meta created the model; Hugging Face hosts gated artifacts.
 
 ## Sources

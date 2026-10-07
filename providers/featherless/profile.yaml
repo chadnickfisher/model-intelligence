@@ -1,0 +1,39 @@
+schema_version: '1.0'
+id: featherless
+verified_at: '2026-10-07'
+name: Featherless
+roles:
+- inference-provider
+api_compatibility: []
+access_methods: []
+geographic_availability: []
+rate_limits: []
+caching_batching: []
+privacy_data_use: []
+reliability: []
+model_ids:
+- phi-4-mini-instruct
+- qwen3-8-27b
+- qwen3-8-flash-next
+price_ids:
+- price-087141f302d23361
+- price-540341b37cb401a6
+- price-d49362ec4fa96bb4
+access_ids:
+- access-236beec7ad439196
+- access-486a36ce89c8916c
+- access-51ff623650f30bdd
+evidence_ids:
+- src-69feae49f83a
+- src-2a043397371b
+- src-3865f58cb533
+- src-f3fc9545f9da
+- src-4ca560b8430b
+- src-147450d232b3
+- src-9182f506d099
+- src-954d4b68455d
+- src-53532c0e2a15
+notes:
+- New public access-product identity; policies and account-specific entitlements remain unverified.
+limitations:
+- Do not inherit policies from a parent company or another product.

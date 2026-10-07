@@ -44,7 +44,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-0 recorded access route(s); 1 model-specific price record(s).
+3 recorded access route(s); 1 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -82,6 +82,9 @@ Local conditions: Not established in this pass
 
 ## Recorded access routes
 
+- elevenlabs / ElevenCreative speech playground: model documented; exact app-plan entitlement not reverified. Not established in this pass
+- elevenlabs / ElevenAPI Starter: documented_not_execution_tested. Not established in this pass
+- elevenlabs / ElevenAPI PayGo: documented_not_execution_tested. Not established in this pass
 
 ## Sources
 

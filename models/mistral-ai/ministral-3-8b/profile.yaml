@@ -167,11 +167,46 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-c95618e6317eb57c
+  scope: direct
+  task_ids:
+  - coding.refactoring
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: A local candidate for small Python simplifications; tiny flawed benchmark cannot justify broader
+    claims.
+  confidence: low
+  supporting_evidence_ids:
+  - src-d478029ae6e3
+  contradictory_evidence_ids: []
+  conditions:
+  - Compact verbose Python code; three repetitions; Ollama 0.20.0, RTX 4060 8GB,Windows 10; instruct temperature
+    0; unit-test gating then Gemma 3 judge.
+  known_failure_modes:
+  - D5 is among seven universally failing tasks attributed to benchmark defects. Do not treat nominal 60% as
+    calibrated ability.
+  evidence_notes:
+  - Tiny function-level slice; no architecture/repository inference. PDF/ZIP artifacts listed, but advertised
+    root CSV returned 404. Qwen3.5-9B was replaced by Qwen3-8B, despite misleading internal key; no transfer.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R07'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate architecture_refactoring:R07; exact identity gates and original sources
+      retained.
 performance_characteristics: []
 access_ids:
-- access-open-ministral-3-8b-weights
+- access-aed08255fcf4d3a2
+- access-b5ba5d4102167d79
+- access-f6fab9ea011aa03e
 - access-open-ministral-3-8b-mistral-api
+- access-open-ministral-3-8b-weights
 price_ids:
+- price-dcb4c2434229c9de
 - price-open-ministral-3-8b-mistral-api-e3e015fcc82e
 evidence_ids:
 - src-f2036f817d22

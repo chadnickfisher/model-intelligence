@@ -180,8 +180,12 @@ performance_characteristics:
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
 access_ids:
+- access-bd4da0ba500e4461
+- access-bfda58b1f1e87f34
+- access-ed152f525cd1dc87
 - access-open-nemotron-3-ultra-weights
-price_ids: []
+price_ids:
+- price-59c8f7b228f5d878
 evidence_ids:
 - src-58bf94c165a9
 - src-c5a0afc263f8

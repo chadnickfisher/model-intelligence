@@ -25,8 +25,9 @@ def test_all_original_conclusions_and_evidence_survive():
 
 def test_index_retains_actual_claim_and_never_splits_bundle():
     indexed = read(ROOT / 'data/capabilities.yaml')['records']
-    assert len(indexed) == 58
-    assert len({j['id'] for j in indexed}) == 58
+    migrated = [j for j in indexed if j['provenance'].get('origin') != 'research']
+    assert len(migrated) == 58
+    assert len({j['id'] for j in indexed}) == len(indexed)
     current = canonical()
     for j in indexed:
         model = current[('model', j['model_id'])][1]
@@ -62,7 +63,8 @@ def test_no_autoregistration_and_reproducible_views():
                 if p.is_file() and (p.name == 'README.md' or p.parent.name == 'data' or p.name == 'coverage.md')}
     before = digest()
     taxonomy = (ROOT / 'data/capability-taxonomy.yaml').read_bytes()
-    subprocess.run([sys.executable, str(ROOT / 'tools/render.py')], check=True, capture_output=True)
+    rendered=subprocess.run([sys.executable, str(ROOT / 'tools/render.py')], capture_output=True, text=True, encoding='utf-8')
+    assert rendered.returncode==0, rendered.stdout+rendered.stderr
     assert digest() == before
     assert (ROOT / 'data/capability-taxonomy.yaml').read_bytes() == taxonomy
 
@@ -88,8 +90,9 @@ def test_history_preserves_price_and_claim_changes_and_tombstones(tmp_path):
     journal = history(root)
     assert snapshot('2026-10-07', journal)[('model', model['id'])] == original
     assert snapshot('2026-10-08', journal)[('model', model['id'])] == model
-    assert entity_history('model', model['id'], journal)[1]['previous_revision_id'] == entity_history('model', model['id'], journal)[0]['id']
-    assert capability_history(model['id'], model['capabilities'][0]['id'], journal)[1]['value'][0]['confidence'] == 'low'
+    versions=entity_history('model', model['id'], journal)
+    assert versions[-1]['previous_revision_id'] == versions[-2]['id']
+    assert capability_history(model['id'], model['capabilities'][0]['id'], journal)[-1]['value'][0]['confidence'] == 'low'
     assert changes_between('2026-10-07', '2026-10-08', journal) == changed
     assert capture(root, '2026-10-08', 'No change', ['src-67b4ce9b4e6a']) == []
     path.unlink()

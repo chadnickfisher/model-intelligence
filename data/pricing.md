@@ -38,9 +38,9 @@ Generated from canonical YAML. Units, route conditions and dates are essential.
 | claude-sonnet-5-5 | anthropic | metered-api / Batch / current | input: 1.0 USD / per 1 million tokens; output: 5.0 USD / per 1 million tokens | 2026-10-06 |
 | claude-haiku-4-5 | anthropic | metered-api / Standard / current | input: 1 USD / per 1 million tokens; output: 5 USD / per 1 million tokens; cached_input: 0.1 USD / per 1 million tokens; cache_write_5m: 1.25 USD / per 1 million tokens; cache_write_1h: 2 USD / per 1 million tokens | 2026-10-06 |
 | claude-haiku-4-5 | anthropic | metered-api / Batch / current | input: 0.5 USD / per 1 million tokens; output: 2.5 USD / per 1 million tokens | 2026-10-06 |
-| gpt-oss-120b | groq | metered-api / Developer / on-demand / current | input: 0.15 USD / per 1 million tokens; output: 0.6 USD / per 1 million tokens | 2026-10-06 |
-| gpt-oss-120b | groq | metered-api / Cached input / current | cached_input: 0.075 USD / per 1 million tokens | 2026-10-06 |
-| gpt-oss-20b | groq | metered-api / Developer / on-demand / current | input: 0.075 USD / per 1 million tokens; output: 0.3 USD / per 1 million tokens | 2026-10-06 |
+| gpt-oss-120b | groq | metered-api / Developer / on-demand / historical | input: 0.15 USD / per 1 million tokens; output: 0.6 USD / per 1 million tokens | 2026-10-06 |
+| gpt-oss-120b | groq | metered-api / Cached input / historical | cached_input: 0.075 USD / per 1 million tokens | 2026-10-06 |
+| gpt-oss-20b | groq | metered-api / Developer / on-demand / historical | input: 0.075 USD / per 1 million tokens; output: 0.3 USD / per 1 million tokens | 2026-10-06 |
 | gemini-3-8-flash | google-developer-api | metered-api / paid_standard / current | input: 0.75 USD / per_1M_tokens; output_including_thinking: 3.75 USD / per_1M_tokens; cache_read: 0.075 USD / per_1M_tokens | 2026-10-06 |
 | gemini-3-8-flash | google-developer-api | metered-api / paid_standard / current | input: 1.5 USD / per_1M_tokens; output_including_thinking: 7.5 USD / per_1M_tokens; cache_read: 0.15 USD / per_1M_tokens | 2026-10-06 |
 | gemini-3-8-flash | google-developer-api | metered-api / paid_batch / current | input: 0.375 USD / per_1M_tokens; output_including_thinking: 1.875 USD / per_1M_tokens | 2026-10-06 |
@@ -74,17 +74,17 @@ Generated from canonical YAML. Units, route conditions and dates are essential.
 | deepseek-v4-1-flash | deepseek-api | metered-api / off_peak / current | input: 0.15 USD / per_1000000_tokens; output: 0.6 USD / per_1000000_tokens; cached_input: 0.003 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | 2026-10-06 |
 | deepseek-v4-pro-0813 | deepseek-api | metered-api / peak / current | input: 1.32 USD / per_1000000_tokens; output: 3.96 USD / per_1000000_tokens; cached_input: 0.044 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | 2026-10-06 |
 | deepseek-v4-pro-0813 | deepseek-api | metered-api / off_peak / current | input: 0.66 USD / per_1000000_tokens; output: 1.98 USD / per_1000000_tokens; cached_input: 0.022 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | 2026-10-06 |
-| glm-5-3 | zai-api | metered-api / standard / current | input: 1.4 USD / per_1000000_tokens; output: 4.4 USD / per_1000000_tokens; cached_input: 0.26 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | 2026-10-06 |
-| glm-5-3-flash | zai-api | metered-api / standard / current | input: 0.15 USD / per_1000000_tokens; output: 0.5 USD / per_1000000_tokens; cached_input: 0.03 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | 2026-10-06 |
+| glm-5-3 | zai-api | metered-api / standard / historical | input: 1.4 USD / per_1000000_tokens; output: 4.4 USD / per_1000000_tokens; cached_input: 0.26 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | 2026-10-06 |
+| glm-5-3-flash | zai-api | metered-api / standard / historical | input: 0.15 USD / per_1000000_tokens; output: 0.5 USD / per_1000000_tokens; cached_input: 0.03 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | 2026-10-06 |
 | minimax-m3 | minimax-api | metered-api / standard_short / current | input: 0.3 USD / per_1000000_tokens; output: 1.2 USD / per_1000000_tokens; cached_input: 0.06 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | 2026-10-06 |
 | minimax-m3 | minimax-api | metered-api / standard_long / current | input: 0.6 USD / per_1000000_tokens; output: 2.4 USD / per_1000000_tokens; cached_input: 0.12 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | 2026-10-06 |
 | minimax-m3 | minimax-api | metered-api / priority_short / current | input: 0.44999999999999996 USD / per_1000000_tokens; output: 1.7999999999999998 USD / per_1000000_tokens; cached_input: 0.09 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | 2026-10-06 |
 | minimax-m3 | minimax-api | metered-api / priority_long / current | input: 0.8999999999999999 USD / per_1000000_tokens; output: 3.5999999999999996 USD / per_1000000_tokens; cached_input: 0.18 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | 2026-10-06 |
-| mistral-large-3 | mistral-api | metered-api / standard / current | input: 0.5 USD / per_1000000_tokens; output: 1.5 USD / per_1000000_tokens; cached_input: 0.05 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | 2026-10-06 |
-| mistral-medium-3-5 | mistral-api | metered-api / standard / current | input: 1.5 USD / per_1000000_tokens; output: 7.5 USD / per_1000000_tokens; cached_input: 0.15 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | 2026-10-06 |
-| mistral-small-4 | mistral-api | metered-api / standard / current | input: 0.15 USD / per_1000000_tokens; output: 0.6 USD / per_1000000_tokens; cached_input: 0.015 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | 2026-10-06 |
-| ministral-3-8b | mistral-api | metered-api / standard / current | input: 0.15 USD / per_1000000_tokens; output: 0.15 USD / per_1000000_tokens; cached_input: 0.015 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | 2026-10-06 |
-| glm-5-3 | mistral-api | metered-api / standard / current | input: 1.4 USD / per_1000000_tokens; output: 4.4 USD / per_1000000_tokens; cached_input: 0.14 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | 2026-10-06 |
+| mistral-large-3 | mistral-api | metered-api / standard / historical | input: 0.5 USD / per_1000000_tokens; output: 1.5 USD / per_1000000_tokens; cached_input: 0.05 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | 2026-10-06 |
+| mistral-medium-3-5 | mistral-api | metered-api / standard / historical | input: 1.5 USD / per_1000000_tokens; output: 7.5 USD / per_1000000_tokens; cached_input: 0.15 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | 2026-10-06 |
+| mistral-small-4 | mistral-api | metered-api / standard / historical | input: 0.15 USD / per_1000000_tokens; output: 0.6 USD / per_1000000_tokens; cached_input: 0.015 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | 2026-10-06 |
+| ministral-3-8b | mistral-api | metered-api / standard / historical | input: 0.15 USD / per_1000000_tokens; output: 0.15 USD / per_1000000_tokens; cached_input: 0.015 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | 2026-10-06 |
+| glm-5-3 | mistral-api | metered-api / standard / historical | input: 1.4 USD / per_1000000_tokens; output: 4.4 USD / per_1000000_tokens; cached_input: 0.14 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | 2026-10-06 |
 | xai-grok-4-7 | xai | metered-api / standard, short context / current | input: 2 USD / per 1M tokens; cached_input: 0.5 USD / per 1M tokens; output: 6 USD / per 1M tokens | 2026-10-06 |
 | grok-4.6 | xai | metered-api / standard, prompt <200k tokens / current | input: 2 USD / per 1M tokens; cached_input: 0.5 USD / per 1M tokens; output: 6 USD / per 1M tokens | 2026-10-06 |
 | grok-4.6 | xai | metered-api / standard, prompt >=200k tokens / current | input: 4 USD / per 1M tokens; cached_input: 1 USD / per 1M tokens; output: 12 USD / per 1M tokens | 2026-10-06 |
@@ -103,7 +103,7 @@ Generated from canonical YAML. Units, route conditions and dates are essential.
 | kimi-k3 | fireworks | metered-api / Standard / current | input: 3 USD / per 1M tokens; cached_input: 0.3 USD / per 1M tokens; output: 15 USD / per 1M tokens | 2026-10-06 |
 | Kimi K3 (US) | fireworks | metered-api / Standard US / current | input: 4.5 USD / per 1M tokens; cached_input: 0.45 USD / per 1M tokens; output: 22.5 USD / per 1M tokens | 2026-10-06 |
 | kimi-k3 | fireworks | metered-api / Priority / current | input: 3.75 USD / per 1M tokens; cached_input: 0.375 USD / per 1M tokens; output: 18.75 USD / per 1M tokens | 2026-10-06 |
-| gpt-oss-120b | groq | metered-api / Developer / current | input: 0.15 USD / per 1M tokens; output: 0.6 USD / per 1M tokens | 2026-10-06 |
+| gpt-oss-120b | groq | metered-api / Developer / historical | input: 0.15 USD / per 1M tokens; output: 0.6 USD / per 1M tokens | 2026-10-06 |
 | whisper-large-v3-turbo | groq | metered-api / Developer / current | audio: 0.04 USD / per audio hour | 2026-10-06 |
 | canopylabs/orpheus-arabic-saudi | groq | metered-api / Preview / current | text: 40 USD / per 1M characters | 2026-10-06 |
 | gpt-oss-120b | cerebras | metered-api / Developer PayGo / current | input: 0.35 USD / per 1M tokens; output: 0.75 USD / per 1M tokens | 2026-10-06 |
@@ -126,5 +126,42 @@ Generated from canonical YAML. Units, route conditions and dates are essential.
 | cloud model inference | google-cloud | metered-api / None / unknown | unverified: unknown  / unspecified | 2026-10-06 |
 | models sold by Azure | azure-foundry | metered-api / None / unknown | unverified: unknown  / unspecified | 2026-10-06 |
 | Jamba2 API | ai21 | metered-api / None / unknown | unverified: unknown  / unspecified | 2026-10-06 |
+| ai21-jamba2-mini | ai21 | metered-api / Standard / current | input: 0.2 USD / per 1 million tokens; output: 0.4 USD / per 1 million tokens | 2026-10-07 |
+| cohere-command-a-plus | cohere | free / Capped free evaluation / tier / current | input: 0 USD / per 1 million tokens; output: 0 USD / per 1 million tokens | 2026-10-07 |
+| cohere-embed-5-fast | cohere | metered-api / Standard / current | input: 0.08 USD / per 1 million tokens; image_input: 0.4 USD / per 1 million tokens | 2026-10-07 |
+| cohere-embed-5-pro | cohere | metered-api / Standard / current | input: 0.12 USD / per 1 million tokens; image_input: 0.4 USD / per 1 million tokens | 2026-10-07 |
+| cohere-north-small-translate | cohere | free / Capped free evaluation / tier / current | input: 0 USD / per 1 million tokens; output: 0 USD / per 1 million tokens | 2026-10-07 |
+| deepseek-v4-1-flash | together | metered-api / Standard / current | input: 0.3 USD / per 1 million tokens; output: 1.2 USD / per 1 million tokens; cached_input: 0.006 USD / per 1 million tokens | 2026-10-07 |
+| deepseek-v4-pro-0813 | together | metered-api / Standard / current | input: 1.32 USD / per 1 million tokens; output: 3.96 USD / per 1 million tokens; cached_input: 0.13 USD / per 1 million tokens | 2026-10-07 |
+| gemma-4-31b-it | google-developer-api | free / Capped free evaluation / tier / current | input: 0 USD / per 1 million tokens; output: 0 USD / per 1 million tokens; cached_input: 0 USD / per 1 million tokens | 2026-10-07 |
+| gemma-4-31b-it | novita | metered-api / Standard / current | input: 0.14 USD / per 1 million tokens; output: 0.4 USD / per 1 million tokens | 2026-10-07 |
+| glm-5-3 | zai-api | metered-api / Standard / current | input: 1.4 USD / per 1 million tokens; output: 4.4 USD / per 1 million tokens; cached_input: 0.26 USD / per 1 million tokens | 2026-10-07 |
+| glm-5-3 | together | metered-api / Standard / current | input: 1.4 USD / per 1 million tokens; output: 4.4 USD / per 1 million tokens; cached_input: 0.26 USD / per 1 million tokens | 2026-10-07 |
+| glm-5-3 | mistral-api | metered-api / Standard / current | input: 1.4 USD / per 1 million tokens; output: 4.4 USD / per 1 million tokens; cached_input: 0.14 USD / per 1 million tokens | 2026-10-07 |
+| glm-5-3-flash | zai-api | metered-api / Standard / current | input: 0.15 USD / per 1 million tokens; output: 0.5 USD / per 1 million tokens; cached_input: 0.03 USD / per 1 million tokens | 2026-10-07 |
+| glm-5-3-flash | together | metered-api / Standard / current | input: 0.15 USD / per 1 million tokens; output: 0.5 USD / per 1 million tokens; cached_input: 0.03 USD / per 1 million tokens | 2026-10-07 |
+| gpt-oss-120b | groq | metered-api / Standard / current | input: 0.15 USD / per 1 million tokens; output: 0.6 USD / per 1 million tokens; cached_input: 0.075 USD / per 1 million tokens | 2026-10-07 |
+| gpt-oss-120b | groq | free / Capped free evaluation / tier / current | input: 0 USD / per 1 million tokens; output: 0 USD / per 1 million tokens | 2026-10-07 |
+| gpt-oss-120b | together | metered-api / Standard / current | input: 0.15 USD / per 1 million tokens; output: 0.6 USD / per 1 million tokens | 2026-10-07 |
+| gpt-oss-20b | groq | metered-api / Standard / current | input: 0.075 USD / per 1 million tokens; output: 0.3 USD / per 1 million tokens; cached_input: 0.0375 USD / per 1 million tokens | 2026-10-07 |
+| gpt-oss-20b | groq | free / Capped free evaluation / tier / current | input: 0 USD / per 1 million tokens; output: 0 USD / per 1 million tokens | 2026-10-07 |
+| llama-4-maverick | novita | metered-api / Standard / current | input: 0.27 USD / per 1 million tokens; output: 0.85 USD / per 1 million tokens | 2026-10-07 |
+| llama-4-scout | novita | metered-api / Standard / current | input: 0.18 USD / per 1 million tokens; output: 0.59 USD / per 1 million tokens | 2026-10-07 |
+| minimax-m3 | together | metered-api / Standard / current | input: 0.3 USD / per 1 million tokens; output: 1.2 USD / per 1 million tokens; cached_input: 0.06 USD / per 1 million tokens | 2026-10-07 |
+| ministral-3-8b | mistral-api | metered-api / Standard / current | input: 0.15 USD / per 1 million tokens; output: 0.15 USD / per 1 million tokens; cached_input: 0.015 USD / per 1 million tokens | 2026-10-07 |
+| mistral-large-3 | mistral-api | metered-api / Standard / current | input: 0.5 USD / per 1 million tokens; output: 1.5 USD / per 1 million tokens; cached_input: 0.05 USD / per 1 million tokens | 2026-10-07 |
+| mistral-medium-3-5 | mistral-api | metered-api / Standard / current | input: 1.5 USD / per 1 million tokens; output: 7.5 USD / per 1 million tokens; cached_input: 0.15 USD / per 1 million tokens | 2026-10-07 |
+| mistral-medium-3-5 | openrouter | metered-api / Standard / current | input: 1.5 USD / per 1 million tokens; output: 7.5 USD / per 1 million tokens | 2026-10-07 |
+| mistral-small-4 | mistral-api | metered-api / Standard / current | input: 0.15 USD / per 1 million tokens; output: 0.6 USD / per 1 million tokens; cached_input: 0.015 USD / per 1 million tokens | 2026-10-07 |
+| mistral-small-4 | openrouter | metered-api / Standard / current | input: 0.15 USD / per 1 million tokens; output: 0.6 USD / per 1 million tokens | 2026-10-07 |
+| nemotron-3-ultra | fireworks | metered-api / Standard / current | input: 0.6 USD / per 1 million tokens; output: 2.4 USD / per 1 million tokens; cached_input: 0.12 USD / per 1 million tokens | 2026-10-07 |
+| phi-4-mini-instruct | featherless | metered-api / Standard / current | input: 0.32 USD / per 1 million tokens; cached_input: 0.016 USD / per 1 million tokens; output: 1.4 USD / per 1 million tokens | 2026-10-07 |
+| qwen3-5-9b | together | metered-api / Standard / current | input: 0.17 USD / per 1 million tokens; output: 0.25 USD / per 1 million tokens | 2026-10-07 |
+| qwen3-8-2-4t-a95b | novita | metered-api / Standard / current | input: 2 USD / per 1 million tokens; output: 6 USD / per 1 million tokens; cached_input: 0.25 USD / per 1 million tokens | 2026-10-07 |
+| qwen3-8-2-4t-a95b | together | metered-api / Standard / current | input: 2 USD / per 1 million tokens; output: 6 USD / per 1 million tokens | 2026-10-07 |
+| qwen3-8-27b | novita | metered-api / Standard / current | input: 0.42 USD / per 1 million tokens; output: 3 USD / per 1 million tokens; cached_input: 0.085 USD / per 1 million tokens | 2026-10-07 |
+| qwen3-8-27b | featherless | metered-api / Standard / current | input: 0.4 USD / per 1 million tokens; output: 3 USD / per 1 million tokens; cached_input: 0.15 USD / per 1 million tokens | 2026-10-07 |
+| qwen3-8-flash-next | featherless | metered-api / Standard / current | input: 0.15 USD / per 1 million tokens; output: 0.5 USD / per 1 million tokens; cached_input: 0.03 USD / per 1 million tokens | 2026-10-07 |
+| qwen3-coder-next | novita | metered-api / Standard / current | input: 0.2 USD / per 1 million tokens; output: 1.5 USD / per 1 million tokens | 2026-10-07 |
 
 [Canonical records with evidence and all conditions](pricing.yaml)

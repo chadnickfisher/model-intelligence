@@ -188,10 +188,99 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-4205dcdceec8959d
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Can assist narrowly specified quantum-circuit repair with executable validation and retries.
+  confidence: low
+  supporting_evidence_ids:
+  - src-60a4ffa68522
+  contradictory_evidence_ids: []
+  conditions:
+  - QBugLM; OpenQASM3; five5-qubit circuit families; structured prompts; up to two feedback retries.
+  known_failure_modes:
+  - BV repair score depended strongly on prompting:95%structured versus45%CoT and63%ReAct.
+  - Semantic-error cases remained difficult.
+  evidence_notes:
+  - Paper has inconsistent category wording; do not use its contradictory category100%claims.
+  - 'Non-thinking checkpoint: do not repeat paper''s reasoning-mode characterization.'
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:qwen3-coder-next-debug-quantum'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate scoped_debugging:qwen3-coder-next-debug-quantum; exact identity gates
+      and original sources retained.
+- id: judgment-7de8091ed4d4e8fd
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: warning
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Useful for test-guided single-file repair locally, with edge-case checks.
+  confidence: low
+  supporting_evidence_ids:
+  - src-844ba1375784
+  contradictory_evidence_ids: []
+  conditions:
+  - ClosedCode/Ollama; ASUSGX10/GB10,128GB unified memory; Q4_K_M.
+  known_failure_modes:
+  - CSV repair passed14/14visible tests but6/8hidden; another run passed8/8.
+  - Q8_0 configuration stalled under its hardware/time conditions; that is deployment evidence, not proof of
+    weaker weights.
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:qwen3-coder-next-debug-local-csv'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate scoped_debugging:qwen3-coder-next-debug-local-csv; exact identity gates
+      and original sources retained.
+- id: judgment-588f397f0e9fc08d
+  scope: direct
+  task_ids:
+  - coding.refactoring
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Constrained cleanup is promising; deeper restructuring remains weakly established.
+  confidence: low
+  supporting_evidence_ids:
+  - src-9b1dafc5ced6
+  - src-fc956f8e663f
+  contradictory_evidence_ids: []
+  conditions:
+  - GAUNTLET LM Studio on Apple M5 Max 128 GB; fixed LLM judge, private prompt/rubric. APEX multi-model grading
+    plus operator review, not a published behavior-equivalence test.
+  known_failure_modes:
+  - CQRS result much weaker than cleanup; incompatible tests and serving routes cannot be averaged.
+  evidence_notes:
+  - Only low-confidence, narrowly scoped evidence. No demonstrated large-repository refactoring reliability
+    or architecture rating.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R06'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate architecture_refactoring:R06; exact identity gates and original sources
+      retained.
 performance_characteristics: []
 access_ids:
+- access-1d1b07f5250f1c91
 - access-open-qwen3-coder-next-weights
-price_ids: []
+price_ids:
+- price-9387515cd0547270
 evidence_ids:
 - src-f2036f817d22
 - src-71b3fd269cc8

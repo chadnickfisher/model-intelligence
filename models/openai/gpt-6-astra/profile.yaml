@@ -240,22 +240,216 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 1
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-50e193772d714514
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Can repair a subset of hidden repository defects; use as an assisted audit, not a completeness
+    guarantee.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  contradictory_evidence_ids: []
+  conditions:
+  - Codex ChatGPT route; documented effort, not a separately measured effort magnitude.
+  - 'Harness: Codex CLI; effort: max; effort evidence: first_party.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  known_failure_modes:
+  - Many planted defects remained unresolved in the measured runs.
+  - Run variance and harness differences prevent fine-grained cross-model ranking.
+  evidence_notes:
+  - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
+    quality.
+  - No matched independent contradiction located; partial successes and misses coexist.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-astra-debug-bughunt'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate scoped_debugging:gpt-6-astra-debug-bughunt; exact identity gates and
+      original sources retained.
+- id: judgment-3ee716fcfdb2364d
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Promising for small Python repairs when concrete failing examples are available.
+  confidence: low
+  supporting_evidence_ids:
+  - src-0de3942764ff
+  contradictory_evidence_ids: []
+  conditions:
+  - Codex subscription environment, medium effort; seven failed samples from other models, twice each.
+  - One repair round; at most six failed tests/errors disclosed; Python3.12 standard library.
+  known_failure_modes:
+  - No failures observed in14attempts; this is too small and feedback-rich to establish general reliability.
+  evidence_notes:
+  - Different code scale from Bug Hunt Bench; both findings should coexist.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:gpt-6-astra-debug-small-python'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate scoped_debugging:gpt-6-astra-debug-small-python; exact identity gates
+      and original sources retained.
+- id: judgment-92341ccdd95f6b40
+  scope: direct
+  task_ids:
+  - coding.architecture
+  related_task_ids: []
+  assessment: warning
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: One unfamiliar-system report cautions that strong local edits can still conflict with the broader
+    architecture.
+  confidence: low
+  supporting_evidence_ids:
+  - src-738286b6be78
+  contradictory_evidence_ids: []
+  conditions:
+  - Complex unfamiliar mod/reverse-engineering work; human testing loop.
+  known_failure_modes:
+  - Patching before adequately reconstructing state/callback interactions.
+  evidence_notes:
+  - Single anecdote, no code or controlled runs. Warning about this workload only; cannot establish a general
+    failure rate or override refactoring benchmark E07.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A05'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate architecture_refactoring:A05; exact identity gates and original sources
+      retained.
+- id: judgment-5e13f6bbea5e1900
+  scope: direct
+  task_ids:
+  - coding.refactoring
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Strong relative result on difficult refactoring, with substantial unresolved tasks.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-b6ffa931564a
+  contradictory_evidence_ids: []
+  conditions:
+  - 70 tasks, 10 production repositories, 6 languages; Harbor/Modal sandboxes. Resolve requires unchanged tests,
+    zero regressions, and every mandatory Opus 4.5-judged rubric.
+  known_failure_modes:
+  - Incomplete extraction, unwired callers, stale implementations/artifacts; failure taxonomy is pooled, not
+    per-model.
+  evidence_notes:
+  - Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve xHigh as board label.
+    Intro's below 50% statement is stale. Gemini 3.1 Pro 33.81±6.64 is withheld pending preview-ID mapping.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R01'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate architecture_refactoring:R01; exact identity gates and original sources
+      retained.
+- id: judgment-6d1cd0c0da04925a
+  scope: direct
+  task_ids:
+  - coding.frontend
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Use relative preference evidence to shortlist this exact configuration for frontend trials; do
+    not infer tests or review strength.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  contradictory_evidence_ids: []
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  known_failure_modes: []
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-gpt-6-astra'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:frontend-arena-gpt-6-astra; exact identity gates
+      and original sources retained.
+- id: judgment-b2cbbb99f4f4d7db
+  scope: direct
+  task_ids:
+  - coding.review
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Review strength depends on context and reporting threshold; no uniform bug-discovery advantage
+    established.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-5427d679c7ea
+  - src-04881033b5ad
+  contradictory_evidence_ids:
+  - src-04881033b5ad
+  conditions:
+  - Keep repository-aware and diff-only evaluations separate.
+  - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  known_failure_modes:
+  - Diff-only study missed security issues despite high finding precision.
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-astra'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:review-astra; exact identity gates and original
+      sources retained.
 performance_characteristics: []
 access_ids:
+- access-20dfff8ec8df204d
+- access-2c50e864f164ad51
+- access-509a7b605b9eb645
+- access-5be5b0c13548409e
+- access-df73254ae1e94fed
+- access-f3725887a8b856c5
 - access-proprietary-access-1-0
 - access-proprietary-access-2
 - access-proprietary-access-3-0
 - access-proprietary-access-4-0
 - access-proprietary-access-4-ide-0
-- access-proprietary-access-6-azure-foundry
 - access-proprietary-access-6-aws-bedrock
+- access-proprietary-access-6-azure-foundry
 price_ids:
-- price-proprietary-gpt-6-astra-openai-3d5b2153d0ca
-- price-proprietary-gpt-6-astra-openai-83dbee0ec140
 - price-proprietary-gpt-6-astra-openai-32a917ee1b7b
-- price-proprietary-gpt-6-astra-openai-e68876e21c23
+- price-proprietary-gpt-6-astra-openai-3d5b2153d0ca
 - price-proprietary-gpt-6-astra-openai-4a3725464c5e
 - price-proprietary-gpt-6-astra-openai-749a19560f3b
+- price-proprietary-gpt-6-astra-openai-83dbee0ec140
+- price-proprietary-gpt-6-astra-openai-e68876e21c23
 evidence_ids:
 - src-67b4ce9b4e6a
 - src-0e5ba6524c75

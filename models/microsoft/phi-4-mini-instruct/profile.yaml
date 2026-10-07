@@ -212,8 +212,11 @@ capabilities:
     history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
+- access-51ff623650f30bdd
+- access-a52f9c294f41f9f3
 - access-open-phi-4-mini-instruct-weights
-price_ids: []
+price_ids:
+- price-087141f302d23361
 evidence_ids:
 - src-3c2db7ec3521
 - src-147450d232b3

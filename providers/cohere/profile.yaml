@@ -21,12 +21,28 @@ privacy_data_use:
   permitted by controls/terms; private customer deployments do not expose prompts to Cohere. Do not assume
   universal no-training."}'
 reliability: []
-model_ids: []
+model_ids:
+- cohere-command-a-plus
+- cohere-embed-5-fast
+- cohere-embed-5-pro
+- cohere-north-small-translate
 price_ids:
-- price-providers-cohere-embed-5-pro-cohere-516f45ff44b6
+- price-261d7144f200e9bd
+- price-2a94f1cd774c37c2
+- price-2c7f6bbbc4244653
+- price-426d592774fefebd
 - price-providers-cohere-embed-5-fast-cohere-ca6b05775efe
+- price-providers-cohere-embed-5-pro-cohere-516f45ff44b6
 - price-providers-cohere-embed-5-pro-cohere-d310d3a8de69
 access_ids:
+- access-2d68e2f9c2b0b599
+- access-31bbc0a780fbd60a
+- access-42cc6e1a9bf1aff1
+- access-585031543ef7fcf8
+- access-a6400ce8b73cbe5b
+- access-bd7b5c0e0b88f15a
+- access-d8d674c5e0ec4428
+- access-db280e3f6545e4c7
 - access-providers-access-cohere-trial
 evidence_ids:
 - src-73e03ec6d5cd

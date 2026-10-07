@@ -20,13 +20,41 @@ privacy_data_use:
   training sharing separately opt-in, off by default. Organization admin can disable storage for ZDR; doing
   so disables passthrough models."}'
 reliability: []
-model_ids: []
+model_ids:
+- bfl-flux3-video
+- deepseek-v4-1-flash
+- deepseek-v4-pro-0813
+- glm-5-3
+- glm-5-3-flash
+- gpt-oss-120b
+- kimi-k3
+- minimax-m3
+- qwen3-5-9b
+- qwen3-8-2-4t-a95b
 price_ids:
+- price-2a73a8f57ef581d1
+- price-2b7097891fc708e3
+- price-5b7a42fdf5531076
+- price-8b5959154ac389c4
+- price-c14d4d19ea148050
+- price-cbe1b2acd258f2a6
+- price-ea0dd92a78528826
+- price-f8443530181b2e7f
+- price-providers-dedicated-inference-together-c011f83509b2
 - price-providers-gpt-oss-120b-together-4cacbb083b92
 - price-providers-kimi-k3-together-210d7bb86dfc
 - price-providers-minimax-m3-together-53e1dc39589c
-- price-providers-dedicated-inference-together-c011f83509b2
 access_ids:
+- access-0c4e2c188162e5da
+- access-7f63bbf641609190
+- access-97e2c8063b467fc9
+- access-a7bbb4528bd27230
+- access-ad53fe6557ca6ae7
+- access-b63286675de81cc9
+- access-b68f866c1dc4b956
+- access-be1523030319a65a
+- access-d806a0c3a1f82a84
+- access-f39ba2c78e229f0a
 - access-providers-access-together-serverless
 evidence_ids:
 - src-2e19eb496679

@@ -14,22 +14,38 @@ privacy_data_use: []
 reliability: []
 model_ids:
 - claude-fable-5-1
+- claude-haiku-4-5
 - claude-opus-5-5
 - claude-sonnet-5-5
-- claude-haiku-4-5
 price_ids:
 - price-proprietary-claude-fable-5-1-anthropic-1c9e85bc3ee3
 - price-proprietary-claude-fable-5-1-anthropic-d31f844e1fa5
-- price-proprietary-claude-opus-5-5-anthropic-a9d5d3dc77e4
-- price-proprietary-claude-opus-5-5-anthropic-c64de5cd2551
-- price-proprietary-claude-sonnet-5-5-anthropic-706ffb2ac9c2
-- price-proprietary-claude-sonnet-5-5-anthropic-ed2559301c6f
 - price-proprietary-claude-haiku-4-5-anthropic-92db4721bd09
 - price-proprietary-claude-haiku-4-5-anthropic-9448cb8b044e
-- price-proprietary-claude-pro-monthly-anthropic-2d6b2b18c5d7
-- price-proprietary-claude-pro-annual-anthropic-33c209c5815b
 - price-proprietary-claude-max-anthropic-959775c88e0a
+- price-proprietary-claude-opus-5-5-anthropic-a9d5d3dc77e4
+- price-proprietary-claude-opus-5-5-anthropic-c64de5cd2551
+- price-proprietary-claude-pro-annual-anthropic-33c209c5815b
+- price-proprietary-claude-pro-monthly-anthropic-2d6b2b18c5d7
+- price-proprietary-claude-sonnet-5-5-anthropic-706ffb2ac9c2
+- price-proprietary-claude-sonnet-5-5-anthropic-ed2559301c6f
 access_ids:
+- access-05e43d3e1d4cbb21
+- access-19e1cfd25b21093c
+- access-1d220e9817961b88
+- access-55890ccbf102275a
+- access-80726a4797297727
+- access-88060cd75ad9c4fd
+- access-b81c493a57c47077
+- access-bc02766c2fbe0c2e
+- access-d49db2bebe900f35
+- access-e2e0da8fe6a5ebd8
+- access-e4434db50af566b6
+- access-e54a01965f6e1cf1
+- access-efe64fb09d83013c
+- access-f8b1175b0cecaf06
+- access-fa30f26749bf50d7
+- access-ffea018bd8f0c00e
 - access-proprietary-access-14
 - access-proprietary-access-16
 - access-proprietary-access-18

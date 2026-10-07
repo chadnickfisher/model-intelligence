@@ -42,6 +42,38 @@ Use “open weights” for downloadable parameters unless the broader open-sourc
 
 ## Freshness and changes
 
+Every research update accounts for **every catalog model** across four permanent
+domains: task-specific capabilities, benchmarks and confidence rationale,
+verified access/pricing/limits, and post-launch behavior. This scope applies to
+each research package, not just an initial backfill. Record the pass in
+[`data/research-coverage.yaml`](data/research-coverage.yaml), with one entry per
+model/domain, actual source or search references, actual check date, result,
+scope and remaining gaps. Results are changed, unchanged, unknown, blocked, or
+explicitly not checked. A structural inventory is not a completed source audit.
+Unchecked domains have null check dates; blocked checks identify their blocker.
+No source found or no report located is unknown, not unavailable or weak.
+
+Retain existing verification timestamps on carry-forward facts. Change a source
+access date or factual verification date only after actually inspecting the
+relevant source. A newly added judgment can have today's observation date while
+its measured/effective date is older or unknown. Record official and attributable
+practitioner behavior separately, preserving configuration, contradictions and
+fix history. A published fix does not establish measured recovery.
+
+Benchmark records in [`data/benchmarks.yaml`](data/benchmarks.yaml) retain test
+name/version, metric/unit/direction, exact checkpoint, harness/effort/tools/provider,
+measurement and observation dates, source class and limitations. Keep independent
+quality tests, preference rankings and vendor claims distinct. Missing measurements
+stay unknown. Shared names with incompatible or missing configurations do not
+establish comparable results. High scores do not establish high confidence;
+confidence rationales trace the relevant evidence, corroboration, freshness,
+conditions and contradictions for each judgment.
+
+Validation enforces coverage accounting, dates and references. It cannot prove
+that source investigation was adequate or that a conclusion is true. Publication
+reports must distinguish actual checks from unchanged carry-forward data and list
+unresolved gaps. The coverage ledger does not enable a recurring schedule.
+
 Every record carries an access/verification date. Pricing, availability, and lifecycle are high-volatility; capability evidence ages by task and model change. Suggested review windows are 7 days for price/access/status, 30 days for capability synthesis, and 90 days for unchanged checkpoint licenses. These are review targets, not claims that a scheduler is running.
 
 Material changes include releases, retirements, price or entitlement changes, altered licenses, reproducible regressions, and evidence that changes a recommendation. Tiny leaderboard movement, duplicated announcements, and isolated hype do not require a changelog entry. The initial baseline is not a history of events personally observed as they occurred.

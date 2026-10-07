@@ -44,7 +44,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-3 recorded access route(s); 2 model-specific price record(s).
+6 recorded access route(s); 2 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -82,6 +82,9 @@ Local conditions: Not established in this pass
 
 ## Recorded access routes
 
+- google-ai / Gemini app Nano Banana Pro redo: Conditional consumer/client product; exact account entitlement unverified. Nano Banana Pro redo is listed for AI Plus/Pro/Ultra, not without an AI plan. App quotas differ from API; no free API tier.
+- google-cloud / Gemini Enterprise Agent Platform: officially_documented_not_execution_tested. Not established in this pass
+- google-developer-api / Gemini Developer API / Google AI Studio: officially_documented_not_execution_tested. Not established in this pass
 - google-developer-api / first-party-api: documented route; account eligibility unverified. Not established in this pass
 - google-ai-studio / Google AI Studio: Distribution documented; exact model selector, rollout, regional and subscription entitlement may vary.. Not established in this pass
 - google-consumer / Gemini app / Google AI plans: Distribution documented; exact model selector, rollout, regional and subscription entitlement may vary.. Not established in this pass

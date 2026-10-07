@@ -20,19 +20,28 @@ privacy_data_use:
   and logs. Retention and abuse-monitoring exceptions need model/feature review."}'
 reliability: []
 model_ids:
-- gpt-6-astra
 - claude-fable-5-1
+- claude-haiku-4-5
 - claude-opus-5-5
 - claude-sonnet-5-5
-- claude-haiku-4-5
+- gpt-6-1-sol
+- gpt-6-astra
+- gpt-6-luna
 price_ids:
 - price-providers-api-aws-bedrock-74cdcaf0f543
 access_ids:
-- access-proprietary-access-6-aws-bedrock
+- access-12b530682515e367
+- access-2c50e864f164ad51
+- access-6460aa12ac0a4283
+- access-6546eca3aa6243bd
+- access-7a57b99f53529297
+- access-ac50ceb38fd301c9
+- access-ee24cb05e8602905
 - access-proprietary-access-15-aws-bedrock
 - access-proprietary-access-17-aws-bedrock
 - access-proprietary-access-19-aws-bedrock
 - access-proprietary-access-21-aws-bedrock
+- access-proprietary-access-6-aws-bedrock
 evidence_ids:
 - src-2f9ece653a0f
 - src-6fea481a4699

@@ -66,7 +66,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-2 recorded access route(s); 1 model-specific price record(s).
+4 recorded access route(s); 3 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -100,10 +100,14 @@ Local conditions: Not established in this pass
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
+| google-developer-api | Capped free evaluation / tier / current | input: 0 USD / per 1 million tokens; output: 0 USD / per 1 million tokens; cached_input: 0 USD / per 1 million tokens | Free tier subject to quotas; paid tier not available for this model. Free-tier data can improve Google products. | 2026-10-07 |
+| novita | Standard / current | input: 0.14 USD / per 1 million tokens; output: 0.4 USD / per 1 million tokens | Not established in this pass | 2026-10-07 |
 | google-developer-api | free / current | input: 0 USD / per_1M_tokens; output: 0 USD / per_1M_tokens | Gemma 4 pricing section; paid tier unavailable. Quota limited, data-use terms differ from paid Gemini API. | 2026-10-06 |
 
 ## Recorded access routes
 
+- google-developer-api / hosted free tier api: documented_not_execution_tested. Not established in this pass
+- novita / hosted metered api: documented_not_execution_tested. Not established in this pass
 - google-developer-api / first-party-api: documented route; account eligibility unverified. Not established in this pass
 - google-ai-studio / Google AI Studio: Distribution documented; exact model selector, rollout, regional and subscription entitlement may vary.. Not established in this pass
 

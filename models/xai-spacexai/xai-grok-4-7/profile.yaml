@@ -188,6 +188,77 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-2216eba8e5c983c7
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Can repair a subset of hidden repository defects; use as an assisted audit, not a completeness
+    guarantee.
+  confidence: low
+  supporting_evidence_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  contradictory_evidence_ids: []
+  conditions:
+  - Native Grok CLI; subagent counts varied between runs and regime parity was not fully verifiable.
+  - 'Harness: Grok Build CLI (ACP); effort: xhigh; effort evidence: verified.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  known_failure_modes:
+  - Many planted defects remained unresolved in the measured runs.
+  - Run variance and harness differences prevent fine-grained cross-model ranking.
+  evidence_notes:
+  - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
+    quality.
+  - No matched independent contradiction located; partial successes and misses coexist.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:xai-grok-4-7-debug-bughunt'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate scoped_debugging:xai-grok-4-7-debug-bughunt; exact identity gates and
+      original sources retained.
+- id: judgment-ecc0a660e49ca126
+  scope: direct
+  task_ids:
+  - coding.frontend
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Use relative preference evidence to shortlist this exact configuration for frontend trials; do
+    not infer tests or review strength.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  contradictory_evidence_ids: []
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  known_failure_modes: []
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-xai-grok-4-7'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:frontend-arena-xai-grok-4-7; exact identity gates
+      and original sources retained.
 performance_characteristics:
 - id: judgment-4353bef7f2c69a6b
   scope: performance
@@ -239,11 +310,17 @@ performance_characteristics:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
-access_ids: []
+access_ids:
+- access-143afd43521ef8a6
+- access-3521153690375284
+- access-86bfd2b4f9464334
+- access-91b4b7d1111cd11d
+- access-f1dc4d68cea5394f
+- access-fb40bbbc3a09eb99
 price_ids:
-- price-providers-xai-grok-4-7-xai-39519ba1474e
-- price-providers-xai-grok-4-7-opencode-zen-ad6a54b286af
 - price-providers-xai-grok-4-7-opencode-zen-5e46b5d4903b
+- price-providers-xai-grok-4-7-opencode-zen-ad6a54b286af
+- price-providers-xai-grok-4-7-xai-39519ba1474e
 evidence_ids:
 - src-f1f9e55552d3
 - src-d14fea025626

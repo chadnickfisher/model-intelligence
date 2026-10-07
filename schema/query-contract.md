@@ -20,3 +20,31 @@ documented effective dates within each value separately from observation dates.
 Price-threshold queries must require a billing unit and route. Never compare $/month to $/million tokens. A request for local models must distinguish downloadable weights, license compatibility, required precision/memory/context, and runtime compatibility. Capability queries return evidence-backed judgments, not invented scalar ranks. Unknown is a first-class result, not a negative match.
 
 Reject ambiguous model aliases when materially different variants exist. Preserve separate prices/availability for hosts of the same model. Return evidence disagreements and freshness rather than hiding them in a synthesized recommendation.
+## Additional evidence queries
+
+`data/access-coverage.yaml` records access research status separately from actual
+routes. Missing API or subscription routes return unknown, not false. Explicit
+unavailability requires negative evidence. Route billing, account eligibility,
+included credits and subscription API entitlement remain separate facts.
+
+`data/behavior.yaml` contains dated public behavior findings qualified by model
+version, provider/product, harness/effort, metric, source, confidence and lifecycle.
+Reported, acknowledged and measured changes are distinct; a published fix does
+not establish measured recovery. TTFT, generation throughput and total agent time
+are separate metrics. These records participate in snapshots and revision history.
+
+New capability judgments use research provenance (`origin: research`, batch ID
+and method). The migration provenance variant remains reserved for preserved
+original records. Neither origin implies endorsement or a universal ability score.
+
+`data/benchmarks.yaml` supports benchmark results by model or linked judgment.
+Return test/version, metric/unit/direction, exact checkpoint, setup, dates,
+sources, evidence class and limitations. Missing results remain unknown.
+Comparison must expose incompatible or incomplete setups; shared benchmark names
+do not permit universal scoring or aggregation of quality and preference results.
+
+`data/research-coverage.yaml` accounts for each catalog model across capabilities,
+benchmarks, access/pricing and behavior. Return actual check dates, result,
+source/search references and remaining gaps. Pending checks have null dates;
+source absence is unknown. Accounting validation does not certify research quality.
+Both record types participate in observation history and snapshots.

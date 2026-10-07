@@ -1,0 +1,40 @@
+schema_version: '1.0'
+id: claude-platform-on-aws
+verified_at: '2026-10-07'
+name: Claude Platform on AWS
+roles:
+- cloud-platform
+- access-product
+api_compatibility: []
+access_methods: []
+geographic_availability: []
+rate_limits: []
+caching_batching: []
+privacy_data_use: []
+reliability: []
+model_ids:
+- claude-fable-5-1
+- claude-haiku-4-5
+- claude-opus-5-5
+- claude-sonnet-5-5
+price_ids: []
+access_ids:
+- access-3f77ae5286ee9409
+- access-61b9c27d7c3e7330
+- access-7a46f3d42eb501a3
+- access-a5b96dc5b68f2bb1
+evidence_ids:
+- src-ad9aa6f1b8ed
+- src-50846cd1ff36
+- src-58333316475e
+- src-26606ff14841
+- src-b2ab15dd01eb
+- src-f61234c4ee64
+- src-294ac6d01ed0
+- src-2f9ece653a0f
+- src-f1078602a2b4
+- src-9b374de3e978
+notes:
+- New public access-product identity; policies and account-specific entitlements remain unverified.
+limitations:
+- Do not inherit policies from a parent company or another product.

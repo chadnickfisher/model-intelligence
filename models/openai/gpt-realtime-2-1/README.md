@@ -44,7 +44,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-1 recorded access route(s); 3 model-specific price record(s).
+4 recorded access route(s); 3 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -83,6 +83,9 @@ Local conditions: Not established in this pass
 
 ## Recorded access routes
 
+- azure-foundry / Azure Realtime API: official_route_numeric_price_unverified. Not established in this pass
+- openai / Realtime API: officially_documented_not_execution_tested. Not established in this pass
+- openai / ChatGPT Voice: Conditional consumer/client product; exact account entitlement unverified. No exact GPT-Realtime-2.1 consumer entitlement established; Advanced mode presence is not a model-alias mapping.
 - openai / Realtime API: Available. quota: {"actual_account_remaining": null, "free": "not supported", "tier1": {"RPD": 1000, "RPM": 200, "TPM": 40000}}
 
 ## Sources

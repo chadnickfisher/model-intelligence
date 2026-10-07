@@ -44,7 +44,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-0 recorded access route(s); 2 model-specific price record(s).
+2 recorded access route(s); 2 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -83,6 +83,8 @@ Local conditions: Not established in this pass
 
 ## Recorded access routes
 
+- bfl / BFL API and Playground: documented_not_execution_tested. Not established in this pass
+- together / hosted metered api: provider_listed; billing_unit_conflict_requires_verification. Not established in this pass
 
 ## Sources
 

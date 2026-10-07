@@ -209,12 +209,79 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-db0341f19aa38f54
+  scope: direct
+  task_ids:
+  - coding.frontend
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Use relative preference evidence to shortlist this exact configuration for frontend trials; do
+    not infer tests or review strength.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  contradictory_evidence_ids: []
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  known_failure_modes: []
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-claude-haiku-4-5'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:frontend-arena-claude-haiku-4-5; exact identity
+      gates and original sources retained.
+- id: judgment-19237c319f0876ad
+  scope: direct
+  task_ids:
+  - coding.tests
+  related_task_ids: []
+  assessment: warning
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Generated tests require semantic checks after code changes, even when original-program tests pass.
+  confidence: low
+  supporting_evidence_ids:
+  - src-995284168dc8
+  contradictory_evidence_ids: []
+  conditions:
+  - Two-shot snippet workflow; dated API experiment; not ClaudeCode.
+  - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  known_failure_modes:
+  - Behavioral changes materially reduced test pass rate.
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:tests-haiku'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:tests-haiku; exact identity gates and original
+      sources retained.
 performance_characteristics: []
 access_ids:
+- access-05e43d3e1d4cbb21
+- access-1d220e9817961b88
+- access-24c6a305d07c8ce0
+- access-7a46f3d42eb501a3
+- access-87bd0309c7628c7b
+- access-e4434db50af566b6
+- access-ee24cb05e8602905
+- access-fa30f26749bf50d7
 - access-proprietary-access-20
 - access-proprietary-access-21-aws-bedrock
-- access-proprietary-access-21-google-cloud
 - access-proprietary-access-21-azure-foundry
+- access-proprietary-access-21-google-cloud
 - access-proprietary-access-22-3
 - access-proprietary-access-22-ide-3
 - access-proprietary-access-23-1

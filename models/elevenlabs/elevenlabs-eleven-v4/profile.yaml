@@ -132,7 +132,10 @@ capabilities:
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
-access_ids: []
+access_ids:
+- access-19adfeee35641105
+- access-8c59f3a51ab26c58
+- access-a0b4c7d41e9fe052
 price_ids:
 - price-providers-elevenlabs-eleven-v4-elevenlabs-9a8e2a2f9216
 evidence_ids:

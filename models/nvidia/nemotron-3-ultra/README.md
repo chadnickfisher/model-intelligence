@@ -42,7 +42,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-1 recorded access route(s); 0 model-specific price record(s).
+4 recorded access route(s); 1 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -75,9 +75,13 @@ Local conditions: Batch 1, short/moderate context unless otherwise stated.; Weig
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
+| fireworks | Standard / current | input: 0.6 USD / per 1 million tokens; output: 2.4 USD / per 1 million tokens; cached_input: 0.12 USD / per 1 million tokens | Canonical profile representative is BF16. Variant relation must be explicit, not silent checkpoint substitution. | 2026-10-07 |
 
 ## Recorded access routes
 
+- fireworks / dedicated compute: documented_not_execution_tested. Not established in this pass
+- nvidia / NVIDIA prototype endpoint: documented_not_execution_tested. Not established in this pass
+- fireworks / hosted metered api: documented_not_execution_tested. Not established in this pass
 - hugging-face / weight_distribution: documented route; account eligibility unverified. identity_note: Hugging Face hosts artifacts; the creator is NVIDIA
 
 ## Sources

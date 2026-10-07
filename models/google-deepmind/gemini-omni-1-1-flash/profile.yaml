@@ -189,6 +189,11 @@ capabilities:
     history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
+- access-2b80d225e65ac4a8
+- access-50e60bc9ec344497
+- access-b6c67a65255302a9
+- access-b9ee55d7bde9cadb
+- access-f4890ae6442309c6
 - access-proprietary-41
 - access-proprietary-41-google-ai-studio
 - access-proprietary-41-google-consumer

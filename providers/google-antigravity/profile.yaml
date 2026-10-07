@@ -12,8 +12,8 @@ caching_batching: []
 privacy_data_use: []
 reliability: []
 model_ids:
-- gemini-3-8-flash
 - gemini-3-1-pro-preview
+- gemini-3-8-flash
 price_ids: []
 access_ids:
 - access-proprietary-33-google-antigravity

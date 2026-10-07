@@ -160,7 +160,9 @@ capabilities:
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
-access_ids: []
+access_ids:
+- access-81655ffa1f7f6666
+- access-d806a0c3a1f82a84
 price_ids:
 - price-providers-bfl-flux3-video-bfl-772aa13dfb82
 - price-providers-bfl-flux3-video-bfl-c4a4dfe8876e

@@ -37,7 +37,8 @@ for p in sorted(R.glob('models/*/*/profile.yaml')):
  lines=[f"# {ii['name']}",'',f"**Creator:** {ii['creator']} · **Family:** {ii['family']} · **Status:** {ii['status']}",f"**Verified:** {m['verified_at']} · **Release:** {ii['release_date'] or 'Unknown'}",'', '[Canonical data](profile.yaml) · [Methodology](../../../methodology.md) · [Catalog](../../../data/models.md)','', '## Task judgments','']
  for j in m['capabilities']+m['performance_characteristics']:
   if j['scope']!='performance':caps.append({'model_id':m['id'],'profile':p.relative_to(R).as_posix(),**j})
-  lines += [f"### {j['provenance']['original_task'].replace('-',' ').capitalize()} ({j['confidence']} confidence)",'',j['judgment'],'','Scope: '+j['scope']+' / '+j['assessment']+'. '+j['scope_note'],'','Direct task IDs: '+val(j['task_ids']),'','Related task IDs (navigation only): '+val(j['related_task_ids']),'','Judgment ID: '+j['id'],'','Conditions: '+val(j['conditions']),'','Failure modes / limitations: '+val(j['known_failure_modes']),'','Supporting sources: '+source_links(j['supporting_evidence_ids']),'','Contradictory or limiting sources: '+(source_links(j['contradictory_evidence_ids']) if j['contradictory_evidence_ids'] else 'None separately identified in this pass; this is not evidence of consensus.'),'']
+  label=j['provenance'].get('original_task') or ', '.join(j['task_ids']+j['related_task_ids']) or 'Performance observation'
+  lines += [f"### {label.replace('-',' ').capitalize()} ({j['confidence']} confidence)",'',j['judgment'],'','Scope: '+j['scope']+' / '+j['assessment']+'. '+j['scope_note'],'','Direct task IDs: '+val(j['task_ids']),'','Related task IDs (navigation only): '+val(j['related_task_ids']),'','Judgment ID: '+j['id'],'','Conditions: '+val(j['conditions']),'','Failure modes / limitations: '+val(j['known_failure_modes']),'','Supporting sources: '+source_links(j['supporting_evidence_ids']),'','Contradictory or limiting sources: '+(source_links(j['contradictory_evidence_ids']) if j['contradictory_evidence_ids'] else 'None separately identified in this pass; this is not evidence of consensus.'),'']
   if j['evidence_notes']:lines+=['Evidence notes: '+val(j['evidence_notes']),'']
  lines+=['## Specifications','', '| Field | Recorded value |','|---|---|']
  for k,v in m['specifications'].items():lines.append('| '+k.replace('_',' ')+' | '+esc(v['value'])+' |')
@@ -65,10 +66,12 @@ for name,rows in [('models',models),('providers',providers)]:
   path='../'+d['readme'];lines.append('| ['+esc(d['name'])+']('+path+') | '+(' | '.join(esc(d[k]) for k in ['creator','status','local']) if name=='models' else esc(d['roles']))+' |')
  wr(R/f'data/{name}.md','\n'.join(lines)+'\n')
 counts={'models':len(models),'providers_and_access_products':len(providers),'capability_judgments':len(caps),'performance_judgments':sum(len(rd(p)['performance_characteristics']) for p in R.glob('models/*/*/profile.yaml')),'price_records':len(rd(R/'data/pricing.yaml')['records']),'access_routes':len(rd(R/'data/access.yaml')['records']),'public_sources':len(S),'evidence_observations':len(O)}
-dump(R/'data/coverage.yaml',{'schema_version':'1.0','generated':True,'as_of':'2026-10-06','counts':counts})
-coverage=R/'research/coverage.md';t=coverage.read_text();start=t.find('\n## Baseline inventory')
+inventory_date=max(r['observed_at'] for r in rd(R/'history/revisions.yaml')['records'])
+dump(R/'data/coverage.yaml',{'schema_version':'1.0','generated':True,'as_of':inventory_date,'counts':counts})
+coverage=R/'research/coverage.md';t=coverage.read_text();start=t.find('\n## Recorded inventory')
+if start<0:start=t.find('\n## Baseline inventory')
 if start>=0:t=t[:start]
-t+='\n## Baseline inventory\n\n'+ '\n'.join('- '+k.replace('_',' ')+': '+str(v) for k,v in counts.items())+'\n\nSee [coverage gaps](coverage-gaps.yaml) for source-specific limitations and [contradictions](../evidence/contradictions.yaml) for unresolved differences. Counts indicate coverage, not quality or completeness.\n'
+t+='\n## Recorded inventory\n\nObserved '+inventory_date+'. This is an inventory date, not a fresh verification date for every fact.\n\n'+ '\n'.join('- '+k.replace('_',' ')+': '+str(v) for k,v in counts.items())+'\n\nSee [coverage gaps](coverage-gaps.yaml) for source-specific limitations and [contradictions](../evidence/contradictions.yaml) for unresolved differences. Counts indicate coverage, not quality or completeness.\n'
 wr(coverage,t);print(json.dumps(counts,indent=2))
 
 for name,rows in [('pricing',list(PR.values())),('access',list(AC.values()))]:

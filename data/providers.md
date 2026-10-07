@@ -8,15 +8,19 @@ Generated navigation. Read canonical profiles for evidence, conditions, and date
 | [Alibaba / Qwen](../providers/alibaba-qwen/README.md) | creator |
 | [Anthropic](../providers/anthropic/README.md) | creator; inference-provider |
 | [Amazon Bedrock](../providers/aws-bedrock/README.md) | cloud-platform; inference-provider |
+| [AWS SageMaker](../providers/aws-sagemaker/README.md) | cloud-platform |
 | [Microsoft Foundry / Azure](../providers/azure-foundry/README.md) | cloud-platform; inference-provider |
 | [Black Forest Labs](../providers/bfl/README.md) | creator; inference-provider |
 | [Cerebras Inference](../providers/cerebras/README.md) | inference-provider |
+| [Claude Platform on AWS](../providers/claude-platform-on-aws/README.md) | cloud-platform; access-product |
 | [OpenCode](../providers/client-opencode/README.md) | client |
 | [Cohere](../providers/cohere/README.md) | creator; inference-provider |
 | [DeepSeek](../providers/deepseek/README.md) | creator |
 | [DeepSeek API](../providers/deepseek-api/README.md) | inference-provider |
 | [ElevenLabs](../providers/elevenlabs/README.md) | creator; inference-provider |
+| [Featherless](../providers/featherless/README.md) | inference-provider |
 | [Fireworks AI](../providers/fireworks/README.md) | inference-provider |
+| [Google AI consumer plans](../providers/google-ai/README.md) | access-product |
 | [Google AI Studio](../providers/google-ai-studio/README.md) | access-product |
 | [Google Antigravity](../providers/google-antigravity/README.md) | client |
 | [Gemini CLI](../providers/google-cli/README.md) | client |
@@ -34,6 +38,7 @@ Generated navigation. Read canonical profiles for evidence, conditions, and date
 | [Mistral AI](../providers/mistral-ai/README.md) | creator |
 | [Mistral La Plateforme](../providers/mistral-api/README.md) | inference-provider |
 | [Moonshot AI](../providers/moonshot-ai/README.md) | creator |
+| [Novita](../providers/novita/README.md) | inference-provider |
 | [NVIDIA](../providers/nvidia/README.md) | creator |
 | [OpenAI](../providers/openai/README.md) | creator; inference-provider |
 | [OpenCode Zen](../providers/opencode-zen/README.md) | inference-provider; gateway; access-product |

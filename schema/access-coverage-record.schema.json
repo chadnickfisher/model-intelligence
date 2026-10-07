@@ -1,0 +1,239 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Access research coverage",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "model_id": {
+      "type": "string"
+    },
+    "checked_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "audit_status": {
+      "enum": [
+        "not_researched",
+        "partial",
+        "reviewed"
+      ]
+    },
+    "categories": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "Categories",
+      "type": "object",
+      "properties": {
+        "api": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "title": "Access category",
+          "type": "object",
+          "properties": {
+            "state": {
+              "enum": [
+                "documented",
+                "unknown",
+                "unavailable"
+              ]
+            },
+            "evidence_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^(src|obs)-[a-f0-9]{12}$"
+              },
+              "uniqueItems": true
+            },
+            "notes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "state",
+            "evidence_ids",
+            "notes"
+          ],
+          "additionalProperties": false
+        },
+        "chat": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "title": "Access category",
+          "type": "object",
+          "properties": {
+            "state": {
+              "enum": [
+                "documented",
+                "unknown",
+                "unavailable"
+              ]
+            },
+            "evidence_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^(src|obs)-[a-f0-9]{12}$"
+              },
+              "uniqueItems": true
+            },
+            "notes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "state",
+            "evidence_ids",
+            "notes"
+          ],
+          "additionalProperties": false
+        },
+        "subscription": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "title": "Access category",
+          "type": "object",
+          "properties": {
+            "state": {
+              "enum": [
+                "documented",
+                "unknown",
+                "unavailable"
+              ]
+            },
+            "evidence_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^(src|obs)-[a-f0-9]{12}$"
+              },
+              "uniqueItems": true
+            },
+            "notes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "state",
+            "evidence_ids",
+            "notes"
+          ],
+          "additionalProperties": false
+        },
+        "download": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "title": "Access category",
+          "type": "object",
+          "properties": {
+            "state": {
+              "enum": [
+                "documented",
+                "unknown",
+                "unavailable"
+              ]
+            },
+            "evidence_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^(src|obs)-[a-f0-9]{12}$"
+              },
+              "uniqueItems": true
+            },
+            "notes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "state",
+            "evidence_ids",
+            "notes"
+          ],
+          "additionalProperties": false
+        },
+        "self_hosted": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "title": "Access category",
+          "type": "object",
+          "properties": {
+            "state": {
+              "enum": [
+                "documented",
+                "unknown",
+                "unavailable"
+              ]
+            },
+            "evidence_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^(src|obs)-[a-f0-9]{12}$"
+              },
+              "uniqueItems": true
+            },
+            "notes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "state",
+            "evidence_ids",
+            "notes"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "api",
+        "chat",
+        "subscription",
+        "download",
+        "self_hosted"
+      ],
+      "additionalProperties": false
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(src|obs)-[a-f0-9]{12}$"
+      },
+      "uniqueItems": true
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "schema_version": {
+      "const": "1.0"
+    }
+  },
+  "required": [
+    "id",
+    "model_id",
+    "checked_at",
+    "audit_status",
+    "categories",
+    "evidence_ids",
+    "notes"
+  ],
+  "additionalProperties": false
+}

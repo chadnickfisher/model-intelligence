@@ -88,7 +88,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-0 recorded access route(s); 0 model-specific price record(s).
+3 recorded access route(s); 1 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -121,9 +121,13 @@ Local conditions: Not established in this pass
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
+| cohere | Capped free evaluation / tier / current | input: 0 USD / per 1 million tokens; output: 0 USD / per 1 million tokens | Free capped evaluation; production-key label alone does not remove newer-model restrictions. | 2026-10-07 |
 
 ## Recorded access routes
 
+- azure-foundry / hosted deployment: creator_catalog_lists_partner_model; provider_price_unverified. Not established in this pass
+- cohere / Model Vault: documented_not_execution_tested. Not established in this pass
+- cohere / hosted evaluation api: documented_not_execution_tested. Not established in this pass
 
 ## Sources
 

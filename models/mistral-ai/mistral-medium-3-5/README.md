@@ -27,6 +27,28 @@ Supporting sources: [Mistral Medium 3.5 128B model card](https://huggingface.co/
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
+### Coding.frontend (medium confidence)
+
+Use relative preference evidence to shortlist this exact configuration for frontend trials; do not infer tests or review strength.
+
+Scope: direct / conditional. Task-specific source claim under documented conditions; no transfer to other coding tasks.
+
+Direct task IDs: coding.frontend
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-e66b1386a6d0363d
+
+Conditions: Frontend generation under hosted Arena configurations; Relative user-preference evidence only; production acceptance requires executable behavior, accessibility, security and maintenance checks.; Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider checkpoint hashes.; exact_named_release_effort_retained
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Code Arena WebDev Frontend](https://arena.ai/leaderboard/code/webdev/frontend) · [Arena FAQ](https://arena.ai/faq)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-mistral-medium-3-5; Confidence concerns this bounded claim, not a capability score.
+
 ## Specifications
 
 | Field | Recorded value |
@@ -42,7 +64,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-2 recorded access route(s); 1 model-specific price record(s).
+6 recorded access route(s); 3 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -75,12 +97,18 @@ Local conditions: Batch 1, short/moderate context unless otherwise stated.; Weig
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
-| mistral-api | standard / current | input: 1.5 USD / per_1000000_tokens; output: 7.5 USD / per_1000000_tokens; cached_input: 0.15 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | Default standard tier; regional inference, batch and priority may have different rates. | 2026-10-06 |
+| openrouter | Standard / current | input: 1.5 USD / per 1 million tokens; output: 7.5 USD / per 1 million tokens | Gateway-listed base rate; provider routing/regional variants and credit-purchase fees separate. | 2026-10-07 |
+| mistral-api | Standard / current | input: 1.5 USD / per 1 million tokens; output: 7.5 USD / per 1 million tokens; cached_input: 0.15 USD / per 1 million tokens | Rates are standard. Batch/priority/regional tiers distinct; do not infer a default account tier. | 2026-10-07 |
+| mistral-api | standard / historical | input: 1.5 USD / per_1000000_tokens; output: 7.5 USD / per_1000000_tokens; cached_input: 0.15 USD / per_1000000_tokens; cache_write: unknown USD / per_1000000_tokens | Default standard tier; regional inference, batch and priority may have different rates. | 2026-10-06 |
 
 ## Recorded access routes
 
-- hugging-face / weight_distribution: documented route; account eligibility unverified. identity_note: Hugging Face hosts artifacts; the creator is Mistral AI
+- mistral-ai / Vibe / formerly Le Chat: documented_not_execution_tested. Not established in this pass
+- mistral-api / Mistral plan included API usage: documented_not_execution_tested. Not established in this pass
+- mistral-api / Mistral API Standard: documented_not_execution_tested. Not established in this pass
+- openrouter / gateway metered api: documented_not_execution_tested. Not established in this pass
 - mistral-api / hosted_api: documented route; account eligibility unverified. Not established in this pass
+- hugging-face / weight_distribution: documented route; account eligibility unverified. identity_note: Hugging Face hosts artifacts; the creator is Mistral AI
 
 ## Sources
 

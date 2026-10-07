@@ -28,6 +28,12 @@ records:
   - inference-provider
   profile: providers/aws-bedrock/profile.yaml
   readme: providers/aws-bedrock/README.md
+- id: aws-sagemaker
+  name: AWS SageMaker
+  roles:
+  - cloud-platform
+  profile: providers/aws-sagemaker/profile.yaml
+  readme: providers/aws-sagemaker/README.md
 - id: azure-foundry
   name: Microsoft Foundry / Azure
   roles:
@@ -48,6 +54,13 @@ records:
   - inference-provider
   profile: providers/cerebras/profile.yaml
   readme: providers/cerebras/README.md
+- id: claude-platform-on-aws
+  name: Claude Platform on AWS
+  roles:
+  - cloud-platform
+  - access-product
+  profile: providers/claude-platform-on-aws/profile.yaml
+  readme: providers/claude-platform-on-aws/README.md
 - id: client-opencode
   name: OpenCode
   roles:
@@ -80,12 +93,24 @@ records:
   - inference-provider
   profile: providers/elevenlabs/profile.yaml
   readme: providers/elevenlabs/README.md
+- id: featherless
+  name: Featherless
+  roles:
+  - inference-provider
+  profile: providers/featherless/profile.yaml
+  readme: providers/featherless/README.md
 - id: fireworks
   name: Fireworks AI
   roles:
   - inference-provider
   profile: providers/fireworks/profile.yaml
   readme: providers/fireworks/README.md
+- id: google-ai
+  name: Google AI consumer plans
+  roles:
+  - access-product
+  profile: providers/google-ai/profile.yaml
+  readme: providers/google-ai/README.md
 - id: google-ai-studio
   name: Google AI Studio
   roles:
@@ -191,6 +216,12 @@ records:
   - creator
   profile: providers/moonshot-ai/profile.yaml
   readme: providers/moonshot-ai/README.md
+- id: novita
+  name: Novita
+  roles:
+  - inference-provider
+  profile: providers/novita/profile.yaml
+  readme: providers/novita/README.md
 - id: nvidia
   name: NVIDIA
   roles:

@@ -244,6 +244,140 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-f023edc397fdd671
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Can repair a subset of hidden repository defects; use as an assisted audit, not a completeness
+    guarantee.
+  confidence: low
+  supporting_evidence_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  contradictory_evidence_ids: []
+  conditions:
+  - Single configuration run; no robust ranking implied.
+  - 'Harness: Claude Code; effort: max; effort evidence: first_party.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  known_failure_modes:
+  - Many planted defects remained unresolved in the measured runs.
+  - Run variance and harness differences prevent fine-grained cross-model ranking.
+  evidence_notes:
+  - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
+    quality.
+  - No matched independent contradiction located; partial successes and misses coexist.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:claude-fable-5-1-debug-bughunt'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate scoped_debugging:claude-fable-5-1-debug-bughunt; exact identity gates
+      and original sources retained.
+- id: judgment-a0a1fd6ff5e17879
+  scope: direct
+  task_ids:
+  - coding.refactoring
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Strong benchmark candidate; bound edit scope and retain regression checks.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-b6ffa931564a
+  - src-c7eceee3e7d1
+  contradictory_evidence_ids: []
+  conditions:
+  - 70 tasks, 10 production repositories, 6 languages; Harbor/Modal sandboxes. Resolve requires unchanged tests,
+    zero regressions, and every mandatory Opus 4.5-judged rubric.
+  - Always-on adaptive thinking; effort-controlled operation.
+  known_failure_modes:
+  - Incomplete extraction, unwired callers, stale implementations/artifacts; failure taxonomy is pooled, not
+    per-model.
+  - Official documentation warns it favors whole-file rewrites for small changes, increasing output/time; targeted-edit
+    prompting recommended.
+  evidence_notes:
+  - Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve xHigh as board label.
+    Intro's below 50% statement is stale. Gemini 3.1 Pro 33.81±6.64 is withheld pending preview-ID mapping.
+  - Vendor behavior description supplements E07; it is not an independent refactor success measurement.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:R02'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate architecture_refactoring:R02; exact identity gates and original sources
+      retained.
+- id: judgment-2b7a37781171e7e2
+  scope: direct
+  task_ids:
+  - coding.frontend
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Use relative preference evidence to shortlist this exact configuration for frontend trials; do
+    not infer tests or review strength.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  contradictory_evidence_ids: []
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  known_failure_modes: []
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-claude-fable-5-1'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:frontend-arena-claude-fable-5-1; exact identity
+      gates and original sources retained.
+- id: judgment-cf376fda86010ad5
+  scope: direct
+  task_ids:
+  - coding.review
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Can surface known issues but needs validation; lower tested effort was preferable in this pipeline.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-2f822bc8e7fe
+  - src-3df062ca530b
+  contradictory_evidence_ids: []
+  conditions:
+  - Separate tiny rule checking from open-ended review.
+  - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  known_failure_modes:
+  - Substantial judge-rejected commentary and misses; higher reasoning did not improve aggregate results.
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-fable51'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:review-fable51; exact identity gates and original
+      sources retained.
 performance_characteristics:
 - id: judgment-b82fd561ee151f9f
   scope: performance
@@ -277,10 +411,18 @@ performance_characteristics:
     original_position: 1
     history_path: history/migrations/2026-10-07-capabilities.yaml
 access_ids:
+- access-12b530682515e367
+- access-19e1cfd25b21093c
+- access-31784893c7841e82
+- access-48aed6747f506833
+- access-55890ccbf102275a
+- access-61b9c27d7c3e7330
+- access-e2e0da8fe6a5ebd8
+- access-ffea018bd8f0c00e
 - access-proprietary-access-14
 - access-proprietary-access-15-aws-bedrock
-- access-proprietary-access-15-google-cloud
 - access-proprietary-access-15-azure-foundry
+- access-proprietary-access-15-google-cloud
 - access-proprietary-access-22-0
 - access-proprietary-access-22-ide-0
 - access-proprietary-access-25

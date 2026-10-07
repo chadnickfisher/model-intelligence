@@ -202,10 +202,74 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 1
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-74505ce6779ad313
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: warning
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Long local debugging chats need enough context for the model's own output.
+  confidence: low
+  supporting_evidence_ids:
+  - src-404846cf4d6a
+  contradictory_evidence_ids: []
+  conditions:
+  - TheTom/offlabel,stockllama.cpp,Q4_K_M;12-turn debugging loop at16,384context.
+  known_failure_modes:
+  - Empty content from turn6 as remaining context shrank;32,768context control completed without truncation.
+  evidence_notes:
+  - A configuration-specific continuity warning, not a measured code-correctness score; hardware/quant/template
+    changes require recheck.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:qwen3-8-27b-debug-context-warning'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate scoped_debugging:qwen3-8-27b-debug-context-warning; exact identity gates
+      and original sources retained.
+- id: judgment-5d5b9be0c4200c38
+  scope: direct
+  task_ids:
+  - coding.frontend
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Use relative preference evidence to shortlist this exact configuration for frontend trials; do
+    not infer tests or review strength.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  contradictory_evidence_ids: []
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  known_failure_modes: []
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-qwen3-8-27b'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:frontend-arena-qwen3-8-27b; exact identity gates
+      and original sources retained.
 performance_characteristics: []
 access_ids:
+- access-190700cff4019fb5
+- access-486a36ce89c8916c
 - access-open-qwen3-8-27b-weights
-price_ids: []
+price_ids:
+- price-123887c9e26b3679
+- price-540341b37cb401a6
 evidence_ids:
 - src-f2036f817d22
 - src-ca26bca182f6

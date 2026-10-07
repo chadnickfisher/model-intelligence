@@ -166,12 +166,15 @@ capabilities:
     history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
+- access-23ee420238d5323d
+- access-8e3f38822230e442
+- access-c37295ea98b89acc
 - access-proprietary-access-7
 - access-proprietary-access-8
 price_ids:
 - price-proprietary-gpt-image-2-5-sunburst-openai-0f6ba21d2197
-- price-proprietary-gpt-image-2-5-sunburst-openai-be4252d0ba6c
 - price-proprietary-gpt-image-2-5-sunburst-openai-40fdb9e8e555
+- price-proprietary-gpt-image-2-5-sunburst-openai-be4252d0ba6c
 evidence_ids:
 - src-1a9fcf8d6701
 - src-259c8fd88c0f

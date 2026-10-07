@@ -15,6 +15,9 @@ model_ids:
 - kimi-k3
 price_ids: []
 access_ids:
+- access-c58642f96c2da75d
+- access-d823093af5505d6b
+- access-f8d59a392c3a9e82
 - access-open-kimi-k3-kimi-api
 evidence_ids:
 - src-87b22fdbd4b5

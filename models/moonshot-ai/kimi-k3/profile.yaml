@@ -196,14 +196,175 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-b00034cf95cef727
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Can repair a subset of hidden repository defects; use as an assisted audit, not a completeness
+    guarantee.
+  confidence: low
+  supporting_evidence_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  contradictory_evidence_ids: []
+  conditions:
+  - Route's effort field inert; do not describe this as Kimi maximum effort.
+  - 'Harness: Claude Code / OpenRouter; effort: default; effort evidence: inert_default.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  known_failure_modes:
+  - Many planted defects remained unresolved in the measured runs.
+  - Run variance and harness differences prevent fine-grained cross-model ranking.
+  evidence_notes:
+  - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
+    quality.
+  - No matched independent contradiction located; partial successes and misses coexist.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:kimi-k3-debug-bughunt'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate scoped_debugging:kimi-k3-debug-bughunt; exact identity gates and original
+      sources retained.
+- id: judgment-8402332de3c5429b
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Evidence supports some issue-directed Odin repairs under a fixed, patch-only protocol.
+  confidence: low
+  supporting_evidence_ids:
+  - src-57fee0d3a2b2
+  contradictory_evidence_ids: []
+  conditions:
+  - 168eligible public Odin issues; supplied source scope; one scored patch; no execution feedback to generator.
+  - Exact request budget/API run date not independently audited.
+  known_failure_modes:
+  - A patch applying or reproducing an issue does not ensure complete repair.
+  evidence_notes:
+  - Preprint; check released manifest before stronger confidence. No universal language or harness transfer.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:kimi-k3-debug-odin'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate scoped_debugging:kimi-k3-debug-odin; exact identity gates and original
+      sources retained.
+- id: judgment-31ebdfe3ee9bd0f7
+  scope: direct
+  task_ids:
+  - coding.architecture
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Hosted Kimi K3 produced useful integration/lifecycle design, but unsupported assumptions required
+    factual correction.
+  confidence: low
+  supporting_evidence_ids:
+  - src-9cfe02264a85
+  contradictory_evidence_ids: []
+  conditions:
+  - Two frozen projects, 269 files; OpenCode 1.17.13, max effort, 60 minute limit,65,536 completion cap; read-only,
+    no web/plugins/subagents.
+  known_failure_modes:
+  - Seven unsupported claim groups; incomplete revision authority/merge/storage rules and replay metadata.
+  evidence_notes:
+  - One run, unpublished full score artifacts; serving effects not isolated. qwen3.8-max-preview comparator
+    cannot transfer to qwen3-8-2-4t-a95b weights.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A06'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate architecture_refactoring:A06; exact identity gates and original sources
+      retained.
+- id: judgment-3bf0eb4fca39134c
+  scope: direct
+  task_ids:
+  - coding.frontend
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Use relative preference evidence to shortlist this exact configuration for frontend trials; do
+    not infer tests or review strength.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  contradictory_evidence_ids: []
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  known_failure_modes: []
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-kimi-k3'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:frontend-arena-kimi-k3; exact identity gates and
+      original sources retained.
+- id: judgment-1d36ed42dd3a5b03
+  scope: direct
+  task_ids:
+  - coding.frontend
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Credible one-shot UI candidate, with dated visual-comparison support and current preference evidence.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-ffd197059f58
+  - src-4e6f4ff35504
+  contradictory_evidence_ids: []
+  conditions:
+  - Single HTML prototypes; launch-week endpoint conditions are not current service guarantees.
+  - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  known_failure_modes:
+  - Calendar overlap and checkout polish trailed the tested older comparator.
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-kimi-practitioner'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:frontend-kimi-practitioner; exact identity gates
+      and original sources retained.
 performance_characteristics: []
 access_ids:
-- access-open-kimi-k3-weights
+- access-a7bbb4528bd27230
+- access-c58642f96c2da75d
+- access-d823093af5505d6b
+- access-f8d59a392c3a9e82
 - access-open-kimi-k3-kimi-api
+- access-open-kimi-k3-weights
 price_ids:
-- price-providers-kimi-k3-together-210d7bb86dfc
 - price-providers-kimi-k3-fireworks-86a9ddc05c65
 - price-providers-kimi-k3-fireworks-b8a86cdad69e
+- price-providers-kimi-k3-together-210d7bb86dfc
 evidence_ids:
 - src-74dc5faee60d
 - src-e7129e9021b6

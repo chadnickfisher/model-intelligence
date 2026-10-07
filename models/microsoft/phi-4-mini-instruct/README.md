@@ -42,7 +42,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-1 recorded access route(s); 0 model-specific price record(s).
+3 recorded access route(s); 1 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -74,9 +74,12 @@ Local conditions: Batch 1, short/moderate context unless otherwise stated.; Weig
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
+| featherless | Standard / current | input: 0.32 USD / per 1 million tokens; cached_input: 0.016 USD / per 1 million tokens; output: 1.4 USD / per 1 million tokens | Exact listing serves32K even though descriptive model text says 128K. Developer plan cap cannot increase a model-specific limit. HF router billing not inferred from direct plan. | 2026-10-07 |
 
 ## Recorded access routes
 
+- featherless / Featherless Developer: documented_not_execution_tested. Not established in this pass
+- azure-foundry / Microsoft Foundry model catalog: documented_not_execution_tested. Not established in this pass
 - hugging-face / weight_distribution: documented route; account eligibility unverified. identity_note: Microsoft created the model; Hugging Face hosts artifacts.
 
 ## Sources

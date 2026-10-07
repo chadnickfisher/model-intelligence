@@ -234,12 +234,146 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-e494146b5a163111
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Can repair a subset of hidden repository defects; use as an assisted audit, not a completeness
+    guarantee.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  contradictory_evidence_ids: []
+  conditions:
+  - Claude Code;1M window; zero compactions in this run group.
+  - 'Harness: Claude Code; effort: max; effort evidence: first_party.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  known_failure_modes:
+  - Many planted defects remained unresolved in the measured runs.
+  - Run variance and harness differences prevent fine-grained cross-model ranking.
+  evidence_notes:
+  - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
+    quality.
+  - No matched independent contradiction located; partial successes and misses coexist.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: scoped_debugging:claude-opus-5-5-debug-bughunt'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate scoped_debugging:claude-opus-5-5-debug-bughunt; exact identity gates
+      and original sources retained.
+- id: judgment-f5926189f36cd899
+  scope: direct
+  task_ids:
+  - coding.architecture
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Candidate for cross-service design work; support remains vendor-curated practitioner evidence.
+  confidence: low
+  supporting_evidence_ids:
+  - src-0dd3bed5c7dd
+  contradictory_evidence_ids: []
+  conditions:
+  - Vendor-curated early-access account; effort and acceptance checks unspecified.
+  known_failure_modes:
+  - No concrete failure case disclosed.
+  evidence_notes:
+  - One selected testimonial. Anthropic's HAProxy C-to-Rust migration report is adjacent migration evidence,
+    not a same-language behavior-preserving refactoring benchmark.
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: architecture_refactoring:A03'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate architecture_refactoring:A03; exact identity gates and original sources
+      retained.
+- id: judgment-cd273215e58beb5c
+  scope: direct
+  task_ids:
+  - coding.frontend
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Use relative preference evidence to shortlist this exact configuration for frontend trials; do
+    not infer tests or review strength.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  contradictory_evidence_ids: []
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  known_failure_modes: []
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:frontend-arena-claude-opus-5-5'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:frontend-arena-claude-opus-5-5; exact identity
+      gates and original sources retained.
+- id: judgment-7992397f38f55c00
+  scope: direct
+  task_ids:
+  - coding.review
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Useful validated-review candidate; more effort changes recall and noise rather than improving both.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-a0149a24853a
+  contradictory_evidence_ids: []
+  conditions:
+  - Use the recorded CodeRabbit pipeline mixes; verify on representative PRs.
+  - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  known_failure_modes:
+  - Known bugs missed; many actionable comments did not pass the judge.
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-opus55'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:review-opus55; exact identity gates and original
+      sources retained.
 performance_characteristics: []
 access_ids:
+- access-51e50c52598dd165
+- access-568f8734df706003
+- access-6546eca3aa6243bd
+- access-80726a4797297727
+- access-88060cd75ad9c4fd
+- access-a5b96dc5b68f2bb1
+- access-e54a01965f6e1cf1
+- access-efe64fb09d83013c
 - access-proprietary-access-16
 - access-proprietary-access-17-aws-bedrock
-- access-proprietary-access-17-google-cloud
 - access-proprietary-access-17-azure-foundry
+- access-proprietary-access-17-google-cloud
 - access-proprietary-access-22-1
 - access-proprietary-access-22-ide-1
 - access-proprietary-access-24

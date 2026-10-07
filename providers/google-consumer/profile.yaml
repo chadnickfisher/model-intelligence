@@ -12,19 +12,19 @@ caching_batching: []
 privacy_data_use: []
 reliability: []
 model_ids:
-- gemini-3-8-flash
 - gemini-3-1-pro-preview
 - gemini-3-5-flash-lite
-- gemini-3-pro-image
-- lyria-3-5
+- gemini-3-8-flash
 - gemini-3-8-live
+- gemini-3-pro-image
 - gemini-omni-1-1-flash
+- lyria-3-5
 price_ids:
+- price-proprietary-offer-google-consumer-1bd9755b027c
 - price-proprietary-offer-google-consumer-41e68d0d90dc
+- price-proprietary-offer-google-consumer-602758fc425c
 - price-proprietary-offer-google-consumer-a63d0d5d6d40
 - price-proprietary-offer-google-consumer-caf526dc5118
-- price-proprietary-offer-google-consumer-1bd9755b027c
-- price-proprietary-offer-google-consumer-602758fc425c
 access_ids:
 - access-proprietary-33-google-consumer
 - access-proprietary-34-google-consumer

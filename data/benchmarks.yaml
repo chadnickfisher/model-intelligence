@@ -1,0 +1,2568 @@
+schema_version: '1.0'
+records:
+- schema_version: '1.0'
+  id: benchmark-667d0f6926ce8d23
+  model_id: gpt-6-1-sol
+  judgment_ids:
+  - judgment-98fd19b09613391e
+  benchmark:
+    name: Explicit Edit
+    version: v2
+    metric: model-route score (75% initial / 25% final exactness)
+    unit: percent
+    direction: higher
+  value: 100
+  model_version: gpt-6.1-sol
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-a28910d24d02
+  - src-7224ceac93af
+  - src-0c5ee375aae3
+  conditions:
+  - 'Provider route: openai-codex; 3 contributing harness families; detailed effort mix not extracted.'
+  - API/checkpoint identity follows source's exact named model; underlying quantization not supplied.
+  - 226 tasks; shell/native editing tools allowed.
+  - Score combines 75% initial exactness and 25% final exactness after permitted recovery.
+  - Record describes a model route with mixed harnesses; do not interpret as pass@1 or a causal model ranking.
+  limitations:
+  - Model-route aggregates combine different harness configurations. Mechanical bytes-only tasks; not semantic
+    correctness. Data inspected on access date; exact server checkpoint/quantization may be undisclosed.
+  - First and final exactness differ; verifier feedback is adaptive, not independent retry. Methodology and
+    dataset views can change.
+  - 226 deterministic mechanical edits; no diagnosis or program understanding required.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"harness_families": 3, "metric": "published_model_route_score_v2_percent", "not_pass_at_1": true, "observations":
+    678, "score": 100, "tasks": 226}'
+- schema_version: '1.0'
+  id: benchmark-11ccf939523debdb
+  model_id: gemini-3-8-flash
+  judgment_ids:
+  - judgment-d060233bb88428f3
+  benchmark:
+    name: Explicit Edit
+    version: v2
+    metric: model-route score (75% initial / 25% final exactness)
+    unit: percent
+    direction: higher
+  value: 99.7
+  model_version: gemini-3.8-flash
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-a28910d24d02
+  - src-7224ceac93af
+  - src-0c5ee375aae3
+  conditions:
+  - 'Provider route: gemini; 1 contributing harness families; detailed effort mix not extracted.'
+  - API/checkpoint identity follows source's exact named model; underlying quantization not supplied.
+  - 226 tasks; shell/native editing tools allowed.
+  - Score combines 75% initial exactness and 25% final exactness after permitted recovery.
+  - Record describes a model route with mixed harnesses; do not interpret as pass@1 or a causal model ranking.
+  limitations:
+  - Model-route aggregates combine different harness configurations. Mechanical bytes-only tasks; not semantic
+    correctness. Data inspected on access date; exact server checkpoint/quantization may be undisclosed.
+  - First and final exactness differ; verifier feedback is adaptive, not independent retry. Methodology and
+    dataset views can change.
+  - 226 deterministic mechanical edits; no diagnosis or program understanding required.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"harness_families": 1, "metric": "published_model_route_score_v2_percent", "not_pass_at_1": true, "observations":
+    226, "score": 99.7, "tasks": 226}'
+- schema_version: '1.0'
+  id: benchmark-54412c9585d6a80d
+  model_id: deepseek-v4-1-flash
+  judgment_ids:
+  - judgment-9f7fdd9b0567b2b5
+  benchmark:
+    name: Explicit Edit
+    version: v2
+    metric: model-route score (75% initial / 25% final exactness)
+    unit: percent
+    direction: higher
+  value: 99.4
+  model_version: deepseek-v4.1-flash
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-a28910d24d02
+  - src-7224ceac93af
+  - src-0c5ee375aae3
+  conditions:
+  - 'Provider route: deepseek; 11 contributing harness families; detailed effort mix not extracted.'
+  - API/checkpoint identity follows source's exact named model; underlying quantization not supplied.
+  - 226 tasks; shell/native editing tools allowed.
+  - Score combines 75% initial exactness and 25% final exactness after permitted recovery.
+  - Record describes a model route with mixed harnesses; do not interpret as pass@1 or a causal model ranking.
+  limitations:
+  - Model-route aggregates combine different harness configurations. Mechanical bytes-only tasks; not semantic
+    correctness. Data inspected on access date; exact server checkpoint/quantization may be undisclosed.
+  - First and final exactness differ; verifier feedback is adaptive, not independent retry. Methodology and
+    dataset views can change.
+  - 226 deterministic mechanical edits; no diagnosis or program understanding required.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"harness_families": 11, "metric": "published_model_route_score_v2_percent", "not_pass_at_1": true, "observations":
+    3166, "score": 99.4, "tasks": 226}'
+- schema_version: '1.0'
+  id: benchmark-e60a8382d0525d54
+  model_id: glm-5-3-flash
+  judgment_ids:
+  - judgment-35e494a9a2bcd94d
+  benchmark:
+    name: Explicit Edit
+    version: v2
+    metric: model-route score (75% initial / 25% final exactness)
+    unit: percent
+    direction: higher
+  value: 96
+  model_version: glm-5.3-flash
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-a28910d24d02
+  - src-7224ceac93af
+  - src-0c5ee375aae3
+  conditions:
+  - 'Provider route: zai; 8 contributing harness families; detailed effort mix not extracted.'
+  - API/checkpoint identity follows source's exact named model; underlying quantization not supplied.
+  - 226 tasks; shell/native editing tools allowed.
+  - Score combines 75% initial exactness and 25% final exactness after permitted recovery.
+  - Record describes a model route with mixed harnesses; do not interpret as pass@1 or a causal model ranking.
+  limitations:
+  - Model-route aggregates combine different harness configurations. Mechanical bytes-only tasks; not semantic
+    correctness. Data inspected on access date; exact server checkpoint/quantization may be undisclosed.
+  - First and final exactness differ; verifier feedback is adaptive, not independent retry. Methodology and
+    dataset views can change.
+  - 226 deterministic mechanical edits; no diagnosis or program understanding required.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"harness_families": 8, "metric": "published_model_route_score_v2_percent", "not_pass_at_1": true, "observations":
+    1808, "score": 96, "tasks": 226}'
+- schema_version: '1.0'
+  id: benchmark-2dcccbf113000460
+  model_id: minimax-m3
+  judgment_ids:
+  - judgment-93c890d81197f7fc
+  benchmark:
+    name: Explicit Edit
+    version: v2
+    metric: model-route score (75% initial / 25% final exactness)
+    unit: percent
+    direction: higher
+  value: 90.3
+  model_version: minimax-m3
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-a28910d24d02
+  - src-7224ceac93af
+  - src-0c5ee375aae3
+  conditions:
+  - 'Provider route: opencode-go; 3 contributing harness families; detailed effort mix not extracted.'
+  - API/checkpoint identity follows source's exact named model; underlying quantization not supplied.
+  - 226 tasks; shell/native editing tools allowed.
+  - Score combines 75% initial exactness and 25% final exactness after permitted recovery.
+  - Record describes a model route with mixed harnesses; do not interpret as pass@1 or a causal model ranking.
+  limitations:
+  - Model-route aggregates combine different harness configurations. Mechanical bytes-only tasks; not semantic
+    correctness. Data inspected on access date; exact server checkpoint/quantization may be undisclosed.
+  - First and final exactness differ; verifier feedback is adaptive, not independent retry. Methodology and
+    dataset views can change.
+  - 226 deterministic mechanical edits; no diagnosis or program understanding required.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"harness_families": 3, "metric": "published_model_route_score_v2_percent", "not_pass_at_1": true, "observations":
+    678, "score": 90.3, "tasks": 226}'
+- schema_version: '1.0'
+  id: benchmark-bc89bafda11c0fc2
+  model_id: gpt-6-luna
+  judgment_ids:
+  - judgment-4793164eb12deab7
+  benchmark:
+    name: Explicit Edit
+    version: v2
+    metric: model-route score (75% initial / 25% final exactness)
+    unit: percent
+    direction: higher
+  value: 93
+  model_version: gpt-6-luna
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-a28910d24d02
+  - src-7224ceac93af
+  - src-0c5ee375aae3
+  conditions:
+  - 'Provider route: opencode-go; 1 contributing harness families; detailed effort mix not extracted.'
+  - API/checkpoint identity follows source's exact named model; underlying quantization not supplied.
+  - 226 tasks; shell/native editing tools allowed.
+  - Score combines 75% initial exactness and 25% final exactness after permitted recovery.
+  - Record describes a model route with mixed harnesses; do not interpret as pass@1 or a causal model ranking.
+  limitations:
+  - Model-route aggregates combine different harness configurations. Mechanical bytes-only tasks; not semantic
+    correctness. Data inspected on access date; exact server checkpoint/quantization may be undisclosed.
+  - First and final exactness differ; verifier feedback is adaptive, not independent retry. Methodology and
+    dataset views can change.
+  - 226 deterministic mechanical edits; no diagnosis or program understanding required.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"harness_families": 1, "metric": "published_model_route_score_v2_percent", "not_pass_at_1": true, "observations":
+    226, "score": 93, "tasks": 226}'
+- schema_version: '1.0'
+  id: benchmark-899e981e916002fc
+  model_id: claude-opus-5-5
+  judgment_ids:
+  - judgment-cd273215e58beb5c
+  benchmark:
+    name: Arena Frontend
+    version: null
+    metric: preference rating
+    unit: Arena rating
+    direction: higher
+  value: 1859
+  model_version: claude-opus-5.5-max
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"model_id": "claude-opus-5-5", "preliminary": false, "rank_spread": "1–1", "reported_model": "claude-opus-5.5-max",
+    "score": 1859, "score_interval_plus_minus": 19}'
+- schema_version: '1.0'
+  id: benchmark-baf6e2f186535f58
+  model_id: gpt-6-astra
+  judgment_ids:
+  - judgment-6d1cd0c0da04925a
+  benchmark:
+    name: Arena Frontend
+    version: null
+    metric: preference rating
+    unit: Arena rating
+    direction: higher
+  value: 1810
+  model_version: gpt-6-astra-max
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"model_id": "gpt-6-astra", "preliminary": false, "rank_spread": "2–3", "reported_model": "gpt-6-astra-max",
+    "score": 1810, "score_interval_plus_minus": 13}'
+- schema_version: '1.0'
+  id: benchmark-a492335db6daf5d2
+  model_id: claude-sonnet-5-5
+  judgment_ids:
+  - judgment-6696d66817b015d5
+  benchmark:
+    name: Arena Frontend
+    version: null
+    metric: preference rating
+    unit: Arena rating
+    direction: higher
+  value: 1810
+  model_version: claude-sonnet-5.5-xhigh
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"model_id": "claude-sonnet-5-5", "preliminary": false, "rank_spread": "2–3", "reported_model": "claude-sonnet-5.5-xhigh",
+    "score": 1810, "score_interval_plus_minus": 18}'
+- schema_version: '1.0'
+  id: benchmark-e18712235a38da5c
+  model_id: claude-fable-5-1
+  judgment_ids:
+  - judgment-2b7a37781171e7e2
+  benchmark:
+    name: Arena Frontend
+    version: null
+    metric: preference rating
+    unit: Arena rating
+    direction: higher
+  value: 1779
+  model_version: claude-fable-5.1-max
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"model_id": "claude-fable-5-1", "preliminary": false, "rank_spread": "4–5", "reported_model": "claude-fable-5.1-max",
+    "score": 1779, "score_interval_plus_minus": 11}'
+- schema_version: '1.0'
+  id: benchmark-c5c424b3a73c6a5c
+  model_id: gpt-6-1-sol
+  judgment_ids:
+  - judgment-8573c4b7da9f04dd
+  benchmark:
+    name: Arena Frontend
+    version: null
+    metric: preference rating
+    unit: Arena rating
+    direction: higher
+  value: 1774
+  model_version: gpt-6.1-sol-max
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"model_id": "gpt-6-1-sol", "preliminary": false, "rank_spread": "4–6", "reported_model": "gpt-6.1-sol-max",
+    "score": 1774, "score_interval_plus_minus": 18}'
+- schema_version: '1.0'
+  id: benchmark-09046320bdbf604d
+  model_id: gemini4argon
+  judgment_ids:
+  - judgment-0134f7d02c624e6b
+  benchmark:
+    name: Arena Frontend
+    version: null
+    metric: preference rating
+    unit: Arena rating
+    direction: higher
+  value: 1687
+  model_version: gemini-4-argon-high
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"model_id": "gemini4argon", "preliminary": true, "rank_spread": "8–15", "reported_model": "gemini-4-argon-high",
+    "score": 1687, "score_interval_plus_minus": 18}'
+- schema_version: '1.0'
+  id: benchmark-e2ca7eaa7632103d
+  model_id: kimi-k3
+  judgment_ids:
+  - judgment-3bf0eb4fca39134c
+  benchmark:
+    name: Arena Frontend
+    version: null
+    metric: preference rating
+    unit: Arena rating
+    direction: higher
+  value: 1670
+  model_version: kimi-k3-max
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"model_id": "kimi-k3", "preliminary": false, "rank_spread": "9–16", "reported_model": "kimi-k3-max",
+    "score": 1670, "score_interval_plus_minus": 7}'
+- schema_version: '1.0'
+  id: benchmark-9452545fa1dffecc
+  model_id: xai-grok-4-7
+  judgment_ids:
+  - judgment-ecc0a660e49ca126
+  benchmark:
+    name: Arena Frontend
+    version: null
+    metric: preference rating
+    unit: Arena rating
+    direction: higher
+  value: 1656
+  model_version: grok-4.7-xhigh
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"model_id": "xai-grok-4-7", "preliminary": false, "rank_spread": "11–22", "reported_model": "grok-4.7-xhigh",
+    "score": 1656, "score_interval_plus_minus": 12}'
+- schema_version: '1.0'
+  id: benchmark-cf0a52d31d015ff5
+  model_id: qwen3-8-flash-next
+  judgment_ids:
+  - judgment-2e3d7688d669fd57
+  benchmark:
+    name: Arena Frontend
+    version: null
+    metric: preference rating
+    unit: Arena rating
+    direction: higher
+  value: 1649
+  model_version: qwen3.8-flash-next
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"model_id": "qwen3-8-flash-next", "preliminary": true, "rank_spread": "15–23", "reported_model": "qwen3.8-flash-next",
+    "score": 1649, "score_interval_plus_minus": 10}'
+- schema_version: '1.0'
+  id: benchmark-5181b6684a7a2346
+  model_id: glm-5-3
+  judgment_ids:
+  - judgment-e6af39a05dc0d081
+  benchmark:
+    name: Arena Frontend
+    version: null
+    metric: preference rating
+    unit: Arena rating
+    direction: higher
+  value: 1637
+  model_version: glm-5.3-max
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"model_id": "glm-5-3", "preliminary": false, "rank_spread": "15–26", "reported_model": "glm-5.3-max",
+    "score": 1637, "score_interval_plus_minus": 9}'
+- schema_version: '1.0'
+  id: benchmark-ca1672484106cecb
+  model_id: deepseek-v4-1-flash
+  judgment_ids:
+  - judgment-11ff03d00788ced6
+  benchmark:
+    name: Arena Frontend
+    version: null
+    metric: preference rating
+    unit: Arena rating
+    direction: higher
+  value: 1630
+  model_version: deepseek-v4.1-flash-max
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"model_id": "deepseek-v4-1-flash", "preliminary": false, "rank_spread": "17–27", "reported_model": "deepseek-v4.1-flash-max",
+    "score": 1630, "score_interval_plus_minus": 12}'
+- schema_version: '1.0'
+  id: benchmark-e63bdc1ec378635c
+  model_id: glm-5-3-flash
+  judgment_ids:
+  - judgment-1d57d36d40d69678
+  benchmark:
+    name: Arena Frontend
+    version: null
+    metric: preference rating
+    unit: Arena rating
+    direction: higher
+  value: 1625
+  model_version: glm-5.3-flash
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"model_id": "glm-5-3-flash", "preliminary": false, "rank_spread": "19–27", "reported_model": "glm-5.3-flash",
+    "score": 1625, "score_interval_plus_minus": 8}'
+- schema_version: '1.0'
+  id: benchmark-48154abe3cc656c9
+  model_id: qwen3-8-27b
+  judgment_ids:
+  - judgment-5d5b9be0c4200c38
+  benchmark:
+    name: Arena Frontend
+    version: null
+    metric: preference rating
+    unit: Arena rating
+    direction: higher
+  value: 1598
+  model_version: qwen3.8-27b
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"model_id": "qwen3-8-27b", "preliminary": false, "rank_spread": "27–33", "reported_model": "qwen3.8-27b",
+    "score": 1598, "score_interval_plus_minus": 7}'
+- schema_version: '1.0'
+  id: benchmark-b47109d468e6580b
+  model_id: gpt-6-luna
+  judgment_ids:
+  - judgment-db92b976581cf0cf
+  benchmark:
+    name: Arena Frontend
+    version: null
+    metric: preference rating
+    unit: Arena rating
+    direction: higher
+  value: 1590
+  model_version: gpt-6-luna-max
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"model_id": "gpt-6-luna", "preliminary": false, "rank_spread": "28–34", "reported_model": "gpt-6-luna-max",
+    "score": 1590, "score_interval_plus_minus": 8}'
+- schema_version: '1.0'
+  id: benchmark-5a456453dd3862b0
+  model_id: deepseek-v4-pro-0813
+  judgment_ids:
+  - judgment-ebf0fffcc7897fe9
+  benchmark:
+    name: Arena Frontend
+    version: null
+    metric: preference rating
+    unit: Arena rating
+    direction: higher
+  value: 1589
+  model_version: deepseek-v4-pro-high-20260813
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"model_id": "deepseek-v4-pro-0813", "preliminary": false, "rank_spread": "28–34", "reported_model": "deepseek-v4-pro-high-20260813",
+    "score": 1589, "score_interval_plus_minus": 11}'
+- schema_version: '1.0'
+  id: benchmark-4095300ebd1b5550
+  model_id: gemini-3-8-flash
+  judgment_ids:
+  - judgment-751724bc0907712b
+  benchmark:
+    name: Arena Frontend
+    version: null
+    metric: preference rating
+    unit: Arena rating
+    direction: higher
+  value: 1588
+  model_version: gemini-3.8-flash-high
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"model_id": "gemini-3-8-flash", "preliminary": true, "rank_spread": "28–34", "reported_model": "gemini-3.8-flash-high",
+    "score": 1588, "score_interval_plus_minus": 9}'
+- schema_version: '1.0'
+  id: benchmark-96831fd8285f9a02
+  model_id: minimax-m3
+  judgment_ids:
+  - judgment-a2fa0a68ce24b775
+  benchmark:
+    name: Arena Frontend
+    version: null
+    metric: preference rating
+    unit: Arena rating
+    direction: higher
+  value: 1479
+  model_version: minimax-m3
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"model_id": "minimax-m3", "preliminary": false, "rank_spread": "58–67", "reported_model": "minimax-m3",
+    "score": 1479, "score_interval_plus_minus": 6}'
+- schema_version: '1.0'
+  id: benchmark-6d82f11335b22e00
+  model_id: gemini-3-1-pro-preview
+  judgment_ids:
+  - judgment-56301dccb85b54ac
+  benchmark:
+    name: Arena Frontend
+    version: null
+    metric: preference rating
+    unit: Arena rating
+    direction: higher
+  value: 1451
+  model_version: gemini-3.1-pro-preview
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"model_id": "gemini-3-1-pro-preview", "preliminary": false, "rank_spread": "66–76", "reported_model":
+    "gemini-3.1-pro-preview", "score": 1451, "score_interval_plus_minus": 5}'
+- schema_version: '1.0'
+  id: benchmark-694fb08a5d9cbb91
+  model_id: gemini-3-5-flash-lite
+  judgment_ids:
+  - judgment-201d3355c8d34484
+  benchmark:
+    name: Arena Frontend
+    version: null
+    metric: preference rating
+    unit: Arena rating
+    direction: higher
+  value: 1442
+  model_version: gemini-3.5-flash-lite
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"model_id": "gemini-3-5-flash-lite", "preliminary": false, "rank_spread": "58–96", "reported_model":
+    "gemini-3.5-flash-lite", "score": 1442, "score_interval_plus_minus": 49}'
+- schema_version: '1.0'
+  id: benchmark-593cf848a4905e28
+  model_id: claude-haiku-4-5
+  judgment_ids:
+  - judgment-db0341f19aa38f54
+  benchmark:
+    name: Arena Frontend
+    version: null
+    metric: preference rating
+    unit: Arena rating
+    direction: higher
+  value: 1326
+  model_version: claude-haiku-4-5-20251001
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"model_id": "claude-haiku-4-5", "preliminary": false, "rank_spread": "113–119", "reported_model": "claude-haiku-4-5-20251001",
+    "score": 1326, "score_interval_plus_minus": 5}'
+- schema_version: '1.0'
+  id: benchmark-238395f1e7c9ff1d
+  model_id: mistral-medium-3-5
+  judgment_ids:
+  - judgment-e66b1386a6d0363d
+  benchmark:
+    name: Arena Frontend
+    version: null
+    metric: preference rating
+    unit: Arena rating
+    direction: higher
+  value: 1265
+  model_version: mistral-medium-3.5
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"model_id": "mistral-medium-3-5", "preliminary": false, "rank_spread": "122–133", "reported_model": "mistral-medium-3.5",
+    "score": 1265, "score_interval_plus_minus": 15}'
+- schema_version: '1.0'
+  id: benchmark-ebc9b96f23936d99
+  model_id: mistral-large-3
+  judgment_ids:
+  - judgment-70b7c0b4e8adbe58
+  benchmark:
+    name: Arena Frontend
+    version: null
+    metric: preference rating
+    unit: Arena rating
+    direction: higher
+  value: 1229
+  model_version: mistral-large-3
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  conditions:
+  - Frontend generation under hosted Arena configurations
+  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
+    security and maintenance checks.
+  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
+    checkpoint hashes.
+  - exact_named_release_effort_retained
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  evidence_notes:
+  - '{"model_id": "mistral-large-3", "preliminary": false, "rank_spread": "125–137", "reported_model": "mistral-large-3",
+    "score": 1229, "score_interval_plus_minus": 25}'
+- schema_version: '1.0'
+  id: benchmark-349d571fb75c9f5b
+  model_id: claude-sonnet-5-5
+  judgment_ids:
+  - judgment-cb9aeb423bbdc834
+  benchmark:
+    name: Explicit Edit
+    version: v2
+    metric: max effort model-route score
+    unit: percent
+    direction: higher
+  value: 46.2
+  model_version: null
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-4e3ca8a95d36
+  conditions:
+  - Claude Code FrontierCode1.1; vendor comparison at max versus xhigh.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"max_score": 46.2, "xhigh_score": 52.1}'
+- schema_version: '1.0'
+  id: benchmark-c295246b6af2937c
+  model_id: claude-sonnet-5-5
+  judgment_ids:
+  - judgment-cb9aeb423bbdc834
+  benchmark:
+    name: Explicit Edit
+    version: v2
+    metric: xhigh effort model-route score
+    unit: percent
+    direction: higher
+  value: 52.1
+  model_version: null
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-4e3ca8a95d36
+  conditions:
+  - Claude Code FrontierCode1.1; vendor comparison at max versus xhigh.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"max_score": 46.2, "xhigh_score": 52.1}'
+- schema_version: '1.0'
+  id: benchmark-ac7d2d91379a30b6
+  model_id: claude-sonnet-5-5
+  judgment_ids:
+  - judgment-fb34061351983c89
+  benchmark:
+    name: Bug Hunt Bench
+    version: 1217192a6d04e89da3f6106ca3a304d2734882eb
+    metric: planted defects fixed
+    unit: mean planted defects fixed out of 105
+    direction: higher
+  value: 51.3
+  model_version: Sonnet 5.5 (max effort) - mean of 3
+  harness: null
+  effort: max
+  provider_id: null
+  tools: null
+  measured_at: '2026-09-29'
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  conditions:
+  - claude-sonnet-5-5[1m]; Claude Code2.1.283; compaction occurred.
+  - 'Harness: Claude Code; effort: max; effort evidence: first_party.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"fixed_of_105": 51.3, "individual_scores": [57, 54, 43], "measured_at": "2026-09-29", "n_runs": 3, "repo1_fixed_of45":
+    22.7, "repo2_fixed_of60": 28.7, "row_id": "Sonnet 5.5 (max effort) - mean of 3"}'
+- schema_version: '1.0'
+  id: benchmark-a13cae876fca7ebf
+  model_id: gpt-6-astra
+  judgment_ids:
+  - judgment-50e193772d714514
+  benchmark:
+    name: Bug Hunt Bench
+    version: 1217192a6d04e89da3f6106ca3a304d2734882eb
+    metric: planted defects fixed
+    unit: mean planted defects fixed out of 105
+    direction: higher
+  value: 45
+  model_version: GPT-6 Astra (max effort) - mean of 3
+  harness: null
+  effort: max
+  provider_id: null
+  tools: null
+  measured_at: '2026-09-14'
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  conditions:
+  - Codex ChatGPT route; documented effort, not a separately measured effort magnitude.
+  - 'Harness: Codex CLI; effort: max; effort evidence: first_party.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"fixed_of_105": 45, "individual_scores": [48, 40, 47], "measured_at": "2026-09-14", "n_runs": 3, "repo1_fixed_of45":
+    22, "repo2_fixed_of60": 23, "row_id": "GPT-6 Astra (max effort) - mean of 3"}'
+- schema_version: '1.0'
+  id: benchmark-477f76331635c3d2
+  model_id: gpt-6-1-sol
+  judgment_ids:
+  - judgment-c6d6c0d605aaa494
+  benchmark:
+    name: Bug Hunt Bench
+    version: 1217192a6d04e89da3f6106ca3a304d2734882eb
+    metric: planted defects fixed
+    unit: mean planted defects fixed out of 105
+    direction: higher
+  value: 44.3
+  model_version: GPT-6.1 Sol (max effort) - mean of 3
+  harness: null
+  effort: max
+  provider_id: null
+  tools: null
+  measured_at: '2026-09-30'
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  conditions:
+  - Codex0.159.0; max is not the account's highest setting (ultra also existed).
+  - 'Harness: Codex CLI; effort: max; effort evidence: first_party.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"fixed_of_105": 44.3, "individual_scores": [44, 42, 47], "measured_at": "2026-09-30", "n_runs": 3, "repo1_fixed_of45":
+    22.3, "repo2_fixed_of60": 22, "row_id": "GPT-6.1 Sol (max effort) - mean of 3"}'
+- schema_version: '1.0'
+  id: benchmark-62a20a5dbc74fc59
+  model_id: claude-fable-5-1
+  judgment_ids:
+  - judgment-f023edc397fdd671
+  benchmark:
+    name: Bug Hunt Bench
+    version: 1217192a6d04e89da3f6106ca3a304d2734882eb
+    metric: planted defects fixed
+    unit: mean planted defects fixed out of 105
+    direction: higher
+  value: 43
+  model_version: Fable 5.1 (max effort)
+  harness: null
+  effort: max
+  provider_id: null
+  tools: null
+  measured_at: '2026-09-01'
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  conditions:
+  - Single configuration run; no robust ranking implied.
+  - 'Harness: Claude Code; effort: max; effort evidence: first_party.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"fixed_of_105": 43, "individual_scores": null, "measured_at": "2026-09-01", "n_runs": 1, "repo1_fixed_of45":
+    19, "repo2_fixed_of60": 24, "row_id": "Fable 5.1 (max effort)"}'
+- schema_version: '1.0'
+  id: benchmark-f80fe80eb23c9afa
+  model_id: claude-opus-5-5
+  judgment_ids:
+  - judgment-e494146b5a163111
+  benchmark:
+    name: Bug Hunt Bench
+    version: 1217192a6d04e89da3f6106ca3a304d2734882eb
+    metric: planted defects fixed
+    unit: mean planted defects fixed out of 105
+    direction: higher
+  value: 41.7
+  model_version: Opus 5.5 (max effort) - mean of 3
+  harness: null
+  effort: max
+  provider_id: null
+  tools: null
+  measured_at: '2026-09-23'
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  conditions:
+  - Claude Code;1M window; zero compactions in this run group.
+  - 'Harness: Claude Code; effort: max; effort evidence: first_party.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"fixed_of_105": 41.7, "individual_scores": [43, 39, 43], "measured_at": "2026-09-23", "n_runs": 3, "repo1_fixed_of45":
+    19, "repo2_fixed_of60": 22.7, "row_id": "Opus 5.5 (max effort) - mean of 3"}'
+- schema_version: '1.0'
+  id: benchmark-1dbb168b00176ffe
+  model_id: xai-grok-4-7
+  judgment_ids:
+  - judgment-2216eba8e5c983c7
+  benchmark:
+    name: Bug Hunt Bench
+    version: 1217192a6d04e89da3f6106ca3a304d2734882eb
+    metric: planted defects fixed
+    unit: mean planted defects fixed out of 105
+    direction: higher
+  value: 28.8
+  model_version: Grok 4.7 (xhigh) seq - mean of 4
+  harness: null
+  effort: xhigh
+  provider_id: null
+  tools: null
+  measured_at: '2026-09-21'
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  conditions:
+  - Native Grok CLI; subagent counts varied between runs and regime parity was not fully verifiable.
+  - 'Harness: Grok Build CLI (ACP); effort: xhigh; effort evidence: verified.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"fixed_of_105": 28.8, "individual_scores": [25, 30, 31, 29], "measured_at": "2026-09-21", "n_runs": 4,
+    "repo1_fixed_of45": 13, "repo2_fixed_of60": 15.8, "row_id": "Grok 4.7 (xhigh) seq - mean of 4"}'
+- schema_version: '1.0'
+  id: benchmark-bd75a21a44a11892
+  model_id: deepseek-v4-1-flash
+  judgment_ids:
+  - judgment-353d8b48d93065c6
+  benchmark:
+    name: Bug Hunt Bench
+    version: 1217192a6d04e89da3f6106ca3a304d2734882eb
+    metric: planted defects fixed
+    unit: mean planted defects fixed out of 105
+    direction: higher
+  value: 21.7
+  model_version: DeepSeek V4.1 Flash (max effort) - mean of 3
+  harness: null
+  effort: max
+  provider_id: null
+  tools: null
+  measured_at: '2026-09-15'
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  conditions:
+  - deepseek-flash served as V4.1;1M; no compactions; Claude Code2.1.267 then2.1.270.
+  - 'Harness: Claude Code / DeepSeek API; effort: max; effort evidence: verified_ceiling.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"fixed_of_105": 21.7, "individual_scores": [24, 19, 22], "measured_at": "2026-09-15", "n_runs": 3, "repo1_fixed_of45":
+    11.3, "repo2_fixed_of60": 10.3, "row_id": "DeepSeek V4.1 Flash (max effort) - mean of 3"}'
+- schema_version: '1.0'
+  id: benchmark-db0ed355d331552f
+  model_id: kimi-k3
+  judgment_ids:
+  - judgment-b00034cf95cef727
+  benchmark:
+    name: Bug Hunt Bench
+    version: 1217192a6d04e89da3f6106ca3a304d2734882eb
+    metric: planted defects fixed
+    unit: mean planted defects fixed out of 105
+    direction: higher
+  value: 21
+  model_version: Kimi K3
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: '2026-07-26'
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  conditions:
+  - Route's effort field inert; do not describe this as Kimi maximum effort.
+  - 'Harness: Claude Code / OpenRouter; effort: default; effort evidence: inert_default.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"fixed_of_105": 21, "individual_scores": null, "measured_at": "2026-07-26", "n_runs": 1, "repo1_fixed_of45":
+    4, "repo2_fixed_of60": 17, "row_id": "Kimi K3"}'
+- schema_version: '1.0'
+  id: benchmark-2eed5ce7c8afe854
+  model_id: glm-5-3
+  judgment_ids:
+  - judgment-a007e05cd0f0f5f6
+  benchmark:
+    name: Bug Hunt Bench
+    version: 1217192a6d04e89da3f6106ca3a304d2734882eb
+    metric: planted defects fixed
+    unit: mean planted defects fixed out of 105
+    direction: higher
+  value: 19
+  model_version: GLM-5.3 (max effort, Z.ai API)
+  harness: null
+  effort: max
+  provider_id: null
+  tools: null
+  measured_at: '2026-09-10'
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  conditions:
+  - Requested/accepted first-party tier; magnitude not verified. Scored row is complete rerun after voided
+    quota failure.
+  - 'Harness: Claude Code / Z.ai API; effort: max; effort evidence: first_party.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"fixed_of_105": 19, "individual_scores": null, "measured_at": "2026-09-10", "n_runs": 1, "repo1_fixed_of45":
+    9, "repo2_fixed_of60": 10, "row_id": "GLM-5.3 (max effort, Z.ai API)"}'
+- schema_version: '1.0'
+  id: benchmark-86a82bc2a68b8b07
+  model_id: gpt-6-luna
+  judgment_ids:
+  - judgment-639aaaec04d00c96
+  benchmark:
+    name: Bug Hunt Bench
+    version: 1217192a6d04e89da3f6106ca3a304d2734882eb
+    metric: planted defects fixed
+    unit: mean planted defects fixed out of 105
+    direction: higher
+  value: 18.3
+  model_version: GPT-6 Luna (max effort) - mean of 3
+  harness: null
+  effort: max
+  provider_id: null
+  tools: null
+  measured_at: '2026-09-23'
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  conditions:
+  - gpt-6-luna; Codex0.155.1 on ChatGPT account.
+  - 'Harness: Codex CLI; effort: max; effort evidence: first_party.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"fixed_of_105": 18.3, "individual_scores": [17, 21, 17], "measured_at": "2026-09-23", "n_runs": 3, "repo1_fixed_of45":
+    6.3, "repo2_fixed_of60": 12, "row_id": "GPT-6 Luna (max effort) - mean of 3"}'
+- schema_version: '1.0'
+  id: benchmark-d91d7fca84617fed
+  model_id: gemini-3-8-flash
+  judgment_ids:
+  - judgment-37a2484d83177e9d
+  benchmark:
+    name: Bug Hunt Bench
+    version: 1217192a6d04e89da3f6106ca3a304d2734882eb
+    metric: planted defects fixed
+    unit: mean planted defects fixed out of 105
+    direction: higher
+  value: 18
+  model_version: Gemini 3.8 Flash - mean of 3
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: '2026-09-15'
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  conditions:
+  - CLI version/context/compaction unrecoverable; parity between three runs not established.
+  - 'Harness: Antigravity CLI; effort: high; effort evidence: verified_ceiling.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"fixed_of_105": 18, "individual_scores": [20, 19, 15], "measured_at": "2026-09-15", "n_runs": 3, "repo1_fixed_of45":
+    6.7, "repo2_fixed_of60": 11.3, "row_id": "Gemini 3.8 Flash - mean of 3"}'
+- schema_version: '1.0'
+  id: benchmark-37e3815e5221e39a
+  model_id: glm-5-3-flash
+  judgment_ids:
+  - judgment-56713cac2c5e623e
+  benchmark:
+    name: Bug Hunt Bench
+    version: 1217192a6d04e89da3f6106ca3a304d2734882eb
+    metric: planted defects fixed
+    unit: mean planted defects fixed out of 105
+    direction: higher
+  value: 17.7
+  model_version: GLM-5.3 Flash (max effort, Z.ai API) - mean of 3
+  harness: null
+  effort: max
+  provider_id: null
+  tools: null
+  measured_at: '2026-09-15'
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  conditions:
+  - glm-5.3-flash;1M requested;2.1.269 then2.1.270; token/context parity unverified.
+  - 'Harness: Claude Code / Z.ai API; effort: max; effort evidence: verified_ceiling.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"fixed_of_105": 17.7, "individual_scores": [19, 18, 16], "measured_at": "2026-09-15", "n_runs": 3, "repo1_fixed_of45":
+    9.3, "repo2_fixed_of60": 8.3, "row_id": "GLM-5.3 Flash (max effort, Z.ai API) - mean of 3"}'
+- schema_version: '1.0'
+  id: benchmark-86dca92dcc44acaa
+  model_id: gpt-oss-120b
+  judgment_ids:
+  - judgment-3f23cd037accf1ae
+  benchmark:
+    name: Bug Hunt Bench
+    version: 1217192a6d04e89da3f6106ca3a304d2734882eb
+    metric: planted defects fixed
+    unit: mean planted defects fixed out of 105
+    direction: higher
+  value: 0
+  model_version: gpt-oss-120b - mean of 3
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: '2026-09-15'
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  conditions:
+  - Groq pinned via OpenRouter with fallbacks disabled; effort field dropped, provider default unknown.
+  - 'Harness: Claude Code / OpenRouter; effort: default; effort evidence: inert_default.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"fixed_of_105": 0, "individual_scores": [0, 0, 0], "measured_at": "2026-09-15", "n_runs": 3, "repo1_fixed_of45":
+    0, "repo2_fixed_of60": 0, "row_id": "gpt-oss-120b - mean of 3"}'
+- schema_version: '1.0'
+  id: benchmark-d1019ad6dd2c4dca
+  model_id: gpt-oss-20b
+  judgment_ids:
+  - judgment-46cdaaca49f8b491
+  benchmark:
+    name: Bug Hunt Bench
+    version: 1217192a6d04e89da3f6106ca3a304d2734882eb
+    metric: planted defects fixed
+    unit: mean planted defects fixed out of 105
+    direction: higher
+  value: 0
+  model_version: gpt-oss-20b - mean of 3
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: '2026-09-15'
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-ad78a04807f9
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  conditions:
+  - Groq pinned via OpenRouter with fallbacks disabled; effort field dropped, provider default unknown.
+  - 'Harness: Claude Code / OpenRouter; effort: default; effort evidence: inert_default.'
+  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
+  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
+    and budgets.
+  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
+    external reproduction.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"fixed_of_105": 0, "individual_scores": [0, 0, 0], "measured_at": "2026-09-15", "n_runs": 3, "repo1_fixed_of45":
+    0, "repo2_fixed_of60": 0, "row_id": "gpt-oss-20b - mean of 3"}'
+- schema_version: '1.0'
+  id: benchmark-a9e27061ab283d0e
+  model_id: gpt-6-1-sol
+  judgment_ids:
+  - judgment-a5e619c615a3a665
+  benchmark:
+    name: PARK JOON Python repair
+    version: null
+    metric: passed repairs
+    unit: passed repairs out of 14
+    direction: higher
+  value: 14
+  model_version: null
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: practitioner_test
+  source_ids:
+  - src-0de3942764ff
+  conditions:
+  - Codex subscription environment, medium effort; seven failed samples from other models, twice each.
+  - One repair round; at most six failed tests/errors disclosed; Python3.12 standard library.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"attempts": 14, "passed_repairs": 14}'
+- schema_version: '1.0'
+  id: benchmark-d717780a7ebec009
+  model_id: gpt-6-astra
+  judgment_ids:
+  - judgment-3ee716fcfdb2364d
+  benchmark:
+    name: PARK JOON Python repair
+    version: null
+    metric: passed repairs
+    unit: passed repairs out of 14
+    direction: higher
+  value: 14
+  model_version: null
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: practitioner_test
+  source_ids:
+  - src-0de3942764ff
+  conditions:
+  - Codex subscription environment, medium effort; seven failed samples from other models, twice each.
+  - One repair round; at most six failed tests/errors disclosed; Python3.12 standard library.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"attempts": 14, "passed_repairs": 14}'
+- schema_version: '1.0'
+  id: benchmark-68cac6399aceeb23
+  model_id: gpt-oss-120b
+  judgment_ids:
+  - judgment-e2b504d398235939
+  benchmark:
+    name: ClosedCode local CSV repair
+    version: null
+    metric: visible tests passed out of 14
+    unit: test count
+    direction: higher
+  value: 14
+  model_version: null
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: practitioner_test
+  source_ids:
+  - src-844ba1375784
+  conditions:
+  - ClosedCode/Ollama,high effort,ASUSGX10; exact quantization not stated.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"hidden_passed": 8, "hidden_tests": 8, "visible_passed": 14, "visible_tests": 14}'
+- schema_version: '1.0'
+  id: benchmark-57d131fb79113e55
+  model_id: gpt-oss-120b
+  judgment_ids:
+  - judgment-e2b504d398235939
+  benchmark:
+    name: ClosedCode local CSV repair
+    version: null
+    metric: hidden tests passed out of 8
+    unit: test count
+    direction: higher
+  value: 8
+  model_version: null
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: practitioner_test
+  source_ids:
+  - src-844ba1375784
+  conditions:
+  - ClosedCode/Ollama,high effort,ASUSGX10; exact quantization not stated.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"hidden_passed": 8, "hidden_tests": 8, "visible_passed": 14, "visible_tests": 14}'
+- schema_version: '1.0'
+  id: benchmark-7e19ec7f62c4546c
+  model_id: kimi-k3
+  judgment_ids:
+  - judgment-8402332de3c5429b
+  benchmark:
+    name: OdinEval
+    version: 2608.18595v1
+    metric: patch apply rate
+    unit: percent
+    direction: higher
+  value: 100
+  model_version: null
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-57fee0d3a2b2
+  conditions:
+  - 168eligible public Odin issues; supplied source scope; one scored patch; no execution feedback to generator.
+  - Exact request budget/API run date not independently audited.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"apply_percent": 100, "instances": 168, "resolved_percent": 66.7}'
+- schema_version: '1.0'
+  id: benchmark-44eff80f6afd6891
+  model_id: kimi-k3
+  judgment_ids:
+  - judgment-8402332de3c5429b
+  benchmark:
+    name: OdinEval
+    version: 2608.18595v1
+    metric: issues resolved
+    unit: percent
+    direction: higher
+  value: 66.7
+  model_version: null
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-57fee0d3a2b2
+  conditions:
+  - 168eligible public Odin issues; supplied source scope; one scored patch; no execution feedback to generator.
+  - Exact request budget/API run date not independently audited.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"apply_percent": 100, "instances": 168, "resolved_percent": 66.7}'
+- schema_version: '1.0'
+  id: benchmark-70f6370215d055cd
+  model_id: minimax-m3
+  judgment_ids:
+  - judgment-fd22697316fb56f3
+  benchmark:
+    name: OdinEval
+    version: 2608.18595v1
+    metric: patch apply rate
+    unit: percent
+    direction: higher
+  value: 93.5
+  model_version: null
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-57fee0d3a2b2
+  conditions:
+  - 168eligible public Odin issues; supplied source scope; one scored patch; no execution feedback to generator.
+  - Exact request budget/API run date not independently audited.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"apply_percent": 93.5, "instances": 168, "resolved_percent": 45.8}'
+- schema_version: '1.0'
+  id: benchmark-70e9aa5111557887
+  model_id: minimax-m3
+  judgment_ids:
+  - judgment-fd22697316fb56f3
+  benchmark:
+    name: OdinEval
+    version: 2608.18595v1
+    metric: issues resolved
+    unit: percent
+    direction: higher
+  value: 45.8
+  model_version: null
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-57fee0d3a2b2
+  conditions:
+  - 168eligible public Odin issues; supplied source scope; one scored patch; no execution feedback to generator.
+  - Exact request budget/API run date not independently audited.
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"apply_percent": 93.5, "instances": 168, "resolved_percent": 45.8}'
+- schema_version: '1.0'
+  id: benchmark-97118f43dbffa317
+  model_id: gemini-3-1-pro-preview
+  judgment_ids:
+  - judgment-a2765fe12608a3e5
+  benchmark:
+    name: ToCS
+    version: null
+    metric: dependency F1
+    unit: ratio
+    direction: higher
+  value: 0.262
+  model_version: gemini-3.1-pro-preview
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-df1367bde451
+  conditions:
+  - Three procedurally generated Python pipeline codebases; one run each, 20-action budget, JSON belief probes
+    every three actions; temperature 0. Tests architectural reconstruction, not greenfield design.
+  limitations:
+  - Preliminary small synthetic corpus; no variance estimate. Authors attribute the Gemini result mainly to
+    exploration, not inability to understand code.
+  - Sparse exploration limited recall. All models scored zero on invariant matching; structured externalization
+    confounds comprehension.
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"conditions": "Three procedurally generated Python pipeline codebases; one run each, 20-action budget,
+    JSON belief probes every three actions; temperature 0. Tests architectural reconstruction, not greenfield
+    design.", "failures": "Sparse exploration limited recall. All models scored zero on invariant matching;
+    structured externalization confounds comprehension.", "id": "E01", "identity": "Explicit gemini-3.1-pro-preview
+    API identifier.", "limits": "Preliminary small synthetic corpus; no variance estimate. Authors attribute
+    the Gemini result mainly to exploration, not inability to understand code.", "model_id": "gemini-3-1-pro-preview",
+    "result": "ToCS dependency F1 0.262, precision 0.894, recall 0.156; nine files opened on average.", "source_ids":
+    ["S01"], "task": "coding.architecture"}'
+- schema_version: '1.0'
+  id: benchmark-6de775bc13d38d16
+  model_id: gemini-3-1-pro-preview
+  judgment_ids:
+  - judgment-a2765fe12608a3e5
+  benchmark:
+    name: ToCS
+    version: null
+    metric: dependency precision
+    unit: ratio
+    direction: higher
+  value: 0.894
+  model_version: gemini-3.1-pro-preview
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-df1367bde451
+  conditions:
+  - Three procedurally generated Python pipeline codebases; one run each, 20-action budget, JSON belief probes
+    every three actions; temperature 0. Tests architectural reconstruction, not greenfield design.
+  limitations:
+  - Preliminary small synthetic corpus; no variance estimate. Authors attribute the Gemini result mainly to
+    exploration, not inability to understand code.
+  - Sparse exploration limited recall. All models scored zero on invariant matching; structured externalization
+    confounds comprehension.
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"conditions": "Three procedurally generated Python pipeline codebases; one run each, 20-action budget,
+    JSON belief probes every three actions; temperature 0. Tests architectural reconstruction, not greenfield
+    design.", "failures": "Sparse exploration limited recall. All models scored zero on invariant matching;
+    structured externalization confounds comprehension.", "id": "E01", "identity": "Explicit gemini-3.1-pro-preview
+    API identifier.", "limits": "Preliminary small synthetic corpus; no variance estimate. Authors attribute
+    the Gemini result mainly to exploration, not inability to understand code.", "model_id": "gemini-3-1-pro-preview",
+    "result": "ToCS dependency F1 0.262, precision 0.894, recall 0.156; nine files opened on average.", "source_ids":
+    ["S01"], "task": "coding.architecture"}'
+- schema_version: '1.0'
+  id: benchmark-4b9fe91e52e92e84
+  model_id: gemini-3-1-pro-preview
+  judgment_ids:
+  - judgment-a2765fe12608a3e5
+  benchmark:
+    name: ToCS
+    version: null
+    metric: dependency recall
+    unit: ratio
+    direction: higher
+  value: 0.156
+  model_version: gemini-3.1-pro-preview
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-df1367bde451
+  conditions:
+  - Three procedurally generated Python pipeline codebases; one run each, 20-action budget, JSON belief probes
+    every three actions; temperature 0. Tests architectural reconstruction, not greenfield design.
+  limitations:
+  - Preliminary small synthetic corpus; no variance estimate. Authors attribute the Gemini result mainly to
+    exploration, not inability to understand code.
+  - Sparse exploration limited recall. All models scored zero on invariant matching; structured externalization
+    confounds comprehension.
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"conditions": "Three procedurally generated Python pipeline codebases; one run each, 20-action budget,
+    JSON belief probes every three actions; temperature 0. Tests architectural reconstruction, not greenfield
+    design.", "failures": "Sparse exploration limited recall. All models scored zero on invariant matching;
+    structured externalization confounds comprehension.", "id": "E01", "identity": "Explicit gemini-3.1-pro-preview
+    API identifier.", "limits": "Preliminary small synthetic corpus; no variance estimate. Authors attribute
+    the Gemini result mainly to exploration, not inability to understand code.", "model_id": "gemini-3-1-pro-preview",
+    "result": "ToCS dependency F1 0.262, precision 0.894, recall 0.156; nine files opened on average.", "source_ids":
+    ["S01"], "task": "coding.architecture"}'
+- schema_version: '1.0'
+  id: benchmark-47065ec9cb06f8ec
+  model_id: kimi-k3
+  judgment_ids:
+  - judgment-31ebdfe3ee9bd0f7
+  benchmark:
+    name: Blind-reviewed integration design
+    version: null
+    metric: penalized design score
+    unit: points out of 100
+    direction: higher
+  value: 83
+  model_version: null
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: practitioner_test
+  source_ids:
+  - src-9cfe02264a85
+  conditions:
+  - Two frozen projects, 269 files; OpenCode 1.17.13, max effort, 60 minute limit,65,536 completion cap; read-only,
+    no web/plugins/subagents.
+  limitations:
+  - One run, unpublished full score artifacts; serving effects not isolated. qwen3.8-max-preview comparator
+    cannot transfer to qwen3-8-2-4t-a95b weights.
+  - Seven unsupported claim groups; incomplete revision authority/merge/storage rules and replay metadata.
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"conditions": "Two frozen projects, 269 files; OpenCode 1.17.13, max effort, 60 minute limit,65,536 completion
+    cap; read-only, no web/plugins/subagents.", "failures": "Seven unsupported claim groups; incomplete revision
+    authority/merge/storage rules and replay metadata.", "id": "E13", "identity": "Reported Kimi K3 via Kimi
+    Code subscription; no immutable hash; hosted-route only.", "limits": "One run, unpublished full score artifacts;
+    serving effects not isolated. qwen3.8-max-preview comparator cannot transfer to qwen3-8-2-4t-a95b weights.",
+    "model_id": "kimi-k3", "result": "One blind-reviewed integration-design run scored 83/100 after factual
+    penalties, with useful revision/regeneration lifecycle design.", "source_ids": ["S14"], "task": "coding.architecture"}'
+- schema_version: '1.0'
+  id: benchmark-41873e68ed4622dc
+  model_id: gpt-6-astra
+  judgment_ids:
+  - judgment-5e13f6bbea5e1900
+  benchmark:
+    name: SWE Refactor
+    version: null
+    metric: resolve rate
+    unit: percent
+    direction: higher
+  value: 59.05
+  model_version: GPT 6 Astra (Codex) xHigh
+  harness: Codex
+  effort: xHigh
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-b6ffa931564a
+  conditions:
+  - 70 tasks, 10 production repositories, 6 languages; Harbor/Modal sandboxes. Resolve requires unchanged tests,
+    zero regressions, and every mandatory Opus 4.5-judged rubric.
+  limitations:
+  - Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve xHigh as board label.
+    Intro's below 50% statement is stale. Gemini 3.1 Pro 33.81Â±6.64 is withheld pending preview-ID mapping.
+  - Incomplete extraction, unwired callers, stale implementations/artifacts; failure taxonomy is pooled, not
+    per-model.
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"conditions": "70 tasks, 10 production repositories, 6 languages; Harbor/Modal sandboxes. Resolve requires
+    unchanged tests, zero regressions, and every mandatory Opus 4.5-judged rubric.", "failures": "Incomplete
+    extraction, unwired callers, stale implementations/artifacts; failure taxonomy is pooled, not per-model.",
+    "id": "E07", "identity": "Exact live-board display names; immutable snapshots and current full run settings
+    unavailable.", "limits": "Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve
+    xHigh as board label. Intro''s below 50% statement is stale. Gemini 3.1 Pro 33.81Â±6.64 is withheld pending
+    preview-ID mapping.", "results": [{"display_name": "GPT 6 Astra (Codex) xHigh", "displayed_uncertainty":
+    6.43, "model_id": "gpt-6-astra", "resolve_percent": 59.05}, {"display_name": "Fable-5.1 (Claude Code) xHigh",
+    "displayed_uncertainty": 6.52, "model_id": "claude-fable-5-1", "resolve_percent": 56.67}, {"display_name":
+    "Gemini 3.8 Flash (Mini-SWE-Agent)", "displayed_uncertainty": 6.76, "model_id": "gemini-3-8-flash", "resolve_percent":
+    44.76}], "source_ids": ["S07"], "task": "coding.refactoring"}'
+- schema_version: '1.0'
+  id: benchmark-89d613f9d34529e9
+  model_id: claude-fable-5-1
+  judgment_ids:
+  - judgment-a0a1fd6ff5e17879
+  benchmark:
+    name: SWE Refactor
+    version: null
+    metric: resolve rate
+    unit: percent
+    direction: higher
+  value: 56.67
+  model_version: Fable-5.1 (Claude Code) xHigh
+  harness: Claude Code
+  effort: xHigh
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-b6ffa931564a
+  - src-c7eceee3e7d1
+  conditions:
+  - 70 tasks, 10 production repositories, 6 languages; Harbor/Modal sandboxes. Resolve requires unchanged tests,
+    zero regressions, and every mandatory Opus 4.5-judged rubric.
+  - Always-on adaptive thinking; effort-controlled operation.
+  limitations:
+  - Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve xHigh as board label.
+    Intro's below 50% statement is stale. Gemini 3.1 Pro 33.81Â±6.64 is withheld pending preview-ID mapping.
+  - Incomplete extraction, unwired callers, stale implementations/artifacts; failure taxonomy is pooled, not
+    per-model.
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"conditions": "70 tasks, 10 production repositories, 6 languages; Harbor/Modal sandboxes. Resolve requires
+    unchanged tests, zero regressions, and every mandatory Opus 4.5-judged rubric.", "failures": "Incomplete
+    extraction, unwired callers, stale implementations/artifacts; failure taxonomy is pooled, not per-model.",
+    "id": "E07", "identity": "Exact live-board display names; immutable snapshots and current full run settings
+    unavailable.", "limits": "Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve
+    xHigh as board label. Intro''s below 50% statement is stale. Gemini 3.1 Pro 33.81Â±6.64 is withheld pending
+    preview-ID mapping.", "results": [{"display_name": "GPT 6 Astra (Codex) xHigh", "displayed_uncertainty":
+    6.43, "model_id": "gpt-6-astra", "resolve_percent": 59.05}, {"display_name": "Fable-5.1 (Claude Code) xHigh",
+    "displayed_uncertainty": 6.52, "model_id": "claude-fable-5-1", "resolve_percent": 56.67}, {"display_name":
+    "Gemini 3.8 Flash (Mini-SWE-Agent)", "displayed_uncertainty": 6.76, "model_id": "gemini-3-8-flash", "resolve_percent":
+    44.76}], "source_ids": ["S07"], "task": "coding.refactoring"}'
+- schema_version: '1.0'
+  id: benchmark-aced647406d4639e
+  model_id: gemini-3-8-flash
+  judgment_ids:
+  - judgment-cab8e45e5c2e7550
+  benchmark:
+    name: SWE Refactor
+    version: null
+    metric: resolve rate
+    unit: percent
+    direction: higher
+  value: 44.76
+  model_version: Gemini 3.8 Flash (Mini-SWE-Agent)
+  harness: Mini-SWE-Agent
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-b6ffa931564a
+  conditions:
+  - 70 tasks, 10 production repositories, 6 languages; Harbor/Modal sandboxes. Resolve requires unchanged tests,
+    zero regressions, and every mandatory Opus 4.5-judged rubric.
+  limitations:
+  - Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve xHigh as board label.
+    Intro's below 50% statement is stale. Gemini 3.1 Pro 33.81Â±6.64 is withheld pending preview-ID mapping.
+  - Incomplete extraction, unwired callers, stale implementations/artifacts; failure taxonomy is pooled, not
+    per-model.
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"conditions": "70 tasks, 10 production repositories, 6 languages; Harbor/Modal sandboxes. Resolve requires
+    unchanged tests, zero regressions, and every mandatory Opus 4.5-judged rubric.", "failures": "Incomplete
+    extraction, unwired callers, stale implementations/artifacts; failure taxonomy is pooled, not per-model.",
+    "id": "E07", "identity": "Exact live-board display names; immutable snapshots and current full run settings
+    unavailable.", "limits": "Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve
+    xHigh as board label. Intro''s below 50% statement is stale. Gemini 3.1 Pro 33.81Â±6.64 is withheld pending
+    preview-ID mapping.", "results": [{"display_name": "GPT 6 Astra (Codex) xHigh", "displayed_uncertainty":
+    6.43, "model_id": "gpt-6-astra", "resolve_percent": 59.05}, {"display_name": "Fable-5.1 (Claude Code) xHigh",
+    "displayed_uncertainty": 6.52, "model_id": "claude-fable-5-1", "resolve_percent": 56.67}, {"display_name":
+    "Gemini 3.8 Flash (Mini-SWE-Agent)", "displayed_uncertainty": 6.76, "model_id": "gemini-3-8-flash", "resolve_percent":
+    44.76}], "source_ids": ["S07"], "task": "coding.refactoring"}'
+- schema_version: '1.0'
+  id: benchmark-6809191994e08dc6
+  model_id: gemini-3-1-pro-preview
+  judgment_ids:
+  - judgment-1d266c9e048c900c
+  benchmark:
+    name: REFINE
+    version: null
+    metric: detected smell reduction
+    unit: percent
+    direction: higher
+  value: 72.79
+  model_version: google/gemini-3.1-pro-preview
+  harness: REFINE / PMD 7.10.0 / Java 17
+  effort: null
+  provider_id: openrouter
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-5050197ff013
+  conditions:
+  - REFINE static-analysis/planning/transformation/verification workflow, PMD 7.10.0, Java 17; file-only context,
+    no dependencies/tests/build configuration; 160k estimated input preflight cap.
+  limitations:
+  - Static proxies do not prove executable equivalence. Broader quality metrics inconsistent; generated candidates
+    were not integrated into repositories. Exact reasoning/sampling settings not established.
+  - Deletion-heavy outputs; 71 public-method-removal cases. Critical assert/fail preservation only 57.1%, shared
+    across all evaluated models.
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"conditions": "REFINE static-analysis/planning/transformation/verification workflow, PMD 7.10.0, Java
+    17; file-only context, no dependencies/tests/build configuration; 160k estimated input preflight cap.",
+    "failures": "Deletion-heavy outputs; 71 public-method-removal cases. Critical assert/fail preservation
+    only 57.1%, shared across all evaluated models.", "id": "E02", "identity": "OpenRouter google/gemini-3.1-pro-preview.",
+    "limits": "Static proxies do not prove executable equivalence. Broader quality metrics inconsistent; generated
+    candidates were not integrated into repositories. Exact reasoning/sampling settings not established.",
+    "model_id": "gemini-3-1-pro-preview", "result": "Across 450 Java files, detected smells fell 72.79%; public-signature
+    preservation 86.2%, complete static preservation proxy 81.8%.", "source_ids": ["S02"], "task": "coding.refactoring"}'
+- schema_version: '1.0'
+  id: benchmark-cb2944810445bf25
+  model_id: gemini-3-1-pro-preview
+  judgment_ids:
+  - judgment-1d266c9e048c900c
+  benchmark:
+    name: REFINE
+    version: null
+    metric: public-signature preservation
+    unit: percent
+    direction: higher
+  value: 86.2
+  model_version: google/gemini-3.1-pro-preview
+  harness: REFINE / PMD 7.10.0 / Java 17
+  effort: null
+  provider_id: openrouter
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-5050197ff013
+  conditions:
+  - REFINE static-analysis/planning/transformation/verification workflow, PMD 7.10.0, Java 17; file-only context,
+    no dependencies/tests/build configuration; 160k estimated input preflight cap.
+  limitations:
+  - Static proxies do not prove executable equivalence. Broader quality metrics inconsistent; generated candidates
+    were not integrated into repositories. Exact reasoning/sampling settings not established.
+  - Deletion-heavy outputs; 71 public-method-removal cases. Critical assert/fail preservation only 57.1%, shared
+    across all evaluated models.
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"conditions": "REFINE static-analysis/planning/transformation/verification workflow, PMD 7.10.0, Java
+    17; file-only context, no dependencies/tests/build configuration; 160k estimated input preflight cap.",
+    "failures": "Deletion-heavy outputs; 71 public-method-removal cases. Critical assert/fail preservation
+    only 57.1%, shared across all evaluated models.", "id": "E02", "identity": "OpenRouter google/gemini-3.1-pro-preview.",
+    "limits": "Static proxies do not prove executable equivalence. Broader quality metrics inconsistent; generated
+    candidates were not integrated into repositories. Exact reasoning/sampling settings not established.",
+    "model_id": "gemini-3-1-pro-preview", "result": "Across 450 Java files, detected smells fell 72.79%; public-signature
+    preservation 86.2%, complete static preservation proxy 81.8%.", "source_ids": ["S02"], "task": "coding.refactoring"}'
+- schema_version: '1.0'
+  id: benchmark-50db46056daede13
+  model_id: gemini-3-1-pro-preview
+  judgment_ids:
+  - judgment-1d266c9e048c900c
+  benchmark:
+    name: REFINE
+    version: null
+    metric: static preservation proxy
+    unit: percent
+    direction: higher
+  value: 81.8
+  model_version: google/gemini-3.1-pro-preview
+  harness: REFINE / PMD 7.10.0 / Java 17
+  effort: null
+  provider_id: openrouter
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-5050197ff013
+  conditions:
+  - REFINE static-analysis/planning/transformation/verification workflow, PMD 7.10.0, Java 17; file-only context,
+    no dependencies/tests/build configuration; 160k estimated input preflight cap.
+  limitations:
+  - Static proxies do not prove executable equivalence. Broader quality metrics inconsistent; generated candidates
+    were not integrated into repositories. Exact reasoning/sampling settings not established.
+  - Deletion-heavy outputs; 71 public-method-removal cases. Critical assert/fail preservation only 57.1%, shared
+    across all evaluated models.
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"conditions": "REFINE static-analysis/planning/transformation/verification workflow, PMD 7.10.0, Java
+    17; file-only context, no dependencies/tests/build configuration; 160k estimated input preflight cap.",
+    "failures": "Deletion-heavy outputs; 71 public-method-removal cases. Critical assert/fail preservation
+    only 57.1%, shared across all evaluated models.", "id": "E02", "identity": "OpenRouter google/gemini-3.1-pro-preview.",
+    "limits": "Static proxies do not prove executable equivalence. Broader quality metrics inconsistent; generated
+    candidates were not integrated into repositories. Exact reasoning/sampling settings not established.",
+    "model_id": "gemini-3-1-pro-preview", "result": "Across 450 Java files, detected smells fell 72.79%; public-signature
+    preservation 86.2%, complete static preservation proxy 81.8%.", "source_ids": ["S02"], "task": "coding.refactoring"}'
+- schema_version: '1.0'
+  id: benchmark-4c00df48774aa3ab
+  model_id: minimax-m3
+  judgment_ids:
+  - judgment-43822338c45cc056
+  benchmark:
+    name: RefactorBench
+    version: null
+    metric: baseline structural success
+    unit: percent
+    direction: higher
+  value: 75
+  model_version: null
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-dfd2a511bfdc
+  - src-bc13c89b86fa
+  conditions:
+  - Single-run campaigns; descriptive What/Where/How prompts, isolated terminal agents via OpenRouter/Copilot-supported
+    platform, AST unit-test scoring. Tasks span nine repositories and2–31 files. Approximate reported cost/success
+    $0.65/$0.66.
+  - Claude Code; about 2h 40m implementation; Opus 4.8 used as second reviewer. Paid MiniMax partnership disclosed.
+  limitations:
+  - One campaign, no uncertainty estimate; results tied to retrieval/scaffold. Do not transfer qwen3.6-flash
+    or kimi-k2.6 results to current siblings. deepseek-v4-pro 77/89% has no 0813 pin and is excluded.
+  - 19% still failed with retrieval. AST structural tests are narrower than a full behavioral proof.
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"conditions": "Single-run campaigns; descriptive What/Where/How prompts, isolated terminal agents via
+    OpenRouter/Copilot-supported platform, AST unit-test scoring. Tasks span nine repositories and2â€“31 files.
+    Approximate reported cost/success $0.65/$0.66.", "failures": "19% still failed with retrieval. AST structural
+    tests are narrower than a full behavioral proof.", "id": "E03", "identity": "Paper explicitly reports minimax-m3;
+    no immutable endpoint snapshot.", "limits": "One campaign, no uncertainty estimate; results tied to retrieval/scaffold.
+    Do not transfer qwen3.6-flash or kimi-k2.6 results to current siblings. deepseek-v4-pro 77/89% has no 0813
+    pin and is excluded.", "model_id": "minimax-m3", "result": "75% baseline and 81% with AST retrieval on
+    100 multi-file Python RefactorBench tasks.", "source_ids": ["S03"], "task": "coding.refactoring"}'
+- schema_version: '1.0'
+  id: benchmark-d09edad3595b9800
+  model_id: minimax-m3
+  judgment_ids:
+  - judgment-43822338c45cc056
+  benchmark:
+    name: RefactorBench
+    version: null
+    metric: AST retrieval structural success
+    unit: percent
+    direction: higher
+  value: 81
+  model_version: null
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-dfd2a511bfdc
+  - src-bc13c89b86fa
+  conditions:
+  - Single-run campaigns; descriptive What/Where/How prompts, isolated terminal agents via OpenRouter/Copilot-supported
+    platform, AST unit-test scoring. Tasks span nine repositories and2–31 files. Approximate reported cost/success
+    $0.65/$0.66.
+  - Claude Code; about 2h 40m implementation; Opus 4.8 used as second reviewer. Paid MiniMax partnership disclosed.
+  limitations:
+  - One campaign, no uncertainty estimate; results tied to retrieval/scaffold. Do not transfer qwen3.6-flash
+    or kimi-k2.6 results to current siblings. deepseek-v4-pro 77/89% has no 0813 pin and is excluded.
+  - 19% still failed with retrieval. AST structural tests are narrower than a full behavioral proof.
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"conditions": "Single-run campaigns; descriptive What/Where/How prompts, isolated terminal agents via
+    OpenRouter/Copilot-supported platform, AST unit-test scoring. Tasks span nine repositories and2â€“31 files.
+    Approximate reported cost/success $0.65/$0.66.", "failures": "19% still failed with retrieval. AST structural
+    tests are narrower than a full behavioral proof.", "id": "E03", "identity": "Paper explicitly reports minimax-m3;
+    no immutable endpoint snapshot.", "limits": "One campaign, no uncertainty estimate; results tied to retrieval/scaffold.
+    Do not transfer qwen3.6-flash or kimi-k2.6 results to current siblings. deepseek-v4-pro 77/89% has no 0813
+    pin and is excluded.", "model_id": "minimax-m3", "result": "75% baseline and 81% with AST retrieval on
+    100 multi-file Python RefactorBench tasks.", "source_ids": ["S03"], "task": "coding.refactoring"}'
+- schema_version: '1.0'
+  id: benchmark-748a235a75705a7d
+  model_id: qwen3-coder-next
+  judgment_ids:
+  - judgment-588f397f0e9fc08d
+  benchmark:
+    name: GAUNTLET
+    version: null
+    metric: constrained refactoring
+    unit: points out of 20
+    direction: higher
+  value: 20
+  model_version: 80B 4-bit MLX derivative
+  harness: LM Studio / Apple M5 Max 128GB
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: practitioner_test
+  source_ids:
+  - src-9b1dafc5ced6
+  - src-fc956f8e663f
+  conditions:
+  - GAUNTLET LM Studio on Apple M5 Max 128 GB; fixed LLM judge, private prompt/rubric. APEX multi-model grading
+    plus operator review, not a published behavior-equivalence test.
+  limitations:
+  - Only low-confidence, narrowly scoped evidence. No demonstrated large-repository refactoring reliability
+    or architecture rating.
+  - CQRS result much weaker than cleanup; incompatible tests and serving routes cannot be averaged.
+  evidence_notes:
+  - GAUNTLET 80B 4-bit MLX derivative; APEX named OpenRouter model, provider/quantization unspecified.
+  - GAUNTLET constrained-refactoring item 20/20, n=1. APEX reports cleanup 72.0 and monolithic-handler-to-CQRS
+    37.2.
+- schema_version: '1.0'
+  id: benchmark-2a09d665b5753138
+  model_id: qwen3-coder-next
+  judgment_ids:
+  - judgment-588f397f0e9fc08d
+  benchmark:
+    name: APEX
+    version: null
+    metric: cleanup
+    unit: source score
+    direction: higher
+  value: 72
+  model_version: null
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: practitioner_test
+  source_ids:
+  - src-9b1dafc5ced6
+  - src-fc956f8e663f
+  conditions:
+  - GAUNTLET LM Studio on Apple M5 Max 128 GB; fixed LLM judge, private prompt/rubric. APEX multi-model grading
+    plus operator review, not a published behavior-equivalence test.
+  limitations:
+  - Only low-confidence, narrowly scoped evidence. No demonstrated large-repository refactoring reliability
+    or architecture rating.
+  - CQRS result much weaker than cleanup; incompatible tests and serving routes cannot be averaged.
+  evidence_notes:
+  - GAUNTLET 80B 4-bit MLX derivative; APEX named OpenRouter model, provider/quantization unspecified.
+  - GAUNTLET constrained-refactoring item 20/20, n=1. APEX reports cleanup 72.0 and monolithic-handler-to-CQRS
+    37.2.
+- schema_version: '1.0'
+  id: benchmark-f27027dd87595884
+  model_id: qwen3-coder-next
+  judgment_ids:
+  - judgment-588f397f0e9fc08d
+  benchmark:
+    name: APEX
+    version: null
+    metric: CQRS extraction
+    unit: source score
+    direction: higher
+  value: 37.2
+  model_version: null
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: practitioner_test
+  source_ids:
+  - src-9b1dafc5ced6
+  - src-fc956f8e663f
+  conditions:
+  - GAUNTLET LM Studio on Apple M5 Max 128 GB; fixed LLM judge, private prompt/rubric. APEX multi-model grading
+    plus operator review, not a published behavior-equivalence test.
+  limitations:
+  - Only low-confidence, narrowly scoped evidence. No demonstrated large-repository refactoring reliability
+    or architecture rating.
+  - CQRS result much weaker than cleanup; incompatible tests and serving routes cannot be averaged.
+  evidence_notes:
+  - GAUNTLET 80B 4-bit MLX derivative; APEX named OpenRouter model, provider/quantization unspecified.
+  - GAUNTLET constrained-refactoring item 20/20, n=1. APEX reports cleanup 72.0 and monolithic-handler-to-CQRS
+    37.2.
+- schema_version: '1.0'
+  id: benchmark-3d775c2b05b7cbbd
+  model_id: ministral-3-8b
+  judgment_ids:
+  - judgment-c95618e6317eb57c
+  benchmark:
+    name: Local Python refactoring slice
+    version: null
+    metric: tasks passed
+    unit: count out of 5 tasks
+    direction: higher
+  value: 3
+  model_version: null
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: practitioner_test
+  source_ids:
+  - src-d478029ae6e3
+  conditions:
+  - Compact verbose Python code; three repetitions; Ollama 0.20.0, RTX 4060 8GB,Windows 10; instruct temperature
+    0; unit-test gating then Gemma 3 judge.
+  limitations:
+  - Tiny function-level slice; no architecture/repository inference. PDF/ZIP artifacts listed, but advertised
+    root CSV returned 404. Qwen3.5-9B was replaced by Qwen3-8B, despite misleading internal key; no transfer.
+  - D5 is among seven universally failing tasks attributed to benchmark defects. Do not treat nominal 60% as
+    calibrated ability.
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  evidence_notes:
+  - '{"conditions": "Compact verbose Python code; three repetitions; Ollama 0.20.0, RTX 4060 8GB,Windows 10;
+    instruct temperature 0; unit-test gating then Gemma 3 judge.", "failures": "D5 is among seven universally
+    failing tasks attributed to benchmark defects. Do not treat nominal 60% as calibrated ability.", "id":
+    "E12", "identity": "Exact Ministral-3-8B-Instruct-2512, Unsloth Q6_K; not the distinct Reasoning checkpoint.",
+    "limits": "Tiny function-level slice; no architecture/repository inference. PDF/ZIP artifacts listed, but
+    advertised root CSV returned 404. Qwen3.5-9B was replaced by Qwen3-8B, despite misleading internal key;
+    no transfer.", "model_id": "ministral-3-8b", "result": "README reports 3/5 refactoring tasks passed, composite
+    concision 0.97.", "source_ids": ["S13"], "task": "coding.refactoring"}'

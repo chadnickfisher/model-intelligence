@@ -197,8 +197,12 @@ performance_characteristics:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
-access_ids: []
-price_ids: []
+access_ids:
+- access-07bf870b8a2b3269
+- access-42cc6e1a9bf1aff1
+- access-a6400ce8b73cbe5b
+price_ids:
+- price-2a94f1cd774c37c2
 evidence_ids:
 - src-4b5fc50d9047
 - src-7a929ac1ccc5

@@ -191,6 +191,7 @@ capabilities:
     history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
+- access-4f38855edac192f0
 - access-open-phi-4-multimodal-instruct-weights
 price_ids: []
 evidence_ids:

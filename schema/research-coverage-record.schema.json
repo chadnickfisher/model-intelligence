@@ -1,0 +1,131 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^research-coverage-[a-z0-9-]+$"
+    },
+    "model_id": {
+      "type": "string"
+    },
+    "domain": {
+      "enum": [
+        "capabilities",
+        "benchmarks",
+        "access_pricing",
+        "behavior"
+      ]
+    },
+    "research_batch_id": {
+      "type": "string"
+    },
+    "checked_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "result": {
+      "enum": [
+        "changed",
+        "unchanged",
+        "unknown",
+        "blocked",
+        "not_checked"
+      ]
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "search_references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string"
+          },
+          "checked_at": {
+            "type": "string",
+            "format": "date"
+          },
+          "outcome": {
+            "enum": [
+              "sources_found",
+              "no_matched_sources",
+              "blocked"
+            ]
+          },
+          "urls": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "notes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "query",
+          "checked_at",
+          "outcome",
+          "urls",
+          "notes"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "scope_notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "remaining_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "blocked_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "model_id",
+    "domain",
+    "research_batch_id",
+    "checked_at",
+    "result",
+    "evidence_ids",
+    "search_references",
+    "scope_notes",
+    "remaining_gaps",
+    "blocked_reason"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "research-coverage-record.schema.json",
+  "title": "research-coverage-record"
+}

@@ -17,9 +17,11 @@ model_ids:
 price_ids:
 - price-open-deepseek-v4-1-flash-deepseek-api-05c298aa0f32
 - price-open-deepseek-v4-1-flash-deepseek-api-60717c231a91
-- price-open-deepseek-v4-pro-0813-deepseek-api-66908c1c12ad
 - price-open-deepseek-v4-pro-0813-deepseek-api-1cba22453144
+- price-open-deepseek-v4-pro-0813-deepseek-api-66908c1c12ad
 access_ids:
+- access-086032f6aa68bed3
+- access-d0b394926b71241f
 - access-open-deepseek-v4-1-flash-deepseek-api
 - access-open-deepseek-v4-pro-0813-deepseek-api
 evidence_ids:

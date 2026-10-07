@@ -44,7 +44,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-2 recorded access route(s); 1 model-specific price record(s).
+5 recorded access route(s); 1 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -81,6 +81,9 @@ Local conditions: Not established in this pass
 
 ## Recorded access routes
 
+- openai / ChatGPT Voice Live: Conditional consumer/client product; exact account entitlement unverified. GPT-Live-1: Plus 3h; Pro $100 15h; Pro $200 unlimited; Business Standard 3h and Premium 15h. Rolling 24 hours. Free and Go use mini.
+- openai / Live sessions API: officially_documented_not_execution_tested. Not established in this pass
+- azure-foundry / Azure GPT-Live: official_route_numeric_price_unverified. Not established in this pass
 - openai / Live sessions API: Generally available. Not established in this pass
 - openai / ChatGPT Voice: GPT-Live family powers Voice; exact routing and plan allotment may vary. Not established in this pass
 

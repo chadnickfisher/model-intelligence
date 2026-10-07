@@ -222,10 +222,40 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 1
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-b0524d80aaeb6829
+  scope: direct
+  task_ids:
+  - coding.review
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  judgment: Can assist with low-context refactoring preference review; does not establish deep design judgment.
+  confidence: low
+  supporting_evidence_ids:
+  - src-3d8e22441afa
+  contradictory_evidence_ids: []
+  conditions:
+  - Public API defaults; exact revision undisclosed; only two refactoring types.
+  - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  known_failure_modes:
+  - Style shortcuts, missing context and conservative ties.
+  evidence_notes:
+  - 'Research provenance: history/research/2026-10-07/coding-input.json :: review_tests_frontend:review-scout'
+  - Confidence concerns this bounded claim, not a capability score.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-07
+    method: Curated bounded candidate review_tests_frontend:review-scout; exact identity gates and original
+      sources retained.
 performance_characteristics: []
 access_ids:
+- access-1f0dacab6d7622e8
+- access-ace07c4443472477
 - access-open-llama-4-scout-weights
-price_ids: []
+price_ids:
+- price-cb51214b8cd407bd
 evidence_ids:
 - src-5744ead18753
 - src-8cb15ff6ddd4

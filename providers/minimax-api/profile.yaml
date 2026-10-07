@@ -14,11 +14,13 @@ reliability: []
 model_ids:
 - minimax-m3
 price_ids:
+- price-open-minimax-m3-minimax-api-3a2d3f3837bf
+- price-open-minimax-m3-minimax-api-bb9117221622
 - price-open-minimax-m3-minimax-api-cfa19bcf4e29
 - price-open-minimax-m3-minimax-api-f5f41f0c9af4
-- price-open-minimax-m3-minimax-api-bb9117221622
-- price-open-minimax-m3-minimax-api-3a2d3f3837bf
 access_ids:
+- access-2e5fa663d1fb047e
+- access-f6e07b90a9ccfbba
 - access-open-minimax-m3-minimax-api
 evidence_ids:
 - src-40c9ce9b4812

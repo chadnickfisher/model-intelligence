@@ -1,0 +1,43 @@
+schema_version: '1.0'
+id: novita
+verified_at: '2026-10-07'
+name: Novita
+roles:
+- inference-provider
+api_compatibility: []
+access_methods: []
+geographic_availability: []
+rate_limits: []
+caching_batching: []
+privacy_data_use: []
+reliability: []
+model_ids:
+- gemma-4-31b-it
+- llama-4-maverick
+- llama-4-scout
+- qwen3-8-2-4t-a95b
+- qwen3-8-27b
+- qwen3-coder-next
+price_ids:
+- price-123887c9e26b3679
+- price-5ed9dca3ad3c2b0a
+- price-9387515cd0547270
+- price-cb51214b8cd407bd
+- price-e795792e1db1a71f
+- price-fcbb10b42e2ddc8b
+access_ids:
+- access-190700cff4019fb5
+- access-1d1b07f5250f1c91
+- access-1f0dacab6d7622e8
+- access-313f8f51e65be23a
+- access-8209caa91d8d75ad
+- access-b5b2eba4cf6b7da1
+evidence_ids:
+- src-f42878a20d06
+- src-b88c4950bbf3
+- src-8e9cfa8a1129
+- src-0ef09481d565
+notes:
+- New public access-product identity; policies and account-specific entitlements remain unverified.
+limitations:
+- Do not inherit policies from a parent company or another product.

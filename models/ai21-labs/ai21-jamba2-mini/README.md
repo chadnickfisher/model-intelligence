@@ -44,7 +44,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-0 recorded access route(s); 0 model-specific price record(s).
+2 recorded access route(s); 1 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -78,9 +78,12 @@ Local conditions: Not established in this pass
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
+| ai21 | Standard / current | input: 0.2 USD / per 1 million tokens; output: 0.4 USD / per 1 million tokens | Not established in this pass | 2026-10-07 |
 
 ## Recorded access routes
 
+- ai21 / AI21 Studio Playground: documented_not_execution_tested. Not established in this pass
+- ai21 / AI21 Studio: documented_not_execution_tested. Not established in this pass
 
 ## Sources
 

@@ -18,13 +18,15 @@ caching_batching: []
 privacy_data_use:
 - '{"status": "partial", "summary": "API retention/training not verified in this pass."}'
 reliability: []
-model_ids: []
+model_ids:
+- bfl-flux3-video
 price_ids:
 - price-providers-api-playground-bfl-082684041227
+- price-providers-api-playground-bfl-87cdad9a25df
 - price-providers-bfl-flux3-video-bfl-772aa13dfb82
 - price-providers-bfl-flux3-video-bfl-c4a4dfe8876e
-- price-providers-api-playground-bfl-87cdad9a25df
 access_ids:
+- access-81655ffa1f7f6666
 - access-providers-access-bfl-api
 evidence_ids:
 - src-752c7dd560da

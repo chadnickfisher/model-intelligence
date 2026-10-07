@@ -15,11 +15,17 @@ model_ids:
 - glm-5-3
 - glm-5-3-flash
 price_ids:
-- price-open-glm-5-3-zai-api-a3d2f2e33a66
+- price-814b56fe1a8fcbb9
+- price-b0d2f0ccb6138508
 - price-open-glm-5-3-flash-zai-api-d4cf1d58c48f
+- price-open-glm-5-3-zai-api-a3d2f2e33a66
 access_ids:
-- access-open-glm-5-3-zai-api
+- access-475a1257372e5663
+- access-6a52fcf44a430691
+- access-7137310a2908fa26
+- access-9e33330feaa5faf2
 - access-open-glm-5-3-flash-zai-api
+- access-open-glm-5-3-zai-api
 evidence_ids:
 - src-667e800254a1
 notes:

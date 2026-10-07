@@ -137,6 +137,9 @@ capabilities:
     history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
+- access-4df322a979cb940f
+- access-5929e39a45cd3bc9
+- access-c0562aca5e5ece26
 - access-proprietary-access-13
 price_ids:
 - price-proprietary-gpt-realtime-2-1-openai-1ffaab4c4919

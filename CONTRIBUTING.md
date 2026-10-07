@@ -7,6 +7,16 @@ Never include private conversations, personal account limits, secrets, proprieta
 Edit canonical YAML, run validation and generation, and inspect the diff. Explain whether the change is factual, a judgment revision, or a correction. Do not interpret test success as proof of model capability. Keep research logs concise and material changes in the dated changelog.
 ## Contribution license and migration rules
 
+Research packages use the permanent four-domain contract in
+[methodology.md](methodology.md): account for every catalog model's capabilities,
+benchmarks/confidence rationale, access/pricing/limits and post-launch behavior.
+Update the [coverage ledger](data/research-coverage.yaml) with actual source/search
+checks, dates, results and remaining gaps. Focused corrections may leave other
+domains explicitly not checked; do not represent them as complete research passes.
+Carry-forward facts retain their verification dates. Record failed checks and
+unknowns explicitly. Automated validation checks accounting, not research adequacy.
+
+
 By submitting original dataset or documentation contributions, you agree to
 license them under CC BY 4.0; original software contributions use MIT. Submit only
 material you have permission to contribute. Preserve third-party notices and

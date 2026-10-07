@@ -66,7 +66,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-2 recorded access route(s); 3 model-specific price record(s).
+6 recorded access route(s); 3 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -97,12 +97,16 @@ Local conditions: Not established in this pass
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
+| google-developer-api | paid_lite_endpoint / current | 720p: 0.05 USD / per_successful_output_second; 1080p: 0.08 USD / per_successful_output_second; 4K: unknown USD / per_successful_output_second | Not established in this pass | 2026-10-06 |
 | google-developer-api | paid_standard / current | 720p_or_1080p_audio_video: 0.4 USD / per_successful_output_second; 4K_audio_video: 0.6 USD / per_successful_output_second | Not established in this pass | 2026-10-06 |
 | google-developer-api | paid_fast_endpoint / current | 720p: 0.1 USD / per_successful_output_second; 1080p: 0.12 USD / per_successful_output_second; 4K: 0.3 USD / per_successful_output_second | Not established in this pass | 2026-10-06 |
-| google-developer-api | paid_lite_endpoint / current | 720p: 0.05 USD / per_successful_output_second; 1080p: 0.08 USD / per_successful_output_second; 4K: unknown USD / per_successful_output_second | Not established in this pass | 2026-10-06 |
 
 ## Recorded access routes
 
+- google-cloud / Gemini Enterprise Agent Platform Veo 3.1: related_GA_route_exact_preview_identity_not_equivalent. Not established in this pass
+- google-ai / Google Flow Veo 3.1 Quality: Conditional consumer/client product; exact account entitlement unverified. Veo 3.1 Quality: 100 credits/generation for 8s videos or Extend, all users; Fast/Lite have separate costs.
+- google-ai / Gemini app video: Conditional consumer/client product; exact account entitlement unverified. Current help names Gemini Omni, so a present Veo 3.1 entitlement in this app is not established.
+- google-developer-api / Gemini Developer API / Google AI Studio: officially_documented_not_execution_tested. Not established in this pass
 - google-developer-api / first-party-api: documented route; account eligibility unverified. Not established in this pass
 - google-ai-studio / Google AI Studio: Distribution documented; exact model selector, rollout, regional and subscription entitlement may vary.. Not established in this pass
 

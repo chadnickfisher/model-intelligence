@@ -496,33 +496,59 @@
             "format": "date"
           },
           "provenance": {
-            "type": "object",
-            "required": [
-              "migration_id",
-              "original_task",
-              "baseline_commit",
-              "original_position",
-              "history_path"
-            ],
-            "properties": {
-              "migration_id": {
-                "type": "string"
+            "oneOf": [
+              {
+                "type": "object",
+                "required": [
+                  "migration_id",
+                  "original_task",
+                  "baseline_commit",
+                  "original_position",
+                  "history_path"
+                ],
+                "properties": {
+                  "migration_id": {
+                    "type": "string"
+                  },
+                  "original_task": {
+                    "type": "string"
+                  },
+                  "baseline_commit": {
+                    "type": "string"
+                  },
+                  "original_position": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "history_path": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
               },
-              "original_task": {
-                "type": "string"
-              },
-              "baseline_commit": {
-                "type": "string"
-              },
-              "original_position": {
-                "type": "integer",
-                "minimum": 0
-              },
-              "history_path": {
-                "type": "string"
+              {
+                "type": "object",
+                "required": [
+                  "origin",
+                  "research_batch_id",
+                  "method"
+                ],
+                "properties": {
+                  "origin": {
+                    "const": "research"
+                  },
+                  "research_batch_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "method": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "additionalProperties": false
               }
-            },
-            "additionalProperties": false
+            ]
           }
         },
         "required": [
@@ -647,33 +673,59 @@
             "format": "date"
           },
           "provenance": {
-            "type": "object",
-            "required": [
-              "migration_id",
-              "original_task",
-              "baseline_commit",
-              "original_position",
-              "history_path"
-            ],
-            "properties": {
-              "migration_id": {
-                "type": "string"
+            "oneOf": [
+              {
+                "type": "object",
+                "required": [
+                  "migration_id",
+                  "original_task",
+                  "baseline_commit",
+                  "original_position",
+                  "history_path"
+                ],
+                "properties": {
+                  "migration_id": {
+                    "type": "string"
+                  },
+                  "original_task": {
+                    "type": "string"
+                  },
+                  "baseline_commit": {
+                    "type": "string"
+                  },
+                  "original_position": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "history_path": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
               },
-              "original_task": {
-                "type": "string"
-              },
-              "baseline_commit": {
-                "type": "string"
-              },
-              "original_position": {
-                "type": "integer",
-                "minimum": 0
-              },
-              "history_path": {
-                "type": "string"
+              {
+                "type": "object",
+                "required": [
+                  "origin",
+                  "research_batch_id",
+                  "method"
+                ],
+                "properties": {
+                  "origin": {
+                    "const": "research"
+                  },
+                  "research_batch_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "method": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "additionalProperties": false
               }
-            },
-            "additionalProperties": false
+            ]
           }
         },
         "required": [

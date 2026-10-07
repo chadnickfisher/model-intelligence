@@ -182,8 +182,10 @@ capabilities:
     history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
+- access-b68f866c1dc4b956
 - access-open-qwen3-5-9b-weights
-price_ids: []
+price_ids:
+- price-c14d4d19ea148050
 evidence_ids:
 - src-f2036f817d22
 - src-e0a64484787e

@@ -21,12 +21,16 @@ privacy_data_use:
   Zero Retention Mode via enable_logging=false. Web UI/playground not covered; cloning/music/dubbing/image-video
   exclusions apply."}'
 reliability: []
-model_ids: []
+model_ids:
+- elevenlabs-eleven-v4
 price_ids:
-- price-providers-elevenlabs-eleven-v4-elevenlabs-9a8e2a2f9216
 - price-providers-elevenapi-elevenlabs-3c86d62642bb
 - price-providers-elevenapi-subscription-elevenlabs-eb94c3dd9232
+- price-providers-elevenlabs-eleven-v4-elevenlabs-9a8e2a2f9216
 access_ids:
+- access-19adfeee35641105
+- access-8c59f3a51ab26c58
+- access-a0b4c7d41e9fe052
 - access-providers-access-elevenapi
 evidence_ids:
 - src-bcc14c31357b

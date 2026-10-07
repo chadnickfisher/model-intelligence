@@ -19,10 +19,14 @@ privacy_data_use:
 - '{"status": "partial", "summary": "Private VPC/on-prem options documented. Direct API retention/training
   conditions not verified."}'
 reliability: []
-model_ids: []
+model_ids:
+- ai21-jamba2-mini
 price_ids:
+- price-913f903099f9536f
 - price-providers-jamba2-api-ai21-406c5e523043
 access_ids:
+- access-0115a45a61684766
+- access-39c40e7f7c2eb04b
 - access-providers-access-ai21-selfhost
 evidence_ids:
 - src-cd9a80108d1d

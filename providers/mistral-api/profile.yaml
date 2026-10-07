@@ -12,23 +12,39 @@ caching_batching: []
 privacy_data_use: []
 reliability: []
 model_ids:
-- mistral-small-4
-- mistral-medium-3-5
-- mistral-large-3
-- ministral-3-8b
+- devstral-small-2
 - glm-5-3
+- ministral-3-8b
+- mistral-large-3
+- mistral-medium-3-5
+- mistral-small-4
 price_ids:
+- price-7c9f7ef4bbf9fc8a
+- price-9116cf1e4d596d1a
+- price-98b03467d6f38abc
+- price-bf5e328818668852
+- price-dcb4c2434229c9de
+- price-open-glm-5-3-mistral-api-2ee05cd2e1e9
+- price-open-ministral-3-8b-mistral-api-e3e015fcc82e
 - price-open-mistral-large-3-mistral-api-9f59b7cfe481
 - price-open-mistral-medium-3-5-mistral-api-ccb3cbd04b1a
 - price-open-mistral-small-4-mistral-api-2c982a02c545
-- price-open-ministral-3-8b-mistral-api-e3e015fcc82e
-- price-open-glm-5-3-mistral-api-2ee05cd2e1e9
 access_ids:
-- access-open-mistral-small-4-mistral-api
-- access-open-mistral-medium-3-5-mistral-api
-- access-open-mistral-large-3-mistral-api
-- access-open-ministral-3-8b-mistral-api
+- access-17d4a122e58be631
+- access-4141e6b7c6caba29
+- access-4f402095b0f4b2b4
+- access-5fc2b9e6cb949ac9
+- access-9a9c852e90b4b260
+- access-b552a838674d862f
+- access-b5ba5d4102167d79
+- access-d4336bab86e8aed3
+- access-f6fab9ea011aa03e
+- access-fb2f834e50f155d5
 - access-open-glm-5-3-mistral-api
+- access-open-ministral-3-8b-mistral-api
+- access-open-mistral-large-3-mistral-api
+- access-open-mistral-medium-3-5-mistral-api
+- access-open-mistral-small-4-mistral-api
 evidence_ids:
 - src-02abf04db026
 - src-b17514a392bd

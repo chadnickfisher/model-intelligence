@@ -132,8 +132,11 @@ capabilities:
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
-access_ids: []
-price_ids: []
+access_ids:
+- access-2d68e2f9c2b0b599
+- access-31bbc0a780fbd60a
+price_ids:
+- price-426d592774fefebd
 evidence_ids:
 - src-1dac5785145f
 notes: []

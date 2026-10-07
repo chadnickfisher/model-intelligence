@@ -19,13 +19,27 @@ privacy_data_use:
   absent explicit opt-in. Training workflows persist datasets/checkpoints; closed/passthrough scope requires
   separate review."}'
 reliability: []
-model_ids: []
+model_ids:
+- devstral-small-2
+- llama-4-maverick
+- llama-4-scout
+- ministral-3-8b
+- mistral-large-3
+- nemotron-3-ultra
 price_ids:
-- price-providers-serverless-fireworks-62abe22f454b
+- price-59c8f7b228f5d878
 - price-providers-kimi-k3-fireworks-86a9ddc05c65
-- price-providers-serverless-fireworks-1d9324702206
 - price-providers-kimi-k3-fireworks-b8a86cdad69e
+- price-providers-serverless-fireworks-1d9324702206
+- price-providers-serverless-fireworks-62abe22f454b
 access_ids:
+- access-1451bc03a5c0b1c0
+- access-ace07c4443472477
+- access-aed08255fcf4d3a2
+- access-bd4da0ba500e4461
+- access-d3c6d8fb96a0f4cd
+- access-ed152f525cd1dc87
+- access-edc37b41e88d1f80
 - access-providers-access-fireworks-serverless
 evidence_ids:
 - src-24c3404d8b6f

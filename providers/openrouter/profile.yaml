@@ -21,12 +21,18 @@ privacy_data_use:
   logged. Upstream retention/training policy depends on chosen route. Privacy filters can reject incompatible
   providers."}'
 reliability: []
-model_ids: []
+model_ids:
+- mistral-medium-3-5
+- mistral-small-4
 price_ids:
+- price-80f389b248c5136f
+- price-b7f0187ed34bd90f
+- price-providers-byok-openrouter-ad61f93b0f08
 - price-providers-credit-purchases-openrouter-0430bdc1b69f
 - price-providers-credit-purchases-openrouter-e96caea514fe
-- price-providers-byok-openrouter-ad61f93b0f08
 access_ids:
+- access-b99529bc23286dfa
+- access-fa86a41526c1543e
 - access-providers-access-openrouter
 - access-providers-access-openrouter-byok
 evidence_ids:

@@ -166,6 +166,8 @@ capabilities:
     history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
+- access-edc37b41e88d1f80
+- access-fb2f834e50f155d5
 - access-open-devstral-small-2-weights
 price_ids: []
 evidence_ids:

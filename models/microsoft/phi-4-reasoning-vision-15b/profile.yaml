@@ -171,6 +171,7 @@ capabilities:
     history_path: history/migrations/2026-10-07-capabilities.yaml
 performance_characteristics: []
 access_ids:
+- access-cca1c97ff43c61ba
 - access-open-phi-4-reasoning-vision-15b-weights
 price_ids: []
 evidence_ids:

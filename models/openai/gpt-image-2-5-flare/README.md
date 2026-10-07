@@ -44,7 +44,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-2 recorded access route(s); 3 model-specific price record(s).
+5 recorded access route(s); 3 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -77,14 +77,17 @@ Local conditions: Not established in this pass
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
-| openai | Standard / current | input: 5 USD / per 1 million text tokens; cached_input: 1.25 USD / per 1 million text tokens; output: unknown USD / per 1 million text tokens | Input image/text charges; actual output token consumption varies | 2026-10-06 |
 | openai | Standard / current | input: 8 USD / per 1 million image tokens; cached_input: 2 USD / per 1 million image tokens; output: 30 USD / per 1 million image tokens | Input image/text charges; actual output token consumption varies | 2026-10-06 |
+| openai | Standard / current | input: 5 USD / per 1 million text tokens; cached_input: 1.25 USD / per 1 million text tokens; output: unknown USD / per 1 million text tokens | Input image/text charges; actual output token consumption varies | 2026-10-06 |
 | openai | Batch / current | output: 15 USD / per 1 million image output tokens | Not established in this pass | 2026-10-06 |
 
 ## Recorded access routes
 
-- openai / Images API / Responses image-generation tool: Available. quota: Usage tier/account-specific; no fixed image count inferred
+- azure-foundry / Azure OpenAI image generation: GA_documented_numeric_price_unverified. Not established in this pass
+- openai / ChatGPT Images 2.5 / Work / Codex: Conditional consumer/client product; exact account entitlement unverified. Images product is available across tiers; thinking image mode Plus/Pro/Business, Enterprise/Edu described as coming soon.
+- openai / Images API / Responses image-generation tool: officially_documented_not_execution_tested. Not established in this pass
 - openai / ChatGPT Images2.5 / Work / Codex: Images2.5 available across tiers; precise underlying API variant selection in each UI not established. Not established in this pass
+- openai / Images API / Responses image-generation tool: Available. quota: Usage tier/account-specific; no fixed image count inferred
 
 ## Sources
 

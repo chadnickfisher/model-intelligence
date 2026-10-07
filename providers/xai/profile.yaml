@@ -21,14 +21,19 @@ privacy_data_use:
   retained 30 days for audit. Team-level self-serve ZDR where available disables persistent features including
   Files, Collections and Batch."}'
 reliability: []
-model_ids: []
+model_ids:
+- xai-grok-4-7
 price_ids:
-- price-providers-xai-grok-4-7-xai-39519ba1474e
 - price-providers-api-xai-35fe1f107006
 - price-providers-api-xai-507fb7e8423e
 - price-providers-us-regional-api-xai-36d03fc1452f
 - price-providers-voice-api-xai-9fdcfab363b7
+- price-providers-xai-grok-4-7-xai-39519ba1474e
 access_ids:
+- access-143afd43521ef8a6
+- access-3521153690375284
+- access-91b4b7d1111cd11d
+- access-fb40bbbc3a09eb99
 - access-providers-access-xai-api
 - access-providers-access-xai-consumer
 evidence_ids:

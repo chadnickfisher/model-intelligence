@@ -1,0 +1,245 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dated behavior finding",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^behavior-[a-f0-9]{16}$"
+    },
+    "model_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "provider_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "product": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "model_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "harness": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "effort": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "claim": {
+      "type": "string"
+    },
+    "change_type": {
+      "enum": [
+        "model_regression",
+        "service_change",
+        "product_change",
+        "harness_change",
+        "latency",
+        "unresolved"
+      ]
+    },
+    "metrics": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "Metric",
+        "type": "object",
+        "properties": {
+          "kind": {
+            "enum": [
+              "ttft",
+              "throughput",
+              "total_agent_time",
+              "quality",
+              "unspecified"
+            ]
+          },
+          "measurement": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "kind",
+          "measurement"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "reported_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "effective_from": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "status": {
+      "enum": [
+        "ongoing",
+        "resolved",
+        "unknown",
+        "fix_published"
+      ]
+    },
+    "fact_status": {
+      "enum": [
+        "reported",
+        "acknowledged",
+        "measured"
+      ]
+    },
+    "confidence": {
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "supporting_evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(src|obs)-[a-f0-9]{12}$"
+      },
+      "uniqueItems": true
+    },
+    "contradictory_evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(src|obs)-[a-f0-9]{12}$"
+      },
+      "uniqueItems": true
+    },
+    "official_acknowledgment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fix": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "Published fix",
+      "type": "object",
+      "properties": {
+        "published_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "summary": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^(src|obs)-[a-f0-9]{12}$"
+          },
+          "uniqueItems": true
+        },
+        "measured_improvement": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "published_at",
+        "version",
+        "summary",
+        "evidence_ids",
+        "measured_improvement"
+      ],
+      "additionalProperties": false
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "research_details": {
+      "type": "object",
+      "description": "Preserved source research observation; unnormalized fields do not become implied capability or calculator inputs."
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "model_ids",
+    "provider_id",
+    "product",
+    "model_version",
+    "harness",
+    "effort",
+    "claim",
+    "change_type",
+    "metrics",
+    "observed_at",
+    "reported_at",
+    "effective_from",
+    "status",
+    "fact_status",
+    "confidence",
+    "supporting_evidence_ids",
+    "contradictory_evidence_ids",
+    "official_acknowledgment",
+    "fix",
+    "conditions",
+    "notes"
+  ],
+  "additionalProperties": false
+}

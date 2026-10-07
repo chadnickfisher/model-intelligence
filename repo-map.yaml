@@ -12,6 +12,10 @@ canonical:
   aliases: data/aliases.yaml
   observation_history: history/revisions.yaml
   migration_originals: history/migrations/2026-10-07-capabilities.yaml
+  behavior_findings: data/behavior.yaml
+  access_research_coverage: data/access-coverage.yaml
+  benchmarks: data/benchmarks.yaml
+  research_coverage: data/research-coverage.yaml
 indexes:
   models: data/models.yaml
   providers: data/providers.yaml
@@ -30,3 +34,5 @@ query_start:
   local_models: data/models.yaml
   recent_changes: changelog/
   new_releases: data/releases.yaml
+  benchmark_comparison: data/benchmarks.yaml
+  research_accounting: data/research-coverage.yaml

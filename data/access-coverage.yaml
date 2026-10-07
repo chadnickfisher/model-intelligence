@@ -1,0 +1,3369 @@
+schema_version: '1.0'
+records:
+- schema_version: '1.0'
+  id: access-coverage-ai21-jamba2-mini
+  model_id: ai21-jamba2-mini
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-df6753e4eed5
+      - src-904602c680fc
+      - src-10764583d10d
+      - src-cd9a80108d1d
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: documented
+      evidence_ids:
+      - src-df6753e4eed5
+      - src-904602c680fc
+      - src-10764583d10d
+      - src-cd9a80108d1d
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: documented
+      evidence_ids:
+      - src-df6753e4eed5
+      - src-904602c680fc
+      - src-10764583d10d
+      - src-cd9a80108d1d
+      notes:
+      - Weight distribution is separate from inference compute costs.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-cd9a80108d1d
+      - src-dc01b961c57f
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-df6753e4eed5
+  - src-904602c680fc
+  - src-10764583d10d
+  - src-cd9a80108d1d
+  notes:
+  - Cache rates, exact account rate limits and current maximum output not verified.
+  - Add missing model-qualified API and weight-distribution records. Do not attach Jamba Mini 1.5/1.7 partner
+    routes to Jamba2.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-bfl-flux3-video
+  model_id: bfl-flux3-video
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-57a05c45a0b1
+      - src-752c7dd560da
+      - src-2e19eb496679
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-57a05c45a0b1
+  - src-752c7dd560da
+  - src-2e19eb496679
+  notes:
+  - Together per-video listing versus BFL per-second unit requires its exact endpoint pricing verification.
+  - No public FLUX 3 Video weight download verified; FLUX 3 Action is a separate model.
+  - Add missing exact access record; existing HD/UHD prices omit other resolutions/modes.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-claude-fable-5-1
+  model_id: claude-fable-5-1
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-ad9aa6f1b8ed
+      - src-50846cd1ff36
+      - src-58333316475e
+      - src-26606ff14841
+      - src-b2ab15dd01eb
+      - src-f61234c4ee64
+      - src-294ac6d01ed0
+      - src-2f9ece653a0f
+      - src-f1078602a2b4
+      - src-9b374de3e978
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: documented
+      evidence_ids:
+      - src-50846cd1ff36
+      - src-58333316475e
+      notes:
+      - Named conditional consumer/client route; per-account entitlement not tested.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-50846cd1ff36
+      - src-58333316475e
+      notes:
+      - Subscription allowance is separate from API token tariffs.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-ad9aa6f1b8ed
+  - src-50846cd1ff36
+  - src-58333316475e
+  - src-26606ff14841
+  - src-b2ab15dd01eb
+  - src-f61234c4ee64
+  - src-294ac6d01ed0
+  - src-2f9ece653a0f
+  - src-f1078602a2b4
+  - src-9b374de3e978
+  notes:
+  - Individual account access, live remaining quotas, partner discounts and all-region coverage not tested.
+  - Exact numeric Bedrock tariffs not recoverable from checked page; leave unknown rather than importing Anthropic
+    rates.
+  - '{"access_id": "access-proprietary-access-22-0", "action": "split_subscription_BYOK_and_metered_client_context",
+    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-fable-5-1-anthropic-1c9e85bc3ee3",
+    "price-proprietary-claude-fable-5-1-anthropic-d31f844e1fa5"], "methods": ["CLI"], "model_id": "claude-fable-5-1",
+    "product": "Claude Code terminal", "reason": "Claude subscription sign-in, API-key billing, partner billing,
+    included usage and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage;
+    batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan", "a-plans", "a-price",
+    "a-fable-plan"], "specific_correction": "Pro/standard seats do not include Fable 5.1 in base allowance;
+    Max/premium seat inclusion capped at 50% of shared weekly allowance.", "unconditional_join_valid": false,
+    "valid_API_join_only_when": "Anthropic API-key authentication or explicitly documented API-rate Enterprise/usage-credit
+    schedule; not the monthly subscription fee."}'
+  - '{"access_id": "access-proprietary-access-22-ide-0", "action": "split_subscription_BYOK_and_metered_client_context",
+    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-fable-5-1-anthropic-1c9e85bc3ee3",
+    "price-proprietary-claude-fable-5-1-anthropic-d31f844e1fa5"], "methods": ["IDE"], "model_id": "claude-fable-5-1",
+    "product": "Claude Code IDE integrations", "reason": "Claude subscription sign-in, API-key billing, partner
+    billing, included usage and usage credits are distinct. Usage-based Enterprise separately documents API-rate
+    usage; batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan", "a-plans",
+    "a-price", "a-fable-plan"], "specific_correction": "Pro/standard seats do not include Fable 5.1 in base
+    allowance; Max/premium seat inclusion capped at 50% of shared weekly allowance.", "unconditional_join_valid":
+    false, "valid_API_join_only_when": "Anthropic API-key authentication or explicitly documented API-rate
+    Enterprise/usage-credit schedule; not the monthly subscription fee."}'
+  - '{"access_id": "access-proprietary-access-25", "action": "split_subscription_BYOK_and_metered_client_context",
+    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-fable-5-1-anthropic-1c9e85bc3ee3",
+    "price-proprietary-claude-fable-5-1-anthropic-d31f844e1fa5"], "methods": ["chat_subscription"], "model_id":
+    "claude-fable-5-1", "product": "Claude apps", "reason": "Claude subscription sign-in, API-key billing,
+    partner billing, included usage and usage credits are distinct. Usage-based Enterprise separately documents
+    API-rate usage; batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan",
+    "a-plans", "a-price", "a-fable-plan"], "specific_correction": "Pro/standard seats do not include Fable
+    5.1 in base allowance; Max/premium seat inclusion capped at 50% of shared weekly allowance.", "unconditional_join_valid":
+    false, "valid_API_join_only_when": "Anthropic API-key authentication or explicitly documented API-rate
+    Enterprise/usage-credit schedule; not the monthly subscription fee."}'
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-claude-haiku-4-5
+  model_id: claude-haiku-4-5
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-e1910c5126bc
+      - src-50846cd1ff36
+      - src-58333316475e
+      - src-26606ff14841
+      - src-b2ab15dd01eb
+      - src-f61234c4ee64
+      - src-f64988fee771
+      - src-2f9ece653a0f
+      - src-f1078602a2b4
+      - src-e99bd76836c1
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: documented
+      evidence_ids:
+      - src-50846cd1ff36
+      - src-58333316475e
+      notes:
+      - Named conditional consumer/client route; per-account entitlement not tested.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-50846cd1ff36
+      - src-58333316475e
+      notes:
+      - Subscription allowance is separate from API token tariffs.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-e1910c5126bc
+  - src-50846cd1ff36
+  - src-58333316475e
+  - src-26606ff14841
+  - src-b2ab15dd01eb
+  - src-f61234c4ee64
+  - src-f64988fee771
+  - src-2f9ece653a0f
+  - src-f1078602a2b4
+  - src-e99bd76836c1
+  notes:
+  - Individual account access, live remaining quotas, partner discounts and all-region coverage not tested.
+  - Exact numeric Bedrock tariffs not recoverable from checked page; leave unknown rather than importing Anthropic
+    rates.
+  - '{"access_id": "access-proprietary-access-22-3", "action": "split_subscription_BYOK_and_metered_client_context",
+    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-haiku-4-5-anthropic-92db4721bd09",
+    "price-proprietary-claude-haiku-4-5-anthropic-9448cb8b044e"], "methods": ["CLI"], "model_id": "claude-haiku-4-5",
+    "product": "Claude Code terminal", "reason": "Claude subscription sign-in, API-key billing, partner billing,
+    included usage and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage;
+    batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan", "a-plans", "a-price"],
+    "unconditional_join_valid": false, "valid_API_join_only_when": "Anthropic API-key authentication or explicitly
+    documented API-rate Enterprise/usage-credit schedule; not the monthly subscription fee."}'
+  - '{"access_id": "access-proprietary-access-22-ide-3", "action": "split_subscription_BYOK_and_metered_client_context",
+    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-haiku-4-5-anthropic-92db4721bd09",
+    "price-proprietary-claude-haiku-4-5-anthropic-9448cb8b044e"], "methods": ["IDE"], "model_id": "claude-haiku-4-5",
+    "product": "Claude Code IDE integrations", "reason": "Claude subscription sign-in, API-key billing, partner
+    billing, included usage and usage credits are distinct. Usage-based Enterprise separately documents API-rate
+    usage; batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan", "a-plans",
+    "a-price"], "unconditional_join_valid": false, "valid_API_join_only_when": "Anthropic API-key authentication
+    or explicitly documented API-rate Enterprise/usage-credit schedule; not the monthly subscription fee."}'
+  - '{"access_id": "access-proprietary-access-23-1", "action": "split_subscription_BYOK_and_metered_client_context",
+    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-haiku-4-5-anthropic-92db4721bd09",
+    "price-proprietary-claude-haiku-4-5-anthropic-9448cb8b044e"], "methods": ["chat_subscription"], "model_id":
+    "claude-haiku-4-5", "product": "Claude apps", "reason": "Claude subscription sign-in, API-key billing,
+    partner billing, included usage and usage credits are distinct. Usage-based Enterprise separately documents
+    API-rate usage; batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan",
+    "a-plans", "a-price"], "unconditional_join_valid": false, "valid_API_join_only_when": "Anthropic API-key
+    authentication or explicitly documented API-rate Enterprise/usage-credit schedule; not the monthly subscription
+    fee."}'
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-claude-opus-5-5
+  model_id: claude-opus-5-5
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-4d070c5c8c67
+      - src-50846cd1ff36
+      - src-58333316475e
+      - src-26606ff14841
+      - src-b2ab15dd01eb
+      - src-f61234c4ee64
+      - src-1120b9b8680d
+      - src-2f9ece653a0f
+      - src-f1078602a2b4
+      - src-2f9466008c6e
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: documented
+      evidence_ids:
+      - src-50846cd1ff36
+      - src-58333316475e
+      notes:
+      - Named conditional consumer/client route; per-account entitlement not tested.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-50846cd1ff36
+      - src-58333316475e
+      notes:
+      - Subscription allowance is separate from API token tariffs.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-4d070c5c8c67
+  - src-50846cd1ff36
+  - src-58333316475e
+  - src-26606ff14841
+  - src-b2ab15dd01eb
+  - src-f61234c4ee64
+  - src-1120b9b8680d
+  - src-2f9ece653a0f
+  - src-f1078602a2b4
+  - src-2f9466008c6e
+  notes:
+  - Individual account access, live remaining quotas, partner discounts and all-region coverage not tested.
+  - Exact numeric Bedrock tariffs not recoverable from checked page; leave unknown rather than importing Anthropic
+    rates.
+  - '{"access_id": "access-proprietary-access-22-1", "action": "split_subscription_BYOK_and_metered_client_context",
+    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-opus-5-5-anthropic-a9d5d3dc77e4",
+    "price-proprietary-claude-opus-5-5-anthropic-c64de5cd2551"], "methods": ["CLI"], "model_id": "claude-opus-5-5",
+    "product": "Claude Code terminal", "reason": "Claude subscription sign-in, API-key billing, partner billing,
+    included usage and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage;
+    batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan", "a-plans", "a-price"],
+    "unconditional_join_valid": false, "valid_API_join_only_when": "Anthropic API-key authentication or explicitly
+    documented API-rate Enterprise/usage-credit schedule; not the monthly subscription fee."}'
+  - '{"access_id": "access-proprietary-access-22-ide-1", "action": "split_subscription_BYOK_and_metered_client_context",
+    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-opus-5-5-anthropic-a9d5d3dc77e4",
+    "price-proprietary-claude-opus-5-5-anthropic-c64de5cd2551"], "methods": ["IDE"], "model_id": "claude-opus-5-5",
+    "product": "Claude Code IDE integrations", "reason": "Claude subscription sign-in, API-key billing, partner
+    billing, included usage and usage credits are distinct. Usage-based Enterprise separately documents API-rate
+    usage; batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan", "a-plans",
+    "a-price"], "unconditional_join_valid": false, "valid_API_join_only_when": "Anthropic API-key authentication
+    or explicitly documented API-rate Enterprise/usage-credit schedule; not the monthly subscription fee."}'
+  - '{"access_id": "access-proprietary-access-24", "action": "split_subscription_BYOK_and_metered_client_context",
+    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-opus-5-5-anthropic-a9d5d3dc77e4",
+    "price-proprietary-claude-opus-5-5-anthropic-c64de5cd2551"], "methods": ["chat_subscription"], "model_id":
+    "claude-opus-5-5", "product": "Claude apps", "reason": "Claude subscription sign-in, API-key billing, partner
+    billing, included usage and usage credits are distinct. Usage-based Enterprise separately documents API-rate
+    usage; batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan", "a-plans",
+    "a-price"], "unconditional_join_valid": false, "valid_API_join_only_when": "Anthropic API-key authentication
+    or explicitly documented API-rate Enterprise/usage-credit schedule; not the monthly subscription fee."}'
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-claude-sonnet-5-5
+  model_id: claude-sonnet-5-5
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-752375ff0c97
+      - src-50846cd1ff36
+      - src-58333316475e
+      - src-26606ff14841
+      - src-b2ab15dd01eb
+      - src-f61234c4ee64
+      - src-0470ca77e23d
+      - src-2f9ece653a0f
+      - src-f1078602a2b4
+      - src-4e3ca8a95d36
+      - src-90f4749affde
+      - src-8d6f49bb7111
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: documented
+      evidence_ids:
+      - src-50846cd1ff36
+      - src-58333316475e
+      notes:
+      - Named conditional consumer/client route; per-account entitlement not tested.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-50846cd1ff36
+      - src-58333316475e
+      notes:
+      - Subscription allowance is separate from API token tariffs.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-752375ff0c97
+  - src-50846cd1ff36
+  - src-58333316475e
+  - src-26606ff14841
+  - src-b2ab15dd01eb
+  - src-f61234c4ee64
+  - src-0470ca77e23d
+  - src-2f9ece653a0f
+  - src-f1078602a2b4
+  - src-4e3ca8a95d36
+  - src-90f4749affde
+  - src-8d6f49bb7111
+  notes:
+  - Individual account access, live remaining quotas, partner discounts and all-region coverage not tested.
+  - Exact numeric Bedrock tariffs not recoverable from checked page; leave unknown rather than importing Anthropic
+    rates.
+  - '{"access_id": "access-proprietary-access-22-2", "action": "split_subscription_BYOK_and_metered_client_context",
+    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-sonnet-5-5-anthropic-706ffb2ac9c2",
+    "price-proprietary-claude-sonnet-5-5-anthropic-ed2559301c6f"], "methods": ["CLI"], "model_id": "claude-sonnet-5-5",
+    "product": "Claude Code terminal", "reason": "Claude subscription sign-in, API-key billing, partner billing,
+    included usage and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage;
+    batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan", "a-plans", "a-price"],
+    "unconditional_join_valid": false, "valid_API_join_only_when": "Anthropic API-key authentication or explicitly
+    documented API-rate Enterprise/usage-credit schedule; not the monthly subscription fee."}'
+  - '{"access_id": "access-proprietary-access-22-ide-2", "action": "split_subscription_BYOK_and_metered_client_context",
+    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-sonnet-5-5-anthropic-706ffb2ac9c2",
+    "price-proprietary-claude-sonnet-5-5-anthropic-ed2559301c6f"], "methods": ["IDE"], "model_id": "claude-sonnet-5-5",
+    "product": "Claude Code IDE integrations", "reason": "Claude subscription sign-in, API-key billing, partner
+    billing, included usage and usage credits are distinct. Usage-based Enterprise separately documents API-rate
+    usage; batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan", "a-plans",
+    "a-price"], "unconditional_join_valid": false, "valid_API_join_only_when": "Anthropic API-key authentication
+    or explicitly documented API-rate Enterprise/usage-credit schedule; not the monthly subscription fee."}'
+  - '{"access_id": "access-proprietary-access-23-0", "action": "split_subscription_BYOK_and_metered_client_context",
+    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-claude-sonnet-5-5-anthropic-706ffb2ac9c2",
+    "price-proprietary-claude-sonnet-5-5-anthropic-ed2559301c6f"], "methods": ["chat_subscription"], "model_id":
+    "claude-sonnet-5-5", "product": "Claude apps", "reason": "Claude subscription sign-in, API-key billing,
+    partner billing, included usage and usage credits are distinct. Usage-based Enterprise separately documents
+    API-rate usage; batch rows do not apply to interactive clients.", "source_ids": ["a-byok", "a-code-plan",
+    "a-plans", "a-price"], "unconditional_join_valid": false, "valid_API_join_only_when": "Anthropic API-key
+    authentication or explicitly documented API-rate Enterprise/usage-credit schedule; not the monthly subscription
+    fee."}'
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-cohere-command-a-plus
+  model_id: cohere-command-a-plus
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-4b5fc50d9047
+      - src-e95264542f67
+      - src-73e03ec6d5cd
+      - src-a03104fba002
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-4b5fc50d9047
+      - src-7a929ac1ccc5
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-4b5fc50d9047
+  - src-e95264542f67
+  - src-73e03ec6d5cd
+  - src-a03104fba002
+  notes:
+  - Exact Azure deployment type, price and regions not verified.
+  - No public Command A+ production per-token tariff found in inspected official pricing and exact-model pages.
+  - Weight license and download gate must remain model-specific.
+  - No model-qualified access or price in baseline. Add capped evaluation, quote-based production and qualified
+    partner listing.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-cohere-embed-5-fast
+  model_id: cohere-embed-5-fast
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-9d4f7ae81230
+      - src-9b35fe262e17
+      - src-73e03ec6d5cd
+      - src-9277f5b6b599
+      - src-a03104fba002
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-9d4f7ae81230
+  - src-9b35fe262e17
+  - src-73e03ec6d5cd
+  - src-9277f5b6b599
+  - src-a03104fba002
+  notes:
+  - Images-to-billed-token conversion and partner-specific costs remain unverified.
+  - No public downloadable weight repository verified for these proprietary embedding variants; self-hosting
+    availability is enterprise deployment, not automatic open weights.
+  - Existing text rate omits separate .40 USD/M image input charge. Add exact access joins and dedicated alternatives.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-cohere-embed-5-pro
+  model_id: cohere-embed-5-pro
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-9d4f7ae81230
+      - src-9b35fe262e17
+      - src-73e03ec6d5cd
+      - src-ab75f3e33962
+      - src-a03104fba002
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-9d4f7ae81230
+  - src-9b35fe262e17
+  - src-73e03ec6d5cd
+  - src-ab75f3e33962
+  - src-a03104fba002
+  notes:
+  - Images-to-billed-token conversion and partner-specific costs remain unverified.
+  - No public downloadable weight repository verified for these proprietary embedding variants; self-hosting
+    availability is enterprise deployment, not automatic open weights.
+  - Existing text rate omits separate .40 USD/M image input charge. Add exact access joins and dedicated alternatives.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-cohere-north-small-translate
+  model_id: cohere-north-small-translate
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-1dac5785145f
+      - src-e95264542f67
+      - src-a03104fba002
+      - src-425ce7e07108
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: documented
+      evidence_ids:
+      - src-1dac5785145f
+      - src-e95264542f67
+      - src-a03104fba002
+      - src-425ce7e07108
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: documented
+      evidence_ids:
+      - src-1dac5785145f
+      - src-e95264542f67
+      - src-a03104fba002
+      - src-425ce7e07108
+      notes:
+      - Weight distribution is separate from inference compute costs.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-1dac5785145f
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-1dac5785145f
+  - src-e95264542f67
+  - src-a03104fba002
+  - src-425ce7e07108
+  notes:
+  - Production tariff and model-specific RPM not published in inspected sources.
+  - Add missing model access and free-evaluation rate records with restrictions; HF provider absence is scoped
+    only to HF.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-deepseek-v4-1-flash
+  model_id: deepseek-v4-1-flash
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-280758cc57a6
+      - src-b0caa8675a4a
+      - src-95ebabb9d4ec
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-525e7f64ea10
+      - src-5c348986a151
+      - src-2034e17f9f4e
+      - src-280758cc57a6
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-280758cc57a6
+  - src-b0caa8675a4a
+  - src-95ebabb9d4ec
+  notes:
+  - Exact free consumer-chat entitlement and consumer model selector were not established by inspected pricing/API
+    sources.
+  - HF-discovered extra providers are candidates, not current cheapest-provider conclusions.
+  - Replace canonical-ID-as-alias with provider exact alias. DeepSeek legacy flash names now resolve to V4.1
+    Flash; not immutable older versions.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-deepseek-v4-pro-0813
+  model_id: deepseek-v4-pro-0813
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-280758cc57a6
+      - src-b0caa8675a4a
+      - src-95ebabb9d4ec
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-f6adda98b53a
+      - src-b96a45c2e083
+      - src-280758cc57a6
+      - src-2bf74f8ecb84
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-280758cc57a6
+  - src-b0caa8675a4a
+  - src-95ebabb9d4ec
+  notes:
+  - Exact free consumer-chat entitlement and consumer model selector were not established by inspected pricing/API
+    sources.
+  - HF-discovered extra providers are candidates, not current cheapest-provider conclusions.
+  - Exact first-party alias deepseek-v4-pro maps to checkpoint V4-Pro-0813; historical first-party offers remain
+    dated.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-devstral-small-2
+  model_id: devstral-small-2
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-b3710be7ac48
+      - src-0a13c6fd003d
+      - src-171ebc11bb0b
+      - src-f5a5dc8f8871
+      - src-f999f0de45ca
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-fd9a0c74ec31
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-b3710be7ac48
+  - src-0a13c6fd003d
+  - src-171ebc11bb0b
+  - src-f5a5dc8f8871
+  - src-f999f0de45ca
+  notes:
+  - No current first-party token tariff verified; launch-period rates are historical.
+  - Exact current retirement date not established.
+  - Do not turn missing token tariff into free inference. Preserve deprecated first-party route and positive
+    dedicated route separately from local weights.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-elevenlabs-eleven-v4
+  model_id: elevenlabs-eleven-v4
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-bcc14c31357b
+      - src-ca21f5099e32
+      - src-2166fd7f06f8
+      - src-a063315a377b
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: documented
+      evidence_ids:
+      - src-bcc14c31357b
+      - src-ca21f5099e32
+      - src-2166fd7f06f8
+      - src-a063315a377b
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-bcc14c31357b
+      - src-ca21f5099e32
+      - src-2166fd7f06f8
+      - src-a063315a377b
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-bcc14c31357b
+  - src-ca21f5099e32
+  - src-2166fd7f06f8
+  - src-a063315a377b
+  notes:
+  - Creative subscription is separate from ElevenAPI; do not assert shared billing from branding.
+  - Docs overview and speech guide differ on which v4 HTTP endpoints are supported; preserve route-specific
+    documentation.
+  - Add exact model-qualified API route. Existing .022 price must be dated as promotional; subscription fee
+    and API character price are different units.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-gemini-3-1-pro-preview
+  model_id: gemini-3-1-pro-preview
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-b88c4950bbf3
+      - src-10e39629c3d3
+      - src-8eb2666e2af7
+      - src-f1078602a2b4
+      - src-d3e41dcc2800
+      - src-07ba3e0f52cc
+      - src-24717f621aa3
+      - src-32569198c7b5
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: documented
+      evidence_ids:
+      - src-24717f621aa3
+      notes:
+      - Named conditional consumer/client route; per-account entitlement not tested.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-24717f621aa3
+      notes:
+      - Subscription allowance is separate from API token tariffs.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-b88c4950bbf3
+  - src-10e39629c3d3
+  - src-8eb2666e2af7
+  - src-f1078602a2b4
+  - src-d3e41dcc2800
+  - src-07ba3e0f52cc
+  - src-24717f621aa3
+  - src-32569198c7b5
+  notes:
+  - Actual per-account quota, region eligibility, plan subscription and remaining credits are not known; no
+    account access or inference used.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-gemini-3-5-flash-lite
+  model_id: gemini-3-5-flash-lite
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-b88c4950bbf3
+      - src-10e39629c3d3
+      - src-8eb2666e2af7
+      - src-f1078602a2b4
+      - src-d3e41dcc2800
+      - src-f7fe39222f11
+      - src-04e5894ab585
+      - src-2cc31a5ba4fd
+      - src-907da06a6fbf
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-b88c4950bbf3
+  - src-10e39629c3d3
+  - src-8eb2666e2af7
+  - src-f1078602a2b4
+  - src-d3e41dcc2800
+  - src-f7fe39222f11
+  - src-04e5894ab585
+  - src-2cc31a5ba4fd
+  - src-907da06a6fbf
+  notes:
+  - Actual per-account quota, region eligibility, plan subscription and remaining credits are not known; no
+    account access or inference used.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-gemini-3-8-flash
+  model_id: gemini-3-8-flash
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-b88c4950bbf3
+      - src-10e39629c3d3
+      - src-8eb2666e2af7
+      - src-f1078602a2b4
+      - src-d3e41dcc2800
+      - src-116c1a7f3be0
+      - src-1e5b8618d900
+      - src-2cc31a5ba4fd
+      - src-a9c03a9c4009
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-b88c4950bbf3
+  - src-10e39629c3d3
+  - src-8eb2666e2af7
+  - src-f1078602a2b4
+  - src-d3e41dcc2800
+  - src-116c1a7f3be0
+  - src-1e5b8618d900
+  - src-2cc31a5ba4fd
+  - src-a9c03a9c4009
+  notes:
+  - Actual per-account quota, region eligibility, plan subscription and remaining credits are not known; no
+    account access or inference used.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-gemini-3-8-live
+  model_id: gemini-3-8-live
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-b88c4950bbf3
+      - src-10e39629c3d3
+      - src-8eb2666e2af7
+      - src-f1078602a2b4
+      - src-d3e41dcc2800
+      - src-04c98c33c883
+      - src-e749d247ebac
+      - src-850203855328
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: documented
+      evidence_ids:
+      - src-850203855328
+      notes:
+      - Named conditional consumer/client route; per-account entitlement not tested.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-850203855328
+      notes:
+      - Subscription allowance is separate from API token tariffs.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-b88c4950bbf3
+  - src-10e39629c3d3
+  - src-8eb2666e2af7
+  - src-f1078602a2b4
+  - src-d3e41dcc2800
+  - src-04c98c33c883
+  - src-e749d247ebac
+  - src-850203855328
+  notes:
+  - Actual per-account quota, region eligibility, plan subscription and remaining credits are not known; no
+    account access or inference used.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-gemini-3-pro-image
+  model_id: gemini-3-pro-image
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-b88c4950bbf3
+      - src-10e39629c3d3
+      - src-8eb2666e2af7
+      - src-f1078602a2b4
+      - src-d3e41dcc2800
+      - src-21fe0d4c63a7
+      - src-2cc31a5ba4fd
+      - src-a0d9ca9d610e
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: documented
+      evidence_ids:
+      - src-d3e41dcc2800
+      notes:
+      - Named conditional consumer/client route; per-account entitlement not tested.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-d3e41dcc2800
+      notes:
+      - Subscription allowance is separate from API token tariffs.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-b88c4950bbf3
+  - src-10e39629c3d3
+  - src-8eb2666e2af7
+  - src-f1078602a2b4
+  - src-d3e41dcc2800
+  - src-21fe0d4c63a7
+  - src-2cc31a5ba4fd
+  - src-a0d9ca9d610e
+  notes:
+  - Actual per-account quota, region eligibility, plan subscription and remaining credits are not known; no
+    account access or inference used.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-gemini-omni-1-1-flash
+  model_id: gemini-omni-1-1-flash
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-b88c4950bbf3
+      - src-10e39629c3d3
+      - src-8eb2666e2af7
+      - src-f1078602a2b4
+      - src-d3e41dcc2800
+      - src-3b883af04aa0
+      - src-7d8f7d49cd6d
+      - src-c52229f1bfad
+      - src-f40c983ca27f
+      - src-f661101cf480
+      - src-95f9c863cd3a
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: documented
+      evidence_ids:
+      - src-7d8f7d49cd6d
+      - src-f661101cf480
+      notes:
+      - Named conditional consumer/client route; per-account entitlement not tested.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-7d8f7d49cd6d
+      - src-f661101cf480
+      notes:
+      - Subscription allowance is separate from API token tariffs.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-b88c4950bbf3
+  - src-10e39629c3d3
+  - src-8eb2666e2af7
+  - src-f1078602a2b4
+  - src-d3e41dcc2800
+  - src-3b883af04aa0
+  - src-7d8f7d49cd6d
+  - src-c52229f1bfad
+  - src-f40c983ca27f
+  - src-f661101cf480
+  - src-95f9c863cd3a
+  notes:
+  - Developer API alias is stable gemini-omni-1.1-flash; Cloud alias is gemini-omni-1.1-flash-preview with
+    different limits. Do not collapse exact routes.
+  - Actual per-account quota, region eligibility, plan subscription and remaining credits are not known; no
+    account access or inference used.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-gemini4argon
+  model_id: gemini4argon
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-b88c4950bbf3
+  - src-10e39629c3d3
+  - src-8eb2666e2af7
+  - src-f1078602a2b4
+  - src-d3e41dcc2800
+  - src-6381db252dee
+  - src-2cc31a5ba4fd
+  - src-ead011f0c43e
+  notes:
+  - Exact endpoint, general availability date, introductory expiry and current billable tariff remain unverified.
+  - No current Argon Cloud/Vertex route established from pricing/catalog/release sources; not a declaration
+    of nonexistence.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-gemma-4-31b-it
+  model_id: gemma-4-31b-it
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-f42878a20d06
+      - src-b88c4950bbf3
+      - src-8e9cfa8a1129
+      - src-0ef09481d565
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-fc87bfb1eae7
+      - src-10e39629c3d3
+      - src-10b631f7c7a9
+      - src-a24fd97eb3d0
+      - src-ded81031faae
+      - src-0835beeb534f
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-f42878a20d06
+  - src-b88c4950bbf3
+  - src-8e9cfa8a1129
+  - src-0ef09481d565
+  notes:
+  - Exact account-specific free quota remains unknown.
+  - Separate image-token conversion not verified.
+  - Add explicit weight-download route and paid Novita alternative. Do not label all hosted Gemma usage free
+    from first-party free tier.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-glm-5-3
+  model_id: glm-5-3
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-7e6c3dd9add1
+      - src-667e800254a1
+      - src-6e8a610bfcad
+      - src-cb03524547ec
+      - src-808951346360
+      - src-4cecb0fd2f3d
+      - src-b0caa8675a4a
+      - src-57a0e065d1e9
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-7e6c3dd9add1
+      - src-667e800254a1
+      - src-6e8a610bfcad
+      - src-cb03524547ec
+      - src-808951346360
+      - src-4cecb0fd2f3d
+      - src-b0caa8675a4a
+      - src-57a0e065d1e9
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-dc71eaf3c8b8
+      - src-4424584ee706
+      - src-26ed078844ac
+      - src-d1e7ac1dfe19
+      - src-7e6c3dd9add1
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-7e6c3dd9add1
+  - src-667e800254a1
+  - src-6e8a610bfcad
+  - src-cb03524547ec
+  - src-808951346360
+  - src-4cecb0fd2f3d
+  - src-b0caa8675a4a
+  - src-57a0e065d1e9
+  notes:
+  - Current standalone Pro/Max monthly fees not verified; only documented18 USDentrypoint captured.
+  - Numeric RPM/TPM and media-token conversion not verified.
+  - 'Cancellation lead time conflicts: usage policy 3 days versus FAQ 24 hours; do not choose silently.'
+  - Add subscription-authenticated coding route without implying unrestricted API access. Preserve per-provider
+    cache differences.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-glm-5-3-flash
+  model_id: glm-5-3-flash
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-80c359151519
+      - src-667e800254a1
+      - src-6e8a610bfcad
+      - src-cb03524547ec
+      - src-808951346360
+      - src-4cecb0fd2f3d
+      - src-b0caa8675a4a
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-80c359151519
+      - src-667e800254a1
+      - src-6e8a610bfcad
+      - src-cb03524547ec
+      - src-808951346360
+      - src-4cecb0fd2f3d
+      - src-b0caa8675a4a
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-04173aa90698
+      - src-5302786105ea
+      - src-b02205ef3bed
+      - src-667e800254a1
+      - src-80c359151519
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-80c359151519
+  - src-667e800254a1
+  - src-6e8a610bfcad
+  - src-cb03524547ec
+  - src-808951346360
+  - src-4cecb0fd2f3d
+  - src-b0caa8675a4a
+  notes:
+  - Current standalone Pro/Max monthly fees not verified; only documented18 USDentrypoint captured.
+  - Numeric RPM/TPM and media-token conversion not verified.
+  - 'Cancellation lead time conflicts: usage policy 3 days versus FAQ 24 hours; do not choose silently.'
+  - Add subscription-authenticated coding route without implying unrestricted API access. Preserve per-provider
+    cache differences.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-gpt-6-1-sol
+  model_id: gpt-6-1-sol
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-5906a70e58c6
+      - src-00eaf917ab11
+      - src-0cfdd4c3ce00
+      - src-5f85c478f0bc
+      - src-b62a5d4c8c44
+      - src-3fde053dd497
+      - src-7b98d3cafcd3
+      - src-4cfee6e9428c
+      - src-aaf4addbc3e1
+      - src-2f9ece653a0f
+      - src-f2dca02215ef
+      - src-bab0e18b2802
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: documented
+      evidence_ids:
+      - src-0cfdd4c3ce00
+      - src-f2dca02215ef
+      notes:
+      - Named conditional consumer/client route; per-account entitlement not tested.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-0cfdd4c3ce00
+      - src-f2dca02215ef
+      notes:
+      - Subscription allowance is separate from API token tariffs.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-5906a70e58c6
+  - src-00eaf917ab11
+  - src-0cfdd4c3ce00
+  - src-5f85c478f0bc
+  - src-b62a5d4c8c44
+  - src-3fde053dd497
+  - src-7b98d3cafcd3
+  - src-4cfee6e9428c
+  - src-aaf4addbc3e1
+  - src-2f9ece653a0f
+  - src-f2dca02215ef
+  - src-bab0e18b2802
+  notes:
+  - No gpt-6.1-sol row in the read API Ultrafast pricing table; do not transfer Astra Ultrafast rates or a
+    launch promise. Complimentary-token page names gpt-6-sol, not exact gpt-6.1-sol; exact 6.1 eligibility
+    unverified.
+  - '{"access_id": "access-proprietary-access-3-1", "action": "split_authentication_and_billing_context", "baseline_billing_methods":
+    ["metered-api"], "baseline_price_ids": ["price-proprietary-gpt-6-1-sol-openai-d3ef0d0fec3c", "price-proprietary-gpt-6-1-sol-openai-6c4abf3b3f1c",
+    "price-proprietary-gpt-6-1-sol-openai-4aad5754e49e", "price-proprietary-gpt-6-1-sol-openai-9819b7b75d61",
+    "price-proprietary-gpt-6-1-sol-openai-7809f5982047"], "methods": ["agent_workspace"], "model_id": "gpt-6-1-sol",
+    "product": "ChatGPT Work", "reason": "ChatGPT sign-in draws included/credit usage; BYOK uses API rates.
+    Enterprise USD is separately documented with Codex no-cache-write and Astra no-long-context exceptions.",
+    "source_ids": ["o-work", "o-codex", "o-enterprise"], "unconditional_join_valid": false, "valid_API_join_only_when":
+    "Codex CLI/IDE authenticated using OpenAI API key and the exact model/service tier is selected. Batch tariff
+    is not an interactive tariff."}'
+  - '{"access_id": "access-proprietary-access-4-1", "action": "split_authentication_and_billing_context", "baseline_billing_methods":
+    ["metered-api"], "baseline_price_ids": ["price-proprietary-gpt-6-1-sol-openai-d3ef0d0fec3c", "price-proprietary-gpt-6-1-sol-openai-6c4abf3b3f1c",
+    "price-proprietary-gpt-6-1-sol-openai-4aad5754e49e", "price-proprietary-gpt-6-1-sol-openai-9819b7b75d61",
+    "price-proprietary-gpt-6-1-sol-openai-7809f5982047"], "methods": ["CLI"], "model_id": "gpt-6-1-sol", "product":
+    "Codex CLI", "reason": "ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise USD
+    is separately documented with Codex no-cache-write and Astra no-long-context exceptions.", "source_ids":
+    ["o-work", "o-codex", "o-enterprise"], "unconditional_join_valid": false, "valid_API_join_only_when": "Codex
+    CLI/IDE authenticated using OpenAI API key and the exact model/service tier is selected. Batch tariff is
+    not an interactive tariff."}'
+  - '{"access_id": "access-proprietary-access-4-ide-1", "action": "split_authentication_and_billing_context",
+    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-gpt-6-1-sol-openai-d3ef0d0fec3c",
+    "price-proprietary-gpt-6-1-sol-openai-6c4abf3b3f1c", "price-proprietary-gpt-6-1-sol-openai-4aad5754e49e",
+    "price-proprietary-gpt-6-1-sol-openai-9819b7b75d61", "price-proprietary-gpt-6-1-sol-openai-7809f5982047"],
+    "methods": ["IDE"], "model_id": "gpt-6-1-sol", "product": "Codex IDE extension", "reason": "ChatGPT sign-in
+    draws included/credit usage; BYOK uses API rates. Enterprise USD is separately documented with Codex no-cache-write
+    and Astra no-long-context exceptions.", "source_ids": ["o-work", "o-codex", "o-enterprise"], "unconditional_join_valid":
+    false, "valid_API_join_only_when": "Codex CLI/IDE authenticated using OpenAI API key and the exact model/service
+    tier is selected. Batch tariff is not an interactive tariff."}'
+  - '{"access_id": "access-proprietary-access-5-0", "action": "remove_current_price_join_and_mark_explicitly_not_available",
+    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-gpt-6-1-sol-openai-d3ef0d0fec3c",
+    "price-proprietary-gpt-6-1-sol-openai-6c4abf3b3f1c", "price-proprietary-gpt-6-1-sol-openai-4aad5754e49e",
+    "price-proprietary-gpt-6-1-sol-openai-9819b7b75d61", "price-proprietary-gpt-6-1-sol-openai-7809f5982047"],
+    "methods": ["chat_subscription"], "model_id": "gpt-6-1-sol", "product": "ChatGPT Chat", "reason": "Official
+    help and model launch explicitly exclude regular Chat.", "source_ids": ["o-work"], "unconditional_join_valid":
+    false}'
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-gpt-6-astra
+  model_id: gpt-6-astra
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-67b4ce9b4e6a
+      - src-00eaf917ab11
+      - src-0cfdd4c3ce00
+      - src-5f85c478f0bc
+      - src-b62a5d4c8c44
+      - src-3fde053dd497
+      - src-7b98d3cafcd3
+      - src-4cfee6e9428c
+      - src-2ad78ae6ad90
+      - src-2f9ece653a0f
+      - src-b5c40f486b70
+      - src-ea74e2fffbc5
+      - src-dd3c176ae552
+      - src-bab0e18b2802
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: documented
+      evidence_ids:
+      - src-b62a5d4c8c44
+      notes:
+      - Named conditional consumer/client route; per-account entitlement not tested.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-b62a5d4c8c44
+      notes:
+      - Subscription allowance is separate from API token tariffs.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-67b4ce9b4e6a
+  - src-00eaf917ab11
+  - src-0cfdd4c3ce00
+  - src-5f85c478f0bc
+  - src-b62a5d4c8c44
+  - src-3fde053dd497
+  - src-7b98d3cafcd3
+  - src-4cfee6e9428c
+  - src-2ad78ae6ad90
+  - src-2f9ece653a0f
+  - src-b5c40f486b70
+  - src-ea74e2fffbc5
+  - src-dd3c176ae552
+  - src-bab0e18b2802
+  notes:
+  - '{"access_id": "access-proprietary-access-2", "action": "split_authentication_and_billing_context", "baseline_billing_methods":
+    ["metered-api"], "baseline_price_ids": ["price-proprietary-gpt-6-astra-openai-3d5b2153d0ca", "price-proprietary-gpt-6-astra-openai-83dbee0ec140",
+    "price-proprietary-gpt-6-astra-openai-32a917ee1b7b", "price-proprietary-gpt-6-astra-openai-e68876e21c23",
+    "price-proprietary-gpt-6-astra-openai-4a3725464c5e", "price-proprietary-gpt-6-astra-openai-749a19560f3b"],
+    "entitlement_correction": "Current Astra-powered Chat access is Pro $100/$200, Business and Enterprise;
+    Plus belongs to Work/Codex.", "methods": ["chat_subscription"], "model_id": "gpt-6-astra", "product": "ChatGPT",
+    "reason": "ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise USD is separately
+    documented with Codex no-cache-write and Astra no-long-context exceptions.", "source_ids": ["o-work", "o-codex",
+    "o-enterprise"], "unconditional_join_valid": false, "valid_API_join_only_when": "Codex CLI/IDE authenticated
+    using OpenAI API key and the exact model/service tier is selected. Batch tariff is not an interactive tariff."}'
+  - '{"access_id": "access-proprietary-access-3-0", "action": "split_authentication_and_billing_context", "baseline_billing_methods":
+    ["metered-api"], "baseline_price_ids": ["price-proprietary-gpt-6-astra-openai-3d5b2153d0ca", "price-proprietary-gpt-6-astra-openai-83dbee0ec140",
+    "price-proprietary-gpt-6-astra-openai-32a917ee1b7b", "price-proprietary-gpt-6-astra-openai-e68876e21c23",
+    "price-proprietary-gpt-6-astra-openai-4a3725464c5e", "price-proprietary-gpt-6-astra-openai-749a19560f3b"],
+    "methods": ["agent_workspace"], "model_id": "gpt-6-astra", "product": "ChatGPT Work", "reason": "ChatGPT
+    sign-in draws included/credit usage; BYOK uses API rates. Enterprise USD is separately documented with
+    Codex no-cache-write and Astra no-long-context exceptions.", "source_ids": ["o-work", "o-codex", "o-enterprise"],
+    "unconditional_join_valid": false, "valid_API_join_only_when": "Codex CLI/IDE authenticated using OpenAI
+    API key and the exact model/service tier is selected. Batch tariff is not an interactive tariff."}'
+  - '{"access_id": "access-proprietary-access-4-0", "action": "split_authentication_and_billing_context", "baseline_billing_methods":
+    ["metered-api"], "baseline_price_ids": ["price-proprietary-gpt-6-astra-openai-3d5b2153d0ca", "price-proprietary-gpt-6-astra-openai-83dbee0ec140",
+    "price-proprietary-gpt-6-astra-openai-32a917ee1b7b", "price-proprietary-gpt-6-astra-openai-e68876e21c23",
+    "price-proprietary-gpt-6-astra-openai-4a3725464c5e", "price-proprietary-gpt-6-astra-openai-749a19560f3b"],
+    "methods": ["CLI"], "model_id": "gpt-6-astra", "product": "Codex CLI", "reason": "ChatGPT sign-in draws
+    included/credit usage; BYOK uses API rates. Enterprise USD is separately documented with Codex no-cache-write
+    and Astra no-long-context exceptions.", "source_ids": ["o-work", "o-codex", "o-enterprise"], "unconditional_join_valid":
+    false, "valid_API_join_only_when": "Codex CLI/IDE authenticated using OpenAI API key and the exact model/service
+    tier is selected. Batch tariff is not an interactive tariff."}'
+  - '{"access_id": "access-proprietary-access-4-ide-0", "action": "split_authentication_and_billing_context",
+    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-gpt-6-astra-openai-3d5b2153d0ca",
+    "price-proprietary-gpt-6-astra-openai-83dbee0ec140", "price-proprietary-gpt-6-astra-openai-32a917ee1b7b",
+    "price-proprietary-gpt-6-astra-openai-e68876e21c23", "price-proprietary-gpt-6-astra-openai-4a3725464c5e",
+    "price-proprietary-gpt-6-astra-openai-749a19560f3b"], "methods": ["IDE"], "model_id": "gpt-6-astra", "product":
+    "Codex IDE extension", "reason": "ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise
+    USD is separately documented with Codex no-cache-write and Astra no-long-context exceptions.", "source_ids":
+    ["o-work", "o-codex", "o-enterprise"], "unconditional_join_valid": false, "valid_API_join_only_when": "Codex
+    CLI/IDE authenticated using OpenAI API key and the exact model/service tier is selected. Batch tariff is
+    not an interactive tariff."}'
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-gpt-6-luna
+  model_id: gpt-6-luna
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-f00960a11928
+      - src-00eaf917ab11
+      - src-0cfdd4c3ce00
+      - src-5f85c478f0bc
+      - src-b62a5d4c8c44
+      - src-3fde053dd497
+      - src-7b98d3cafcd3
+      - src-4cfee6e9428c
+      - src-f10ac13385d4
+      - src-2f9ece653a0f
+      - src-608eb672ebb7
+      - src-dd3c176ae552
+      - src-bab0e18b2802
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: documented
+      evidence_ids:
+      - src-0cfdd4c3ce00
+      - src-608eb672ebb7
+      notes:
+      - Named conditional consumer/client route; per-account entitlement not tested.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-0cfdd4c3ce00
+      - src-608eb672ebb7
+      notes:
+      - Subscription allowance is separate from API token tariffs.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-f00960a11928
+  - src-00eaf917ab11
+  - src-0cfdd4c3ce00
+  - src-5f85c478f0bc
+  - src-b62a5d4c8c44
+  - src-3fde053dd497
+  - src-7b98d3cafcd3
+  - src-4cfee6e9428c
+  - src-f10ac13385d4
+  - src-2f9ece653a0f
+  - src-608eb672ebb7
+  - src-dd3c176ae552
+  - src-bab0e18b2802
+  notes:
+  - AWS exact card direct open redirected empty, while targeted official search returned full pricing and alias
+    tables. Treat as index-verified, not fresh live-page verified.
+  - '{"access_id": "access-proprietary-access-3-2", "action": "split_authentication_and_billing_context", "baseline_billing_methods":
+    ["metered-api"], "baseline_price_ids": ["price-proprietary-gpt-6-luna-openai-f641ecfe6181", "price-proprietary-gpt-6-luna-openai-55f5c3505fba",
+    "price-proprietary-gpt-6-luna-openai-2a740cb6d4c7", "price-proprietary-gpt-6-luna-openai-634d24acb791",
+    "price-proprietary-gpt-6-luna-openai-46f5117770dd"], "methods": ["agent_workspace"], "model_id": "gpt-6-luna",
+    "product": "ChatGPT Work", "reason": "ChatGPT sign-in draws included/credit usage; BYOK uses API rates.
+    Enterprise USD is separately documented with Codex no-cache-write and Astra no-long-context exceptions.",
+    "source_ids": ["o-work", "o-codex", "o-enterprise"], "unconditional_join_valid": false, "valid_API_join_only_when":
+    "Codex CLI/IDE authenticated using OpenAI API key and the exact model/service tier is selected. Batch tariff
+    is not an interactive tariff."}'
+  - '{"access_id": "access-proprietary-access-4-2", "action": "split_authentication_and_billing_context", "baseline_billing_methods":
+    ["metered-api"], "baseline_price_ids": ["price-proprietary-gpt-6-luna-openai-f641ecfe6181", "price-proprietary-gpt-6-luna-openai-55f5c3505fba",
+    "price-proprietary-gpt-6-luna-openai-2a740cb6d4c7", "price-proprietary-gpt-6-luna-openai-634d24acb791",
+    "price-proprietary-gpt-6-luna-openai-46f5117770dd"], "methods": ["CLI"], "model_id": "gpt-6-luna", "product":
+    "Codex CLI", "reason": "ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise USD
+    is separately documented with Codex no-cache-write and Astra no-long-context exceptions.", "source_ids":
+    ["o-work", "o-codex", "o-enterprise"], "unconditional_join_valid": false, "valid_API_join_only_when": "Codex
+    CLI/IDE authenticated using OpenAI API key and the exact model/service tier is selected. Batch tariff is
+    not an interactive tariff."}'
+  - '{"access_id": "access-proprietary-access-4-ide-2", "action": "split_authentication_and_billing_context",
+    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-gpt-6-luna-openai-f641ecfe6181",
+    "price-proprietary-gpt-6-luna-openai-55f5c3505fba", "price-proprietary-gpt-6-luna-openai-2a740cb6d4c7",
+    "price-proprietary-gpt-6-luna-openai-634d24acb791", "price-proprietary-gpt-6-luna-openai-46f5117770dd"],
+    "methods": ["IDE"], "model_id": "gpt-6-luna", "product": "Codex IDE extension", "reason": "ChatGPT sign-in
+    draws included/credit usage; BYOK uses API rates. Enterprise USD is separately documented with Codex no-cache-write
+    and Astra no-long-context exceptions.", "source_ids": ["o-work", "o-codex", "o-enterprise"], "unconditional_join_valid":
+    false, "valid_API_join_only_when": "Codex CLI/IDE authenticated using OpenAI API key and the exact model/service
+    tier is selected. Batch tariff is not an interactive tariff."}'
+  - '{"access_id": "access-proprietary-access-5-1", "action": "remove_current_price_join_and_mark_explicitly_not_available",
+    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-gpt-6-luna-openai-f641ecfe6181",
+    "price-proprietary-gpt-6-luna-openai-55f5c3505fba", "price-proprietary-gpt-6-luna-openai-2a740cb6d4c7",
+    "price-proprietary-gpt-6-luna-openai-634d24acb791", "price-proprietary-gpt-6-luna-openai-46f5117770dd"],
+    "methods": ["chat_subscription"], "model_id": "gpt-6-luna", "product": "ChatGPT Chat", "reason": "Official
+    help and model launch explicitly exclude regular Chat.", "source_ids": ["o-work"], "unconditional_join_valid":
+    false}'
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-gpt-image-2-5-flare
+  model_id: gpt-image-2-5-flare
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-cee7a5257e77
+      - src-00eaf917ab11
+      - src-df583c7c7998
+      - src-259c8fd88c0f
+      - src-7b98d3cafcd3
+      - src-3d0e0989e627
+      - src-4cfee6e9428c
+      - src-2f9ece653a0f
+      - src-a9ce2d562929
+      - src-b62a5d4c8c44
+      - src-bab0e18b2802
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-cee7a5257e77
+  - src-00eaf917ab11
+  - src-df583c7c7998
+  - src-259c8fd88c0f
+  - src-7b98d3cafcd3
+  - src-3d0e0989e627
+  - src-4cfee6e9428c
+  - src-2f9ece653a0f
+  - src-a9ce2d562929
+  - src-b62a5d4c8c44
+  - src-bab0e18b2802
+  notes:
+  - Azure current numeric rates not retrieved; do not copy direct OpenAI rate.
+  - No model-specific Bedrock route established in checked Bedrock pricing/compatibility and exact-name AWS
+    search. This is unverified, not unavailable.
+  - Enterprise rate card names GPT-Image-2.0, not this 2.5 variant. Equal numerical API rates do not authorize
+    a 2.5 client price join.
+  - '{"access_id": "access-proprietary-access-10", "action": "remove_unconditional_API_join_and_preserve_unresolved_UI_variant",
+    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-gpt-image-2-5-flare-openai-f37e16009992",
+    "price-proprietary-gpt-image-2-5-flare-openai-ac94b6b07830", "price-proprietary-gpt-image-2-5-flare-openai-f6731f24dc2e"],
+    "methods": ["chat_subscription"], "model_id": "gpt-image-2-5-flare", "product": "ChatGPT Images2.5 / Work
+    / Codex", "reason": "Images 2.5 product access does not identify Flare versus Sunburst; API token pricing
+    is not subscription fee. Enterprise rate card names 2.0, not 2.5.", "source_ids": ["o-images", "o-enterprise",
+    "o-gpt-image-2-5-flare"], "unconditional_join_valid": false}'
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-gpt-image-2-5-sunburst
+  model_id: gpt-image-2-5-sunburst
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-1a9fcf8d6701
+      - src-00eaf917ab11
+      - src-df583c7c7998
+      - src-259c8fd88c0f
+      - src-7b98d3cafcd3
+      - src-3d0e0989e627
+      - src-4cfee6e9428c
+      - src-2f9ece653a0f
+      - src-a9ce2d562929
+      - src-b62a5d4c8c44
+      - src-bab0e18b2802
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-1a9fcf8d6701
+  - src-00eaf917ab11
+  - src-df583c7c7998
+  - src-259c8fd88c0f
+  - src-7b98d3cafcd3
+  - src-3d0e0989e627
+  - src-4cfee6e9428c
+  - src-2f9ece653a0f
+  - src-a9ce2d562929
+  - src-b62a5d4c8c44
+  - src-bab0e18b2802
+  notes:
+  - Azure current numeric rates not retrieved; do not copy direct OpenAI rate.
+  - No model-specific Bedrock route established in checked Bedrock pricing/compatibility and exact-name AWS
+    search. This is unverified, not unavailable.
+  - Enterprise rate card names GPT-Image-2.0, not this 2.5 variant. Equal numerical API rates do not authorize
+    a 2.5 client price join.
+  - '{"access_id": "access-proprietary-access-8", "action": "remove_unconditional_API_join_and_preserve_unresolved_UI_variant",
+    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-gpt-image-2-5-sunburst-openai-0f6ba21d2197",
+    "price-proprietary-gpt-image-2-5-sunburst-openai-be4252d0ba6c", "price-proprietary-gpt-image-2-5-sunburst-openai-40fdb9e8e555"],
+    "methods": ["chat_subscription"], "model_id": "gpt-image-2-5-sunburst", "product": "ChatGPT Images2.5 /
+    Work / Codex", "reason": "Images 2.5 product access does not identify Flare versus Sunburst; API token
+    pricing is not subscription fee. Enterprise rate card names 2.0, not 2.5.", "source_ids": ["o-images",
+    "o-enterprise", "o-gpt-image-2-5-sunburst"], "unconditional_join_valid": false}'
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-gpt-live-1
+  model_id: gpt-live-1
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-84d1a7712d6a
+      - src-00eaf917ab11
+      - src-a1730436fd21
+      - src-c84f0489248c
+      - src-b62a5d4c8c44
+      - src-7b98d3cafcd3
+      - src-4cfee6e9428c
+      - src-2f9ece653a0f
+      - src-a9ce2d562929
+      - src-72680ad0709c
+      - src-d499810f0d3f
+      - src-bab0e18b2802
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: documented
+      evidence_ids:
+      - src-a1730436fd21
+      notes:
+      - Named conditional consumer/client route; per-account entitlement not tested.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-a1730436fd21
+      notes:
+      - Subscription allowance is separate from API token tariffs.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-84d1a7712d6a
+  - src-00eaf917ab11
+  - src-a1730436fd21
+  - src-c84f0489248c
+  - src-b62a5d4c8c44
+  - src-7b98d3cafcd3
+  - src-4cfee6e9428c
+  - src-2f9ece653a0f
+  - src-a9ce2d562929
+  - src-72680ad0709c
+  - src-d499810f0d3f
+  - src-bab0e18b2802
+  notes:
+  - No exact Bedrock route established in checked pricing/compatibility and exact-model AWS searches; not a
+    claim of unavailability.
+  - Azure billing amount and regional account entitlement unverified.
+  - '{"access_id": "access-proprietary-access-12", "action": "split_plan_allowance_client_overage_and_API_duration",
+    "baseline_billing_methods": ["metered-api"], "baseline_price_ids": ["price-proprietary-gpt-live-1-openai-d34c632dbc2c"],
+    "methods": ["chat_subscription"], "model_id": "gpt-live-1", "product": "ChatGPT Voice", "reason": "Chat
+    Voice has rolling 24h allowances and plan-specific credits. Enterprise USD has separately documented $0.05/min,
+    but API and client rate records need different evidence/context.", "source_ids": ["o-voice", "o-enterprise",
+    "o-gpt-live-1"], "unconditional_join_valid": false}'
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-gpt-oss-120b
+  model_id: gpt-oss-120b
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-033fa0bf122f
+      - src-1b711f47aa6a
+      - src-027b0340f566
+      - src-c03a6de01b20
+      - src-33b0ee85f128
+      - src-b0caa8675a4a
+      - src-95ebabb9d4ec
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: documented
+      evidence_ids:
+      - src-033fa0bf122f
+      - src-1b711f47aa6a
+      - src-027b0340f566
+      - src-c03a6de01b20
+      - src-33b0ee85f128
+      - src-b0caa8675a4a
+      - src-95ebabb9d4ec
+      notes:
+      - Weight distribution is separate from inference compute costs.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-1b711f47aa6a
+      - src-f85326ed9ab1
+      - src-06e7619eb6a4
+      - src-6d85ece3b497
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-033fa0bf122f
+  - src-1b711f47aa6a
+  - src-027b0340f566
+  - src-c03a6de01b20
+  - src-33b0ee85f128
+  - src-b0caa8675a4a
+  - src-95ebabb9d4ec
+  notes:
+  - HF comparator differs:120B output.75 versus direct.60; 20B .10/.50 versus direct.075/.30. Verify router
+    before linking direct price.
+  - Replace negative OpenAI chat_subscription pseudo-route with explicitly unsupported first-party hosted access.
+    Groq direct versus HF router prices must not be collapsed.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-gpt-oss-20b
+  model_id: gpt-oss-20b
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-033fa0bf122f
+      - src-0dc6c2d41a2c
+      - src-027b0340f566
+      - src-c03a6de01b20
+      - src-33b0ee85f128
+      - src-b0caa8675a4a
+      - src-95ebabb9d4ec
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: documented
+      evidence_ids:
+      - src-033fa0bf122f
+      - src-0dc6c2d41a2c
+      - src-027b0340f566
+      - src-c03a6de01b20
+      - src-33b0ee85f128
+      - src-b0caa8675a4a
+      - src-95ebabb9d4ec
+      notes:
+      - Weight distribution is separate from inference compute costs.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-0dc6c2d41a2c
+      - src-4fb7165743ee
+      - src-06e7619eb6a4
+      - src-6d85ece3b497
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-033fa0bf122f
+  - src-0dc6c2d41a2c
+  - src-027b0340f566
+  - src-c03a6de01b20
+  - src-33b0ee85f128
+  - src-b0caa8675a4a
+  - src-95ebabb9d4ec
+  notes:
+  - HF comparator differs:120B output.75 versus direct.60; 20B .10/.50 versus direct.075/.30. Verify router
+    before linking direct price.
+  - Replace negative OpenAI chat_subscription pseudo-route with explicitly unsupported first-party hosted access.
+    Groq direct versus HF router prices must not be collapsed.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-gpt-realtime-2-1
+  model_id: gpt-realtime-2-1
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-cf6a8843c8fd
+      - src-00eaf917ab11
+      - src-a1730436fd21
+      - src-c84f0489248c
+      - src-b62a5d4c8c44
+      - src-7b98d3cafcd3
+      - src-4cfee6e9428c
+      - src-2f9ece653a0f
+      - src-a9ce2d562929
+      - src-8ecaabea19ae
+      - src-bab0e18b2802
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-cf6a8843c8fd
+  - src-00eaf917ab11
+  - src-a1730436fd21
+  - src-c84f0489248c
+  - src-b62a5d4c8c44
+  - src-7b98d3cafcd3
+  - src-4cfee6e9428c
+  - src-2f9ece653a0f
+  - src-a9ce2d562929
+  - src-8ecaabea19ae
+  - src-bab0e18b2802
+  notes:
+  - No exact Bedrock route established in checked pricing/compatibility and exact-model AWS searches; not a
+    claim of unavailability.
+  - Azure billing amount and regional account entitlement unverified.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-kimi-k3
+  model_id: kimi-k3
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-ea26b12a0c82
+      - src-87b22fdbd4b5
+      - src-c84785b7885b
+      - src-e39ac096f86a
+      - src-e3a1d4d46fff
+      - src-b0caa8675a4a
+      - src-2e19eb496679
+      - src-f3eb62c69719
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: documented
+      evidence_ids:
+      - src-ea26b12a0c82
+      - src-87b22fdbd4b5
+      - src-c84785b7885b
+      - src-e39ac096f86a
+      - src-e3a1d4d46fff
+      - src-b0caa8675a4a
+      - src-2e19eb496679
+      - src-f3eb62c69719
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-ea26b12a0c82
+      - src-87b22fdbd4b5
+      - src-c84785b7885b
+      - src-e39ac096f86a
+      - src-e3a1d4d46fff
+      - src-b0caa8675a4a
+      - src-2e19eb496679
+      - src-f3eb62c69719
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-74dc5faee60d
+      - src-e7129e9021b6
+      - src-5d65f998595a
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-ea26b12a0c82
+  - src-87b22fdbd4b5
+  - src-c84785b7885b
+  - src-e39ac096f86a
+  - src-e3a1d4d46fff
+  - src-b0caa8675a4a
+  - src-2e19eb496679
+  - src-f3eb62c69719
+  notes:
+  - Current first-party numeric cache-write prices not extracted; cannot calculate exact total cost.
+  - Generic help page says no video, but current exact K3 docs implement video; prefer exact model/protocol
+    docs.
+  - Membership fee not verified.
+  - Add missing first-party tariff investigation, coding subscription and exact consumer routes; existing first-party
+    API record currently links only third-party prices.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-llama-4-maverick
+  model_id: llama-4-maverick
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-4281e218a491
+      - src-1f8330a8a801
+      - src-3865f58cb533
+      - src-fe77d146b253
+      - src-65471a2c7ad5
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: documented
+      evidence_ids:
+      - src-4281e218a491
+      - src-1f8330a8a801
+      - src-3865f58cb533
+      - src-fe77d146b253
+      - src-65471a2c7ad5
+      notes:
+      - Weight distribution is separate from inference compute costs.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-65471a2c7ad5
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-4281e218a491
+  - src-1f8330a8a801
+  - src-3865f58cb533
+  - src-fe77d146b253
+  - src-65471a2c7ad5
+  notes:
+  - Current first-party Meta API tariff and exact consumer plan entitlement were not verified after official
+    Meta/Llama searches.
+  - No free serving inference from Llama Community License or weights.
+  - Baseline HF-only record misses paid hosted API. Served context must stay provider-specific, especially
+    Scout 128K vs model-level 10M.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-llama-4-scout
+  model_id: llama-4-scout
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-be28806b3aaf
+      - src-1f8330a8a801
+      - src-3865f58cb533
+      - src-fe77d146b253
+      - src-8cb15ff6ddd4
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: documented
+      evidence_ids:
+      - src-be28806b3aaf
+      - src-1f8330a8a801
+      - src-3865f58cb533
+      - src-fe77d146b253
+      - src-8cb15ff6ddd4
+      notes:
+      - Weight distribution is separate from inference compute costs.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-8cb15ff6ddd4
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-be28806b3aaf
+  - src-1f8330a8a801
+  - src-3865f58cb533
+  - src-fe77d146b253
+  - src-8cb15ff6ddd4
+  notes:
+  - Current first-party Meta API tariff and exact consumer plan entitlement were not verified after official
+    Meta/Llama searches.
+  - No free serving inference from Llama Community License or weights.
+  - Baseline HF-only record misses paid hosted API. Served context must stay provider-specific, especially
+    Scout 128K vs model-level 10M.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-lyria-3-5
+  model_id: lyria-3-5
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-b88c4950bbf3
+      - src-10e39629c3d3
+      - src-8eb2666e2af7
+      - src-f1078602a2b4
+      - src-d3e41dcc2800
+      - src-ef50a5784fac
+      - src-d0b16425fcb6
+      - src-00450f075cbd
+      - src-ef3a11a33f4e
+      - src-ead011f0c43e
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: documented
+      evidence_ids:
+      - src-d0b16425fcb6
+      - src-d3e41dcc2800
+      notes:
+      - Named conditional consumer/client route; per-account entitlement not tested.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-d0b16425fcb6
+      - src-d3e41dcc2800
+      notes:
+      - Subscription allowance is separate from API token tariffs.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-b88c4950bbf3
+  - src-10e39629c3d3
+  - src-8eb2666e2af7
+  - src-f1078602a2b4
+  - src-d3e41dcc2800
+  - src-ef50a5784fac
+  - src-d0b16425fcb6
+  - src-00450f075cbd
+  - src-ef3a11a33f4e
+  - src-ead011f0c43e
+  notes:
+  - Actual per-account quota, region eligibility, plan subscription and remaining credits are not known; no
+    account access or inference used.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-minimax-m3
+  model_id: minimax-m3
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-40c9ce9b4812
+      - src-b32fa74d1c5e
+      - src-21da6fa2f19b
+      - src-ed4a42cc9fe4
+      - src-10f4cd418227
+      - src-b0caa8675a4a
+      - src-06645d3950f1
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-40c9ce9b4812
+      - src-b32fa74d1c5e
+      - src-21da6fa2f19b
+      - src-ed4a42cc9fe4
+      - src-10f4cd418227
+      - src-b0caa8675a4a
+      - src-06645d3950f1
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    download:
+      state: documented
+      evidence_ids:
+      - src-40c9ce9b4812
+      - src-b32fa74d1c5e
+      - src-21da6fa2f19b
+      - src-ed4a42cc9fe4
+      - src-10f4cd418227
+      - src-b0caa8675a4a
+      - src-06645d3950f1
+      notes:
+      - Weight distribution is separate from inference compute costs.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-6a511cb9176a
+      - src-06645d3950f1
+      - src-418bc9a9adc1
+      - src-40c9ce9b4812
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-40c9ce9b4812
+  - src-b32fa74d1c5e
+  - src-21da6fa2f19b
+  - src-ed4a42cc9fe4
+  - src-10f4cd418227
+  - src-b0caa8675a4a
+  - src-06645d3950f1
+  notes:
+  - Exact M3 access on newly purchased M Plan is not established; current intro lists newer M3.1.
+  - Add qualified legacy subscription route and direct Together access join; baseline already has its price
+    without access link.
+  - Fresh creator Hub card verifies weights. Preserve conflicting stale coming-soon marketing as historical
+    evidence.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-ministral-3-8b
+  model_id: ministral-3-8b
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-8ef7d9384aab
+      - src-b17514a392bd
+      - src-8c6f12737c66
+      - src-19e67a7be94f
+      - src-75b19d63bba9
+      - src-1b188ddc85cc
+      - src-f5a5dc8f8871
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-8ef7d9384aab
+      - src-b17514a392bd
+      - src-8c6f12737c66
+      - src-19e67a7be94f
+      - src-75b19d63bba9
+      - src-1b188ddc85cc
+      - src-f5a5dc8f8871
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-e37726fea976
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-8ef7d9384aab
+  - src-b17514a392bd
+  - src-8c6f12737c66
+  - src-19e67a7be94f
+  - src-75b19d63bba9
+  - src-1b188ddc85cc
+  - src-f5a5dc8f8871
+  notes:
+  - Current English versus French subscription documents disagree; preserve dated locale-specific evidence
+    instead of universal subscription_includes_api=false.
+  - Exact account quotas, regional availability and media tokenization unverified.
+  - Use actual provider API alias; add documented alternative and shared-credit product with correct billing
+    dimension.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-mistral-large-3
+  model_id: mistral-large-3
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-3ab28585a19b
+      - src-b17514a392bd
+      - src-8c6f12737c66
+      - src-19e67a7be94f
+      - src-75b19d63bba9
+      - src-0ad785899e50
+      - src-f5a5dc8f8871
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-3ab28585a19b
+      - src-b17514a392bd
+      - src-8c6f12737c66
+      - src-19e67a7be94f
+      - src-75b19d63bba9
+      - src-0ad785899e50
+      - src-f5a5dc8f8871
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-f249e65005c1
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-3ab28585a19b
+  - src-b17514a392bd
+  - src-8c6f12737c66
+  - src-19e67a7be94f
+  - src-75b19d63bba9
+  - src-0ad785899e50
+  - src-f5a5dc8f8871
+  notes:
+  - Current English versus French subscription documents disagree; preserve dated locale-specific evidence
+    instead of universal subscription_includes_api=false.
+  - Exact account quotas, regional availability and media tokenization unverified.
+  - Use actual provider API alias; add documented alternative and shared-credit product with correct billing
+    dimension.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-mistral-medium-3-5
+  model_id: mistral-medium-3-5
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-ece7a0a55f7b
+      - src-b17514a392bd
+      - src-8c6f12737c66
+      - src-19e67a7be94f
+      - src-75b19d63bba9
+      - src-a075140ce45f
+      - src-dc947e0150b9
+      - src-79280a1db5da
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: documented
+      evidence_ids:
+      - src-ece7a0a55f7b
+      - src-b17514a392bd
+      - src-8c6f12737c66
+      - src-19e67a7be94f
+      - src-75b19d63bba9
+      - src-a075140ce45f
+      - src-dc947e0150b9
+      - src-79280a1db5da
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-ece7a0a55f7b
+      - src-b17514a392bd
+      - src-8c6f12737c66
+      - src-19e67a7be94f
+      - src-75b19d63bba9
+      - src-a075140ce45f
+      - src-dc947e0150b9
+      - src-79280a1db5da
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    download:
+      state: documented
+      evidence_ids:
+      - src-ece7a0a55f7b
+      - src-b17514a392bd
+      - src-8c6f12737c66
+      - src-19e67a7be94f
+      - src-75b19d63bba9
+      - src-a075140ce45f
+      - src-dc947e0150b9
+      - src-79280a1db5da
+      notes:
+      - Weight distribution is separate from inference compute costs.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-23f19f916bbb
+      - src-79280a1db5da
+      - src-d2d60d683099
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-ece7a0a55f7b
+  - src-b17514a392bd
+  - src-8c6f12737c66
+  - src-19e67a7be94f
+  - src-75b19d63bba9
+  - src-a075140ce45f
+  - src-dc947e0150b9
+  - src-79280a1db5da
+  notes:
+  - Current English versus French subscription documents disagree; preserve dated locale-specific evidence
+    instead of universal subscription_includes_api=false.
+  - Exact account quotas, regional availability and media tokenization unverified.
+  - Use actual provider API alias; add documented alternative and shared-credit product with correct billing
+    dimension.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-mistral-small-4
+  model_id: mistral-small-4
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-b0218078301d
+      - src-b17514a392bd
+      - src-8c6f12737c66
+      - src-19e67a7be94f
+      - src-75b19d63bba9
+      - src-1d3b66fea11a
+      - src-dcba779ffa90
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-b0218078301d
+      - src-b17514a392bd
+      - src-8c6f12737c66
+      - src-19e67a7be94f
+      - src-75b19d63bba9
+      - src-1d3b66fea11a
+      - src-dcba779ffa90
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    download:
+      state: documented
+      evidence_ids:
+      - src-b0218078301d
+      - src-b17514a392bd
+      - src-8c6f12737c66
+      - src-19e67a7be94f
+      - src-75b19d63bba9
+      - src-1d3b66fea11a
+      - src-dcba779ffa90
+      notes:
+      - Weight distribution is separate from inference compute costs.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-f2036f817d22
+      - src-dcba779ffa90
+      - src-1cea80c18ff6
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-b0218078301d
+  - src-b17514a392bd
+  - src-8c6f12737c66
+  - src-19e67a7be94f
+  - src-75b19d63bba9
+  - src-1d3b66fea11a
+  - src-dcba779ffa90
+  notes:
+  - Current English versus French subscription documents disagree; preserve dated locale-specific evidence
+    instead of universal subscription_includes_api=false.
+  - Exact account quotas, regional availability and media tokenization unverified.
+  - Use actual provider API alias; add documented alternative and shared-credit product with correct billing
+    dimension.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-nemotron-3-ultra
+  model_id: nemotron-3-ultra
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-9d8e52b601dc
+      - src-0c70d291307a
+      - src-cc6d3cc44a13
+      - src-d79bd46f15b8
+      - src-f5a5dc8f8871
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-c5a0afc263f8
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-9d8e52b601dc
+  - src-0c70d291307a
+  - src-cc6d3cc44a13
+  - src-d79bd46f15b8
+  - src-f5a5dc8f8871
+  notes:
+  - Prototype numeric quota and commercial limits need endpoint/account terms; no unlimited claim.
+  - Model ID variant precision mapping is consequential.
+  - Add hosted trial and dedicated BF16 routes; model weights do not imply free production compute.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-phi-4-mini-instruct
+  model_id: phi-4-mini-instruct
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-69feae49f83a
+      - src-2a043397371b
+      - src-3865f58cb533
+      - src-f3fc9545f9da
+      - src-4ca560b8430b
+      - src-147450d232b3
+      - src-9182f506d099
+      - src-954d4b68455d
+      - src-53532c0e2a15
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-69feae49f83a
+      - src-2a043397371b
+      - src-3865f58cb533
+      - src-f3fc9545f9da
+      - src-4ca560b8430b
+      - src-147450d232b3
+      - src-9182f506d099
+      - src-954d4b68455d
+      - src-53532c0e2a15
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    download:
+      state: documented
+      evidence_ids:
+      - src-69feae49f83a
+      - src-2a043397371b
+      - src-3865f58cb533
+      - src-f3fc9545f9da
+      - src-4ca560b8430b
+      - src-147450d232b3
+      - src-9182f506d099
+      - src-954d4b68455d
+      - src-53532c0e2a15
+      notes:
+      - Weight distribution is separate from inference compute costs.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-3c2db7ec3521
+      - src-147450d232b3
+      - src-9f758a03b0f2
+      - src-6c5f51c9393d
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-69feae49f83a
+  - src-2a043397371b
+  - src-3865f58cb533
+  - src-f3fc9545f9da
+  - src-4ca560b8430b
+  - src-147450d232b3
+  - src-9182f506d099
+  - src-954d4b68455d
+  - src-53532c0e2a15
+  notes:
+  - Managed compute vs serverless and region-specific SKU not resolved in public catalog.
+  - No positive free-hosted claim.
+  - Exact account quota, maximum media count and multimodal billing conversion not verified.
+  - Baseline weight-only route misses officially documented Azure distribution. Record documented deployment
+    with unknown tariff rather than inventing a metered price.
+  - Verified paid hosted alternative on Featherless; Azure tariff remains unknown. Earlier NVIDIA endpoint
+    remains deprecated.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-phi-4-multimodal-instruct
+  model_id: phi-4-multimodal-instruct
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-5375de0a04db
+      - src-2a043397371b
+      - src-3865f58cb533
+      - src-8c226e63ce44
+      - src-4ca560b8430b
+      - src-29885c43e537
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: documented
+      evidence_ids:
+      - src-5375de0a04db
+      - src-2a043397371b
+      - src-3865f58cb533
+      - src-8c226e63ce44
+      - src-4ca560b8430b
+      - src-29885c43e537
+      notes:
+      - Weight distribution is separate from inference compute costs.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-3c2db7ec3521
+      - src-29885c43e537
+      - src-2a442166513f
+      - src-99b21e349ac9
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-5375de0a04db
+  - src-2a043397371b
+  - src-3865f58cb533
+  - src-8c226e63ce44
+  - src-4ca560b8430b
+  - src-29885c43e537
+  notes:
+  - Managed compute vs serverless and region-specific SKU not resolved in public catalog.
+  - No positive free-hosted claim.
+  - Exact account quota, maximum media count and multimodal billing conversion not verified.
+  - Baseline weight-only route misses officially documented Azure distribution. Record documented deployment
+    with unknown tariff rather than inventing a metered price.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-phi-4-reasoning-vision-15b
+  model_id: phi-4-reasoning-vision-15b
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-8e5c63514664
+      - src-2a043397371b
+      - src-3865f58cb533
+      - src-91f835e2db28
+      - src-294e8b9fcd2c
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-91f835e2db28
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-8e5c63514664
+  - src-2a043397371b
+  - src-3865f58cb533
+  - src-91f835e2db28
+  - src-294e8b9fcd2c
+  notes:
+  - Managed compute vs serverless and region-specific SKU not resolved in public catalog.
+  - No positive free-hosted claim.
+  - Exact account quota, maximum media count and multimodal billing conversion not verified.
+  - Baseline weight-only route misses officially documented Azure distribution. Record documented deployment
+    with unknown tariff rather than inventing a metered price.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-qwen3-5-9b
+  model_id: qwen3-5-9b
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-c0cfa3f3179f
+      - src-b0caa8675a4a
+      - src-1738285cd510
+      - src-eec7142cd474
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-f2036f817d22
+      - src-e0a64484787e
+      - src-7a37d210463f
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-c0cfa3f3179f
+  - src-b0caa8675a4a
+  - src-1738285cd510
+  - src-eec7142cd474
+  notes:
+  - Non-exhaustive provider coverage; original route-specific uncertainties retained.
+  - HF weights and hosted inference are distinct products.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-qwen3-8-2-4t-a95b
+  model_id: qwen3-8-2-4t-a95b
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-8c28c814ff86
+      - src-1f8330a8a801
+      - src-6adb93b6cd05
+      - src-b0caa8675a4a
+      - src-2e19eb496679
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-fbaa665d7533
+      - src-2bc2cf30ffd5
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-8c28c814ff86
+  - src-1f8330a8a801
+  - src-6adb93b6cd05
+  - src-b0caa8675a4a
+  - src-2e19eb496679
+  notes:
+  - Non-exhaustive provider coverage; original route-specific uncertainties retained.
+  - HF weights and hosted inference are distinct products.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-qwen3-8-27b
+  model_id: qwen3-8-27b
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-1387aa93357b
+      - src-56514a209a60
+      - src-53532c0e2a15
+      - src-841ace79531b
+      - src-1f8330a8a801
+      - src-6adb93b6cd05
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-1387aa93357b
+      - src-56514a209a60
+      - src-53532c0e2a15
+      - src-841ace79531b
+      - src-1f8330a8a801
+      - src-6adb93b6cd05
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-fb8e00efa720
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-1387aa93357b
+  - src-56514a209a60
+  - src-53532c0e2a15
+  - src-841ace79531b
+  - src-1f8330a8a801
+  - src-6adb93b6cd05
+  notes:
+  - Non-exhaustive provider coverage; original route-specific uncertainties retained.
+  - HF weights and hosted inference are distinct products.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-qwen3-8-flash-next
+  model_id: qwen3-8-flash-next
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-ffb0cc48ebb8
+      - src-56514a209a60
+      - src-194278ff9824
+      - src-9438a221690c
+      - src-53532c0e2a15
+      - src-3d2297d8525e
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-ffb0cc48ebb8
+      - src-56514a209a60
+      - src-194278ff9824
+      - src-9438a221690c
+      - src-53532c0e2a15
+      - src-3d2297d8525e
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-fb8e00efa720
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-ffb0cc48ebb8
+  - src-56514a209a60
+  - src-194278ff9824
+  - src-9438a221690c
+  - src-53532c0e2a15
+  - src-3d2297d8525e
+  notes:
+  - Non-exhaustive provider coverage; original route-specific uncertainties retained.
+  - HF weights and hosted inference are distinct products.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-qwen3-coder-next
+  model_id: qwen3-coder-next
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-75860ab90ce6
+      - src-1f8330a8a801
+      - src-6adb93b6cd05
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: documented
+      evidence_ids:
+      - src-f2036f817d22
+      - src-71b3fd269cc8
+      - src-fe191bd136cd
+      - src-7c5fa24308a9
+      notes:
+      - Existing documented local route; original verification dates retained.
+  evidence_ids:
+  - src-75860ab90ce6
+  - src-1f8330a8a801
+  - src-6adb93b6cd05
+  notes:
+  - Non-exhaustive provider coverage; original route-specific uncertainties retained.
+  - HF weights and hosted inference are distinct products.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-veo-3-1-generate-preview
+  model_id: veo-3-1-generate-preview
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-b88c4950bbf3
+      - src-10e39629c3d3
+      - src-8eb2666e2af7
+      - src-f1078602a2b4
+      - src-d3e41dcc2800
+      - src-521c059d5d6a
+      - src-2fae34e08da9
+      - src-2cc31a5ba4fd
+      - src-f40c983ca27f
+      - src-f661101cf480
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    subscription:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-b88c4950bbf3
+  - src-10e39629c3d3
+  - src-8eb2666e2af7
+  - src-f1078602a2b4
+  - src-d3e41dcc2800
+  - src-521c059d5d6a
+  - src-2fae34e08da9
+  - src-2cc31a5ba4fd
+  - src-f40c983ca27f
+  - src-f661101cf480
+  notes:
+  - Actual per-account quota, region eligibility, plan subscription and remaining credits are not known; no
+    account access or inference used.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
+- schema_version: '1.0'
+  id: access-coverage-xai-grok-4-7
+  model_id: xai-grok-4-7
+  checked_at: '2026-10-07'
+  audit_status: reviewed
+  categories:
+    api:
+      state: documented
+      evidence_ids:
+      - src-d14fea025626
+      - src-dedf56167aa3
+      - src-55cc90649004
+      - src-6e9d3c55a9e4
+      - src-772c9fd668f0
+      - src-b0d76edee48a
+      - src-f1078602a2b4
+      - src-6c09ac4f180b
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    chat:
+      state: documented
+      evidence_ids:
+      - src-d14fea025626
+      - src-dedf56167aa3
+      - src-55cc90649004
+      - src-6e9d3c55a9e4
+      - src-772c9fd668f0
+      - src-b0d76edee48a
+      - src-f1078602a2b4
+      - src-6c09ac4f180b
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    subscription:
+      state: documented
+      evidence_ids:
+      - src-d14fea025626
+      - src-dedf56167aa3
+      - src-55cc90649004
+      - src-6e9d3c55a9e4
+      - src-772c9fd668f0
+      - src-b0d76edee48a
+      - src-f1078602a2b4
+      - src-6c09ac4f180b
+      notes:
+      - Qualified public route exists; account eligibility not established.
+    download:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+    self_hosted:
+      state: unknown
+      evidence_ids: []
+      notes:
+      - No sufficiently qualified route established in this pass.
+  evidence_ids:
+  - src-d14fea025626
+  - src-dedf56167aa3
+  - src-55cc90649004
+  - src-6e9d3c55a9e4
+  - src-772c9fd668f0
+  - src-b0d76edee48a
+  - src-f1078602a2b4
+  - src-6c09ac4f180b
+  notes:
+  - Exact SuperGrok monthly fee and API auth mode remain unknown.
+  - Azure current exact 4.7 model route / region price remains unverified, not unavailable.
+  - Global short/long threshold equality at 200K differs by provider/source.
+  - Add missing exact access joins for existing xAI/Zen prices. Separate direct, partner, consumer and client
+    Fast pricing.
+  - Full route details retain promotions, limits, currencies and unnormalized units; conditional prices are
+    not silently used in the estimator.
