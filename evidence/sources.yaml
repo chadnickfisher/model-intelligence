@@ -7227,3 +7227,15 @@ records:
   - 'Original exact Standard preview report: image input, eight-second 9:16 video, JavaScript generateVideos.'
   limitations:
   - One reporter; unpinned SDK; no controlled failure rate, causal diagnosis or verified fix.
+- id: src-11f146f5e385
+  url: https://docs.cohere.com/v1/docs/cohere-on-microsoft-azure
+  title: 'Cohere on Microsoft Azure: exact Embed v5 Fast PAYG billing'
+  publisher: Cohere
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Creator guide explicitly lists Embed v5 Fast under token-based pay-as-you-go Azure AI Foundry deployment.
+  limitations:
+  - v1 creator guide uses Azure AI hub terminology; exact regional tariff, PTU offer, operational eligibility and
+    policy applicability remain separately unresolved.

@@ -5919,7 +5919,7 @@ records:
   - hosted_api
   status: exact_partner_catalog_listing; regional_price_unverified
   availability: unknown
-  billing_class: unknown
+  billing_class: metered_api
   price_ids: []
   restrictions: []
   evidence_ids:
@@ -5928,6 +5928,7 @@ records:
   - src-73e03ec6d5cd
   - src-9277f5b6b599
   - src-a03104fba002
+  - src-11f146f5e385
   notes:
   - 'Research route class: hosted_deployment'
   - Source documented; inference execution and individual eligibility were not tested.
@@ -5936,10 +5937,10 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Direct from Azure catalog advertises PAYG/PTU options generally; exact Fast deployment mode and numeric
-    regional tariff were not established.
-  - Catalog quick facts conflict with the vector-only model description; Preview label is route-specific
-    and not proof of creator-wide lifecycle.
+  - Creator Azure guide explicitly lists Embed v5 Fast under pay-as-you-go token billing. This scoped PAYG route
+    does not establish an exact numeric regional tariff or Fast-specific PTU offer.
+  - Catalog quick facts conflict with the vector-only model description; Preview label is route-specific and not
+    proof of creator-wide lifecycle.
   research_details:
     research_provider_id: azure-foundry
     model_alias: Cohere-Embed-V5-Fast
