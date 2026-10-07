@@ -26,7 +26,6 @@ indexes:
 guidance:
   methodology: methodology.md
   contributing: CONTRIBUTING.md
-  maintenance: MAINTENANCE.md
   schemas: schema/
   query_contract: schema/query-contract.md
 query_start:
@@ -39,5 +38,3 @@ query_start:
   new_releases: data/releases.yaml
   benchmark_comparison: data/benchmarks.yaml
   research_accounting: data/research-coverage.yaml
-  bounded_research: docs/bounded-research.md
-  scoped_maintenance: docs/scoped-maintenance.md

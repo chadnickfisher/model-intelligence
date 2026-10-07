@@ -15,6 +15,9 @@ import sys
 import tempfile
 import zipfile
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from tools.public_boundary import private_work_path
+
 REPOSITORY = 'https://github.com/chadnickfisher/model-intelligence'
 ORIGINS = {REPOSITORY, REPOSITORY + '.git', 'git@github.com:chadnickfisher/model-intelligence.git'}
 BRANCH = 'main'
@@ -197,7 +200,7 @@ def ready_update(files, intended):
         raise ValueError('Manifest must match explicit intended paths exactly')
     expected = {'package.json'}
     for entry, path in zip(entries, paths):
-        if any(part.startswith('.') for part in PurePosixPath(path).parts) or path.startswith(BLOCKED_PREFIXES) or path in BLOCKED_NAMES or Path(path).suffix not in {'.md','.yaml','.json'} or not (path.startswith(ALLOWED_PREFIXES) or path in ALLOWED_NAMES):
+        if private_work_path(path) or any(part.startswith('.') for part in PurePosixPath(path).parts) or path.startswith(BLOCKED_PREFIXES) or path in BLOCKED_NAMES or Path(path).suffix not in {'.md','.yaml','.json'} or not (path.startswith(ALLOWED_PREFIXES) or path in ALLOWED_NAMES):
             raise ValueError('Update path outside reviewed allowlist: ' + path)
         if entry['operation'] == 'write':
             payload = 'payload/' + path;expected.add(payload)

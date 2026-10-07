@@ -9,3 +9,19 @@ __pycache__/
 .pytest_cache/
 .streamlit/secrets.toml
 .local/
+
+# Local agent instructions and development operating records.
+AGENTS.md
+AGENTS.override.md
+.agents/
+.codex/
+.aws/
+/CURRENT_STATE.md
+/ARCHITECTURE.md
+/plans/
+/decisions/
+/MAINTENANCE.md
+/docs/working/
+/docs/bounded-research.md
+/docs/scoped-maintenance.md
+/docs/package-workflow.md

@@ -9,10 +9,11 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from tools.knowledge import canonical, judgment_index, scope_errors, research_coverage_errors, integrity_errors
 from tools.research_runs import task_rubric_errors
+from tools.public_boundary import private_work_path, public_files, tracked_work_paths
 def read(p):return yaml.load(p.read_text(encoding='utf-8'),Loader=getattr(yaml,'CSafeLoader',yaml.SafeLoader))
 def records(p):return read(ROOT/p)['records']
 def run():
- errors=[];collections={}
+ errors=['Private working file is tracked: '+path for path in tracked_work_paths(ROOT)];collections={}
  files={'model-profile':sorted(ROOT.glob('models/*/*/profile.yaml')),'provider-profile':sorted(ROOT.glob('providers/*/profile.yaml'))}
  for typ,paths in files.items():collections[typ]=[(p.relative_to(ROOT).as_posix(),read(p)) for p in paths]
  for typ,path in [('price-record','data/pricing.yaml'),('access-record','data/access.yaml'),('release-record','data/releases.yaml'),('source-record','evidence/sources.yaml'),('behavior-record','data/behavior.yaml'),('access-coverage-record','data/access-coverage.yaml'),('benchmark-record','data/benchmarks.yaml'),('research-coverage-record','data/research-coverage.yaml'),('research-contract-record','data/research-contract.yaml'),('task-assessment-record','data/task-assessments.yaml')]:collections[typ]=[(path,x) for x in records(path)]
@@ -104,18 +105,21 @@ def run():
   if p['status']=='current' and not any(r['amount'] is not None for r in p['rates']):errors.append(f"{p['id']}: current price has no numeric rate; mark unknown")
  # Public-only safety check. Heuristics supplement, not replace, human review.
  patterns=[r'sk-[A-Za-z0-9]{20,}',r'ghp_[A-Za-z0-9]{20,}',r'-----BEGIN .*PRIVATE KEY-----',r'/workspace/(scratch|shared)/']
- for p in ROOT.rglob('*'):
-  if not p.is_file() or any(x in p.parts for x in ['.git','.local','.venv','__pycache__','.pytest_cache']) or p==Path(__file__):continue
+ for p in public_files(ROOT):
+  if not p.is_file() or p==Path(__file__):continue
   if p.suffix in ['.md','.yaml','.json','.py']:
    text=p.read_text(encoding='utf-8')
    for pat in patterns:
     if re.search(pat,text):errors.append(f'Public-only check flagged {p.relative_to(ROOT)}')
  # Relative links in generated Markdown must resolve; URLs checked during research.
- for p in ROOT.rglob('*.md'):
-  if any(x in p.parts for x in ['.git','.local','.venv','__pycache__','.pytest_cache']):continue
+ for p in public_files(ROOT):
+  if p.suffix!='.md':continue
   for link in re.findall(r'\]\(([^)]+)\)',p.read_text(encoding='utf-8')):
    if '://' in link or link.startswith('#'):continue
-   if not (p.parent/link.split('#')[0]).exists():errors.append(f'Broken local link {p.relative_to(ROOT)} -> {link}')
+   target=p.parent/link.split('#')[0]
+   if target.resolve().is_relative_to(ROOT.resolve()) and private_work_path(target.resolve().relative_to(ROOT.resolve()).as_posix()):
+    errors.append(f'Public link points to private working material: {p.relative_to(ROOT)}')
+   elif not target.exists():errors.append(f'Broken local link {p.relative_to(ROOT)} -> {link}')
  if errors:
   print('\n'.join(errors));return 1
  counts={k:len(v) for k,v in collections.items()};counts['observations']=len(observations)
