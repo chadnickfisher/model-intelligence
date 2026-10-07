@@ -27,6 +27,28 @@ Supporting sources: [Phi-4 Mini / Multimodal model card](https://huggingface.co/
 
 Contradictory or limiting sources: [Phi4 Mini catalog audit](https://artificialanalysis.ai/models/phi-4-mini)
 
+### Reasoning.math (low confidence)
+
+The exact Mini Instruct card reports bounded competition-math performance; this supports a provisional math candidate, not factual expertise.
+
+Scope: direct / conditional. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: reasoning.math
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-eb06ac9534f922b4
+
+Conditions: Vendor internal evaluation platform; MATH uses zero-shot chain-of-thought. Mini reasoning/flash siblings excluded.
+
+Failure modes / limitations: Vendor notes limited factual knowledge capacity; math scores do not establish factual accuracy.
+
+Supporting sources: [Phi-4 Mini / Multimodal model card](https://huggingface.co/microsoft/Phi-4-mini-instruct)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not confidence.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ## Specifications
 
 | Field | Recorded value |

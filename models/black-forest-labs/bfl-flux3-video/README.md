@@ -29,6 +29,28 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: Observation obs-aa0038a13410: Short audiovisual generation, pinned keyframes and continuation capabilities publicly documented.
 
+### Video.generation (low confidence)
+
+Vendor preferences concern a development candidate and evolving harness; quality of an exact current FLUX.3 Video production checkpoint remains unknown.
+
+Scope: direct / unknown. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: video.generation
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-bf07973843af6a72
+
+Conditions: Preliminary 10-second 720p text-to-video with audio; vendor-run human preferences.
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Introducing FLUX.3](https://bfl.ai/blog/flux-3)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not confidence.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ## Specifications
 
 | Field | Recorded value |
@@ -88,4 +110,4 @@ Local conditions: Not established in this pass
 
 ## Sources
 
-[docs.bfl.ai](https://docs.bfl.ai/flux_3/flux3_overview) · [docs.bfl.ai](https://docs.bfl.ai/quick_start/pricing)
+[docs.bfl.ai](https://docs.bfl.ai/flux_3/flux3_overview) · [docs.bfl.ai](https://docs.bfl.ai/quick_start/pricing) · [Introducing FLUX.3](https://bfl.ai/blog/flux-3)

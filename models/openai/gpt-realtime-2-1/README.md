@@ -29,6 +29,28 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: supporting evidence: Vendor documents stronger alphanumeric recognition, noise/silence and interruption behavior over Realtime2.; contradictory evidence: No independent version-matched evidence recovered; higher reasoning effort increases latency and output consumption.; Observation obs-d95f95883e10: Consider when reasoning and tools must operate in a realtime speech session.; Potential risk (not a measured failure): Recognition errors in identifiers; latency-sensitive turn-taking; tool error recovery.
 
+### Agent.tool_use (low confidence)
+
+Independent voice customer-support task completion depends on reasoning effort; use the exact 2.1 High and Minimal configurations, without borrowing Mini results.
+
+Scope: direct / conditional. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: agent.tool_use
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-8d4fb0af2cb7e4fe
+
+Conditions: AA tau-Voice simulated customer support with domain tools and policies; High uses two trials.
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Speech-to-speech benchmark configurations](https://artificialanalysis.ai/speech-to-speech?api-benchmarks=agentic-performance-vs-cost-to-run) · [gpt-realtime-2.1 model specifications](https://developers.openai.com/api/docs/models/gpt-realtime-2.1)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence beyond the measured agent systems: few trials, rolling alias and incomplete configuration.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ## Specifications
 
 | Field | Recorded value |
@@ -90,4 +112,4 @@ Local conditions: Not established in this pass
 
 ## Sources
 
-[gpt-realtime-2.1 model specifications](https://developers.openai.com/api/docs/models/gpt-realtime-2.1) · [OpenAI API changelog](https://developers.openai.com/api/docs/changelog) · [developers.openai.com](https://developers.openai.com/api/docs/models/gpt-realtime-2.1-mini)
+[gpt-realtime-2.1 model specifications](https://developers.openai.com/api/docs/models/gpt-realtime-2.1) · [OpenAI API changelog](https://developers.openai.com/api/docs/changelog) · [developers.openai.com](https://developers.openai.com/api/docs/models/gpt-realtime-2.1-mini) · [Speech-to-speech benchmark configurations](https://artificialanalysis.ai/speech-to-speech?api-benchmarks=agentic-performance-vs-cost-to-run)

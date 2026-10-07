@@ -27,6 +27,28 @@ Supporting sources: [Phi-4-Reasoning-Vision-15B model card](https://huggingface.
 
 Contradictory or limiting sources: [Microsoft selective vision-reasoning evaluation](https://www.microsoft.com/en-us/research/blog/phi-4-reasoning-vision-and-the-lessons-of-training-a-multimodal-reasoning-model/)
 
+### Vision.grounding (low confidence)
+
+Vendor ScreenSpot V2 measurements support static GUI element localization as a candidate; this does not demonstrate an autonomous computer-use agent.
+
+Scope: direct / conditional. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: vision.grounding
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-87ac71979507153c
+
+Conditions: Default hybrid model under VLMEvalKit; forced no-think/thinking columns kept separate.
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Phi-4-Reasoning-Vision-15B model card](https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not confidence.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ## Specifications
 
 | Field | Recorded value |

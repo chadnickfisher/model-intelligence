@@ -286,6 +286,7 @@ records:
   claim_scope:
   - Dated post-launch finding; retain its model, client, service or runtime scope.
   - HF card discovers Featherless; direct exact model page subsequently verified.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
@@ -303,6 +304,7 @@ records:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Dated post-launch finding; retain its model, client, service or runtime scope.
   - Model-qualified primary-source route investigation.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
@@ -407,6 +409,7 @@ records:
   - ChatGPT/Work/Codex access
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations: []
 - id: src-25e1e7c2305d
   url: https://ai.google.dev/gemini-api/docs/live-api
@@ -468,6 +471,7 @@ records:
   claim_scope:
   - Dated post-launch finding; retain its model, client, service or runtime scope.
   - No HF Inference Provider on this exact card; Azure catalog remains documented.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
@@ -509,6 +513,7 @@ records:
   claim_scope:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Dated post-launch finding; retain its model, client, service or runtime scope.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
@@ -635,6 +640,7 @@ records:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Dated post-launch finding; retain its model, client, service or runtime scope.
   - Model-qualified primary-source route investigation.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
@@ -733,6 +739,7 @@ records:
   accessed_at: '2026-10-07'
   claim_scope:
   - Exact API model, capped free access, Model Vault production route.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations: []
 - id: src-4c04e11c8a1b
   url: https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf
@@ -827,6 +834,7 @@ records:
   - Veo 3.1 identity/status/endpoint/limits/modalities/capabilities
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations: []
 - id: src-525e7f64ea10
   url: https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/LICENSE
@@ -947,8 +955,9 @@ records:
   publisher: null
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-06'
-  claim_scope: []
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations: []
 - id: src-5906a70e58c6
   url: https://developers.openai.com/api/docs/models/gpt-6.1-sol
@@ -1079,6 +1088,7 @@ records:
   accessed_at: '2026-10-07'
   claim_scope:
   - No HF Inference Provider on this exact BF16 card; Novita FP8 is separately documented.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations: []
 - id: src-65ad2b8b0099
   url: https://huggingface.co/docs/inference-endpoints/pricing
@@ -1241,9 +1251,10 @@ records:
   publisher: null
   source_type: primary
   published_at: '2026-09-15'
-  accessed_at: '2026-10-06'
+  accessed_at: '2026-10-07'
   claim_scope:
   - Gemini 3.8 Audio architecture/dependency/distribution/limitations; provider evaluations
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations: []
 - id: src-7494e8051b41
   url: https://github.com/meta-llama/llama-models/blob/main/models/llama4/USE_POLICY.md
@@ -1350,8 +1361,9 @@ records:
   publisher: null
   source_type: independent-evaluation
   published_at: null
-  accessed_at: '2026-10-06'
-  claim_scope: []
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations: []
 - id: src-7c5fa24308a9
   url: https://artificialanalysis.ai/models/qwen3-coder-next
@@ -1409,6 +1421,7 @@ records:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Dated post-launch finding; retain its model, client, service or runtime scope.
   - Model-qualified primary-source route investigation.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
@@ -1505,6 +1518,7 @@ records:
   claim_scope:
   - Dated post-launch finding; retain its model, client, service or runtime scope.
   - Creator documents Azure Foundry distribution and MIT weights; 16384 native context.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
@@ -1566,8 +1580,9 @@ records:
   publisher: null
   source_type: independent-evaluation
   published_at: '2026-06-04'
-  accessed_at: '2026-10-06'
-  claim_scope: []
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations:
   - NVIDIA partnered in prerelease testing; historic index scores must not be mixed with current v4.3.2.
 - id: src-99b21e349ac9
@@ -1590,6 +1605,7 @@ records:
   claim_scope:
   - Dated post-launch finding; retain its model, client, service or runtime scope.
   - GA API, Model Vault, Azure and SageMaker; text vs image token prices.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
@@ -1703,9 +1719,10 @@ records:
   publisher: null
   source_type: primary
   published_at: '2026-07-29'
-  accessed_at: '2026-10-06'
+  accessed_at: '2026-10-07'
   claim_scope:
   - Lyria 3.5 architecture/dependency/distribution/limitations; provider evaluations
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations: []
 - id: src-b0218078301d
   url: https://docs.mistral.ai/models/mistral-small-4-0-26-03
@@ -1865,8 +1882,9 @@ records:
   publisher: null
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-06'
-  claim_scope: []
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations: []
 - id: src-c84f0489248c
   url: https://openai.com/index/introducing-gpt-live/
@@ -1881,6 +1899,7 @@ records:
   - separate backend reasoning
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations: []
 - id: src-ca26bca182f6
   url: https://huggingface.co/Qwen/Qwen3.8-27B
@@ -1904,6 +1923,7 @@ records:
   accessed_at: '2026-10-07'
   claim_scope:
   - Apache 2.0 weights; AI21 Studio distribution.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations: []
 - id: src-cee7a5257e77
   url: https://developers.openai.com/api/docs/models/gpt-image-2.5-flare
@@ -1919,6 +1939,7 @@ records:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Dated post-launch finding; retain its model, client, service or runtime scope.
   - Model-qualified primary-source route investigation.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
@@ -1945,6 +1966,7 @@ records:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Dated post-launch finding; retain its model, client, service or runtime scope.
   - Model-qualified primary-source route investigation.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
@@ -1994,9 +2016,10 @@ records:
   publisher: null
   source_type: primary
   published_at: 2025-11
-  accessed_at: '2026-10-06'
+  accessed_at: '2026-10-07'
   claim_scope:
   - Gemini 3 Pro Image architecture/dependency/distribution/limitations; provider evaluations
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations: []
 - id: src-d493892e40d2
   url: https://artificialanalysis.ai/models/gemini-4-argon
@@ -2075,6 +2098,7 @@ records:
   claim_scope:
   - Dated post-launch finding; retain its model, client, service or runtime scope.
   - Creator weights available; no HF Inference Provider, despite direct Mistral and OpenRouter APIs.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
@@ -2090,6 +2114,7 @@ records:
   - deployment identity
   - 31B architecture and limitations
   - Dated post-launch finding; retain its model, client, service or runtime scope.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
@@ -2125,6 +2150,7 @@ records:
   claim_scope:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Dated post-launch finding; retain its model, client, service or runtime scope.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
@@ -2488,6 +2514,7 @@ records:
   accessed_at: '2026-10-07'
   claim_scope:
   - Dated post-launch finding; retain its model, client, service or runtime scope.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
@@ -3880,6 +3907,7 @@ records:
   claim_scope:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations: []
 - id: src-c52229f1bfad
   url: https://blog.google/products-and-platforms/products/workspace/gemini-omni-in-google-vids/
@@ -5021,6 +5049,7 @@ records:
   accessed_at: '2026-10-07'
   claim_scope:
   - Dated post-launch finding; retain its model, client, service or runtime scope.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
@@ -5455,6 +5484,7 @@ records:
   - Dated post-launch finding; retain its model, client, service or runtime scope.
   - CC BY-NC 4.0 weights, hosted demo Space; no HF Inference Provider deployed. This does not negate Cohere
     API.
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
@@ -6241,3 +6271,115 @@ records:
   - Repository import provenance, administrative coverage accounting and integration changes only.
   limitations:
   - Not independent evidence for a model capability, price, entitlement or reported regression.
+- id: src-5b1f0ee0a735
+  url: https://artificialanalysis.ai/models/qwen3-8-2-4t-a95b
+  title: Qwen3.8 2.4T A95B analysis
+  publisher: Artificial Analysis
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
+  limitations: []
+- id: src-1c251cf2a1e7
+  url: https://bfl.ai/blog/flux-3
+  title: Introducing FLUX.3
+  publisher: Black Forest Labs
+  source_type: primary
+  published_at: '2026-07-23'
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
+  limitations: []
+- id: src-ce6b8a6b961e
+  url: https://cohere.com/blog/north-small-translate
+  title: North Small Translate
+  publisher: Cohere
+  source_type: primary
+  published_at: '2026-09-10'
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
+  limitations: []
+- id: src-7c9b9d269f79
+  url: https://artificialanalysis.ai/text-to-speech/models/eleven-v4
+  title: Eleven v4 Provider Voice Arena
+  publisher: Artificial Analysis
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
+  limitations: []
+- id: src-3351565d6f38
+  url: https://artificialanalysis.ai/methodology/text-to-speech
+  title: Text-to-speech evaluation methodology
+  publisher: Artificial Analysis
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
+  limitations: []
+- id: src-4500b2c5fc9e
+  url: https://artificialanalysis.ai/speech-to-speech?api-benchmarks=agentic-performance-vs-cost-to-run
+  title: Speech-to-speech benchmark configurations
+  publisher: Artificial Analysis
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
+  limitations: []
+- id: src-91a6d4ec7912
+  url: https://discuss.ai.google.dev/t/query-differences-in-details-of-decoration-between-veo-3-1-generate-preview-and-veo-3-1-fast-preview/108272
+  title: Veo detail-accuracy question and support reply
+  publisher: Google AI Developers Forum
+  source_type: practitioner
+  published_at: '2025-10-27'
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
+  limitations: []
+- id: src-df5d5aa8ed0e
+  url: https://labs.scale.com/leaderboard/swe_bench_pro
+  title: SWE-bench Pro public leaderboard
+  publisher: Scale AI
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
+  limitations: []
+- id: src-b1ff9761da4f
+  url: https://ollama.com/library/devstral-small-2
+  title: Devstral Small 2 runtime model card
+  publisher: Ollama
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
+  limitations: []
+- id: src-467bad59597d
+  url: https://arxiv.org/html/2609.13617v1
+  title: Task-specific Images 2.5 evaluation
+  publisher: Raj et al.
+  source_type: independent-evaluation
+  published_at: '2026-09-12'
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
+  limitations: []
+- id: src-6838f4c55ba0
+  url: https://github.com/chadnickfisher/model-intelligence/blob/main/research/task-followup-2026-10-07.md
+  title: All-model task and benchmark follow-up research receipt
+  publisher: Model Intelligence
+  source_type: primary
+  published_at: '2026-10-07'
+  accessed_at: '2026-10-07'
+  claim_scope:
+  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
+  limitations:
+  - Administrative research receipt; substantive capability and benchmark evidence is linked per canonical
+    record.

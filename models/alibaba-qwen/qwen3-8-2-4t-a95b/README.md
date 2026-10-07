@@ -27,6 +27,28 @@ Supporting sources: [Qwen3.8-2.4T-A95B model card](https://huggingface.co/Qwen/Q
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
+### Coding.repository_work (low confidence)
+
+Exact open-weight repository-work ability remains unresolved: the card labels its coding benchmark column Qwen3.8-Max, a hosted model with additional capabilities.
+
+Scope: direct / unknown. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: coding.repository_work
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-fba9d11fe50c103d
+
+Conditions: Hosted Qwen3.8-Max scores and its Claude Code harness are excluded from this checkpoint.
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Qwen3.8-2.4T-A95B model card](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B) · [Qwen3.8 2.4T A95B analysis](https://artificialanalysis.ai/models/qwen3-8-2-4t-a95b)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not confidence.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ## Specifications
 
 | Field | Recorded value |
@@ -86,4 +108,4 @@ Local conditions: Batch 1, short/moderate context unless otherwise stated.; Weig
 
 ## Sources
 
-[Qwen3.8-Max License](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B/blob/main/LICENSE) · [Qwen3.8-2.4T-A95B model card](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
+[Qwen3.8-Max License](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B/blob/main/LICENSE) · [Qwen3.8-2.4T-A95B model card](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B) · [Qwen3.8 2.4T A95B analysis](https://artificialanalysis.ai/models/qwen3-8-2-4t-a95b)

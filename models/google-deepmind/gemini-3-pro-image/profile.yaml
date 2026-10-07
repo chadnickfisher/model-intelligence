@@ -256,6 +256,34 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-231a8488cc54a31b
+  scope: direct
+  task_ids:
+  - image.editing
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Vendor human comparisons support an editing candidate with Search On. Search-assisted preference
+    scores do not guarantee faithful text edits or factual images.
+  confidence: low
+  supporting_evidence_ids:
+  - src-d35a477c49c4
+  contradictory_evidence_ids: []
+  conditions:
+  - Gemini 3 Pro Image with Search On; curated human pairwise preference evaluation.
+  known_failure_modes: []
+  evidence_notes:
+  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
+    confidence.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 performance_characteristics: []
 access_ids:
 - access-42e20aeb4ffad0b4

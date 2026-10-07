@@ -188,6 +188,36 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-4c86ac1246e4aa6b
+  scope: direct
+  task_ids:
+  - coding.repository_work
+  related_task_ids: []
+  assessment: warning
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Scale reports a low SWE-bench Pro result for the named Maverick Instruct route. This is a repository-task
+    warning under that scaffold, not a verdict on every coding task.
+  confidence: low
+  supporting_evidence_ids:
+  - src-65471a2c7ad5
+  - src-df5d5aa8ed0e
+  contradictory_evidence_ids: []
+  conditions:
+  - Scale route llama4-maverick-17b-instruct; provider precision/serving revision not extracted. Experimental
+    Arena chat-variant Elo excluded.
+  known_failure_modes:
+  - Low repository-task completion in the inspected Scale setup.
+  evidence_notes:
+  - 'Low confidence in generalization: one independent scaffold and incomplete route/turn-limit configuration.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 performance_characteristics: []
 access_ids:
 - access-1451bc03a5c0b1c0
@@ -200,6 +230,7 @@ evidence_ids:
 - src-65471a2c7ad5
 - src-8cb15ff6ddd4
 - src-7494e8051b41
+- src-df5d5aa8ed0e
 notes: []
 limitations:
 - No model inference or benchmark was run in this research pass.

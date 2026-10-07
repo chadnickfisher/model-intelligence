@@ -2566,3 +2566,1185 @@ records:
     advertised root CSV returned 404. Qwen3.5-9B was replaced by Qwen3-8B, despite misleading internal key;
     no transfer.", "model_id": "ministral-3-8b", "result": "README reports 3/5 refactoring tasks passed, composite
     concision 0.97.", "source_ids": ["S13"], "task": "coding.refactoring"}'
+- schema_version: '1.0'
+  id: benchmark-043f99e30ccb448f
+  model_id: qwen3-5-9b
+  judgment_ids:
+  - judgment-fea7dda7dcc44e0e
+  benchmark:
+    name: IFEval
+    version: null
+    metric: instruction adherence score
+    unit: percent
+    direction: higher
+  value: 91.5
+  model_version: Qwen/Qwen3.5-9B
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-e0a64484787e
+  conditions:
+  - Use the 9B column, not sibling 4B/27B/35B results.
+  limitations:
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-36aea37771cfac3e
+  model_id: qwen3-5-9b
+  judgment_ids:
+  - judgment-fea7dda7dcc44e0e
+  benchmark:
+    name: IFBench
+    version: null
+    metric: instruction following score
+    unit: percent
+    direction: higher
+  value: 64.5
+  model_version: Qwen/Qwen3.5-9B
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-e0a64484787e
+  conditions:
+  - Use the 9B column, not sibling 4B/27B/35B results.
+  limitations:
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-aeca9e4b12263654
+  model_id: qwen3-5-9b
+  judgment_ids: []
+  benchmark:
+    name: LiveCodeBench
+    version: v6
+    metric: reported coding score
+    unit: percent
+    direction: higher
+  value: 65.6
+  model_version: Qwen/Qwen3.5-9B
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-e0a64484787e
+  conditions:
+  - Use the 9B column, not sibling 4B/27B/35B results.
+  limitations:
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-70b8a6f9dc8fa94d
+  model_id: qwen3-5-9b
+  judgment_ids: []
+  benchmark:
+    name: GPQA
+    version: Diamond
+    metric: Diamond score
+    unit: percent
+    direction: higher
+  value: 81.7
+  model_version: Qwen/Qwen3.5-9B
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-e0a64484787e
+  conditions:
+  - Use the 9B column, not sibling 4B/27B/35B results.
+  limitations:
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-e200b3f9ce743029
+  model_id: bfl-flux3-video
+  judgment_ids:
+  - judgment-bf07973843af6a72
+  benchmark:
+    name: FLUX.3 vendor video preference
+    version: null
+    metric: upper reported preference rate against Grok Imagine Video
+    unit: percent
+    direction: higher
+  value: 69
+  model_version: FLUX.3 Video development candidate
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-1c251cf2a1e7
+  conditions:
+  - Preliminary 10-second 720p text-to-video with audio; vendor-run human preferences.
+  - Vendor reports up to 69%, not a fixed pooled point estimate; model and harness still in development.
+  limitations:
+  - Development candidate to production-checkpoint identity and independent replication are unresolved.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-5bcec83515445b72
+  model_id: cohere-command-a-plus
+  judgment_ids:
+  - judgment-f2ef16690b3303d9
+  benchmark:
+    name: AA-Omniscience
+    version: null
+    metric: non-hallucination rate
+    unit: percent
+    direction: higher
+  value: 86
+  model_version: Command A+ (pre-release evaluation)
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-7a929ac1ccc5
+  conditions:
+  - Pre-release AA-Omniscience evaluation; non-hallucination and accuracy are distinct metrics.
+  limitations:
+  - Current production checkpoint equivalence and renewed independent evaluation remain unverified.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-39cf0a12bc8fdb06
+  model_id: cohere-command-a-plus
+  judgment_ids:
+  - judgment-f2ef16690b3303d9
+  benchmark:
+    name: AA-Omniscience
+    version: null
+    metric: accuracy
+    unit: percent
+    direction: higher
+  value: 9
+  model_version: Command A+ (pre-release evaluation)
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-7a929ac1ccc5
+  conditions:
+  - Pre-release AA-Omniscience evaluation; non-hallucination and accuracy are distinct metrics.
+  limitations:
+  - Current production checkpoint equivalence and renewed independent evaluation remain unverified.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-3d34d8d720b46586
+  model_id: cohere-embed-5-fast
+  judgment_ids:
+  - judgment-7e21faf82ca7635e
+  benchmark:
+    name: ViDoRe
+    version: V3
+    metric: RCP-nDCG@10
+    unit: percent
+    direction: higher
+  value: 84.5
+  model_version: Embed 5 Fast
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-9d4f7ae81230
+  conditions:
+  - RCP-nDCG@10 reranks fixed candidates; parsed text from eight ViDoRe V3 domains, not full-index recall.
+  limitations:
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Cross-model query/corpus compatibility requires the same output dimension; exact benchmark embedding dimension
+    not extracted.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-9f2e2e7025086f65
+  model_id: cohere-embed-5-pro
+  judgment_ids:
+  - judgment-d02c0c4f21657798
+  benchmark:
+    name: ViDoRe
+    version: V3
+    metric: RCP-nDCG@10
+    unit: percent
+    direction: higher
+  value: 85.8
+  model_version: Embed 5 Pro
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-9d4f7ae81230
+  conditions:
+  - RCP-nDCG@10 reranks fixed candidates; parsed text from eight ViDoRe V3 domains, not full-index recall.
+  limitations:
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Cross-model query/corpus compatibility requires the same output dimension; exact benchmark embedding dimension
+    not extracted.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-d551e3af1795e013
+  model_id: cohere-north-small-translate
+  judgment_ids:
+  - judgment-0e77ffde181d61b9
+  benchmark:
+    name: WMT26
+    version: null
+    metric: vendor all-language judge score
+    unit: judge score (0-100)
+    direction: higher
+  value: 83.6
+  model_version: CohereLabs/North-Small-Translate-1.0
+  harness: null
+  effort: standard translation
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-ce6b8a6b961e
+  - src-425ce7e07108
+  conditions:
+  - Vendor evaluation judged by GPT-5.6-Sol; reported all-language score, not an established human WMT competition
+    rank.
+  limitations:
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Regional figures in the announcement have inconsistent scopes; not reconciled or imported.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-9987cfdd066b7b33
+  model_id: cohere-north-small-translate
+  judgment_ids:
+  - judgment-0e77ffde181d61b9
+  benchmark:
+    name: WMT26
+    version: null
+    metric: vendor all-language judge score
+    unit: judge score (0-100)
+    direction: higher
+  value: 84.36
+  model_version: CohereLabs/North-Small-Translate-1.0
+  harness: null
+  effort: multi-pass agentic translation
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-ce6b8a6b961e
+  - src-425ce7e07108
+  conditions:
+  - Vendor evaluation judged by GPT-5.6-Sol; reported all-language score, not an established human WMT competition
+    rank.
+  - Workflow adds multiple passes; not a changed weight checkpoint.
+  limitations:
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Regional figures in the announcement have inconsistent scopes; not reconciled or imported.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-58bda98e2773ef01
+  model_id: elevenlabs-eleven-v4
+  judgment_ids:
+  - judgment-96525c869cedff6c
+  benchmark:
+    name: AA Provider Voice Arena
+    version: null
+    metric: preference Elo
+    unit: Elo
+    direction: higher
+  value: 1321.44
+  model_version: Eleven v4
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-7c9b9d269f79
+  - src-3351565d6f38
+  conditions:
+  - AA Provider Voice Arena; representative provider voices, not the controlled cloned-voice arena.
+  limitations:
+  - Exact vote count, language mix and immutable serving version were not extracted.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-b7b4542259c1af60
+  model_id: gemini-3-8-live
+  judgment_ids:
+  - judgment-0a7fc4e6861b9abe
+  benchmark:
+    name: Full Duplex Bench
+    version: AA subset of v1/v1.5
+    metric: conversational dynamics score
+    unit: percent
+    direction: higher
+  value: 96.1
+  model_version: Gemini 3.8 Live (default)
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-4500b2c5fc9e
+  conditions:
+  - Default Live configuration; Extended Thinking High results are excluded.
+  limitations:
+  - Live serving revision and benchmark-level decoding settings remain undocumented.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  - AA labels the provider Google; the exact Google API/access-product route is not resolved here.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-931a2af4d14dbb14
+  model_id: gemini-3-8-live
+  judgment_ids: []
+  benchmark:
+    name: tau-Voice
+    version: null
+    metric: task completion
+    unit: percent
+    direction: higher
+  value: 30.1
+  model_version: Gemini 3.8 Live (default)
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-4500b2c5fc9e
+  conditions:
+  - Default Live configuration; Extended Thinking High results are excluded.
+  - Customer-support simulator and domain-specific tools/policies; database end-state scoring.
+  limitations:
+  - Live serving revision and benchmark-level decoding settings remain undocumented.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  - AA labels the provider Google; the exact Google API/access-product route is not resolved here.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-86a0d5964470e37b
+  model_id: gemini-3-pro-image
+  judgment_ids:
+  - judgment-231a8488cc54a31b
+  benchmark:
+    name: Gemini 3 Pro Image human evaluation
+    version: null
+    metric: general image editing preference score
+    unit: preference rating
+    direction: higher
+  value: 1127
+  model_version: Gemini 3 Pro Image (Search On)
+  harness: null
+  effort: null
+  provider_id: null
+  tools:
+  - Google Search
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: preference
+  source_ids:
+  - src-d35a477c49c4
+  conditions:
+  - Gemini 3 Pro Image with Search On; curated human pairwise preference evaluation.
+  - Reported uncertainty +/-13; vendor-run evaluation.
+  limitations:
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Voting sample size, serving revision and direct Search Off transfer are unresolved.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-ebd43b949ce15a9f
+  model_id: gemma-4-31b-it
+  judgment_ids:
+  - judgment-f226052d85b08e80
+  benchmark:
+    name: OmniDocBench
+    version: '1.5'
+    metric: average edit distance
+    unit: edit distance
+    direction: lower
+  value: 0.131
+  model_version: google/gemma-4-31B-it
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-ded81031faae
+  conditions:
+  - Card explicitly evaluates instruction-tuned models; use the 31B column. Family-level Arena labels remain
+    identity-gated.
+  limitations:
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-05652957475484bd
+  model_id: gemma-4-31b-it
+  judgment_ids: []
+  benchmark:
+    name: GPQA
+    version: Diamond
+    metric: Diamond score
+    unit: percent
+    direction: higher
+  value: 84.3
+  model_version: google/gemma-4-31B-it
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-ded81031faae
+  conditions:
+  - Card explicitly evaluates instruction-tuned models; use the 31B column. Family-level Arena labels remain
+    identity-gated.
+  limitations:
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-4afcc146e1dfb25b
+  model_id: gemma-4-31b-it
+  judgment_ids: []
+  benchmark:
+    name: LiveCodeBench
+    version: v6
+    metric: reported coding score
+    unit: percent
+    direction: higher
+  value: 80.0
+  model_version: google/gemma-4-31B-it
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-ded81031faae
+  conditions:
+  - Card explicitly evaluates instruction-tuned models; use the 31B column. Family-level Arena labels remain
+    identity-gated.
+  limitations:
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-74b979771fdfefa0
+  model_id: llama-4-maverick
+  judgment_ids:
+  - judgment-4c86ac1246e4aa6b
+  benchmark:
+    name: SWE-bench Pro
+    version: public
+    metric: resolved tasks
+    unit: percent
+    direction: higher
+  value: 5.24
+  model_version: llama4-maverick-17b-instruct
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-df5d5aa8ed0e
+  conditions:
+  - Scale route llama4-maverick-17b-instruct; provider precision/serving revision not extracted. Experimental
+    Arena chat-variant Elo excluded.
+  - Reported uncertainty +/-1.24; row-specific cap/turn budget not extracted.
+  limitations:
+  - Exact cost cap/turn-limit row styling and immutable route configuration remain unverified.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-f4e8c25ca011bcdc
+  model_id: llama-4-maverick
+  judgment_ids: []
+  benchmark:
+    name: MMMU
+    version: null
+    metric: zero-shot accuracy
+    unit: percent
+    direction: higher
+  value: 73.4
+  model_version: meta-llama/Llama-4-Maverick-17B-128E-Instruct
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-65471a2c7ad5
+  conditions:
+  - Scale route llama4-maverick-17b-instruct; provider precision/serving revision not extracted. Experimental
+    Arena chat-variant Elo excluded.
+  limitations:
+  - Exact cost cap/turn-limit row styling and immutable route configuration remain unverified.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-a7177f3e98d42815
+  model_id: phi-4-mini-instruct
+  judgment_ids:
+  - judgment-eb06ac9534f922b4
+  benchmark:
+    name: MATH
+    version: null
+    metric: reported score
+    unit: percent
+    direction: higher
+  value: 64.0
+  model_version: microsoft/Phi-4-mini-instruct
+  harness: Microsoft internal benchmark platform
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-147450d232b3
+  conditions:
+  - Vendor internal evaluation platform; MATH uses zero-shot chain-of-thought. Mini reasoning/flash siblings
+    excluded.
+  - Zero-shot chain-of-thought.
+  limitations:
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Benchmark version and exact decoding configuration not specified in the extracted table.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-9f7e180fbf50c2b6
+  model_id: phi-4-multimodal-instruct
+  judgment_ids:
+  - judgment-61024ceeda4b1074
+  benchmark:
+    name: s_DocVQA
+    version: null
+    metric: reported document-question score
+    unit: reported score
+    direction: higher
+  value: 87.3
+  model_version: microsoft/Phi-4-multimodal-instruct
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-29885c43e537
+  conditions:
+  - Image plus synthetic spoken query; retain the s_ benchmark prefix. Korean fine-tuned adapter scores excluded.
+  limitations:
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - The card does not specify the s_DocVQA metric formula, benchmark revision or full harness configuration.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-913104c644772c7b
+  model_id: phi-4-reasoning-vision-15b
+  judgment_ids:
+  - judgment-87ac71979507153c
+  benchmark:
+    name: ScreenSpot
+    version: V2
+    metric: GUI localization accuracy
+    unit: percent
+    direction: higher
+  value: 88.2
+  model_version: microsoft/Phi-4-reasoning-vision-15B
+  harness: VLMEvalKit
+  effort: default hybrid
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-91f835e2db28
+  conditions:
+  - Default hybrid model under VLMEvalKit; forced no-think/thinking columns kept separate.
+  limitations:
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Exact harness commit, prompt and decoding settings were not extracted.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-4aca2375b34e2434
+  model_id: phi-4-reasoning-vision-15b
+  judgment_ids:
+  - judgment-87ac71979507153c
+  benchmark:
+    name: ScreenSpot
+    version: V2
+    metric: GUI localization accuracy
+    unit: percent
+    direction: higher
+  value: 88.3
+  model_version: microsoft/Phi-4-reasoning-vision-15B
+  harness: VLMEvalKit
+  effort: force nothink
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-91f835e2db28
+  conditions:
+  - Default hybrid model under VLMEvalKit; forced no-think/thinking columns kept separate.
+  limitations:
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Exact harness commit, prompt and decoding settings were not extracted.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-cbb95c04d7203509
+  model_id: phi-4-reasoning-vision-15b
+  judgment_ids: []
+  benchmark:
+    name: MathVista
+    version: MINI
+    metric: accuracy
+    unit: percent
+    direction: higher
+  value: 75.2
+  model_version: microsoft/Phi-4-reasoning-vision-15B
+  harness: VLMEvalKit
+  effort: default hybrid
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-91f835e2db28
+  conditions:
+  - Default hybrid model under VLMEvalKit; forced no-think/thinking columns kept separate.
+  limitations:
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Exact harness commit, prompt and decoding settings were not extracted.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-a6af56f07ff60de2
+  model_id: devstral-small-2
+  judgment_ids:
+  - judgment-8d7c54b092733784
+  benchmark:
+    name: SWE-bench
+    version: Verified
+    metric: resolved tasks
+    unit: percent
+    direction: higher
+  value: 68.0
+  model_version: mistralai/Devstral-Small-2-24B-Instruct-2512
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-fd9a0c74ec31
+  conditions:
+  - Exact 2512 Small checkpoint; Devstral 2 123B scores excluded. Recommended scaffolds are not a disclosed
+    measured harness.
+  limitations:
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Reconcile HF versus Ollama values, runtime precision and measured scaffold before comparison.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-4f142aaa79755434
+  model_id: devstral-small-2
+  judgment_ids:
+  - judgment-8d7c54b092733784
+  benchmark:
+    name: SWE-bench
+    version: Verified
+    metric: resolved tasks
+    unit: percent
+    direction: higher
+  value: 65.8
+  model_version: Ollama devstral-small-2 runtime (precision unspecified)
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-b1ff9761da4f
+  conditions:
+  - Exact 2512 Small checkpoint; Devstral 2 123B scores excluded. Recommended scaffolds are not a disclosed
+    measured harness.
+  limitations:
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Reconcile HF versus Ollama values, runtime precision and measured scaffold before comparison.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-82de0ae0fdfc3a29
+  model_id: devstral-small-2
+  judgment_ids: []
+  benchmark:
+    name: Terminal Bench
+    version: '2'
+    metric: reported task score
+    unit: percent
+    direction: higher
+  value: 22.5
+  model_version: mistralai/Devstral-Small-2-24B-Instruct-2512
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-fd9a0c74ec31
+  conditions:
+  - Exact 2512 Small checkpoint; Devstral 2 123B scores excluded. Recommended scaffolds are not a disclosed
+    measured harness.
+  limitations:
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Reconcile HF versus Ollama values, runtime precision and measured scaffold before comparison.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-86c0db9e28b48e25
+  model_id: mistral-small-4
+  judgment_ids:
+  - judgment-9a65dee264bffeda
+  benchmark:
+    name: AA-LCR
+    version: null
+    metric: reported long-context reasoning score
+    unit: score
+    direction: higher
+  value: 0.72
+  model_version: mistralai/Mistral-Small-4-119B-2603
+  harness: null
+  effort: reasoning enabled
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-dcba779ffa90
+  conditions:
+  - Reasoning enabled; recommended reasoning_effort high does not establish the exact measured setting.
+  limitations:
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Exact AA-LCR version, prompt lengths and decoding settings are absent from the inspected text.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-6d3e042974e5843d
+  model_id: nemotron-3-ultra
+  judgment_ids:
+  - judgment-17c795182ab4491e
+  benchmark:
+    name: CritPt
+    version: null
+    metric: no-tool score
+    unit: percent
+    direction: higher
+  value: 3.1
+  model_version: NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16 model card (per-run precision not extracted)
+  harness: Nemo Evaluator SDK (per-benchmark harness not extracted)
+  effort: null
+  provider_id: null
+  tools: []
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-c5a0afc263f8
+  conditions:
+  - BF16 card comparison table; independent pre-release BlackBox AI precision/revision not confirmed identical.
+  limitations:
+  - Card SWE-bench Verified comparison table reports 70.7, evaluation widget 71.9; provenance discrepancy unresolved.
+  - Do not transfer NVFP4 practitioner tests to BF16; independent exact-BF16 reproduction still needed.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-56f8942a20d5d92b
+  model_id: nemotron-3-ultra
+  judgment_ids: []
+  benchmark:
+    name: SWE-bench
+    version: Verified
+    metric: resolved tasks
+    unit: percent
+    direction: higher
+  value: 70.7
+  model_version: NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16 model card (per-run precision not extracted)
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-c5a0afc263f8
+  conditions:
+  - BF16 card comparison table; independent pre-release BlackBox AI precision/revision not confirmed identical.
+  - Card comparison-table value; conflicts with evaluation widget.
+  limitations:
+  - Card SWE-bench Verified comparison table reports 70.7, evaluation widget 71.9; provenance discrepancy unresolved.
+  - Do not transfer NVFP4 practitioner tests to BF16; independent exact-BF16 reproduction still needed.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-0a2ba6fbd1b3d703
+  model_id: nemotron-3-ultra
+  judgment_ids: []
+  benchmark:
+    name: SWE-bench
+    version: Verified
+    metric: resolved tasks
+    unit: percent
+    direction: higher
+  value: 71.9
+  model_version: NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16 model card (per-run precision not extracted)
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-c5a0afc263f8
+  conditions:
+  - BF16 card comparison table; independent pre-release BlackBox AI precision/revision not confirmed identical.
+  - Evaluation-widget value; conflicts with card comparison table.
+  limitations:
+  - Card SWE-bench Verified comparison table reports 70.7, evaluation widget 71.9; provenance discrepancy unresolved.
+  - Do not transfer NVFP4 practitioner tests to BF16; independent exact-BF16 reproduction still needed.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-5c8d1876c99fa35f
+  model_id: gpt-image-2-5-flare
+  judgment_ids:
+  - judgment-2ca135b74c458093
+  benchmark:
+    name: Images 2.5 E1 receipt edits
+    version: paper v1
+    metric: other text changed, aligned
+    unit: percent
+    direction: lower
+  value: 31.7
+  model_version: gpt-image-2.5-flare
+  harness: registered OCR receipt scorer
+  effort: null
+  provider_id: openai
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-467bad59597d
+  conditions:
+  - E1 199 receipt edits at medium quality; exact named Flare/Sunburst API; registered OCR, not human visual
+    fidelity.
+  - 199 receipt edits; gains mainly CORD, not WildReceipt; no established target-field correctness gain.
+  limitations:
+  - OCR calibration, alignment sensitivity, post-hoc analysis and unequal cost tiers limit generalization.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-23bd2f82b701a8a8
+  model_id: gpt-image-2-5-sunburst
+  judgment_ids:
+  - judgment-42c1857157777f2b
+  benchmark:
+    name: Images 2.5 E1 receipt edits
+    version: paper v1
+    metric: other text changed, aligned
+    unit: percent
+    direction: lower
+  value: 31.2
+  model_version: gpt-image-2.5-sunburst
+  harness: registered OCR receipt scorer
+  effort: null
+  provider_id: openai
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-467bad59597d
+  conditions:
+  - E1 199 receipt edits at medium quality; exact named Flare/Sunburst API; registered OCR, not human visual
+    fidelity.
+  - 199 receipt edits; gains mainly CORD, not WildReceipt; no established target-field correctness gain.
+  limitations:
+  - OCR calibration, alignment sensitivity, post-hoc analysis and unequal cost tiers limit generalization.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-aeb6841b855f185a
+  model_id: gpt-live-1
+  judgment_ids:
+  - judgment-6fc6e6b6589624e3
+  benchmark:
+    name: tau-Voice
+    version: null
+    metric: task completion
+    unit: percent
+    direction: higher
+  value: 74.5
+  model_version: GPT-Live-1 + Astra
+  harness: null
+  effort: Astra medium
+  provider_id: openai
+  tools:
+  - domain-specific customer support tools
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-4500b2c5fc9e
+  conditions:
+  - AA tau-Voice database end-state scoring with policies/tools; one trial per listed GPT-Live configuration.
+  limitations:
+  - Repeat-trial uncertainty and immutable frontend/backend revision remain unresolved.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-f0aad91bf43c4a5e
+  model_id: gpt-live-1
+  judgment_ids:
+  - judgment-6fc6e6b6589624e3
+  benchmark:
+    name: tau-Voice
+    version: null
+    metric: task completion
+    unit: percent
+    direction: higher
+  value: 59.3
+  model_version: GPT-Live-1 + Sol
+  harness: null
+  effort: Sol low
+  provider_id: openai
+  tools:
+  - domain-specific customer support tools
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-4500b2c5fc9e
+  conditions:
+  - AA tau-Voice database end-state scoring with policies/tools; one trial per listed GPT-Live configuration.
+  limitations:
+  - Repeat-trial uncertainty and immutable frontend/backend revision remain unresolved.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-92ef3626db4618b8
+  model_id: gpt-realtime-2-1
+  judgment_ids:
+  - judgment-8d4fb0af2cb7e4fe
+  benchmark:
+    name: tau-Voice
+    version: null
+    metric: task completion
+    unit: percent
+    direction: higher
+  value: 45.7
+  model_version: GPT-Realtime-2.1
+  harness: null
+  effort: High
+  provider_id: openai
+  tools:
+  - domain-specific customer support tools
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-4500b2c5fc9e
+  conditions:
+  - AA tau-Voice simulated customer support with domain tools and policies; High uses two trials.
+  limitations:
+  - Immutable serving revision, complete decoding settings and Minimal trial count were not extracted.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+- schema_version: '1.0'
+  id: benchmark-06b13747d4e78a67
+  model_id: gpt-realtime-2-1
+  judgment_ids:
+  - judgment-8d4fb0af2cb7e4fe
+  benchmark:
+    name: tau-Voice
+    version: null
+    metric: task completion
+    unit: percent
+    direction: higher
+  value: 38.0
+  model_version: GPT-Realtime-2.1
+  harness: null
+  effort: Minimal
+  provider_id: openai
+  tools:
+  - domain-specific customer support tools
+  measured_at: null
+  observed_at: '2026-10-07'
+  evidence_class: independent_quality
+  source_ids:
+  - src-4500b2c5fc9e
+  conditions:
+  - AA tau-Voice simulated customer support with domain tools and policies; High uses two trials.
+  limitations:
+  - Immutable serving revision, complete decoding settings and Minimal trial count were not extracted.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.

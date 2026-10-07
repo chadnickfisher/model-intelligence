@@ -83,7 +83,10 @@ Every research package accounts for all catalog models across capabilities,
 benchmarks/confidence rationale, access/pricing/limits and post-launch behavior in
 the [research coverage ledger](data/research-coverage.yaml). Actual check dates and
 source/search references are separate from carry-forward verification dates.
-Pending work remains explicitly not checked. Validation checks ledger consistency,
+The [October 7 task follow-up](research/task-followup-2026-10-07.md) completes the
+26 capability and 26 benchmark checks that were pending in the earlier package.
+All 53 models now have actual checks in all four domains; investigated unknowns
+and configuration gaps remain explicit. Validation checks ledger consistency,
 not the adequacy of source research. Research maintenance remains paused.
 
 Cost Explorer estimates **text-token subtotals** only when an exact current price

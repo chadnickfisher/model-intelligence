@@ -29,6 +29,28 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: Observation obs-752ea46df2f7: Public evidence observation
 
+### Context.retrieval (low confidence)
+
+Vendor ViDoRe V3 results support ranking a fixed candidate set of parsed documents; first-stage retrieval recall over a full index remains unknown.
+
+Scope: direct / conditional. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: context.retrieval
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-7e21faf82ca7635e
+
+Conditions: RCP-nDCG@10 reranks fixed candidates; parsed text from eight ViDoRe V3 domains, not full-index recall.
+
+Failure modes / limitations: This candidate-ranking result cannot establish full-index recall or all-language superiority.
+
+Supporting sources: [cohere.com](https://cohere.com/blog/embed-5)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not confidence.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ## Specifications
 
 | Field | Recorded value |

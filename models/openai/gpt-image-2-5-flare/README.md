@@ -29,6 +29,28 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: supporting evidence: Vendor positions Sunburst for finer editing control and Flare for faster generation.; contradictory evidence: No independent model-specific head-to-head recovered in this bounded pass; equal token prices do not imply equal cost per image.; Observation obs-144443616836: Latency-oriented image generation choice.; Potential risk (not a measured failure): Inspect text, local edits and identity consistency; these checks are prudent risk controls, not measured failure rates.
 
+### Image.editing (low confidence)
+
+Independent registered-OCR checks find fewer surrounding receipt-text changes, without an established target-field correctness improvement. Faithful repeated editing remains conditional.
+
+Scope: direct / warning. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: image.editing
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-2ca135b74c458093
+
+Conditions: E1 199 receipt edits at medium quality; exact named Flare/Sunburst API; registered OCR, not human visual fidelity.
+
+Failure modes / limitations: Collateral text changes persist; improved surrounding-text OCR preservation is not precise target editing.
+
+Supporting sources: [Task-specific Images 2.5 evaluation](https://arxiv.org/html/2609.13617v1) · [Introducing ChatGPT Images 2.5](https://openai.com/index/introducing-chatgpt-images-2-5/) · [gpt-image-2.5-flare model specifications](https://developers.openai.com/api/docs/models/gpt-image-2.5-flare)
+
+Contradictory or limiting sources: [Task-specific Images 2.5 evaluation](https://arxiv.org/html/2609.13617v1)
+
+Evidence notes: Low confidence in broad fidelity: one independent automatic scorer, post-hoc alignment sensitivity and no human replication.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ## Specifications
 
 | Field | Recorded value |
@@ -91,4 +113,4 @@ Local conditions: Not established in this pass
 
 ## Sources
 
-[gpt-image-2.5-flare model specifications](https://developers.openai.com/api/docs/models/gpt-image-2.5-flare) · [Introducing ChatGPT Images 2.5](https://openai.com/index/introducing-chatgpt-images-2-5/) · [Create image API reference](https://developers.openai.com/api/reference/resources/images/methods/generate)
+[gpt-image-2.5-flare model specifications](https://developers.openai.com/api/docs/models/gpt-image-2.5-flare) · [Introducing ChatGPT Images 2.5](https://openai.com/index/introducing-chatgpt-images-2-5/) · [Create image API reference](https://developers.openai.com/api/reference/resources/images/methods/generate) · [Task-specific Images 2.5 evaluation](https://arxiv.org/html/2609.13617v1)

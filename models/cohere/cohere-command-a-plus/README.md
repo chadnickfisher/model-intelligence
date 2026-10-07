@@ -51,6 +51,28 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: Observation obs-4dd631a08c77: Public evidence observation
 
+### Research.fact_check (low confidence)
+
+Independent launch testing reports high abstention/non-hallucination alongside low factual accuracy. Abstaining safely does not establish reliable factual answers.
+
+Scope: direct / warning. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: research.fact_check
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-f2ef16690b3303d9
+
+Conditions: Pre-release AA-Omniscience evaluation; non-hallucination and accuracy are distinct metrics.
+
+Failure modes / limitations: Low measured factual accuracy in this evaluation; do not interpret abstention as knowledge.
+
+Supporting sources: [artificialanalysis.ai](https://artificialanalysis.ai/articles/cohere-launches-open-weights-model-command-a-more-than-a-year-since-the-command-a-release) · [docs.cohere.com](https://docs.cohere.com/docs/command-a-plus)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence in current generalization: one independent pre-release evaluation, uncertain later serving revision.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ### Measured generation behavior (medium confidence)
 
 Public evidence observation Measurements: {"output_tokens_per_second": 281}. These describe the cited benchmark configuration only.

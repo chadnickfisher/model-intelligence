@@ -7,6 +7,28 @@
 
 ## Task judgments
 
+### Reasoning.scientific (low confidence)
+
+Vendor CritPt no-tool results warn against assuming graduate physics research ability from higher general exam scores; independent launch evaluation also reports limited CritPt performance.
+
+Scope: direct / warning. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: reasoning.scientific
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-17c795182ab4491e
+
+Conditions: BF16 card comparison table; independent pre-release BlackBox AI precision/revision not confirmed identical.
+
+Failure modes / limitations: Low no-tool graduate-physics result under the inspected setup; broad scientific ability remains uncertain.
+
+Supporting sources: [Nemotron3 Ultra 550B-A55B model card](https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16) · [Nemotron3 Ultra release evaluation](https://artificialanalysis.ai/articles/nvidia-nemotron-3-ultra-released)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not confidence.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ### High throughput text agents (medium confidence)
 
 A strong deployment candidate for low-latency text agents on suitable NVIDIA infrastructure.

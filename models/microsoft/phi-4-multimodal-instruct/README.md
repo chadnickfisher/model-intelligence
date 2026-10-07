@@ -27,6 +27,28 @@ Supporting sources: [Phi-4 Multimodal official card](https://huggingface.co/micr
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
+### Vision.question_answering (low confidence)
+
+The exact card supports a candidate for document questions delivered as synthetic speech, with a vendor s_DocVQA result; pure text-query and all-language performance are separate.
+
+Scope: direct / conditional. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: vision.question_answering
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-61024ceeda4b1074
+
+Conditions: Image plus synthetic spoken query; retain the s_ benchmark prefix. Korean fine-tuned adapter scores excluded.
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Phi-4 Multimodal official card](https://huggingface.co/microsoft/Phi-4-multimodal-instruct)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not confidence.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ## Specifications
 
 | Field | Recorded value |

@@ -27,6 +27,28 @@ Supporting sources: [Qwen3.5-9B model card](https://huggingface.co/Qwen/Qwen3.5-
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
+### Language.instruction_following (low confidence)
+
+The exact 9B card reports IFEval 91.5 and IFBench 64.5; constrained instruction adherence is a conditional candidate, without a measured real-world edit success rate.
+
+Scope: direct / conditional. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: language.instruction_following
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-fea7dda7dcc44e0e
+
+Conditions: Use the 9B column, not sibling 4B/27B/35B results.
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Qwen3.5-9B model card](https://huggingface.co/Qwen/Qwen3.5-9B)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not confidence.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ## Specifications
 
 | Field | Recorded value |

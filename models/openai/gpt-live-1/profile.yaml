@@ -142,6 +142,36 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-6fc6e6b6589624e3
+  scope: direct
+  task_ids:
+  - agent.tool_use
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Independent voice customer-support task results vary with the connected reasoning model and effort.
+    They support the combined agent configurations, not GPT-Live alone.
+  confidence: low
+  supporting_evidence_ids:
+  - src-4500b2c5fc9e
+  - src-84d1a7712d6a
+  - src-c84f0489248c
+  contradictory_evidence_ids: []
+  conditions:
+  - AA tau-Voice database end-state scoring with policies/tools; one trial per listed GPT-Live configuration.
+  known_failure_modes: []
+  evidence_notes:
+  - 'Low confidence beyond these systems: one trial, configuration dependence, not a controlled causal frontend
+    comparison.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 performance_characteristics: []
 access_ids:
 - access-75763dfe80bc3dfa
@@ -155,6 +185,7 @@ evidence_ids:
 - src-84d1a7712d6a
 - src-c84f0489248c
 - src-49e8d0577a5e
+- src-4500b2c5fc9e
 notes: []
 limitations:
 - Undisclosed architecture and parameter count

@@ -29,6 +29,28 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: Observation obs-7f1696b1081e: Current flagship multilingual synthesis and dialogue features.
 
+### Audio.speech_generation (low confidence)
+
+Eleven v4 has independent provider-voice preference evidence. This supports listening-quality evaluation, not guaranteed pronunciation or accuracy across every supported language.
+
+Scope: direct / conditional. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: audio.speech_generation
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-96525c869cedff6c
+
+Conditions: AA Provider Voice Arena; representative provider voices, not the controlled cloned-voice arena.
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Eleven v4 Provider Voice Arena](https://artificialanalysis.ai/text-to-speech/models/eleven-v4) · [Text-to-speech evaluation methodology](https://artificialanalysis.ai/methodology/text-to-speech) · [elevenlabs.io](https://elevenlabs.io/docs/overview/models)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence in broad task generalization: one dynamic preference evaluation with incomplete voice/language configuration.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ## Specifications
 
 | Field | Recorded value |
@@ -88,4 +110,4 @@ Local conditions: Not established in this pass
 
 ## Sources
 
-[elevenlabs.io](https://elevenlabs.io/docs/overview/models) · [elevenlabs.io](https://elevenlabs.io/pricing/api)
+[elevenlabs.io](https://elevenlabs.io/docs/overview/models) · [elevenlabs.io](https://elevenlabs.io/pricing/api) · [Eleven v4 Provider Voice Arena](https://artificialanalysis.ai/text-to-speech/models/eleven-v4) · [Text-to-speech evaluation methodology](https://artificialanalysis.ai/methodology/text-to-speech)

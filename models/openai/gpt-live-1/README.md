@@ -29,6 +29,28 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: supporting evidence: Official full-duplex design supports overlapping listen/speak and backend delegation.; contradictory evidence: Strong reasoning may come from the backend, not this voice model; no independent task evaluation recovered.; Observation obs-4797f27441f5: Use for conversational flow with a separately configured reasoning backend.; Potential risk (not a measured failure): Noise, interruptions and backend failure can still impair interaction; exact accuracy unknown.
 
+### Agent.tool_use (low confidence)
+
+Independent voice customer-support task results vary with the connected reasoning model and effort. They support the combined agent configurations, not GPT-Live alone.
+
+Scope: direct / conditional. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: agent.tool_use
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-6fc6e6b6589624e3
+
+Conditions: AA tau-Voice database end-state scoring with policies/tools; one trial per listed GPT-Live configuration.
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Speech-to-speech benchmark configurations](https://artificialanalysis.ai/speech-to-speech?api-benchmarks=agentic-performance-vs-cost-to-run) · [gpt-live-1 model specifications](https://developers.openai.com/api/docs/models/gpt-live-1) · [Introducing GPT-Live](https://openai.com/index/introducing-gpt-live/)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence beyond these systems: one trial, configuration dependence, not a controlled causal frontend comparison.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ## Specifications
 
 | Field | Recorded value |
@@ -89,4 +111,4 @@ Local conditions: Not established in this pass
 
 ## Sources
 
-[gpt-live-1 model specifications](https://developers.openai.com/api/docs/models/gpt-live-1) · [Introducing GPT-Live](https://openai.com/index/introducing-gpt-live/) · [OpenAI API changelog](https://developers.openai.com/api/docs/changelog)
+[gpt-live-1 model specifications](https://developers.openai.com/api/docs/models/gpt-live-1) · [Introducing GPT-Live](https://openai.com/index/introducing-gpt-live/) · [OpenAI API changelog](https://developers.openai.com/api/docs/changelog) · [Speech-to-speech benchmark configurations](https://artificialanalysis.ai/speech-to-speech?api-benchmarks=agentic-performance-vs-cost-to-run)

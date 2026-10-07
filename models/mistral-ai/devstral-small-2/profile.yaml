@@ -164,6 +164,38 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-8d7c54b092733784
+  scope: direct
+  task_ids:
+  - coding.repository_work
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Vendor SWE-bench results support a provisional repository-work candidate, but the runtime card
+    reports different values; scores require their own scaffold and runtime.
+  confidence: low
+  supporting_evidence_ids:
+  - src-fd9a0c74ec31
+  - src-b1ff9761da4f
+  contradictory_evidence_ids:
+  - src-b1ff9761da4f
+  conditions:
+  - Exact 2512 Small checkpoint; Devstral 2 123B scores excluded. Recommended scaffolds are not a disclosed
+    measured harness.
+  known_failure_modes:
+  - Published runtime-card scores differ from the exact HF card; do not average or select a convenient score.
+  evidence_notes:
+  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
+    confidence.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 performance_characteristics: []
 access_ids:
 - access-edc37b41e88d1f80
@@ -174,6 +206,7 @@ evidence_ids:
 - src-f2036f817d22
 - src-fd9a0c74ec31
 - src-1f59cd499805
+- src-b1ff9761da4f
 notes: []
 limitations:
 - No model inference or benchmark was run in this research pass.

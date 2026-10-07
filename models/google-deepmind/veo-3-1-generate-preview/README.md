@@ -29,6 +29,28 @@ Contradictory or limiting sources: [Veo generation guide](https://ai.google.dev/
 
 Evidence notes: task-conditioned synthesis; no inference runs performed; Observation obs-a1dcd03b9809: Native audio, frame controls, reference images and extension fit directed short cinematic shots.; Observation obs-7d1f6921bea0: Multi-video reasoning unsupported; non-English unevaluated; audio processing/safety blocks and variable latency occur.; Observation obs-6dfa41ffcfec: Google now recommends Omni as default video option, reserving Veo for particular controls/legacy integration.
 
+### Video.generation (low confidence)
+
+The preview route documents video generation, but exact-route measured detail accuracy remains unresolved. Located Fast-model distortion reports do not establish failure of the standard model.
+
+Scope: direct / unknown. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: video.generation
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-a39ac31ce68709f0
+
+Conditions: Standard generate-preview identity; Fast sibling tests and unpinned consumer-surface comparisons excluded.
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Veo 3.1 API model documentation](https://ai.google.dev/gemini-api/docs/models/veo-3.1-generate-preview) · [Veo detail-accuracy question and support reply](https://discuss.ai.google.dev/t/query-differences-in-details-of-decoration-between-veo-3-1-generate-preview-and-veo-3-1-fast-preview/108272)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not confidence.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ### Measured generation behavior (medium confidence)
 
 Multi-video reasoning unsupported; non-English unevaluated; audio processing/safety blocks and variable latency occur. Measurements: {"published_latency_min_seconds": 11, "published_latency_max_seconds": 360}. These describe the cited benchmark configuration only.
@@ -112,4 +134,4 @@ Local conditions: Not established in this pass
 
 ## Sources
 
-[Veo generation guide](https://ai.google.dev/gemini-api/docs/veo) · [Gemini API rate limits](https://ai.google.dev/gemini-api/docs/rate-limits) · [Veo 3.1 API model documentation](https://ai.google.dev/gemini-api/docs/models/veo-3.1-generate-preview) · [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog)
+[Veo generation guide](https://ai.google.dev/gemini-api/docs/veo) · [Gemini API rate limits](https://ai.google.dev/gemini-api/docs/rate-limits) · [Veo 3.1 API model documentation](https://ai.google.dev/gemini-api/docs/models/veo-3.1-generate-preview) · [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog) · [Veo detail-accuracy question and support reply](https://discuss.ai.google.dev/t/query-differences-in-details-of-decoration-between-veo-3-1-generate-preview-and-veo-3-1-fast-preview/108272)

@@ -29,6 +29,28 @@ Contradictory or limiting sources: [Omni video guide](https://ai.google.dev/gemi
 
 Evidence notes: task-conditioned synthesis; no inference runs performed; Observation obs-3386dd991c55: Conversational short-video editing and mixed inputs support an iterative workflow.; Observation obs-b46d11e01909: Some edits of uploaded videos/recognizable people are regionally restricted; 1080p/4K are upscaled.
 
+### Video.editing (low confidence)
+
+Official 1.1 documentation describes scene extension and start/end-frame controls; their measured consistency and edit fidelity remain unknown for the exact 1.1 route.
+
+Scope: direct / unknown. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: video.editing
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-af4ab0ba09892360
+
+Conditions: Feature documentation is not an edit-quality evaluation. Generic Omni Flash comparator scores are version-gated.
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Gemini Omni 1.1 Flash developer and subscriber access](https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/) · [Gemini Omni Flash API model documentation](https://ai.google.dev/gemini-api/docs/models/gemini-omni-flash)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not confidence.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ## Specifications
 
 | Field | Recorded value |
@@ -93,4 +115,4 @@ Local conditions: Not established in this pass
 
 ## Sources
 
-[Gemini API rate limits](https://ai.google.dev/gemini-api/docs/rate-limits) · [Gemini Omni Flash API model documentation](https://ai.google.dev/gemini-api/docs/models/gemini-omni-flash) · [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog)
+[Gemini API rate limits](https://ai.google.dev/gemini-api/docs/rate-limits) · [Gemini Omni Flash API model documentation](https://ai.google.dev/gemini-api/docs/models/gemini-omni-flash) · [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog) · [Gemini Omni 1.1 Flash developer and subscriber access](https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/)

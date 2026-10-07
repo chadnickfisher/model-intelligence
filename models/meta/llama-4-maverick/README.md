@@ -27,6 +27,28 @@ Supporting sources: [Llama 4 Scout / Maverick model card](https://huggingface.co
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
+### Coding.repository_work (low confidence)
+
+Scale reports a low SWE-bench Pro result for the named Maverick Instruct route. This is a repository-task warning under that scaffold, not a verdict on every coding task.
+
+Scope: direct / warning. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: coding.repository_work
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-4c86ac1246e4aa6b
+
+Conditions: Scale route llama4-maverick-17b-instruct; provider precision/serving revision not extracted. Experimental Arena chat-variant Elo excluded.
+
+Failure modes / limitations: Low repository-task completion in the inspected Scale setup.
+
+Supporting sources: [Llama 4 Maverick official card](https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct) · [SWE-bench Pro public leaderboard](https://labs.scale.com/leaderboard/swe_bench_pro)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence in generalization: one independent scaffold and incomplete route/turn-limit configuration.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ## Specifications
 
 | Field | Recorded value |
@@ -85,4 +107,4 @@ Local conditions: Batch 1, short/moderate context unless otherwise stated.; Weig
 
 ## Sources
 
-[Llama 4 Community License](https://github.com/meta-llama/llama-models/blob/main/models/llama4/LICENSE) · [Llama 4 Maverick official card](https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct) · [Llama 4 Scout / Maverick model card](https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct) · [Llama 4 acceptable-use policy](https://github.com/meta-llama/llama-models/blob/main/models/llama4/USE_POLICY.md)
+[Llama 4 Community License](https://github.com/meta-llama/llama-models/blob/main/models/llama4/LICENSE) · [Llama 4 Maverick official card](https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct) · [Llama 4 Scout / Maverick model card](https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct) · [Llama 4 acceptable-use policy](https://github.com/meta-llama/llama-models/blob/main/models/llama4/USE_POLICY.md) · [SWE-bench Pro public leaderboard](https://labs.scale.com/leaderboard/swe_bench_pro)

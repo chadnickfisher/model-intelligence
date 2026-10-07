@@ -131,6 +131,36 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-96525c869cedff6c
+  scope: direct
+  task_ids:
+  - audio.speech_generation
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Eleven v4 has independent provider-voice preference evidence. This supports listening-quality evaluation,
+    not guaranteed pronunciation or accuracy across every supported language.
+  confidence: low
+  supporting_evidence_ids:
+  - src-7c9b9d269f79
+  - src-3351565d6f38
+  - src-58f6a44d1374
+  contradictory_evidence_ids: []
+  conditions:
+  - AA Provider Voice Arena; representative provider voices, not the controlled cloned-voice arena.
+  known_failure_modes: []
+  evidence_notes:
+  - 'Low confidence in broad task generalization: one dynamic preference evaluation with incomplete voice/language
+    configuration.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 performance_characteristics: []
 access_ids:
 - access-19adfeee35641105
@@ -141,6 +171,8 @@ price_ids:
 evidence_ids:
 - src-58f6a44d1374
 - src-bcc14c31357b
+- src-7c9b9d269f79
+- src-3351565d6f38
 notes: []
 limitations:
 - Voice likeness/consent rights are separate from technical cloning capability.

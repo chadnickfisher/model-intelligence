@@ -228,6 +228,35 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-0a7fc4e6861b9abe
+  scope: direct
+  task_ids:
+  - audio.conversation
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Independent default Gemini 3.8 Live results support conversational turn-taking under the measured
+    setup; its tool-task result is much lower and does not imply general agent reliability.
+  confidence: low
+  supporting_evidence_ids:
+  - src-4500b2c5fc9e
+  - src-744e7330e24d
+  contradictory_evidence_ids: []
+  conditions:
+  - Default Live configuration; Extended Thinking High results are excluded.
+  known_failure_modes: []
+  evidence_notes:
+  - 'Low confidence beyond the evaluated conversations: one evaluator, rolling alias and incomplete benchmark
+    setup.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 performance_characteristics: []
 access_ids:
 - access-0791ca3b09446ea6
@@ -245,6 +274,7 @@ evidence_ids:
 - src-a24fd97eb3d0
 - src-744e7330e24d
 - src-4c04e11c8a1b
+- src-4500b2c5fc9e
 notes: []
 limitations:
 - Independent 3.8 Live task quality and latency measurements

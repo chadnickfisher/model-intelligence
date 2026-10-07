@@ -29,6 +29,28 @@ Contradictory or limiting sources: [Gemini 3.8 Audio model card](https://deepmin
 
 Evidence notes: task-conditioned synthesis; no inference runs performed; Observation obs-c0b11ad9d793: Streaming voice with interleaved reasoning and default non-blocking tool calls is a suitable interface design for conversational agents.; Observation obs-d67386e9f0d6: Hallucinations/timeouts remain; migration fails if unsupported thinking_level or proactive_audio:false is sent.
 
+### Audio.conversation (low confidence)
+
+Independent default Gemini 3.8 Live results support conversational turn-taking under the measured setup; its tool-task result is much lower and does not imply general agent reliability.
+
+Scope: direct / conditional. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: audio.conversation
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-0a7fc4e6861b9abe
+
+Conditions: Default Live configuration; Extended Thinking High results are excluded.
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Speech-to-speech benchmark configurations](https://artificialanalysis.ai/speech-to-speech?api-benchmarks=agentic-performance-vs-cost-to-run) · [Gemini 3.8 Audio model card](https://deepmind.google/models/model-cards/gemini-3-8-audio/)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence beyond the evaluated conversations: one evaluator, rolling alias and incomplete benchmark setup.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ## Specifications
 
 | Field | Recorded value |
@@ -91,4 +113,4 @@ Local conditions: Not established in this pass
 
 ## Sources
 
-[Live API overview](https://ai.google.dev/gemini-api/docs/live-api) · [Gemini API rate limits](https://ai.google.dev/gemini-api/docs/rate-limits) · [Gemini 3.8 Live API model documentation](https://ai.google.dev/gemini-api/docs/models/gemini-3.8-live) · [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog) · [Gemini 3.8 Audio model card](https://deepmind.google/models/model-cards/gemini-3-8-audio/) · [Gemini 3 Pro base model card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf)
+[Live API overview](https://ai.google.dev/gemini-api/docs/live-api) · [Gemini API rate limits](https://ai.google.dev/gemini-api/docs/rate-limits) · [Gemini 3.8 Live API model documentation](https://ai.google.dev/gemini-api/docs/models/gemini-3.8-live) · [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog) · [Gemini 3.8 Audio model card](https://deepmind.google/models/model-cards/gemini-3-8-audio/) · [Gemini 3 Pro base model card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf) · [Speech-to-speech benchmark configurations](https://artificialanalysis.ai/speech-to-speech?api-benchmarks=agentic-performance-vs-cost-to-run)

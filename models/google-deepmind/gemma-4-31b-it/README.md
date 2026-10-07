@@ -29,6 +29,28 @@ Contradictory or limiting sources: [Artificial Analysis gemma-4-31b](https://art
 
 Evidence notes: task-conditioned synthesis; no inference runs performed; Observation obs-277108d396be: Open downloadable weights and Apache 2.0 allow controlled deployment and tuning.; Observation obs-984e3b3ac410: Provider evaluates 31B IT as capable in coding and visual reasoning; smaller variants trade quality for resources.; Observation obs-fcfd1534c8b5: Independent hosted 31B reasoning throughput is substantially lower than the Flash services measured here.; Observation obs-cdfc4938876f: Independent configuration-specific results show model size and thinking mode do not create a simple ranking.
 
+### Knowledge.extraction (low confidence)
+
+The exact instruction-tuned 31B card reports document parsing performance, supporting a provisional structured-document extraction candidate.
+
+Scope: direct / conditional. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: knowledge.extraction
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-f226052d85b08e80
+
+Conditions: Card explicitly evaluates instruction-tuned models; use the 31B column. Family-level Arena labels remain identity-gated.
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Google Gemma 4 31B instruction-tuned weights](https://huggingface.co/google/gemma-4-31B-it)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not confidence.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ### Measured generation behavior (medium confidence)
 
 Independent hosted 31B reasoning throughput is substantially lower than the Flash services measured here. Measurements: {"output_tokens_per_second": 35.6}. These describe the cited benchmark configuration only.

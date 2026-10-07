@@ -29,6 +29,28 @@ Contradictory or limiting sources: [Is Nano Banana Pro a Low-Level Vision All-Ro
 
 Evidence notes: task-conditioned synthesis; no inference runs performed; Observation obs-bbe38314fda9: Grounded image creation and text/layout control are supported; results require review.; Observation obs-c3991e29aaff: Independent low-level vision study found attractive reconstructed detail but lower reference-based fidelity than specialists.
 
+### Image.editing (low confidence)
+
+Vendor human comparisons support an editing candidate with Search On. Search-assisted preference scores do not guarantee faithful text edits or factual images.
+
+Scope: direct / conditional. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: image.editing
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-231a8488cc54a31b
+
+Conditions: Gemini 3 Pro Image with Search On; curated human pairwise preference evaluation.
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Gemini 3 Pro Image model card](https://deepmind.google/models/model-cards/gemini-3-pro-image/)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not confidence.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ## Specifications
 
 | Field | Recorded value |

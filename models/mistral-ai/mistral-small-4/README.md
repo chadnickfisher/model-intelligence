@@ -27,6 +27,28 @@ Supporting sources: [Mistral Small 4 119B model card](https://huggingface.co/mis
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
+### Context.reasoning (low confidence)
+
+Vendor AA-LCR evidence supports a provisional long-context reasoning candidate when reasoning is enabled; the result does not transfer automatically to reasoning off.
+
+Scope: direct / conditional. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: context.reasoning
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-9a65dee264bffeda
+
+Conditions: Reasoning enabled; recommended reasoning_effort high does not establish the exact measured setting.
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Mistral Small 4 119B model card](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not confidence.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ## Specifications
 
 | Field | Recorded value |

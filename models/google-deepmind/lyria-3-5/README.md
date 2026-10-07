@@ -29,6 +29,28 @@ Contradictory or limiting sources: [Generate music with Lyria 3.5](https://ai.go
 
 Evidence notes: task-conditioned synthesis; no inference runs performed; Observation obs-d42491a5f0c8: Full songs include prompted verses, choruses, bridges and lyrics; developer guidance supports structural prompts.; Observation obs-62a4e6b29fd2: Google reports improved audio fidelity and lyric-prompt adherence versus Lyria 2.; Observation obs-4bde1c37710c: Single-turn generation, variable duration/output, blocked artist-voice/copyrighted-lyric prompts and SynthID watermark constrain workflows.
 
+### Music.generation (low confidence)
+
+Vendor music-expert evaluations report improved fidelity and lyric prompt adherence over Lyria 2; this is qualitative evidence, without an independently established error rate.
+
+Scope: direct / conditional. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: music.generation
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-d0a9599027c859f7
+
+Conditions: July 2026 model card; curated in/out-of-distribution music prompts and music experts.
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Lyria 3.5 model card](https://deepmind.google/models/model-cards/lyria-3-5/)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not confidence.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ## Specifications
 
 | Field | Recorded value |

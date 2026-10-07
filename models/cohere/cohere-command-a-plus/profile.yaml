@@ -171,6 +171,36 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 1
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- id: judgment-f2ef16690b3303d9
+  scope: direct
+  task_ids:
+  - research.fact_check
+  related_task_ids: []
+  assessment: warning
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Independent launch testing reports high abstention/non-hallucination alongside low factual accuracy.
+    Abstaining safely does not establish reliable factual answers.
+  confidence: low
+  supporting_evidence_ids:
+  - src-7a929ac1ccc5
+  - src-4b5fc50d9047
+  contradictory_evidence_ids: []
+  conditions:
+  - Pre-release AA-Omniscience evaluation; non-hallucination and accuracy are distinct metrics.
+  known_failure_modes:
+  - Low measured factual accuracy in this evaluation; do not interpret abstention as knowledge.
+  evidence_notes:
+  - 'Low confidence in current generalization: one independent pre-release evaluation, uncertain later serving
+    revision.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 performance_characteristics:
 - id: judgment-9404c729731567f2
   scope: performance

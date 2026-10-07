@@ -29,6 +29,28 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: Observation obs-516d65ed1c24: Purpose-built machine translation with listed tier-one languages and deployment formats.
 
+### Language.translation (low confidence)
+
+Vendor WMT26 evaluation supports a provisional translation candidate for its tested language set; the multi-pass agentic result is a separate workflow.
+
+Scope: direct / conditional. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: language.translation
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-0e77ffde181d61b9
+
+Conditions: Vendor evaluation judged by GPT-5.6-Sol; reported all-language score, not an established human WMT competition rank.
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [North Small Translate](https://cohere.com/blog/north-small-translate) · [https://huggingface.co/CohereLabs/North-Small-Translate-1.0](https://huggingface.co/CohereLabs/North-Small-Translate-1.0)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not confidence.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ## Specifications
 
 | Field | Recorded value |
@@ -87,4 +109,4 @@ Local conditions: Not established in this pass
 
 ## Sources
 
-[docs.cohere.com](https://docs.cohere.com/docs/north-small-translate-1.0)
+[docs.cohere.com](https://docs.cohere.com/docs/north-small-translate-1.0) · [North Small Translate](https://cohere.com/blog/north-small-translate) · [https://huggingface.co/CohereLabs/North-Small-Translate-1.0](https://huggingface.co/CohereLabs/North-Small-Translate-1.0)

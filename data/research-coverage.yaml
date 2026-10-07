@@ -4,31 +4,59 @@ records:
   id: research-coverage-ai21-jamba2-mini-capabilities
   model_id: ai21-jamba2-mini
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-cd9a80108d1d
+  - src-1f54470e1412
+  search_references:
+  - query: '"Jamba2 Mini" "benchmark" -site:ai21.com -site:ai21.ai'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://www.ai21.com/blog/introducing-jamba2/
+    - https://huggingface.co/ai21labs/AI21-Jamba2-Mini
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Vendor instruction-heavy enterprise comparisons make Jamba2 Mini a provisional instruction-following candidate;
+    this pass does not establish an independent success rate.
+  - Vendor blind enterprise comparisons and named IFBench/IFEval evaluations; numerical chart values were not
+    extracted.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - No traceable numerical exact-model result extracted from the inspected sources.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-ai21-jamba2-mini-benchmarks
   model_id: ai21-jamba2-mini
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: unknown
+  evidence_ids:
+  - src-cd9a80108d1d
+  - src-1f54470e1412
+  search_references:
+  - query: '"Jamba2 Mini" "benchmark" -site:ai21.com -site:ai21.ai'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://www.ai21.com/blog/introducing-jamba2/
+    - https://huggingface.co/ai21labs/AI21-Jamba2-Mini
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Vendor instruction-heavy enterprise comparisons make Jamba2 Mini a provisional instruction-following candidate;
+    this pass does not establish an independent success rate.
+  - Vendor blind enterprise comparisons and named IFBench/IFEval evaluations; numerical chart values were not
+    extracted.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - No traceable numerical exact-model result extracted from the inspected sources.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-ai21-jamba2-mini-access-pricing
@@ -146,31 +174,51 @@ records:
   id: research-coverage-bfl-flux3-video-capabilities
   model_id: bfl-flux3-video
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: unknown
+  evidence_ids:
+  - src-1c251cf2a1e7
+  search_references:
+  - query: '"FLUX 3 Video" evaluation benchmark'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://bfl.ai/blog/flux-3
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Vendor preferences concern a development candidate and evolving harness; quality of an exact current FLUX.3
+    Video production checkpoint remains unknown.
+  - Preliminary 10-second 720p text-to-video with audio; vendor-run human preferences.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Development candidate to production-checkpoint identity and independent replication are unresolved.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-bfl-flux3-video-benchmarks
   model_id: bfl-flux3-video
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-1c251cf2a1e7
+  search_references:
+  - query: '"FLUX 3 Video" evaluation benchmark'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://bfl.ai/blog/flux-3
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Vendor preferences concern a development candidate and evolving harness; quality of an exact current FLUX.3
+    Video production checkpoint remains unknown.
+  - Preliminary 10-second 720p text-to-video with audio; vendor-run human preferences.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Development candidate to production-checkpoint identity and independent replication are unresolved.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-bfl-flux3-video-access-pricing
@@ -689,31 +737,55 @@ records:
   id: research-coverage-cohere-command-a-plus-capabilities
   model_id: cohere-command-a-plus
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-7a929ac1ccc5
+  - src-4b5fc50d9047
+  search_references:
+  - query: Cohere "Command A Plus" independent benchmark hallucination
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://docs.cohere.com/docs/command-a-plus
+    - https://artificialanalysis.ai/articles/cohere-launches-open-weights-model-command-a-more-than-a-year-since-the-command-a-release
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Independent launch testing reports high abstention/non-hallucination alongside low factual accuracy. Abstaining
+    safely does not establish reliable factual answers.
+  - Pre-release AA-Omniscience evaluation; non-hallucination and accuracy are distinct metrics.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Current production checkpoint equivalence and renewed independent evaluation remain unverified.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-cohere-command-a-plus-benchmarks
   model_id: cohere-command-a-plus
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-7a929ac1ccc5
+  - src-4b5fc50d9047
+  search_references:
+  - query: Cohere "Command A Plus" independent benchmark hallucination
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://docs.cohere.com/docs/command-a-plus
+    - https://artificialanalysis.ai/articles/cohere-launches-open-weights-model-command-a-more-than-a-year-since-the-command-a-release
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Independent launch testing reports high abstention/non-hallucination alongside low factual accuracy. Abstaining
+    safely does not establish reliable factual answers.
+  - Pre-release AA-Omniscience evaluation; non-hallucination and accuracy are distinct metrics.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Current production checkpoint equivalence and renewed independent evaluation remain unverified.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-cohere-command-a-plus-access-pricing
@@ -792,31 +864,55 @@ records:
   id: research-coverage-cohere-embed-5-fast-capabilities
   model_id: cohere-embed-5-fast
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-9d4f7ae81230
+  search_references:
+  - query: Cohere "Embed 5 Pro" "Embed 5 Fast" retrieval evaluation
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://cohere.com/blog/embed-5
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Vendor ViDoRe V3 results support ranking a fixed candidate set of parsed documents; first-stage retrieval
+    recall over a full index remains unknown.
+  - RCP-nDCG@10 reranks fixed candidates; parsed text from eight ViDoRe V3 domains, not full-index recall.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Cross-model query/corpus compatibility requires the same output dimension; exact benchmark embedding dimension
+    not extracted.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-cohere-embed-5-fast-benchmarks
   model_id: cohere-embed-5-fast
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-9d4f7ae81230
+  search_references:
+  - query: Cohere "Embed 5 Pro" "Embed 5 Fast" retrieval evaluation
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://cohere.com/blog/embed-5
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Vendor ViDoRe V3 results support ranking a fixed candidate set of parsed documents; first-stage retrieval
+    recall over a full index remains unknown.
+  - RCP-nDCG@10 reranks fixed candidates; parsed text from eight ViDoRe V3 domains, not full-index recall.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Cross-model query/corpus compatibility requires the same output dimension; exact benchmark embedding dimension
+    not extracted.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-cohere-embed-5-fast-access-pricing
@@ -928,31 +1024,55 @@ records:
   id: research-coverage-cohere-embed-5-pro-capabilities
   model_id: cohere-embed-5-pro
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-9d4f7ae81230
+  search_references:
+  - query: Cohere "Embed 5 Pro" "Embed 5 Fast" retrieval evaluation
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://cohere.com/blog/embed-5
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Vendor ViDoRe V3 results support ranking a fixed candidate set of parsed documents; first-stage retrieval
+    recall over a full index remains unknown.
+  - RCP-nDCG@10 reranks fixed candidates; parsed text from eight ViDoRe V3 domains, not full-index recall.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Cross-model query/corpus compatibility requires the same output dimension; exact benchmark embedding dimension
+    not extracted.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-cohere-embed-5-pro-benchmarks
   model_id: cohere-embed-5-pro
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-9d4f7ae81230
+  search_references:
+  - query: Cohere "Embed 5 Pro" "Embed 5 Fast" retrieval evaluation
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://cohere.com/blog/embed-5
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Vendor ViDoRe V3 results support ranking a fixed candidate set of parsed documents; first-stage retrieval
+    recall over a full index remains unknown.
+  - RCP-nDCG@10 reranks fixed candidates; parsed text from eight ViDoRe V3 domains, not full-index recall.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Cross-model query/corpus compatibility requires the same output dimension; exact benchmark embedding dimension
+    not extracted.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-cohere-embed-5-pro-access-pricing
@@ -1064,31 +1184,59 @@ records:
   id: research-coverage-cohere-north-small-translate-capabilities
   model_id: cohere-north-small-translate
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-ce6b8a6b961e
+  - src-425ce7e07108
+  search_references:
+  - query: '"North Small Translate" evaluation benchmark independent'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://huggingface.co/CohereLabs/North-Small-Translate-1.0
+    - https://cohere.com/blog/north-small-translate
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Vendor WMT26 evaluation supports a provisional translation candidate for its tested language set; the multi-pass
+    agentic result is a separate workflow.
+  - Vendor evaluation judged by GPT-5.6-Sol; reported all-language score, not an established human WMT competition
+    rank.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Regional figures in the announcement have inconsistent scopes; not reconciled or imported.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-cohere-north-small-translate-benchmarks
   model_id: cohere-north-small-translate
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-ce6b8a6b961e
+  - src-425ce7e07108
+  search_references:
+  - query: '"North Small Translate" evaluation benchmark independent'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://huggingface.co/CohereLabs/North-Small-Translate-1.0
+    - https://cohere.com/blog/north-small-translate
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Vendor WMT26 evaluation supports a provisional translation candidate for its tested language set; the multi-pass
+    agentic result is a separate workflow.
+  - Vendor evaluation judged by GPT-5.6-Sol; reported all-language score, not an established human WMT competition
+    rank.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Regional figures in the announcement have inconsistent scopes; not reconciled or imported.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-cohere-north-small-translate-access-pricing
@@ -1425,31 +1573,59 @@ records:
   id: research-coverage-devstral-small-2-capabilities
   model_id: devstral-small-2
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-fd9a0c74ec31
+  - src-b1ff9761da4f
+  search_references:
+  - query: '"Devstral Small 2" independent evaluation SWE verified'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://huggingface.co/mistralai/Devstral-Small-2-24B-Instruct-2512
+    - https://ollama.com/library/devstral-small-2
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Vendor SWE-bench results support a provisional repository-work candidate, but the runtime card reports
+    different values; scores require their own scaffold and runtime.
+  - Exact 2512 Small checkpoint; Devstral 2 123B scores excluded. Recommended scaffolds are not a disclosed
+    measured harness.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Reconcile HF versus Ollama values, runtime precision and measured scaffold before comparison.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-devstral-small-2-benchmarks
   model_id: devstral-small-2
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-fd9a0c74ec31
+  - src-b1ff9761da4f
+  search_references:
+  - query: '"Devstral Small 2" independent evaluation SWE verified'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://huggingface.co/mistralai/Devstral-Small-2-24B-Instruct-2512
+    - https://ollama.com/library/devstral-small-2
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Vendor SWE-bench results support a provisional repository-work candidate, but the runtime card reports
+    different values; scores require their own scaffold and runtime.
+  - Exact 2512 Small checkpoint; Devstral 2 123B scores excluded. Recommended scaffolds are not a disclosed
+    measured harness.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Reconcile HF versus Ollama values, runtime precision and measured scaffold before comparison.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-devstral-small-2-access-pricing
@@ -1518,31 +1694,59 @@ records:
   id: research-coverage-elevenlabs-eleven-v4-capabilities
   model_id: elevenlabs-eleven-v4
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-7c9b9d269f79
+  - src-3351565d6f38
+  - src-58f6a44d1374
+  search_references:
+  - query: '"Eleven v4" speech evaluation benchmark independent'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://elevenlabs.io/docs/overview/models
+    - https://artificialanalysis.ai/text-to-speech/models/eleven-v4
+    - https://artificialanalysis.ai/methodology/text-to-speech
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Eleven v4 has independent provider-voice preference evidence. This supports listening-quality evaluation,
+    not guaranteed pronunciation or accuracy across every supported language.
+  - AA Provider Voice Arena; representative provider voices, not the controlled cloned-voice arena.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Exact vote count, language mix and immutable serving version were not extracted.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-elevenlabs-eleven-v4-benchmarks
   model_id: elevenlabs-eleven-v4
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-7c9b9d269f79
+  - src-3351565d6f38
+  - src-58f6a44d1374
+  search_references:
+  - query: '"Eleven v4" speech evaluation benchmark independent'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://elevenlabs.io/docs/overview/models
+    - https://artificialanalysis.ai/text-to-speech/models/eleven-v4
+    - https://artificialanalysis.ai/methodology/text-to-speech
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Eleven v4 has independent provider-voice preference evidence. This supports listening-quality evaluation,
+    not guaranteed pronunciation or accuracy across every supported language.
+  - AA Provider Voice Arena; representative provider voices, not the controlled cloned-voice arena.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Exact vote count, language mix and immutable serving version were not extracted.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-elevenlabs-eleven-v4-access-pricing
@@ -1853,31 +2057,55 @@ records:
   id: research-coverage-gemini-3-8-live-capabilities
   model_id: gemini-3-8-live
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-4500b2c5fc9e
+  - src-744e7330e24d
+  search_references:
+  - query: '"Gemini 3.8 Live" speech benchmark evaluation'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://deepmind.google/models/model-cards/gemini-3-8-audio/
+    - https://artificialanalysis.ai/speech-to-speech?api-benchmarks=agentic-performance-vs-cost-to-run
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Independent default Gemini 3.8 Live results support conversational turn-taking under the measured setup;
+    its tool-task result is much lower and does not imply general agent reliability.
+  - Default Live configuration; Extended Thinking High results are excluded.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Live serving revision and benchmark-level decoding settings remain undocumented.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-gemini-3-8-live-benchmarks
   model_id: gemini-3-8-live
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-4500b2c5fc9e
+  - src-744e7330e24d
+  search_references:
+  - query: '"Gemini 3.8 Live" speech benchmark evaluation'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://deepmind.google/models/model-cards/gemini-3-8-audio/
+    - https://artificialanalysis.ai/speech-to-speech?api-benchmarks=agentic-performance-vs-cost-to-run
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Independent default Gemini 3.8 Live results support conversational turn-taking under the measured setup;
+    its tool-task result is much lower and does not imply general agent reliability.
+  - Default Live configuration; Extended Thinking High results are excluded.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Live serving revision and benchmark-level decoding settings remain undocumented.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-gemini-3-8-live-access-pricing
@@ -1928,31 +2156,53 @@ records:
   id: research-coverage-gemini-3-pro-image-capabilities
   model_id: gemini-3-pro-image
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-d35a477c49c4
+  search_references:
+  - query: Nano Banana Pro Gemini 3 Pro Image benchmark editing evaluation
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://deepmind.google/models/model-cards/gemini-3-pro-image/
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Vendor human comparisons support an editing candidate with Search On. Search-assisted preference scores
+    do not guarantee faithful text edits or factual images.
+  - Gemini 3 Pro Image with Search On; curated human pairwise preference evaluation.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Voting sample size, serving revision and direct Search Off transfer are unresolved.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-gemini-3-pro-image-benchmarks
   model_id: gemini-3-pro-image
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-d35a477c49c4
+  search_references:
+  - query: Nano Banana Pro Gemini 3 Pro Image benchmark editing evaluation
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://deepmind.google/models/model-cards/gemini-3-pro-image/
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Vendor human comparisons support an editing candidate with Search On. Search-assisted preference scores
+    do not guarantee faithful text edits or factual images.
+  - Gemini 3 Pro Image with Search On; curated human pairwise preference evaluation.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Voting sample size, serving revision and direct Search Off transfer are unresolved.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-gemini-3-pro-image-access-pricing
@@ -2002,31 +2252,57 @@ records:
   id: research-coverage-gemini-omni-1-1-flash-capabilities
   model_id: gemini-omni-1-1-flash
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: unknown
+  evidence_ids:
+  - src-7d8f7d49cd6d
+  - src-3b883af04aa0
+  search_references:
+  - query: '"Gemini Omni 1.1 Flash" "benchmark" independent'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://ai.google.dev/gemini-api/docs/models/gemini-omni-flash
+    - https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Official 1.1 documentation describes scene extension and start/end-frame controls; their measured consistency
+    and edit fidelity remain unknown for the exact 1.1 route.
+  - Feature documentation is not an edit-quality evaluation. Generic Omni Flash comparator scores are version-gated.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - No qualifying exact-1.1 numerical task result or attributable independent reproduction located in the inspected
+    search.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-gemini-omni-1-1-flash-benchmarks
   model_id: gemini-omni-1-1-flash
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: unknown
+  evidence_ids:
+  - src-7d8f7d49cd6d
+  - src-3b883af04aa0
+  search_references:
+  - query: '"Gemini Omni 1.1 Flash" "benchmark" independent'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://ai.google.dev/gemini-api/docs/models/gemini-omni-flash
+    - https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Official 1.1 documentation describes scene extension and start/end-frame controls; their measured consistency
+    and edit fidelity remain unknown for the exact 1.1 route.
+  - Feature documentation is not an edit-quality evaluation. Generic Omni Flash comparator scores are version-gated.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - No qualifying exact-1.1 numerical task result or attributable independent reproduction located in the inspected
+    search.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-gemini-omni-1-1-flash-access-pricing
@@ -2162,31 +2438,57 @@ records:
   id: research-coverage-gemma-4-31b-it-capabilities
   model_id: gemma-4-31b-it
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-ded81031faae
+  search_references:
+  - query: Gemma 4 31B IT benchmarks evaluation model card
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://huggingface.co/google/gemma-4-31B-it
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - The exact instruction-tuned 31B card reports document parsing performance, supporting a provisional structured-document
+    extraction candidate.
+  - Card explicitly evaluates instruction-tuned models; use the 31B column. Family-level Arena labels remain
+    identity-gated.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-gemma-4-31b-it-benchmarks
   model_id: gemma-4-31b-it
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-ded81031faae
+  search_references:
+  - query: Gemma 4 31B IT benchmarks evaluation model card
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://huggingface.co/google/gemma-4-31B-it
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - The exact instruction-tuned 31B card reports document parsing performance, supporting a provisional structured-document
+    extraction candidate.
+  - Card explicitly evaluates instruction-tuned models; use the 31B column. Family-level Arena labels remain
+    identity-gated.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-gemma-4-31b-it-access-pricing
@@ -2890,31 +3192,61 @@ records:
   id: research-coverage-gpt-image-2-5-flare-capabilities
   model_id: gpt-image-2-5-flare
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-467bad59597d
+  - src-259c8fd88c0f
+  - src-cee7a5257e77
+  search_references:
+  - query: GPT Image 2.5 Flare Sunburst evaluation benchmarks
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://openai.com/index/introducing-chatgpt-images-2-5/
+    - https://developers.openai.com/api/docs/models/gpt-image-2.5-flare
+    - https://arxiv.org/html/2609.13617v1
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Independent registered-OCR checks find fewer surrounding receipt-text changes, without an established target-field
+    correctness improvement. Faithful repeated editing remains conditional.
+  - E1 199 receipt edits at medium quality; exact named Flare/Sunburst API; registered OCR, not human visual
+    fidelity.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - OCR calibration, alignment sensitivity, post-hoc analysis and unequal cost tiers limit generalization.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-gpt-image-2-5-flare-benchmarks
   model_id: gpt-image-2-5-flare
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-467bad59597d
+  - src-259c8fd88c0f
+  - src-cee7a5257e77
+  search_references:
+  - query: GPT Image 2.5 Flare Sunburst evaluation benchmarks
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://openai.com/index/introducing-chatgpt-images-2-5/
+    - https://developers.openai.com/api/docs/models/gpt-image-2.5-flare
+    - https://arxiv.org/html/2609.13617v1
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Independent registered-OCR checks find fewer surrounding receipt-text changes, without an established target-field
+    correctness improvement. Faithful repeated editing remains conditional.
+  - E1 199 receipt edits at medium quality; exact named Flare/Sunburst API; registered OCR, not human visual
+    fidelity.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - OCR calibration, alignment sensitivity, post-hoc analysis and unequal cost tiers limit generalization.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-gpt-image-2-5-flare-access-pricing
@@ -2978,31 +3310,61 @@ records:
   id: research-coverage-gpt-image-2-5-sunburst-capabilities
   model_id: gpt-image-2-5-sunburst
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-467bad59597d
+  - src-259c8fd88c0f
+  - src-1a9fcf8d6701
+  search_references:
+  - query: GPT Image 2.5 Flare Sunburst evaluation benchmarks
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst
+    - https://openai.com/index/introducing-chatgpt-images-2-5/
+    - https://arxiv.org/html/2609.13617v1
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Independent registered-OCR checks find fewer surrounding receipt-text changes, without an established target-field
+    correctness improvement. Faithful repeated editing remains conditional.
+  - E1 199 receipt edits at medium quality; exact named Flare/Sunburst API; registered OCR, not human visual
+    fidelity.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - OCR calibration, alignment sensitivity, post-hoc analysis and unequal cost tiers limit generalization.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-gpt-image-2-5-sunburst-benchmarks
   model_id: gpt-image-2-5-sunburst
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-467bad59597d
+  - src-259c8fd88c0f
+  - src-1a9fcf8d6701
+  search_references:
+  - query: GPT Image 2.5 Flare Sunburst evaluation benchmarks
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst
+    - https://openai.com/index/introducing-chatgpt-images-2-5/
+    - https://arxiv.org/html/2609.13617v1
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Independent registered-OCR checks find fewer surrounding receipt-text changes, without an established target-field
+    correctness improvement. Faithful repeated editing remains conditional.
+  - E1 199 receipt edits at medium quality; exact named Flare/Sunburst API; registered OCR, not human visual
+    fidelity.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - OCR calibration, alignment sensitivity, post-hoc analysis and unequal cost tiers limit generalization.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-gpt-image-2-5-sunburst-access-pricing
@@ -3066,31 +3428,59 @@ records:
   id: research-coverage-gpt-live-1-capabilities
   model_id: gpt-live-1
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-4500b2c5fc9e
+  - src-84d1a7712d6a
+  - src-c84f0489248c
+  search_references:
+  - query: GPT Live 1 speech evaluation Full Duplex Bench tau voice
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://developers.openai.com/api/docs/models/gpt-live-1
+    - https://openai.com/index/introducing-gpt-live/
+    - https://artificialanalysis.ai/speech-to-speech?api-benchmarks=agentic-performance-vs-cost-to-run
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Independent voice customer-support task results vary with the connected reasoning model and effort. They
+    support the combined agent configurations, not GPT-Live alone.
+  - AA tau-Voice database end-state scoring with policies/tools; one trial per listed GPT-Live configuration.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Repeat-trial uncertainty and immutable frontend/backend revision remain unresolved.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-gpt-live-1-benchmarks
   model_id: gpt-live-1
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-4500b2c5fc9e
+  - src-84d1a7712d6a
+  - src-c84f0489248c
+  search_references:
+  - query: GPT Live 1 speech evaluation Full Duplex Bench tau voice
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://developers.openai.com/api/docs/models/gpt-live-1
+    - https://openai.com/index/introducing-gpt-live/
+    - https://artificialanalysis.ai/speech-to-speech?api-benchmarks=agentic-performance-vs-cost-to-run
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Independent voice customer-support task results vary with the connected reasoning model and effort. They
+    support the combined agent configurations, not GPT-Live alone.
+  - AA tau-Voice database end-state scoring with policies/tools; one trial per listed GPT-Live configuration.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Repeat-trial uncertainty and immutable frontend/backend revision remain unresolved.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-gpt-live-1-access-pricing
@@ -3323,31 +3713,55 @@ records:
   id: research-coverage-gpt-realtime-2-1-capabilities
   model_id: gpt-realtime-2-1
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-4500b2c5fc9e
+  - src-cf6a8843c8fd
+  search_references:
+  - query: GPT realtime 2.1 audio evaluation benchmarks
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://developers.openai.com/api/docs/models/gpt-realtime-2.1
+    - https://artificialanalysis.ai/speech-to-speech?api-benchmarks=agentic-performance-vs-cost-to-run
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Independent voice customer-support task completion depends on reasoning effort; use the exact 2.1 High
+    and Minimal configurations, without borrowing Mini results.
+  - AA tau-Voice simulated customer support with domain tools and policies; High uses two trials.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Immutable serving revision, complete decoding settings and Minimal trial count were not extracted.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-gpt-realtime-2-1-benchmarks
   model_id: gpt-realtime-2-1
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-4500b2c5fc9e
+  - src-cf6a8843c8fd
+  search_references:
+  - query: GPT realtime 2.1 audio evaluation benchmarks
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://developers.openai.com/api/docs/models/gpt-realtime-2.1
+    - https://artificialanalysis.ai/speech-to-speech?api-benchmarks=agentic-performance-vs-cost-to-run
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Independent voice customer-support task completion depends on reasoning effort; use the exact 2.1 High
+    and Minimal configurations, without borrowing Mini results.
+  - AA tau-Voice simulated customer support with domain tools and policies; High uses two trials.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Immutable serving revision, complete decoding settings and Minimal trial count were not extracted.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-gpt-realtime-2-1-access-pricing
@@ -3513,31 +3927,57 @@ records:
   id: research-coverage-llama-4-maverick-capabilities
   model_id: llama-4-maverick
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-65471a2c7ad5
+  - src-df5d5aa8ed0e
+  search_references:
+  - query: Llama 4 Maverick exact checkpoint benchmark evaluation modified arena
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct
+    - https://labs.scale.com/leaderboard/swe_bench_pro
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Scale reports a low SWE-bench Pro result for the named Maverick Instruct route. This is a repository-task
+    warning under that scaffold, not a verdict on every coding task.
+  - Scale route llama4-maverick-17b-instruct; provider precision/serving revision not extracted. Experimental
+    Arena chat-variant Elo excluded.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Exact cost cap/turn-limit row styling and immutable route configuration remain unverified.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-llama-4-maverick-benchmarks
   model_id: llama-4-maverick
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-65471a2c7ad5
+  - src-df5d5aa8ed0e
+  search_references:
+  - query: Llama 4 Maverick exact checkpoint benchmark evaluation modified arena
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct
+    - https://labs.scale.com/leaderboard/swe_bench_pro
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Scale reports a low SWE-bench Pro result for the named Maverick Instruct route. This is a repository-task
+    warning under that scaffold, not a verdict on every coding task.
+  - Scale route llama4-maverick-17b-instruct; provider precision/serving revision not extracted. Experimental
+    Arena chat-variant Elo excluded.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Exact cost cap/turn-limit row styling and immutable route configuration remain unverified.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-llama-4-maverick-access-pricing
@@ -3706,31 +4146,51 @@ records:
   id: research-coverage-lyria-3-5-capabilities
   model_id: lyria-3-5
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-adf03d8b2d85
+  search_references:
+  - query: Lyria 3.5 music evaluation model card
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://deepmind.google/models/model-cards/lyria-3-5/
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Vendor music-expert evaluations report improved fidelity and lyric prompt adherence over Lyria 2; this
+    is qualitative evidence, without an independently established error rate.
+  - July 2026 model card; curated in/out-of-distribution music prompts and music experts.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Card reports qualitative results without numeric scores, sample sizes or a reproducible independent protocol.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-lyria-3-5-benchmarks
   model_id: lyria-3-5
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: unknown
+  evidence_ids:
+  - src-adf03d8b2d85
+  search_references:
+  - query: Lyria 3.5 music evaluation model card
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://deepmind.google/models/model-cards/lyria-3-5/
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Vendor music-expert evaluations report improved fidelity and lyric prompt adherence over Lyria 2; this
+    is qualitative evidence, without an independently established error rate.
+  - July 2026 model card; curated in/out-of-distribution music prompts and music experts.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Card reports qualitative results without numeric scores, sample sizes or a reproducible independent protocol.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-lyria-3-5-access-pricing
@@ -4217,31 +4677,53 @@ records:
   id: research-coverage-mistral-small-4-capabilities
   model_id: mistral-small-4
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-dcba779ffa90
+  search_references:
+  - query: Mistral Small 4 119B benchmark evaluation reasoning
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://huggingface.co/mistralai/Mistral-Small-4-119B-2603
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Vendor AA-LCR evidence supports a provisional long-context reasoning candidate when reasoning is enabled;
+    the result does not transfer automatically to reasoning off.
+  - Reasoning enabled; recommended reasoning_effort high does not establish the exact measured setting.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Exact AA-LCR version, prompt lengths and decoding settings are absent from the inspected text.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-mistral-small-4-benchmarks
   model_id: mistral-small-4
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-dcba779ffa90
+  search_references:
+  - query: Mistral Small 4 119B benchmark evaluation reasoning
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://huggingface.co/mistralai/Mistral-Small-4-119B-2603
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Vendor AA-LCR evidence supports a provisional long-context reasoning candidate when reasoning is enabled;
+    the result does not transfer automatically to reasoning off.
+  - Reasoning enabled; recommended reasoning_effort high does not establish the exact measured setting.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Exact AA-LCR version, prompt lengths and decoding settings are absent from the inspected text.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-mistral-small-4-access-pricing
@@ -4327,31 +4809,57 @@ records:
   id: research-coverage-nemotron-3-ultra-capabilities
   model_id: nemotron-3-ultra
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-c5a0afc263f8
+  - src-9950acce03ed
+  search_references:
+  - query: Nemotron 3 Ultra 550B A55B benchmarks independent evaluation
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://artificialanalysis.ai/articles/nvidia-nemotron-3-ultra-released
+    - https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Vendor CritPt no-tool results warn against assuming graduate physics research ability from higher general
+    exam scores; independent launch evaluation also reports limited CritPt performance.
+  - BF16 card comparison table; independent pre-release BlackBox AI precision/revision not confirmed identical.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Card SWE-bench Verified comparison table reports 70.7, evaluation widget 71.9; provenance discrepancy unresolved.
+  - Do not transfer NVFP4 practitioner tests to BF16; independent exact-BF16 reproduction still needed.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-nemotron-3-ultra-benchmarks
   model_id: nemotron-3-ultra
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-c5a0afc263f8
+  - src-9950acce03ed
+  search_references:
+  - query: Nemotron 3 Ultra 550B A55B benchmarks independent evaluation
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://artificialanalysis.ai/articles/nvidia-nemotron-3-ultra-released
+    - https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Vendor CritPt no-tool results warn against assuming graduate physics research ability from higher general
+    exam scores; independent launch evaluation also reports limited CritPt performance.
+  - BF16 card comparison table; independent pre-release BlackBox AI precision/revision not confirmed identical.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Card SWE-bench Verified comparison table reports 70.7, evaluation widget 71.9; provenance discrepancy unresolved.
+  - Do not transfer NVFP4 practitioner tests to BF16; independent exact-BF16 reproduction still needed.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-nemotron-3-ultra-access-pricing
@@ -4416,31 +4924,55 @@ records:
   id: research-coverage-phi-4-mini-instruct-capabilities
   model_id: phi-4-mini-instruct
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-147450d232b3
+  search_references:
+  - query: Phi-4-mini-instruct Phi-4-multimodal-instruct benchmark evaluation
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://huggingface.co/microsoft/Phi-4-mini-instruct
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - The exact Mini Instruct card reports bounded competition-math performance; this supports a provisional
+    math candidate, not factual expertise.
+  - Vendor internal evaluation platform; MATH uses zero-shot chain-of-thought. Mini reasoning/flash siblings
+    excluded.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Benchmark version and exact decoding configuration not specified in the extracted table.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-phi-4-mini-instruct-benchmarks
   model_id: phi-4-mini-instruct
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-147450d232b3
+  search_references:
+  - query: Phi-4-mini-instruct Phi-4-multimodal-instruct benchmark evaluation
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://huggingface.co/microsoft/Phi-4-mini-instruct
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - The exact Mini Instruct card reports bounded competition-math performance; this supports a provisional
+    math candidate, not factual expertise.
+  - Vendor internal evaluation platform; MATH uses zero-shot chain-of-thought. Mini reasoning/flash siblings
+    excluded.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Benchmark version and exact decoding configuration not specified in the extracted table.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-phi-4-mini-instruct-access-pricing
@@ -4516,31 +5048,53 @@ records:
   id: research-coverage-phi-4-multimodal-instruct-capabilities
   model_id: phi-4-multimodal-instruct
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-29885c43e537
+  search_references:
+  - query: Phi-4-mini-instruct Phi-4-multimodal-instruct benchmark evaluation
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://huggingface.co/microsoft/Phi-4-multimodal-instruct
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - The exact card supports a candidate for document questions delivered as synthetic speech, with a vendor
+    s_DocVQA result; pure text-query and all-language performance are separate.
+  - Image plus synthetic spoken query; retain the s_ benchmark prefix. Korean fine-tuned adapter scores excluded.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - The card does not specify the s_DocVQA metric formula, benchmark revision or full harness configuration.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-phi-4-multimodal-instruct-benchmarks
   model_id: phi-4-multimodal-instruct
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-29885c43e537
+  search_references:
+  - query: Phi-4-mini-instruct Phi-4-multimodal-instruct benchmark evaluation
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://huggingface.co/microsoft/Phi-4-multimodal-instruct
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - The exact card supports a candidate for document questions delivered as synthetic speech, with a vendor
+    s_DocVQA result; pure text-query and all-language performance are separate.
+  - Image plus synthetic spoken query; retain the s_ benchmark prefix. Korean fine-tuned adapter scores excluded.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - The card does not specify the s_DocVQA metric formula, benchmark revision or full harness configuration.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-phi-4-multimodal-instruct-access-pricing
@@ -4608,31 +5162,53 @@ records:
   id: research-coverage-phi-4-reasoning-vision-15b-capabilities
   model_id: phi-4-reasoning-vision-15b
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-91f835e2db28
+  search_references:
+  - query: Phi-4-reasoning-vision-15B benchmark evaluation
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Vendor ScreenSpot V2 measurements support static GUI element localization as a candidate; this does not
+    demonstrate an autonomous computer-use agent.
+  - Default hybrid model under VLMEvalKit; forced no-think/thinking columns kept separate.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Exact harness commit, prompt and decoding settings were not extracted.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-phi-4-reasoning-vision-15b-benchmarks
   model_id: phi-4-reasoning-vision-15b
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-91f835e2db28
+  search_references:
+  - query: Phi-4-reasoning-vision-15B benchmark evaluation
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - Vendor ScreenSpot V2 measurements support static GUI element localization as a candidate; this does not
+    demonstrate an autonomous computer-use agent.
+  - Default hybrid model under VLMEvalKit; forced no-think/thinking columns kept separate.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Exact harness commit, prompt and decoding settings were not extracted.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-phi-4-reasoning-vision-15b-access-pricing
@@ -4699,31 +5275,55 @@ records:
   id: research-coverage-qwen3-5-9b-capabilities
   model_id: qwen3-5-9b
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-e0a64484787e
+  search_references:
+  - query: '"Qwen3.5-9B" benchmark evaluation model card'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://huggingface.co/Qwen/Qwen3.5-9B
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - The exact 9B card reports IFEval 91.5 and IFBench 64.5; constrained instruction adherence is a conditional
+    candidate, without a measured real-world edit success rate.
+  - Use the 9B column, not sibling 4B/27B/35B results.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-qwen3-5-9b-benchmarks
   model_id: qwen3-5-9b
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: changed
+  evidence_ids:
+  - src-e0a64484787e
+  search_references:
+  - query: '"Qwen3.5-9B" benchmark evaluation model card'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://huggingface.co/Qwen/Qwen3.5-9B
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - The exact 9B card reports IFEval 91.5 and IFBench 64.5; constrained instruction adherence is a conditional
+    candidate, without a measured real-world edit success rate.
+  - Use the 9B column, not sibling 4B/27B/35B results.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
+  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
+    date is not the measurement date.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-qwen3-5-9b-access-pricing
@@ -4787,31 +5387,59 @@ records:
   id: research-coverage-qwen3-8-2-4t-a95b-capabilities
   model_id: qwen3-8-2-4t-a95b
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: unknown
+  evidence_ids:
+  - src-2bc2cf30ffd5
+  - src-5b1f0ee0a735
+  search_references:
+  - query: '"Qwen3.8-2.4T-A95B" evaluation independent coding'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B
+    - https://artificialanalysis.ai/models/qwen3-8-2-4t-a95b
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - 'Exact open-weight repository-work ability remains unresolved: the card labels its coding benchmark column
+    Qwen3.8-Max, a hosted model with additional capabilities.'
+  - Hosted Qwen3.8-Max scores and its Claude Code harness are excluded from this checkpoint.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Resolve the Max versus weight-checkpoint evaluation identity; the HF evaluation widget does not remove
+    the table-label ambiguity.
+  - The inspected independent composite index is not a task-specific repository-work measurement.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-qwen3-8-2-4t-a95b-benchmarks
   model_id: qwen3-8-2-4t-a95b
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: unknown
+  evidence_ids:
+  - src-2bc2cf30ffd5
+  - src-5b1f0ee0a735
+  search_references:
+  - query: '"Qwen3.8-2.4T-A95B" evaluation independent coding'
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B
+    - https://artificialanalysis.ai/models/qwen3-8-2-4t-a95b
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - 'Exact open-weight repository-work ability remains unresolved: the card labels its coding benchmark column
+    Qwen3.8-Max, a hosted model with additional capabilities.'
+  - Hosted Qwen3.8-Max scores and its Claude Code harness are excluded from this checkpoint.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - Resolve the Max versus weight-checkpoint evaluation identity; the HF evaluation widget does not remove
+    the table-label ambiguity.
+  - The inspected independent composite index is not a task-specific repository-work measurement.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-qwen3-8-2-4t-a95b-access-pricing
@@ -5199,31 +5827,57 @@ records:
   id: research-coverage-veo-3-1-generate-preview-capabilities
   model_id: veo-3-1-generate-preview
   domain: capabilities
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: unknown
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-91a6d4ec7912
+  search_references:
+  - query: Veo 3.1 generate preview benchmark evaluation
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://ai.google.dev/gemini-api/docs/models/veo-3.1-generate-preview
+    - https://discuss.ai.google.dev/t/query-differences-in-details-of-decoration-between-veo-3-1-generate-preview-and-veo-3-1-fast-preview/108272
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - The preview route documents video generation, but exact-route measured detail accuracy remains unresolved.
+    Located Fast-model distortion reports do not establish failure of the standard model.
+  - Standard generate-preview identity; Fast sibling tests and unpinned consumer-surface comparisons excluded.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - No traceable exact-preview quality result with a disclosed configuration located; the forum support reply
+    is not a controlled comparison.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-veo-3-1-generate-preview-benchmarks
   model_id: veo-3-1-generate-preview
   domain: benchmarks
-  research_batch_id: public-research-2026-10-07
-  checked_at: null
-  result: not_checked
-  evidence_ids: []
-  search_references: []
+  research_batch_id: public-task-followup-2026-10-07
+  checked_at: '2026-10-07'
+  result: unknown
+  evidence_ids:
+  - src-521c059d5d6a
+  - src-91a6d4ec7912
+  search_references:
+  - query: Veo 3.1 generate preview benchmark evaluation
+    checked_at: '2026-10-07'
+    outcome: sources_found
+    urls:
+    - https://ai.google.dev/gemini-api/docs/models/veo-3.1-generate-preview
+    - https://discuss.ai.google.dev/t/query-differences-in-details-of-decoration-between-veo-3-1-generate-preview-and-veo-3-1-fast-preview/108272
+    notes:
+    - Bounded public search plus body inspection of listed original sources; irrelevant lexical matches and
+      sibling/ambiguous versions excluded.
   scope_notes:
-  - Explicit coverage placeholder; existing dated facts carry forward without re-verification.
+  - The preview route documents video generation, but exact-route measured detail accuracy remains unresolved.
+    Located Fast-model distortion reports do not establish failure of the standard model.
+  - Standard generate-preview identity; Fast sibling tests and unpinned consumer-surface comparisons excluded.
   remaining_gaps:
-  - No sufficiently traceable task-specific source investigation supplied for this model/domain; carry-forward
-    verification dates retained.
+  - No traceable exact-preview quality result with a disclosed configuration located; the forum support reply
+    is not a controlled comparison.
   blocked_reason: null
 - schema_version: '1.0'
   id: research-coverage-veo-3-1-generate-preview-access-pricing

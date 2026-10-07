@@ -27,6 +27,28 @@ Supporting sources: [Devstral Small 2 24B model card](https://huggingface.co/mis
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
+### Coding.repository_work (low confidence)
+
+Vendor SWE-bench results support a provisional repository-work candidate, but the runtime card reports different values; scores require their own scaffold and runtime.
+
+Scope: direct / conditional. Task-specific source investigation; original migration bundles remain unchanged.
+
+Direct task IDs: coding.repository_work
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-8d7c54b092733784
+
+Conditions: Exact 2512 Small checkpoint; Devstral 2 123B scores excluded. Recommended scaffolds are not a disclosed measured harness.
+
+Failure modes / limitations: Published runtime-card scores differ from the exact HF card; do not average or select a convenient score.
+
+Supporting sources: [Devstral Small 2 24B model card](https://huggingface.co/mistralai/Devstral-Small-2-24B-Instruct-2512) · [Devstral Small 2 runtime model card](https://ollama.com/library/devstral-small-2)
+
+Contradictory or limiting sources: [Devstral Small 2 runtime model card](https://ollama.com/library/devstral-small-2)
+
+Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not confidence.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
 ## Specifications
 
 | Field | Recorded value |
@@ -83,4 +105,4 @@ Local conditions: Batch 1, short/moderate context unless otherwise stated.; Weig
 
 ## Sources
 
-[Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) · [Devstral Small 2 24B model card](https://huggingface.co/mistralai/Devstral-Small-2-24B-Instruct-2512) · [Devstral Small2 independently profiled](https://artificialanalysis.ai/models/devstral-small-2)
+[Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) · [Devstral Small 2 24B model card](https://huggingface.co/mistralai/Devstral-Small-2-24B-Instruct-2512) · [Devstral Small2 independently profiled](https://artificialanalysis.ai/models/devstral-small-2) · [Devstral Small 2 runtime model card](https://ollama.com/library/devstral-small-2)

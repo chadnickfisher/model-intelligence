@@ -4,7 +4,7 @@ from tools.knowledge import ROOT,read,history
 
 def test_imported_identity_gates_and_original_baseline_are_preserved():
     data=load()
-    new=[j for m in data['model'].values() for j in m['capabilities'] if j['provenance'].get('origin')=='research']
+    new=[j for m in data['model'].values() for j in m['capabilities'] if j['provenance'].get('research_batch_id')=='public-research-2026-10-07']
     assert len(new)==84 and all(j['scope']=='direct' and len(j['task_ids'])==1 for j in new)
     # Reported non-IT variants and pre-release checkpoints are not silently enrolled.
     assert not any(j['task_ids']==['coding.frontend'] for j in data['model']['gemma-4-31b-it']['capabilities'] if j['provenance'].get('origin')=='research')

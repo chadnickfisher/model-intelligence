@@ -30,6 +30,38 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: ai21-jamba2-mini
+  profile: models/ai21-labs/ai21-jamba2-mini/profile.yaml
+  id: judgment-d1c98668b2402aca
+  scope: direct
+  task_ids:
+  - language.instruction_following
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Vendor instruction-heavy enterprise comparisons make Jamba2 Mini a provisional instruction-following
+    candidate; this pass does not establish an independent success rate.
+  confidence: low
+  supporting_evidence_ids:
+  - src-cd9a80108d1d
+  - src-1f54470e1412
+  contradictory_evidence_ids: []
+  conditions:
+  - Vendor blind enterprise comparisons and named IFBench/IFEval evaluations; numerical chart values were not
+    extracted.
+  known_failure_modes: []
+  evidence_notes:
+  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
+    confidence.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: qwen3-5-9b
   profile: models/alibaba-qwen/qwen3-5-9b/profile.yaml
   id: judgment-89e9ac298c376d19
@@ -59,6 +91,36 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: qwen3-5-9b
+  profile: models/alibaba-qwen/qwen3-5-9b/profile.yaml
+  id: judgment-fea7dda7dcc44e0e
+  scope: direct
+  task_ids:
+  - language.instruction_following
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: The exact 9B card reports IFEval 91.5 and IFBench 64.5; constrained instruction adherence is a
+    conditional candidate, without a measured real-world edit success rate.
+  confidence: low
+  supporting_evidence_ids:
+  - src-e0a64484787e
+  contradictory_evidence_ids: []
+  conditions:
+  - Use the 9B column, not sibling 4B/27B/35B results.
+  known_failure_modes: []
+  evidence_notes:
+  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
+    confidence.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: qwen3-8-2-4t-a95b
   profile: models/alibaba-qwen/qwen3-8-2-4t-a95b/profile.yaml
   id: judgment-5b2db26e97cc525c
@@ -88,6 +150,37 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: qwen3-8-2-4t-a95b
+  profile: models/alibaba-qwen/qwen3-8-2-4t-a95b/profile.yaml
+  id: judgment-fba9d11fe50c103d
+  scope: direct
+  task_ids:
+  - coding.repository_work
+  related_task_ids: []
+  assessment: unknown
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: 'Exact open-weight repository-work ability remains unresolved: the card labels its coding benchmark
+    column Qwen3.8-Max, a hosted model with additional capabilities.'
+  confidence: low
+  supporting_evidence_ids:
+  - src-2bc2cf30ffd5
+  - src-5b1f0ee0a735
+  contradictory_evidence_ids: []
+  conditions:
+  - Hosted Qwen3.8-Max scores and its Claude Code harness are excluded from this checkpoint.
+  known_failure_modes: []
+  evidence_notes:
+  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
+    confidence.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: qwen3-8-27b
   profile: models/alibaba-qwen/qwen3-8-27b/profile.yaml
   id: judgment-dadec61aa2e25c5d
@@ -1073,6 +1166,36 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: bfl-flux3-video
+  profile: models/black-forest-labs/bfl-flux3-video/profile.yaml
+  id: judgment-bf07973843af6a72
+  scope: direct
+  task_ids:
+  - video.generation
+  related_task_ids: []
+  assessment: unknown
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Vendor preferences concern a development candidate and evolving harness; quality of an exact current
+    FLUX.3 Video production checkpoint remains unknown.
+  confidence: low
+  supporting_evidence_ids:
+  - src-1c251cf2a1e7
+  contradictory_evidence_ids: []
+  conditions:
+  - Preliminary 10-second 720p text-to-video with audio; vendor-run human preferences.
+  known_failure_modes: []
+  evidence_notes:
+  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
+    confidence.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: cohere-command-a-plus
   profile: models/cohere/cohere-command-a-plus/profile.yaml
   id: judgment-d3d856d23e638edc
@@ -1128,6 +1251,38 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 1
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: cohere-command-a-plus
+  profile: models/cohere/cohere-command-a-plus/profile.yaml
+  id: judgment-f2ef16690b3303d9
+  scope: direct
+  task_ids:
+  - research.fact_check
+  related_task_ids: []
+  assessment: warning
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Independent launch testing reports high abstention/non-hallucination alongside low factual accuracy.
+    Abstaining safely does not establish reliable factual answers.
+  confidence: low
+  supporting_evidence_ids:
+  - src-7a929ac1ccc5
+  - src-4b5fc50d9047
+  contradictory_evidence_ids: []
+  conditions:
+  - Pre-release AA-Omniscience evaluation; non-hallucination and accuracy are distinct metrics.
+  known_failure_modes:
+  - Low measured factual accuracy in this evaluation; do not interpret abstention as knowledge.
+  evidence_notes:
+  - 'Low confidence in current generalization: one independent pre-release evaluation, uncertain later serving
+    revision.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: cohere-embed-5-fast
   profile: models/cohere/cohere-embed-5-fast/profile.yaml
   id: judgment-afbdc8473c5cc5bd
@@ -1155,6 +1310,37 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: cohere-embed-5-fast
+  profile: models/cohere/cohere-embed-5-fast/profile.yaml
+  id: judgment-7e21faf82ca7635e
+  scope: direct
+  task_ids:
+  - context.retrieval
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Vendor ViDoRe V3 results support ranking a fixed candidate set of parsed documents; first-stage
+    retrieval recall over a full index remains unknown.
+  confidence: low
+  supporting_evidence_ids:
+  - src-9d4f7ae81230
+  contradictory_evidence_ids: []
+  conditions:
+  - RCP-nDCG@10 reranks fixed candidates; parsed text from eight ViDoRe V3 domains, not full-index recall.
+  known_failure_modes:
+  - This candidate-ranking result cannot establish full-index recall or all-language superiority.
+  evidence_notes:
+  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
+    confidence.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: cohere-embed-5-pro
   profile: models/cohere/cohere-embed-5-pro/profile.yaml
   id: judgment-0e6e2979fb965898
@@ -1182,6 +1368,37 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: cohere-embed-5-pro
+  profile: models/cohere/cohere-embed-5-pro/profile.yaml
+  id: judgment-d02c0c4f21657798
+  scope: direct
+  task_ids:
+  - context.retrieval
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Vendor ViDoRe V3 results support ranking a fixed candidate set of parsed documents; first-stage
+    retrieval recall over a full index remains unknown.
+  confidence: low
+  supporting_evidence_ids:
+  - src-9d4f7ae81230
+  contradictory_evidence_ids: []
+  conditions:
+  - RCP-nDCG@10 reranks fixed candidates; parsed text from eight ViDoRe V3 domains, not full-index recall.
+  known_failure_modes:
+  - This candidate-ranking result cannot establish full-index recall or all-language superiority.
+  evidence_notes:
+  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
+    confidence.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: cohere-north-small-translate
   profile: models/cohere/cohere-north-small-translate/profile.yaml
   id: judgment-315d51f450cac0a4
@@ -1210,6 +1427,38 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: cohere-north-small-translate
+  profile: models/cohere/cohere-north-small-translate/profile.yaml
+  id: judgment-0e77ffde181d61b9
+  scope: direct
+  task_ids:
+  - language.translation
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Vendor WMT26 evaluation supports a provisional translation candidate for its tested language set;
+    the multi-pass agentic result is a separate workflow.
+  confidence: low
+  supporting_evidence_ids:
+  - src-ce6b8a6b961e
+  - src-425ce7e07108
+  contradictory_evidence_ids: []
+  conditions:
+  - Vendor evaluation judged by GPT-5.6-Sol; reported all-language score, not an established human WMT competition
+    rank.
+  known_failure_modes: []
+  evidence_notes:
+  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
+    confidence.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: deepseek-v4-1-flash
   profile: models/deepseek/deepseek-v4-1-flash/profile.yaml
   id: judgment-c78023ee7891bfab
@@ -1570,6 +1819,38 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: elevenlabs-eleven-v4
+  profile: models/elevenlabs/elevenlabs-eleven-v4/profile.yaml
+  id: judgment-96525c869cedff6c
+  scope: direct
+  task_ids:
+  - audio.speech_generation
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Eleven v4 has independent provider-voice preference evidence. This supports listening-quality evaluation,
+    not guaranteed pronunciation or accuracy across every supported language.
+  confidence: low
+  supporting_evidence_ids:
+  - src-7c9b9d269f79
+  - src-3351565d6f38
+  - src-58f6a44d1374
+  contradictory_evidence_ids: []
+  conditions:
+  - AA Provider Voice Arena; representative provider voices, not the controlled cloned-voice arena.
+  known_failure_modes: []
+  evidence_notes:
+  - 'Low confidence in broad task generalization: one dynamic preference evaluation with incomplete voice/language
+    configuration.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: gemini-3-1-pro-preview
   profile: models/google-deepmind/gemini-3-1-pro-preview/profile.yaml
   id: judgment-6272f2a3a37dd45c
@@ -2112,6 +2393,37 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: gemini-3-8-live
+  profile: models/google-deepmind/gemini-3-8-live/profile.yaml
+  id: judgment-0a7fc4e6861b9abe
+  scope: direct
+  task_ids:
+  - audio.conversation
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Independent default Gemini 3.8 Live results support conversational turn-taking under the measured
+    setup; its tool-task result is much lower and does not imply general agent reliability.
+  confidence: low
+  supporting_evidence_ids:
+  - src-4500b2c5fc9e
+  - src-744e7330e24d
+  contradictory_evidence_ids: []
+  conditions:
+  - Default Live configuration; Extended Thinking High results are excluded.
+  known_failure_modes: []
+  evidence_notes:
+  - 'Low confidence beyond the evaluated conversations: one evaluator, rolling alias and incomplete benchmark
+    setup.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: gemini-3-pro-image
   profile: models/google-deepmind/gemini-3-pro-image/profile.yaml
   id: judgment-a8b91a879079b15e
@@ -2145,6 +2457,36 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: gemini-3-pro-image
+  profile: models/google-deepmind/gemini-3-pro-image/profile.yaml
+  id: judgment-231a8488cc54a31b
+  scope: direct
+  task_ids:
+  - image.editing
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Vendor human comparisons support an editing candidate with Search On. Search-assisted preference
+    scores do not guarantee faithful text edits or factual images.
+  confidence: low
+  supporting_evidence_ids:
+  - src-d35a477c49c4
+  contradictory_evidence_ids: []
+  conditions:
+  - Gemini 3 Pro Image with Search On; curated human pairwise preference evaluation.
+  known_failure_modes: []
+  evidence_notes:
+  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
+    confidence.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: gemini-omni-1-1-flash
   profile: models/google-deepmind/gemini-omni-1-1-flash/profile.yaml
   id: judgment-173b944a1d1a6c4c
@@ -2177,6 +2519,37 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: gemini-omni-1-1-flash
+  profile: models/google-deepmind/gemini-omni-1-1-flash/profile.yaml
+  id: judgment-af4ab0ba09892360
+  scope: direct
+  task_ids:
+  - video.editing
+  related_task_ids: []
+  assessment: unknown
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Official 1.1 documentation describes scene extension and start/end-frame controls; their measured
+    consistency and edit fidelity remain unknown for the exact 1.1 route.
+  confidence: low
+  supporting_evidence_ids:
+  - src-7d8f7d49cd6d
+  - src-3b883af04aa0
+  contradictory_evidence_ids: []
+  conditions:
+  - Feature documentation is not an edit-quality evaluation. Generic Omni Flash comparator scores are version-gated.
+  known_failure_modes: []
+  evidence_notes:
+  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
+    confidence.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: gemini4argon
   profile: models/google-deepmind/gemini4argon/profile.yaml
   id: judgment-fa3a1a5a01173cf2
@@ -2293,6 +2666,37 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: gemma-4-31b-it
+  profile: models/google-deepmind/gemma-4-31b-it/profile.yaml
+  id: judgment-f226052d85b08e80
+  scope: direct
+  task_ids:
+  - knowledge.extraction
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: The exact instruction-tuned 31B card reports document parsing performance, supporting a provisional
+    structured-document extraction candidate.
+  confidence: low
+  supporting_evidence_ids:
+  - src-ded81031faae
+  contradictory_evidence_ids: []
+  conditions:
+  - Card explicitly evaluates instruction-tuned models; use the 31B column. Family-level Arena labels remain
+    identity-gated.
+  known_failure_modes: []
+  evidence_notes:
+  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
+    confidence.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: lyria-3-5
   profile: models/google-deepmind/lyria-3-5/profile.yaml
   id: judgment-81c45f869d24d386
@@ -2327,6 +2731,36 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: lyria-3-5
+  profile: models/google-deepmind/lyria-3-5/profile.yaml
+  id: judgment-d0a9599027c859f7
+  scope: direct
+  task_ids:
+  - music.generation
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Vendor music-expert evaluations report improved fidelity and lyric prompt adherence over Lyria
+    2; this is qualitative evidence, without an independently established error rate.
+  confidence: low
+  supporting_evidence_ids:
+  - src-adf03d8b2d85
+  contradictory_evidence_ids: []
+  conditions:
+  - July 2026 model card; curated in/out-of-distribution music prompts and music experts.
+  known_failure_modes: []
+  evidence_notes:
+  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
+    confidence.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: veo-3-1-generate-preview
   profile: models/google-deepmind/veo-3-1-generate-preview/profile.yaml
   id: judgment-f36c958097d5b875
@@ -2361,6 +2795,37 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: veo-3-1-generate-preview
+  profile: models/google-deepmind/veo-3-1-generate-preview/profile.yaml
+  id: judgment-a39ac31ce68709f0
+  scope: direct
+  task_ids:
+  - video.generation
+  related_task_ids: []
+  assessment: unknown
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: The preview route documents video generation, but exact-route measured detail accuracy remains
+    unresolved. Located Fast-model distortion reports do not establish failure of the standard model.
+  confidence: low
+  supporting_evidence_ids:
+  - src-521c059d5d6a
+  - src-91a6d4ec7912
+  contradictory_evidence_ids: []
+  conditions:
+  - Standard generate-preview identity; Fast sibling tests and unpinned consumer-surface comparisons excluded.
+  known_failure_modes: []
+  evidence_notes:
+  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
+    confidence.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: llama-4-maverick
   profile: models/meta/llama-4-maverick/profile.yaml
   id: judgment-c7238ff23167f60d
@@ -2390,6 +2855,38 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: llama-4-maverick
+  profile: models/meta/llama-4-maverick/profile.yaml
+  id: judgment-4c86ac1246e4aa6b
+  scope: direct
+  task_ids:
+  - coding.repository_work
+  related_task_ids: []
+  assessment: warning
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Scale reports a low SWE-bench Pro result for the named Maverick Instruct route. This is a repository-task
+    warning under that scaffold, not a verdict on every coding task.
+  confidence: low
+  supporting_evidence_ids:
+  - src-65471a2c7ad5
+  - src-df5d5aa8ed0e
+  contradictory_evidence_ids: []
+  conditions:
+  - Scale route llama4-maverick-17b-instruct; provider precision/serving revision not extracted. Experimental
+    Arena chat-variant Elo excluded.
+  known_failure_modes:
+  - Low repository-task completion in the inspected Scale setup.
+  evidence_notes:
+  - 'Low confidence in generalization: one independent scaffold and incomplete route/turn-limit configuration.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: llama-4-scout
   profile: models/meta/llama-4-scout/profile.yaml
   id: judgment-3bdbe688baf73a67
@@ -2506,6 +3003,38 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: phi-4-mini-instruct
+  profile: models/microsoft/phi-4-mini-instruct/profile.yaml
+  id: judgment-eb06ac9534f922b4
+  scope: direct
+  task_ids:
+  - reasoning.math
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: The exact Mini Instruct card reports bounded competition-math performance; this supports a provisional
+    math candidate, not factual expertise.
+  confidence: low
+  supporting_evidence_ids:
+  - src-147450d232b3
+  contradictory_evidence_ids: []
+  conditions:
+  - Vendor internal evaluation platform; MATH uses zero-shot chain-of-thought. Mini reasoning/flash siblings
+    excluded.
+  known_failure_modes:
+  - Vendor notes limited factual knowledge capacity; math scores do not establish factual accuracy.
+  evidence_notes:
+  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
+    confidence.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: phi-4-multimodal-instruct
   profile: models/microsoft/phi-4-multimodal-instruct/profile.yaml
   id: judgment-43dd1128b74944f9
@@ -2535,6 +3064,36 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: phi-4-multimodal-instruct
+  profile: models/microsoft/phi-4-multimodal-instruct/profile.yaml
+  id: judgment-61024ceeda4b1074
+  scope: direct
+  task_ids:
+  - vision.question_answering
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: The exact card supports a candidate for document questions delivered as synthetic speech, with
+    a vendor s_DocVQA result; pure text-query and all-language performance are separate.
+  confidence: low
+  supporting_evidence_ids:
+  - src-29885c43e537
+  contradictory_evidence_ids: []
+  conditions:
+  - Image plus synthetic spoken query; retain the s_ benchmark prefix. Korean fine-tuned adapter scores excluded.
+  known_failure_modes: []
+  evidence_notes:
+  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
+    confidence.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: phi-4-reasoning-vision-15b
   profile: models/microsoft/phi-4-reasoning-vision-15b/profile.yaml
   id: judgment-3947e022646bea11
@@ -2566,6 +3125,36 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: phi-4-reasoning-vision-15b
+  profile: models/microsoft/phi-4-reasoning-vision-15b/profile.yaml
+  id: judgment-87ac71979507153c
+  scope: direct
+  task_ids:
+  - vision.grounding
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Vendor ScreenSpot V2 measurements support static GUI element localization as a candidate; this
+    does not demonstrate an autonomous computer-use agent.
+  confidence: low
+  supporting_evidence_ids:
+  - src-91f835e2db28
+  contradictory_evidence_ids: []
+  conditions:
+  - Default hybrid model under VLMEvalKit; forced no-think/thinking columns kept separate.
+  known_failure_modes: []
+  evidence_notes:
+  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
+    confidence.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: minimax-m3
   profile: models/minimax/minimax-m3/profile.yaml
   id: judgment-733be35f32bab45e
@@ -2769,6 +3358,40 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: devstral-small-2
+  profile: models/mistral-ai/devstral-small-2/profile.yaml
+  id: judgment-8d7c54b092733784
+  scope: direct
+  task_ids:
+  - coding.repository_work
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Vendor SWE-bench results support a provisional repository-work candidate, but the runtime card
+    reports different values; scores require their own scaffold and runtime.
+  confidence: low
+  supporting_evidence_ids:
+  - src-fd9a0c74ec31
+  - src-b1ff9761da4f
+  contradictory_evidence_ids:
+  - src-b1ff9761da4f
+  conditions:
+  - Exact 2512 Small checkpoint; Devstral 2 123B scores excluded. Recommended scaffolds are not a disclosed
+    measured harness.
+  known_failure_modes:
+  - Published runtime-card scores differ from the exact HF card; do not average or select a convenient score.
+  evidence_notes:
+  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
+    confidence.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: ministral-3-8b
   profile: models/mistral-ai/ministral-3-8b/profile.yaml
   id: judgment-dada3e5e7dd7f855
@@ -2992,6 +3615,36 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: mistral-small-4
+  profile: models/mistral-ai/mistral-small-4/profile.yaml
+  id: judgment-9a65dee264bffeda
+  scope: direct
+  task_ids:
+  - context.reasoning
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Vendor AA-LCR evidence supports a provisional long-context reasoning candidate when reasoning is
+    enabled; the result does not transfer automatically to reasoning off.
+  confidence: low
+  supporting_evidence_ids:
+  - src-dcba779ffa90
+  contradictory_evidence_ids: []
+  conditions:
+  - Reasoning enabled; recommended reasoning_effort high does not establish the exact measured setting.
+  known_failure_modes: []
+  evidence_notes:
+  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
+    confidence.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: kimi-k3
   profile: models/moonshot-ai/kimi-k3/profile.yaml
   id: judgment-ce599538fb19f653
@@ -3190,6 +3843,38 @@ records:
     research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate review_tests_frontend:frontend-kimi-practitioner; exact identity gates
       and original sources retained.
+- model_id: nemotron-3-ultra
+  profile: models/nvidia/nemotron-3-ultra/profile.yaml
+  id: judgment-17c795182ab4491e
+  scope: direct
+  task_ids:
+  - reasoning.scientific
+  related_task_ids: []
+  assessment: warning
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Vendor CritPt no-tool results warn against assuming graduate physics research ability from higher
+    general exam scores; independent launch evaluation also reports limited CritPt performance.
+  confidence: low
+  supporting_evidence_ids:
+  - src-c5a0afc263f8
+  - src-9950acce03ed
+  contradictory_evidence_ids: []
+  conditions:
+  - BF16 card comparison table; independent pre-release BlackBox AI precision/revision not confirmed identical.
+  known_failure_modes:
+  - Low no-tool graduate-physics result under the inspected setup; broad scientific ability remains uncertain.
+  evidence_notes:
+  - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
+    confidence.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: gpt-6-1-sol
   profile: models/openai/gpt-6-1-sol/profile.yaml
   id: judgment-7d037d39575a5ff8
@@ -3939,6 +4624,41 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: gpt-image-2-5-flare
+  profile: models/openai/gpt-image-2-5-flare/profile.yaml
+  id: judgment-2ca135b74c458093
+  scope: direct
+  task_ids:
+  - image.editing
+  related_task_ids: []
+  assessment: warning
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Independent registered-OCR checks find fewer surrounding receipt-text changes, without an established
+    target-field correctness improvement. Faithful repeated editing remains conditional.
+  confidence: low
+  supporting_evidence_ids:
+  - src-467bad59597d
+  - src-259c8fd88c0f
+  - src-cee7a5257e77
+  contradictory_evidence_ids:
+  - src-467bad59597d
+  conditions:
+  - E1 199 receipt edits at medium quality; exact named Flare/Sunburst API; registered OCR, not human visual
+    fidelity.
+  known_failure_modes:
+  - Collateral text changes persist; improved surrounding-text OCR preservation is not precise target editing.
+  evidence_notes:
+  - 'Low confidence in broad fidelity: one independent automatic scorer, post-hoc alignment sensitivity and
+    no human replication.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: gpt-image-2-5-sunburst
   profile: models/openai/gpt-image-2-5-sunburst/profile.yaml
   id: judgment-5ae64605b3a4b23e
@@ -3973,6 +4693,41 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: gpt-image-2-5-sunburst
+  profile: models/openai/gpt-image-2-5-sunburst/profile.yaml
+  id: judgment-42c1857157777f2b
+  scope: direct
+  task_ids:
+  - image.editing
+  related_task_ids: []
+  assessment: warning
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Independent registered-OCR checks find fewer surrounding receipt-text changes, without an established
+    target-field correctness improvement. Faithful repeated editing remains conditional.
+  confidence: low
+  supporting_evidence_ids:
+  - src-467bad59597d
+  - src-259c8fd88c0f
+  - src-1a9fcf8d6701
+  contradictory_evidence_ids:
+  - src-467bad59597d
+  conditions:
+  - E1 199 receipt edits at medium quality; exact named Flare/Sunburst API; registered OCR, not human visual
+    fidelity.
+  known_failure_modes:
+  - Collateral text changes persist; improved surrounding-text OCR preservation is not precise target editing.
+  evidence_notes:
+  - 'Low confidence in broad fidelity: one independent automatic scorer, post-hoc alignment sensitivity and
+    no human replication.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: gpt-live-1
   profile: models/openai/gpt-live-1/profile.yaml
   id: judgment-cc90e4fddce2d650
@@ -4006,6 +4761,38 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: gpt-live-1
+  profile: models/openai/gpt-live-1/profile.yaml
+  id: judgment-6fc6e6b6589624e3
+  scope: direct
+  task_ids:
+  - agent.tool_use
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Independent voice customer-support task results vary with the connected reasoning model and effort.
+    They support the combined agent configurations, not GPT-Live alone.
+  confidence: low
+  supporting_evidence_ids:
+  - src-4500b2c5fc9e
+  - src-84d1a7712d6a
+  - src-c84f0489248c
+  contradictory_evidence_ids: []
+  conditions:
+  - AA tau-Voice database end-state scoring with policies/tools; one trial per listed GPT-Live configuration.
+  known_failure_modes: []
+  evidence_notes:
+  - 'Low confidence beyond these systems: one trial, configuration dependence, not a controlled causal frontend
+    comparison.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: gpt-oss-120b
   profile: models/openai/gpt-oss-120b/profile.yaml
   id: judgment-f8a05ea09b9472ae
@@ -4350,6 +5137,36 @@ records:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: history/migrations/2026-10-07-capabilities.yaml
+- model_id: gpt-realtime-2-1
+  profile: models/openai/gpt-realtime-2-1/profile.yaml
+  id: judgment-8d4fb0af2cb7e4fe
+  scope: direct
+  task_ids:
+  - agent.tool_use
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
+  judgment: Independent voice customer-support task completion depends on reasoning effort; use the exact 2.1
+    High and Minimal configurations, without borrowing Mini results.
+  confidence: low
+  supporting_evidence_ids:
+  - src-4500b2c5fc9e
+  - src-cf6a8843c8fd
+  contradictory_evidence_ids: []
+  conditions:
+  - AA tau-Voice simulated customer support with domain tools and policies; High uses two trials.
+  known_failure_modes: []
+  evidence_notes:
+  - 'Low confidence beyond the measured agent systems: few trials, rolling alias and incomplete configuration.'
+  - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
+    coverage ledger.
+  observed_at: '2026-10-07'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
+    method: Inspected original model/evaluator sources and performed the recorded public search; no inference
+      or benchmarking calls.
 - model_id: xai-grok-4-7
   profile: models/xai-spacexai/xai-grok-4-7/profile.yaml
   id: judgment-445f99a05ebe5177
