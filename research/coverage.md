@@ -10,13 +10,13 @@ Unresolved coverage priorities include stable independent evidence for very new 
 
 Observed 2026-10-07. This is an inventory date, not a fresh verification date for every fact.
 
-- models: 53
+- models: 54
 - providers and access products: 44
 - capability judgments: 178
 - performance judgments: 13
 - price records: 163
 - access routes: 316
-- public sources: 630
+- public sources: 631
 - evidence observations: 55
 
 See [coverage gaps](coverage-gaps.yaml) for source-specific limitations and [contradictions](../evidence/contradictions.yaml) for unresolved differences. Counts indicate coverage, not quality or completeness.

@@ -7239,3 +7239,14 @@ records:
   limitations:
   - v1 creator guide uses Azure AI hub terminology; exact regional tariff, PTU offer, operational eligibility and
     policy applicability remain separately unresolved.
+- id: src-d69b0e2a2d12
+  url: https://platform.claude.com/docs/en/models/haiku-5-5/overview
+  title: Claude Haiku 5.5 overview
+  publisher: Anthropic
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-07'
+  limitations:
+  - Current model page; API limits are not measured task performance.
+  claim_scope:
+  - Exact model identity, specifications and lifecycle

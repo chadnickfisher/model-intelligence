@@ -1,0 +1,76 @@
+schema_version: '2.0'
+id: claude-haiku-5-5
+verified_at: '2026-10-07'
+identity:
+  name: Claude Haiku 5.5
+  creator: Anthropic
+  family: Claude 5.5
+  version: claude-haiku-5-5
+  release_date: '2026-10-07'
+  latest_meaningful_update: null
+  status: active
+  model_types:
+  - language-model
+specifications:
+  architecture:
+    value: null
+    status: unknown
+    conditions:
+    - Pending the declared full initial load.
+    evidence_ids: []
+  parameters:
+    value: null
+    status: unknown
+    conditions:
+    - Pending the declared full initial load.
+    evidence_ids: []
+  context_window:
+    value: null
+    status: unknown
+    conditions:
+    - Pending the declared full initial load.
+    evidence_ids: []
+  maximum_output:
+    value: null
+    status: unknown
+    conditions:
+    - Pending the declared full initial load.
+    evidence_ids: []
+  modalities:
+    value: null
+    status: unknown
+    conditions:
+    - Pending the declared full initial load.
+    evidence_ids: []
+  language_support:
+    value: null
+    status: unknown
+    conditions:
+    - Pending the declared full initial load.
+    evidence_ids: []
+additional_specifications: {}
+licensing:
+  name: null
+  commercial_use: null
+  redistribution: null
+  fine_tuning: null
+  hosted_service: null
+  restrictions:
+  - Pending source review.
+  evidence_ids: []
+local_inference:
+  availability: unknown
+  hardware_notes: []
+  conditions:
+  - Pending public weights/availability investigation.
+  evidence_ids: []
+capabilities: []
+performance_characteristics: []
+access_ids: []
+price_ids: []
+evidence_ids:
+- src-d69b0e2a2d12
+notes:
+- New release identity only; full assessment pending.
+limitations:
+- Do not transfer Haiku 4.5 judgments to this release.

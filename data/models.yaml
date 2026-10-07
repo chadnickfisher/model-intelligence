@@ -65,6 +65,14 @@ records:
   local: unavailable
   profile: models/anthropic/claude-haiku-4-5/profile.yaml
   readme: models/anthropic/claude-haiku-4-5/README.md
+- id: claude-haiku-5-5
+  name: Claude Haiku 5.5
+  creator: Anthropic
+  family: Claude 5.5
+  status: active
+  local: unknown
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  readme: models/anthropic/claude-haiku-5-5/README.md
 - id: claude-opus-5-5
   name: Claude Opus 5.5
   creator: Anthropic

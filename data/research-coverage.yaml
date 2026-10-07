@@ -6486,3 +6486,59 @@ records:
   remaining_gaps:
   - No universal or deliberate nerf inference from unmatched impressions.
   blocked_reason: null
+- schema_version: '1.0'
+  id: research-coverage-claude-haiku-5-5-capabilities
+  model_id: claude-haiku-5-5
+  domain: capabilities
+  research_batch_id: new-model-intake-2026-10-07
+  checked_at: null
+  result: not_checked
+  evidence_ids: []
+  search_references: []
+  scope_notes:
+  - New identity intake; full research pending.
+  remaining_gaps:
+  - Pending bounded initial load.
+  blocked_reason: null
+- schema_version: '1.0'
+  id: research-coverage-claude-haiku-5-5-benchmarks
+  model_id: claude-haiku-5-5
+  domain: benchmarks
+  research_batch_id: new-model-intake-2026-10-07
+  checked_at: null
+  result: not_checked
+  evidence_ids: []
+  search_references: []
+  scope_notes:
+  - New identity intake; full research pending.
+  remaining_gaps:
+  - Pending bounded initial load.
+  blocked_reason: null
+- schema_version: '1.0'
+  id: research-coverage-claude-haiku-5-5-access-pricing
+  model_id: claude-haiku-5-5
+  domain: access_pricing
+  research_batch_id: new-model-intake-2026-10-07
+  checked_at: null
+  result: not_checked
+  evidence_ids: []
+  search_references: []
+  scope_notes:
+  - New identity intake; full research pending.
+  remaining_gaps:
+  - Pending bounded initial load.
+  blocked_reason: null
+- schema_version: '1.0'
+  id: research-coverage-claude-haiku-5-5-behavior
+  model_id: claude-haiku-5-5
+  domain: behavior
+  research_batch_id: new-model-intake-2026-10-07
+  checked_at: null
+  result: not_checked
+  evidence_ids: []
+  search_references: []
+  scope_notes:
+  - New identity intake; full research pending.
+  remaining_gaps:
+  - Pending bounded initial load.
+  blocked_reason: null

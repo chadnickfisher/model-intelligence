@@ -12,6 +12,7 @@ Generated navigation. Read canonical profiles for evidence, conditions, and date
 | [Qwen3-Coder-Next](../models/alibaba-qwen/qwen3-coder-next/README.md) | Alibaba / Qwen | active | available |
 | [Claude Fable 5.1](../models/anthropic/claude-fable-5-1/README.md) | Anthropic | active | unavailable |
 | [Claude Haiku 4.5](../models/anthropic/claude-haiku-4-5/README.md) | Anthropic | active | unavailable |
+| [Claude Haiku 5.5](../models/anthropic/claude-haiku-5-5/README.md) | Anthropic | active | unknown |
 | [Claude Opus 5.5](../models/anthropic/claude-opus-5-5/README.md) | Anthropic | active | unavailable |
 | [Claude Sonnet 5.5](../models/anthropic/claude-sonnet-5-5/README.md) | Anthropic | active | unavailable |
 | [FLUX 3 Video](../models/black-forest-labs/bfl-flux3-video/README.md) | Black Forest Labs | preview | unknown |
