@@ -8,13 +8,18 @@ from explorer.data import (load, show, link, summary, filter_models, claims, sou
     benchmark_findings, benchmark_compatibility, confidence_trace)
 from explorer.cost import estimate_runs, routes_for_price, UNITS
 from tools.knowledge import ROOT, history
+from explorer.presentation import (task_card_evidence, card_watchouts, access_bullets,
+                                   complete_summary, observation_summary, readable_conditions)
 
 st.set_page_config(page_title='Model Intelligence · Field Guide', layout='wide')
 st.markdown('''<style>
 .block-container {max-width:1400px;padding-top:2rem;}
 [data-testid="stSidebar"] {background:#EFEADF;}
-[data-testid="stMetric"] {background:#F4D5B7;border-radius:12px;padding:14px;}
-[data-testid="stVerticalBlockBorderWrapper"] {border-radius:14px;}
+[data-testid="stMetric"] {background:#D9E8DC;border-radius:12px;padding:14px;}
+[class*="st-key-model-card-"] {border-radius:14px;border-left:4px solid #24533F;background:#F0F5ED;padding:16px;}
+[data-testid="stMarkdownContainer"] strong {color:#24533F;}
+[data-testid="stCaptionContainer"], [data-testid="stCaptionContainer"] p {color:#365744;font-size:0.95rem;opacity:1;}
+[data-testid="stExpander"] summary {color:#24533F;font-weight:600;}
 h1,h2,h3 {color:#24533F;}
 @media(max-width:800px){[data-testid="stHorizontalBlock"]{flex-wrap:wrap;}
 [data-testid="stColumn"]{min-width:min(100%,300px);}}
@@ -48,7 +53,7 @@ def source_panel(data, ids):
     if not ids: st.caption('None separately recorded in this pass; this does not establish consensus.')
 
 def short(text, limit=240):
-    return text if len(text)<=limit else text[:limit].rsplit(' ',1)[0]+'…'
+    return complete_summary(text)
 
 def finding_text(j):
     return f"{ASSESSMENT[j['assessment']]} · {j['confidence'].capitalize()} evidence confidence · {SCOPE[j['scope']]}"
@@ -72,14 +77,15 @@ def benchmark_highlights(data,model,task=None,related=False):
     if task:
         ids={j['id'] for j in claims(model,task,related)}
         records=[b for b in records if ids.intersection(b['judgment_ids'])]
-    st.write('Benchmark highlights')
+    st.markdown('**Benchmark highlights**')
     for b in records[:2]:
-        st.write(benchmark_text(b));st.caption(b['evidence_class'].replace('_',' ')+' · '+show(b['measured_at'])+' · setup-specific')
+        st.write(benchmark_text(b))
+        st.write('**Evidence type:** '+b['evidence_class'].replace('_',' ')+' · **Checkpoint:** '+show(b['model_version']))
+        st.write('**Settings:** effort '+show(b['effort'])+'; harness '+show(b['harness']))
     if not records:st.caption('Structured benchmark measurements not yet recorded; see source-backed findings in evidence details.')
 
 def claim_panel(data,j):
     st.write(j['judgment']); st.caption(finding_text(j))
-    st.write(j['scope_note'])
     st.write('Conditions: '+show(j['conditions']))
     st.write('Limitations: '+show(j['known_failure_modes']))
     st.write('Supporting evidence'); source_panel(data,j['supporting_evidence_ids'])
@@ -110,8 +116,8 @@ def behavior_panel(data,b):
     for metric in b['metrics']: st.write(metric['kind'].replace('_',' ')+': '+show(metric['measurement']))
     st.write('Conditions: '+show(b['conditions']))
     if b['official_acknowledgment']: st.write('Official statement: '+b['official_acknowledgment'])
-    if b['fix']['summary']:
-        st.write('Published change: '+b['fix']['summary'])
+    if b['status']=='fix_published' and b['fix']['summary']:
+        st.write('Published change: '+b['fix']['summary'].replace('_',' '))
         st.caption(f"Published {show(b['fix']['published_at'])} · version {show(b['fix']['version'])} · measured improvement: {show(b['fix']['measured_improvement'])}")
         source_panel(data,b['fix']['evidence_ids'])
     st.write('Supporting evidence');source_panel(data,b['supporting_evidence_ids'])
@@ -201,27 +207,73 @@ def model_detail(data,model):
         if not records:st.info('No structured measurement recorded. Narrative findings and linked sources remain in Findings; missing measurements are unknown.')
         st.caption('Quality tests, preference rankings and vendor claims answer different questions. No universal score is computed.')
 
+def card_fit(data,model,task,related=False):
+    st.markdown('**Task fit — '+task_label(data,task)+'**')
+    js,_=task_card_evidence(model,data,task,related)
+    for j in js[:2]:
+        st.write(j['judgment'])
+        st.write('**Match:** '+('Direct task evidence' if j['scope']=='direct' else 'Related evidence; not a direct task conclusion')+
+                 ' · **Assessment:** '+ASSESSMENT[j['assessment']]+' · **Confidence:** '+j['confidence'])
+        conditions=readable_conditions(j['conditions'])
+        if conditions:st.write('**Applies to:** '+show(conditions))
+        evidence=sources(data,j['supporting_evidence_ids'])
+        if evidence:st.markdown('[Supporting evidence]('+evidence[0]['url']+')')
+    if not js:st.write('No task-specific finding recorded for this selection; ability remains unknown.')
+
+def card_limits(data,model,task=None,related=False):
+    st.markdown('**Watch-outs**')
+    limits=card_watchouts(model,data,task,related)
+    if limits:st.markdown('\n'.join('- '+v for v in limits[:2]))
+    else:st.write('No documented watch-outs for this task yet.' if task else 'No documented watch-outs yet.')
+
+def card_access(data,model):
+    st.markdown('**How to use it**')
+    items=access_bullets(model,data)
+    if items:
+        st.markdown('\n'.join('- '+v for v in items[:3]))
+        if len(items)>3:
+            with st.expander('More documented access routes'):
+                st.markdown('\n'.join('- '+v for v in items[3:]))
+    else:st.write('Access not yet documented.')
+    st.write('**API:** '+route_status(model,data,'API')+' · **Subscription:** '+route_status(model,data,'Subscription'))
+
+def card_prices(data,model):
+    st.markdown('**Price**')
+    ps=[data['price'][i] for i in model['price_ids'] if current_price(data['price'][i])]
+    api=[p for p in ps if p['billing_method']=='metered-api' and routes_for_price(p,data['access'].values())]
+    selected=[]
+    if api:selected.append(sorted(api,key=lambda p:(cost_mode(p)!='standard',(p['tier'] or '').lower() not in {'standard','default'},p['provider_id'],p['id']))[0])
+    other=[p for p in ps if p['billing_method']!='metered-api']
+    if other:selected.append(other[0])
+    for p in selected:
+        provider=data['provider'].get(p['provider_id'],{}).get('name','Documented provider')
+        st.write('**'+p['billing_method'].replace('-',' ').capitalize()+' — '+provider+' / '+(p['tier'] or 'Documented tier')+'**')
+        st.markdown('\n'.join('- **'+label+'**: '+value for rate in rate_text(p).split('; ') for label,_,value in [rate.partition(': ')]))
+        if p['conditions']:st.write('**Price conditions:** '+show(p['conditions']))
+    if not selected:st.markdown('- Model-specific price not yet documented for a compatible route.')
+
+def card_observations(data,model):
+    st.markdown('**Post-launch observations**')
+    bs=behavior_findings(model,data,highlights=True)
+    if bs:
+        for b in bs[:2]:
+            st.write(observation_summary(b))
+            st.write('**Reported:** '+(b['reported_at'] or b['observed_at'])+' · **Evidence:** '+b['fact_status']+
+                     ' · **Confidence:** '+b['confidence'])
+            with st.expander('Full observation & evidence: '+(b['reported_at'] or b['observed_at'])):behavior_panel(data,b)
+    else:st.write('No dated model finding recorded yet.')
+
 def model_card(data,model,task=None,related=False,details=True):
-    with st.container(border=True):
-        st.subheader(model['identity']['name']);st.caption(model['identity']['creator']+' · checked '+model['verified_at'])
-        js=claims(model,task,related)
-        if not task:js=[j for j in js if j['scope']=='direct']
-        st.write('Task fit')
-        for j in js[:2]:st.write(short(j['judgment']));st.caption(finding_text(j))
-        if not js:st.caption('Task-specific evidence not yet curated; ability is unknown.')
-        limitations=list(dict.fromkeys([f for j in js for f in j['known_failure_modes']]+model['limitations']))
-        st.write('Watch-outs');st.write(short('; '.join(limitations[:2])) if limitations else UNKNOWN)
-        st.write('How to use it');st.write(access_summary(data,model))
-        st.caption('API: '+route_status(model,data,'API')+' · Subscription: '+route_status(model,data,'Subscription'))
-        st.write('Price');st.write(short(price_summary(data,model),320))
-        st.write('Context');st.write(show(summary(model,data)['Native context tokens'])+' native tokens')
-        st.caption('Published capacity; effective retrieval and provider limits may differ.')
+    with st.container(border=True,key='model-card-'+model['id']):
+        st.subheader(model['identity']['name']);st.write(model['identity']['creator']+' · **Checked:** '+model['verified_at'])
+        if task:card_fit(data,model,task,related)
+        card_limits(data,model,task,related)
+        card_access(data,model)
+        card_prices(data,model)
+        st.markdown('**Context**');st.write(show(summary(model,data)['Native context tokens'])+' native tokens')
+        st.write('Published capacity; effective retrieval and provider limits may differ.')
         benchmark_highlights(data,model,task,related)
-        bs=behavior_findings(model,data,highlights=True)
-        st.write('Post-launch model / setup observations')
-        if bs:
-            for b in bs[:2]:st.write(short(b['claim']));st.caption(f"{b['reported_at'] or b['observed_at']} · {b['fact_status']} · {b['confidence']} confidence · {b['status']}")
-        else:st.caption('No dated finding curated')
+        card_observations(data,model)
         if details:
             with st.expander('Evidence & details'):model_detail(data,model)
 
@@ -292,28 +344,21 @@ def compare_models(data):
                     st.subheader(model['identity']['name'])
                     st.caption(model['identity']['creator']+' · checked '+model['verified_at'])
             # One horizontal block per field aligns rows even when finding lengths differ.
-            for field in ['Task fit','Watch-outs','How to use it','Price','Context','Local hardware','Post-launch behavior']:
+            fields=(['Task fit'] if selected_task else [])+['Watch-outs','How to use it','Price','Context','Local hardware','Post-launch behavior']
+            for field in fields:
                 for col,model in zip(st.columns(len(models)),models):
                     with col:
-                        st.write(field)
-                        js=claims(model,selected_task,related)
-                        if selected_task is None:js=[j for j in js if j['scope']=='direct']
                         if field=='Task fit':
-                            for j in js[:2]:st.write(short(j['judgment']));st.caption(finding_text(j))
-                            if not js:st.caption('Task-specific evidence not yet curated; ability is unknown.')
+                            card_fit(data,model,selected_task,related)
                         elif field=='Watch-outs':
-                            values=list(dict.fromkeys([v for j in js for v in j['known_failure_modes']]+model['limitations']))
-                            st.write(short('; '.join(values[:2])) if values else UNKNOWN)
+                            card_limits(data,model,selected_task,related)
                         elif field=='How to use it':
-                            st.write(access_summary(data,model))
-                            st.caption('API: '+route_status(model,data,'API')+' · Subscription: '+route_status(model,data,'Subscription'))
-                        elif field=='Price':st.write(short(price_summary(data,model),320))
-                        elif field=='Context':st.write(show(summary(model,data)['Native context tokens'])+' native tokens')
-                        elif field=='Local hardware':st.write(short(show(model['local_inference']['hardware_notes']),320))
+                            card_access(data,model)
+                        elif field=='Price':card_prices(data,model)
+                        elif field=='Context':st.markdown('**Context**');st.write(show(summary(model,data)['Native context tokens'])+' native tokens')
+                        elif field=='Local hardware':st.markdown('**Local hardware**');st.write(show(model['local_inference']['hardware_notes']))
                         else:
-                            bs=behavior_findings(model,data,highlights=True)
-                            for b in bs[:2]:st.write(short(b['claim']));st.caption(f"{b['reported_at'] or b['observed_at']} · {b['fact_status']} · {b['confidence']} confidence · {b['status']}")
-                            if not bs:st.caption('No dated finding curated')
+                            card_observations(data,model)
             tests=sorted({tuple(b['benchmark'][k] or '' for k in ('name','version','metric','unit'))
                           for m in models for b in benchmark_findings(m,data)})
             st.write('Benchmark comparison')

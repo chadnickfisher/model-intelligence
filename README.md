@@ -71,6 +71,12 @@ model score. Missing access research is “not yet documented,” never a false
 unavailability claim. Source and canonical GitHub links accompany the records.
 All facts retain their verification dates; the app does not refresh external data.
 
+Cards show Task fit only after selecting a task, using that task's actual findings
+and matching benchmark evidence. Watch-outs remain visible; missing documented
+limits remain unknown. Access and price lists use bullets and distinct labels.
+Observation summaries preserve complete sentences and limiting statements, with
+full text and evidence in expanders; a published fix does not imply measured recovery.
+
 Recorded benchmark highlights appear on cards and in aligned comparison rows.
 Details retain metric/unit/direction, exact checkpoint, harness/effort/tools/provider,
 dates, sources and limitations. Independent quality tests, preference rankings and
