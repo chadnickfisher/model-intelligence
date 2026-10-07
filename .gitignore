@@ -25,3 +25,15 @@ AGENTS.override.md
 /docs/bounded-research.md
 /docs/scoped-maintenance.md
 /docs/package-workflow.md
+/docs/maintenance-pilot-scope.md
+/docs/RESEARCH_AND_MCP_PLAN.md
+/docs/research-work-unit-proposal.md
+/docs/retrieval-task-proposal.md
+/data/research-runs.*
+/data/maintenance-passes.*
+/history/revisions.yaml
+/history/README.md
+/history/research/
+/research/*
+!/research/coverage.md
+!/research/coverage-gaps.yaml
