@@ -40,6 +40,14 @@ Use public sources only. Propose a small change with evidence, exact model/provi
 
 Run `python tools/validate.py` to check schemas, IDs, references, and dated evidence. Run `python tools/render.py` to rebuild readable catalogs and profiles. These utilities validate and format local data only; they make no model calls or external network requests.
 
+[GitHub Actions CI](.github/workflows/ci.yml) runs on every push and pull request
+with Python 3.12 on an Ubuntu runner. It installs the runtime and development
+requirements, validates canonical records and history, regenerates derived
+outputs, runs tests, and requires `git diff --exit-code` to pass. Unexpected
+untracked files also fail the job. Commit regenerated outputs with the canonical
+changes that caused them. CI uses read-only repository permissions and needs no
+secrets or external services; research maintenance remains paused.
+
 ## Local interactive explorer
 
 Use Python 3.12 (the tested runtime), from the repository root:
