@@ -2,6 +2,8 @@
 
 A vendor-neutral, evidence-backed guide to AI models, their access routes, costs, and conditional strengths and weaknesses.
 
+**[Open the interactive Model Intelligence explorer](https://model-intelligence-9fqyzge2aqwzqx93aqbkn5.streamlit.app/)**
+
 **Research → Judge → Record → Maintain.**
 
 This is a public-evidence knowledge base, not a universal leaderboard. It does not run paid inference or coding-agent benchmarks. A model can be useful for one workload and unsuitable for another; provider, effort, harness, quantization, context size, and price tier can change the conclusion.
@@ -87,17 +89,16 @@ python tools/render.py
 python -m pytest -q
 ```
 
-## Future Community Cloud deployment
+## Hosted explorer and Community Cloud deployment
 
-No hosted explorer has been deployed and there is no interactive public URL yet.
-For a later deployment, follow the
+The [public explorer](https://model-intelligence-9fqyzge2aqwzqx93aqbkn5.streamlit.app/)
+is hosted on Streamlit Community Cloud. The local setup instructions above remain
+available. For deployment setup, follow the
 [official Streamlit Community Cloud guide](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app):
 choose this public repository, branch `main`, entrypoint `streamlit_app.py`, and
 Python 3.12. Root `requirements.txt` supplies dependencies; no secrets or external
-services are needed. The repository is self-contained. Confirm the deployed app
-loads all five views before adding its real interactive URL to this README.
-Deployment requires a separate user decision; this repository publication does
-not register or deploy a hosted app. MCP remains a future query layer.
+services are needed. The repository is self-contained. Verify that all five views
+load after deployment changes. MCP remains a future query layer.
 
 ## Reuse and licensing
 
