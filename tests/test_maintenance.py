@@ -205,6 +205,21 @@ def test_completion_flag_is_rejected_and_schema_is_valid():
     assert list(validator.iter_errors(run))
 
 
+def test_new_model_intake_is_separate_from_existing_ids_and_does_not_complete_assessment():
+    state,revisions,run=fixture()
+    inspect(run)
+    c=candidate(state,run,disposition='pending')
+    c.update(model_ids=[],affected_fields=[],dependencies=[],discovered_model={
+        'creator':'Example Creator','name':'New Model','upstream_id':'new-model',
+        'release_date':TODAY,'source_urls':['https://example.org/new-model']})
+    account_domains(run,state)
+    errors,report=validated_report(run,state,state,revisions)
+    assert not errors and report['watch_complete'] and not report['reconciliation_complete']
+    assert ('model','new-model') not in state
+    c['disposition']='investigated_unknown'
+    assert any('separate full assessment' in e for e in pass_errors(run,state,state,revisions))
+
+
 def test_real_capture_order_idempotence_and_retained_evidence(tmp_path):
     from tools.knowledge import canonical, capture, history
     from tools.migrate_v2 import write_yaml

@@ -272,8 +272,14 @@ def pass_errors(run, baseline, evidence_state=None, revisions=None):
             fail(label + ': candidate needs a discovery lead')
         if set(c['source_check_ids']) - set(checks) or set(c['search_ids']) - set(searches):
             fail(label + ': unresolved candidate references')
-        if not c['model_ids'] or not set(c['model_ids']) <= catalog:
+        discovered = c.get('discovered_model')
+        if (not c['model_ids'] and not discovered) or not set(c['model_ids']) <= catalog:
             fail(label + ': unresolved candidate model IDs')
+        if discovered:
+            if discovered['release_date'] and discovered['release_date'] > today:
+                fail(label + ': future release is a notice, not a released-model intake')
+            if c['disposition'] not in {'pending', 'identity_unresolved', 'duplicate', 'irrelevant'}:
+                fail(label + ': new-model intake requires a separate full assessment, not maintenance verification')
         seen_fields = set()
         required_models = set()
         for f in c['affected_fields']:
