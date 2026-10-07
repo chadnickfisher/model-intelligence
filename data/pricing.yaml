@@ -1767,7 +1767,7 @@ records:
 - schema_version: '1.0'
   id: price-proprietary-veo-3-1-generate-preview-google-developer-api-fdc0b33bf21d
   verified_at: '2026-10-06'
-  model_id: veo-3-1-generate-preview
+  model_id: null
   provider_id: google-developer-api
   product: veo-3.1-fast-generate-preview
   model_label: veo31
@@ -1803,7 +1803,7 @@ records:
 - schema_version: '1.0'
   id: price-proprietary-veo-3-1-generate-preview-google-developer-api-281d4f4cc193
   verified_at: '2026-10-06'
-  model_id: veo-3-1-generate-preview
+  model_id: null
   provider_id: google-developer-api
   product: veo-3.1-lite-generate-preview
   model_label: veo31

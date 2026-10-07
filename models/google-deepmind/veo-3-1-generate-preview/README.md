@@ -88,7 +88,7 @@ Specifications and provenance are qualified in [canonical data](profile.yaml). P
 
 ## Access and cost
 
-6 recorded access route(s); 3 model-specific price record(s).
+6 recorded access route(s); 1 model-specific price record(s).
 
 [Access records](../../../data/access.yaml) · [Price records](../../../data/pricing.yaml)
 
@@ -119,9 +119,7 @@ Local conditions: Not established in this pass
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
-| google-developer-api | paid_lite_endpoint / current | 720p: 0.05 USD / per_successful_output_second; 1080p: 0.08 USD / per_successful_output_second; 4K: unknown USD / per_successful_output_second | Not established in this pass | 2026-10-06 |
 | google-developer-api | paid_standard / current | 720p_or_1080p_audio_video: 0.4 USD / per_successful_output_second; 4K_audio_video: 0.6 USD / per_successful_output_second | Not established in this pass | 2026-10-06 |
-| google-developer-api | paid_fast_endpoint / current | 720p: 0.1 USD / per_successful_output_second; 1080p: 0.12 USD / per_successful_output_second; 4K: 0.3 USD / per_successful_output_second | Not established in this pass | 2026-10-06 |
 
 ## Recorded access routes
 
