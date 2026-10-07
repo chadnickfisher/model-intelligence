@@ -1,4 +1,4 @@
-"""Read the canonical YAML and explicit observation history; no network or database."""
+"""Read current canonical YAML and compact change summaries; no network or database."""
 from copy import deepcopy
 from datetime import date
 from hashlib import sha256
@@ -63,10 +63,6 @@ def scope_errors(model, tasks):
                 errors.append(f'{label}: wrong judgment collection')
     return errors
 
-def history(root=ROOT):
-    return read(root / 'history/revisions.yaml')['records']
-
-
 def research_coverage_errors(records, model_ids, sources):
     """Check accounting and provenance. This cannot certify the adequacy of research."""
     expected={(m,d) for m in model_ids for d in ['capabilities','benchmarks','access_pricing','behavior']}
@@ -96,81 +92,55 @@ def research_coverage_errors(records, model_ids, sources):
     if found!=expected:errors.append('Research coverage must account for every catalog model in all four domains')
     return errors
 
-def snapshot(as_of, records=None):
-    """Knowledge observed by this date. Effective dates never backdate observation."""
-    date.fromisoformat(as_of)
-    out = {}
-    for r in records if records is not None else history():
-        if r['observed_at'] > as_of:
-            continue
-        key = (r['entity_type'], r['entity_id'])
-        if r['operation'] == 'remove':
-            out.pop(key, None)
-        else:
-            out[key] = deepcopy(r['value'])
-    return out
 
-def entity_history(kind, ident, records=None):
-    return [r for r in records if r['entity_type'] == kind and r['entity_id'] == ident] if records is not None else entity_history(kind, ident, history())
+def integrity_records(root=ROOT):
+    path = root / 'data/record-integrity.yaml'
+    return read(path)['records'] if path.exists() else []
 
-def capability_history(model_id, judgment_id=None, records=None):
-    result = []
-    for r in entity_history('model', model_id, records):
-        value = r['value'] or {}
-        judgments = value.get('capabilities', []) + value.get('performance_characteristics', [])
-        result.append({**r, 'value': [j for j in judgments if judgment_id is None or j['id'] == judgment_id]})
-    return result
+def record_hash(value):
+    return sha256(json.dumps(value, sort_keys=True, ensure_ascii=True).encode()).hexdigest()
 
-def changes_between(start, end, records=None):
-    date.fromisoformat(start); date.fromisoformat(end)
-    if start > end:
-        raise ValueError('Start must precede end')
-    return [r for r in (records if records is not None else history()) if start < r['observed_at'] <= end]
+def integrity_errors(root=ROOT):
+    rows = integrity_records(root)
+    stored = {(r['entity_type'],r['entity_id']):(r['canonical_path'],r['value_hash']) for r in rows}
+    if len(stored) != len(rows):
+        return ['Duplicate current record checksum']
+    actual = {key:(path,record_hash(value)) for key,(path,value) in canonical(root).items()}
+    return [] if stored == actual else ['Current record checksums differ; run capture_changes.py before publishing']
 
 def capture(root, observed_at, reason, evidence_ids, effective_from=None):
-    """Append complete changed values, linking prior revisions; no invented effective dates."""
+    """Update current checksums and append a compact summary; never duplicate factual values."""
     from tools.migrate_v2 import write_yaml
     date.fromisoformat(observed_at)
-    if effective_from is not None:
-        date.fromisoformat(effective_from)
-    if not reason or not evidence_ids:
-        raise ValueError('Reason and evidence are required')
-    path = root / 'history/revisions.yaml'
-    old = history(root) if path.exists() else []
-    if old and observed_at < max(r['observed_at'] for r in old):
-        raise ValueError('Observation date cannot precede existing history')
-    latest = {(r['entity_type'], r['entity_id']): r for r in old}
+    if effective_from is not None: date.fromisoformat(effective_from)
+    if not reason or not evidence_ids: raise ValueError('Reason and evidence are required')
+    manifest = root / 'data/record-integrity.yaml'
+    old = integrity_records(root)
+    if manifest.exists() and observed_at < read(manifest)['observed_at']:
+        raise ValueError('Observation date cannot precede current capture')
+    prior = {(r['entity_type'],r['entity_id']):r for r in old}
     current = canonical(root)
-    known_evidence = {ident for (kind, ident) in set(current) | set(latest) if kind in ['source', 'observation']}
-    known_evidence.add('capabilities-2026-10-07')
-    if not set(evidence_ids) <= known_evidence:
-        raise ValueError('Capture evidence must resolve to a source, observation or migration record')
-    changes = []
-    # Runs freeze their supporting state at their own revision; capture all
-    # factual/source/task changes first, even when they share an observation date.
-    for key in sorted(set(current) | set(latest), key=lambda key: (key[0] in {'research_run', 'maintenance_pass'}, key)):
-        kind, ident = key
-        previous = latest.get(key)
-        profile, value = current.get(key, (previous['canonical_path'] if previous else '', None))
-        if previous is not None and previous['value'] == value:
-            continue
-        def relevant_evidence(obj):
-            if isinstance(obj, dict):
-                for field, nested in obj.items():
-                    if field in {'evidence_ids', 'source_ids', 'supporting_evidence_ids', 'contradictory_evidence_ids'} and isinstance(nested, list):
-                        yield from (s for s in nested if isinstance(s, str) and s in known_evidence)
-                    else:
-                        yield from relevant_evidence(nested)
-            elif isinstance(obj, list):
-                for nested in obj:
-                    yield from relevant_evidence(nested)
-        ids = evidence_ids + list(relevant_evidence(value if value is not None else previous['value']))
-        revision = {'entity_type': kind, 'entity_id': ident, 'canonical_path': profile,
-                    'observed_at': observed_at, 'effective_from': effective_from,
-                    'operation': 'remove' if value is None else 'baseline' if previous is None else 'update',
-                    'previous_revision_id': previous['id'] if previous else None,
-                    'reason': reason, 'evidence_ids': sorted(set(ids)), 'value': deepcopy(value)}
-        revision['id'] = 'revision-' + sha256(json.dumps(revision, sort_keys=True).encode()).hexdigest()[:20]
-        changes.append(revision)
-    write_yaml(path, {'schema_version': '2.0', 'records': old + changes})
+    known = {i for k,i in current if k in {'source','observation'}} | {'capabilities-2026-10-07'}
+    # A source removal may refer to evidence already present in the last capture.
+    known |= {i for k,i in prior if k in {'source','observation'}}
+    if not set(evidence_ids) <= known: raise ValueError('Capture evidence must resolve')
+    rows=[];changes=[]
+    for kind,ident in sorted(set(current)|set(prior)):
+        key=(kind,ident);previous=prior.get(key)
+        path,value=current.get(key,(previous['canonical_path'] if previous else '',None))
+        digest=record_hash(value) if value is not None else None
+        if digest is not None: rows.append(dict(entity_type=kind,entity_id=ident,canonical_path=path,value_hash=digest))
+        if previous and previous['value_hash']==digest and previous['canonical_path']==path: continue
+        if not previous and digest is None: continue
+        changes.append(dict(entity_type=kind,entity_id=ident,canonical_path=path,
+                            operation='remove' if value is None else 'update' if previous else 'add'))
+    if not changes: return []
+    write_yaml(manifest,dict(schema_version='1.0',observed_at=observed_at,records=rows))
+    log=root/'changelog/changes.yaml'
+    summaries=read(log)['records'] if log.exists() else []
+    entry=dict(observed_at=observed_at,summary=reason,evidence_ids=sorted(set(evidence_ids)),
+               changed_entities=changes)
+    entry['id']='change-'+record_hash(entry)[:16]
+    if entry['id'] not in {r['id'] for r in summaries}: summaries.append(entry)
+    write_yaml(log,dict(schema_version='1.0',records=summaries))
     return changes

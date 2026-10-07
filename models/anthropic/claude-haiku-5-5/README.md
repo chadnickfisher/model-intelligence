@@ -256,10 +256,10 @@ Local conditions: No public weights/runtime located. Hosted API does not establi
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
-| anthropic | Standard / <=100k / current | input: 0.1 USD / per 1 million tokens; output: 0.5 USD / per 1 million tokens; cached_input: 0.01 USD / per 1 million tokens; cache_write_5m: 0.125 USD / per 1 million tokens; cache_write_1h: 0.2 USD / per 1 million tokens | Prompt <=100,000 tokens; Batch discounts apply only to input/output; server-side tools can add charges. | 2026-10-07 |
-| anthropic | Standard / >100k / current | input: 0.5 USD / per 1 million tokens; output: 2.5 USD / per 1 million tokens; cached_input: 0.05 USD / per 1 million tokens; cache_write_5m: 0.625 USD / per 1 million tokens; cache_write_1h: 1 USD / per 1 million tokens | Prompt >100,000 tokens; Batch discounts apply only to input/output; server-side tools can add charges. | 2026-10-07 |
-| anthropic | Batch / <=100k / current | input: 0.05 USD / per 1 million tokens; output: 0.25 USD / per 1 million tokens | Prompt <=100,000 tokens; Batch discounts apply only to input/output; server-side tools can add charges. | 2026-10-07 |
-| anthropic | Batch / >100k / current | input: 0.25 USD / per 1 million tokens; output: 1.25 USD / per 1 million tokens | Prompt >100,000 tokens; Batch discounts apply only to input/output; server-side tools can add charges. | 2026-10-07 |
+| anthropic | Standard / <=100k / current | input: 0.1 USD / per 1 million tokens; output: 0.5 USD / per 1 million tokens; cached_input: 0.01 USD / per 1 million tokens; cache_write_5m: 0.125 USD / per 1 million tokens; cache_write_1h: 0.2 USD / per 1 million tokens | Prompt <=100,000 tokens | 2026-10-07 |
+| anthropic | Standard / >100k / current | input: 0.5 USD / per 1 million tokens; output: 2.5 USD / per 1 million tokens; cached_input: 0.05 USD / per 1 million tokens; cache_write_5m: 0.625 USD / per 1 million tokens; cache_write_1h: 1 USD / per 1 million tokens | Prompt >100,000 tokens | 2026-10-07 |
+| anthropic | Batch / <=100k / current | input: 0.05 USD / per 1 million tokens; output: 0.25 USD / per 1 million tokens | Prompt <=100,000 tokens | 2026-10-07 |
+| anthropic | Batch / >100k / current | input: 0.25 USD / per 1 million tokens; output: 1.25 USD / per 1 million tokens | Prompt >100,000 tokens | 2026-10-07 |
 
 ## Recorded access routes
 

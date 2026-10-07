@@ -7,7 +7,7 @@ from explorer.data import (load, show, link, summary, filter_models, claims, sou
     task_label, judgment_label, task_coverage, behavior_findings, current_price, comparable_api_offers,
     benchmark_findings, benchmark_compatibility, confidence_trace)
 from explorer.cost import estimate_runs, routes_for_price, UNITS
-from tools.knowledge import ROOT, history
+from tools.knowledge import ROOT, read
 from explorer.presentation import (task_card_evidence, card_watchouts, access_bullets,
                                    complete_summary, observation_summary, readable_conditions)
 
@@ -44,7 +44,7 @@ def fingerprint():
 def cached_data(version): return load()
 
 @st.cache_data(show_spinner=False)
-def cached_history(version): return history()
+def cached_changes(version): return read(ROOT/'changelog/changes.yaml')['records']
 
 def source_panel(data, ids):
     for s in sources(data,ids):
@@ -506,17 +506,13 @@ def recent_changes(data):
     for b in bs:
         with st.expander((b['reported_at'] or b['observed_at'])+' · '+short(b['claim'],100)):behavior_panel(data,b)
     if not bs:st.caption('No dated behavior findings in this period. Unverified reports are not presented as confirmed regressions.')
-    with st.expander('Repository observation history'):
-        path=ROOT/'history/revisions.yaml';revisions=[r for r in cached_history((path.stat().st_mtime_ns,path.stat().st_size)) if r['observed_at']>=since.isoformat()]
-        st.caption('First-observed baselines do not mean newly released or newly available.')
-        st.dataframe([{'Observed':r['observed_at'],'Effective':r['effective_from'],'Type':r['entity_type'],'Entity':r['entity_id'],'Change':r['reason']} for r in reversed(revisions)],hide_index=True)
-        if revisions:
-            chosen=st.selectbox('Inspect history revision',[r['id'] for r in reversed(revisions)])
-            revision=next(r for r in revisions if r['id']==chosen);st.json(revision,expanded=False)
-            prior=next((r for r in cached_history((path.stat().st_mtime_ns,path.stat().st_size)) if r['id']==revision['previous_revision_id']),None)
-            if prior:st.write('Prior value');st.json(prior['value'],expanded=False)
-            else:st.info('No earlier recorded value; this is the first observation.')
-        st.markdown(f"[Full journal]({link('history/revisions.yaml')}) · [Historical semantics]({link('history/README.md')})")
+    st.subheader('Repository changelog')
+    path=ROOT/'changelog/changes.yaml'
+    rows=[r for r in cached_changes((path.stat().st_mtime_ns,path.stat().st_size)) if r['observed_at']>=since.isoformat()]
+    for row in reversed(rows):
+        st.markdown('**'+row['observed_at']+'** — '+row['summary'])
+    if not rows:st.caption('No material repository updates in this period.')
+    st.markdown(f"[Changelog]({link('changelog/2026-10.md')}) · [Git changes](https://github.com/chadnickfisher/model-intelligence/commits/main/)")
 
 data=cached_data(fingerprint())
 st.title('Model Intelligence')

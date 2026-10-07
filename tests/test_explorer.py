@@ -1,7 +1,7 @@
 import pytest
 from streamlit.testing.v1 import AppTest
 from explorer.data import load, filter_models, claims, comparison, context_tokens, open_weights, UNKNOWN
-from tools.knowledge import ROOT, history
+from tools.knowledge import ROOT
 
 
 @pytest.fixture(scope='module')
@@ -47,11 +47,12 @@ def app():
     return AppTest.from_file(str(ROOT / 'streamlit_app.py'), default_timeout=30).run()
 
 
-def test_app_load_and_model_filters():
+def test_app_load_and_model_filters(data):
     at = app()
     assert not at.exception
     widget(at.multiselect, 'Vendor').set_value(['Anthropic']).run()
-    assert not at.exception and any('4 models with matching' in c.value for c in at.caption)
+    expected = len(filter_models(data, vendors=['Anthropic']))
+    assert not at.exception and any(f'{expected} models with matching' in c.value for c in at.caption)
     widget(at.text_input, 'Find a model').set_value('no matching model').run()
     assert not at.exception and any('No records match' in i.value for i in at.info)
 
@@ -93,11 +94,6 @@ def test_app_cost_and_recent_changes():
     assert not at.exception and at.metric
     at.sidebar.radio[0].set_value('Recent Changes').run()
     assert not at.exception
-    assert len(at.dataframe[-1].value) >= 730
-    # Updates show their preceding value; a baseline has no invented predecessor.
-    update=next(r['id'] for r in reversed(history()) if r['previous_revision_id'] is not None)
-    widget(at.selectbox,'Inspect history revision').set_value(update).run()
-    assert any('Prior value' in m.value for m in at.markdown)
-    baseline=next(r['id'] for r in history() if r['previous_revision_id'] is None)
-    widget(at.selectbox,'Inspect history revision').set_value(baseline).run()
-    assert any('No earlier recorded value' in i.value for i in at.info)
+    assert any('Repository changelog' in h.value for h in at.subheader)
+    assert not any(s.label == 'Inspect history revision' for s in at.selectbox)
+    assert any('Haiku 5.5' in m.value for m in at.markdown)

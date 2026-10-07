@@ -1,5 +1,6 @@
+from tools.git_baselines import legacy_revisions as history
 from explorer.data import load, behavior_findings
-from tools.knowledge import ROOT,read,history
+from tools.knowledge import ROOT,read
 
 
 def test_imported_identity_gates_and_original_baseline_are_preserved():

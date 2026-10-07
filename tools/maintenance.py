@@ -8,7 +8,7 @@ import subprocess
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from tools.knowledge import ROOT, canonical, history, read
+from tools.knowledge import ROOT, canonical, read, integrity_errors
 from tools.research_runs import baseline_state, digest, leaves, state_hash
 
 KINDS = {'model', 'provider', 'access', 'price', 'benchmark', 'behavior', 'release'}
@@ -52,13 +52,13 @@ def make_pass(state, revisions, base_commit, ident, targets, watchlist, bounds, 
     """Declare scope before investigation. No old outcome becomes fresh evidence."""
     if not targets or not set(targets) <= {i for k, i in state if k == 'model'}:
         raise ValueError('Targets must be exact catalog IDs')
-    boundary = revisions[-1]['id']
-    if baseline_state(revisions, boundary) != state:
+    boundary = revisions[-1]['id'] if revisions is not None else 'git-'+base_commit
+    if revisions is not None and baseline_state(revisions, boundary) != state:
         raise ValueError('Capture canonical changes before declaring a baseline')
     linked = {(k, i) for k, i in state if k in KINDS and
               model_dependencies(state, k, i) & set(targets)}
-    latest = {(r['entity_type'], r['entity_id']): r for r in revisions}
-    carry = [{'entity_type': k, 'entity_id': i, 'revision_id': latest[(k, i)]['id'],
+    latest = {(r['entity_type'], r['entity_id']): r for r in (revisions or [])}
+    carry = [{'entity_type': k, 'entity_id': i, 'revision_id': latest[(k, i)]['id'] if revisions is not None else 'git-'+base_commit,
               'value_hash': digest(state[(k, i)])} for k, i in sorted(linked)]
     run = {'schema_version': '1.0', 'id': ident, 'contract_id': 'maintenance-contract-v1',
            'base_commit': base_commit, 'baseline_revision_id': boundary,
@@ -258,6 +258,8 @@ def pass_errors(run, baseline, evidence_state=None, revisions=None):
         seen_carry.add(key)
         if key not in baseline or carry['value_hash'] != digest(baseline.get(key)):
             fail('carry-forward value differs from pinned baseline')
+        if run['baseline_revision_id'].startswith('git-') and carry['revision_id'] != run['baseline_revision_id']:
+            fail('carry-forward commit differs from baseline')
         if revisions is not None and (key not in latest or latest[key]['id'] != carry['revision_id']):
             fail('carry-forward revision is not the baseline entity revision')
     required_carry = {(k, i) for k, i in baseline if k in KINDS and model_dependencies(baseline, k, i) & targets}
@@ -387,9 +389,12 @@ def main():
     check.add_argument('--require-watch-complete', action='store_true')
     check.add_argument('--require-reconciled', action='store_true')
     args = parser.parse_args()
-    revisions = history(ROOT)
+    from tools.git_baselines import receipt_states
+    revisions = None
     state = {key: value for key, (_, value) in canonical(ROOT).items()}
     if args.command == 'scaffold':
+        if integrity_errors(ROOT):
+            raise ValueError('Capture current checksums before scaffolding')
         if subprocess.check_output(['git', 'status', '--porcelain'], cwd=ROOT, encoding='utf-8').strip():
             raise ValueError('Commit reviewed baseline before scaffolding; worktree must be clean')
         assignment = read(args.assignment)
@@ -405,11 +410,7 @@ def main():
             yaml.safe_dump(run, output, sort_keys=False, allow_unicode=True)
     else:
         run = read(args.path)
-        baseline = baseline_state(revisions, run['baseline_revision_id'])
-        # Published receipts validate against their own captured evidence, not later mutations.
-        captured = [r for r in revisions if r['entity_type'] == 'maintenance_pass' and
-                    r['entity_id'] == run['id'] and r['value'] == run]
-        evidence_state = baseline_state(revisions, captured[-1]['id']) if captured else state
+        baseline, evidence_state, revisions = receipt_states(run, 'maintenance_pass', state)
         errors, report = validated_report(run, baseline, evidence_state, revisions)
         if errors:
             print('\n'.join(errors))

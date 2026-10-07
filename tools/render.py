@@ -66,7 +66,7 @@ for name,rows in [('models',models),('providers',providers)]:
   path='../'+d['readme'];lines.append('| ['+esc(d['name'])+']('+path+') | '+(' | '.join(esc(d[k]) for k in ['creator','status','local']) if name=='models' else esc(d['roles']))+' |')
  wr(R/f'data/{name}.md','\n'.join(lines)+'\n')
 counts={'models':len(models),'providers_and_access_products':len(providers),'capability_judgments':len(caps),'performance_judgments':sum(len(rd(p)['performance_characteristics']) for p in R.glob('models/*/*/profile.yaml')),'price_records':len(rd(R/'data/pricing.yaml')['records']),'access_routes':len(rd(R/'data/access.yaml')['records']),'public_sources':len(S),'evidence_observations':len(O)}
-inventory_date=max(r['observed_at'] for r in rd(R/'history/revisions.yaml')['records'])
+inventory_date=rd(R/'data/record-integrity.yaml')['observed_at']
 dump(R/'data/coverage.yaml',{'schema_version':'1.0','generated':True,'as_of':inventory_date,'counts':counts})
 coverage=R/'research/coverage.md';t=coverage.read_text();start=t.find('\n## Recorded inventory')
 if start<0:start=t.find('\n## Baseline inventory')
@@ -101,13 +101,13 @@ lines=['# Bounded research runs','','Generated from [canonical batch accounting]
 if not run_rows:lines+=['No bounded research run has been recorded. Earlier research has not been retroactively certified.','']
 for run in run_rows:
  report=completion(run)
- lines+=['## '+run['id'],'','Targets: '+', '.join(run['target_model_ids']),'','Accounting complete: '+str(report['complete'])+'; pending: '+str(report['pending'])+'; blocked: '+str(report['blocked'])+'; investigated unknown: '+str(report['investigated_unknown']),'','Baseline commit: '+run['base_commit']+'; exact journal boundary: '+run['baseline_revision_id'],'']
+ lines+=['## '+run['id'],'','Targets: '+', '.join(run['target_model_ids']),'','Accounting complete: '+str(report['complete'])+'; pending: '+str(report['pending'])+'; blocked: '+str(report['blocked'])+'; investigated unknown: '+str(report['investigated_unknown']),'','Baseline commit: '+run['base_commit']+'; baseline reference: '+run['baseline_revision_id'],'']
 wr(R/'data/research-runs.md','\n'.join(lines)+'\n')
 
 from tools.maintenance import completion as maintenance_completion
 lines=['# Scoped maintenance passes','','Generated from [canonical receipts](maintenance-passes.yaml). [Completion and freshness rules](../docs/scoped-maintenance.md).','','Watch completion is source-scoped; reconciliation is separate from full model assessment.','']
 for run in rd(R/'data/maintenance-passes.yaml')['records']:
  report=maintenance_completion(run)
- lines+=['## '+run['id'],'','Mode: '+run['observation_mode']+'; slice: '+run['slice'],'','Targets: '+', '.join(run['target_model_ids']),'','Watch complete: '+str(report['watch_complete'])+'; reconciliation complete: '+str(report['reconciliation_complete'])+'; pending checks: '+str(report['pending_watch_checks'])+'; blocked checks: '+str(report['blocked_checks'])+'; unresolved candidates: '+str(report['unresolved_candidates']),'','Research minutes: '+str(run['usage']['research_minutes'])+'; integration minutes: '+str(run['usage']['integration_minutes'])+'; review minutes: '+str(run['usage']['review_minutes']),'','Baseline commit: '+run['base_commit']+'; journal boundary: '+run['baseline_revision_id'],'']
+ lines+=['## '+run['id'],'','Mode: '+run['observation_mode']+'; slice: '+run['slice'],'','Targets: '+', '.join(run['target_model_ids']),'','Watch complete: '+str(report['watch_complete'])+'; reconciliation complete: '+str(report['reconciliation_complete'])+'; pending checks: '+str(report['pending_watch_checks'])+'; blocked checks: '+str(report['blocked_checks'])+'; unresolved candidates: '+str(report['unresolved_candidates']),'','Research minutes: '+str(run['usage']['research_minutes'])+'; integration minutes: '+str(run['usage']['integration_minutes'])+'; review minutes: '+str(run['usage']['review_minutes']),'','Baseline commit: '+run['base_commit']+'; baseline reference: '+run['baseline_revision_id'],'']
 if not rd(R/'data/maintenance-passes.yaml')['records']:lines+=['No maintenance pass recorded. Recurring maintenance remains paused.','']
 wr(R/'data/maintenance-passes.md','\n'.join(lines).rstrip()+'\n')

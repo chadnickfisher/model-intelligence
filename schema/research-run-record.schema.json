@@ -18,7 +18,7 @@
     },
     "baseline_revision_id": {
       "type": "string",
-      "pattern": "^revision-[a-f0-9]{20}$"
+      "pattern": "^(revision-[a-f0-9]{20}|git-[a-f0-9]{40})$"
     },
     "baseline_hash": {
       "type": "string",
@@ -612,6 +612,10 @@
         ],
         "additionalProperties": false
       }
+    },
+    "evidence_commit": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
     }
   },
   "required": [

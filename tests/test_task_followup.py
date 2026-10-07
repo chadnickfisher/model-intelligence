@@ -1,6 +1,7 @@
+from tools.git_baselines import legacy_revisions as history
 """Guard the research follow-up against identity transfer and invented history."""
 import json
-from tools.knowledge import ROOT, canonical, history
+from tools.knowledge import ROOT, canonical
 
 
 def followup():

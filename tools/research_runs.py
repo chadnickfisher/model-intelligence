@@ -9,7 +9,7 @@ import subprocess
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from tools.knowledge import ROOT, canonical, history, read
+from tools.knowledge import ROOT, canonical, read, integrity_errors
 
 
 def digest(value):
@@ -23,6 +23,9 @@ def state_hash(state):
 
 def baseline_state(revisions, revision_id):
     """Replay through an exact journal entry, including multiple edits on one day."""
+    if revision_id.startswith('git-'):
+        from tools.git_baselines import git_state
+        return git_state(revision_id[4:])
     state = {}
     for revision in revisions:
         key = (revision['entity_type'], revision['entity_id'])
@@ -277,19 +280,19 @@ def main():
     extend.add_argument('path', type=Path)
     extend.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
-    revisions = history(ROOT)
+    from tools.git_baselines import receipt_states
     current = {key: record for key, (_, record) in canonical(ROOT).items()}
     from jsonschema import Draft202012Validator, FormatChecker
     schema = json.loads((ROOT / 'schema/research-run-record.schema.json').read_text())
     validator = Draft202012Validator(schema, format_checker=FormatChecker())
     if args.command == 'scaffold':
-        if baseline_state(revisions, revisions[-1]['id']) != current:
-            raise ValueError('Capture canonical changes before creating a run')
+        if integrity_errors(ROOT):
+            raise ValueError('Capture current checksums before creating a run')
         if subprocess.check_output(['git', 'status', '--porcelain'], cwd=ROOT, text=True).strip():
             raise ValueError('Commit the reviewed baseline before creating a run; Git worktree must be clean')
         commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
         contract = current[('research_contract', 'research-contract-v1')]
-        run = make_run(current, revisions[-1]['id'], commit, args.id, args.models,
+        run = make_run(current, 'git-'+commit, commit, args.id, args.models,
                        {'max_minutes_per_model': args.max_minutes_per_model,
                         'max_searches_per_model': args.max_searches_per_model,
                         'source_categories': contract['source_categories']}, date.today().isoformat())
@@ -302,7 +305,7 @@ def main():
     else:
         run = read(args.path)
         validator.validate(run)
-        baseline = baseline_state(revisions, run['baseline_revision_id'])
+        baseline, evidence_state, _ = receipt_states(run, 'research_run', current)
         if args.command == 'extend':
             contract = baseline[('research_contract', run['contract_id'])]
             keys = ['model_id', 'domain', 'entity_type', 'entity_id', 'path', 'baseline_value_hash']
@@ -320,7 +323,7 @@ def main():
                 yaml.safe_dump(run, output, sort_keys=False, allow_unicode=True)
             print(json.dumps(completion(run)))
             return 0
-        errors = run_errors(run, baseline, current)
+        errors = run_errors(run, baseline, evidence_state)
         if errors:
             print('\n'.join(errors))
             return 1

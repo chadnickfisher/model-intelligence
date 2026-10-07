@@ -1,3 +1,4 @@
+from tools.git_baselines import legacy_revisions as history
 from copy import deepcopy
 from pathlib import Path
 from hashlib import sha256
@@ -5,7 +6,7 @@ import shutil
 import subprocess
 import sys
 import pytest
-from tools.knowledge import ROOT, canonical, history, read, snapshot, scope_errors, capture, entity_history, capability_history, changes_between
+from tools.knowledge import ROOT, canonical, read, scope_errors, capture
 from tools.migrate_v2 import write_yaml
 
 
@@ -47,7 +48,8 @@ def test_index_retains_actual_claim_and_never_splits_bundle():
 
 def copied_repo(tmp_path):
     root = tmp_path / 'repo'
-    shutil.copytree(ROOT, root, ignore=shutil.ignore_patterns('.git', '__pycache__', '.pytest_cache'))
+    subprocess.run(['git','clone','--shared','--no-checkout',str(ROOT),str(root)],check=True,capture_output=True)
+    shutil.copytree(ROOT, root, dirs_exist_ok=True, ignore=shutil.ignore_patterns('.git', '__pycache__', '.pytest_cache'))
     return root
 
 
@@ -75,41 +77,6 @@ def test_no_autoregistration_and_reproducible_views():
     assert rendered.returncode==0, rendered.stdout+rendered.stderr
     assert digest() == before
     assert (ROOT / 'data/capability-taxonomy.yaml').read_bytes() == taxonomy
-
-
-def test_history_baseline_is_observation_not_backdated_availability():
-    assert snapshot('2026-10-06') == {}
-    assert snapshot('2026-10-07') == {k: v for k, (_, v) in canonical().items()}
-    assert all(r['observed_at'] == '2026-10-07' and r['effective_from'] is None for r in history())
-
-
-def test_history_preserves_price_and_claim_changes_and_tombstones(tmp_path):
-    root = copied_repo(tmp_path)
-    path = next(root.glob('models/*/*/profile.yaml'))
-    model = read(path); original = deepcopy(model)
-    model['capabilities'][0]['confidence'] = 'low'
-    model['capabilities'][0]['known_failure_modes'].append('Synthetic test observation')
-    write_yaml(path, model)
-    prices = read(root / 'data/pricing.yaml')
-    prices['records'][0]['rates'][0]['amount'] = None
-    write_yaml(root / 'data/pricing.yaml', prices)
-    changed = capture(root, '2026-10-08', 'Synthetic test change', ['src-67b4ce9b4e6a'])
-    assert {r['entity_type'] for r in changed} == {'model', 'price'}
-    journal = history(root)
-    assert snapshot('2026-10-07', journal)[('model', model['id'])] == original
-    assert snapshot('2026-10-08', journal)[('model', model['id'])] == model
-    versions=entity_history('model', model['id'], journal)
-    assert versions[-1]['previous_revision_id'] == versions[-2]['id']
-    assert capability_history(model['id'], model['capabilities'][0]['id'], journal)[-1]['value'][0]['confidence'] == 'low'
-    assert changes_between('2026-10-07', '2026-10-08', journal) == changed
-    assert capture(root, '2026-10-08', 'No change', ['src-67b4ce9b4e6a']) == []
-    path.unlink()
-    removal = capture(root, '2026-10-09', 'Synthetic removal', ['src-67b4ce9b4e6a'])
-    assert removal[0]['operation'] == 'remove'
-    assert ('model', model['id']) not in snapshot('2026-10-09', history(root))
-    assert ('model', model['id']) in snapshot('2026-10-08', history(root))
-    with pytest.raises(ValueError):
-        capture(root, '2026-10-06', 'Backdate', ['src-67b4ce9b4e6a'])
 
 
 def test_full_validation():

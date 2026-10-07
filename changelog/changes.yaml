@@ -1,0 +1,132 @@
+schema_version: '1.0'
+records:
+- id: change-initial-foundation
+  observed_at: '2026-10-07'
+  summary: Established evidence-backed current records, task boundaries and bounded research validation. Earlier
+    implementation detail is retained in Git.
+  evidence_ids: []
+  changed_entities: []
+- id: change-maintenance-pilot
+  observed_at: '2026-10-07'
+  summary: Ran the manual maintenance rehearsal; corrected Veo sibling offer membership, verified exact Embed
+    Fast Azure billing and added a qualified Veo behavior report.
+  evidence_ids:
+  - src-11f146f5e385
+  - src-3c610c36550c
+  changed_entities: []
+- id: change-haiku-5-5-load
+  observed_at: '2026-10-07'
+  summary: 'Added the complete bounded Haiku 5.5 initial load: exact identity, conditional offers, narrow task
+    judgments and explicit unknowns.'
+  evidence_ids:
+  - src-d69b0e2a2d12
+  changed_entities: []
+- observed_at: '2026-10-07'
+  summary: Replace full-record historical storage and Explorer revision browser with current checksums, concise
+    changes and pinned Git research baselines
+  evidence_ids:
+  - src-d69b0e2a2d12
+  changed_entities:
+  - entity_type: maintenance_pass
+    entity_id: maintenance-pass-compressed-2026-10-07-day-2-behavior
+    canonical_path: data/maintenance-passes.yaml
+    operation: update
+  - entity_type: maintenance_pass
+    entity_id: maintenance-pass-compressed-2026-10-07-day-2-discovery-replay
+    canonical_path: data/maintenance-passes.yaml
+    operation: update
+  - entity_type: maintenance_pass
+    entity_id: maintenance-pass-compressed-2026-10-07-day-3-discovery-replay
+    canonical_path: data/maintenance-passes.yaml
+    operation: update
+  - entity_type: maintenance_pass
+    entity_id: maintenance-pass-compressed-2026-10-07-day-3-unknowns
+    canonical_path: data/maintenance-passes.yaml
+    operation: update
+  - entity_type: maintenance_pass
+    entity_id: maintenance-pass-compressed-2026-10-07-day-4-discovery-replay
+    canonical_path: data/maintenance-passes.yaml
+    operation: update
+  - entity_type: maintenance_pass
+    entity_id: maintenance-pass-compressed-2026-10-07-day-5-discovery-replay
+    canonical_path: data/maintenance-passes.yaml
+    operation: update
+  - entity_type: maintenance_pass
+    entity_id: maintenance-pass-compressed-2026-10-07-day-6-capabilities
+    canonical_path: data/maintenance-passes.yaml
+    operation: update
+  - entity_type: maintenance_pass
+    entity_id: maintenance-pass-compressed-2026-10-07-day-6-discovery-replay
+    canonical_path: data/maintenance-passes.yaml
+    operation: update
+  - entity_type: maintenance_pass
+    entity_id: maintenance-pass-compressed-2026-10-07-day-7-benchmarks
+    canonical_path: data/maintenance-passes.yaml
+    operation: update
+  - entity_type: maintenance_pass
+    entity_id: maintenance-pass-compressed-2026-10-07-day-7-discovery-replay
+    canonical_path: data/maintenance-passes.yaml
+    operation: update
+  - entity_type: maintenance_pass
+    entity_id: maintenance-pass-pilot-2026-10-07-access
+    canonical_path: data/maintenance-passes.yaml
+    operation: update
+  - entity_type: maintenance_pass
+    entity_id: maintenance-pass-pilot-2026-10-07-discovery
+    canonical_path: data/maintenance-passes.yaml
+    operation: update
+  - entity_type: maintenance_pass
+    entity_id: maintenance-pass-reserve-2026-10-07-azure-fast
+    canonical_path: data/maintenance-passes.yaml
+    operation: update
+  - entity_type: maintenance_pass
+    entity_id: maintenance-pass-reserve-2026-10-07-veo-price-identity
+    canonical_path: data/maintenance-passes.yaml
+    operation: update
+  - entity_type: price
+    entity_id: price-033812acbb533c13
+    canonical_path: data/pricing.yaml
+    operation: update
+  - entity_type: price
+    entity_id: price-729ac6158cd411fd
+    canonical_path: data/pricing.yaml
+    operation: update
+  - entity_type: price
+    entity_id: price-851b345d1ce20f50
+    canonical_path: data/pricing.yaml
+    operation: update
+  - entity_type: price
+    entity_id: price-ff990a87ae69bd0a
+    canonical_path: data/pricing.yaml
+    operation: update
+  - entity_type: research_run
+    entity_id: research-run-haiku-5-5-2026-10-07
+    canonical_path: data/research-runs.yaml
+    operation: update
+  - entity_type: research_run
+    entity_id: research-run-pilot-2026-10-07-v1-1
+    canonical_path: data/research-runs.yaml
+    operation: update
+  id: change-f644ad2c9e79a587
+- observed_at: '2026-10-07'
+  summary: Normalize Haiku 5.5 whole-offer prompt thresholds for the conservative cost calculator
+  evidence_ids:
+  - src-50846cd1ff36
+  changed_entities:
+  - entity_type: price
+    entity_id: price-033812acbb533c13
+    canonical_path: data/pricing.yaml
+    operation: update
+  - entity_type: price
+    entity_id: price-729ac6158cd411fd
+    canonical_path: data/pricing.yaml
+    operation: update
+  - entity_type: price
+    entity_id: price-851b345d1ce20f50
+    canonical_path: data/pricing.yaml
+    operation: update
+  - entity_type: price
+    entity_id: price-ff990a87ae69bd0a
+    canonical_path: data/pricing.yaml
+    operation: update
+  id: change-07913f7fd77abfef

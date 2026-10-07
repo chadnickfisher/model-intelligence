@@ -8,7 +8,7 @@ A vendor-neutral, evidence-backed guide to AI models, their access routes, costs
 
 This is a public-evidence knowledge base, not a universal leaderboard. It does not run paid inference or coding-agent benchmarks. A model can be useful for one workload and unsuitable for another; provider, effort, harness, quantization, context size, and price tier can change the conclusion.
 
-Initial snapshot: **53 model profiles**, **39 provider/client/access-product profiles**, **122 pricing records**, **140 access routes**, and **225 public sources**, checked on **2026-10-06**. Counts indicate coverage, not completeness or equal evidence strength.
+Current counts are in the [generated inventory](data/coverage.yaml). Counts indicate coverage, not completeness or equal evidence strength; each fact retains its own inspection date.
 
 ## Start here
 
@@ -20,7 +20,7 @@ Initial snapshot: **53 model profiles**, **39 provider/client/access-product pro
 - [Releases](data/releases.yaml) and [change history](changelog/2026-10.md)
 - [Methodology](methodology.md), [coverage gaps](research/coverage.md), and [maintenance plan](MAINTENANCE.md)
 - For agents: [AGENTS.md](AGENTS.md) and [repo-map.yaml](repo-map.yaml)
-- [Explicit observation history](history/README.md): preserved values and evidence; no invented earlier state
+- [Current state and concise changes](history/README.md): source-backed records, changelog and reproducible Git baselines
 - [Bounded research contract](docs/bounded-research.md) and [batch completion accounting](data/research-runs.md)
 
 ## What is canonical?
@@ -45,7 +45,7 @@ Run `python tools/validate.py` to check schemas, IDs, references, and dated evid
 
 [GitHub Actions CI](.github/workflows/ci.yml) runs on every push and pull request
 with Python 3.12 on an Ubuntu runner. It installs the runtime and development
-requirements, validates canonical records and history, regenerates derived
+requirements, validates canonical records and current checksums, regenerates derived
 outputs, runs tests, and requires `git diff --exit-code` to pass. Unexpected
 untracked files also fail the job. Commit regenerated outputs with the canonical
 changes that caused them. CI uses read-only repository permissions and needs no
@@ -146,9 +146,9 @@ Original data and documentation use **CC BY 4.0**; original software uses **MIT*
 
 Research maintenance is **PAUSED as of 2026-10-06**. No daily research is scheduled or promised. The manually supplied October 7 research update retains actual source inspection dates; carry-forward facts retain their earlier verification dates. Repository observation dates do not imply fresh fact verification.
 
-The migration preserves 64 original capability records: 19 direct mappings, 34 compound bundles, 5 unresolved scope reviews and 6 relocated performance/deployment observations. Seven existing performance observations are also preserved. The first October 7 package added 84 bounded direct judgments; the follow-up added 26, bringing the current total to 168 capability claims and 13 performance observations. Confidence measures evidence support, not ability. A compound claim is never split into per-task endorsements; related tasks are navigation only. Warnings and missing evidence remain visible.
+Stable judgments retain their original evidence and provenance. Confidence measures evidence support, not ability. A compound claim is never split into per-task endorsements; related tasks are navigation only. Warnings and missing evidence remain visible.
 
-The first update included 53 access audits, 176 new route observations, 68 structured benchmark measurements and 86 post-launch behavior records. The follow-up added 38 benchmark records and completed the 52 pending capability/benchmark domain checks. All 53 models now have checks in all four domains, with investigated unknowns retained. Three identity-gated capability candidates remain archived without direct enrollment. Conditional tariffs and non-token units are preserved as route details when estimation is unsupported. See the [initial integration report](research/2026-10-07-integration.md), [follow-up report](research/task-followup-2026-10-07.md), and [generated current inventory](data/coverage.yaml).
+See the [current research ledger](data/research-coverage.yaml), [bounded-run accounting](data/research-runs.md) and [concise changelog](changelog/2026-10.md) for coverage, completion and material changes. The [Haiku 5.5 initial load](research/haiku-5-5-load-2026-10-07.md) completes the one-new-model pilot path. Investigated unknowns remain explicit. Conditional tariffs and non-token units are preserved as route details when estimation is unsupported.
 
 The 37-task rubric now defines inclusion, exclusion, examples and neighboring tasks, distinguishing corpus retrieval/ranking from supplied-context recovery and generated RAG answers. A separate versioned batch checklist tracks factual fields, applicability decisions and source categories against a frozen baseline. Earlier domain checks are not retroactively certified as field-complete research. Observation summaries preserve full canonical claims and qualifications. These local correctness and workflow changes do not activate recurring maintenance.
 

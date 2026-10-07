@@ -10,7 +10,8 @@ canonical:
   contradictions: evidence/contradictions.yaml
   task_registry: data/capability-taxonomy.yaml
   aliases: data/aliases.yaml
-  observation_history: history/revisions.yaml
+  current_record_integrity: data/record-integrity.yaml
+  change_summaries: changelog/changes.yaml
   migration_originals: history/migrations/2026-10-07-capabilities.yaml
   behavior_findings: data/behavior.yaml
   access_research_coverage: data/access-coverage.yaml

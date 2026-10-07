@@ -11,11 +11,10 @@ contradictions, failure modes and provenance. `task_ids` denotes direct scope;
 bundle for a related task must clearly retain its scope; never manufacture an
 individual conclusion. Performance observations are not task endorsements.
 
-Local history functions in `tools.knowledge` provide model/price entity history,
-capability history, `snapshot(date)` (ecosystem knowledge observed by that date),
-and `changes_between(start, end)`. See [history semantics](../history/README.md).
-No values are reconstructed before the October 7 observation baseline. Preserve
-documented effective dates within each value separately from observation dates.
+Historical entity, capability and date-snapshot query APIs are outside scope.
+Recent changes return concise summaries from the changelog. Git retains previous
+versions; current records retain their original source, inspection and effective
+dates. See [current state and changes](../history/README.md).
 
 Price-threshold queries must require a billing unit and route. Never compare $/month to $/million tokens. A request for local models must distinguish downloadable weights, license compatibility, required precision/memory/context, and runtime compatibility. Capability queries return evidence-backed judgments, not invented scalar ranks. Unknown is a first-class result, not a negative match.
 
@@ -31,7 +30,7 @@ included credits and subscription API entitlement remain separate facts.
 version, provider/product, harness/effort, metric, source, confidence and lifecycle.
 Reported, acknowledged and measured changes are distinct; a published fix does
 not establish measured recovery. TTFT, generation throughput and total agent time
-are separate metrics. These records participate in snapshots and revision history.
+are separate metrics. Relevant dated findings remain in current records; Git preserves previous versions.
 
 New capability judgments use research provenance (`origin: research`, batch ID
 and method). The migration provenance variant remains reserved for preserved
@@ -47,4 +46,4 @@ do not permit universal scoring or aggregation of quality and preference results
 benchmarks, access/pricing and behavior. Return actual check dates, result,
 source/search references and remaining gaps. Pending checks have null dates;
 source absence is unknown. Accounting validation does not certify research quality.
-Both record types participate in observation history and snapshots.
+Both record types retain evidence and dates; previous versions are retained by Git.

@@ -1,4 +1,4 @@
-"""Compatibility command for compact change capture; no full-value history."""
+"""Capture current checksums and concise changes before rendering/validation."""
 import argparse
 import sys
 from pathlib import Path

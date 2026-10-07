@@ -5907,44 +5907,37 @@ records:
     amount: 0.1
     currency: USD
     unit: per 1 million tokens
-    conditions:
-    - Prompt <=100,000 tokens
+    conditions: []
   - metric: output
     amount: 0.5
     currency: USD
     unit: per 1 million tokens
-    conditions:
-    - Prompt <=100,000 tokens
+    conditions: []
   - metric: cached_input
     amount: 0.01
     currency: USD
     unit: per 1 million tokens
-    conditions:
-    - Prompt <=100,000 tokens
+    conditions: []
   - metric: cache_write_5m
     amount: 0.125
     currency: USD
     unit: per 1 million tokens
-    conditions:
-    - Prompt <=100,000 tokens
+    conditions: []
   - metric: cache_write_1h
     amount: 0.2
     currency: USD
     unit: per 1 million tokens
-    conditions:
-    - Prompt <=100,000 tokens
+    conditions: []
   included_usage: []
   overage: []
   reset_cadence: null
   conditions:
   - Prompt <=100,000 tokens
-  - Batch discounts apply only to input/output; server-side tools can add charges.
   effective_from: '2026-10-07'
   effective_to: null
   evidence_ids:
   - src-50846cd1ff36
-  notes:
-  - Exact first-party API tariff; no subscription or partner billing equivalence.
+  notes: []
 - schema_version: '1.0'
   id: price-033812acbb533c13
   verified_at: '2026-10-07'
@@ -5961,44 +5954,37 @@ records:
     amount: 0.5
     currency: USD
     unit: per 1 million tokens
-    conditions:
-    - Prompt >100,000 tokens
+    conditions: []
   - metric: output
     amount: 2.5
     currency: USD
     unit: per 1 million tokens
-    conditions:
-    - Prompt >100,000 tokens
+    conditions: []
   - metric: cached_input
     amount: 0.05
     currency: USD
     unit: per 1 million tokens
-    conditions:
-    - Prompt >100,000 tokens
+    conditions: []
   - metric: cache_write_5m
     amount: 0.625
     currency: USD
     unit: per 1 million tokens
-    conditions:
-    - Prompt >100,000 tokens
+    conditions: []
   - metric: cache_write_1h
     amount: 1
     currency: USD
     unit: per 1 million tokens
-    conditions:
-    - Prompt >100,000 tokens
+    conditions: []
   included_usage: []
   overage: []
   reset_cadence: null
   conditions:
   - Prompt >100,000 tokens
-  - Batch discounts apply only to input/output; server-side tools can add charges.
   effective_from: '2026-10-07'
   effective_to: null
   evidence_ids:
   - src-50846cd1ff36
-  notes:
-  - Exact first-party API tariff; no subscription or partner billing equivalence.
+  notes: []
 - schema_version: '1.0'
   id: price-851b345d1ce20f50
   verified_at: '2026-10-07'
@@ -6015,26 +6001,22 @@ records:
     amount: 0.05
     currency: USD
     unit: per 1 million tokens
-    conditions:
-    - Prompt <=100,000 tokens
+    conditions: []
   - metric: output
     amount: 0.25
     currency: USD
     unit: per 1 million tokens
-    conditions:
-    - Prompt <=100,000 tokens
+    conditions: []
   included_usage: []
   overage: []
   reset_cadence: null
   conditions:
   - Prompt <=100,000 tokens
-  - Batch discounts apply only to input/output; server-side tools can add charges.
   effective_from: '2026-10-07'
   effective_to: null
   evidence_ids:
   - src-50846cd1ff36
-  notes:
-  - Exact first-party API tariff; no subscription or partner billing equivalence.
+  notes: []
 - schema_version: '1.0'
   id: price-ff990a87ae69bd0a
   verified_at: '2026-10-07'
@@ -6051,23 +6033,19 @@ records:
     amount: 0.25
     currency: USD
     unit: per 1 million tokens
-    conditions:
-    - Prompt >100,000 tokens
+    conditions: []
   - metric: output
     amount: 1.25
     currency: USD
     unit: per 1 million tokens
-    conditions:
-    - Prompt >100,000 tokens
+    conditions: []
   included_usage: []
   overage: []
   reset_cadence: null
   conditions:
   - Prompt >100,000 tokens
-  - Batch discounts apply only to input/output; server-side tools can add charges.
   effective_from: '2026-10-07'
   effective_to: null
   evidence_ids:
   - src-50846cd1ff36
-  notes:
-  - Exact first-party API tariff; no subscription or partner billing equivalence.
+  notes: []
