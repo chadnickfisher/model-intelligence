@@ -28,10 +28,9 @@ examples and neighboring tasks. A task boundary is not a model exclusion: exclud
 a model only with positive mismatch evidence. Applicable tasks need a bounded
 assessment; investigated uncertainty remains explicit.
 
-New batches use the [bounded contract](docs/bounded-research.md) and separate
-local bounded-run accounting. Completion is derived from required
-field checks, task decisions and source-category checks against a pinned baseline.
-Earlier four-domain coverage does not establish completion under this contract.
+Coverage accounting records what was investigated and what remains unknown.
+Accounting completion cannot establish that research was adequate or that a
+conclusion is correct. Assess each claim against its cited evidence.
 
 State a concrete task and a bounded conclusion. Include sources, important conditions, observed or credibly reported failure modes, and contradictory evidence. Distinguish observations from inference and recommendations. Example: strong scoped-edit performance in a tool-enabled benchmark does not establish reliable architecture decisions or multi-hour autonomous stability.
 
