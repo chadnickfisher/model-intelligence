@@ -103,3 +103,11 @@ for run in run_rows:
  report=completion(run)
  lines+=['## '+run['id'],'','Targets: '+', '.join(run['target_model_ids']),'','Accounting complete: '+str(report['complete'])+'; pending: '+str(report['pending'])+'; blocked: '+str(report['blocked'])+'; investigated unknown: '+str(report['investigated_unknown']),'','Baseline commit: '+run['base_commit']+'; exact journal boundary: '+run['baseline_revision_id'],'']
 wr(R/'data/research-runs.md','\n'.join(lines)+'\n')
+
+from tools.maintenance import completion as maintenance_completion
+lines=['# Scoped maintenance passes','','Generated from [canonical receipts](maintenance-passes.yaml). [Completion and freshness rules](../docs/scoped-maintenance.md).','','Watch completion is source-scoped; reconciliation is separate from full model assessment.','']
+for run in rd(R/'data/maintenance-passes.yaml')['records']:
+ report=maintenance_completion(run)
+ lines+=['## '+run['id'],'','Mode: '+run['observation_mode']+'; slice: '+run['slice'],'','Targets: '+', '.join(run['target_model_ids']),'','Watch complete: '+str(report['watch_complete'])+'; reconciliation complete: '+str(report['reconciliation_complete'])+'; pending checks: '+str(report['pending_watch_checks'])+'; blocked checks: '+str(report['blocked_checks'])+'; unresolved candidates: '+str(report['unresolved_candidates']),'','Research minutes: '+str(run['usage']['research_minutes'])+'; integration minutes: '+str(run['usage']['integration_minutes'])+'; review minutes: '+str(run['usage']['review_minutes']),'','Baseline commit: '+run['base_commit']+'; journal boundary: '+run['baseline_revision_id'],'']
+if not rd(R/'data/maintenance-passes.yaml')['records']:lines+=['No maintenance pass recorded. Recurring maintenance remains paused.','']
+wr(R/'data/maintenance-passes.md','\n'.join(lines).rstrip()+'\n')

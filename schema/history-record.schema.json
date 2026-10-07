@@ -35,7 +35,9 @@
         "benchmark",
         "research_coverage",
         "research_contract",
-        "research_run"
+        "research_run",
+        "maintenance_contract",
+        "maintenance_pass"
       ]
     },
     "entity_id": {

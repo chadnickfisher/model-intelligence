@@ -18,6 +18,8 @@ canonical:
   research_coverage: data/research-coverage.yaml
   research_contract: data/research-contract.yaml
   research_runs: data/research-runs.yaml
+  maintenance_contract: data/maintenance-contract.yaml
+  maintenance_passes: data/maintenance-passes.yaml
 indexes:
   models: data/models.yaml
   providers: data/providers.yaml
@@ -39,3 +41,4 @@ query_start:
   benchmark_comparison: data/benchmarks.yaml
   research_accounting: data/research-coverage.yaml
   bounded_research: docs/bounded-research.md
+  scoped_maintenance: docs/scoped-maintenance.md

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "const": "maintenance-contract-v1"
+    },
+    "version": {
+      "const": "1.0"
+    },
+    "rubric_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "domains": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "capabilities",
+          "benchmarks",
+          "access_pricing",
+          "behavior"
+        ]
+      },
+      "minItems": 4,
+      "uniqueItems": true
+    },
+    "completion_rules": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "id",
+    "version",
+    "rubric_version",
+    "domains",
+    "completion_rules"
+  ],
+  "additionalProperties": false
+}

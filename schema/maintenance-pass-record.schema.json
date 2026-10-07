@@ -1,0 +1,780 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^maintenance-pass-[a-z0-9-]+$"
+    },
+    "contract_id": {
+      "const": "maintenance-contract-v1"
+    },
+    "base_commit": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "baseline_revision_id": {
+      "type": "string",
+      "pattern": "^revision-[a-f0-9]{20}$"
+    },
+    "baseline_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "catalog_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "rubric_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "observation_mode": {
+      "enum": [
+        "live",
+        "historical_replay"
+      ]
+    },
+    "slice": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target_model_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "bounds": {
+      "type": "object",
+      "properties": {
+        "max_research_minutes": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "max_searches": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "max_research_minutes",
+        "max_searches"
+      ],
+      "additionalProperties": false
+    },
+    "usage": {
+      "type": "object",
+      "properties": {
+        "research_minutes": {
+          "type": "number",
+          "minimum": 0
+        },
+        "integration_minutes": {
+          "type": "number",
+          "minimum": 0
+        },
+        "review_minutes": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "research_minutes",
+        "integration_minutes",
+        "review_minutes"
+      ],
+      "additionalProperties": false
+    },
+    "carry_forward": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "entity_type": {
+            "enum": [
+              "model",
+              "provider",
+              "access",
+              "price",
+              "benchmark",
+              "behavior",
+              "release"
+            ]
+          },
+          "entity_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "revision_id": {
+            "type": "string",
+            "pattern": "^revision-[a-f0-9]{20}$"
+          },
+          "value_hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "entity_type",
+          "entity_id",
+          "revision_id",
+          "value_hash"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "watch_manifest": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "source_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scope": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "model_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "domain": {
+                  "enum": [
+                    "capabilities",
+                    "benchmarks",
+                    "access_pricing",
+                    "behavior"
+                  ]
+                },
+                "entity_type": {
+                  "enum": [
+                    "model",
+                    "provider",
+                    "access",
+                    "price",
+                    "benchmark",
+                    "behavior",
+                    "release"
+                  ]
+                },
+                "entity_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "path": {
+                  "type": "string",
+                  "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+                },
+                "product": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "task_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "minItems": 0,
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "model_id",
+                "domain",
+                "entity_type",
+                "entity_id",
+                "path",
+                "product",
+                "task_ids"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "id",
+          "source_id",
+          "scope"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "watch_manifest_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "watch_checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "source_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scope": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "model_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "domain": {
+                  "enum": [
+                    "capabilities",
+                    "benchmarks",
+                    "access_pricing",
+                    "behavior"
+                  ]
+                },
+                "entity_type": {
+                  "enum": [
+                    "model",
+                    "provider",
+                    "access",
+                    "price",
+                    "benchmark",
+                    "behavior",
+                    "release"
+                  ]
+                },
+                "entity_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "path": {
+                  "type": "string",
+                  "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+                },
+                "product": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "task_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "minItems": 0,
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "model_id",
+                "domain",
+                "entity_type",
+                "entity_id",
+                "path",
+                "product",
+                "task_ids"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "baseline_source_hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "result": {
+            "enum": [
+              "not_checked",
+              "checked",
+              "no_material_change",
+              "unknown",
+              "blocked"
+            ]
+          },
+          "checked_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "observation": {
+            "type": "string"
+          },
+          "observation_hash": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "upstream_revision": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "content_hash": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "remaining_gaps": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "blocked_reason": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "source_id",
+          "scope",
+          "url",
+          "baseline_source_hash",
+          "result",
+          "checked_at",
+          "observation",
+          "observation_hash",
+          "upstream_revision",
+          "content_hash",
+          "remaining_gaps",
+          "blocked_reason"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "searches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "query": {
+            "type": "string",
+            "minLength": 1
+          },
+          "checked_at": {
+            "type": "string",
+            "format": "date"
+          },
+          "outcome": {
+            "enum": [
+              "sources_found",
+              "no_matched_sources",
+              "blocked"
+            ]
+          },
+          "urls": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uri"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "model_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "domains": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "capabilities",
+                "benchmarks",
+                "access_pricing",
+                "behavior"
+              ]
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "notes": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "query",
+          "checked_at",
+          "outcome",
+          "urls",
+          "model_ids",
+          "domains",
+          "notes"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]+$"
+          },
+          "model_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "source_check_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "search_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 1
+          },
+          "disposition": {
+            "enum": [
+              "duplicate",
+              "irrelevant",
+              "identity_unresolved",
+              "no_material_change",
+              "verified_change",
+              "investigated_unknown",
+              "blocked",
+              "pending"
+            ]
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 1
+          },
+          "next_action": {
+            "type": "string",
+            "minLength": 1
+          },
+          "affected_fields": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "entity_type": {
+                  "enum": [
+                    "model",
+                    "provider",
+                    "access",
+                    "price",
+                    "benchmark",
+                    "behavior",
+                    "release"
+                  ]
+                },
+                "entity_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "path": {
+                  "type": "string",
+                  "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+                },
+                "baseline_value_hash": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "result": {
+                  "enum": [
+                    "not_checked",
+                    "verified",
+                    "unknown",
+                    "not_applicable",
+                    "blocked"
+                  ]
+                },
+                "checked_at": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date"
+                },
+                "check_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "minItems": 0,
+                  "uniqueItems": true
+                },
+                "rationale": {
+                  "type": "string"
+                },
+                "observed_value_hash": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "remaining_gaps": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "minItems": 0,
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "entity_type",
+                "entity_id",
+                "path",
+                "baseline_value_hash",
+                "result",
+                "checked_at",
+                "check_ids",
+                "rationale",
+                "observed_value_hash",
+                "remaining_gaps"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "model_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "result": {
+                  "enum": [
+                    "not_checked",
+                    "confirmed",
+                    "unknown",
+                    "blocked"
+                  ]
+                },
+                "checked_at": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date"
+                },
+                "check_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "minItems": 0,
+                  "uniqueItems": true
+                },
+                "rationale": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "model_id",
+                "result",
+                "checked_at",
+                "check_ids",
+                "rationale"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "id",
+          "model_ids",
+          "source_check_ids",
+          "search_ids",
+          "summary",
+          "disposition",
+          "rationale",
+          "next_action",
+          "affected_fields",
+          "dependencies"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "domain_accounting": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "model_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "domain": {
+            "enum": [
+              "capabilities",
+              "benchmarks",
+              "access_pricing",
+              "behavior"
+            ]
+          },
+          "result": {
+            "enum": [
+              "not_checked",
+              "scoped",
+              "blocked"
+            ]
+          },
+          "check_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "search_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "model_id",
+          "domain",
+          "result",
+          "check_ids",
+          "search_ids"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 4,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "contract_id",
+    "base_commit",
+    "baseline_revision_id",
+    "baseline_hash",
+    "catalog_hash",
+    "rubric_hash",
+    "created_at",
+    "observation_mode",
+    "slice",
+    "target_model_ids",
+    "bounds",
+    "usage",
+    "carry_forward",
+    "watch_manifest",
+    "watch_manifest_hash",
+    "watch_checks",
+    "searches",
+    "candidates",
+    "domain_accounting"
+  ],
+  "additionalProperties": false
+}

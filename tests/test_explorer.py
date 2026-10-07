@@ -95,6 +95,8 @@ def test_app_cost_and_recent_changes():
     assert not at.exception
     assert len(at.dataframe[-1].value) >= 730
     # Updates show their preceding value; a baseline has no invented predecessor.
+    update=next(r['id'] for r in reversed(history()) if r['previous_revision_id'] is not None)
+    widget(at.selectbox,'Inspect history revision').set_value(update).run()
     assert any('Prior value' in m.value for m in at.markdown)
     baseline=next(r['id'] for r in history() if r['previous_revision_id'] is None)
     widget(at.selectbox,'Inspect history revision').set_value(baseline).run()

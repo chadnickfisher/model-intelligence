@@ -1,0 +1,15 @@
+schema_version: '1.0'
+records:
+- id: maintenance-contract-v1
+  version: '1.0'
+  rubric_version: '1.1'
+  domains: [capabilities, benchmarks, access_pricing, behavior]
+  completion_rules:
+  - Watch completion covers only declared source and search checks.
+  - Reconciliation requires terminal dispositions and all required affected fields and dependencies investigated.
+  - Failed or pending declared checks cannot complete a watch pass.
+  - Investigated unknowns remain unknown; they never establish absence or inability.
+  - Carry-forward references preserve original factual dates and are not inspections.
+  - Shared provider checks retain exact product scope and affected model dependencies.
+  - Scoped field freshness is separate from whole-profile and full-domain verification.
+  - Full model and new-model assessments retain the separate research-contract-v1.

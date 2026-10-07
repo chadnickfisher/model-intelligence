@@ -30,6 +30,12 @@ def canonical(root=ROOT):
         result[('task', record['id'])] = ('data/capability-taxonomy.yaml', record)
     for record in read(root / 'data/aliases.yaml')['records']:
         result[('alias', record['id'])] = ('data/aliases.yaml', record)
+    # Optional for older retained fixtures/snapshots; present in the current repository.
+    for kind, name in [('maintenance_contract', 'data/maintenance-contract.yaml'),
+                       ('maintenance_pass', 'data/maintenance-passes.yaml')]:
+        if (root / name).exists():
+            for record in read(root / name)['records']:
+                result[(kind, record['id'])] = (name, record)
     return result
 
 def judgment_index(model, profile):
@@ -142,7 +148,7 @@ def capture(root, observed_at, reason, evidence_ids, effective_from=None):
     changes = []
     # Runs freeze their supporting state at their own revision; capture all
     # factual/source/task changes first, even when they share an observation date.
-    for key in sorted(set(current) | set(latest), key=lambda key: (key[0] == 'research_run', key)):
+    for key in sorted(set(current) | set(latest), key=lambda key: (key[0] in {'research_run', 'maintenance_pass'}, key)):
         kind, ident = key
         previous = latest.get(key)
         profile, value = current.get(key, (previous['canonical_path'] if previous else '', None))
