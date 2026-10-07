@@ -1,6 +1,6 @@
 # Reuse and license scope
 
-Copyright (c) 2026 Chad Nick Fisher and Model Intelligence contributors.
+Copyright (c) 2026 Model Intelligence contributors.
 
 Original dataset curation, prose, YAML records, schemas, research notes, history,
 and generated documentation are licensed under **Creative Commons Attribution
@@ -20,7 +20,7 @@ Dependencies retain their own licenses. The official license texts retain their
 own notices. No endorsement by model creators, publishers or this project is
 implied. See [NOTICE.md](NOTICE.md) for attribution and exclusions.
 
-Recommended attribution: “Model Intelligence, Chad Nick Fisher and contributors,
+Recommended attribution: “Model Intelligence contributors,
 https://github.com/chadnickfisher/model-intelligence, CC BY 4.0.” Retain source
 provenance, link the license, identify the snapshot/commit used, and state changes
 when redistributing modified data or documentation. MIT code copies must retain

@@ -1,6 +1,6 @@
 # Attribution and third-party notices
 
-Model Intelligence — Chad Nick Fisher and contributors, 2026.
+Model Intelligence contributors, 2026.
 Project: https://github.com/chadnickfisher/model-intelligence
 Original dataset and documentation: CC BY 4.0. Original software: MIT.
 See [LICENSE.md](LICENSE.md) for scope and the full texts under `LICENSES/`.
