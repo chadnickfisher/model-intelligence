@@ -67,7 +67,7 @@ python -m streamlit run streamlit_app.py --browser.gatherUsageStats false
 The explorer reads the same canonical YAML, with no database, copied app dataset,
 credentials, model endpoints or inference charges. It provides Model Explorer,
 Compare 2-5 Models, Capability Explorer, Cost Explorer, and Recent Changes. The
-Field Guide uses task-first search, readable cards, aligned comparisons, evidence
+Field Guide uses task-first search, readable cards, visual comparisons, evidence
 expanders and coverage counts. Confidence belongs to individual findings, not a
 model score. Missing access research is “not yet documented,” never a false
 unavailability claim. Source and canonical GitHub links accompany the records.
@@ -79,7 +79,14 @@ limits remain unknown. Access and price lists use bullets and distinct labels.
 Observation summaries preserve complete sentences and limiting statements, with
 full text and evidence in expanders; a published fix does not imply measured recovery.
 
-Recorded benchmark highlights appear on cards and in aligned comparison rows.
+The comparison grid shows task fit, evidence confidence, documented access and
+provider-qualified costs for a shared text workload. Without a selected task,
+counts include only explicit High/Medium task judgments; clicking a count reveals
+those tasks and separate Low/Disputed findings. Confidence counts refer to the
+included tasks, not a model-wide rating. Missing or incompatible prices remain
+unestimated; API offer selection preserves billing conditions and exact routes.
+
+Recorded benchmark highlights appear on cards and in expandable comparison details.
 Details retain metric/unit/direction, exact checkpoint, harness/effort/tools/provider,
 dates, sources and limitations. Independent quality tests, preference rankings and
 vendor claims remain distinct. Incompatible or incomplete setups are labeled;

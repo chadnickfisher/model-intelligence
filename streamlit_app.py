@@ -1,12 +1,14 @@
 """Read-only Field Guide. Every fact comes from canonical YAML; no model calls."""
 from datetime import date, datetime, time, timezone
 from decimal import Decimal
+from html import escape
 import streamlit as st
 from explorer.data import (load, show, link, summary, filter_models, claims, sources, UNKNOWN,
     model_routes, route_kinds, route_label, route_status, billing_summary, route_prices,
     task_label, judgment_label, task_coverage, behavior_findings, current_price, comparable_api_offers,
     benchmark_findings, benchmark_compatibility, confidence_trace)
 from explorer.cost import estimate_runs, routes_for_price, UNITS
+from explorer.comparison import comparison_assessments, comparison_offers, usd_text
 from tools.knowledge import ROOT, read
 from explorer.presentation import (task_card_evidence, card_watchouts, access_bullets,
                                    complete_summary, observation_summary, readable_conditions, task_assessment,
@@ -22,8 +24,27 @@ st.markdown('''<style>
 [data-testid="stCaptionContainer"], [data-testid="stCaptionContainer"] p {color:#365744;font-size:0.95rem;opacity:1;}
 [data-testid="stExpander"] summary {color:#24533F;font-weight:600;}
 h1,h2,h3 {color:#24533F;}
+.compare-fit {display:inline-block;padding:5px 9px;border-radius:6px;font-weight:600;background:#E8EDE5;color:#20372C;}
+.compare-fit-high {background:#D9E8DC;color:#24533F;}
+.compare-fit-medium {background:#F1E7CF;color:#805710;}
+.compare-fit-low {background:#F2DFDA;color:#843C2D;}
+.compare-fit-disputed {background:#EEE6F1;color:#654A7A;}
+.compare-access {display:grid;grid-template-columns:repeat(3,1fr);gap:6px;text-align:center;}
+.compare-access small {display:block;color:#365744;}
+.compare-cost-track {height:9px;background:#E8EDE5;border-radius:3px;overflow:hidden;margin:8px 0;}
+.compare-cost-fill {height:100%;background:#24533F;}
+.compare-confidence {display:flex;gap:4px;margin-top:6px;}
+.compare-confidence span {width:18px;height:5px;border-radius:2px;background:#E8EDE5;}
+.compare-confidence .filled {background:#24533F;}
+.compare-mobile-label {display:none;}
+[class*="st-key-comparison-row-"] {border-bottom:1px solid #D2DBD2;padding:14px 0;}
+.st-key-comparison-grid [data-testid="stHorizontalBlock"] {align-items:center;}
 @media(max-width:800px){[data-testid="stHorizontalBlock"]{flex-wrap:wrap;}
-[data-testid="stColumn"]{min-width:min(100%,300px);}}
+[data-testid="stColumn"]{min-width:min(100%,300px);}
+.st-key-comparison-headers {display:none;}
+.st-key-comparison-grid [data-testid="stColumn"] {width:calc(50% - 0.5rem);min-width:calc(50% - 0.5rem);flex:1 1 calc(50% - 0.5rem);}
+.st-key-comparison-grid [data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:first-child {width:100%;min-width:100%;flex-basis:100%;}
+.compare-mobile-label {display:block;color:#365744;margin-bottom:5px;}}
 </style>''', unsafe_allow_html=True)
 
 CONFIDENCE = ('Evidence confidence describes support for the specific judgment. '
@@ -391,54 +412,162 @@ def model_explorer(data):
 
 def compare_models(data):
     st.header('Compare your shortlist')
-    ids=st.multiselect('Models to compare',list(data['model']),max_selections=5,format_func=lambda i:data['model'][i]['identity']['name'])
+    ids=st.multiselect('Models to compare',list(data['model']),max_selections=5,format_func=lambda i:data['model'][i]['identity']['name'],key='comparison-models')
     task=st.selectbox('Comparison task',task_options(data),format_func=lambda t:task_format(data,t))
-    related=st.checkbox('Include related evidence in comparison',value=False)
-    st.caption(CONFIDENCE)
-    if len(ids)<2:st.info('Choose 2–5 models to compare the same fields side by side.');return
-    st.caption('Prices are provider-qualified offers, not a universal cheapest-model ranking. Context is published capacity, not retrieval reliability.')
+    if len(ids)<2:st.info('Choose 2–5 models to compare fit, confidence, access and cost.');return
     selected_task=None if task=='All tasks' else task
-    for start in range(0,len(ids),2):
-        models=[data['model'][i] for i in ids[start:start+2]]
-        with st.container(border=True):
-            for col,model in zip(st.columns(len(models)),models):
-                with col:
-                    st.subheader(model['identity']['name'])
-                    st.caption(model['identity']['creator'])
-            # One horizontal block per field aligns rows even when finding lengths differ.
-            fields=(['Task fit'] if selected_task else [])+['Watch-outs','How to use it','Price','Context','Local hardware','Post-launch behavior']
-            for field in fields:
-                for col,model in zip(st.columns(len(models)),models):
-                    with col:
-                        if field=='Task fit':
-                            card_fit(data,model,selected_task,related)
-                        elif field=='Watch-outs':
-                            card_limits(data,model,selected_task,related)
-                        elif field=='How to use it':
-                            card_access(data,model)
-                        elif field=='Price':card_prices(data,model)
-                        elif field=='Context':st.markdown('**Context**');st.write(show(summary(model,data)['Native context tokens'])+' native tokens')
-                        elif field=='Local hardware':st.markdown('**Local hardware**');st.write(show(model['local_inference']['hardware_notes']))
-                        else:
-                            card_observations(data,model)
-            tests=sorted({tuple(b['benchmark'][k] or '' for k in ('name','version','metric','unit'))
-                          for m in models for b in benchmark_findings(m,data)})
-            st.write('Benchmark comparison')
-            if not tests:st.caption('No structured measurements for this shortlist. Missing results remain unknown.')
-            for test in tests:
-                matched=[b for m in models for b in benchmark_findings(m,data)
-                         if tuple(b['benchmark'][k] or '' for k in ('name','version','metric','unit'))==test]
-                st.caption(' · '.join(v for v in test if v)+' — '+benchmark_compatibility(matched))
-                for col,model in zip(st.columns(len(models)),models):
-                    with col:
-                        own=[b for b in matched if b['model_id']==model['id']]
-                        for b in own:
-                            st.write(benchmark_text(b));st.caption(b['evidence_class'].replace('_',' ')+' · '+show(b['measured_at']))
-                            with st.expander('Benchmark setup & evidence: '+model['identity']['name']):benchmark_panel(data,b)
-                        if not own:st.caption(UNKNOWN)
-            for col,model in zip(st.columns(len(models)),models):
-                with col:
-                    with st.expander('Evidence & details: '+model['identity']['name']):model_detail(data,model)
+    models=[data['model'][i] for i in ids]
+    summaries={m['id']:comparison_assessments(m,data,selected_task) for m in models}
+    workload=st.selectbox('Cost per text request',[(10000,2000),(1000,1000),(100000,1000)],
+                          format_func=lambda value:f'{value[0]:,} input + {value[1]:,} output tokens')
+    st.caption('USD · standard API · uncached text. Output includes billable reasoning tokens.')
+    offers={m['id']:comparison_offers(m,data,*workload) for m in models}
+    chosen={}
+    with st.expander('API offers'):
+        for model in models:
+            candidates=offers[model['id']]
+            if not candidates:
+                st.caption(model['identity']['name']+': no compatible standard USD text-token offer for this workload. Other offers remain in model details.')
+                continue
+            price_id=st.selectbox('API offer — '+model['identity']['name'],[o['price_id'] for o in candidates],
+                                  format_func=lambda i:offer_label(data,data['price'][i]),key='comparison-price-'+model['id'])
+            chosen[model['id']]=next(o for o in candidates if o['price_id']==price_id)
+            price=data['price'][price_id]
+            if price['conditions']:st.caption('Conditions: '+show(price['conditions']))
+            route_names=[route_label(r,data) for r in routes_for_price(price,data['access'].values())]
+            st.caption('Routes: '+show(route_names))
+    max_cost=max((Decimal(o['total']) for o in chosen.values()),default=Decimal(0))
+    widths=[1.5,1.1,1.2,1.2,1.8]
+    with st.container(key='comparison-grid'):
+        with st.container(key='comparison-headers'):
+            for col,label in zip(st.columns(widths),['Model','Task fit' if selected_task else 'Documented suitable tasks',
+                  'Evidence confidence' if selected_task else 'Confidence for suitable tasks','Access','Estimated cost']):
+                with col:st.markdown('**'+label+'**')
+        for model in models:
+            record=summaries[model['id']]
+            with st.container(key='comparison-row-'+model['id']):
+                cols=st.columns(widths)
+                with cols[0]:
+                    st.markdown('**'+model['identity']['name']+'**');st.caption(model['identity']['creator'])
+                with cols[1]:
+                    comparison_mobile_label('Task fit' if selected_task else 'Documented suitable tasks')
+                    if selected_task:
+                        rating=record['aggregate']['suitability'] if record['aggregate'] else None
+                        comparison_fit_badge(rating)
+                    else:
+                        count=len(record['suitable'])
+                        if st.button(str(count)+(' task' if count==1 else ' tasks'),key='comparison-tasks-'+model['id'],
+                                     help='Show the exact High/Medium tasks included in this count.'):
+                            st.session_state['comparison_task_model']=model['id']
+                        st.caption(comparison_count_text(record['fit_counts']) if count else 'No High/Medium assessments recorded')
+                with cols[2]:
+                    comparison_mobile_label('Evidence confidence' if selected_task else 'Confidence for suitable tasks')
+                    if selected_task:
+                        aggregate=record['aggregate']
+                        if aggregate and aggregate['suitability']=='disputed':st.write('On individual findings')
+                        elif aggregate and aggregate['evidence_confidence']:
+                            confidence=aggregate['evidence_confidence']
+                            st.write(confidence.capitalize())
+                            filled={'low':1,'medium':2,'high':3}[confidence]
+                            st.markdown('<div class="compare-confidence" role="img" aria-label="'+confidence.capitalize()+
+                                        ' evidence confidence">'+''.join('<span'+(' class="filled"' if i<filled else '')+
+                                        '></span>' for i in range(3))+'</div>',unsafe_allow_html=True)
+                        else:st.write('Not established')
+                    else:st.write(comparison_count_text(record['confidence_counts']) if record['suitable'] else 'Not established')
+                with cols[3]:
+                    comparison_mobile_label('Access')
+                    cells=[]
+                    for label,kind in [('API','API'),('Sub.','Subscription'),('Local','Run locally')]:
+                        status=route_status(model,data,kind)
+                        symbol='✓' if status=='Documented' else '—' if status=='Unavailable (documented)' else '?'
+                        cells.append('<span aria-label="'+escape(kind+': '+status,quote=True)+'">'+symbol+'<small>'+label+'</small></span>')
+                    st.markdown('<div class="compare-access">'+''.join(cells)+'</div>',unsafe_allow_html=True)
+                with cols[4]:
+                    comparison_mobile_label('Estimated cost')
+                    offer=chosen.get(model['id'])
+                    if offer:
+                        cost=Decimal(offer['total'])
+                        percent=float(cost/max_cost*100) if max_cost else 0
+                        price=data['price'][offer['price_id']]
+                        provider=data['provider'][price['provider_id']]['name']
+                        label=provider+' · '+(price['tier'] or price['product'] or 'Documented offer')
+                        cost_label=usd_text(cost)+' USD via '+label
+                        st.markdown('**'+usd_text(cost)+'**')
+                        st.markdown('<div class="compare-cost-track" role="img" aria-label="'+escape(cost_label,quote=True)+
+                                    '"><div class="compare-cost-fill" style="width:'+str(percent)+'%"></div></div>',unsafe_allow_html=True)
+                        st.caption(label)
+                    else:st.write('No comparable USD offer')
+    st.caption('✓ Documented access · ? Not yet documented · — Documented unavailable. Cost bars share one linear scale.')
+    if selected_task:
+        with st.expander('Why these ratings?'):
+            for model in models:
+                st.markdown('**'+model['identity']['name']+'**')
+                card_fit(data,model,selected_task)
+                card_limits(data,model,selected_task)
+    else:
+        comparison_task_breakdown(data,models,summaries)
+        st.caption('Counts reflect documented High/Medium task assessments and research coverage. Zero means no qualifying assessment recorded.')
+    st.caption('Task fit applies to tested setups; price routes are shown separately. Text-token subtotals exclude tools, taxes, retries, storage, other modalities and local compute.')
+    with st.expander('Benchmark comparison'):
+        related=st.checkbox('Include related evidence in comparison',value=False)
+        comparison_benchmarks(data,models,selected_task,related)
+    for model in models:
+        with st.expander('Evidence & details: '+model['identity']['name']):model_detail(data,model)
+
+
+def comparison_mobile_label(label):
+    st.markdown('<span class="compare-mobile-label">'+escape(label)+'</span>',unsafe_allow_html=True)
+
+
+def comparison_fit_badge(rating):
+    label=SUITABILITY[rating] if rating else 'Not assessed'
+    css=' compare-fit-'+rating if rating else ''
+    st.markdown('<span class="compare-fit'+css+'">'+label+'</span>',unsafe_allow_html=True)
+
+
+def comparison_count_text(counts):
+    return ' · '.join(str(count)+' '+level.capitalize() for level,count in counts.items() if count)
+
+
+def comparison_task_breakdown(data,models,summaries):
+    ids=[m['id'] for m in models]
+    selected=st.session_state.get('comparison_task_model')
+    if selected not in ids:selected=ids[0]
+    with st.expander('Task breakdown',expanded=True):
+        st.markdown('**'+data['model'][selected]['identity']['name']+'**')
+        record=summaries[selected]
+        for label,rows in [('Included in the count',record['suitable']),('Other task findings',record['other'])]:
+            st.markdown('**'+label+'**')
+            if rows:
+                st.dataframe([{'Task':task_label(data,a['task_id']),
+                               'Fit':SUITABILITY[a['aggregate']['suitability']],
+                               'Evidence confidence':a['aggregate']['evidence_confidence'].capitalize()
+                                   if a['aggregate']['evidence_confidence'] else 'On individual findings'}
+                              for a in rows],hide_index=True)
+            else:st.caption('No High/Medium assessments recorded.' if label=='Included in the count' else 'No Low or Disputed assessments recorded.')
+
+
+def comparison_benchmarks(data,models,task,related):
+    records=[]
+    for model in models:
+        own=benchmark_findings(model,data)
+        if task:
+            ids={j['id'] for j in claims(model,task,related)}
+            own=[b for b in own if ids.intersection(b['judgment_ids'])]
+        records+=own
+    fields=('name','version','metric','unit')
+    tests=sorted({tuple(b['benchmark'][k] or '' for k in fields) for b in records})
+    if not tests:st.caption('No structured measurements for this shortlist and task. Missing results remain unknown.')
+    for test in tests:
+        matched=[b for b in records if tuple(b['benchmark'][k] or '' for k in fields)==test]
+        st.caption(' · '.join(v for v in test if v)+' — '+benchmark_compatibility(matched))
+        for model in models:
+            own=[b for b in matched if b['model_id']==model['id']]
+            st.markdown('**'+model['identity']['name']+'**')
+            if not own:st.caption(UNKNOWN)
+            for b in own:
+                st.write(benchmark_text(b))
+                with st.expander('Benchmark setup & evidence: '+model['identity']['name']):benchmark_panel(data,b)
 
 def capability_explorer(data):
     st.header('Explore the evidence')
