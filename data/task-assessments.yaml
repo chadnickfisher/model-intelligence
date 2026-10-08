@@ -2499,21 +2499,41 @@ records:
   task_id: language.summarization
   applicability: applicable
   result: assessed
-  checked_at: '2026-10-07'
-  rationale: Original measured outputs and metric match this exact task boundary; conclusion and failure modes
-    stay within the recorded setup.
+  checked_at: '2026-10-08'
+  rationale: Tentative Low fit for summary-heavy business material follows ORCFLO's negative recommendation
+    for executive digests and meeting recaps.
   judgment_ids:
   - judgment-d14d5e6960fa913c
-  confidence_rationale: Low confidence reflects the specific source, measurement date/setup, identity gaps
-    and limited replication; benchmark score is not confidence. Empty contrary evidence means none was located
-    in this pass.
+  confidence_rationale: One small evaluator stream with unpinned serving details and no public error-level
+    evidence. The recommendation is mainly comparative; score and rank are not suitability thresholds.
   evidence_ids:
   - src-bfdf4f90e154
   - src-61e1f4d1aadb
-  conditions: []
+  conditions:
+  - May 10 cohort; English single-turn text; five cases in this category, four LLM judges.
+  - Serving provider and immutable revision unspecified; no assessed access route.
   remaining_gaps:
-  - Independent replication, serving identity and broader task transfer remain limited.
+  - Public prompts, summaries, fidelity-error traces and actual correction burden are unavailable.
   id: task-assessment-cd9224eb0ce1b12a
+  aggregate:
+    policy_version: '1'
+    suitability: low
+    evidence_confidence: low
+    assessed_at: '2026-10-08'
+    rationale: Tentative Low fit for summary-heavy business material follows ORCFLO's negative recommendation
+      for executive digests and meeting recaps.
+    confidence_rationale: One small evaluator stream with unpinned serving details and no public error-level
+      evidence. The recommendation is mainly comparative; score and rank are not suitability thresholds.
+    supporting_evidence_ids:
+    - src-bfdf4f90e154
+    - src-61e1f4d1aadb
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Limited to five English single-turn cases; broader documents and multi-turn work are unestablished.
+    - Summary-specific fidelity, qualification and attribution failures are not publicly demonstrated at error
+      level.
+    access_ids: []
 - model_id: claude-haiku-4-5
   task_id: language.translation
   applicability: applicable
@@ -32186,24 +32206,43 @@ records:
   task_id: vision.question_answering
   applicability: applicable
   result: assessed
-  checked_at: '2026-10-07'
-  rationale: Reviewed the exact-model direct judgment against Answer questions about visual input by interpreting
-    visible objects, text, relationships, or diagrams. Text, vision and audio have separate language inventories;
-    Transformers compatibility recovery is not a weights update.
+  checked_at: '2026-10-08'
+  rationale: Useful document and chart answers are supported by relevant visual-question evaluations; counting
+    and relationship limits call for material checking.
   judgment_ids:
-  - judgment-61024ceeda4b1074
-  confidence_rationale: 'low confidence: The exact card supports a candidate for document questions delivered
-    as synthetic speech, with a vendor s_DocVQA result; pure text-query and all-language performance are separate.
-    Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not confidence.
-    No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
-    coverage ledger. Evidence is bounded by source dates, serving identity and measurement conditions; an empty
-    contrary list means none located, not agreement.'
+  - judgment-2d69fe2e03e66c8c
+  confidence_rationale: Only creator evaluations support this English zero-shot conclusion. Multiple benchmarks
+    from the same vendor do not establish independent corroboration.
   evidence_ids:
   - src-29885c43e537
   conditions:
-  - Image plus synthetic spoken query; retain the s_ benchmark prefix. Korean fine-tuned adapter scores excluded.
-  remaining_gaps: []
+  - English image-plus-text questions; zero-shot prompts on the creator internal evaluation platform.
+  - Dataset images; API formatting and JPEG conversion where interfaces require it; shared answer extraction.
+  - Native model assessment; no specific provider route or quantized deployment assessed.
+  remaining_gaps:
+  - Independent reproduction, immutable revision, measurement date and full harness/decoding settings remain
+    unknown.
   id: task-assessment-853701335b39e098
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: low
+    assessed_at: '2026-10-08'
+    rationale: Useful document and chart answers are supported by relevant visual-question evaluations; counting
+      and relationship limits call for material checking.
+    confidence_rationale: Only creator evaluations support this English zero-shot conclusion. Multiple benchmarks
+      from the same vendor do not establish independent corroboration.
+    supporting_evidence_ids:
+    - src-29885c43e537
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - English image-plus-text questions only; other languages, degraded inputs and quantized deployments are
+      unassessed.
+    - Check counts and functional or spatial relationships. Distinct benchmark scores are not averaged into
+      a fit score.
+    - Synthetic spoken-query s_DocVQA remains separate from this text-query assessment.
+    access_ids: []
 - model_id: phi-4-reasoning-vision-15b
   task_id: agent.computer_use
   applicability: applicable
@@ -34130,23 +34169,48 @@ records:
   task_id: agent.tool_use
   applicability: applicable
   result: assessed
-  checked_at: '2026-10-07'
-  rationale: Reviewed the exact-model direct judgment against Select and invoke external tools with valid arguments,
-    then use their results to complete a task. Base BF16 BFCL results are separate from SFT/distill refusal
-    results; WSL and AMD failures depend on runtime and quantization.
+  checked_at: '2026-10-08'
+  rationale: Useful tool selection and simulated airline completion support this task, but missing-information
+    and multi-turn limits require material checking.
   judgment_ids:
   - judgment-159ca9252e0e8eff
-  confidence_rationale: 'low confidence: Base Qwen3.8-27B supports tool-use evaluation with substantial refusal
-    and multi-turn gaps; adapter results do not transfer to the base. One hardware configuration and seed;
-    measurement date and immutable base revision not pinned. Evidence is bounded by source dates, serving identity
-    and measurement conditions; an empty contrary list means none located, not agreement.'
+  confidence_rationale: One evaluator, unpinned revisions and dates, and uneven outcome coverage. Multiple
+    files are one evidence stream; unresolved retail grading is excluded from clean support.
   evidence_ids:
   - src-7e4211d2e766
+  - src-5ff6ea88e709
+  - src-8bcd64806292
+  - src-ffa9846b4379
   conditions:
-  - BF16, one AMD MI300X 192GB; vLLM ROCm, qwen3_xml parser, reasoning enabled, temperature 0.001, seed 300.
+  - Base BF16 on one AMD MI300X 192GB; vLLM ROCm with qwen3_xml; no adapters.
+  - BFCL reasoning enabled, temperature 0.001, seed 300; these settings are not established for every tau run.
+  - Local experimental serving, not an assessed commercial access route.
   remaining_gaps:
-  - Aggregate function-calling accuracy hides refusal and missing-parameter weaknesses.
+  - Independent replication and pinned model/harness revisions remain unestablished.
   id: task-assessment-58e4c5158dc0324c
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: low
+    assessed_at: '2026-10-08'
+    rationale: Useful tool selection and simulated airline completion support this task, but missing-information
+      and multi-turn limits require material checking.
+    confidence_rationale: One evaluator, unpinned revisions and dates, and uneven outcome coverage. Multiple
+      files are one evidence stream; unresolved retail grading is excluded from clean support.
+    supporting_evidence_ids:
+    - src-7e4211d2e766
+    - src-5ff6ea88e709
+    - src-ffa9846b4379
+    contradictory_evidence_ids:
+    - src-8bcd64806292
+    conflict_rationale: null
+    watch_outs:
+    - Strongest outcome evidence concerns simulated airline tasks, not general autonomous reliability.
+    - Refusal, missing-parameter and multi-turn weaknesses require guardrails; timeout, authorization and rollback
+      recovery are unverified.
+    - Full outcome reward does not establish every intermediate action correct. Retail results are withheld;
+      a harness failure is not a model failure.
+    access_ids: []
 - model_id: qwen3-8-27b
   task_id: audio.conversation
   applicability: excluded
@@ -34215,18 +34279,14 @@ records:
 - model_id: qwen3-8-27b
   task_id: coding.debugging
   applicability: applicable
-  result: assessed
+  result: unknown
   checked_at: '2026-10-07'
-  rationale: Reviewed the exact-model direct judgment against Diagnose a concrete software failure, identify
-    its cause, and assess a corrective change. Base BF16 BFCL results are separate from SFT/distill refusal
-    results; WSL and AMD failures depend on runtime and quantization.
+  rationale: Long local debugging chats need enough context for the model's own output, but this continuity
+    warning does not establish diagnosis or correction quality.
   judgment_ids:
   - judgment-74505ce6779ad313
-  confidence_rationale: 'low confidence: Long local debugging chats need enough context for the model''s own
-    output. A configuration-specific continuity warning, not a measured code-correctness score; hardware/quant/template
-    changes require recheck. Confidence concerns this bounded claim, not a capability score. Evidence is bounded
-    by source dates, serving identity and measurement conditions; an empty contrary list means none located,
-    not agreement.'
+  confidence_rationale: The existing bounded warning has Low finding confidence. Debugging correctness was
+    not scored; the original source check date is retained without fresh verification.
   evidence_ids:
   - src-404846cf4d6a
   conditions:
@@ -34234,6 +34294,23 @@ records:
   remaining_gaps:
   - Empty content from turn6 as remaining context shrank;32,768context control completed without truncation.
   id: task-assessment-16884a12a5dee99d
+  aggregate:
+    policy_version: '1'
+    suitability: unknown
+    evidence_confidence: null
+    assessed_at: '2026-10-08'
+    rationale: Long local debugging chats need enough context for the model's own output, but this continuity
+      warning does not establish diagnosis or correction quality.
+    confidence_rationale: The existing bounded warning has Low finding confidence. Debugging correctness was
+      not scored; the original source check date is retained without fresh verification.
+    supporting_evidence_ids:
+    - src-404846cf4d6a
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Q4_K_M and stock llama.cpp in the reported local loop; hardware, quantization and template changes require
+      recheck.
+    access_ids: []
 - model_id: qwen3-8-27b
   task_id: coding.frontend
   applicability: applicable

@@ -1,5 +1,5 @@
 schema_version: '1.0'
-observed_at: '2026-10-07'
+observed_at: '2026-10-08'
 records:
 - entity_type: access
   entity_id: access-0115a45a61684766
@@ -1874,6 +1874,14 @@ records:
   canonical_path: data/behavior.yaml
   value_hash: c29eef582af09b3234f2e1d204cc6cb7306535a515ac7384e2de21da5f5673cc
 - entity_type: benchmark
+  entity_id: benchmark-007310554f9ad9a1
+  canonical_path: data/benchmarks.yaml
+  value_hash: a7ebb1512aa7d9ee4c5d4cc0498d5855b8d0f72584f231b7973090c14f868bc0
+- entity_type: benchmark
+  entity_id: benchmark-042d66b579f03d25
+  canonical_path: data/benchmarks.yaml
+  value_hash: f19b03ff7623440b320df254a90cfbc7a7755469fa20a7bef942a3bd05d3bf8d
+- entity_type: benchmark
   entity_id: benchmark-043f99e30ccb448f
   canonical_path: data/benchmarks.yaml
   value_hash: c5890e80338332a5df55eee51bea95139364627bb60a2314e2e9a7c3969d4f34
@@ -1893,6 +1901,10 @@ records:
   entity_id: benchmark-0a2ba6fbd1b3d703
   canonical_path: data/benchmarks.yaml
   value_hash: fb75f735611e6b9fa1b29bcfec62f2b4cb4e2f4652e00ab825dac5f750d61587
+- entity_type: benchmark
+  entity_id: benchmark-1009920600cb96da
+  canonical_path: data/benchmarks.yaml
+  value_hash: 355e91ef9037f7d57d60058db4351695cc8d9ee470d8f35a5d2a38d4c1f8277d
 - entity_type: benchmark
   entity_id: benchmark-11ccf939523debdb
   canonical_path: data/benchmarks.yaml
@@ -1990,6 +2002,10 @@ records:
   canonical_path: data/benchmarks.yaml
   value_hash: f16f72f6a0bbcdeaeb8971c0488f8b2c8ee62f91af99629eee68139a9d8011a7
 - entity_type: benchmark
+  entity_id: benchmark-4a89dd24cdf91c76
+  canonical_path: data/benchmarks.yaml
+  value_hash: b3cce6c75c65c38e9182187202921defb7142097dd5b3b27363333d777f0c69c
+- entity_type: benchmark
   entity_id: benchmark-4aca2375b34e2434
   canonical_path: data/benchmarks.yaml
   value_hash: 7d9f65b0e2159fd9841478e9235ec969ff9708d82f37b3966da051e0d89e97ee
@@ -2062,9 +2078,21 @@ records:
   canonical_path: data/benchmarks.yaml
   value_hash: c40ae4e296a76d1d2edc376bb0b13fdbebfde9115bcd519a8c635f31592347e2
 - entity_type: benchmark
+  entity_id: benchmark-6480081e92794dc0
+  canonical_path: data/benchmarks.yaml
+  value_hash: 836b1ca0931ebe5212c064f4153273352cb502bdec38c9a27bff65772bba899e
+- entity_type: benchmark
+  entity_id: benchmark-64886fc50f867f84
+  canonical_path: data/benchmarks.yaml
+  value_hash: cd4f68bef59019ccfe87c5ea6b7ec4d0c6db1f0ae26b7aa366df2a0cdb255b90
+- entity_type: benchmark
   entity_id: benchmark-667d0f6926ce8d23
   canonical_path: data/benchmarks.yaml
   value_hash: 0bf586436c811e7fc019f0940261ab5005763ae11d029098703f4a5c11be8337
+- entity_type: benchmark
+  entity_id: benchmark-674da69746ce8de9
+  canonical_path: data/benchmarks.yaml
+  value_hash: bf8e2aa48189875d19d1be21e74161b315d2fdff956fbc87f26c30aafd188cea
 - entity_type: benchmark
   entity_id: benchmark-6809191994e08dc6
   canonical_path: data/benchmarks.yaml
@@ -2109,6 +2137,10 @@ records:
   entity_id: benchmark-74b979771fdfefa0
   canonical_path: data/benchmarks.yaml
   value_hash: 9897197a1a34f96f175c5677b4f0bd2d1ef07c01fd06a955af5191b1add11ce1
+- entity_type: benchmark
+  entity_id: benchmark-76cdd303fc031ac0
+  canonical_path: data/benchmarks.yaml
+  value_hash: b2e1c84c022e4eaab0dd89cae89a332123950e1c4c158ba42b61fd6cf8fcfeb8
 - entity_type: benchmark
   entity_id: benchmark-78f871fa4b7d9ae6
   canonical_path: data/benchmarks.yaml
@@ -2162,6 +2194,10 @@ records:
   canonical_path: data/benchmarks.yaml
   value_hash: 6a41e8baf87dba226f59f807a467879e5fb8a0b8aa09c323585076e4c4365abb
 - entity_type: benchmark
+  entity_id: benchmark-9171c17896de7147
+  canonical_path: data/benchmarks.yaml
+  value_hash: d8031596726eb2bff312f0115452198fa0b1c023f22c9a5c76d3c545519b91b4
+- entity_type: benchmark
   entity_id: benchmark-91c0fd3fc867b0c8
   canonical_path: data/benchmarks.yaml
   value_hash: 54f4b3d576c7e0b45149ecaea6b9e7afcb457355a698e5939eeea3ce2f9ef05c
@@ -2213,6 +2249,10 @@ records:
   entity_id: benchmark-a492335db6daf5d2
   canonical_path: data/benchmarks.yaml
   value_hash: 491e75552d43d1f4d207fd2845639ba07b22aa14bea91a8b4b73d6eaf1c48c4e
+- entity_type: benchmark
+  entity_id: benchmark-a4fca5424eb2ac82
+  canonical_path: data/benchmarks.yaml
+  value_hash: 83c1d827fe1d1618b74cfbe2c445a974dd2ca2018177a645abf3c96e96e81158
 - entity_type: benchmark
   entity_id: benchmark-a6af56f07ff60de2
   canonical_path: data/benchmarks.yaml
@@ -2286,6 +2326,10 @@ records:
   canonical_path: data/benchmarks.yaml
   value_hash: addab3d6c4af7269328a8d15b54858ffe1bb72c4bd863e7eac915b348ab02d74
 - entity_type: benchmark
+  entity_id: benchmark-c86abee3d15f29a3
+  canonical_path: data/benchmarks.yaml
+  value_hash: d3bb327dcf0bcac825f9f9de19e14236ab50ce56799b504f7cafd6ee8908496c
+- entity_type: benchmark
   entity_id: benchmark-ca1672484106cecb
   canonical_path: data/benchmarks.yaml
   value_hash: 2f8a905b328a4917eb0a35ffb90737885ea8545c2cfd6920a4cb0f5df51ba507
@@ -2305,6 +2349,10 @@ records:
   entity_id: benchmark-d09edad3595b9800
   canonical_path: data/benchmarks.yaml
   value_hash: 9f9def5c4f5176561be53372afea13455b2bdee42032f43860eb9d20cfcd465f
+- entity_type: benchmark
+  entity_id: benchmark-d0e9c582333c75dc
+  canonical_path: data/benchmarks.yaml
+  value_hash: 28977385b7ce4fad1246d95f851764343cc46e7fa532dd2ea3d5b15de2dd0aab
 - entity_type: benchmark
   entity_id: benchmark-d1019ad6dd2c4dca
   canonical_path: data/benchmarks.yaml
@@ -2404,7 +2452,7 @@ records:
 - entity_type: model
   entity_id: claude-haiku-4-5
   canonical_path: models/anthropic/claude-haiku-4-5/profile.yaml
-  value_hash: f4d17b990c7cbf5de7a6432b72ba91d48e8e3babb96c5ef377add7d003ca2361
+  value_hash: 7ff7ff94cf50bf546e46afb078a0467e130f90b30eac296b1236a5f95d83b30a
 - entity_type: model
   entity_id: claude-haiku-5-5
   canonical_path: models/anthropic/claude-haiku-5-5/profile.yaml
@@ -2572,7 +2620,7 @@ records:
 - entity_type: model
   entity_id: phi-4-multimodal-instruct
   canonical_path: models/microsoft/phi-4-multimodal-instruct/profile.yaml
-  value_hash: d80428b8a53f50a860bf1dcb7a7521e72bf8c6ac0765364e5528df038adfae3b
+  value_hash: 756e56ae93ced87e827992007192abbaa65669fafa22cac2b547bfa391cb2afc
 - entity_type: model
   entity_id: phi-4-reasoning-vision-15b
   canonical_path: models/microsoft/phi-4-reasoning-vision-15b/profile.yaml
@@ -2588,7 +2636,7 @@ records:
 - entity_type: model
   entity_id: qwen3-8-27b
   canonical_path: models/alibaba-qwen/qwen3-8-27b/profile.yaml
-  value_hash: 815043158aabed7d0280a80589684c35eb1c3d51d33935fb2036a9df6b5d5b99
+  value_hash: b1a2496c2bec894eacb10898ccc2812805aa5e2b537eec8996198277491c6763
 - entity_type: model
   entity_id: qwen3-8-flash-next
   canonical_path: models/alibaba-qwen/qwen3-8-flash-next/profile.yaml
@@ -3992,11 +4040,11 @@ records:
 - entity_type: research_coverage
   entity_id: research-coverage-claude-haiku-4-5-benchmarks
   canonical_path: data/research-coverage.yaml
-  value_hash: 647f95fd059998b284ee3bfc23a362103a24ebf47fa9eaf260954da7511a82e6
+  value_hash: cd6e7fbe4bdd7b35d3905be89591fcfd822fc805975f69472d4708b8d96da446
 - entity_type: research_coverage
   entity_id: research-coverage-claude-haiku-4-5-capabilities
   canonical_path: data/research-coverage.yaml
-  value_hash: 58979a82829c7ede297bd76f2414927649042c6649af6ccd1e141d82812a8bfb
+  value_hash: 4e1c6ab62046570bbb866adee34457c024504b8719aa7f69a6e07827eb2022ec
 - entity_type: research_coverage
   entity_id: research-coverage-claude-haiku-5-5-access-pricing
   canonical_path: data/research-coverage.yaml
@@ -4664,11 +4712,11 @@ records:
 - entity_type: research_coverage
   entity_id: research-coverage-phi-4-multimodal-instruct-benchmarks
   canonical_path: data/research-coverage.yaml
-  value_hash: 61749f77985f6194f86086c1180332a549c13c502990280f55f5888a7faf6486
+  value_hash: ef745afbbab957159c8be6c590c4abfe231fb2c2c14a0896392a121051ff93c0
 - entity_type: research_coverage
   entity_id: research-coverage-phi-4-multimodal-instruct-capabilities
   canonical_path: data/research-coverage.yaml
-  value_hash: 9fd049690bc44be83f92e7a813de216b924eac0d1d1bf18083359dbdd55c5d83
+  value_hash: 00260a93ec03299d6650671feee5071918e9f9a1f650a342987032f9cb213cf5
 - entity_type: research_coverage
   entity_id: research-coverage-phi-4-reasoning-vision-15b-access-pricing
   canonical_path: data/research-coverage.yaml
@@ -4728,11 +4776,11 @@ records:
 - entity_type: research_coverage
   entity_id: research-coverage-qwen3-8-27b-benchmarks
   canonical_path: data/research-coverage.yaml
-  value_hash: b9cff40ffccc153bebbdb67b41511c80352bfd0774c49e9dd139d279cdb60b21
+  value_hash: ee530d0c18a75673bfd6ece7ebaad2d000cbe8bec39c785407d3d99ca9f30d5e
 - entity_type: research_coverage
   entity_id: research-coverage-qwen3-8-27b-capabilities
   canonical_path: data/research-coverage.yaml
-  value_hash: 725da5ebd53036b5644b410e5b3ac6ba502516916acff1b4cf7cd947ad636795
+  value_hash: d44743e27fb994caee93b07a40d62bc94ae0698029390b098dcba703462f4be6
 - entity_type: research_coverage
   entity_id: research-coverage-qwen3-8-flash-next-access-pricing
   canonical_path: data/research-coverage.yaml
@@ -5240,7 +5288,7 @@ records:
 - entity_type: source
   entity_id: src-29885c43e537
   canonical_path: evidence/sources.yaml
-  value_hash: 3a7263559a0b611856c8133817c99722da947ec7311d288f7d6e10d09afda5f7
+  value_hash: f31e90450c48de07aae8463a76f93976b06e2a7e149e9773ba82e9ab7cf0a8f9
 - entity_type: source
   entity_id: src-29ae95a372cc
   canonical_path: evidence/sources.yaml
@@ -5842,6 +5890,10 @@ records:
   canonical_path: evidence/sources.yaml
   value_hash: 71b528ea1bb21bfc0c419dfe529a76e93102795d1020d93ef40dc53b1947e4b2
 - entity_type: source
+  entity_id: src-5ff6ea88e709
+  canonical_path: evidence/sources.yaml
+  value_hash: e4f76c097f9b0f06d15228eead78e6efeb9dc7f5cbc61bce5e9f574017913569
+- entity_type: source
   entity_id: src-6042302df83d
   canonical_path: evidence/sources.yaml
   value_hash: 0b4bb5debb45874d131923029d19cd4226b44460f17bf2d6e46b4c8154ac5cbf
@@ -5860,7 +5912,7 @@ records:
 - entity_type: source
   entity_id: src-61e1f4d1aadb
   canonical_path: evidence/sources.yaml
-  value_hash: 446333906f4415d793609fc1c1db7a293e32af76401adaeef985bb3fd8e7a4e0
+  value_hash: 3f0564d96d1ec87d809c206b0421c50700f9fcae84bb9f0f770d8a58953296eb
 - entity_type: source
   entity_id: src-6296981297f7
   canonical_path: evidence/sources.yaml
@@ -6144,7 +6196,7 @@ records:
 - entity_type: source
   entity_id: src-7e4211d2e766
   canonical_path: evidence/sources.yaml
-  value_hash: d44323b7aad00f0621df674aee34138eb5a09ce54b7b6d1de5a33c8ccebd87b2
+  value_hash: 1537e9231488ba47a408c42fcaa61b4216614769ecf30efa450acf88b733ad23
 - entity_type: source
   entity_id: src-7e6c3dd9add1
   canonical_path: evidence/sources.yaml
@@ -6217,6 +6269,10 @@ records:
   entity_id: src-8ac74a7d6b30
   canonical_path: evidence/sources.yaml
   value_hash: 93be6853d13e1c5eab943d0c9ac243535905f9b0d8a2f156124442e2e9ae94d2
+- entity_type: source
+  entity_id: src-8bcd64806292
+  canonical_path: evidence/sources.yaml
+  value_hash: 7346f47afe320be562bb95c5336ec4252857f55741c3d56e52e907625059d947
 - entity_type: source
   entity_id: src-8c226e63ce44
   canonical_path: evidence/sources.yaml
@@ -6728,7 +6784,7 @@ records:
 - entity_type: source
   entity_id: src-bfdf4f90e154
   canonical_path: evidence/sources.yaml
-  value_hash: afb971060db5486f9c1f1a62740deb1d56a8bfa1e330aa26ad2621d7c8ea291d
+  value_hash: f1d58e952785fac931f7b894bcb2c2bb7f381b2252f361363a290699b938d310
 - entity_type: source
   entity_id: src-c03a6de01b20
   canonical_path: evidence/sources.yaml
@@ -7385,6 +7441,10 @@ records:
   entity_id: src-ff9a02dd176f
   canonical_path: evidence/sources.yaml
   value_hash: e04b0c32736de7e9524a624c138a8fa8de3d8c045485faa970a22990b579d63c
+- entity_type: source
+  entity_id: src-ffa9846b4379
+  canonical_path: evidence/sources.yaml
+  value_hash: 18fd4c927f29db93b6cd849d40bd7b1d3a584c05e50174a4c2acefba8d6fca95
 - entity_type: source
   entity_id: src-ffb0cc48ebb8
   canonical_path: evidence/sources.yaml
@@ -8288,7 +8348,7 @@ records:
 - entity_type: task_assessment
   entity_id: task-assessment-16884a12a5dee99d
   canonical_path: data/task-assessments.yaml
-  value_hash: 1253996d827f45bc363c33a0e980df37e80349dbfa87796b1229120f9dde5a06
+  value_hash: 714e78a745b9c338e2d96b17c3aadbfcc78594d6c7146ea5c8a0a07fa2242aac
 - entity_type: task_assessment
   entity_id: task-assessment-169e818b9e1c8642
   canonical_path: data/task-assessments.yaml
@@ -10296,7 +10356,7 @@ records:
 - entity_type: task_assessment
   entity_id: task-assessment-58e4c5158dc0324c
   canonical_path: data/task-assessments.yaml
-  value_hash: b4ba79fc4acdd0cf6e7f6e310095d3c196f9e874c890ea0f08e18cc7cc6d392d
+  value_hash: 08520a31db09fd95fcbbc05fdfee4f0007d67aa539b5d585e7a9dd98ee55dbe6
 - entity_type: task_assessment
   entity_id: task-assessment-58f31adcc6e4ba0b
   canonical_path: data/task-assessments.yaml
@@ -11840,7 +11900,7 @@ records:
 - entity_type: task_assessment
   entity_id: task-assessment-853701335b39e098
   canonical_path: data/task-assessments.yaml
-  value_hash: 770e5bef68d6b723bf10e7e153d25093d0a136fbd5cba806ee22194d8de06894
+  value_hash: 4958696d559ebf1fe5129ac047473a0593dd025851444277b6ccd118a21a1525
 - entity_type: task_assessment
   entity_id: task-assessment-8548950b1b0a6438
   canonical_path: data/task-assessments.yaml
@@ -13996,7 +14056,7 @@ records:
 - entity_type: task_assessment
   entity_id: task-assessment-cd9224eb0ce1b12a
   canonical_path: data/task-assessments.yaml
-  value_hash: 0eb158245db4b195b747149b31ede155c8dc845d76c4d214da8638c4ec2cccf1
+  value_hash: 063cf8e8e0d9e9f17985b910d47bb9502f6e6f11e1bde1c94a272d8c24436d56
 - entity_type: task_assessment
   entity_id: task-assessment-cdd16db763d7fdcc
   canonical_path: data/task-assessments.yaml

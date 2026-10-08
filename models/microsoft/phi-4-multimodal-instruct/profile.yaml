@@ -250,6 +250,38 @@ capabilities:
     research_batch_id: public-task-followup-2026-10-07
     method: Inspected original model/evaluator sources and performed the recorded public search; no inference
       or benchmarking calls.
+- id: judgment-2d69fe2e03e66c8c
+  scope: direct
+  task_ids:
+  - vision.question_answering
+  related_task_ids: []
+  assessment: conditional
+  scope_note: English text-query visual QA under the creator zero-shot setup; spoken queries remain a separate
+    finding.
+  judgment: Document and chart question results support useful visual answers, with counting and relationship
+    limits that require material checking.
+  confidence: low
+  supporting_evidence_ids:
+  - src-29885c43e537
+  contradictory_evidence_ids: []
+  conditions:
+  - English image-plus-text questions; zero-shot prompts on the creator internal evaluation platform.
+  - Dataset images; API formatting and JPEG conversion where interfaces require it; shared answer extraction.
+  - Native model assessment; no specific provider route or quantized deployment assessed.
+  known_failure_modes:
+  - Counting and functional relationships require checking; scores across different benchmarks are not a common
+    difficulty scale.
+  evidence_notes:
+  - Vendor-only evidence; independent reproduction, immutable checkpoint, measurement date and full decoding/harness
+    settings remain unknown.
+  - Text-query DocVQA is distinct from synthetic spoken-query s_DocVQA; no transfer to other languages or fine-tuned
+    audio adapters.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: research-run-task-ratings-2026-10-08
+    method: Inspected creator visual benchmark tables and vision methodology; no inference or benchmark execution.
 performance_characteristics: []
 access_ids:
 - access-4f38855edac192f0

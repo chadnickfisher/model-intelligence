@@ -266,26 +266,33 @@ capabilities:
   - agent.tool_use
   related_task_ids: []
   assessment: conditional
-  scope_note: Exact base-checkpoint tool decisions in one reproducible setup.
-  judgment: Base Qwen3.8-27B supports tool-use evaluation with substantial refusal and multi-turn gaps; adapter
-    results do not transfer to the base.
+  scope_note: Exact base-model structured-tool evidence in one local BF16 setup; evaluated revision unpinned.
+  judgment: Useful structured-tool decisions and simulated airline outcomes coexist with material missing-information
+    and multi-turn limitations; substantial checking is required.
   confidence: low
   supporting_evidence_ids:
   - src-7e4211d2e766
-  contradictory_evidence_ids: []
+  - src-5ff6ea88e709
+  - src-ffa9846b4379
+  contradictory_evidence_ids:
+  - src-8bcd64806292
   conditions:
-  - BF16, one AMD MI300X 192GB; vLLM ROCm, qwen3_xml parser, reasoning enabled, temperature 0.001, seed 300.
+  - Base BF16 on one AMD MI300X 192GB; vLLM ROCm with qwen3_xml; no adapters.
+  - BFCL reasoning enabled, temperature 0.001, seed 300; these settings are not established for every tau run.
+  - Local experimental serving, not an assessed commercial access route.
   known_failure_modes:
-  - Aggregate function-calling accuracy hides refusal and missing-parameter weaknesses.
+  - Missing-parameter and multi-turn cases remain material weaknesses.
+  - Timeout, authorization and rollback recovery are not established.
   evidence_notes:
-  - One hardware configuration and seed; measurement date and immutable base revision not pinned.
-  observed_at: '2026-10-07'
+  - One evaluator; model revision, benchmark pins and measurement dates unknown.
+  - Airline outcome reward does not prove every intermediate action correct. Retail results withheld because
+    final judge/patch configuration is unresolved.
+  observed_at: '2026-10-08'
   effective_from: null
   provenance:
     origin: research
-    research_batch_id: research-run-broader-2026-10-07
-    method: Original public BFCL setup and base-checkpoint results inspected; derivative adapter measurements
-      kept separate.
+    research_batch_id: research-run-task-ratings-2026-10-08
+    method: Reinspected public base-model results and grading limitations; no model execution.
 performance_characteristics: []
 access_ids:
 - access-190700cff4019fb5
@@ -299,6 +306,10 @@ evidence_ids:
 - src-ca26bca182f6
 - src-fb8e00efa720
 - src-94984ea907dd
+- src-7e4211d2e766
+- src-5ff6ea88e709
+- src-8bcd64806292
+- src-ffa9846b4379
 notes: []
 limitations:
 - No model inference or benchmark was run in this research pass.

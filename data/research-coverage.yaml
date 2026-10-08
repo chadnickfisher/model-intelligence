@@ -461,101 +461,44 @@ records:
       versions do not verify this item.
 - model_id: claude-haiku-4-5
   domain: capabilities
-  result: unknown
-  checked_at: '2026-10-07'
+  result: changed
+  checked_at: '2026-10-08'
   evidence_ids:
-  - src-e1910c5126bc
-  - src-f3655eaf1407
-  - src-e99bd76836c1
-  - src-5c510b458547
-  - src-07c29d610258
-  - src-7dea3b226d0f
-  - src-4e6f4ff35504
-  - src-2bf9d5fecb2c
-  - src-995284168dc8
-  - src-9d3919791a72
-  - src-9be7b13428d4
-  - src-e495b08b40a6
   - src-bfdf4f90e154
   - src-61e1f4d1aadb
-  - src-2e03cb5a63cf
-  - src-5a27e3e4bac2
-  - src-4228c246c84d
-  - src-28f7598af662
   remaining_gaps:
-  - Exact checkpoint support, task transfer, or numerical/source scope for this field was not established beyond
-    the retained dated evidence.
+  - Independent corroboration and exact model, harness and measurement-date details remain limited.
+  - Other task judgments and factual fields were not rechecked in this focused update.
   blocked_reason: null
   schema_version: '1.0'
   id: research-coverage-claude-haiku-4-5-capabilities
-  research_batch_id: research-run-broader-2026-10-07
+  research_batch_id: research-run-task-ratings-2026-10-08
   scope_notes:
-  - Reviewed capabilities for the exact catalog model. Business text and exact-output coding evidence are bounded;
-    safety attack prevention is not normal computer-use completion.
-  - Bounded public-source review; investigated unknowns are retained and prior factual dates are not globally
-    refreshed.
-  search_references:
-  - query: '"Claude Haiku 4.5" regression evaluation bugs issues'
-    checked_at: '2026-10-07'
-    outcome: sources_found
-    urls:
-    - https://platform.claude.com/docs/en/models/haiku-4-5/overview
-    - https://platform.claude.com/docs/en/models/overview
-    - https://www.anthropic.com/news/claude-haiku-4-5
-    - https://artificialanalysis.ai/models/comparisons/hy3-vs-claude-4-5-haiku
-    - https://platform.claude.com/docs/en/build-with-claude/multilingual-support
-    - https://www.anthropic.com/legal/commercial-terms
-    - https://arena.ai/leaderboard/code/webdev/frontend
-    - https://arena.ai/faq
-    notes:
-    - Actual dated broad query; original source bodies were inspected separately. Search snippets and sibling
-      versions do not verify this item.
+  - Focused source reinspection for one task assessment and its relevant measurements; not a complete model
+    or domain research pass.
+  - Other task findings and factual verification dates are carried forward; access/pricing and behavior were
+    not rechecked.
+  search_references: []
 - model_id: claude-haiku-4-5
   domain: benchmarks
-  result: unknown
-  checked_at: '2026-10-07'
+  result: unchanged
+  checked_at: '2026-10-08'
   evidence_ids:
-  - src-4e6f4ff35504
-  - src-2bf9d5fecb2c
-  - src-9d3919791a72
-  - src-9be7b13428d4
-  - src-e495b08b40a6
   - src-bfdf4f90e154
   - src-61e1f4d1aadb
-  - src-2e03cb5a63cf
-  - src-5a27e3e4bac2
-  - src-4228c246c84d
-  - src-28f7598af662
   remaining_gaps:
-  - Exact checkpoint support, task transfer, or numerical/source scope for this field was not established beyond
-    the retained dated evidence.
-  - Exact measurement configuration or metadata is not reported or could not be established from the inspected
-    evaluation.
+  - Independent corroboration and exact model, harness and measurement-date details remain limited.
+  - Other task judgments and factual fields were not rechecked in this focused update.
   blocked_reason: null
   schema_version: '1.0'
   id: research-coverage-claude-haiku-4-5-benchmarks
-  research_batch_id: research-run-broader-2026-10-07
+  research_batch_id: research-run-task-ratings-2026-10-08
   scope_notes:
-  - Reviewed benchmarks for the exact catalog model. Business text and exact-output coding evidence are bounded;
-    safety attack prevention is not normal computer-use completion.
-  - Bounded public-source review; investigated unknowns are retained and prior factual dates are not globally
-    refreshed.
-  search_references:
-  - query: '"Claude Haiku 4.5" regression evaluation bugs issues'
-    checked_at: '2026-10-07'
-    outcome: sources_found
-    urls:
-    - https://arena.ai/leaderboard/code/webdev/frontend
-    - https://arena.ai/faq
-    - https://www.datallmlab.com/blog/claude-haiku-4-5-review.html
-    - https://www.datallmlab.com/blog/methodology.html
-    - https://arxiv.org/html/2603.22576v1
-    - https://www.orcflo.com/orcflo-index/benchmarks/claude-haiku-4-5-2026-05-10
-    - https://www.orcflo.com/orcflo-index/methodology
-    - https://arxiv.org/html/2605.28876v1
-    notes:
-    - Actual dated broad query; original source bodies were inspected separately. Search snippets and sibling
-      versions do not verify this item.
+  - Focused source reinspection for one task assessment and its relevant measurements; not a complete model
+    or domain research pass.
+  - Other task findings and factual verification dates are carried forward; access/pricing and behavior were
+    not rechecked.
+  search_references: []
 - model_id: claude-haiku-4-5
   domain: access_pricing
   result: unknown
@@ -7641,59 +7584,41 @@ records:
 - model_id: phi-4-multimodal-instruct
   domain: capabilities
   result: changed
-  checked_at: '2026-10-07'
+  checked_at: '2026-10-08'
   evidence_ids:
   - src-29885c43e537
   remaining_gaps:
-  - Exact checkpoint support, task transfer, or numerical/source scope for this field was not established beyond
-    the retained dated evidence.
+  - Independent corroboration and exact model, harness and measurement-date details remain limited.
+  - Other task judgments and factual fields were not rechecked in this focused update.
   blocked_reason: null
   schema_version: '1.0'
   id: research-coverage-phi-4-multimodal-instruct-capabilities
-  research_batch_id: research-run-broader-2026-10-07
+  research_batch_id: research-run-task-ratings-2026-10-08
   scope_notes:
-  - Reviewed capabilities for the exact catalog model. Text, vision and audio have separate language inventories;
-    Transformers compatibility recovery is not a weights update.
-  - Bounded public-source review; investigated unknowns are retained and prior factual dates are not globally
-    refreshed.
-  search_references:
-  - query: '"Phi-4 Multimodal Instruct" independent evaluation regression bugs issues'
-    checked_at: '2026-10-07'
-    outcome: sources_found
-    urls:
-    - https://huggingface.co/microsoft/Phi-4-multimodal-instruct
-    notes:
-    - Actual dated broad query; original source bodies were inspected separately. Search snippets and sibling
-      versions do not verify this item.
+  - Focused source reinspection for one task assessment and its relevant measurements; not a complete model
+    or domain research pass.
+  - Other task findings and factual verification dates are carried forward; access/pricing and behavior were
+    not rechecked.
+  search_references: []
 - model_id: phi-4-multimodal-instruct
   domain: benchmarks
-  result: unknown
-  checked_at: '2026-10-07'
+  result: changed
+  checked_at: '2026-10-08'
   evidence_ids:
   - src-29885c43e537
   remaining_gaps:
-  - Exact checkpoint support, task transfer, or numerical/source scope for this field was not established beyond
-    the retained dated evidence.
-  - Exact measurement configuration or metadata is not reported or could not be established from the inspected
-    evaluation.
+  - Independent corroboration and exact model, harness and measurement-date details remain limited.
+  - Other task judgments and factual fields were not rechecked in this focused update.
   blocked_reason: null
   schema_version: '1.0'
   id: research-coverage-phi-4-multimodal-instruct-benchmarks
-  research_batch_id: research-run-broader-2026-10-07
+  research_batch_id: research-run-task-ratings-2026-10-08
   scope_notes:
-  - Reviewed benchmarks for the exact catalog model. Text, vision and audio have separate language inventories;
-    Transformers compatibility recovery is not a weights update.
-  - Bounded public-source review; investigated unknowns are retained and prior factual dates are not globally
-    refreshed.
-  search_references:
-  - query: '"Phi-4 Multimodal Instruct" independent evaluation regression bugs issues'
-    checked_at: '2026-10-07'
-    outcome: sources_found
-    urls:
-    - https://huggingface.co/microsoft/Phi-4-multimodal-instruct
-    notes:
-    - Actual dated broad query; original source bodies were inspected separately. Search snippets and sibling
-      versions do not verify this item.
+  - Focused source reinspection for one task assessment and its relevant measurements; not a complete model
+    or domain research pass.
+  - Other task findings and factual verification dates are carried forward; access/pricing and behavior were
+    not rechecked.
+  search_references: []
 - model_id: phi-4-multimodal-instruct
   domain: access_pricing
   result: unknown
@@ -8263,71 +8188,47 @@ records:
 - model_id: qwen3-8-27b
   domain: capabilities
   result: changed
-  checked_at: '2026-10-07'
+  checked_at: '2026-10-08'
   evidence_ids:
-  - src-ca26bca182f6
-  - src-404846cf4d6a
-  - src-4e6f4ff35504
-  - src-2bf9d5fecb2c
   - src-7e4211d2e766
+  - src-5ff6ea88e709
+  - src-8bcd64806292
+  - src-ffa9846b4379
   remaining_gaps:
-  - Exact checkpoint support, task transfer, or numerical/source scope for this field was not established beyond
-    the retained dated evidence.
+  - Independent corroboration and exact model, harness and measurement-date details remain limited.
+  - Other task judgments and factual fields were not rechecked in this focused update.
   blocked_reason: null
   schema_version: '1.0'
   id: research-coverage-qwen3-8-27b-capabilities
-  research_batch_id: research-run-broader-2026-10-07
+  research_batch_id: research-run-task-ratings-2026-10-08
   scope_notes:
-  - Reviewed capabilities for the exact catalog model. Base BF16 BFCL results are separate from SFT/distill
-    refusal results; WSL and AMD failures depend on runtime and quantization.
-  - Bounded public-source review; investigated unknowns are retained and prior factual dates are not globally
-    refreshed.
-  search_references:
-  - query: '"Qwen3.8-27B" evaluation issues'
-    checked_at: '2026-10-07'
-    outcome: sources_found
-    urls:
-    - https://huggingface.co/Qwen/Qwen3.8-27B
-    - https://github.com/TheTom/offlabel/blob/main/models/qwen3.8-27b.md
-    - https://arena.ai/leaderboard/code/webdev/frontend
-    - https://arena.ai/faq
-    - https://github.com/Nicolas-Formenton/qwen3.8-27b-finetune-eval
-    notes:
-    - Actual dated broad query; original source bodies were inspected separately. Search snippets and sibling
-      versions do not verify this item.
+  - Focused source reinspection for one task assessment and its relevant measurements; not a complete model
+    or domain research pass.
+  - Other task findings and factual verification dates are carried forward; access/pricing and behavior were
+    not rechecked.
+  search_references: []
 - model_id: qwen3-8-27b
   domain: benchmarks
   result: changed
-  checked_at: '2026-10-07'
+  checked_at: '2026-10-08'
   evidence_ids:
-  - src-4e6f4ff35504
-  - src-2bf9d5fecb2c
   - src-7e4211d2e766
+  - src-5ff6ea88e709
+  - src-8bcd64806292
+  - src-ffa9846b4379
   remaining_gaps:
-  - Exact checkpoint support, task transfer, or numerical/source scope for this field was not established beyond
-    the retained dated evidence.
-  - Exact measurement configuration or metadata is not reported or could not be established from the inspected
-    evaluation.
+  - Independent corroboration and exact model, harness and measurement-date details remain limited.
+  - Other task judgments and factual fields were not rechecked in this focused update.
   blocked_reason: null
   schema_version: '1.0'
   id: research-coverage-qwen3-8-27b-benchmarks
-  research_batch_id: research-run-broader-2026-10-07
+  research_batch_id: research-run-task-ratings-2026-10-08
   scope_notes:
-  - Reviewed benchmarks for the exact catalog model. Base BF16 BFCL results are separate from SFT/distill refusal
-    results; WSL and AMD failures depend on runtime and quantization.
-  - Bounded public-source review; investigated unknowns are retained and prior factual dates are not globally
-    refreshed.
-  search_references:
-  - query: '"Qwen3.8-27B" evaluation issues'
-    checked_at: '2026-10-07'
-    outcome: sources_found
-    urls:
-    - https://arena.ai/leaderboard/code/webdev/frontend
-    - https://arena.ai/faq
-    - https://github.com/Nicolas-Formenton/qwen3.8-27b-finetune-eval
-    notes:
-    - Actual dated broad query; original source bodies were inspected separately. Search snippets and sibling
-      versions do not verify this item.
+  - Focused source reinspection for one task assessment and its relevant measurements; not a complete model
+    or domain research pass.
+  - Other task findings and factual verification dates are carried forward; access/pricing and behavior were
+    not rechecked.
+  search_references: []
 - model_id: qwen3-8-27b
   domain: access_pricing
   result: changed

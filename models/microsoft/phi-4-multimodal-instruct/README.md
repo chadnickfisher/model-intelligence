@@ -51,6 +51,28 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not confidence.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
 
+### Vision.question_answering (low confidence)
+
+Document and chart question results support useful visual answers, with counting and relationship limits that require material checking.
+
+Scope: direct / conditional. English text-query visual QA under the creator zero-shot setup; spoken queries remain a separate finding.
+
+Direct task IDs: vision.question_answering
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-2d69fe2e03e66c8c
+
+Conditions: English image-plus-text questions; zero-shot prompts on the creator internal evaluation platform.; Dataset images; API formatting and JPEG conversion where interfaces require it; shared answer extraction.; Native model assessment; no specific provider route or quantized deployment assessed.
+
+Failure modes / limitations: Counting and functional relationships require checking; scores across different benchmarks are not a common difficulty scale.
+
+Supporting sources: [Phi-4 Multimodal official card](https://huggingface.co/microsoft/Phi-4-multimodal-instruct)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Vendor-only evidence; independent reproduction, immutable checkpoint, measurement date and full decoding/harness settings remain unknown.; Text-query DocVQA is distinct from synthetic spoken-query s_DocVQA; no transfer to other languages or fine-tuned audio adapters.
+
 ## Specifications
 
 | Field | Recorded value |

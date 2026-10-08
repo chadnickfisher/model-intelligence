@@ -141,9 +141,9 @@ Evidence notes: Low confidence reflects limited tasks, source/setup uncertainty 
 
 ### Language.summarization (low confidence)
 
-A small business summarization evaluation supports a limited, conditional conclusion; verify retained facts and qualifications for the target material.
+ORCFLO cautions against summary-heavy executive digests and meeting recaps. This supports a tentative negative task-fit conclusion, with public error-level evidence unavailable.
 
-Scope: direct / conditional. The measured task fits this rubric boundary; no transfer to adjacent tasks.
+Scope: direct / weak. The measured task fits this rubric boundary; no transfer to adjacent tasks.
 
 Direct task IDs: language.summarization
 
@@ -159,7 +159,7 @@ Supporting sources: [Claude Haiku 4.5 May 10 benchmark](https://www.orcflo.com/o
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Low confidence reflects limited tasks, source/setup uncertainty and lack of independent replication; scores do not define confidence. Empty contradictory evidence means none was located in this bounded pass.
+Evidence notes: The caution is principally comparative; neither score nor cohort rank defines a suitability threshold.; Five English single-turn cases and four LLM judges form one evaluation stream. Public summary-specific fidelity failures and correction burden are unestablished.
 
 ### Knowledge.extraction (low confidence)
 
@@ -342,4 +342,4 @@ Local conditions: Not established in this pass
 
 ## Sources
 
-[Claude haiku-4-5 specifications](https://platform.claude.com/docs/en/models/haiku-4-5/overview) · [Claude current model overview](https://platform.claude.com/docs/en/models/overview) · [Introducing Claude Haiku 4.5](https://www.anthropic.com/news/claude-haiku-4-5) · [Haiku non-reasoning benchmark comparison](https://artificialanalysis.ai/models/comparisons/hy3-vs-claude-4-5-haiku)
+[Claude haiku-4-5 specifications](https://platform.claude.com/docs/en/models/haiku-4-5/overview) · [Claude current model overview](https://platform.claude.com/docs/en/models/overview) · [Introducing Claude Haiku 4.5](https://www.anthropic.com/news/claude-haiku-4-5) · [Haiku non-reasoning benchmark comparison](https://artificialanalysis.ai/models/comparisons/hy3-vs-claude-4-5-haiku) · [Claude Haiku 4.5 May 10 benchmark](https://www.orcflo.com/orcflo-index/benchmarks/claude-haiku-4-5-2026-05-10) · [ORCFLO Index methodology](https://www.orcflo.com/orcflo-index/methodology)

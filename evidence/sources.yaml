@@ -470,14 +470,16 @@ records:
   publisher: null
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-07'
+  accessed_at: '2026-10-08'
   claim_scope:
   - Dated post-launch finding; retain its model, client, service or runtime scope.
   - No HF Inference Provider on this exact card; Azure catalog remains documented.
   - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
+  - English zero-shot text-query visual QA and BLINK subtask results; separate from spoken-query s_DocVQA.
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
+  - Vendor evaluation only; exact evaluated revision, measurement date, decoding and versioned harness unknown.
 - id: src-29ae95a372cc
   url: https://www.cerebras.ai/pricing
   title: null
@@ -6821,24 +6823,27 @@ records:
   publisher: ORCFLO
   source_type: independent-evaluation
   published_at: '2026-05-10'
-  accessed_at: '2026-10-07'
+  accessed_at: '2026-10-08'
   limitations:
   - Commercial workflow provider; public page does not expose full prompts/responses, decoding or immutable
     serving revision; no tools, multilingual or multimodal work.
+  - Comparative caution; public error-level fidelity and correction burden not established.
   claim_scope:
   - Five cases per business-task category, English single-turn text and LLM judging.
+  - Summarization-specific score and attributed caution for summary-heavy business workflows.
 - id: src-61e1f4d1aadb
   url: https://www.orcflo.com/orcflo-index/methodology
   title: ORCFLO Index methodology
   publisher: ORCFLO
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-07'
+  accessed_at: '2026-10-08'
   limitations:
   - Rolling methodology; detailed case report subscriber-only; judge overlap with contestants.
+  - Full subscriber case detail was not accessed.
   claim_scope:
-  - 'Current May 10 cohort: forty cases, eight categories, four independent LLM judges and unweighted
-    averages.'
+  - 'Current May 10 cohort: forty cases, eight categories, four independent LLM judges and unweighted averages.'
+  - Five cases per category, four LLM judges; one evaluator stream, not independent replication.
 - id: src-2e03cb5a63cf
   url: https://arxiv.org/html/2605.28876v1
   title: 'LogDx-CI: Log Reduction for Root-Cause Diagnosis'
@@ -7416,11 +7421,14 @@ records:
   publisher: Nicolas Formenton
   source_type: independent-evaluation
   published_at: null
-  accessed_at: '2026-10-07'
+  accessed_at: '2026-10-08'
   claim_scope:
   - Base-checkpoint BFCL v4 results and reproducible serving configuration.
+  - Base BF16 tool selection, multi-turn results and simulated airline outcomes; adapters excluded.
   limitations:
   - One BF16 hardware setup and seed; no quantized variance study. Fine-tuned derivatives are distinct models.
+  - One evaluator; unpinned checkpoint, benchmark revision and measurement date. Retail grading configuration
+    unresolved.
 - id: src-2aca780af5aa
   url: https://developers.openai.com/api/docs/guides/your-data
   title: OpenAI API data controls
@@ -7476,3 +7484,36 @@ records:
   - Exact service policy; model and feature eligibility require separate checks.
   limitations:
   - International-site enterprise API scope; model coverage and safety exceptions apply.
+- id: src-5ff6ea88e709
+  url: https://raw.githubusercontent.com/Nicolas-Formenton/qwen3.8-27b-finetune-eval/main/results/tau3-summary.json
+  title: Qwen3.8-27B tau simulation summary
+  publisher: Nicolas Formenton
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-08'
+  claim_scope:
+  - Separate base airline simulation blocks; repeated trials are not independent unique tasks.
+  limitations:
+  - Same evaluation stream as README; local API identifier is not a commercial provider offer.
+- id: src-8bcd64806292
+  url: https://github.com/Nicolas-Formenton/qwen3.8-27b-finetune-eval/blob/main/docs/FAILURES.md
+  title: Qwen tool-evaluation harness failures
+  publisher: Nicolas Formenton
+  source_type: practitioner
+  published_at: null
+  accessed_at: '2026-10-08'
+  claim_scope:
+  - Reported retail NL-judge failure and proposed patch; excludes retail from clean outcome support.
+  limitations:
+  - A documented patch does not verify the final retail grading configuration or corrected result.
+- id: src-ffa9846b4379
+  url: https://github.com/sierra-research/tau2-bench/blob/main/docs/evaluation.md
+  title: Tau outcome scoring documentation
+  publisher: Sierra Research
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-08'
+  claim_scope:
+  - DB and communication outcome scoring; matching reference tool-call trajectories is not required.
+  limitations:
+  - Rolling upstream documentation; evaluator benchmark commit remains unknown. Not a separate model evaluation.

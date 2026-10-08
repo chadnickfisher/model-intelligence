@@ -93,9 +93,9 @@ Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
 ### Agent.tool_use (low confidence)
 
-Base Qwen3.8-27B supports tool-use evaluation with substantial refusal and multi-turn gaps; adapter results do not transfer to the base.
+Useful structured-tool decisions and simulated airline outcomes coexist with material missing-information and multi-turn limitations; substantial checking is required.
 
-Scope: direct / conditional. Exact base-checkpoint tool decisions in one reproducible setup.
+Scope: direct / conditional. Exact base-model structured-tool evidence in one local BF16 setup; evaluated revision unpinned.
 
 Direct task IDs: agent.tool_use
 
@@ -103,15 +103,15 @@ Related task IDs (navigation only): Not established in this pass
 
 Judgment ID: judgment-159ca9252e0e8eff
 
-Conditions: BF16, one AMD MI300X 192GB; vLLM ROCm, qwen3_xml parser, reasoning enabled, temperature 0.001, seed 300.
+Conditions: Base BF16 on one AMD MI300X 192GB; vLLM ROCm with qwen3_xml; no adapters.; BFCL reasoning enabled, temperature 0.001, seed 300; these settings are not established for every tau run.; Local experimental serving, not an assessed commercial access route.
 
-Failure modes / limitations: Aggregate function-calling accuracy hides refusal and missing-parameter weaknesses.
+Failure modes / limitations: Missing-parameter and multi-turn cases remain material weaknesses.; Timeout, authorization and rollback recovery are not established.
 
-Supporting sources: [Qwen3.8-27B base and fine-tune tool-use evaluation](https://github.com/Nicolas-Formenton/qwen3.8-27b-finetune-eval)
+Supporting sources: [Qwen3.8-27B base and fine-tune tool-use evaluation](https://github.com/Nicolas-Formenton/qwen3.8-27b-finetune-eval) · [Qwen3.8-27B tau simulation summary](https://raw.githubusercontent.com/Nicolas-Formenton/qwen3.8-27b-finetune-eval/main/results/tau3-summary.json) · [Tau outcome scoring documentation](https://github.com/sierra-research/tau2-bench/blob/main/docs/evaluation.md)
 
-Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+Contradictory or limiting sources: [Qwen tool-evaluation harness failures](https://github.com/Nicolas-Formenton/qwen3.8-27b-finetune-eval/blob/main/docs/FAILURES.md)
 
-Evidence notes: One hardware configuration and seed; measurement date and immutable base revision not pinned.
+Evidence notes: One evaluator; model revision, benchmark pins and measurement dates unknown.; Airline outcome reward does not prove every intermediate action correct. Retail results withheld because final judge/patch configuration is unresolved.
 
 ## Specifications
 
@@ -171,4 +171,4 @@ Local conditions: Batch 1, short/moderate context unless otherwise stated.; Weig
 
 ## Sources
 
-[Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) · [Qwen3.8-27B model card](https://huggingface.co/Qwen/Qwen3.8-27B) · [Single-R9700 Qwen3.8 comparison](https://www.reddit.com/r/Qwen_AI/comments/1wxshto/qwen3827b_vs_qwen38flashnext_as_agent_workers_on/) · [Qwen3.8 27B xhigh independently profiled](https://artificialanalysis.ai/models/qwen3-8-27b)
+[Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) · [Qwen3.8-27B model card](https://huggingface.co/Qwen/Qwen3.8-27B) · [Single-R9700 Qwen3.8 comparison](https://www.reddit.com/r/Qwen_AI/comments/1wxshto/qwen3827b_vs_qwen38flashnext_as_agent_workers_on/) · [Qwen3.8 27B xhigh independently profiled](https://artificialanalysis.ai/models/qwen3-8-27b) · [Qwen3.8-27B base and fine-tune tool-use evaluation](https://github.com/Nicolas-Formenton/qwen3.8-27b-finetune-eval) · [Qwen3.8-27B tau simulation summary](https://raw.githubusercontent.com/Nicolas-Formenton/qwen3.8-27b-finetune-eval/main/results/tau3-summary.json) · [Qwen tool-evaluation harness failures](https://github.com/Nicolas-Formenton/qwen3.8-27b-finetune-eval/blob/main/docs/FAILURES.md) · [Tau outcome scoring documentation](https://github.com/sierra-research/tau2-bench/blob/main/docs/evaluation.md)

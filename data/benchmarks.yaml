@@ -4396,3 +4396,375 @@ records:
   - No repository-wide context or execution-based behavioral validation.
   evidence_notes:
   - Paper publication is not measurement date; preference agreement does not establish deep design judgment.
+- schema_version: '1.0'
+  id: benchmark-007310554f9ad9a1
+  model_id: phi-4-multimodal-instruct
+  judgment_ids:
+  - judgment-2d69fe2e03e66c8c
+  benchmark:
+    name: DocVQA
+    version: null
+    metric: creator-reported visual-question score
+    unit: reported score
+    direction: higher
+  value: 93.2
+  model_version: Phi-4-multimodal-instruct; immutable revision unknown
+  harness: Creator internal zero-shot vision platform; full version unknown
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-08'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-29885c43e537
+  conditions:
+  - English image-plus-text questions; zero-shot prompts on the creator internal evaluation platform.
+  - Dataset images; API formatting and JPEG conversion where interfaces require it; shared answer extraction.
+  - Native model assessment; no specific provider route or quantized deployment assessed.
+  limitations:
+  - Vendor-only; metric formula, benchmark revision, immutable model revision, measurement date and full decoding
+    setup not established.
+  evidence_notes:
+  - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
+- schema_version: '1.0'
+  id: benchmark-1009920600cb96da
+  model_id: phi-4-multimodal-instruct
+  judgment_ids:
+  - judgment-2d69fe2e03e66c8c
+  benchmark:
+    name: ChartQA
+    version: null
+    metric: creator-reported visual-question score
+    unit: reported score
+    direction: higher
+  value: 81.4
+  model_version: Phi-4-multimodal-instruct; immutable revision unknown
+  harness: Creator internal zero-shot vision platform; full version unknown
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-08'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-29885c43e537
+  conditions:
+  - English image-plus-text questions; zero-shot prompts on the creator internal evaluation platform.
+  - Dataset images; API formatting and JPEG conversion where interfaces require it; shared answer extraction.
+  - Native model assessment; no specific provider route or quantized deployment assessed.
+  limitations:
+  - Vendor-only; metric formula, benchmark revision, immutable model revision, measurement date and full decoding
+    setup not established.
+  evidence_notes:
+  - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
+- schema_version: '1.0'
+  id: benchmark-4a89dd24cdf91c76
+  model_id: phi-4-multimodal-instruct
+  judgment_ids:
+  - judgment-2d69fe2e03e66c8c
+  benchmark:
+    name: TextVQA (val)
+    version: null
+    metric: creator-reported visual-question score
+    unit: reported score
+    direction: higher
+  value: 75.6
+  model_version: Phi-4-multimodal-instruct; immutable revision unknown
+  harness: Creator internal zero-shot vision platform; full version unknown
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-08'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-29885c43e537
+  conditions:
+  - English image-plus-text questions; zero-shot prompts on the creator internal evaluation platform.
+  - Dataset images; API formatting and JPEG conversion where interfaces require it; shared answer extraction.
+  - Native model assessment; no specific provider route or quantized deployment assessed.
+  limitations:
+  - Vendor-only; metric formula, benchmark revision, immutable model revision, measurement date and full decoding
+    setup not established.
+  evidence_notes:
+  - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
+- schema_version: '1.0'
+  id: benchmark-674da69746ce8de9
+  model_id: phi-4-multimodal-instruct
+  judgment_ids:
+  - judgment-2d69fe2e03e66c8c
+  benchmark:
+    name: BLINK Counting
+    version: null
+    metric: creator-reported visual-question score
+    unit: reported score
+    direction: higher
+  value: 60.0
+  model_version: Phi-4-multimodal-instruct; immutable revision unknown
+  harness: Creator internal zero-shot vision platform; full version unknown
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-08'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-29885c43e537
+  conditions:
+  - English image-plus-text questions; zero-shot prompts on the creator internal evaluation platform.
+  - Dataset images; API formatting and JPEG conversion where interfaces require it; shared answer extraction.
+  - Native model assessment; no specific provider route or quantized deployment assessed.
+  limitations:
+  - Vendor-only; metric formula, benchmark revision, immutable model revision, measurement date and full decoding
+    setup not established.
+  evidence_notes:
+  - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
+- schema_version: '1.0'
+  id: benchmark-c86abee3d15f29a3
+  model_id: phi-4-multimodal-instruct
+  judgment_ids:
+  - judgment-2d69fe2e03e66c8c
+  benchmark:
+    name: BLINK Spatial Relation
+    version: null
+    metric: creator-reported visual-question score
+    unit: reported score
+    direction: higher
+  value: 72.7
+  model_version: Phi-4-multimodal-instruct; immutable revision unknown
+  harness: Creator internal zero-shot vision platform; full version unknown
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-08'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-29885c43e537
+  conditions:
+  - English image-plus-text questions; zero-shot prompts on the creator internal evaluation platform.
+  - Dataset images; API formatting and JPEG conversion where interfaces require it; shared answer extraction.
+  - Native model assessment; no specific provider route or quantized deployment assessed.
+  limitations:
+  - Vendor-only; metric formula, benchmark revision, immutable model revision, measurement date and full decoding
+    setup not established.
+  evidence_notes:
+  - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
+- schema_version: '1.0'
+  id: benchmark-d0e9c582333c75dc
+  model_id: phi-4-multimodal-instruct
+  judgment_ids:
+  - judgment-2d69fe2e03e66c8c
+  benchmark:
+    name: BLINK Functional Correspondence
+    version: null
+    metric: creator-reported visual-question score
+    unit: reported score
+    direction: higher
+  value: 30.0
+  model_version: Phi-4-multimodal-instruct; immutable revision unknown
+  harness: Creator internal zero-shot vision platform; full version unknown
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-08'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-29885c43e537
+  conditions:
+  - English image-plus-text questions; zero-shot prompts on the creator internal evaluation platform.
+  - Dataset images; API formatting and JPEG conversion where interfaces require it; shared answer extraction.
+  - Native model assessment; no specific provider route or quantized deployment assessed.
+  limitations:
+  - Vendor-only; metric formula, benchmark revision, immutable model revision, measurement date and full decoding
+    setup not established.
+  evidence_notes:
+  - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
+- schema_version: '1.0'
+  id: benchmark-a4fca5424eb2ac82
+  model_id: qwen3-8-27b
+  judgment_ids:
+  - judgment-159ca9252e0e8eff
+  benchmark:
+    name: BFCL
+    version: v4
+    metric: Multi-turn base
+    unit: percent
+    direction: higher
+  value: 69.0
+  model_version: Qwen3.8-27B base; immutable revision unknown
+  harness: BFCL fine-tune handler; vLLM ROCm qwen3_xml
+  effort: reasoning enabled
+  provider_id: null
+  tools:
+  - Benchmark tool schemas
+  measured_at: null
+  observed_at: '2026-10-08'
+  evidence_class: independent_quality
+  source_ids:
+  - src-7e4211d2e766
+  conditions:
+  - Base BF16 on one AMD MI300X 192GB; vLLM ROCm with qwen3_xml; no adapters.
+  - BFCL reasoning enabled, temperature 0.001, seed 300; these settings are not established for every tau run.
+  limitations:
+  - Single evaluator; no independent replication, immutable revision, benchmark commit or measurement date.
+  evidence_notes:
+  - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
+- schema_version: '1.0'
+  id: benchmark-9171c17896de7147
+  model_id: qwen3-8-27b
+  judgment_ids:
+  - judgment-159ca9252e0e8eff
+  benchmark:
+    name: BFCL
+    version: v4
+    metric: Multi-turn long context
+    unit: percent
+    direction: higher
+  value: 62.0
+  model_version: Qwen3.8-27B base; immutable revision unknown
+  harness: BFCL fine-tune handler; vLLM ROCm qwen3_xml
+  effort: reasoning enabled
+  provider_id: null
+  tools:
+  - Benchmark tool schemas
+  measured_at: null
+  observed_at: '2026-10-08'
+  evidence_class: independent_quality
+  source_ids:
+  - src-7e4211d2e766
+  conditions:
+  - Base BF16 on one AMD MI300X 192GB; vLLM ROCm with qwen3_xml; no adapters.
+  - BFCL reasoning enabled, temperature 0.001, seed 300; these settings are not established for every tau run.
+  limitations:
+  - Single evaluator; no independent replication, immutable revision, benchmark commit or measurement date.
+  evidence_notes:
+  - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
+- schema_version: '1.0'
+  id: benchmark-042d66b579f03d25
+  model_id: qwen3-8-27b
+  judgment_ids:
+  - judgment-159ca9252e0e8eff
+  benchmark:
+    name: BFCL
+    version: v4
+    metric: Multi-turn missing function
+    unit: percent
+    direction: higher
+  value: 65.5
+  model_version: Qwen3.8-27B base; immutable revision unknown
+  harness: BFCL fine-tune handler; vLLM ROCm qwen3_xml
+  effort: reasoning enabled
+  provider_id: null
+  tools:
+  - Benchmark tool schemas
+  measured_at: null
+  observed_at: '2026-10-08'
+  evidence_class: independent_quality
+  source_ids:
+  - src-7e4211d2e766
+  conditions:
+  - Base BF16 on one AMD MI300X 192GB; vLLM ROCm with qwen3_xml; no adapters.
+  - BFCL reasoning enabled, temperature 0.001, seed 300; these settings are not established for every tau run.
+  limitations:
+  - Single evaluator; no independent replication, immutable revision, benchmark commit or measurement date.
+  evidence_notes:
+  - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
+- schema_version: '1.0'
+  id: benchmark-6480081e92794dc0
+  model_id: qwen3-8-27b
+  judgment_ids:
+  - judgment-159ca9252e0e8eff
+  benchmark:
+    name: BFCL
+    version: v4
+    metric: Multi-turn missing parameter
+    unit: percent
+    direction: higher
+  value: 52.0
+  model_version: Qwen3.8-27B base; immutable revision unknown
+  harness: BFCL fine-tune handler; vLLM ROCm qwen3_xml
+  effort: reasoning enabled
+  provider_id: null
+  tools:
+  - Benchmark tool schemas
+  measured_at: null
+  observed_at: '2026-10-08'
+  evidence_class: independent_quality
+  source_ids:
+  - src-7e4211d2e766
+  conditions:
+  - Base BF16 on one AMD MI300X 192GB; vLLM ROCm with qwen3_xml; no adapters.
+  - BFCL reasoning enabled, temperature 0.001, seed 300; these settings are not established for every tau run.
+  limitations:
+  - Single evaluator; no independent replication, immutable revision, benchmark commit or measurement date.
+  evidence_notes:
+  - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
+- schema_version: '1.0'
+  id: benchmark-76cdd303fc031ac0
+  model_id: qwen3-8-27b
+  judgment_ids:
+  - judgment-159ca9252e0e8eff
+  benchmark:
+    name: Tau airline
+    version: null
+    metric: full-reward simulations; 4 trials
+    unit: simulations
+    direction: higher
+  value: 66/80
+  model_version: Qwen3.8-27B base; immutable revision unknown
+  harness: Evaluator-labelled tau3 simulation; exact benchmark commit unknown
+  effort: null
+  provider_id: null
+  tools:
+  - Benchmark tool schemas
+  measured_at: null
+  observed_at: '2026-10-08'
+  evidence_class: independent_quality
+  source_ids:
+  - src-5ff6ea88e709
+  - src-7e4211d2e766
+  - src-ffa9846b4379
+  conditions:
+  - Base BF16 on one AMD MI300X 192GB; vLLM ROCm with qwen3_xml; no adapters.
+  - 4 repeated trials; distinct run block, not unique independently sampled tasks.
+  limitations:
+  - Do not pool blocks. Outcome reward does not prove every intermediate action correct.
+  - Version, simulator identity and decoding are not fully pinned; retail judge results excluded.
+  evidence_notes:
+  - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
+- schema_version: '1.0'
+  id: benchmark-64886fc50f867f84
+  model_id: qwen3-8-27b
+  judgment_ids:
+  - judgment-159ca9252e0e8eff
+  benchmark:
+    name: Tau airline
+    version: null
+    metric: full-reward simulations; 3 trials
+    unit: simulations
+    direction: higher
+  value: 46/54
+  model_version: Qwen3.8-27B base; immutable revision unknown
+  harness: Evaluator-labelled tau3 simulation; exact benchmark commit unknown
+  effort: null
+  provider_id: null
+  tools:
+  - Benchmark tool schemas
+  measured_at: null
+  observed_at: '2026-10-08'
+  evidence_class: independent_quality
+  source_ids:
+  - src-5ff6ea88e709
+  - src-7e4211d2e766
+  - src-ffa9846b4379
+  conditions:
+  - Base BF16 on one AMD MI300X 192GB; vLLM ROCm with qwen3_xml; no adapters.
+  - 3 repeated trials; distinct run block, not unique independently sampled tasks.
+  limitations:
+  - Do not pool blocks. Outcome reward does not prove every intermediate action correct.
+  - Version, simulator identity and decoding are not fully pinned; retail judge results excluded.
+  evidence_notes:
+  - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.

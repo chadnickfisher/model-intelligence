@@ -9565,3 +9565,141 @@ records:
     canonical_path: data/task-assessments.yaml
     operation: add
   id: change-fd9f2e5bef2e3d49
+- observed_at: '2026-10-08'
+  summary: Add explicit task suitability with separate evidence confidence for tool use, summarization and
+    visual questions; retain Unknown debugging quality, exact setup limits and focused coverage gaps.
+  evidence_ids:
+  - src-29885c43e537
+  - src-404846cf4d6a
+  - src-7e4211d2e766
+  - src-bfdf4f90e154
+  changed_entities:
+  - entity_type: benchmark
+    entity_id: benchmark-007310554f9ad9a1
+    canonical_path: data/benchmarks.yaml
+    operation: add
+  - entity_type: benchmark
+    entity_id: benchmark-042d66b579f03d25
+    canonical_path: data/benchmarks.yaml
+    operation: add
+  - entity_type: benchmark
+    entity_id: benchmark-1009920600cb96da
+    canonical_path: data/benchmarks.yaml
+    operation: add
+  - entity_type: benchmark
+    entity_id: benchmark-4a89dd24cdf91c76
+    canonical_path: data/benchmarks.yaml
+    operation: add
+  - entity_type: benchmark
+    entity_id: benchmark-6480081e92794dc0
+    canonical_path: data/benchmarks.yaml
+    operation: add
+  - entity_type: benchmark
+    entity_id: benchmark-64886fc50f867f84
+    canonical_path: data/benchmarks.yaml
+    operation: add
+  - entity_type: benchmark
+    entity_id: benchmark-674da69746ce8de9
+    canonical_path: data/benchmarks.yaml
+    operation: add
+  - entity_type: benchmark
+    entity_id: benchmark-76cdd303fc031ac0
+    canonical_path: data/benchmarks.yaml
+    operation: add
+  - entity_type: benchmark
+    entity_id: benchmark-9171c17896de7147
+    canonical_path: data/benchmarks.yaml
+    operation: add
+  - entity_type: benchmark
+    entity_id: benchmark-a4fca5424eb2ac82
+    canonical_path: data/benchmarks.yaml
+    operation: add
+  - entity_type: benchmark
+    entity_id: benchmark-c86abee3d15f29a3
+    canonical_path: data/benchmarks.yaml
+    operation: add
+  - entity_type: benchmark
+    entity_id: benchmark-d0e9c582333c75dc
+    canonical_path: data/benchmarks.yaml
+    operation: add
+  - entity_type: model
+    entity_id: claude-haiku-4-5
+    canonical_path: models/anthropic/claude-haiku-4-5/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: phi-4-multimodal-instruct
+    canonical_path: models/microsoft/phi-4-multimodal-instruct/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: qwen3-8-27b
+    canonical_path: models/alibaba-qwen/qwen3-8-27b/profile.yaml
+    operation: update
+  - entity_type: research_coverage
+    entity_id: research-coverage-claude-haiku-4-5-benchmarks
+    canonical_path: data/research-coverage.yaml
+    operation: update
+  - entity_type: research_coverage
+    entity_id: research-coverage-claude-haiku-4-5-capabilities
+    canonical_path: data/research-coverage.yaml
+    operation: update
+  - entity_type: research_coverage
+    entity_id: research-coverage-phi-4-multimodal-instruct-benchmarks
+    canonical_path: data/research-coverage.yaml
+    operation: update
+  - entity_type: research_coverage
+    entity_id: research-coverage-phi-4-multimodal-instruct-capabilities
+    canonical_path: data/research-coverage.yaml
+    operation: update
+  - entity_type: research_coverage
+    entity_id: research-coverage-qwen3-8-27b-benchmarks
+    canonical_path: data/research-coverage.yaml
+    operation: update
+  - entity_type: research_coverage
+    entity_id: research-coverage-qwen3-8-27b-capabilities
+    canonical_path: data/research-coverage.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-29885c43e537
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-5ff6ea88e709
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-61e1f4d1aadb
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-7e4211d2e766
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-8bcd64806292
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-bfdf4f90e154
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-ffa9846b4379
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-16884a12a5dee99d
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-58e4c5158dc0324c
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-853701335b39e098
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-cd9224eb0ce1b12a
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  id: change-d620a9b53297ae3b

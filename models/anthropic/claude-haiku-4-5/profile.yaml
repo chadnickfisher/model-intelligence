@@ -364,10 +364,10 @@ capabilities:
   task_ids:
   - language.summarization
   related_task_ids: []
-  assessment: conditional
+  assessment: weak
   scope_note: The measured task fits this rubric boundary; no transfer to adjacent tasks.
-  judgment: A small business summarization evaluation supports a limited, conditional conclusion; verify retained
-    facts and qualifications for the target material.
+  judgment: ORCFLO cautions against summary-heavy executive digests and meeting recaps. This supports a tentative
+    negative task-fit conclusion, with public error-level evidence unavailable.
   confidence: low
   supporting_evidence_ids:
   - src-bfdf4f90e154
@@ -378,14 +378,15 @@ capabilities:
   known_failure_modes:
   - No public full response traces, immutable serving revision or independent replication.
   evidence_notes:
-  - Low confidence reflects limited tasks, source/setup uncertainty and lack of independent replication; scores
-    do not define confidence. Empty contradictory evidence means none was located in this bounded pass.
-  observed_at: '2026-10-07'
+  - The caution is principally comparative; neither score nor cohort rank defines a suitability threshold.
+  - Five English single-turn cases and four LLM judges form one evaluation stream. Public summary-specific
+    fidelity failures and correction burden are unestablished.
+  observed_at: '2026-10-08'
   effective_from: null
   provenance:
     origin: research
-    research_batch_id: research-run-pilot-2026-10-07-v1-1
-    method: Inspected original public reports and recorded bounded searches; no inference or benchmark execution.
+    research_batch_id: research-run-task-ratings-2026-10-08
+    method: Reinspected the public summarization report and methodology; no paid report or model execution.
 - id: judgment-623c7e8d247d4615
   scope: direct
   task_ids:
@@ -549,6 +550,8 @@ evidence_ids:
 - src-f3655eaf1407
 - src-e99bd76836c1
 - src-5c510b458547
+- src-bfdf4f90e154
+- src-61e1f4d1aadb
 notes: []
 limitations:
 - Undisclosed architecture and parameter count
