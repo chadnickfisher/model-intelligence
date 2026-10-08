@@ -10,6 +10,7 @@ from explorer.data import (load, show, link, summary, filter_models, claims, sou
 from explorer.cost import estimate_runs, routes_for_price, UNITS
 from explorer.comparison import comparison_assessments, usd_text
 from explorer.comparison_cost import comparison_cost_options, estimate_unavailable_reason
+from explorer.provider_view import provider_explorer
 from tools.knowledge import ROOT, read
 from explorer.presentation import (task_card_evidence, card_watchouts, access_bullets,
                                    complete_summary, observation_summary, readable_conditions, task_assessment,
@@ -20,7 +21,7 @@ st.markdown('''<style>
 .block-container {max-width:1400px;padding-top:2rem;}
 [data-testid="stSidebar"] {background:#EFEADF;}
 [data-testid="stMetric"] {background:#D9E8DC;border-radius:12px;padding:14px;}
-[class*="st-key-model-card-"] {border-radius:14px;border-left:4px solid #24533F;background:#F0F5ED;padding:16px;}
+[class*="st-key-model-card-"], [class*="st-key-provider-card-"] {border-radius:14px;border-left:4px solid #24533F;background:#F0F5ED;padding:16px;}
 [data-testid="stMarkdownContainer"] strong {color:#24533F;}
 [data-testid="stCaptionContainer"], [data-testid="stCaptionContainer"] p {color:#365744;font-size:0.95rem;opacity:1;}
 [data-testid="stExpander"] summary {color:#24533F;font-weight:600;}
@@ -201,6 +202,8 @@ def model_detail(data,model):
     with tabs[1]:
         for r in model_routes(model,data):
             st.write(route_label(r,data));st.caption(', '.join(sorted(route_kinds(r)))+' · '+billing_summary(r,data))
+            if r['provider_id'] in data['provider']:
+                st.markdown('[Explore this provider](?view=providers&provider='+r['provider_id']+')')
             st.write('Availability: '+r['status']);st.write('Conditions: '+show(r['conditions']))
             st.write('Restrictions: '+show(r['restrictions']))
             st.caption('Account required: '+show(r['requires_account'])+' · subscription includes API: '+show(r['subscription_includes_api']))
@@ -744,7 +747,9 @@ data=cached_data(fingerprint())
 st.title('Model Intelligence')
 st.caption('A field guide to models, evidence and ways to use them.')
 st.sidebar.caption('WORKBENCH')
-page=st.sidebar.radio('Explore',['Model Explorer','Compare 2–5 Models','Capability Explorer','Cost Explorer','Recent Changes'])
+page=st.sidebar.radio('Explore',['Model Explorer','Provider Explorer','Compare 2–5 Models','Capability Explorer','Cost Explorer','Recent Changes'],
+                      index=1 if st.query_params.get('view')=='providers' else 0)
 st.sidebar.caption('Research maintenance is paused. This public guide makes no model calls.')
 {'Model Explorer':model_explorer,'Compare 2–5 Models':compare_models,'Capability Explorer':capability_explorer,
- 'Cost Explorer':cost_explorer,'Recent Changes':recent_changes}[page](data)
+ 'Cost Explorer':cost_explorer,'Recent Changes':recent_changes,
+ 'Provider Explorer':lambda d:provider_explorer(d,source_panel,model_detail,behavior_panel)}[page](data)

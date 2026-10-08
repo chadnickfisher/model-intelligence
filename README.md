@@ -66,7 +66,7 @@ python -m streamlit run streamlit_app.py --browser.gatherUsageStats false
 
 The explorer reads the same canonical YAML, with no database, copied app dataset,
 credentials, model endpoints or inference charges. It provides Model Explorer,
-Compare 2-5 Models, Capability Explorer, Cost Explorer, and Recent Changes. The
+Provider Explorer, Compare 2-5 Models, Capability Explorer, Cost Explorer, and Recent Changes. The
 Field Guide uses task-first search, readable cards, visual comparisons, evidence
 expanders and coverage counts. Confidence belongs to individual findings, not a
 model score. Missing access research is “not yet documented,” never a false
