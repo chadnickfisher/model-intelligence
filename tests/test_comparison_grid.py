@@ -4,8 +4,8 @@ from decimal import Decimal
 import pytest
 from streamlit.testing.v1 import AppTest
 
-from explorer.comparison import (comparison_assessments, comparison_offers,
-                                comparison_cost_options, estimate_unavailable_reason, usd_text)
+from explorer.comparison import comparison_assessments, comparison_offers, usd_text
+from explorer.comparison_cost import comparison_cost_options, estimate_unavailable_reason
 from explorer.data import load
 from tools.knowledge import ROOT
 

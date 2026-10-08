@@ -8,8 +8,8 @@ from explorer.data import (load, show, link, summary, filter_models, claims, sou
     task_label, judgment_label, task_coverage, behavior_findings, current_price, comparable_api_offers,
     benchmark_findings, benchmark_compatibility, confidence_trace)
 from explorer.cost import estimate_runs, routes_for_price, UNITS
-from explorer.comparison import (comparison_assessments, comparison_cost_options,
-                                 estimate_unavailable_reason, usd_text)
+from explorer.comparison import comparison_assessments, usd_text
+from explorer.comparison_cost import comparison_cost_options, estimate_unavailable_reason
 from tools.knowledge import ROOT, read
 from explorer.presentation import (task_card_evidence, card_watchouts, access_bullets,
                                    complete_summary, observation_summary, readable_conditions, task_assessment,
