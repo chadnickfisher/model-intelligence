@@ -95,6 +95,28 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: Only low-confidence, narrowly scoped evidence. No demonstrated large-repository refactoring reliability or architecture rating.; Confidence concerns this bounded claim, not a capability score.
 
+### Coding.repository_work (low confidence)
+
+Useful for supervised repository issue work under the reported coding scaffolds; substantial unresolved work requires independent acceptance checks.
+
+Scope: direct / conditional. Repository issue resolution in the creator report; not a transfer to architecture, review or frontend tasks.
+
+Direct task IDs: coding.repository_work
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-4f4f4f0cc60fcf1d
+
+Conditions: Creator report v1; exact Qwen3-Coder-Next instruction-tuned model, not its base checkpoint or quantized derivatives.; SWE-Agent, MiniSWE-Agent and OpenHands results are separate configurations; maximum 300 agent turns.; Evaluation removes remotes, branches and tags to restrict future-commit access; exact scaffold versions, inference provider, precision and measurement day remain unspecified.
+
+Failure modes / limitations: Many repository issues remain unresolved, especially in the separately measured Pro tasks.; Creator evaluations across scaffolds are not independent replications or evidence of every local deployment.
+
+Supporting sources: [Qwen3-Coder-Next technical report v1](https://arxiv.org/html/2603.00729v1)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Vendor-only quality evidence; no independently matched replication. Model-card evaluation badges show different Pro values and are not merged with versioned report results.
+
 ## Specifications
 
 | Field | Recorded value |

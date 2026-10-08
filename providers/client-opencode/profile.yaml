@@ -22,6 +22,8 @@ notes:
 - 'creator: OpenCode team'
 - 'model_creator: false'
 - 'inference_provider: false'
+- Client provider configuration and local-server support reinspected 2026-10-08; this does not establish hosted
+  entitlement or compatibility of every listed route.
 limitations:
 - Privacy/data-use details were not fully verified in this baseline.
 - Exact public or account-specific quotas were not established.

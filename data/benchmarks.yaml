@@ -4768,3 +4768,299 @@ records:
   - Version, simulator identity and decoding are not fully pinned; retail judge results excluded.
   evidence_notes:
   - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
+- schema_version: '1.0'
+  id: benchmark-5fcca907c5057b55
+  model_id: qwen3-coder-next
+  judgment_ids:
+  - judgment-4f4f4f0cc60fcf1d
+  benchmark:
+    name: SWE-Bench Verified
+    version: null
+    metric: issues resolved
+    unit: percent
+    direction: higher
+  value: 70.6
+  model_version: Qwen3-Coder-Next instruction-tuned; report v1
+  harness: SWE-Agent
+  effort: non-thinking model
+  provider_id: null
+  tools:
+  - repository agent tools
+  measured_at: null
+  observed_at: '2026-10-08'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-9db8db09d4ca
+  conditions:
+  - Creator report v1; exact Qwen3-Coder-Next instruction-tuned model, not its base checkpoint or quantized
+    derivatives.
+  - SWE-Agent, MiniSWE-Agent and OpenHands results are separate configurations; maximum 300 agent turns.
+  - Evaluation removes remotes, branches and tags to restrict future-commit access; exact scaffold versions,
+    inference provider, precision and measurement day remain unspecified.
+  limitations:
+  - Many repository issues remain unresolved, especially in the separately measured Pro tasks.
+  - Creator evaluations across scaffolds are not independent replications or evidence of every local deployment.
+  - Exact scaffold revision, tool inventory, precision, provider and measurement date not supplied by the inspected
+    table/setup.
+  evidence_notes:
+  - Creator report tables 3/4; task suites and scaffolds remain separate. No cross-model universal ranking
+    is inferred.
+- schema_version: '1.0'
+  id: benchmark-3d3f6edff769b89a
+  model_id: qwen3-coder-next
+  judgment_ids:
+  - judgment-4f4f4f0cc60fcf1d
+  benchmark:
+    name: SWE-Bench Verified
+    version: null
+    metric: issues resolved
+    unit: percent
+    direction: higher
+  value: 71.1
+  model_version: Qwen3-Coder-Next instruction-tuned; report v1
+  harness: MiniSWE-Agent
+  effort: non-thinking model
+  provider_id: null
+  tools:
+  - repository agent tools
+  measured_at: null
+  observed_at: '2026-10-08'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-9db8db09d4ca
+  conditions:
+  - Creator report v1; exact Qwen3-Coder-Next instruction-tuned model, not its base checkpoint or quantized
+    derivatives.
+  - SWE-Agent, MiniSWE-Agent and OpenHands results are separate configurations; maximum 300 agent turns.
+  - Evaluation removes remotes, branches and tags to restrict future-commit access; exact scaffold versions,
+    inference provider, precision and measurement day remain unspecified.
+  limitations:
+  - Many repository issues remain unresolved, especially in the separately measured Pro tasks.
+  - Creator evaluations across scaffolds are not independent replications or evidence of every local deployment.
+  - Exact scaffold revision, tool inventory, precision, provider and measurement date not supplied by the inspected
+    table/setup.
+  evidence_notes:
+  - Creator report tables 3/4; task suites and scaffolds remain separate. No cross-model universal ranking
+    is inferred.
+- schema_version: '1.0'
+  id: benchmark-8369223442250f8b
+  model_id: qwen3-coder-next
+  judgment_ids:
+  - judgment-4f4f4f0cc60fcf1d
+  benchmark:
+    name: SWE-Bench Verified
+    version: null
+    metric: issues resolved
+    unit: percent
+    direction: higher
+  value: 71.3
+  model_version: Qwen3-Coder-Next instruction-tuned; report v1
+  harness: OpenHands
+  effort: non-thinking model
+  provider_id: null
+  tools:
+  - repository agent tools
+  measured_at: null
+  observed_at: '2026-10-08'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-9db8db09d4ca
+  conditions:
+  - Creator report v1; exact Qwen3-Coder-Next instruction-tuned model, not its base checkpoint or quantized
+    derivatives.
+  - SWE-Agent, MiniSWE-Agent and OpenHands results are separate configurations; maximum 300 agent turns.
+  - Evaluation removes remotes, branches and tags to restrict future-commit access; exact scaffold versions,
+    inference provider, precision and measurement day remain unspecified.
+  limitations:
+  - Many repository issues remain unresolved, especially in the separately measured Pro tasks.
+  - Creator evaluations across scaffolds are not independent replications or evidence of every local deployment.
+  - Exact scaffold revision, tool inventory, precision, provider and measurement date not supplied by the inspected
+    table/setup.
+  evidence_notes:
+  - Creator report tables 3/4; task suites and scaffolds remain separate. No cross-model universal ranking
+    is inferred.
+- schema_version: '1.0'
+  id: benchmark-7da0f1c91ce97511
+  model_id: qwen3-coder-next
+  judgment_ids:
+  - judgment-4f4f4f0cc60fcf1d
+  benchmark:
+    name: SWE-Bench Multilingual
+    version: null
+    metric: issues resolved
+    unit: percent
+    direction: higher
+  value: 62.8
+  model_version: Qwen3-Coder-Next instruction-tuned; report v1
+  harness: SWE-Agent
+  effort: non-thinking model
+  provider_id: null
+  tools:
+  - repository agent tools
+  measured_at: null
+  observed_at: '2026-10-08'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-9db8db09d4ca
+  conditions:
+  - Creator report v1; exact Qwen3-Coder-Next instruction-tuned model, not its base checkpoint or quantized
+    derivatives.
+  - SWE-Agent, MiniSWE-Agent and OpenHands results are separate configurations; maximum 300 agent turns.
+  - Evaluation removes remotes, branches and tags to restrict future-commit access; exact scaffold versions,
+    inference provider, precision and measurement day remain unspecified.
+  limitations:
+  - Many repository issues remain unresolved, especially in the separately measured Pro tasks.
+  - Creator evaluations across scaffolds are not independent replications or evidence of every local deployment.
+  - Exact scaffold revision, tool inventory, precision, provider and measurement date not supplied by the inspected
+    table/setup.
+  evidence_notes:
+  - Creator report tables 3/4; task suites and scaffolds remain separate. No cross-model universal ranking
+    is inferred.
+- schema_version: '1.0'
+  id: benchmark-85a4d35cb41d1c01
+  model_id: qwen3-coder-next
+  judgment_ids:
+  - judgment-4f4f4f0cc60fcf1d
+  benchmark:
+    name: SWE-Bench Multilingual
+    version: null
+    metric: issues resolved
+    unit: percent
+    direction: higher
+  value: 56.2
+  model_version: Qwen3-Coder-Next instruction-tuned; report v1
+  harness: MiniSWE-Agent
+  effort: non-thinking model
+  provider_id: null
+  tools:
+  - repository agent tools
+  measured_at: null
+  observed_at: '2026-10-08'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-9db8db09d4ca
+  conditions:
+  - Creator report v1; exact Qwen3-Coder-Next instruction-tuned model, not its base checkpoint or quantized
+    derivatives.
+  - SWE-Agent, MiniSWE-Agent and OpenHands results are separate configurations; maximum 300 agent turns.
+  - Evaluation removes remotes, branches and tags to restrict future-commit access; exact scaffold versions,
+    inference provider, precision and measurement day remain unspecified.
+  limitations:
+  - Many repository issues remain unresolved, especially in the separately measured Pro tasks.
+  - Creator evaluations across scaffolds are not independent replications or evidence of every local deployment.
+  - Exact scaffold revision, tool inventory, precision, provider and measurement date not supplied by the inspected
+    table/setup.
+  evidence_notes:
+  - Creator report tables 3/4; task suites and scaffolds remain separate. No cross-model universal ranking
+    is inferred.
+- schema_version: '1.0'
+  id: benchmark-f27c7f9fb61c1631
+  model_id: qwen3-coder-next
+  judgment_ids:
+  - judgment-4f4f4f0cc60fcf1d
+  benchmark:
+    name: SWE-Bench Multilingual
+    version: null
+    metric: issues resolved
+    unit: percent
+    direction: higher
+  value: 64.3
+  model_version: Qwen3-Coder-Next instruction-tuned; report v1
+  harness: OpenHands
+  effort: non-thinking model
+  provider_id: null
+  tools:
+  - repository agent tools
+  measured_at: null
+  observed_at: '2026-10-08'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-9db8db09d4ca
+  conditions:
+  - Creator report v1; exact Qwen3-Coder-Next instruction-tuned model, not its base checkpoint or quantized
+    derivatives.
+  - SWE-Agent, MiniSWE-Agent and OpenHands results are separate configurations; maximum 300 agent turns.
+  - Evaluation removes remotes, branches and tags to restrict future-commit access; exact scaffold versions,
+    inference provider, precision and measurement day remain unspecified.
+  limitations:
+  - Many repository issues remain unresolved, especially in the separately measured Pro tasks.
+  - Creator evaluations across scaffolds are not independent replications or evidence of every local deployment.
+  - Exact scaffold revision, tool inventory, precision, provider and measurement date not supplied by the inspected
+    table/setup.
+  evidence_notes:
+  - Creator report tables 3/4; task suites and scaffolds remain separate. No cross-model universal ranking
+    is inferred.
+- schema_version: '1.0'
+  id: benchmark-69a3966ddc204bab
+  model_id: qwen3-coder-next
+  judgment_ids:
+  - judgment-4f4f4f0cc60fcf1d
+  benchmark:
+    name: SWE-Bench Pro
+    version: null
+    metric: issues resolved
+    unit: percent
+    direction: higher
+  value: 42.7
+  model_version: Qwen3-Coder-Next instruction-tuned; report v1
+  harness: SWE-Agent
+  effort: non-thinking model
+  provider_id: null
+  tools:
+  - repository agent tools
+  measured_at: null
+  observed_at: '2026-10-08'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-9db8db09d4ca
+  conditions:
+  - Creator report v1; exact Qwen3-Coder-Next instruction-tuned model, not its base checkpoint or quantized
+    derivatives.
+  - SWE-Agent, MiniSWE-Agent and OpenHands results are separate configurations; maximum 300 agent turns.
+  - Evaluation removes remotes, branches and tags to restrict future-commit access; exact scaffold versions,
+    inference provider, precision and measurement day remain unspecified.
+  limitations:
+  - Many repository issues remain unresolved, especially in the separately measured Pro tasks.
+  - Creator evaluations across scaffolds are not independent replications or evidence of every local deployment.
+  - Exact scaffold revision, tool inventory, precision, provider and measurement date not supplied by the inspected
+    table/setup.
+  evidence_notes:
+  - Creator report tables 3/4; task suites and scaffolds remain separate. No cross-model universal ranking
+    is inferred.
+- schema_version: '1.0'
+  id: benchmark-79776ab68797bdf4
+  model_id: qwen3-coder-next
+  judgment_ids:
+  - judgment-4f4f4f0cc60fcf1d
+  benchmark:
+    name: SWE-Bench Pro
+    version: null
+    metric: issues resolved
+    unit: percent
+    direction: higher
+  value: 38.7
+  model_version: Qwen3-Coder-Next instruction-tuned; report v1
+  harness: MiniSWE-Agent
+  effort: non-thinking model
+  provider_id: null
+  tools:
+  - repository agent tools
+  measured_at: null
+  observed_at: '2026-10-08'
+  evidence_class: vendor_claim
+  source_ids:
+  - src-9db8db09d4ca
+  conditions:
+  - Creator report v1; exact Qwen3-Coder-Next instruction-tuned model, not its base checkpoint or quantized
+    derivatives.
+  - SWE-Agent, MiniSWE-Agent and OpenHands results are separate configurations; maximum 300 agent turns.
+  - Evaluation removes remotes, branches and tags to restrict future-commit access; exact scaffold versions,
+    inference provider, precision and measurement day remain unspecified.
+  limitations:
+  - Many repository issues remain unresolved, especially in the separately measured Pro tasks.
+  - Creator evaluations across scaffolds are not independent replications or evidence of every local deployment.
+  - Exact scaffold revision, tool inventory, precision, provider and measurement date not supplied by the inspected
+    table/setup.
+  evidence_notes:
+  - Creator report tables 3/4; task suites and scaffolds remain separate. No cross-model universal ranking
+    is inferred.

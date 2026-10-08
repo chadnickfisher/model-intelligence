@@ -39,13 +39,15 @@ def test_selected_frontend_explains_exact_match_and_changes_contextual_limits():
     assert any(m.value=='**Watch-outs**' for m in at.markdown)
     at.selectbox[0].set_value('coding.frontend').run();assert not at.exception
     fit=section(at,'**Task fit','**Watch-outs**')
-    assert 'relative preference' in fit and 'Direct task evidence' in fit and '**Confidence:**' in fit
+    assert '**Suitability:** Unknown' in fit
+    assert 'preference' in fit and 'executable interactions' in fit
+    assert '**Evidence confidence:**' not in fit
     assert 'Long local debugging chats' not in fit
     limits=section(at,'**Watch-outs**','**How to use it**')
     assert 'production-correctness' in limits and 'Empty content from turn6' not in limits
     assert any('1598 Arena rating' in m.value for m in at.markdown)
     at.selectbox[0].set_value('coding.debugging').run();assert not at.exception
-    assert 'Long local debugging chats' in section(at,'**Task fit','**Watch-outs**')
+    assert '**Suitability:** Unknown' in section(at,'**Task fit','**Watch-outs**')
     assert 'Empty content from turn6' in section(at,'**Watch-outs**','**How to use it**')
 
 
@@ -60,6 +62,7 @@ data=load()
 model=__import__('copy').deepcopy(data['model']['qwen3-8-27b'])
 model['capabilities']=[];model['limitations']=[];model['access_ids']=[];model['price_ids']=[]
 data['access_coverage']={};data['benchmark']={};data['behavior']={}
+data['task_assessment']={}
 model_card(data,model,'coding.frontend',details=False)
 '''
     empty=AppTest.from_string(code,default_timeout=30).run();assert not empty.exception

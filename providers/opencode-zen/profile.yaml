@@ -41,4 +41,7 @@ evidence_ids:
 notes:
 - Zen prepaid PAYG charges card fees; optional auto-reload defaults documented as $20 below $5. Monthly usage
   cap and cash charged can differ.
+- Zen is an optional gateway with API access and PAYG billing; Go and Go Plus are separately documented coding-traffic
+  subscriptions. These product distinctions were reinspected 2026-10-08; other provider fields retain their
+  earlier verification scope.
 limitations: []

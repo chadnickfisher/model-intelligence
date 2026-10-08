@@ -4,6 +4,28 @@ The future MCP layer reads canonical records and returns stable IDs, source refe
 
 Queries: get_model(id), get_provider(id), compare_models(ids, task, conditions), find_models(task, suitability, minimum_confidence, modalities, local), list_access(model_id), compare_prices(model_id, region, billing_method, unit), recent_releases(since), recent_changes(since), and stale_records(as_of).
 
+## Planned provider area
+
+The application roadmap includes provider discovery and provider detail views.
+The future MCP adds `find_providers(service_type, model_id, region, billing_method)`
+and `list_provider_offers(provider_id, model_id)` alongside `get_provider(id)`.
+These are planned interfaces; a provider browser and MCP server are not yet implemented.
+
+Use canonical provider profiles, access routes and dated price records. Return
+stable provider/product IDs, supported exact models and variants, access methods,
+prices and billing units, eligibility, documented limits, privacy policies,
+reliability evidence, inspection dates, contradictions and unknowns. Link each
+offer to its actual provider, product, model and price records. Keep the existing
+model access, cost and other detail available when navigating through a provider.
+
+Include managed/serverless inference, gateways, inference subscriptions,
+dedicated endpoints and GPU/accelerator compute services. A service classification
+requires evidence; do not infer a missing route or a model's quality from the
+provider name. Separate creator, client, host, access product and service tier.
+OpenCode's client, Zen gateway and Go subscriptions illustrate these distinctions.
+Compare offers only under compatible currency, units and billing conditions;
+instance hours, tokens and monthly subscriptions retain separate denominators.
+
 Use `data/capability-taxonomy.yaml` for stable task IDs. A judgment has its own
 stable ID and keeps its conclusion, confidence, assessment, conditions, support,
 contradictions, failure modes and provenance. `task_ids` denotes direct scope;

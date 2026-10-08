@@ -35,6 +35,7 @@ Verified: 2026-10-06
 - creator: OpenCode team
 - model_creator: false
 - inference_provider: false
+- Client provider configuration and local-server support reinspected 2026-10-08; this does not establish hosted entitlement or compatibility of every listed route.
 
 ## Limitations
 

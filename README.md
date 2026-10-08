@@ -22,6 +22,7 @@ Current counts are in the [generated inventory](data/coverage.yaml). Counts indi
 - [Repository map](repo-map.yaml): canonical records and query entry points
 - [Current state and concise changes](docs/change-tracking.md): source-backed records, changelog and reproducible Git baselines
 - [Current task assessments](data/task-assessments.yaml): applicability, evidence and uncertainty
+- [Research schedule](docs/research-schedule.md): planned weekly groups and daily research tracks; recurring execution is paused
 
 ## What is canonical?
 

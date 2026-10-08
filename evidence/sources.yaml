@@ -276,8 +276,10 @@ records:
   publisher: null
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-06'
-  claim_scope: []
+  accessed_at: '2026-10-08'
+  claim_scope:
+  - Inspected client provider configuration and local-server support only; every listed provider and compatibility
+    claim was not audited.
   limitations: []
 - id: src-147450d232b3
   url: https://huggingface.co/microsoft/Phi-4-mini-instruct
@@ -581,8 +583,10 @@ records:
   publisher: null
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-06'
-  claim_scope: []
+  accessed_at: '2026-10-08'
+  claim_scope:
+  - Inspected separate Go/Go Plus subscriptions, coding-client restrictions and usage windows; no account-specific
+    availability check.
   limitations: []
 - id: src-3930e8dede76
   url: https://help.openai.com/en/articles/6825453-chatgpt-release-notes
@@ -1247,10 +1251,12 @@ records:
   publisher: null
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-07'
+  accessed_at: '2026-10-08'
   claim_scope:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Dated post-launch finding; retain its model, client, service or runtime scope.
+  - Inspected exact Qwen3-Coder-Next identity, non-thinking mode and evaluation links; card badges do not replace
+    versioned report setups.
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
@@ -1328,9 +1334,11 @@ records:
   publisher: null
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-07'
+  accessed_at: '2026-10-08'
   claim_scope:
   - Exact grok-4.7 gateway alias, Responses endpoint and <=200K/>200K tariffs.
+  - Inspected optional Zen gateway identity, separate APIs/billing, and route-specific privacy exceptions;
+    no account entitlement or comprehensive price recheck.
   limitations: []
 - id: src-775e6c7ffc21
   url: https://console.groq.com/docs/model/openai/gpt-oss-120b
@@ -1630,11 +1638,13 @@ records:
   publisher: Cohere
   source_type: primary
   published_at: '2026-09-30'
-  accessed_at: '2026-10-07'
+  accessed_at: '2026-10-08'
   claim_scope:
   - Dated post-launch finding; retain its model, client, service or runtime scope.
   - GA API, Model Vault, Azure and SageMaker; text vs image token prices.
   - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
+  - Inspected exact Embed 5 Pro/Fast identities, vector representations and ViDoRe candidate-ranking measurements;
+    no full-index recall verification.
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
@@ -2590,21 +2600,25 @@ records:
   publisher: alexshpunt
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-07'
+  accessed_at: '2026-10-08'
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
+  - 'Inspected raw-GitHub methodology equivalent: byte-exact verification, weighted recovery and route/configuration
+    rollups; no compilation or semantic equivalence check.'
   limitations:
-  - First and final exactness differ; verifier feedback is adaptive, not independent retry. Methodology
-    and dataset views can change.
+  - First and final exactness differ; verifier feedback is adaptive, not independent retry. Methodology and
+    dataset views can change.
 - id: src-0c5ee375aae3
   url: https://github.com/alexshpunt/explicit-edit-benchmark/blob/main/docs/tasks.md
   title: Explicit Edit task definitions
   publisher: alexshpunt
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-07'
+  accessed_at: '2026-10-08'
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
+  - 'Inspected raw-GitHub task-document equivalent: fully specified generated mechanical edits and unrelated-byte
+    preservation.'
   limitations:
   - 226 deterministic mechanical edits; no diagnosis or program understanding required.
 - id: src-ad78a04807f9
@@ -2625,12 +2639,14 @@ records:
   publisher: Pawel Huryn
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-07'
+  accessed_at: '2026-10-08'
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
+  - Pinned results README inspected through its raw-GitHub equivalent; scoring and withheld-artifact limitations
+    checked. Pinned benchmark JSON was inaccessible and its values were not reverified.
   limitations:
-  - Public scores, per-bug indices, prompts and accounting; seeded repos, answer keys, model diffs and
-    judge transcripts remain withheld, limiting independent reproduction.
+  - Public scores, per-bug indices, prompts and accounting; seeded repos, answer keys, model diffs and judge
+    transcripts remain withheld, limiting independent reproduction.
 - id: src-0b72694a5dea
   url: https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/results/run-notes.md
   title: Bug Hunt Bench individual configuration caveats
@@ -2790,9 +2806,11 @@ records:
   publisher: Scale AI / SEAL
   source_type: independent-evaluation
   published_at: null
-  accessed_at: '2026-10-07'
+  accessed_at: '2026-10-08'
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
+  - Inspected refactoring test/rubric method and exact current Astra, Fable and Gemini Flash rows; stale introductory
+    prose is not the table result.
   limitations: []
 - id: src-c7eceee3e7d1
   url: https://platform.claude.com/docs/en/models/fable-5-1/whats-new-fable-5-1
@@ -2929,9 +2947,10 @@ records:
   publisher: Arena
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-07'
+  accessed_at: '2026-10-08'
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
+  - Inspected paired community-preference methodology; preference is not executable task correctness.
   limitations:
   - Preference evidence; user/task mix and harness effects require consideration.
 - id: src-a0149a24853a
@@ -3065,13 +3084,15 @@ records:
   publisher: Haroon, Khan, Gulzar / arXiv
   source_type: primary
   published_at: '2026-03-24'
-  accessed_at: '2026-10-07'
+  accessed_at: '2026-10-08'
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
+  - Inspected model inventory, passing-baseline selection and evolution method; pooled outcomes do not isolate
+    every model.
   limitations:
-  - Baseline 100% is selection, not population reliability. Six-month-old preprint; exact API snapshots,
-    quantization/effort unspecified. Gemini model label lacks Preview. Supports conditional failure-mode
-    warnings, not current cross-model ranking.
+  - Baseline 100% is selection, not population reliability. Six-month-old preprint; exact API snapshots, quantization/effort
+    unspecified. Gemini model label lacks Preview. Supports conditional failure-mode warnings, not current
+    cross-model ranking.
 - id: src-39c617007079
   url: https://arxiv.org/html/2607.02469v1
   title: 'TestEvo-Bench: An Executable and Live Benchmark for Test and Code Co-Evolution'
@@ -5765,9 +5786,11 @@ records:
   publisher: null
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-07'
+  accessed_at: '2026-10-08'
   claim_scope:
   - Exact alias, 128K context, text/images/PDF inputs and embedding outputs.
+  - Inspected exact Embed 5 Pro/Fast model IDs and supported Embed endpoint; downstream classifiers are separate
+    systems.
   limitations: []
 - id: src-9277f5b6b599
   url: https://ai.azure.com/catalog/models/Cohere-Embed-V5-Fast
@@ -6899,12 +6922,14 @@ records:
   publisher: Matthew Kutakh
   source_type: independent-evaluation
   published_at: '2026-05-26'
-  accessed_at: '2026-10-07'
+  accessed_at: '2026-10-08'
   claim_scope:
   - 1000 paired GSM-Symbolic problems; Anthropic API, temperature zero, eight-shot CoT.
+  - Inspected Haiku identity, eight-shot prompting, paired numerical-answer results and limitations; proof
+    validity not measured.
   limitations:
-  - Immutable API revision and measurement day unreported; prompt tuned in preliminary trials; familiar
-    benchmark; two collection runs.
+  - Immutable API revision and measurement day unreported; prompt tuned in preliminary trials; familiar benchmark;
+    two collection runs.
 - id: src-88ad926ffd53
   url: https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/claude-models/data-privacy
   title: 'Claude models in Foundry: data, privacy and security'
@@ -7517,3 +7542,27 @@ records:
   - DB and communication outcome scoring; matching reference tool-call trajectories is not required.
   limitations:
   - Rolling upstream documentation; evaluator benchmark commit remains unknown. Not a separate model evaluation.
+- id: src-369ed57e77f7
+  url: https://docs.cohere.com/reference/embed
+  title: Cohere Embed API v2
+  publisher: Cohere
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-08'
+  claim_scope:
+  - Native Embed output is vectors and metadata, not generated task answers; exact Embed 5 model IDs are resolved
+    through the linked model table.
+  limitations:
+  - Public documentation/report only; no model execution or provider account inspection.
+- id: src-9db8db09d4ca
+  url: https://arxiv.org/html/2603.00729v1
+  title: Qwen3-Coder-Next technical report v1
+  publisher: Qwen Team
+  source_type: primary
+  published_at: '2026-02-28'
+  accessed_at: '2026-10-08'
+  claim_scope:
+  - 'Tables 3 and 4: exact model repository issue-resolution outcomes under separate scaffolds with a 300-turn
+    maximum.'
+  limitations:
+  - Public documentation/report only; no model execution or provider account inspection.

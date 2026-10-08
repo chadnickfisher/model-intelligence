@@ -28,6 +28,7 @@ guidance:
   contributing: CONTRIBUTING.md
   schemas: schema/
   query_contract: schema/query-contract.md
+  research_schedule: docs/research-schedule.md
 query_start:
   model_lookup: data/models.yaml
   task_suitability: data/task-assessments.yaml

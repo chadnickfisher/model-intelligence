@@ -274,6 +274,39 @@ capabilities:
     research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate architecture_refactoring:R06; exact identity gates and original sources
       retained.
+- id: judgment-4f4f4f0cc60fcf1d
+  scope: direct
+  task_ids:
+  - coding.repository_work
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Repository issue resolution in the creator report; not a transfer to architecture, review or
+    frontend tasks.
+  judgment: Useful for supervised repository issue work under the reported coding scaffolds; substantial unresolved
+    work requires independent acceptance checks.
+  confidence: low
+  supporting_evidence_ids:
+  - src-9db8db09d4ca
+  contradictory_evidence_ids: []
+  conditions:
+  - Creator report v1; exact Qwen3-Coder-Next instruction-tuned model, not its base checkpoint or quantized
+    derivatives.
+  - SWE-Agent, MiniSWE-Agent and OpenHands results are separate configurations; maximum 300 agent turns.
+  - Evaluation removes remotes, branches and tags to restrict future-commit access; exact scaffold versions,
+    inference provider, precision and measurement day remain unspecified.
+  known_failure_modes:
+  - Many repository issues remain unresolved, especially in the separately measured Pro tasks.
+  - Creator evaluations across scaffolds are not independent replications or evidence of every local deployment.
+  evidence_notes:
+  - Vendor-only quality evidence; no independently matched replication. Model-card evaluation badges show different
+    Pro values and are not merged with versioned report results.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-targeted-task-evidence-2026-10-08
+    method: Inspected exact creator model card and versioned technical report tables and evaluation method;
+      no inference runs.
 performance_characteristics: []
 access_ids:
 - access-1d1b07f5250f1c91
