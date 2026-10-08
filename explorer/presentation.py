@@ -1,4 +1,6 @@
 """Readable card content from canonical findings; no new capability judgments."""
+import re
+
 from .data import claims, benchmark_findings, model_routes, route_kinds, route_label, billing_summary
 
 
@@ -32,6 +34,11 @@ def readable_conditions(values):
     administrative={'exact_named_release_effort_retained'}
     return [v.replace('arena_rows', "the source's model configuration table")
             for v in values if v not in administrative]
+
+
+def rating_bullets(text):
+    """Separate complete explanation sentences without dropping qualifications."""
+    return re.split(r'(?<=[.!?])\s+(?=[A-Z])', text.strip()) if text.strip() else []
 
 
 def card_watchouts(model, data, task=None, include_related=False):

@@ -84,7 +84,7 @@ def test_observation_summary_keeps_later_limits_and_distinguishes_published_fix(
     record['status']='fix_published'
     assert observation_summary(record).endswith('Published change; measured recovery not established.')
     at=card_app()
-    assert any(e.label.startswith('Full observation & evidence:') for e in at.expander)
+    assert any(e.label == 'Full observation & evidence' for e in at.expander)
     assert any('Current outcome unresolved.' in m.value for m in at.markdown)
     assert not any('Published change: none' in m.value or 'Published change: proposed' in m.value for m in at.markdown)
 

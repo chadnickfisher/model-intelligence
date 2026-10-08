@@ -57,8 +57,13 @@ def test_aggregate_card_preserves_visible_full_card_sections_and_prices():
     text = '\n'.join(m.value for m in at.markdown)
     task = task_section(at)
     assert '**Suitability:** Medium' in task and '**Evidence confidence:** Low' in task
-    assert 'Fictional aggregate: useful bounded workflow' in task
-    assert 'Fictional evidence rationale' in task and '**Applies to:**' in task
+    assert '**Why this rating?**' in task
+    assert '- Fictional aggregate: useful bounded workflow' in task
+    assert 'Fictional evidence rationale' not in task and '**Applies to:**' not in task
+    details = next(e for e in at.expander if e.label.startswith('Task assessment:'))
+    detail_text = '\n'.join(m.value for m in details.markdown)
+    assert 'Fictional evidence rationale' in detail_text and '**Applies to:**' in detail_text
+    assert any('Sources checked' in c.value for c in details.caption)
     assert 'Fictional third limitation must remain visible.' in text
     for section in ('**Watch-outs**', '**How to use it**', '**Price**', '**Context**',
                     '**Benchmark highlights**', '**Post-launch observations**'):
@@ -69,8 +74,10 @@ def test_aggregate_card_preserves_visible_full_card_sections_and_prices():
     assert any(t.label == 'Access & prices' for t in at.tabs)
     assert any(t.label == 'Specifications' for t in at.tabs)
     assert any(t.label == 'Behavior & gaps' for t in at.tabs)
-    # The displayed task assessment keeps its sources in the visible task section.
-    assert '**Supporting evidence**' in task and '](' in task
+    # Sources and research dates belong to details, outside the compact task section.
+    assert '**Supporting evidence**' not in task and '](' not in task
+    assert '**Supporting evidence**' in detail_text and '](' in detail_text
+    assert not any('**Checked:**' in m.value or '**Reported:**' in m.value for m in at.markdown)
     # Compare the actual existing visible content, not just its section headings.
     baseline = AppTest.from_string(app_prefix() + '''
 data=load()
@@ -96,10 +103,13 @@ def test_disputed_has_underlying_confidence_and_full_contrary_evidence():
     assert '**Suitability:** Disputed' in task
     assert '**Evidence confidence:**' not in task
     assert 'Fictional unresolved same-setup disagreement.' in task
-    assert 'Underlying finding (Medium evidence confidence)' in task
-    assert 'Underlying finding (Low evidence confidence)' in task
-    assert 'Fictional supporting conclusion.' in task and 'Fictional contrary conclusion.' in task
-    assert '**Contrary / limiting evidence**' in task
+    details = next(e for e in at.expander if e.label.startswith('Task assessment:'))
+    detail_text = '\n'.join(m.value for m in details.markdown)
+    assert 'Underlying finding' not in task
+    assert 'Underlying finding (Medium evidence confidence)' in detail_text
+    assert 'Underlying finding (Low evidence confidence)' in detail_text
+    assert 'Fictional supporting conclusion.' in detail_text and 'Fictional contrary conclusion.' in detail_text
+    assert '**Contrary / limiting evidence**' in detail_text
     assert any('Confidence belongs to the underlying findings' in c.value for c in at.caption)
 
 

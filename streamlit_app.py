@@ -9,7 +9,8 @@ from explorer.data import (load, show, link, summary, filter_models, claims, sou
 from explorer.cost import estimate_runs, routes_for_price, UNITS
 from tools.knowledge import ROOT, read
 from explorer.presentation import (task_card_evidence, card_watchouts, access_bullets,
-                                   complete_summary, observation_summary, readable_conditions, task_assessment)
+                                   complete_summary, observation_summary, readable_conditions, task_assessment,
+                                   rating_bullets)
 
 st.set_page_config(page_title='Model Intelligence · Field Guide', layout='wide')
 st.markdown('''<style>
@@ -83,10 +84,14 @@ def benchmark_highlights(data,model,task=None,related=False):
         ids={j['id'] for j in claims(model,task,related)}
         records=[b for b in records if ids.intersection(b['judgment_ids'])]
     st.markdown('**Benchmark highlights**')
+    highlights=[]
     for b in records[:2]:
-        st.write(benchmark_text(b))
-        st.write('**Evidence type:** '+b['evidence_class'].replace('_',' ')+' · **Checkpoint:** '+show(b['model_version']))
-        st.write('**Settings:** effort '+show(b['effort'])+'; harness '+show(b['harness']))
+        test=b['benchmark']
+        name=test['name']+(' '+test['version'] if test['version'] else '')
+        result=name+' — '+test['metric']+': '+show(b['value'])+' '+test['unit']
+        highlights.append('- **'+result+'** · Model: '+show(b['model_version'])+
+                          ' · Settings: effort '+show(b['effort'])+'; harness '+show(b['harness']))
+    if highlights:st.markdown('\n'.join(highlights))
     if not records:st.caption('Structured benchmark measurements not yet recorded; see source-backed findings in evidence details.')
 
 def claim_panel(data,j):
@@ -157,6 +162,7 @@ def price_summary(data,model):
     return 'Model-specific price not yet documented'
 
 def model_detail(data,model):
+    st.caption(model['identity']['creator']+' · profile checked '+model['verified_at'])
     st.markdown(f"[Canonical profile]({link(data['paths'][('model',model['id'])])}) · [Readable profile]({link(data['paths'][('model',model['id'])].replace('profile.yaml','README.md'))})")
     tabs=st.tabs(['Findings','Access & prices','Specifications','Behavior & gaps','Benchmarks'])
     with tabs[0]:
@@ -166,6 +172,7 @@ def model_detail(data,model):
             with st.expander('Task assessment: '+task_label(data,assessment['task_id'])):
                 card_fit(data,model,assessment['task_id'])
                 card_limits(data,model,assessment['task_id'])
+                task_assessment_details(data,model,assessment)
         for j in model['capabilities']+model['performance_characteristics']:
             with st.expander(judgment_label(data,j)+' · '+ASSESSMENT[j['assessment']]):claim_panel(data,j)
         if not model['capabilities'] and not assessments:st.info('Task evidence not yet curated.')
@@ -227,35 +234,40 @@ def card_fit(data,model,task,related=False):
         if aggregate['evidence_confidence']:
             label+=' · **Evidence confidence:** '+aggregate['evidence_confidence'].capitalize()
         st.write(label)
-        st.write(aggregate['rationale'])
-        st.write('**Applies to:** '+show(readable_conditions(assessment['conditions'])))
-        if aggregate['access_ids']:
-            st.write('**Assessed access:** '+show([route_label(data['access'][i],data) for i in aggregate['access_ids']]))
+        st.markdown('**Why this rating?**')
+        reasons=rating_bullets(aggregate['rationale'])
         if aggregate['conflict_rationale']:
-            st.write('**Evidence disagreement:** '+aggregate['conflict_rationale'])
-        if aggregate['suitability']=='disputed':
-            st.caption('Confidence belongs to the underlying findings; there is no aggregate confidence rating.')
-            findings,_=task_card_evidence(model,data,task)
-            for finding in findings:
-                st.write('**Underlying finding ('+finding['confidence'].capitalize()+' evidence confidence):** '+finding['judgment'])
-                if finding['conditions']:st.write('**Finding applies to:** '+show(readable_conditions(finding['conditions'])))
-        st.write('**Evidence:** '+aggregate['confidence_rationale'])
-        st.write('**Supporting evidence**');source_panel(data,aggregate['supporting_evidence_ids'])
-        if aggregate['contradictory_evidence_ids']:
-            st.write('**Contrary / limiting evidence**');source_panel(data,aggregate['contradictory_evidence_ids'])
-        st.caption('Sources checked '+assessment['checked_at']+' · assessment '+aggregate['assessed_at'])
+            reasons+=rating_bullets(aggregate['conflict_rationale'])
+        st.markdown('\n'.join('- '+reason for reason in dict.fromkeys(reasons)))
         return
     st.caption('Aggregate suitability is not yet assessed; existing findings below retain their original scope and confidence.')
     js,_=task_card_evidence(model,data,task,related)
+    st.markdown('**Why this rating?**')
     for j in js[:2]:
-        st.write(j['judgment'])
+        st.markdown('\n'.join('- '+reason for reason in rating_bullets(j['judgment'])))
         st.write('**Match:** '+('Direct task evidence' if j['scope']=='direct' else 'Related evidence; not a direct task conclusion')+
                  ' · **Assessment:** '+ASSESSMENT[j['assessment']]+' · **Confidence:** '+j['confidence'])
-        conditions=readable_conditions(j['conditions'])
-        if conditions:st.write('**Applies to:** '+show(conditions))
-        evidence=sources(data,j['supporting_evidence_ids'])
-        if evidence:st.markdown('[Supporting evidence]('+evidence[0]['url']+')')
     if not js:st.write('No task-specific finding recorded for this selection; ability remains unknown.')
+
+def task_assessment_details(data,model,assessment):
+    aggregate=assessment['aggregate']
+    st.write('**Full rating explanation:** '+aggregate['rationale'])
+    st.write('**Applies to:** '+show(readable_conditions(assessment['conditions'])))
+    if aggregate['access_ids']:
+        st.write('**Assessed access:** '+show([route_label(data['access'][i],data) for i in aggregate['access_ids']]))
+    if aggregate['conflict_rationale']:
+        st.write('**Evidence disagreement:** '+aggregate['conflict_rationale'])
+    if aggregate['suitability']=='disputed':
+        st.caption('Confidence belongs to the underlying findings; there is no aggregate confidence rating.')
+        findings,_=task_card_evidence(model,data,assessment['task_id'])
+        for finding in findings:
+            st.write('**Underlying finding ('+finding['confidence'].capitalize()+' evidence confidence):** '+finding['judgment'])
+            if finding['conditions']:st.write('**Finding applies to:** '+show(readable_conditions(finding['conditions'])))
+    st.write('**Evidence confidence reasoning:** '+aggregate['confidence_rationale'])
+    st.write('**Supporting evidence**');source_panel(data,aggregate['supporting_evidence_ids'])
+    if aggregate['contradictory_evidence_ids']:
+        st.write('**Contrary / limiting evidence**');source_panel(data,aggregate['contradictory_evidence_ids'])
+    st.caption('Sources checked '+assessment['checked_at']+' · assessment '+aggregate['assessed_at'])
 
 def card_limits(data,model,task=None,related=False):
     st.markdown('**Watch-outs**')
@@ -298,14 +310,14 @@ def card_observations(data,model):
     if bs:
         for b in bs[:2]:
             st.write(observation_summary(b))
-            st.write('**Reported:** '+(b['reported_at'] or b['observed_at'])+' · **Evidence:** '+b['fact_status']+
+            st.write('**Evidence:** '+b['fact_status']+
                      ' · **Confidence:** '+b['confidence'])
-            with st.expander('Full observation & evidence: '+(b['reported_at'] or b['observed_at'])):behavior_panel(data,b)
+            with st.expander('Full observation & evidence'):behavior_panel(data,b)
     else:st.write('No dated model finding recorded yet.')
 
 def model_card(data,model,task=None,related=False,details=True):
     with st.container(border=True,key='model-card-'+model['id']):
-        st.subheader(model['identity']['name']);st.write(model['identity']['creator']+' · **Checked:** '+model['verified_at'])
+        st.subheader(model['identity']['name']);st.write(model['identity']['creator'])
         if task:card_fit(data,model,task,related)
         card_limits(data,model,task,related)
         card_access(data,model)
@@ -392,7 +404,7 @@ def compare_models(data):
             for col,model in zip(st.columns(len(models)),models):
                 with col:
                     st.subheader(model['identity']['name'])
-                    st.caption(model['identity']['creator']+' · checked '+model['verified_at'])
+                    st.caption(model['identity']['creator'])
             # One horizontal block per field aligns rows even when finding lengths differ.
             fields=(['Task fit'] if selected_task else [])+['Watch-outs','How to use it','Price','Context','Local hardware','Post-launch behavior']
             for field in fields:
