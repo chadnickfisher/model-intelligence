@@ -84,7 +84,11 @@ provider-qualified costs for a shared text workload. Without a selected task,
 counts include only explicit High/Medium task judgments; clicking a count reveals
 those tasks and separate Low/Disputed findings. Confidence counts refer to the
 included tasks, not a model-wide rating. Missing or incompatible prices remain
-unestimated; API offer selection preserves billing conditions and exact routes.
+unestimated; cost option selection preserves billing conditions and exact routes.
+Blocked request estimates still show published API rates and a readable reason.
+Explicitly linked subscription plans and hosted compute retain their billing units
+and usage conditions; local routes show variable compute cost. Only compatible USD
+request estimates appear on the shared bar scale.
 
 Recorded benchmark highlights appear on cards and in expandable comparison details.
 Details retain metric/unit/direction, exact checkpoint, harness/effort/tools/provider,

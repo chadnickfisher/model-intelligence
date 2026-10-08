@@ -8,7 +8,8 @@ from explorer.data import (load, show, link, summary, filter_models, claims, sou
     task_label, judgment_label, task_coverage, behavior_findings, current_price, comparable_api_offers,
     benchmark_findings, benchmark_compatibility, confidence_trace)
 from explorer.cost import estimate_runs, routes_for_price, UNITS
-from explorer.comparison import comparison_assessments, comparison_offers, usd_text
+from explorer.comparison import (comparison_assessments, comparison_cost_options,
+                                 estimate_unavailable_reason, usd_text)
 from tools.knowledge import ROOT, read
 from explorer.presentation import (task_card_evidence, card_watchouts, access_bullets,
                                    complete_summary, observation_summary, readable_conditions, task_assessment,
@@ -420,28 +421,44 @@ def compare_models(data):
     summaries={m['id']:comparison_assessments(m,data,selected_task) for m in models}
     workload=st.selectbox('Cost per text request',[(10000,2000),(1000,1000),(100000,1000)],
                           format_func=lambda value:f'{value[0]:,} input + {value[1]:,} output tokens')
-    st.caption('USD · standard API · uncached text. Output includes billable reasoning tokens.')
-    offers={m['id']:comparison_offers(m,data,*workload) for m in models}
+    st.caption('Request estimates use standard USD API rates and uncached text. Output includes billable reasoning tokens. Plans and compute keep their own billing units.')
+    offers={m['id']:comparison_cost_options(m,data,*workload) for m in models}
     chosen={}
-    with st.expander('API offers'):
+    with st.expander('Cost options & conditions'):
         for model in models:
             candidates=offers[model['id']]
             if not candidates:
-                st.caption(model['identity']['name']+': no compatible standard USD text-token offer for this workload. Other offers remain in model details.')
+                st.caption(model['identity']['name']+': no documented cost option linked to an available model route.')
                 continue
-            price_id=st.selectbox('API offer — '+model['identity']['name'],[o['price_id'] for o in candidates],
-                                  format_func=lambda i:offer_label(data,data['price'][i]),key='comparison-price-'+model['id'])
-            chosen[model['id']]=next(o for o in candidates if o['price_id']==price_id)
+            option_id=st.selectbox('Cost option — '+model['identity']['name'],[o['price_id'] or 'local' for o in candidates],
+                                  format_func=lambda i:'Self-hosted · compute cost varies' if i=='local' else offer_label(data,data['price'][i]),key='comparison-price-'+model['id'])
+            option=next(o for o in candidates if (o['price_id'] or 'local')==option_id)
+            chosen[model['id']]=option
+            if option['kind']=='local':
+                st.caption('Running costs depend on hardware, hosting and workload. Weight availability does not establish free compute.')
+                continue
+            price_id=option['price_id']
             price=data['price'][price_id]
             if price['conditions']:st.caption('Conditions: '+show(price['conditions']))
-            route_names=[route_label(r,data) for r in routes_for_price(price,data['access'].values())]
+            if price['notes']:st.caption('Offer notes: '+show(price['notes']))
+            if price['region']:st.caption('Region: '+price['region'])
+            if price['included_usage']:st.caption('Included usage: '+show(price['included_usage']))
+            if price['reset_cadence']:st.caption('Reset: '+show(price['reset_cadence']))
+            if price['overage']:st.caption('Overage: '+show(price['overage']))
+            for rate in price['rates']:
+                if rate['conditions']:st.caption('Rate conditions: '+show(rate['conditions']))
+            own_routes=[data['access'][i] for i in option['route_ids']]
+            route_names=[route_label(r,data) for r in own_routes]
             st.caption('Routes: '+show(route_names))
-    max_cost=max((Decimal(o['total']) for o in chosen.values()),default=Decimal(0))
+            for route in own_routes:
+                if route['conditions']:st.caption('Access conditions: '+show(route['conditions']))
+                if route['restrictions']:st.caption('Access limits: '+show(route['restrictions']))
+    max_cost=max((Decimal(o['total']) for o in chosen.values() if o['kind']=='estimate'),default=Decimal(0))
     widths=[1.5,1.1,1.2,1.2,1.8]
     with st.container(key='comparison-grid'):
         with st.container(key='comparison-headers'):
             for col,label in zip(st.columns(widths),['Model','Task fit' if selected_task else 'Documented suitable tasks',
-                  'Evidence confidence' if selected_task else 'Confidence for suitable tasks','Access','Estimated cost']):
+                  'Evidence confidence' if selected_task else 'Confidence for suitable tasks','Access','Cost']):
                 with col:st.markdown('**'+label+'**')
         for model in models:
             record=summaries[model['id']]
@@ -483,21 +500,9 @@ def compare_models(data):
                         cells.append('<span aria-label="'+escape(kind+': '+status,quote=True)+'">'+symbol+'<small>'+label+'</small></span>')
                     st.markdown('<div class="compare-access">'+''.join(cells)+'</div>',unsafe_allow_html=True)
                 with cols[4]:
-                    comparison_mobile_label('Estimated cost')
-                    offer=chosen.get(model['id'])
-                    if offer:
-                        cost=Decimal(offer['total'])
-                        percent=float(cost/max_cost*100) if max_cost else 0
-                        price=data['price'][offer['price_id']]
-                        provider=data['provider'][price['provider_id']]['name']
-                        label=provider+' · '+(price['tier'] or price['product'] or 'Documented offer')
-                        cost_label=usd_text(cost)+' USD via '+label
-                        st.markdown('**'+usd_text(cost)+'**')
-                        st.markdown('<div class="compare-cost-track" role="img" aria-label="'+escape(cost_label,quote=True)+
-                                    '"><div class="compare-cost-fill" style="width:'+str(percent)+'%"></div></div>',unsafe_allow_html=True)
-                        st.caption(label)
-                    else:st.write('No comparable USD offer')
-    st.caption('✓ Documented access · ? Not yet documented · — Documented unavailable. Cost bars share one linear scale.')
+                    comparison_mobile_label('Cost')
+                    comparison_cost_cell(data,chosen.get(model['id']),max_cost)
+    st.caption('✓ Documented access · ? Not yet documented · — Documented unavailable. Bars compare USD request estimates only; plans and compute are not on that scale.')
     if selected_task:
         with st.expander('Why these ratings?'):
             for model in models:
@@ -513,6 +518,36 @@ def compare_models(data):
         comparison_benchmarks(data,models,selected_task,related)
     for model in models:
         with st.expander('Evidence & details: '+model['identity']['name']):model_detail(data,model)
+
+
+def comparison_cost_cell(data,option,max_cost):
+    if not option:
+        st.write('Cost not yet documented')
+        return
+    if option['kind']=='local':
+        st.write('Self-hosted');st.caption('Compute cost varies')
+        return
+    price=data['price'][option['price_id']]
+    provider=data['provider'][price['provider_id']]['name']
+    label=provider+' · '+(price['tier'] or price['product'] or 'Documented offer')
+    if option['kind']=='estimate':
+        cost=Decimal(option['total'])
+        percent=float(cost/max_cost*100) if max_cost else 0
+        cost_label=usd_text(cost)+' USD per request via '+label
+        st.markdown('**'+usd_text(cost)+'**')
+        st.markdown('<div class="compare-cost-track" role="img" aria-label="'+escape(cost_label,quote=True)+
+                    '"><div class="compare-cost-fill" style="width:'+str(percent)+'%"></div></div>',unsafe_allow_html=True)
+        st.caption('Per request · '+label)
+    else:
+        title={'api_rates':'Published API rates','subscription':'Subscription plan','compute':'Hosted compute'}[option['kind']]
+        st.markdown('**'+title+'**');st.caption(label)
+        for rate in rate_text(price).split('; '):st.write(rate)
+        if option['kind']=='api_rates':
+            st.caption('Request estimate unavailable: '+estimate_unavailable_reason(option['reasons']))
+        elif option['kind']=='subscription':
+            st.caption('Included usage: '+(show(price['included_usage']) if price['included_usage'] else 'Not yet documented'))
+            st.caption('Plan access and limits apply; this fee is not a per-request API estimate.')
+        else:st.caption('Compute billing; request cost depends on hardware and workload.')
 
 
 def comparison_mobile_label(label):

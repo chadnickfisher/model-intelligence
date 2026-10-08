@@ -4,7 +4,8 @@ from decimal import Decimal
 import pytest
 from streamlit.testing.v1 import AppTest
 
-from explorer.comparison import comparison_assessments, comparison_offers, usd_text
+from explorer.comparison import (comparison_assessments, comparison_offers,
+                                comparison_cost_options, estimate_unavailable_reason, usd_text)
 from explorer.data import load
 from tools.knowledge import ROOT
 
@@ -106,7 +107,7 @@ def test_shared_workload_updates_chosen_offers_and_zero_task_models_stay_unknown
     widget(at.selectbox,'Cost per text request').set_value((1000,1000)).run()
     assert not at.exception
     data=load()
-    price_id=widget(at.selectbox,'API offer — Claude Fable 5.1').value
+    price_id=widget(at.selectbox,'Cost option — Claude Fable 5.1').value
     offer=next(o for o in comparison_offers(data['model']['claude-fable-5-1'],data,1000,1000)
                if o['price_id']==price_id)
     assert any(m.value=='**'+usd_text(offer['total'])+'**' for m in at.markdown)
@@ -117,3 +118,67 @@ def test_shared_workload_updates_chosen_offers_and_zero_task_models_stay_unknown
     widget(at.selectbox,'Comparison task').set_value('coding.refactoring').run()
     assert not at.exception
     assert any('Not assessed' in m.value for m in at.markdown)
+
+
+def test_cost_fallbacks_require_exact_route_links_and_preserve_billing_basis():
+    data=load()
+    model=deepcopy(data['model']['qwen3-coder-next'])
+    options=comparison_cost_options(model,data,10000,2000)
+    published=next(o for o in options if o['kind']=='api_rates')
+    assert data['price'][published['price_id']]['provider_id']=='novita'
+    assert published['total'] is None
+    assert 'Provider limits' in estimate_unavailable_reason(published['reasons'])
+    assert not any(o['kind']=='subscription' for o in options)
+
+    plan=deepcopy(next(p for p in data['price'].values() if p['billing_method']=='subscription'))
+    plan.update(id='fixture-plan',provider_id='novita',included_usage=['100 requests per month'])
+    data['price'][plan['id']]=plan
+    route=deepcopy(data['access'][published['route_ids'][0]])
+    route.update(id='fixture-plan-route',methods=['subscription'],price_ids=[plan['id']])
+    data['access'][route['id']]=route
+    model['access_ids'].append(route['id'])
+    options=comparison_cost_options(model,data,10000,2000)
+    assert next(o for o in options if o['kind']=='subscription')['price_id']==plan['id']
+    assert options[-1]['kind']=='local'
+    route['provider_id']='together'
+    assert not any(o['kind']=='subscription' for o in comparison_cost_options(model,data,10000,2000))
+    route['provider_id']='novita'
+    route['availability']='unavailable'
+    assert not any(o['kind']=='subscription' for o in comparison_cost_options(model,data,10000,2000))
+    route['availability']='documented'
+    route['model_id']='different-model'
+    assert not any(o['kind']=='subscription' for o in comparison_cost_options(model,data,10000,2000))
+    route['model_id']=model['id']
+    plan['status']='historical'
+    assert not any(o['kind']=='subscription' for o in comparison_cost_options(model,data,10000,2000))
+    plan.update(status='current',billing_method='compute',model_id=model['id'])
+    route['methods']=['dedicated_host']
+    assert next(o for o in comparison_cost_options(model,data,10000,2000) if o['kind']=='compute')['total'] is None
+    plan['model_id']='different-model'
+    assert not any(o['kind']=='compute' for o in comparison_cost_options(model,data,10000,2000))
+
+
+def test_grid_shows_rates_for_blocked_estimate_and_keeps_monthly_and_local_off_bar_scale():
+    at=comparison_app()
+    assert not at.exception
+    grid=next(b for b in at.main if getattr(b,'key',None)=='comparison-grid')
+    text='\n'.join(m.value for m in grid.markdown)
+    assert 'Published API rates' in text
+    assert 'Input: 0.2 USD / per 1 million tokens' in text
+    assert any('Provider limits are not precise' in c.value for c in grid.caption)
+    assert 'No comparable USD offer' not in text
+    prefix=(ROOT/'streamlit_app.py').read_text(encoding='utf-8').split('data=cached_data(fingerprint())')[0]
+    script=prefix+'''
+data=load()
+plan=next(p for p in data['price'].values() if p['billing_method']=='subscription')
+plan['included_usage']=['100 requests per month']
+comparison_cost_cell(data,{'kind':'subscription','price_id':plan['id']},Decimal('1'))
+comparison_cost_cell(data,{'kind':'local'},Decimal('1'))
+comparison_cost_cell(data,None,Decimal('1'))
+'''
+    at=AppTest.from_string(script,default_timeout=30).run()
+    assert not at.exception
+    text='\n'.join(m.value for m in at.markdown)
+    assert 'per_month' in text and '100 requests per month' in '\n'.join(c.value for c in at.caption)
+    assert 'Self-hosted' in text and 'Cost not yet documented' in text
+    assert '<div class="compare-cost-track"' not in text
