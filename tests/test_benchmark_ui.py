@@ -21,7 +21,7 @@ data=fixture_data
     at=AppTest.from_string(script,default_timeout=30).run()
     assert not at.exception
     assert any('Benchmark highlights' in m.value for m in at.markdown)
-    at.sidebar.radio[0].set_value(at.sidebar.radio[0].options[1]).run()
+    at.sidebar.radio[0].set_value('Compare 2–5 Models').run()
     chooser=next(w for w in at.multiselect if w.label=='Models to compare')
     chooser.set_value(['gpt-6-astra','gpt-6-1-sol','ai21-jamba2-mini']).run()
     assert not at.exception
