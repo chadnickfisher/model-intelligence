@@ -30,7 +30,7 @@ guidance:
   query_contract: schema/query-contract.md
 query_start:
   model_lookup: data/models.yaml
-  task_suitability: data/capabilities.yaml
+  task_suitability: data/task-assessments.yaml
   cost_threshold: data/pricing.yaml
   provider_comparison: data/access.yaml
   local_models: data/models.yaml

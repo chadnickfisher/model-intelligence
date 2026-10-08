@@ -12,13 +12,97 @@ The unit of a useful conclusion is **model or variant × task × operating condi
 
 Source records preserve URL, title/description when known, publisher/type, publication date when known, access date, and limitations. Verification means the source was inspected; it does not mean every claim made by the source is objectively true.
 
-## Confidence
+## Task suitability policy v1
 
-- **High**: multiple credible, reasonably recent sources converge on the specific conclusion, with little material contradictory evidence.
-- **Medium**: useful evidence, but incomplete, configuration-specific, or meaningfully mixed.
-- **Low**: sparse, preliminary, old, vendor-heavy, benchmark-dependent, or contradictory evidence.
+Assess each existing task in [`data/capability-taxonomy.yaml`](data/capability-taxonomy.yaml)
+independently for each model or variant. An aggregate assessment concerns that
+specific model/task pair under its stated operating conditions and access route.
+Compare performance with the task's requirements, not a competitor's rank or an
+average of benchmark scores. A finding about another task does not transfer.
 
-These labels attach to individual task judgments, not the model as a whole. A documented specification may be reliable while practical capability remains uncertain. Initial profiles can contain few judgments rather than pretending all task categories have been evaluated.
+| Suitability | Meaning |
+| --- | --- |
+| High | Handles the core task requirements well under the stated conditions; ordinary review is sufficient. |
+| Medium | Produces useful results, with material checking, correction or workarounds required. |
+| Low | Misses core requirements enough to undermine usefulness on a supported task. |
+| Not supported | Documented capabilities rule out the task in the assessed model/setup. |
+| Disputed | Credible evidence supports materially different suitability conclusions, with no single aggregate rating justified. |
+| Unknown | Investigation has not established enough evidence to judge suitability. |
+
+Explicit task requirements remain binding: ordinary review cannot excuse failing
+a requirement for autonomous operation. Not supported needs positive evidence of
+the capability boundary. Missing research or benchmarks do not establish
+non-support or Low suitability. Distinguish native model capabilities from an
+external tool workflow and preserve provider/setup limitations. An unassessed
+model/task pair is distinct from an investigated Unknown.
+
+An aggregate assessment explains its rating, conditions, relevant direct findings,
+supporting and contrary evidence, actual source inspection dates and remaining
+gaps. Task fit explains why the rating applies; Watch-outs retains material
+limitations and disagreements, including in compact presentations. Compound or
+unresolved findings linked through `related_task_ids` provide navigation and do
+not establish a direct task endorsement. Legacy finding labels are not automatic
+aggregate suitability assignments.
+
+Task results include High, Medium, Low and Disputed by default,
+with each selectable. Not supported is an optional filter, off by default.
+Unknown and unassessed pairs are omitted from selected-task results for now;
+direct model lookup retains their evidence and gaps. A result's presence does not
+imply a positive recommendation. The application and future MCP layer use the
+same canonical assessments and task IDs. The application selects only explicitly
+curated aggregates; older findings remain available through model lookup and
+evidence navigation while the remaining assessments are curated.
+
+Task-result cards retain the model's access routes and API/subscription status,
+provider-qualified prices with billing units and conditions, context, benchmark
+highlights and dated post-launch observations alongside the task assessment.
+Full specifications, licensing, local hardware and source evidence remain
+available in the existing details view. Task suitability does not replace this
+information or combine it into a universal model score.
+
+## Evidence confidence
+
+Evidence confidence describes the strength of evidence supporting a specific
+bounded judgment. It is separate from suitability, source prestige and benchmark
+score. High suitability with Low confidence and Low suitability with High
+confidence are both valid. High, Medium, Low and Not supported assessments carry
+an evidence-confidence label:
+
+- **High**: strong evidence supports the specific conclusion, with relevant
+  identity, setup, method, dates and contradictions addressed. Task-performance
+  judgments require more than one independent evidence stream supporting the same
+  bounded conclusion; independence alone is insufficient. Clear authoritative
+  documentation for the exact model/setup can establish a capability boundary
+  with High confidence without an independent performance evaluation.
+- **Medium**: useful, relevant evidence supports the conclusion, with material
+  methodological or generalization limits. Detailed, independently corroborated
+  practitioner evidence can qualify within its documented conditions.
+- **Low**: evidence is sparse, preliminary, vendor-heavy or limited by unclear
+  identity, setup, methods or unresolved evidential weaknesses. An isolated
+  anecdote remains Low and narrowly attributed.
+
+Vendor-only evaluations may support a suitability assessment when they concern
+the exact model and task with a documented setup; retain vendor attribution and
+Low performance confidence. Unsupported marketing is insufficient. Copied reports
+do not count as independent corroboration. Confidence in a documented modality
+or specification does not transfer to task-quality claims.
+
+Disputed has no aggregate confidence badge because there is no single justified
+aggregate conclusion. Its underlying findings retain their evidence confidence.
+When Disputed is selected, it remains in task results through an active evidence-
+confidence filter. Explain that confidence belongs to its underlying findings;
+its presence does not mean it satisfies a requested aggregate confidence level.
+Excluding Disputed through the suitability filter still removes it.
+Assess conflicts before choosing a rating: compare claim identity, task, setup,
+methods, dates and limitations. A documented reason may justify one conclusion;
+unresolved material divergence remains Disputed. Relevant setup differences can
+justify a disputed aggregate even when each conditional finding is valid. Explain
+the divergence and retain contrary evidence after resolution. Recency or publisher
+prestige alone does not settle disagreement.
+
+Evidence age triggers review rather than an automatic confidence downgrade.
+Inspect relevant sources before refreshing factual verification dates. Initial
+profiles can contain few judgments rather than pretending every task was assessed.
 
 ## How to judge capabilities
 

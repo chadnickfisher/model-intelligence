@@ -9,6 +9,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from tools.knowledge import canonical, judgment_index, scope_errors, research_coverage_errors, integrity_errors
 from tools.research_runs import task_rubric_errors
+from tools.task_assessments import task_assessment_errors
 from tools.public_boundary import private_work_path, public_files, tracked_work_paths
 def read(p):return yaml.load(p.read_text(encoding='utf-8'),Loader=getattr(yaml,'CSafeLoader',yaml.SafeLoader))
 def records(p):return read(ROOT/p)['records']
@@ -87,12 +88,9 @@ def run():
   for j in m['capabilities']+m['performance_characteristics']:
    if j['id'] in allids:errors.append('Duplicate judgment '+j['id'])
    allids.add(j['id'])
- for _,a in collections['task-assessment-record']:
-  if a['model_id'] not in modelids or a['task_id'] not in tasks:errors.append(a['id']+': unresolved model/task')
-  exact={j['id']:j for _,m in collections['model-profile'] if m['id']==a['model_id'] for j in m['capabilities']}
-  for ident in a['judgment_ids']:
-   if ident not in exact or a['task_id'] not in exact[ident]['task_ids']:errors.append(a['id']+': assessment requires an exact direct task judgment')
-  if a['result']=='assessed' and (not a['judgment_ids'] or not a['confidence_rationale']):errors.append(a['id']+': assessed task needs judgment and confidence rationale')
+ errors.extend(task_assessment_errors(
+  [a for _,a in collections['task-assessment-record']],
+  {m['id']:m for _,m in collections['model-profile']}, tasks, access_by_id))
  if records('data/capabilities.yaml')!=expected:errors.append('Capability index differs from canonical claims; run render.py')
  current={key:value for key,(_,value) in canonical(ROOT).items()}
  errors.extend(integrity_errors(ROOT))

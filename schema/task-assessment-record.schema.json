@@ -59,6 +59,64 @@
       },
       "uniqueItems": true
     },
+    "aggregate": {
+      "description": "Explicit policy-v1 task suitability; absence means no aggregate has been assigned. Never infer it from legacy finding labels.",
+      "type": "object",
+      "properties": {
+        "policy_version": { "const": "1" },
+        "suitability": {
+          "enum": ["high", "medium", "low", "not_supported", "disputed", "unknown"]
+        },
+        "evidence_confidence": {
+          "enum": ["high", "medium", "low", null]
+        },
+        "assessed_at": { "type": "string", "format": "date" },
+        "rationale": { "type": "string", "pattern": "\\S" },
+        "confidence_rationale": { "type": "string", "pattern": "\\S" },
+        "supporting_evidence_ids": {
+          "type": "array", "items": { "type": "string" }, "uniqueItems": true
+        },
+        "contradictory_evidence_ids": {
+          "type": "array", "items": { "type": "string" }, "uniqueItems": true
+        },
+        "conflict_rationale": {
+          "anyOf": [{ "type": "null" }, { "type": "string", "pattern": "\\S" }]
+        },
+        "watch_outs": {
+          "type": "array", "items": { "type": "string", "pattern": "\\S" }, "uniqueItems": true
+        },
+        "access_ids": {
+          "description": "Assessed access routes; empty for a native or unspecified route, which must be explained in conditions.",
+          "type": "array", "items": { "type": "string" }, "uniqueItems": true
+        }
+      },
+      "required": [
+        "policy_version", "suitability", "evidence_confidence", "assessed_at",
+        "rationale", "confidence_rationale", "supporting_evidence_ids",
+        "contradictory_evidence_ids", "conflict_rationale", "watch_outs", "access_ids"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": { "properties": { "suitability": { "enum": ["disputed", "unknown"] } } },
+          "then": { "properties": { "evidence_confidence": { "const": null } } },
+          "else": { "properties": { "evidence_confidence": { "enum": ["high", "medium", "low"] } } }
+        },
+        {
+          "if": { "properties": { "suitability": { "const": "disputed" } } },
+          "then": {
+            "properties": {
+              "conflict_rationale": { "type": "string", "pattern": "\\S" },
+              "contradictory_evidence_ids": { "minItems": 1 }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "suitability": { "not": { "const": "unknown" } } } },
+          "then": { "properties": { "supporting_evidence_ids": { "minItems": 1 } } }
+        }
+      ]
+    },
     "remaining_gaps": {
       "type": "array",
       "items": {
@@ -81,5 +139,29 @@
     "conditions",
     "remaining_gaps"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": { "required": ["aggregate"] },
+      "then": {
+        "properties": {
+          "conditions": { "minItems": 1, "items": { "type": "string", "pattern": "\\S" } }
+        },
+        "allOf": [
+          {
+            "if": { "properties": { "aggregate": { "properties": { "suitability": { "const": "not_supported" } } } } },
+            "then": { "properties": { "applicability": { "const": "excluded" }, "result": { "const": "excluded" } } }
+          },
+          {
+            "if": { "properties": { "aggregate": { "properties": { "suitability": { "const": "unknown" } } } } },
+            "then": { "properties": { "applicability": { "enum": ["applicable", "unknown"] }, "result": { "const": "unknown" } } }
+          },
+          {
+            "if": { "properties": { "aggregate": { "properties": { "suitability": { "enum": ["high", "medium", "low", "disputed"] } } } } },
+            "then": { "properties": { "applicability": { "const": "applicable" }, "result": { "const": "assessed" } } }
+          }
+        ]
+      }
+    }
+  ]
 }

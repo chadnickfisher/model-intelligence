@@ -1,5 +1,6 @@
 from datetime import date
 from tools.knowledge import ROOT, canonical, read
+from tools.task_assessments import select_task_assessments
 
 REPO_URL = 'https://github.com/chadnickfisher/model-intelligence'
 UNKNOWN = 'Unknown / not established'
@@ -220,18 +221,23 @@ def claims(model, task=None, include_related=False, confidence=None):
     return rows
 
 
-def filter_models(data, *, vendors=(), families=(), task=None, include_related=False,
+def filter_models(data, *, vendors=(), families=(), task=None, include_related=False, suitability=None,
                   confidence=(), routes=(), licenses=(), minimum_context=0,
                   include_unknown_context=False, input_modalities=(), output_modalities=(),
                   weights='Any', search=''):
     result = []
+    eligible = None if task is None else {
+        a['model_id'] for a in select_task_assessments(
+            data['task_assessment'].values(), task, suitability=suitability, confidence=confidence)}
     for model in data['model'].values():
         ident = model['identity']
         if vendors and ident['creator'] not in vendors or families and ident['family'] not in families:
             continue
         if search and search.lower() not in (model['id'] + ' ' + ident['name'] + ' ' + ident['family']).lower():
             continue
-        if (task or confidence) and not claims(model, task, include_related, confidence):
+        if eligible is not None and model['id'] not in eligible:
+            continue
+        if task is None and confidence and not claims(model, confidence=confidence):
             continue
         if routes and not all(has_route(model, data, r) for r in routes):
             continue

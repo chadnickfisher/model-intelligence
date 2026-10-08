@@ -2,8 +2,21 @@
 from .data import claims, benchmark_findings, model_routes, route_kinds, route_label, billing_summary
 
 
+def task_assessment(model, data, task):
+    """Return the exact canonical model/task record, without deriving a rating."""
+    rows = [r for r in data.get('task_assessment', {}).values()
+            if r['model_id'] == model['id'] and r['task_id'] == task]
+    if len(rows) > 1:
+        raise ValueError('Duplicate canonical model/task assessment')
+    return rows[0] if rows else None
+
+
 def task_card_evidence(model, data, task=None, include_related=False):
     findings=claims(model,task,include_related) if task else []
+    assessment = task_assessment(model, data, task) if task else None
+    if assessment and assessment.get('aggregate'):
+        selected = set(assessment['judgment_ids'])
+        findings = [j for j in model['capabilities'] if j['id'] in selected]
     ids={j['id'] for j in findings}
     benchmarks=[b for b in benchmark_findings(model,data) if ids.intersection(b['judgment_ids'])]
     return findings,benchmarks
@@ -22,6 +35,9 @@ def readable_conditions(values):
 
 
 def card_watchouts(model, data, task=None, include_related=False):
+    assessment = task_assessment(model, data, task) if task else None
+    if assessment and assessment.get('aggregate'):
+        return list(dict.fromkeys(assessment['aggregate']['watch_outs'] + assessment['remaining_gaps']))
     if task:
         findings,benchmarks=task_card_evidence(model,data,task,include_related)
         values=[v for j in findings for v in j['known_failure_modes']]

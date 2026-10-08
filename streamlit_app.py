@@ -9,7 +9,7 @@ from explorer.data import (load, show, link, summary, filter_models, claims, sou
 from explorer.cost import estimate_runs, routes_for_price, UNITS
 from tools.knowledge import ROOT, read
 from explorer.presentation import (task_card_evidence, card_watchouts, access_bullets,
-                                   complete_summary, observation_summary, readable_conditions)
+                                   complete_summary, observation_summary, readable_conditions, task_assessment)
 
 st.set_page_config(page_title='Model Intelligence · Field Guide', layout='wide')
 st.markdown('''<style>
@@ -25,10 +25,14 @@ h1,h2,h3 {color:#24533F;}
 [data-testid="stColumn"]{min-width:min(100%,300px);}}
 </style>''', unsafe_allow_html=True)
 
-CONFIDENCE = ('Confidence describes evidence for a finding, not model ability. '
-    'High: multiple credible recent sources converge with little material contradiction. '
-    'Medium: useful evidence, but incomplete, configuration-specific or mixed. '
-    'Low: sparse, preliminary, old, vendor-heavy, benchmark-dependent or contradictory evidence.')
+CONFIDENCE = ('Evidence confidence describes support for the specific judgment. '
+    'High task-performance confidence requires strong independent corroboration; '
+    'clear exact-model documentation can establish a capability boundary. '
+    'Medium: useful evidence with methodological or generalization limits. '
+    'Low: sparse, preliminary, vendor-heavy or unclear evidence. Age triggers review. '
+    'Disputed assessments retain confidence on their underlying findings.')
+SUITABILITY = {'high':'High', 'medium':'Medium', 'low':'Low', 'not_supported':'Not supported',
+               'disputed':'Disputed', 'unknown':'Unknown'}
 ASSESSMENT = {'conditional':'Conditional use', 'warning':'Warning', 'weak':'Documented weakness', 'unknown':'Unknown'}
 SCOPE = {'direct':'Task-specific finding','compound':'Related bundle','unresolved':'Scope unresolved','performance':'Performance / deployment'}
 ROUTES = ['API','Chat app','Subscription','Run locally','Download weights']
@@ -36,7 +40,8 @@ ROUTES = ['API','Chat app','Subscription','Run locally','Download weights']
 def fingerprint():
     patterns=['models/*/*/profile.yaml','providers/*/profile.yaml','data/pricing.yaml','data/access.yaml',
         'data/releases.yaml','data/capability-taxonomy.yaml','data/aliases.yaml','data/behavior.yaml',
-        'data/access-coverage.yaml','data/benchmarks.yaml','data/research-coverage.yaml','evidence/sources.yaml','evidence/observations.yaml']
+        'data/access-coverage.yaml','data/benchmarks.yaml','data/research-coverage.yaml','data/task-assessments.yaml',
+        'schema/task-assessment-record.schema.json','evidence/sources.yaml','evidence/observations.yaml']
     return tuple((p.relative_to(ROOT).as_posix(),p.stat().st_mtime_ns,p.stat().st_size)
         for pattern in patterns for p in sorted(ROOT.glob(pattern)))
 
@@ -155,9 +160,15 @@ def model_detail(data,model):
     st.markdown(f"[Canonical profile]({link(data['paths'][('model',model['id'])])}) · [Readable profile]({link(data['paths'][('model',model['id'])].replace('profile.yaml','README.md'))})")
     tabs=st.tabs(['Findings','Access & prices','Specifications','Behavior & gaps','Benchmarks'])
     with tabs[0]:
+        assessments=[a for a in data.get('task_assessment',{}).values()
+                     if a['model_id']==model['id'] and a.get('aggregate')]
+        for assessment in assessments:
+            with st.expander('Task assessment: '+task_label(data,assessment['task_id'])):
+                card_fit(data,model,assessment['task_id'])
+                card_limits(data,model,assessment['task_id'])
         for j in model['capabilities']+model['performance_characteristics']:
             with st.expander(judgment_label(data,j)+' · '+ASSESSMENT[j['assessment']]):claim_panel(data,j)
-        if not model['capabilities']:st.info('Task evidence not yet curated.')
+        if not model['capabilities'] and not assessments:st.info('Task evidence not yet curated.')
     with tabs[1]:
         for r in model_routes(model,data):
             st.write(route_label(r,data));st.caption(', '.join(sorted(route_kinds(r)))+' · '+billing_summary(r,data))
@@ -209,6 +220,32 @@ def model_detail(data,model):
 
 def card_fit(data,model,task,related=False):
     st.markdown('**Task fit — '+task_label(data,task)+'**')
+    assessment=task_assessment(model,data,task)
+    aggregate=assessment.get('aggregate') if assessment else None
+    if aggregate:
+        label='**Suitability:** '+SUITABILITY[aggregate['suitability']]
+        if aggregate['evidence_confidence']:
+            label+=' · **Evidence confidence:** '+aggregate['evidence_confidence'].capitalize()
+        st.write(label)
+        st.write(aggregate['rationale'])
+        st.write('**Applies to:** '+show(readable_conditions(assessment['conditions'])))
+        if aggregate['access_ids']:
+            st.write('**Assessed access:** '+show([route_label(data['access'][i],data) for i in aggregate['access_ids']]))
+        if aggregate['conflict_rationale']:
+            st.write('**Evidence disagreement:** '+aggregate['conflict_rationale'])
+        if aggregate['suitability']=='disputed':
+            st.caption('Confidence belongs to the underlying findings; there is no aggregate confidence rating.')
+            findings,_=task_card_evidence(model,data,task)
+            for finding in findings:
+                st.write('**Underlying finding ('+finding['confidence'].capitalize()+' evidence confidence):** '+finding['judgment'])
+                if finding['conditions']:st.write('**Finding applies to:** '+show(readable_conditions(finding['conditions'])))
+        st.write('**Evidence:** '+aggregate['confidence_rationale'])
+        st.write('**Supporting evidence**');source_panel(data,aggregate['supporting_evidence_ids'])
+        if aggregate['contradictory_evidence_ids']:
+            st.write('**Contrary / limiting evidence**');source_panel(data,aggregate['contradictory_evidence_ids'])
+        st.caption('Sources checked '+assessment['checked_at']+' · assessment '+aggregate['assessed_at'])
+        return
+    st.caption('Aggregate suitability is not yet assessed; existing findings below retain their original scope and confidence.')
     js,_=task_card_evidence(model,data,task,related)
     for j in js[:2]:
         st.write(j['judgment'])
@@ -223,7 +260,10 @@ def card_fit(data,model,task,related=False):
 def card_limits(data,model,task=None,related=False):
     st.markdown('**Watch-outs**')
     limits=card_watchouts(model,data,task,related)
-    if limits:st.markdown('\n'.join('- '+v for v in limits[:2]))
+    assessment=task_assessment(model,data,task) if task else None
+    if limits:
+        visible=limits if assessment and assessment.get('aggregate') else limits[:2]
+        st.markdown('\n'.join('- '+v for v in visible))
     else:st.write('No documented watch-outs for this task yet.' if task else 'No documented watch-outs yet.')
 
 def card_access(data,model):
@@ -292,7 +332,14 @@ def model_explorer(data):
             vendors=st.multiselect('Vendor',sorted({m['identity']['creator'] for m in data['model'].values()}))
             families=st.multiselect('Family',sorted({m['identity']['family'] for m in data['model'].values()}))
             related=st.checkbox('Include related evidence',value=False,help='Compound bundles and unresolved findings are not specific-task endorsements.')
+            suitability=None
+            if task!='All tasks':
+                suitability=st.multiselect('Task suitability',['high','medium','low','disputed','not_supported'],
+                    default=['high','medium','low','disputed'],format_func=lambda v:SUITABILITY[v],
+                    help='Ratings apply to this task and the documented conditions. Unknown and unassessed records are available through Any task and model details.')
             confidence=st.multiselect('Evidence confidence',['low','medium','high'],help=CONFIDENCE)
+            if task!='All tasks':
+                st.caption('Selected Disputed assessments remain visible when filtering evidence confidence; confidence belongs to their underlying findings.')
         with cols[1]:
             weights=st.selectbox('Weights',['Any','Downloadable','Closed','Unknown'])
             licenses=st.multiselect('License',sorted({m['licensing']['name'] or UNKNOWN for m in data['model'].values()}))
@@ -310,14 +357,17 @@ def model_explorer(data):
             with cols[3]:cost_limit=st.number_input('Maximum per-run subtotal',min_value=0.0,value=1.0,step=0.01,format='%.4f')
             st.caption('Matches at least one documented compatible API offer in this currency for the specified request. Unknown prices are excluded. Cache reuse, peak windows and currency conversion are not inferred; inspect exact routes in Cost Explorer.')
         st.caption(CONFIDENCE)
-    models=filter_models(data,task=None if task=='All tasks' else task,include_related=related,confidence=confidence,
+    models=filter_models(data,task=None if task=='All tasks' else task,include_related=related,suitability=suitability,confidence=confidence,
         vendors=vendors,families=families,routes=[] if route=='Any access' else [route],weights=weights,licenses=licenses,
         minimum_context=minimum,include_unknown_context=unknown,input_modalities=imod,output_modalities=omod,search=search)
     if cost_filter:
         models=[m for m in models if any(Decimal(p['total'])<=Decimal(str(cost_limit)) for p in comparable_api_offers(
             m,data,input_tokens=cost_input,output_tokens=cost_output,currency=cost_currency))]
     st.caption(f'{len(models)} models with matching recorded evidence / routes. Missing research does not imply inability or unavailability.')
-    if not models:st.info('No records match. Try fewer filters or view task coverage.');return
+    if not models:
+        st.info('No assessed models match this task and these filters. Choose Any task to look up a model or explore the evidence.' if task!='All tasks'
+                else 'No records match. Try fewer filters or view task coverage.')
+        return
     page=st.selectbox('Results page',list(range(1,(len(models)+5)//6+1)),format_func=lambda n:f'{n}')
     subset=models[(page-1)*6:page*6]
     for start in range(0,len(subset),2):

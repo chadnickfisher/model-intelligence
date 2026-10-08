@@ -10,12 +10,24 @@ def data():
 
 
 def test_filters_distinguish_direct_related_and_unknown(data):
-    direct = filter_models(data, task='coding.repository_work')
-    related = filter_models(data, task='coding.repository_work', include_related=True)
-    assert len(related) > len(direct) > 0
-    assert 'gpt-6-astra' not in {m['id'] for m in direct}
-    assert 'gpt-6-astra' in {m['id'] for m in related}
-    assert all(any('coding.architecture' in j['task_ids'] for j in m['capabilities']) for m in filter_models(data, task='coding.architecture'))
+    from copy import deepcopy
+    fixture = deepcopy(data)
+    fixture['task_assessment'] = {str(i): {
+        'model_id': model, 'task_id': task,
+        'aggregate': {'suitability': rating, 'evidence_confidence': confidence}}
+        for i, (model, task, rating, confidence) in enumerate([
+            ('claude-sonnet-5-5', 'coding.repository_work', 'medium', 'low'),
+            ('gpt-6-astra', 'coding.architecture', 'high', 'high'),
+            ('gpt-oss-20b', 'coding.repository_work', 'unknown', None),
+            ('qwen3-8-27b', 'coding.repository_work', 'disputed', None),
+            ('claude-haiku-4-5', 'coding.repository_work', 'not_supported', 'high')])}
+    def selected(**kwargs):
+        return {m['id'] for m in filter_models(fixture, task='coding.repository_work', **kwargs)}
+    assert selected() == {'claude-sonnet-5-5', 'qwen3-8-27b'}
+    assert selected(include_related=True) == selected()
+    assert selected(confidence=['high']) == {'qwen3-8-27b'}
+    assert selected(suitability=['not_supported'], confidence=['high']) == {'claude-haiku-4-5'}
+    assert selected(suitability=[]) == set()
     assert all(m['identity']['creator'] == 'Anthropic' for m in filter_models(data, vendors=['Anthropic']))
     assert all(open_weights(m) is True for m in filter_models(data, weights='Downloadable'))
     assert all(context_tokens(m) >= 1000000 for m in filter_models(data, minimum_context=1000000))
@@ -55,6 +67,17 @@ def test_app_load_and_model_filters(data):
     assert not at.exception and any(f'{expected} models with matching' in c.value for c in at.caption)
     widget(at.text_input, 'Find a model').set_value('no matching model').run()
     assert not at.exception and any('No records match' in i.value for i in at.info)
+
+
+def test_app_task_search_uses_canonical_ratings(data):
+    at = app()
+    widget(at.selectbox, 'What are you working on?').set_value('agent.tool_use').run()
+    expected = filter_models(data, task='agent.tool_use')
+    assert not at.exception
+    assert widget(at.multiselect, 'Task suitability').value == ['high','medium','low','disputed']
+    assert any(f'{len(expected)} models with matching' in c.value for c in at.caption)
+    widget(at.multiselect, 'Task suitability').set_value([]).run()
+    assert not at.exception and any('No assessed models match' in i.value for i in at.info)
 
 
 def test_every_model_detail_renders(data):
