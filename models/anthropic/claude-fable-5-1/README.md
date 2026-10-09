@@ -31,7 +31,7 @@ Evidence notes: supporting evidence: AA max/default fallback: Terminal-Bench4.0 
 
 ### Coding.debugging (low confidence)
 
-Can repair a subset of hidden repository defects; use as an assisted audit, not a completeness guarantee.
+Repaired 43 of 105 hidden defects in one Claude Code/max run; use for assisted diagnosis and repair with material verification.
 
 Scope: direct / conditional. Task-specific source claim under documented conditions; no transfer to other coding tasks.
 
@@ -41,19 +41,19 @@ Related task IDs (navigation only): Not established in this pass
 
 Judgment ID: judgment-f023edc397fdd671
 
-Conditions: Single configuration run; no robust ranking implied.; Harness: Claude Code; effort: max; effort evidence: first_party.; 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).; One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts and budgets.; Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full external reproduction.
+Conditions: One round per repository on 2026-09-01; one configuration run, not repeated trials.; Approximately 28K-line TypeScript extension and 60K-line React/TypeScript Supabase LMS; 76 reverted real fixes plus 29 authored defects.; Native Claude Code; max is a documented first-party tier requested explicitly, not separately probed as binding.; No network or git history; preserve passing checks; diagnose symptoms and root causes and edit source in place.; Blind non-sibling judge compares diffs with withheld answer key; partials, claimed-only and extras do not increase strict score.; Metrics identify model=claude-fable-5-1 and a [1m] window request; precise CLI version and exact provider endpoint are not established in these inspected max-row receipts.
 
-Failure modes / limitations: Many planted defects remained unresolved in the measured runs.; Run variance and harness differences prevent fine-grained cross-model ranking.
+Failure modes / limitations: 62 seeded defects were not fully repaired in the inspected run; two fixes were partial and four were claimed without implementation.
 
-Supporting sources: [Bug Hunt Bench frozen measurements](https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/data/benchmark.json) · [Bug Hunt Bench receipts and boundaries](https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/results/README.md) · [Bug Hunt Bench individual configuration caveats](https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/results/run-notes.md)
+Supporting sources: [Bug Hunt Bench frozen measurements](https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/data/benchmark.json) · [Bug Hunt Bench receipts and boundaries](https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/results/README.md) · [Bug Hunt Bench individual configuration caveats](https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/results/run-notes.md) · [Bug Hunt Bench methodology](https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/README.md) · [Bug Hunt Bench repository 1 metrics](https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/results/repo1-metrics.csv) · [Bug Hunt Bench repository 2 metrics](https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/results/repo2-metrics.csv)
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation quality.; No matched independent contradiction located; partial successes and misses coexist.; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: One run across two repositories; partial fixes and eleven unscored genuine extras do not increase the strict score.; Low confidence reflects withheld artifacts, no exact-configuration replication and unknown run variance.; Zero recorded false-positive fixes does not establish absence of regressions; this is repair evidence, not code-review recall.
 
 ### Coding.refactoring (medium confidence)
 
-Strong benchmark candidate; bound edit scope and retain regression checks.
+Completed a useful subset of behavior-preserving refactors under tests and structural checks; substantial independent verification remains necessary.
 
 Scope: direct / conditional. Task-specific source claim under documented conditions; no transfer to other coding tasks.
 
@@ -63,15 +63,15 @@ Related task IDs (navigation only): Not established in this pass
 
 Judgment ID: judgment-a0a1fd6ff5e17879
 
-Conditions: 70 tasks, 10 production repositories, 6 languages; Harbor/Modal sandboxes. Resolve requires unchanged tests, zero regressions, and every mandatory Opus 4.5-judged rubric.; Always-on adaptive thinking; effort-controlled operation.
+Conditions: Published dataset: 70 tasks from 10 production repositories in six languages.; Task resolution requires unchanged test files, no relevant baseline-test regressions or failing added interface tests, and all mandatory rubric criteria.; Rubric judge is Claude Opus 4.5, not the evaluated model; documentation criteria are optional.; Study uses Harbor with Modal sandboxing and repository shell/build/test access.
 
-Failure modes / limitations: Incomplete extraction, unwired callers, stale implementations/artifacts; failure taxonomy is pooled, not per-model.; Official documentation warns it favors whole-file rewrites for small changes, increasing output/time; targeted-edit prompting recommended.
+Failure modes / limitations: Pooled benchmark analysis reports incomplete extraction, unwired call sites and stale artifacts; these are not Fable-specific frequencies.; Anthropic documents whole-file rewrites for small edits, usually preserving the result but increasing output and time.
 
-Supporting sources: [SWE Atlas - Refactoring](https://labs.scale.com/leaderboard/sweatlas-refactoring) · [What's new in Claude Fable 5.1](https://platform.claude.com/docs/en/models/fable-5-1/whats-new-fable-5-1)
+Supporting sources: [SWE Atlas - Refactoring](https://labs.scale.com/leaderboard/sweatlas-refactoring) · [What's new in Claude Fable 5.1 - Claude Platform Docs](https://platform.claude.com/docs/en/models/fable-5-1/whats-new-fable-5-1)
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve xHigh as board label. Intro's below 50% statement is stale. Gemini 3.1 Pro 33.81±6.64 is withheld pending preview-ID mapping.; Vendor behavior description supplements E07; it is not an independent refactor success measurement.; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Scale reports 56.67 percent with displayed uncertainty 6.52 for Claude Code/xHigh; actual Fable trial count and interval semantics remain unconfirmed.; Medium finding confidence concerns the bounded independent task evaluation; it does not establish equivalent performance on other routes or efforts.; Official edit guidance supplements the evaluation; it is not an independent correctness measurement or measured recovery.
 
 ### Coding.frontend (medium confidence)
 
@@ -116,6 +116,116 @@ Supporting sources: [Fable 5.1 review: Coding tests and code review results](htt
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
 Evidence notes: Confidence concerns this bounded claim, not a capability score.; CodeRabbit evaluated 45 review tasks with 105 known issues; lower and higher configurations traded recall, precision and comment load.; Low confidence reflects the inspected evaluator, corpus/pipeline dependence and unpublished replication inputs; it is not a low ability rating.
+
+### Coding.debugging (low confidence)
+
+Snorkel reports 87% on four debugging tasks with executable feedback; this is bounded independent corroboration.
+
+Scope: direct / conditional. Exact task evidence under its reported setup; no transfer to adjacent tasks or model/provider configurations.
+
+Direct task IDs: coding.debugging
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-6c7a3c099d3c4be7
+
+Conditions: Only the source-described task and setup are assessed; unspecified settings remain unknown.
+
+Failure modes / limitations: Not a controlled comparison with Bug Hunt.
+
+Supporting sources: [Fable 5.1 on Frontier Coding Tasks: Efficient Successes, Distinct Failure Modes](https://snorkel.ai/blog/fable-5-1-vs-opus-5-coding-benchmark/)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Proprietary four-task subset; attempt denominator, aggregation and served configuration undisclosed.
+
+### Coding.debugging (low confidence)
+
+owen800q reports that Fable 5.1, while implementing Jira bug fixes, added unsolicited helper functions, unrelated refactors, and architectural changes. This is a reported scope-control failure during repair; comments propose mitigations without verifying recovery.
+
+Scope: direct / warning. Exact task evidence under its reported setup; no transfer to adjacent tasks or model/provider configurations.
+
+Direct task IDs: coding.debugging
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-ad43fedfa9593401
+
+Conditions: First-person Jira bug-repair workflow; exact provider, snapshot, client version, effort and patches undisclosed.
+
+Failure modes / limitations: Single unverified account, with no executable reproduction, rate, or pinned client/provider/effort.; Does not test success at a requested behavior-preserving refactor; do not generalize to all setups.
+
+Supporting sources: [How do you stop Fable 5.1 from scope creeping and refactoring code outside the Jira ticket?](https://www.reddit.com/r/ClaudeCode/comments/1whj547/how_do_you_stop_fable_51_from_scope_creeping_and/)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Original first-person report explicitly names Fable 5.1 but supplies no code, diff, trace, exact model snapshot, client version, effort, or provider route.; Unrequested refactoring during bug repair is a debugging scope-control concern, not a tested failure at a requested behavior-preserving refactor.; Suggested prompts, restricted edits, and diff checks in comments lack controlled before/after validation. Stable publication date not established.; Unrequested refactoring is related context, not evidence of failure at a requested behavior-preserving refactor.; Prompting advice in comments does not establish controlled recovery.
+
+### Coding.debugging (low confidence)
+
+returnity reports that Fable 5.1 at xhigh did not resolve a gensim 4.4 compiled-kernel problem, instead suppressing its stderr notices while disclosing that choice, and missed a separate sentence-final token-loss bug. The same workflow report praises its UTF-8 handling and readable code.
+
+Scope: direct / warning. Exact task evidence under its reported setup; no transfer to adjacent tasks or model/provider configurations.
+
+Direct task IDs: coding.debugging
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-7bb7ec6d2a29dc85
+
+Conditions: Author reports Fable 5.1/xhigh during one ML workflow; provider, client version, snapshot and run date undisclosed.
+
+Failure modes / limitations: No independently reproduced trace or pinned client/provider/model snapshot; claimed error cause is author-attributed.; Cross-posts are one experiment. A failure in this case does not establish a general regression or comparative ranking.; No verified later recovery by Fable 5.1 is reported for these defects.
+
+Supporting sources: [Astra vs. Fable 5.1 on real ML tasks: tradeoffs, strengths, shortcomings](https://www.reddit.com/r/MachineLearning/comments/1w8g1gk/astra_vs_fable_51_on_real_ml_tasks_tradeoffs/)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Original body inspected. User names Fable 5.1 and xhigh; underlying provider route, client version, immutable model snapshot, exact run date, and raw reproduction artifacts are not established.; One reported ML workflow with human feedback, not a repeated controlled debugging benchmark. The claimed gensim cause is the author’s account, not independently validated here.; Same-author cross-posts and search hits in r/OpenAI/r/ArtificialInteligence are the same experiment, not replications. Model-training F1/accuracy is not a debugging success score.; Original body contains relative age only; published_at remains null.
+
+### Coding.debugging (low confidence)
+
+Gradle reports claude-fable-5-1 diagnosed and repaired issue #34751, reproduced the Dokka link-target error, and passed a new regression test plus an existing test. The author preferred its patch, while explicitly limiting the comparison to one run on one bug.
+
+Scope: direct / conditional. Exact task evidence under its reported setup; no transfer to adjacent tasks or model/provider configurations.
+
+Direct task IDs: coding.debugging
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-bdd86c4657d2dabd
+
+Conditions: Reported run on 2026-09-07; claude-fable-5-1 through Claude Code 2.1.263 and gradle-eval/Inspect AI.; Gradle commit 8606a2c1, JDK 21 container, network available; limits: 50 turns, 5 million tokens and 45 minutes.; Dokka 2.2.0 reproduction, new Spock/TestKit regression check and existing GradleReleaseNotesPluginTest; effort/provider endpoint undisclosed.
+
+Failure modes / limitations: Effort, provider, immutable snapshot and judge unknown; no general ranking or independent rerun.
+
+Supporting sources: [Testing Astra 6 v Fable 5.1 on a Gradle docs bug](https://blog.gradle.org/two-agents-one-gradle-bug)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: One reported bug/run; tools differ between comparison models. Not independently reproduced; proposed PR not verified merged.
+
+### Coding.refactoring (low confidence)
+
+Wmedia includes extracting shared validation from three controllers, checked for centralization and passing controller tests. All mixed-task runs passed; no separate refactoring score is tabulated.
+
+Scope: direct / conditional. Exact task evidence under its reported setup; no transfer to adjacent tasks or model/provider configurations.
+
+Direct task IDs: coding.refactoring
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-0d56d17e388e4a0a
+
+Conditions: Claude Code 2.1.280 at high effort; clean 11-file PHP repository, no user settings or MCP servers.; Shared validation extracted from three controllers; centralization and controller tests checked; three repetitions per task.; The published 12/12 total covers four mixed tasks; no separate refactoring-only score is tabulated.
+
+Failure modes / limitations: Small simple task with prewritten checks; results do not establish multi-repository refactoring reliability.; The unrelated bug-task test remained failing and was excluded from refactor scoring; raw results ZIP not inspected.
+
+Supporting sources: [Opus 5.5 vs Fable 5.1 vs Opus 5: the same tasks at a third of the cost](https://wmedia.es/en/tips/claude-code-opus-5-5-vs-fable-5-1-vs-opus-5-benchmark)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: One small mixed-task study; linked raw ZIP was not inspected.
 
 ### Cache heavy agents (medium confidence)
 

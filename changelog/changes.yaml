@@ -14150,3 +14150,93 @@ records:
     canonical_path: data/task-assessments.yaml
     operation: update
   id: change-58e05098ecc735d6
+- observed_at: '2026-10-08'
+  summary: 'Updated Claude Fable 5.1 task evidence: retained Medium suitability with Low confidence for debugging,
+    raised refactoring confidence to Medium with bounded corroboration, and corrected single-run benchmark
+    metadata.'
+  evidence_ids:
+  - src-11bea9016ff0
+  - src-4f597f653005
+  - src-4fbde637dbf3
+  - src-ad78a04807f9
+  - src-b6ffa931564a
+  - src-d3e6e49a01b9
+  - src-e7c2a679eb16
+  changed_entities:
+  - entity_type: benchmark
+    entity_id: benchmark-62a20a5dbc74fc59
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-89d613f9d34529e9
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-a8f574f60a829c01
+    canonical_path: data/benchmarks.yaml
+    operation: add
+  - entity_type: model
+    entity_id: claude-fable-5-1
+    canonical_path: models/anthropic/claude-fable-5-1/profile.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-02b09208ceab
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-0b72694a5dea
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-11bea9016ff0
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-4f597f653005
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-4fbde637dbf3
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-96cec7bbd029
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-ad78a04807f9
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-b6ffa931564a
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-c7eceee3e7d1
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-d3e6e49a01b9
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-e7c2a679eb16
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-e86e19b3dd2c
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-e9c984ecc940
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-293c9899ca23b224
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-50c1b1bcd5a6522b
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  id: change-1d53367d369cf0dd

@@ -121,12 +121,23 @@ def test_legacy_receipt_boundary_uses_only_a_synthetic_archive(tmp_path):
     assert current[('access', 'route-example')]['billing_class'] == 'metered_api'
 
 
-def test_haiku_prompt_price_threshold_is_per_request_and_uses_exact_offer():
-    state=canonical()
-    prices=[r for (k,_),(_,r) in state.items() if k=='price' and r.get('model_id')=='claude-haiku-5-5' and r['tier'].startswith('Standard')]
-    access=[r for (k,_),(_,r) in state.items() if k=='access']
-    low=next(p for p in prices if '<=100k' in p['tier']);high=next(p for p in prices if '>100k' in p['tier'])
+def test_prompt_price_threshold_is_per_request_and_uses_exact_offer():
+    # A threshold test must survive researched eligibility/region changes to live offers.
+    low={'id':'price-synthetic-low','model_id':'synthetic-model','provider_id':'synthetic-provider',
+         'tier':'Standard / <=100k','status':'current','billing_method':'metered-api','region':None,
+         'verified_at':'2026-10-01','effective_from':'2026-10-01','effective_to':None,
+         'evidence_ids':['synthetic-source'],'conditions':['Prompt <=100,000 tokens'],'notes':[],
+         'rates':[{'metric':'input','amount':1,'currency':'USD','unit':'per 1 million tokens','conditions':[]},
+                  {'metric':'output','amount':2,'currency':'USD','unit':'per 1 million tokens','conditions':[]}]}
+    high={**deepcopy(low),'id':'price-synthetic-high','tier':'Standard / >100k','conditions':['Prompt >100,000 tokens']}
+    access=[{'id':'route-synthetic','model_id':'synthetic-model','provider_id':'synthetic-provider',
+             'price_ids':[low['id'],high['id']],'availability':'available','status':'Available',
+             'methods':['API'],'evidence_ids':['synthetic-source']}]
     assert estimate(low,access,input_tokens=100000,output_tokens=1000)['supported']
     assert not estimate(high,access,input_tokens=100000,output_tokens=1000)['supported']
     assert not estimate(low,access,input_tokens=100001,output_tokens=1000)['supported']
     assert estimate(high,access,input_tokens=100001,output_tokens=1000)['supported']
+    conditional=deepcopy(low)
+    conditional['conditions'].append('Regional eligibility must be selected')
+    result=estimate(conditional,access,input_tokens=100000,output_tokens=1000)
+    assert not result['supported'] and any('does not implement' in r for r in result['reasons'])

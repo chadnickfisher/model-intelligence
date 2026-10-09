@@ -1304,34 +1304,53 @@ records:
     name: Bug Hunt Bench
     version: 1217192a6d04e89da3f6106ca3a304d2734882eb
     metric: planted defects fixed
-    unit: mean planted defects fixed out of 105
+    unit: planted defects fixed out of 105 (one run)
     direction: higher
   value: 43
-  model_version: Fable 5.1 (max effort)
-  harness: null
+  model_version: claude-fable-5-1
+  harness: Claude Code (exact build undisclosed)
   effort: max
   provider_id: null
-  tools: null
+  tools:
+  - repository reading/editing and shell checks
   measured_at: '2026-09-01'
-  observed_at: '2026-10-07'
+  observed_at: '2026-10-08'
   evidence_class: independent_quality
   source_ids:
   - src-ad78a04807f9
   - src-02b09208ceab
   - src-0b72694a5dea
+  - src-e86e19b3dd2c
+  - src-e9c984ecc940
+  - src-96cec7bbd029
   conditions:
-  - Single configuration run; no robust ranking implied.
-  - 'Harness: Claude Code; effort: max; effort evidence: first_party.'
-  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
-  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
-    and budgets.
-  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
-    external reproduction.
+  - One round per repository on 2026-09-01; one configuration run, not repeated trials.
+  - Approximately 28K-line TypeScript extension and 60K-line React/TypeScript Supabase LMS; 76 reverted real
+    fixes plus 29 authored defects.
+  - Native Claude Code; max is a documented first-party tier requested explicitly, not separately probed as
+    binding.
+  - No network or git history; preserve passing checks; diagnose symptoms and root causes and edit source in
+    place.
+  - Blind non-sibling judge compares diffs with withheld answer key; partials, claimed-only and extras do not
+    increase strict score.
+  - Metrics identify model=claude-fable-5-1 and a [1m] window request; precise CLI version and exact provider
+    endpoint are not established in these inspected max-row receipts.
   limitations:
-  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  - Single unreplicated max run across two related-language repositories; unknown run-to-run variance.
+  - Model-plus-harness outcome, not isolated base-model capability.
+  - Private seeded artifacts prevent full external reproduction; repo 1 itself derives from public code.
+  - Zero recorded false-positive fixes does not establish absence of regressions or security defects.
+  - Other effort rows are separate single configurations, not replication of max.
+  - Effort, context behavior and judge are material; no ranking or completeness claim is justified.
+  - sample_size counts seeded defects, not independent repository-level trials; n_runs=1.
+  - Exact provider endpoint, CLI build, temperature and numeric precision are unknown.
+  - Blind model-judged diff outcomes; withheld answer keys and patches.
   evidence_notes:
-  - '{"fixed_of_105": 43, "individual_scores": null, "measured_at": "2026-09-01", "n_runs": 1, "repo1_fixed_of45":
-    19, "repo2_fixed_of60": 24, "row_id": "Fable 5.1 (max effort)"}'
+  - 'One configuration run; 43/105 strict repairs: 19/45 and 24/60. Two partial fixes, four claimed-only and
+    eleven extras excluded.'
+  - Requested effort is documented first-party max, not independently probed as binding.
+  - Per-repository metric receipts identify claude-fable-5-1 and requested [1m] context; exact endpoint/build
+    unknown.
 - schema_version: '1.0'
   id: benchmark-f80fe80eb23c9afa
   model_id: claude-opus-5-5
@@ -2150,35 +2169,30 @@ records:
   harness: Claude Code
   effort: xHigh
   provider_id: null
-  tools: null
+  tools:
+  - repository shell
+  - build and test tools
   measured_at: null
-  observed_at: '2026-10-07'
+  observed_at: '2026-10-08'
   evidence_class: independent_quality
   source_ids:
   - src-b6ffa931564a
-  - src-c7eceee3e7d1
   conditions:
-  - 70 tasks, 10 production repositories, 6 languages; Harbor/Modal sandboxes. Resolve requires unchanged tests,
-    zero regressions, and every mandatory Opus 4.5-judged rubric.
-  - Always-on adaptive thinking; effort-controlled operation.
+  - 'Published dataset: 70 tasks from 10 production repositories in six languages.'
+  - Task resolution requires unchanged test files, no relevant baseline-test regressions or failing added interface
+    tests, and all mandatory rubric criteria.
+  - Rubric judge is Claude Opus 4.5, not the evaluated model; documentation criteria are optional.
+  - Study uses Harbor with Modal sandboxing and repository shell/build/test access.
   limitations:
-  - Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve xHigh as board label.
-    Intro's below 50% statement is stale. Gemini 3.1 Pro 33.81Â±6.64 is withheld pending preview-ID mapping.
-  - Incomplete extraction, unwired callers, stale implementations/artifacts; failure taxonomy is pooled, not
-    per-model.
-  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  - Fable-specific sample count, repetitions, dates, API/provider ID, token budget, client version and exact
+    effort implementation are unreported.
+  - Pooled failure categories cannot be assigned to Fable individually.
+  - Model-agent score does not isolate base-model ability or prove unattended production reliability.
   evidence_notes:
-  - '{"conditions": "70 tasks, 10 production repositories, 6 languages; Harbor/Modal sandboxes. Resolve requires
-    unchanged tests, zero regressions, and every mandatory Opus 4.5-judged rubric.", "failures": "Incomplete
-    extraction, unwired callers, stale implementations/artifacts; failure taxonomy is pooled, not per-model.",
-    "id": "E07", "identity": "Exact live-board display names; immutable snapshots and current full run settings
-    unavailable.", "limits": "Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve
-    xHigh as board label. Intro''s below 50% statement is stale. Gemini 3.1 Pro 33.81Â±6.64 is withheld pending
-    preview-ID mapping.", "results": [{"display_name": "GPT 6 Astra (Codex) xHigh", "displayed_uncertainty":
-    6.43, "model_id": "gpt-6-astra", "resolve_percent": 59.05}, {"display_name": "Fable-5.1 (Claude Code) xHigh",
-    "displayed_uncertainty": 6.52, "model_id": "claude-fable-5-1", "resolve_percent": 56.67}, {"display_name":
-    "Gemini 3.8 Flash (Mini-SWE-Agent)", "displayed_uncertainty": 6.76, "model_id": "gemini-3-8-flash", "resolve_percent":
-    44.76}], "source_ids": ["S07"], "task": "coding.refactoring"}'
+  - Displayed uncertainty is 6.52; its Fable-specific definition, trial count and run date are unconfirmed.
+  - Benchmark dataset contains 70 tasks; do not treat that inventory as the confirmed scored Fable sample.
+  - Leaderboard label is xHigh; exact implementation and provider endpoint unknown.
+  - Introductory below-50-percent prose is stale relative to the current table.
 - schema_version: '1.0'
   id: benchmark-aced647406d4639e
   model_id: gemini-3-8-flash
@@ -5064,3 +5078,33 @@ records:
   evidence_notes:
   - Creator report tables 3/4; task suites and scaffolds remain separate. No cross-model universal ranking
     is inferred.
+- schema_version: '1.0'
+  id: benchmark-a8f574f60a829c01
+  model_id: claude-fable-5-1
+  judgment_ids:
+  - judgment-6c7a3c099d3c4be7
+  benchmark:
+    name: Snorkel Terminal-Bench+ debugging subset
+    version: null
+    metric: reported debugging-category rate
+    unit: percent
+    direction: higher
+  value: 87
+  model_version: Fable 5.1 (reported label)
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-08'
+  evidence_class: independent_quality
+  source_ids:
+  - src-d3e6e49a01b9
+  conditions:
+  - Four debugging tasks with executable environment feedback; not a matched comparison with Bug Hunt Bench.
+  limitations:
+  - Exact served ID, harness, effort, attempt denominator and category aggregation undisclosed.
+  - Four tasks are not four independent trial estimates; the reported rate is descriptive of this task set.
+  - Publication date is not an established measurement date; no real-world repair probability inferred.
+  evidence_notes:
+  - Category result is separate from the study's overall pass@1, pass@5 and mean reward.

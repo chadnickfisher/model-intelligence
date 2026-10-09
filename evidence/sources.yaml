@@ -2626,39 +2626,40 @@ records:
   title: Bug Hunt Bench frozen measurements
   publisher: Pawel Huryn
   source_type: independent-evaluation
-  published_at: '2026-10-01'
-  accessed_at: '2026-10-07'
+  published_at: null
+  accessed_at: '2026-10-08'
   claim_scope:
-  - Coding evidence; bounded task and measured configuration only.
+  - 'Single Claude Code/max run: 43/105 seeded defects repaired (19/45 and 24/60); partials and extras excluded.'
   limitations:
-  - Two private production codebases; model-plus-harness results, not controlled base-model comparisons.
-    Many configurations have only one run.
+  - All Bug Hunt files describe the same evaluation; they are not independent replications.
+  - Seeded sources, answer keys, model diffs and judge transcripts are withheld.
+  - Updated 2026-10-01; an original publication date is not established by the inspected body.
 - id: src-02b09208ceab
   url: https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/results/README.md
   title: Bug Hunt Bench receipts and boundaries
   publisher: Pawel Huryn
-  source_type: primary
+  source_type: independent-evaluation
   published_at: null
   accessed_at: '2026-10-08'
   claim_scope:
-  - Coding evidence; bounded task and measured configuration only.
-  - Pinned results README inspected through its raw-GitHub equivalent; scoring and withheld-artifact limitations
-    checked. Pinned benchmark JSON was inaccessible and its values were not reverified.
+  - Blind diff-based grading, strict repair definitions and withheld artifacts for Bug Hunt Bench.
   limitations:
-  - Public scores, per-bug indices, prompts and accounting; seeded repos, answer keys, model diffs and judge
-    transcripts remain withheld, limiting independent reproduction.
+  - All Bug Hunt files describe the same evaluation; they are not independent replications.
+  - Seeded sources, answer keys, model diffs and judge transcripts are withheld.
 - id: src-0b72694a5dea
   url: https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/results/run-notes.md
   title: Bug Hunt Bench individual configuration caveats
   publisher: Pawel Huryn
-  source_type: primary
-  published_at: '2026-10-01'
-  accessed_at: '2026-10-07'
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-08'
   claim_scope:
-  - Coding evidence; bounded task and measured configuration only.
+  - 'Exact Fable 5.1/max row: one run on 2026-09-01, 43/105 fixes; historical ranking prose is not general
+    superiority.'
   limitations:
-  - Historical prose sometimes describes rankings at time of publication; use latest nonsuperseded structured
-    rows rather than historical leader claims.
+  - All Bug Hunt files describe the same evaluation; they are not independent replications.
+  - Seeded sources, answer keys, model diffs and judge transcripts are withheld.
+  - Updated 2026-10-01; an original publication date is not established by the inspected body.
 - id: src-0de3942764ff
   url: https://github.com/joonlab/gpt-6.1-sol-benchmark/blob/main/data/coding/README.md
   title: Python coding and repair track
@@ -2803,28 +2804,29 @@ records:
 - id: src-b6ffa931564a
   url: https://labs.scale.com/leaderboard/sweatlas-refactoring
   title: SWE Atlas - Refactoring
-  publisher: Scale AI / SEAL
+  publisher: Scale AI
   source_type: independent-evaluation
   published_at: null
   accessed_at: '2026-10-08'
   claim_scope:
-  - Coding evidence; bounded task and measured configuration only.
-  - Inspected refactoring test/rubric method and exact current Astra, Fable and Gemini Flash rows; stale introductory
-    prose is not the table result.
-  limitations: []
+  - 'Fable-5.1 (Claude Code) xHigh: 56.67 with displayed uncertainty 6.52; behavior-preserving tests and mandatory
+    structural rubrics.'
+  limitations:
+  - Live leaderboard; Fable-specific run date and configuration file not disclosed in the inspected body.
+  - Introductory below-50% statement is stale relative to the current table.
 - id: src-c7eceee3e7d1
   url: https://platform.claude.com/docs/en/models/fable-5-1/whats-new-fable-5-1
-  title: What's new in Claude Fable 5.1
+  title: What's new in Claude Fable 5.1 - Claude Platform Docs
   publisher: Anthropic
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-07'
+  accessed_at: '2026-10-08'
   claim_scope:
-  - Coding evidence; bounded task and measured configuration only.
-  - Dated post-launch finding; retain its model, client, service or runtime scope.
+  - 'Vendor documents whole-file rewrites for small edits: usually the same result with greater output/time;
+    prompting advice is not measured recovery.'
   limitations:
-  - Imported public-source research inspection metadata; no operational access or model execution performed
-    by this integration.
+  - Behavior descriptions and improvements are vendor claims; no task-level failure rate or independently measured
+    mitigation recovery is supplied.
 - id: src-738286b6be78
   url: https://community.openai.com/t/gpt-6-astra-is-good-but-still-far-from-what-i-would-call-agi/1395147
   title: GPT-6 Astra is good, but still far from what I would call AGI
@@ -7566,3 +7568,113 @@ records:
     maximum.'
   limitations:
   - Public documentation/report only; no model execution or provider account inspection.
+- id: src-e86e19b3dd2c
+  url: https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/README.md
+  title: Bug Hunt Bench methodology
+  publisher: Pawel Huryn
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-08'
+  limitations:
+  - All Bug Hunt files describe the same evaluation; they are not independent replications.
+  - Seeded sources, answer keys, model diffs and judge transcripts are withheld.
+  - Updated 2026-10-01; an original publication date is not established by the inspected body.
+  - Repo 1 derives from a public extension; only repo 2 is explicitly a private product. Both seeded snapshots
+    are withheld.
+  claim_scope:
+  - Bug Hunt Bench corpus construction, one-round repository repair methodology and reproduction boundaries.
+- id: src-e9c984ecc940
+  url: https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/results/repo1-metrics.csv
+  title: Bug Hunt Bench repository 1 metrics
+  publisher: Pawel Huryn
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-08'
+  limitations:
+  - All Bug Hunt files describe the same evaluation; they are not independent replications.
+  - Seeded sources, answer keys, model diffs and judge transcripts are withheld.
+  claim_scope:
+  - Fable 5.1/max repository-1 metrics identify claude-fable-5-1 and the requested [1m] context suffix.
+- id: src-96cec7bbd029
+  url: https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/results/repo2-metrics.csv
+  title: Bug Hunt Bench repository 2 metrics
+  publisher: Pawel Huryn
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-08'
+  limitations:
+  - All Bug Hunt files describe the same evaluation; they are not independent replications.
+  - Seeded sources, answer keys, model diffs and judge transcripts are withheld.
+  claim_scope:
+  - Fable 5.1/max repository-2 metrics identify claude-fable-5-1 and the requested [1m] context suffix.
+- id: src-d3e6e49a01b9
+  url: https://snorkel.ai/blog/fable-5-1-vs-opus-5-coding-benchmark/
+  title: 'Fable 5.1 on Frontier Coding Tasks: Efficient Successes, Distinct Failure Modes'
+  publisher: Snorkel AI; Ankit Aich and Jonathan Schlosser
+  source_type: independent-evaluation
+  published_at: '2026-09-01'
+  accessed_at: '2026-10-08'
+  limitations:
+  - Proprietary four-task subset; attempt denominator, aggregation and served configuration undisclosed.
+  claim_scope:
+  - Reported 87% debugging category across four tasks; exact category aggregation, attempts and served setup
+    are undisclosed.
+- id: src-4f597f653005
+  url: https://wmedia.es/en/tips/claude-code-opus-5-5-vs-fable-5-1-vs-opus-5-benchmark
+  title: 'Opus 5.5 vs Fable 5.1 vs Opus 5: the same tasks at a third of the cost'
+  publisher: Wmedia
+  source_type: independent-evaluation
+  published_at: '2026-09-23'
+  accessed_at: '2026-10-08'
+  limitations:
+  - One small mixed-task study; linked raw ZIP was not inspected.
+  claim_scope:
+  - Small shared-validation extraction with task-specific preservation checks; 12/12 aggregate covers four
+    tasks, not twelve refactors.
+- id: src-e7c2a679eb16
+  url: https://www.reddit.com/r/ClaudeCode/comments/1whj547/how_do_you_stop_fable_51_from_scope_creeping_and/
+  title: How do you stop Fable 5.1 from scope creeping and refactoring code outside the Jira ticket?
+  publisher: owen800q / r/ClaudeCode
+  source_type: practitioner
+  published_at: null
+  accessed_at: '2026-10-08'
+  limitations:
+  - Original first-person report explicitly names Fable 5.1 but supplies no code, diff, trace, exact model
+    snapshot, client version, effort, or provider route.
+  - Unrequested refactoring during bug repair is a debugging scope-control concern, not a tested failure at
+    a requested behavior-preserving refactor.
+  - Suggested prompts, restricted edits, and diff checks in comments lack controlled before/after validation.
+    Stable publication date not established.
+  claim_scope:
+  - Attributed Jira repair scope-creep report; unrequested refactoring is not an evaluation of requested refactoring.
+- id: src-4fbde637dbf3
+  url: https://blog.gradle.org/two-agents-one-gradle-bug
+  title: Testing Astra 6 v Fable 5.1 on a Gradle docs bug
+  publisher: Laura Kassovic / Gradle
+  source_type: practitioner
+  published_at: '2026-09-09'
+  accessed_at: '2026-10-08'
+  limitations:
+  - One reported bug/run; tools differ between comparison models. Not independently reproduced; proposed PR
+    not verified merged.
+  claim_scope:
+  - 'Gradle issue #34751: one reported diagnosis, reproduction, implemented repair and executed regression
+    checks under a disclosed harness.'
+- id: src-11bea9016ff0
+  url: https://www.reddit.com/r/MachineLearning/comments/1w8g1gk/astra_vs_fable_51_on_real_ml_tasks_tradeoffs/
+  title: 'Astra vs. Fable 5.1 on real ML tasks: tradeoffs, strengths, shortcomings'
+  publisher: returnity / r/MachineLearning
+  source_type: practitioner
+  published_at: null
+  accessed_at: '2026-10-08'
+  limitations:
+  - Original body inspected. User names Fable 5.1 and xhigh; underlying provider route, client version, immutable
+    model snapshot, exact run date, and raw reproduction artifacts are not established.
+  - One reported ML workflow with human feedback, not a repeated controlled debugging benchmark. The claimed
+    gensim cause is the author’s account, not independently validated here.
+  - Same-author cross-posts and search hits in r/OpenAI/r/ArtificialInteligence are the same experiment, not
+    replications. Model-training F1/accuracy is not a debugging success score.
+  - Original body contains relative age only; published_at remains null.
+  claim_scope:
+  - 'Attributed ML workflow: reported unresolved gensim issue, disclosed stderr suppression and overlooked
+    token-loss defect; not a debugging prevalence estimate.'

@@ -2084,7 +2084,7 @@ records:
 - entity_type: benchmark
   entity_id: benchmark-62a20a5dbc74fc59
   canonical_path: data/benchmarks.yaml
-  value_hash: c40ae4e296a76d1d2edc376bb0b13fdbebfde9115bcd519a8c635f31592347e2
+  value_hash: 7575b55dec38bb0d23cc1dc1d63b3961fdd0ffd21c534c589878f1c8c11ddb33
 - entity_type: benchmark
   entity_id: benchmark-6480081e92794dc0
   canonical_path: data/benchmarks.yaml
@@ -2216,7 +2216,7 @@ records:
 - entity_type: benchmark
   entity_id: benchmark-89d613f9d34529e9
   canonical_path: data/benchmarks.yaml
-  value_hash: 7ddaaada246cb385953f64d62537fa9996bc4d4808f65445e995f641795baa3e
+  value_hash: 30b9f38673caed3cb22b70f81f355aa455ec0159c3ea282b316900bfeb30704c
 - entity_type: benchmark
   entity_id: benchmark-913104c644772c7b
   canonical_path: data/benchmarks.yaml
@@ -2289,6 +2289,10 @@ records:
   entity_id: benchmark-a7177f3e98d42815
   canonical_path: data/benchmarks.yaml
   value_hash: 2f07e65efc3a113ec30b169153d12f119e63e141da00b74234edc93cd85f9bb1
+- entity_type: benchmark
+  entity_id: benchmark-a8f574f60a829c01
+  canonical_path: data/benchmarks.yaml
+  value_hash: d96f48ce633cbac24ed245dbb26a448d40ac0a7b4d23d6143c60efc866ac8dc8
 - entity_type: benchmark
   entity_id: benchmark-a9e27061ab283d0e
   canonical_path: data/benchmarks.yaml
@@ -2480,7 +2484,7 @@ records:
 - entity_type: model
   entity_id: claude-fable-5-1
   canonical_path: models/anthropic/claude-fable-5-1/profile.yaml
-  value_hash: 8862c8de58a7a8186f3c727e47904fc610e02443a59afa79094afbdd32fbaadd
+  value_hash: 98c1c48fb59cb1d86d9d3bd73dff0218688b35c53a1cc533362871764b2554ae
 - entity_type: model
   entity_id: claude-haiku-4-5
   canonical_path: models/anthropic/claude-haiku-4-5/profile.yaml
@@ -4900,7 +4904,7 @@ records:
 - entity_type: source
   entity_id: src-02b09208ceab
   canonical_path: evidence/sources.yaml
-  value_hash: caea83cd0fd97c4252222006ed1c5cda9b1cf686ee44dea68967922463af1b89
+  value_hash: a0a5c84bddbd7be298fc3b25be7948e66896f10913ac1e4b42f3655b0f85ce6c
 - entity_type: source
   entity_id: src-033fa0bf122f
   canonical_path: evidence/sources.yaml
@@ -5012,7 +5016,7 @@ records:
 - entity_type: source
   entity_id: src-0b72694a5dea
   canonical_path: evidence/sources.yaml
-  value_hash: 61a2ca380cf37c75309650ae2cec5b471d87763a8faaef57aa04d0caa621fbf2
+  value_hash: e7cc77ef013072c66b70ea5c7e966a6d472a72d0765d32820fd5954762cd81e7
 - entity_type: source
   entity_id: src-0c5ee375aae3
   canonical_path: evidence/sources.yaml
@@ -5089,6 +5093,10 @@ records:
   entity_id: src-11a4a23be44b
   canonical_path: evidence/sources.yaml
   value_hash: b76873fa6980b471f29533cccf784dcaf8bf16cb1ff1f5238ca0f419c8a928e3
+- entity_type: source
+  entity_id: src-11bea9016ff0
+  canonical_path: evidence/sources.yaml
+  value_hash: cdffb7dc7a79b22ebb8aba40304b84bb0ddeb77c282168ef3fcdcff088dbc8a0
 - entity_type: source
   entity_id: src-11f146f5e385
   canonical_path: evidence/sources.yaml
@@ -5726,6 +5734,10 @@ records:
   canonical_path: evidence/sources.yaml
   value_hash: 37db9bc5d56c46c916864370ab874f748cb17f9ee23f734f099afe45229d8d7f
 - entity_type: source
+  entity_id: src-4f597f653005
+  canonical_path: evidence/sources.yaml
+  value_hash: 70a67ba9595f9de097b8716d16bca3b582d21b77136337e5d277665138e73577
+- entity_type: source
   entity_id: src-4f7ce59a681f
   canonical_path: evidence/sources.yaml
   value_hash: c1bfb4db8923108cccef9989a83c7c7fbcd919dd8adda519275d93bc4b6f5aa7
@@ -5733,6 +5745,10 @@ records:
   entity_id: src-4fb7165743ee
   canonical_path: evidence/sources.yaml
   value_hash: 6de17e3f37288a27384230093d331f137c4985528e14ea2bb1e78fa7fcd64486
+- entity_type: source
+  entity_id: src-4fbde637dbf3
+  canonical_path: evidence/sources.yaml
+  value_hash: fea4b122f7e6c16b58972fc48247f0c39479194cbf59d9a8782ed805ce55b67a
 - entity_type: source
   entity_id: src-4ff3ae14b471
   canonical_path: evidence/sources.yaml
@@ -6454,6 +6470,10 @@ records:
   canonical_path: evidence/sources.yaml
   value_hash: eac3e474bf32cf3f1d4eb1a48dc35ac0704999bc225b9ed105566bb2ca0c3c9c
 - entity_type: source
+  entity_id: src-96cec7bbd029
+  canonical_path: evidence/sources.yaml
+  value_hash: 96ef2ea754dbc7217d519860fa4699edab7c6f6aa138385738d13d865e134398
+- entity_type: source
   entity_id: src-97b73e99f5cd
   canonical_path: evidence/sources.yaml
   value_hash: b93d2e8beb675e1bb28b8e8e1f01645d2f184f62262a52a655e0d8335f5477d3
@@ -6672,7 +6692,7 @@ records:
 - entity_type: source
   entity_id: src-ad78a04807f9
   canonical_path: evidence/sources.yaml
-  value_hash: e0a7acade87d28f017ac5cbe5fa5a6a3c1525228731bbc00f42b56fd7ca29c5b
+  value_hash: 68ccb9758086d22939a62b3893b8354ae6a02a4a55bcb4539117f36cfe7dfcd6
 - entity_type: source
   entity_id: src-ad826b4059a9
   canonical_path: evidence/sources.yaml
@@ -6748,7 +6768,7 @@ records:
 - entity_type: source
   entity_id: src-b6ffa931564a
   canonical_path: evidence/sources.yaml
-  value_hash: df9f990720c81d2124252da5250ce50d698c3d8223a281bf709837112e4c15fb
+  value_hash: 2f8db20319b767b15e817ac7aebdb551b10e38898182250a638cbbe761b31916
 - entity_type: source
   entity_id: src-b88c4950bbf3
   canonical_path: evidence/sources.yaml
@@ -6888,7 +6908,7 @@ records:
 - entity_type: source
   entity_id: src-c7eceee3e7d1
   canonical_path: evidence/sources.yaml
-  value_hash: 1e88ae5d991fd70cea2f3e107ec737cb0e300c6c60b8d4bdd864b8d1f1b9b1d0
+  value_hash: 93af9cfee9123105120b62543894a7b53c7d8c4ed1778a592e9838867646bd97
 - entity_type: source
   entity_id: src-c84785b7885b
   canonical_path: evidence/sources.yaml
@@ -6989,6 +7009,10 @@ records:
   entity_id: src-d3e41dcc2800
   canonical_path: evidence/sources.yaml
   value_hash: 0f33e1acf5e3ca1af333db1f88a234722513d9781d75b53108cbb35330fb8524
+- entity_type: source
+  entity_id: src-d3e6e49a01b9
+  canonical_path: evidence/sources.yaml
+  value_hash: a2a5cb7ada47df12d05275611a179d2f61530d2a87db1a8279117db05314fe0a
 - entity_type: source
   entity_id: src-d466ccc68189
   canonical_path: evidence/sources.yaml
@@ -7198,6 +7222,10 @@ records:
   canonical_path: evidence/sources.yaml
   value_hash: 8592bb9030921302b1bdf0e2820ea834b16cbdc4fb6889231b99250f9e89a024
 - entity_type: source
+  entity_id: src-e7c2a679eb16
+  canonical_path: evidence/sources.yaml
+  value_hash: 29f19574a551d2c021652f00f2cfcad788b4e6e8c800e6381f5271b16d3d7856
+- entity_type: source
   entity_id: src-e86125854474
   canonical_path: evidence/sources.yaml
   value_hash: 09390a684379d369f1048437f5727b9bff867b746835e1483d307e0c2689669c
@@ -7205,6 +7233,10 @@ records:
   entity_id: src-e86418b60c92
   canonical_path: evidence/sources.yaml
   value_hash: c467ed10962e9fb31b2be119c58ff56e3b8fd42ef666a32e7bbba9697e6542ad
+- entity_type: source
+  entity_id: src-e86e19b3dd2c
+  canonical_path: evidence/sources.yaml
+  value_hash: eab8b7714a53121bc9fe140b83fa646c60d66cbf1f5cd5650f2804e753f80b04
 - entity_type: source
   entity_id: src-e8baec81d888
   canonical_path: evidence/sources.yaml
@@ -7229,6 +7261,10 @@ records:
   entity_id: src-e9acd4aa3c25
   canonical_path: evidence/sources.yaml
   value_hash: 8fa23fe8a69dd8927cc1651856a160d3e0cef02cc080f7bb159097af69bb6050
+- entity_type: source
+  entity_id: src-e9c984ecc940
+  canonical_path: evidence/sources.yaml
+  value_hash: 6f5cd7180af16b1b7110838d2cc862b6a3e9250fa05effa08935f50b288280dc
 - entity_type: source
   entity_id: src-ea26b12a0c82
   canonical_path: evidence/sources.yaml
@@ -9016,7 +9052,7 @@ records:
 - entity_type: task_assessment
   entity_id: task-assessment-293c9899ca23b224
   canonical_path: data/task-assessments.yaml
-  value_hash: 7e8f3591d0888817f91031e0e7f25d008947807d898c9f2981ba3161ed844761
+  value_hash: 8d8a384c45239d1d4e9a396ed31ec8093bddfae589a12807942cb21d931b33e3
 - entity_type: task_assessment
   entity_id: task-assessment-29463da0f10b8733
   canonical_path: data/task-assessments.yaml
@@ -10184,7 +10220,7 @@ records:
 - entity_type: task_assessment
   entity_id: task-assessment-50c1b1bcd5a6522b
   canonical_path: data/task-assessments.yaml
-  value_hash: 2cfa860680761fe0bf7cdd9b416b139c8c7b9e1f1041e616e2ac17d6a63cb29b
+  value_hash: a8dbe3834b066c369a0430d78ce5e39b83c6965c13a865d90f881e869c08bd9d
 - entity_type: task_assessment
   entity_id: task-assessment-50dc41f4e0f19a4e
   canonical_path: data/task-assessments.yaml

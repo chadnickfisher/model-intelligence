@@ -10,6 +10,7 @@ sys.path.insert(0,str(ROOT))
 from tools.knowledge import canonical, judgment_index, scope_errors, research_coverage_errors, integrity_errors
 from tools.research_runs import task_rubric_errors
 from tools.task_assessments import task_assessment_errors
+from tools.research_followups import followup_errors, render_followups
 from tools.public_boundary import private_work_path, public_files, tracked_work_paths
 def read(p):return yaml.load(p.read_text(encoding='utf-8'),Loader=getattr(yaml,'CSafeLoader',yaml.SafeLoader))
 def records(p):return read(ROOT/p)['records']
@@ -19,6 +20,7 @@ def run():
  for typ,paths in files.items():collections[typ]=[(p.relative_to(ROOT).as_posix(),read(p)) for p in paths]
  for typ,path in [('price-record','data/pricing.yaml'),('access-record','data/access.yaml'),('release-record','data/releases.yaml'),('source-record','evidence/sources.yaml'),('behavior-record','data/behavior.yaml'),('access-coverage-record','data/access-coverage.yaml'),('benchmark-record','data/benchmarks.yaml'),('research-coverage-record','data/research-coverage.yaml'),('research-contract-record','data/research-contract.yaml'),('task-assessment-record','data/task-assessments.yaml')]:collections[typ]=[(path,x) for x in records(path)]
  for typ,path in [('maintenance-contract-record','data/maintenance-contract.yaml')]:collections[typ]=[(path,x) for x in records(path)]
+ collections['research-followup-record']=[('data/research-followups.yaml',x) for x in records('data/research-followups.yaml')] if (ROOT/'data/research-followups.yaml').exists() else []
  for typ,path,key in [('task-record','data/capability-taxonomy.yaml','capabilities'),('alias-record','data/aliases.yaml','records')]:collections[typ]=[(path,x) for x in read(ROOT/path)[key]]
  allids=set()
  for typ,items in collections.items():
@@ -93,6 +95,11 @@ def run():
   {m['id']:m for _,m in collections['model-profile']}, tasks, access_by_id))
  if records('data/capabilities.yaml')!=expected:errors.append('Capability index differs from canonical claims; run render.py')
  current={key:value for key,(_,value) in canonical(ROOT).items()}
+ followups=[row for _,row in collections['research-followup-record']]
+ followup_problems=followup_errors(followups,current);errors.extend(followup_problems)
+ if not followup_problems and (ROOT/'data/research-followups.yaml').exists():
+  view=ROOT/'data/research-followups.md'
+  if not view.exists() or view.read_text(encoding='utf-8')!=render_followups(followups):errors.append('Follow-up view differs from canonical gaps; run render.py')
  errors.extend(integrity_errors(ROOT))
  for _,m in collections['model-profile']:
   if not m['evidence_ids']:errors.append(f"{m['id']}: no profile provenance")

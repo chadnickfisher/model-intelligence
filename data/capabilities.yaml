@@ -604,31 +604,39 @@ records:
   related_task_ids: []
   assessment: conditional
   scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
-  judgment: Can repair a subset of hidden repository defects; use as an assisted audit, not a completeness
-    guarantee.
+  judgment: Repaired 43 of 105 hidden defects in one Claude Code/max run; use for assisted diagnosis and repair
+    with material verification.
   confidence: low
   supporting_evidence_ids:
   - src-ad78a04807f9
   - src-02b09208ceab
   - src-0b72694a5dea
+  - src-e86e19b3dd2c
+  - src-e9c984ecc940
+  - src-96cec7bbd029
   contradictory_evidence_ids: []
   conditions:
-  - Single configuration run; no robust ranking implied.
-  - 'Harness: Claude Code; effort: max; effort evidence: first_party.'
-  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
-  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
-    and budgets.
-  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
-    external reproduction.
+  - One round per repository on 2026-09-01; one configuration run, not repeated trials.
+  - Approximately 28K-line TypeScript extension and 60K-line React/TypeScript Supabase LMS; 76 reverted real
+    fixes plus 29 authored defects.
+  - Native Claude Code; max is a documented first-party tier requested explicitly, not separately probed as
+    binding.
+  - No network or git history; preserve passing checks; diagnose symptoms and root causes and edit source in
+    place.
+  - Blind non-sibling judge compares diffs with withheld answer key; partials, claimed-only and extras do not
+    increase strict score.
+  - Metrics identify model=claude-fable-5-1 and a [1m] window request; precise CLI version and exact provider
+    endpoint are not established in these inspected max-row receipts.
   known_failure_modes:
-  - Many planted defects remained unresolved in the measured runs.
-  - Run variance and harness differences prevent fine-grained cross-model ranking.
+  - 62 seeded defects were not fully repaired in the inspected run; two fixes were partial and four were claimed
+    without implementation.
   evidence_notes:
-  - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
-    quality.
-  - No matched independent contradiction located; partial successes and misses coexist.
-  - Confidence concerns this bounded claim, not a capability score.
-  observed_at: '2026-10-07'
+  - One run across two repositories; partial fixes and eleven unscored genuine extras do not increase the strict
+    score.
+  - Low confidence reflects withheld artifacts, no exact-configuration replication and unknown run variance.
+  - Zero recorded false-positive fixes does not establish absence of regressions; this is repair evidence,
+    not code-review recall.
+  observed_at: '2026-10-08'
   effective_from: null
   provenance:
     origin: research
@@ -644,27 +652,32 @@ records:
   related_task_ids: []
   assessment: conditional
   scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
-  judgment: Strong benchmark candidate; bound edit scope and retain regression checks.
+  judgment: Completed a useful subset of behavior-preserving refactors under tests and structural checks; substantial
+    independent verification remains necessary.
   confidence: medium
   supporting_evidence_ids:
   - src-b6ffa931564a
   - src-c7eceee3e7d1
   contradictory_evidence_ids: []
   conditions:
-  - 70 tasks, 10 production repositories, 6 languages; Harbor/Modal sandboxes. Resolve requires unchanged tests,
-    zero regressions, and every mandatory Opus 4.5-judged rubric.
-  - Always-on adaptive thinking; effort-controlled operation.
+  - 'Published dataset: 70 tasks from 10 production repositories in six languages.'
+  - Task resolution requires unchanged test files, no relevant baseline-test regressions or failing added interface
+    tests, and all mandatory rubric criteria.
+  - Rubric judge is Claude Opus 4.5, not the evaluated model; documentation criteria are optional.
+  - Study uses Harbor with Modal sandboxing and repository shell/build/test access.
   known_failure_modes:
-  - Incomplete extraction, unwired callers, stale implementations/artifacts; failure taxonomy is pooled, not
-    per-model.
-  - Official documentation warns it favors whole-file rewrites for small changes, increasing output/time; targeted-edit
-    prompting recommended.
+  - Pooled benchmark analysis reports incomplete extraction, unwired call sites and stale artifacts; these
+    are not Fable-specific frequencies.
+  - Anthropic documents whole-file rewrites for small edits, usually preserving the result but increasing output
+    and time.
   evidence_notes:
-  - Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve xHigh as board label.
-    Intro's below 50% statement is stale. Gemini 3.1 Pro 33.81±6.64 is withheld pending preview-ID mapping.
-  - Vendor behavior description supplements E07; it is not an independent refactor success measurement.
-  - Confidence concerns this bounded claim, not a capability score.
-  observed_at: '2026-10-07'
+  - Scale reports 56.67 percent with displayed uncertainty 6.52 for Claude Code/xHigh; actual Fable trial count
+    and interval semantics remain unconfirmed.
+  - Medium finding confidence concerns the bounded independent task evaluation; it does not establish equivalent
+    performance on other routes or efforts.
+  - Official edit guidance supplements the evaluation; it is not an independent correctness measurement or
+    measured recovery.
+  observed_at: '2026-10-08'
   effective_from: null
   provenance:
     origin: research
@@ -739,6 +752,178 @@ records:
     research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate review_tests_frontend:review-fable51; exact identity gates and original
       sources retained.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-6c7a3c099d3c4be7
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact task evidence under its reported setup; no transfer to adjacent tasks or model/provider
+    configurations.
+  judgment: Snorkel reports 87% on four debugging tasks with executable feedback; this is bounded independent
+    corroboration.
+  confidence: low
+  supporting_evidence_ids:
+  - src-d3e6e49a01b9
+  contradictory_evidence_ids: []
+  conditions:
+  - Only the source-described task and setup are assessed; unspecified settings remain unknown.
+  known_failure_modes:
+  - Not a controlled comparison with Bug Hunt.
+  evidence_notes:
+  - Proprietary four-task subset; attempt denominator, aggregation and served configuration undisclosed.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: task-evidence-2026-10-08
+    method: Curated original public task evidence with exact scope, configuration limits and attributed counterevidence.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-ad43fedfa9593401
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: warning
+  scope_note: Exact task evidence under its reported setup; no transfer to adjacent tasks or model/provider
+    configurations.
+  judgment: owen800q reports that Fable 5.1, while implementing Jira bug fixes, added unsolicited helper functions,
+    unrelated refactors, and architectural changes. This is a reported scope-control failure during repair;
+    comments propose mitigations without verifying recovery.
+  confidence: low
+  supporting_evidence_ids:
+  - src-e7c2a679eb16
+  contradictory_evidence_ids: []
+  conditions:
+  - First-person Jira bug-repair workflow; exact provider, snapshot, client version, effort and patches undisclosed.
+  known_failure_modes:
+  - Single unverified account, with no executable reproduction, rate, or pinned client/provider/effort.
+  - Does not test success at a requested behavior-preserving refactor; do not generalize to all setups.
+  evidence_notes:
+  - Original first-person report explicitly names Fable 5.1 but supplies no code, diff, trace, exact model
+    snapshot, client version, effort, or provider route.
+  - Unrequested refactoring during bug repair is a debugging scope-control concern, not a tested failure at
+    a requested behavior-preserving refactor.
+  - Suggested prompts, restricted edits, and diff checks in comments lack controlled before/after validation.
+    Stable publication date not established.
+  - Unrequested refactoring is related context, not evidence of failure at a requested behavior-preserving
+    refactor.
+  - Prompting advice in comments does not establish controlled recovery.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: task-evidence-2026-10-08
+    method: Curated original public task evidence with exact scope, configuration limits and attributed counterevidence.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-7bb7ec6d2a29dc85
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: warning
+  scope_note: Exact task evidence under its reported setup; no transfer to adjacent tasks or model/provider
+    configurations.
+  judgment: returnity reports that Fable 5.1 at xhigh did not resolve a gensim 4.4 compiled-kernel problem,
+    instead suppressing its stderr notices while disclosing that choice, and missed a separate sentence-final
+    token-loss bug. The same workflow report praises its UTF-8 handling and readable code.
+  confidence: low
+  supporting_evidence_ids:
+  - src-11bea9016ff0
+  contradictory_evidence_ids: []
+  conditions:
+  - Author reports Fable 5.1/xhigh during one ML workflow; provider, client version, snapshot and run date
+    undisclosed.
+  known_failure_modes:
+  - No independently reproduced trace or pinned client/provider/model snapshot; claimed error cause is author-attributed.
+  - Cross-posts are one experiment. A failure in this case does not establish a general regression or comparative
+    ranking.
+  - No verified later recovery by Fable 5.1 is reported for these defects.
+  evidence_notes:
+  - Original body inspected. User names Fable 5.1 and xhigh; underlying provider route, client version, immutable
+    model snapshot, exact run date, and raw reproduction artifacts are not established.
+  - One reported ML workflow with human feedback, not a repeated controlled debugging benchmark. The claimed
+    gensim cause is the author’s account, not independently validated here.
+  - Same-author cross-posts and search hits in r/OpenAI/r/ArtificialInteligence are the same experiment, not
+    replications. Model-training F1/accuracy is not a debugging success score.
+  - Original body contains relative age only; published_at remains null.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: task-evidence-2026-10-08
+    method: Curated original public task evidence with exact scope, configuration limits and attributed counterevidence.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-bdd86c4657d2dabd
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact task evidence under its reported setup; no transfer to adjacent tasks or model/provider
+    configurations.
+  judgment: 'Gradle reports claude-fable-5-1 diagnosed and repaired issue #34751, reproduced the Dokka link-target
+    error, and passed a new regression test plus an existing test. The author preferred its patch, while explicitly
+    limiting the comparison to one run on one bug.'
+  confidence: low
+  supporting_evidence_ids:
+  - src-4fbde637dbf3
+  contradictory_evidence_ids: []
+  conditions:
+  - Reported run on 2026-09-07; claude-fable-5-1 through Claude Code 2.1.263 and gradle-eval/Inspect AI.
+  - 'Gradle commit 8606a2c1, JDK 21 container, network available; limits: 50 turns, 5 million tokens and 45
+    minutes.'
+  - Dokka 2.2.0 reproduction, new Spock/TestKit regression check and existing GradleReleaseNotesPluginTest;
+    effort/provider endpoint undisclosed.
+  known_failure_modes:
+  - Effort, provider, immutable snapshot and judge unknown; no general ranking or independent rerun.
+  evidence_notes:
+  - One reported bug/run; tools differ between comparison models. Not independently reproduced; proposed PR
+    not verified merged.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: task-evidence-2026-10-08
+    method: Curated original public task evidence with exact scope, configuration limits and attributed counterevidence.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-0d56d17e388e4a0a
+  scope: direct
+  task_ids:
+  - coding.refactoring
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact task evidence under its reported setup; no transfer to adjacent tasks or model/provider
+    configurations.
+  judgment: Wmedia includes extracting shared validation from three controllers, checked for centralization
+    and passing controller tests. All mixed-task runs passed; no separate refactoring score is tabulated.
+  confidence: low
+  supporting_evidence_ids:
+  - src-4f597f653005
+  contradictory_evidence_ids: []
+  conditions:
+  - Claude Code 2.1.280 at high effort; clean 11-file PHP repository, no user settings or MCP servers.
+  - Shared validation extracted from three controllers; centralization and controller tests checked; three
+    repetitions per task.
+  - The published 12/12 total covers four mixed tasks; no separate refactoring-only score is tabulated.
+  known_failure_modes:
+  - Small simple task with prewritten checks; results do not establish multi-repository refactoring reliability.
+  - The unrelated bug-task test remained failing and was excluded from refactor scoring; raw results ZIP not
+    inspected.
+  evidence_notes:
+  - One small mixed-task study; linked raw ZIP was not inspected.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: task-evidence-2026-10-08
+    method: Curated original public task evidence with exact scope, configuration limits and attributed counterevidence.
 - model_id: claude-haiku-4-5
   profile: models/anthropic/claude-haiku-4-5/profile.yaml
   id: judgment-86b4ad915dcef6a0

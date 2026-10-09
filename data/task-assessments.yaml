@@ -1959,55 +1959,72 @@ records:
   task_id: coding.debugging
   applicability: applicable
   result: assessed
-  checked_at: '2026-10-07'
-  rationale: The recorded agent configurations fixed real planted repository defects, making them useful for
-    assisted diagnosis and repair. Many defects remained; independent review and executable regression checks
-    are material requirements, and the result does not establish a complete audit.
+  checked_at: '2026-10-08'
+  rationale: Implemented repairs and separate task evaluations support useful assisted debugging. Many defects
+    remain unresolved, so diagnosis, patch and regression checks are material requirements.
   judgment_ids:
   - judgment-f023edc397fdd671
-  confidence_rationale: 'Low confidence: The exact-task evidence is narrow, incompletely pinned or independently
-    unreplicated; separate configurations are not replications. The conclusion retains the cited findings,
-    their original inspection dates and the conditions below. Many planted defects remained unresolved in the
-    measured runs. Run variance and harness differences prevent fine-grained cross-model ranking.'
+  - judgment-6c7a3c099d3c4be7
+  - judgment-ad43fedfa9593401
+  - judgment-7bb7ec6d2a29dc85
+  - judgment-bdd86c4657d2dabd
+  confidence_rationale: 'Low confidence: the broad repair result is one run on withheld snapshots; the separate
+    four-task category lacks exact settings and aggregation. The detailed Gradle case and attributed failures
+    add context but establish neither repeated exact-configuration replication nor general success or failure
+    rates.'
   evidence_ids:
   - src-ad78a04807f9
   - src-02b09208ceab
   - src-0b72694a5dea
+  - src-e86e19b3dd2c
+  - src-e9c984ecc940
+  - src-96cec7bbd029
+  - src-d3e6e49a01b9
+  - src-4fbde637dbf3
+  - src-e7c2a679eb16
+  - src-11bea9016ff0
   conditions:
-  - Single configuration run; no robust ranking implied.
-  - 'Harness: Claude Code; effort: max; effort evidence: first_party.'
-  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
-  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
-    and budgets.
-  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
-    external reproduction.
-  - Only the source-described task subsets and setups are assessed; no equivalent provider route is assumed.
+  - Supervised diagnosis and repair with executable reproduction and independent regression checks.
+  - 'Bug Hunt: Claude Code/max, one run across 105 defects; Snorkel: four debugging tasks with incomplete setup.'
+  - 'Gradle: one diagnosis-and-repair case under Claude Code 2.1.263/gradle-eval; practitioner failures concern
+    different setups.'
+  - Only the reported model-agent setups are assessed; no equivalent provider/API route is assumed.
   remaining_gaps:
-  - Many planted defects remained unresolved in the measured runs.
-  - Run variance and harness differences prevent fine-grained cross-model ranking.
+  - Independent replication with accessible seeded artifacts and larger debugging-only samples.
+  - Exact Snorkel served settings, attempt denominator and category aggregation.
+  - No controlled recovery or general failure rate established for the practitioner reports.
   id: task-assessment-50c1b1bcd5a6522b
   aggregate:
     policy_version: '1'
     suitability: medium
     evidence_confidence: low
     assessed_at: '2026-10-08'
-    rationale: The recorded agent configurations fixed real planted repository defects, making them useful
-      for assisted diagnosis and repair. Many defects remained; independent review and executable regression
-      checks are material requirements, and the result does not establish a complete audit.
-    confidence_rationale: 'Low confidence: The exact-task evidence is narrow, incompletely pinned or independently
-      unreplicated; separate configurations are not replications. The conclusion retains the cited findings,
-      their original inspection dates and the conditions below. Many planted defects remained unresolved in
-      the measured runs. Run variance and harness differences prevent fine-grained cross-model ranking.'
+    rationale: Implemented repairs and separate task evaluations support useful assisted debugging. Many defects
+      remain unresolved, so diagnosis, patch and regression checks are material requirements.
+    confidence_rationale: 'Low confidence: the broad repair result is one run on withheld snapshots; the separate
+      four-task category lacks exact settings and aggregation. The detailed Gradle case and attributed failures
+      add context but establish neither repeated exact-configuration replication nor general success or failure
+      rates.'
     supporting_evidence_ids:
     - src-ad78a04807f9
     - src-02b09208ceab
     - src-0b72694a5dea
-    contradictory_evidence_ids: []
-    conflict_rationale: null
+    - src-e86e19b3dd2c
+    - src-e9c984ecc940
+    - src-96cec7bbd029
+    - src-d3e6e49a01b9
+    - src-4fbde637dbf3
+    contradictory_evidence_ids:
+    - src-e7c2a679eb16
+    - src-11bea9016ff0
+    conflict_rationale: Reported successes and failures concern different tasks and setups; they justify conditional
+      assisted use and do not establish an unresolved matched contradiction.
     watch_outs:
-    - Many planted defects remained unresolved in the measured runs.
-    - Run variance and harness differences prevent fine-grained cross-model ranking.
-    - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+    - 62/105 seeded defects were not fully repaired; inspect patches and execute regression checks before accepting
+      completion.
+    - Snorkel's reported 87 percent describes four tasks, not a real-world bug-repair probability.
+    - Practitioners report unsolicited Jira edits and one unresolved gensim issue handled by suppressing stderr;
+      these are attributed cases, not prevalence estimates.
     access_ids: []
 - model_id: claude-fable-5-1
   task_id: coding.frontend
@@ -2067,58 +2084,51 @@ records:
   task_id: coding.refactoring
   applicability: applicable
   result: assessed
-  checked_at: '2026-10-07'
-  rationale: The exact model-and-agent configuration completed a useful subset of multi-file refactorings under
-    tests, regression checks and structural rubrics. Failed or incomplete cases make supervision and behavior-preservation
-    checks necessary; retain the measured configuration rather than transferring the result to every route.
+  checked_at: '2026-10-08'
+  rationale: Direct restructuring and preservation checks demonstrate useful refactoring capability. Incomplete
+    benchmark resolution and limited corroboration make material behavior and completeness checks necessary.
   judgment_ids:
   - judgment-a0a1fd6ff5e17879
-  confidence_rationale: 'Low confidence: The exact-task evidence is narrow, incompletely pinned or independently
-    unreplicated; separate configurations are not replications. The conclusion retains the cited findings,
-    their original inspection dates and the conditions below. Incomplete extraction, unwired callers, stale
-    implementations/artifacts; failure taxonomy is pooled, not per-model. Official documentation warns it favors
-    whole-file rewrites for small changes, increasing output/time; targeted-edit prompting recommended.'
+  - judgment-0d56d17e388e4a0a
+  confidence_rationale: 'Medium confidence for bounded assisted use: Scale provides direct multi-repository
+    task evidence and a separate small controller-extraction study corroborates narrow refactoring. Confidence
+    is limited by missing Fable-specific Scale artifacts/settings and the small simple corroborating task;
+    these are not exact-configuration replications.'
   evidence_ids:
   - src-b6ffa931564a
+  - src-4f597f653005
   - src-c7eceee3e7d1
   conditions:
-  - 70 tasks, 10 production repositories, 6 languages; Harbor/Modal sandboxes. Resolve requires unchanged tests,
-    zero regressions, and every mandatory Opus 4.5-judged rubric.
-  - Always-on adaptive thinking; effort-controlled operation.
-  - Only the source-described task subsets and setups are assessed; no equivalent provider route is assumed.
+  - Specify protected behavior and intended restructuring; independently check tests, call sites and cleanup.
+  - 'Scale: Fable-5.1 (Claude Code) xHigh, test preservation plus all mandatory structural rubrics.'
+  - 'Wmedia: Claude Code 2.1.280/high on a small PHP extraction task; mixed-task totals are not refactoring-only
+    rates.'
+  - No equivalence to default-effort API or other provider routes is established.
   remaining_gaps:
-  - Incomplete extraction, unwired callers, stale implementations/artifacts; failure taxonomy is pooled, not
-    per-model.
-  - Official documentation warns it favors whole-file rewrites for small changes, increasing output/time; targeted-edit
-    prompting recommended.
+  - Fable-specific Scale run artifacts, trial count and displayed interval definition.
+  - Larger independent behavior-preserving refactoring replications.
   id: task-assessment-293c9899ca23b224
   aggregate:
     policy_version: '1'
     suitability: medium
-    evidence_confidence: low
+    evidence_confidence: medium
     assessed_at: '2026-10-08'
-    rationale: The exact model-and-agent configuration completed a useful subset of multi-file refactorings
-      under tests, regression checks and structural rubrics. Failed or incomplete cases make supervision and
-      behavior-preservation checks necessary; retain the measured configuration rather than transferring the
-      result to every route.
-    confidence_rationale: 'Low confidence: The exact-task evidence is narrow, incompletely pinned or independently
-      unreplicated; separate configurations are not replications. The conclusion retains the cited findings,
-      their original inspection dates and the conditions below. Incomplete extraction, unwired callers, stale
-      implementations/artifacts; failure taxonomy is pooled, not per-model. Official documentation warns it
-      favors whole-file rewrites for small changes, increasing output/time; targeted-edit prompting recommended.'
+    rationale: Direct restructuring and preservation checks demonstrate useful refactoring capability. Incomplete
+      benchmark resolution and limited corroboration make material behavior and completeness checks necessary.
+    confidence_rationale: 'Medium confidence for bounded assisted use: Scale provides direct multi-repository
+      task evidence and a separate small controller-extraction study corroborates narrow refactoring. Confidence
+      is limited by missing Fable-specific Scale artifacts/settings and the small simple corroborating task;
+      these are not exact-configuration replications.'
     supporting_evidence_ids:
     - src-b6ffa931564a
+    - src-4f597f653005
     - src-c7eceee3e7d1
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Incomplete extraction, unwired callers, stale implementations/artifacts; failure taxonomy is pooled,
-      not per-model.
-    - Official documentation warns it favors whole-file rewrites for small changes, increasing output/time;
-      targeted-edit prompting recommended.
-    - Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve xHigh as board label.
-      Intro's below 50% statement is stale. Gemini 3.1 Pro 33.81Â±6.64 is withheld pending preview-ID mapping.
-    - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+    - Passing tests alone does not establish that every requested structural change and cleanup was completed.
+    - Scale's pooled failure taxonomy is not a measured Fable-specific failure frequency.
+    - Whole-file rewrites can increase output and time; prompting guidance is not measured correctness recovery.
     access_ids: []
 - model_id: claude-fable-5-1
   task_id: coding.repository_work

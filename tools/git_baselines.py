@@ -43,7 +43,8 @@ def git_state(commit, root=ROOT):
        'data/benchmarks.yaml':'benchmark','data/research-coverage.yaml':'research_coverage',
        'data/research-contract.yaml':'research_contract','data/research-runs.yaml':'research_run',
        'data/maintenance-contract.yaml':'maintenance_contract','data/maintenance-passes.yaml':'maintenance_pass',
-       'data/task-assessments.yaml':'task_assessment','data/aliases.yaml':'alias','data/capability-taxonomy.yaml':'task'}
+       'data/task-assessments.yaml':'task_assessment','data/research-followups.yaml':'research_followup',
+       'data/aliases.yaml':'alias','data/capability-taxonomy.yaml':'task'}
     with tarfile.open(fileobj=BytesIO(raw)) as archive:
         for item in archive:
             path = item.name
