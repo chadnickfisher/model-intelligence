@@ -111,7 +111,9 @@ additional_specifications:
   api_id:
     value: claude-opus-5-5
     status: documented
-    conditions: []
+    conditions:
+    - claude-opus-5-5 is a pinned canonical snapshot ID, not a rolling convenience alias; serving infrastructure
+      can change independently.
     evidence_ids:
     - src-4d070c5c8c67
     - src-f3655eaf1407
@@ -180,12 +182,19 @@ additional_specifications:
     - src-4950ff35950b
     - src-0dd3bed5c7dd
 licensing:
-  name: null
-  commercial_use: null
+  name: Anthropic Commercial Terms of Service for hosted commercial API use; consumer and partner terms vary.
+  commercial_use: Permitted through the commercial hosted service, including customer applications, subject
+    to applicable terms and policies.
   redistribution: null
   fine_tuning: null
-  hosted_service: null
-  restrictions: []
+  hosted_service: Anthropic supplies the hosted service; customer applications are permitted. Reselling the
+    service requires express approval.
+  restrictions:
+  - Comply with usage, service-specific and supported-region policies.
+  - Reverse engineering or duplicating the service and using it to build a competing product or train competing
+    models are restricted; service resale requires express approval.
+  - Output ownership and commercial API permission do not grant a model-weight redistribution or fine-tuning
+    license.
   evidence_ids:
   - src-4d070c5c8c67
   - src-f3655eaf1407
@@ -323,7 +332,9 @@ capabilities:
   known_failure_modes: []
   evidence_notes:
   - Confidence concerns this bounded claim, not a capability score.
-  observed_at: '2026-10-07'
+  - Oct 8 row is 1857 +/-19 with 1,687 votes; this small movement does not change the retained preference conclusion.
+    Executable LWC evidence is recorded in a separate finding.
+  observed_at: '2026-10-08'
   effective_from: null
   provenance:
     origin: research

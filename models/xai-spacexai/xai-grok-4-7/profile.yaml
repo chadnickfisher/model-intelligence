@@ -250,13 +250,220 @@ capabilities:
   known_failure_modes: []
   evidence_notes:
   - Confidence concerns this bounded claim, not a capability score.
-  observed_at: '2026-10-07'
+  - Fresh October 8 snapshot is 1658 ±12 from 3, 082 votes, rank spread 11–21. This remains preference evidence
+    and is not the reason for the separate executable-frontend assessment.
+  observed_at: '2026-10-08'
   effective_from: null
   provenance:
     origin: research
     research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate review_tests_frontend:frontend-arena-xai-grok-4-7; exact identity gates
       and original sources retained.
+- id: judgment-018736055ee45c29
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact task and recorded conditions only; no transfer from benchmark components to neighboring
+    tasks.
+  judgment: 'Repairs were highly prompt-sensitive in a small test: the familiar JavaScript median formulation
+    passed all five checks, while the Python reformulation repeatedly retained defects.'
+  confidence: low
+  supporting_evidence_ids:
+  - src-3721a84d53ae
+  contradictory_evidence_ids: []
+  conditions:
+  - Five responses per code prompt, default settings, output code executed against five assertions; actual
+    run date and route undisclosed.
+  known_failure_modes:
+  - Python outputs never fixed even-length averaging or empty input; only two of five fixed lexicographic sorting.
+  evidence_notes:
+  - The Python mean was 2.4 defects fixed of 5; this does not measure test generation or prove an internal
+    self-checking mechanism.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public evidence inspected under exact task rubric; source independence and undisclosed
+      setup retained.
+- id: judgment-0ba4cb2ee9068e43
+  scope: direct
+  task_ids:
+  - vision.question_answering
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact task and recorded public setup only; no transfer from compound scores or neighboring tasks.
+  judgment: Useful for questions requiring visual relationships and derived answers, but needs material checking
+    under the measured image-question setup.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-efd1db045882
+  - src-12127a4ce5a0
+  contradictory_evidence_ids: []
+  conditions:
+  - Roboflow current visual-reasoning task; Grok 4.7 low/high native effort;3runs each; fixed public examples
+    require interpreting diagrams and images.
+  - Gemini 3.5 Flash temperature 0 judges against ground truth; strict normalized-match score also provided;
+    sample count, resolution, model-run date, immutable snapshot and exact inference route undisclosed.
+  known_failure_modes:
+  - Mean judged accuracy 64.2%low and 66.9%high; additional effort did not establish uniformly correct interpretation.
+  evidence_notes:
+  - Half-range bars and observed run range are not confidence intervals; model-page six-task composite not
+    used.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-grok47-evidence-review-2026-10-08
+    method: Original public study/task/model/configuration inspection; source identity and limitations retained.
+- id: judgment-50e15107482eac41
+  scope: direct
+  task_ids:
+  - coding.scoped_edit
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact task and recorded conditions only; no transfer from benchmark components to neighboring
+    tasks.
+  judgment: 'Useful bounded script generation still requires runtime validation: the tested backup scripts
+    worked, while every first-pass non-root nginx manifest crash-looped despite clean schema validation.'
+  confidence: low
+  supporting_evidence_ids:
+  - src-706225e4588a
+  contradictory_evidence_ids: []
+  conditions:
+  - Josphat Mutai tested three prompts three times each at default high and low via xAI API on September 25.
+  - Bash was tested with stubbed commands; Terraform was only validated/formatted, not deployed.
+  known_failure_modes:
+  - All six nginx manifests omitted necessary writable mounts; generated scripts generally used the current
+    directory for backups.
+  evidence_notes:
+  - Do not convert the mixed 6-of-9 checks total into a narrow function, repository or security rate.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public evidence inspected under exact task rubric; source independence and undisclosed
+      setup retained.
+- id: judgment-539a094d8fd79d60
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact task and recorded conditions only; no transfer from benchmark components to neighboring
+    tasks.
+  judgment: A single log-assisted follow-up repaired a crashing non-root nginx manifest on the tested cluster;
+    the result supports a narrow corrective workflow, not general autonomous recovery.
+  confidence: low
+  supporting_evidence_ids:
+  - src-706225e4588a
+  contradictory_evidence_ids: []
+  conditions:
+  - Original failed manifest and two-line error supplied; xAI API, September 25, k3s 1.36.4 on Ubuntu 26.04.
+  known_failure_modes:
+  - The repaired manifest relies on the runtime allowing unprivileged port 80; its added capability line did
+    not confer the claimed effective capability.
+  evidence_notes:
+  - The author deployed the repaired output and observed HTTP 200. One repair is not a repeat estimate.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public evidence inspected under exact task rubric; source independence and undisclosed
+      setup retained.
+- id: judgment-545f5cc024f99a3d
+  scope: unresolved
+  task_ids: []
+  related_task_ids:
+  - coding.repository_work
+  - coding.architecture
+  - coding.refactoring
+  - coding.tests
+  assessment: unknown
+  scope_note: Unresolved compound evidence retained for navigation only; no direct task endorsement.
+  judgment: Attributable Cursor users report both useful Rust multi-file work and architecture/refactor drift;
+    the anecdotes do not isolate model quality or establish behavior-preserving refactoring.
+  confidence: low
+  supporting_evidence_ids:
+  - src-aee499e96a53
+  contradictory_evidence_ids: []
+  conditions:
+  - Exact effort, serving route, patches and acceptance checks were not disclosed.
+  known_failure_modes:
+  - Unnecessary abstractions, unreadable refactors and unapplied changes are reported, without controlled reproduction.
+  evidence_notes:
+  - Mixed user experiences are not sufficient by themselves for an aggregate Disputed rating.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public evidence inspected under exact task rubric; source independence and undisclosed
+      setup retained.
+- id: judgment-a610fa0194677cb5
+  scope: direct
+  task_ids:
+  - coding.frontend
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact task and recorded conditions only; no transfer from benchmark components to neighboring
+    tasks.
+  judgment: Grok Build xhigh produced usable visual code and a game satisfying the explicit brief, but visible
+    animation, camera and interaction-polish problems required direct rendered-output review.
+  confidence: low
+  supporting_evidence_ids:
+  - src-6fb2505d493e
+  - src-2be166d8cf0e
+  contradictory_evidence_ids: []
+  conditions:
+  - One attempt per brief. Browser self-check was forbidden for three initial builds and required/available
+    for the separate Hill Climb game.
+  known_failure_modes:
+  - Reported faults included disconnected animation layers, a camera losing the rocket, abrupt coasting and
+    floating background scenery.
+  evidence_notes:
+  - All explicit Hill Climb requirements passed. Its 6/20 subjective score is not a functional failure rate;
+    exact prompts and blinded grading were unavailable.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public evidence inspected under exact task rubric; source independence and undisclosed
+      setup retained.
+- id: judgment-b638cfe00b628c73
+  scope: direct
+  task_ids:
+  - vision.grounding
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact task and recorded public setup only; no transfer from compound scores or neighboring tasks.
+  judgment: Can emit normalized boxes for described image classes, but localization is weak enough that precise
+    coordinates need substantial correction.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-aac5808af0ec
+  - src-12127a4ce5a0
+  contradictory_evidence_ids: []
+  conditions:
+  - Roboflow zero-shot object detection; requested labels and normalized[ymin,xmin,ymax,xmax]coordinates; Grok
+    4.7 low/high;3runs each.
+  - Deterministic box-overlap mAP; sample/object denominators, image resolution, immutable checkpoint and route
+    undisclosed.
+  known_failure_modes:
+  - mAP@50= 40.4% low / 41.2% high; mAP@75=23.0%/23.7% and mAP@50:95=23.6%/24.4%.
+  evidence_notes:
+  - mAP is not a fraction of task successes; no GUI-action or segmentation conclusion.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-grok47-evidence-review-2026-10-08
+    method: Original public study/task/model/configuration inspection; source identity and limitations retained.
 performance_characteristics:
 - id: judgment-4353bef7f2c69a6b
   scope: performance

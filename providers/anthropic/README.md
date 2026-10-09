@@ -15,7 +15,9 @@ Verified: 2026-10-06
 
 ## Geographic availability
 
-- Supported Regions Policy has separate API and Claude.ai lists; geography and ownership restrictions apply.
+- The current Supported Regions Policy uses one country/region list across apps, API/developer platform, cloud platforms and authorized resellers; location, entity headquarters and majority ownership/control restrictions apply.
+- Supported Regions Policy now publishes one list covering apps, API/developer platform, cloud platforms and authorized resellers; physical location, incorporation/headquarters, majority-ownership/control restrictions apply.
+- One Supported Regions Policy covers apps, API/developer platform, cloud platforms and authorized resellers; physical location, incorporation/headquarters and majority-ownership/control restrictions apply.
 
 ## Rate limits
 
@@ -29,6 +31,7 @@ Verified: 2026-10-06
 
 - Commercial products default to no model training; explicit feedback or opt-in exceptions apply. Consumer Free/Pro/Max and their Code sessions have separate policies.
 - Approved zero retention applies only to eligible commercial APIs/products and Enterprise Code, with safety/legal exceptions; no universal consumer guarantee.
+- Fable 5.1 is a Covered Model with 30-day retention requirements unless Anthropic expressly authorizes an exception; general approved-ZDR language is not automatic Fable eligibility.
 
 ## Notes
 

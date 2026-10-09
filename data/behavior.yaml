@@ -37,8 +37,8 @@ records:
   - 'default_effort: medium'
   - 'region_constraint: API Fast mode unavailable with EU data residency'
   notes:
-  - The current model page lists no separate date-stamped snapshot. Do not invent a resolved checkpoint
-    or infer a weight update from subsequent serving changes.
+  - The current model page lists no separate date-stamped snapshot. Do not invent a resolved checkpoint or
+    infer a weight update from subsequent serving changes.
   - 'Claim adjudication: supported'
   - 'Layer: model_release'
   - 'Weights change established: False'
@@ -83,8 +83,7 @@ records:
     actionable: Persist requested and resolved model IDs separately. Record effective effort, route, service
       tier and client version for every observation.
     assessed_at: '2026-10-07T10:05:00Z'
-    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred
-      intent.
+    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred intent.
     cluster_id: gpt61-launch-baseline
     official_acknowledgment: false
     fix:
@@ -104,8 +103,8 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: A feature rollout overloaded shared network connections, causing failed requests, timeouts and
-    tasks unable to start, resume or finish across products.
+  claim: A feature rollout overloaded shared network connections, causing failed requests, timeouts and tasks
+    unable to start, resume or finish across products.
   change_type: service_change
   metrics: []
   observed_at: '2026-10-07'
@@ -118,8 +117,8 @@ records:
   - src-2230494321ba
   - src-f87c624c528e
   contradictory_evidence_ids: []
-  official_acknowledgment: Research packet identifies an official statement; inspect the linked source
-    for its bounded scope.
+  official_acknowledgment: Research packet identifies an official statement; inspect the linked source for
+    its bounded scope.
   fix:
     published_at: null
     version: null
@@ -155,8 +154,8 @@ records:
     research_source_ids:
     - gpt_launch_rca
     - gpt_launch_incident
-    claim: A feature rollout overloaded shared network connections, causing failed requests, timeouts
-      and tasks unable to start, resume or finish across products.
+    claim: A feature rollout overloaded shared network connections, causing failed requests, timeouts and tasks
+      unable to start, resume or finish across products.
     observed_at: 2026-09-29T17:30:00Z/2026-09-29T23:07:00Z
     reported_at: '2026-09-29'
     state: resolved
@@ -172,8 +171,7 @@ records:
       stage: provider_resolution_reported
       version: null
       commit: null
-      mitigation: Triggering rollout disabled; unhealthy routes avoided and database/network mitigations
-        applied
+      mitigation: Triggering rollout disabled; unhealthy routes avoided and database/network mitigations applied
       resolved_at: '2026-09-29T23:07:00Z'
       measured_post_fix_outcome: Provider reports recovery; independent matched before/after not found
     caveats:
@@ -181,8 +179,7 @@ records:
     - No direct evidence attributes this to Sol weights or deliberate throttling.
     actionable: Annotate launch-window failures separately from quality scores.
     assessed_at: '2026-10-07T10:05:00Z'
-    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred
-      intent.
+    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred intent.
     cluster_id: gpt61-launch-network-incident
     catalog_model_ids:
     - gpt-6-1-sol
@@ -209,8 +206,8 @@ records:
   supporting_evidence_ids:
   - src-c234947b3218
   contradictory_evidence_ids: []
-  official_acknowledgment: Research packet identifies an official statement; inspect the linked source
-    for its bounded scope.
+  official_acknowledgment: Research packet identifies an official statement; inspect the linked source for
+    its bounded scope.
   fix:
     published_at: null
     version: null
@@ -263,8 +260,7 @@ records:
       measured_post_fix_outcome: Provider reports recovery; no independent post-fix measurement
     actionable: Do not use affected-day latency as a timeless model property.
     assessed_at: '2026-10-07T10:05:00Z'
-    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred
-      intent.
+    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred intent.
     cluster_id: gpt61-api-latency-sept30
     catalog_model_ids:
     - gpt-6-1-sol
@@ -278,8 +274,8 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: PARK JOON measured median visible streaming near 31.1 tokens/s on September 30 in a ChatGPT Pro
-    Codex environment.
+  claim: PARK JOON measured median visible streaming near 31.1 tokens/s on September 30 in a ChatGPT Pro Codex
+    environment.
   change_type: unresolved
   metrics:
   - kind: throughput
@@ -333,8 +329,8 @@ records:
     confidence: medium
     research_source_ids:
     - gpt_joonlab
-    claim: PARK JOON measured median visible streaming near 31.1 tokens/s on September 30 in a ChatGPT
-      Pro Codex environment.
+    claim: PARK JOON measured median visible streaming near 31.1 tokens/s on September 30 in a ChatGPT Pro
+      Codex environment.
     observed_at: '2026-09-30'
     reported_at: '2026-09-30'
     state: historical
@@ -364,13 +360,11 @@ records:
       raw_responses_available: false
     caveats:
     - Data and task definitions available, but no harness, hidden tests or full outputs.
-    - Most quality tracks saturate; effort increase showed no accuracy gain on these easy-for-frontier
-      tasks.
+    - Most quality tracks saturate; effort increase showed no accuracy gain on these easy-for-frontier tasks.
     - Not a measurement after October 5.
     actionable: Keep the launch measurement date visible; do not present 31.1 tokens/s as current speed.
     assessed_at: '2026-10-07T10:05:00Z'
-    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred
-      intent.
+    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred intent.
     cluster_id: gpt61-early-speed-measurement
     official_acknowledgment: false
     fix:
@@ -408,8 +402,8 @@ records:
   - src-ac381b5a0d4c
   - src-ad826b4059a9
   contradictory_evidence_ids: []
-  official_acknowledgment: Research packet identifies an official statement; inspect the linked source
-    for its bounded scope.
+  official_acknowledgment: Research packet identifies an official statement; inspect the linked source for
+    its bounded scope.
   fix:
     published_at: null
     version: null
@@ -448,8 +442,8 @@ records:
     research_source_ids:
     - gpt_speed_help
     - gpt_speed_rollout
-    claim: OpenAI documents roughly 50% higher default text-generation speed for GPT-6.1 Sol and GPT-6
-      Astra through ChatGPT subscriptions.
+    claim: OpenAI documents roughly 50% higher default text-generation speed for GPT-6.1 Sol and GPT-6 Astra
+      through ChatGPT subscriptions.
     observed_at: '2026-10-05'
     reported_at: '2026-10-05'
     state: deployed_claim
@@ -465,8 +459,8 @@ records:
       stage: provider_rollout_announced
       version: null
       commit: null
-      measured_post_fix_outcome: Mixed firsthand reports; no controlled population-level before/after
-        validation found
+      measured_post_fix_outcome: Mixed firsthand reports; no controlled population-level before/after validation
+        found
     metrics:
     - name: text_generation_throughput_relative_change
       value: 0.5
@@ -480,11 +474,10 @@ records:
     - Support says it cannot verify improvement for a specific account.
     - No weight/checkpoint change documented.
     - Forum supplies dated announcement chronology; current Help Center directly confirms scope and metric.
-    actionable: Label 'provider-reported throughput improvement, deployed Oct 5'; keep task-latency and
-      quality judgment separate.
+    actionable: Label 'provider-reported throughput improvement, deployed Oct 5'; keep task-latency and quality
+      judgment separate.
     assessed_at: '2026-10-07T10:05:00Z'
-    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred
-      intent.
+    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred intent.
     cluster_id: gpt61-oct5-serving-speed
     catalog_model_ids:
     - gpt-6-1-sol
@@ -498,8 +491,8 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: The October 5–6 speed discussion contains both positive before/after reports and complaints that
-    throughput or task completion remains slow.
+  claim: The October 5–6 speed discussion contains both positive before/after reports and complaints that throughput
+    or task completion remains slow.
   change_type: unresolved
   metrics: []
   observed_at: '2026-10-07'
@@ -548,12 +541,12 @@ records:
     research_source_ids:
     - gpt_reddit_after
     - gpt_hn_counter
-    claim: The October 5–6 speed discussion contains both positive before/after reports and complaints
-      that throughput or task completion remains slow.
+    claim: The October 5–6 speed discussion contains both positive before/after reports and complaints that
+      throughput or task completion remains slow.
     observed_at: 2026-10-05/2026-10-06
     reported_at: null
-    reported_date_precision: Search index says published yesterday as retrieved Oct 7; page uses relative
-      times. Exact UTC timestamps not verified.
+    reported_date_precision: Search index says published yesterday as retrieved Oct 7; page uses relative times.
+      Exact UTC timestamps not verified.
     state: unknown
     scope:
       product: Codex
@@ -570,11 +563,10 @@ records:
     - Do not count every comment/repost as an independent incident.
     - Complaints can concern latency, quality, outages, or task drift and cannot be pooled as one effect.
     - HN commenters disagree whether lower effort adequately addresses perceived slowness.
-    actionable: Keep outcome as mixed/unresolved; use reports to locate conditions for matched testing,
-      not to set a global reliability score.
+    actionable: Keep outcome as mixed/unresolved; use reports to locate conditions for matched testing, not
+      to set a global reliability score.
     assessed_at: '2026-10-07T10:05:00Z'
-    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred
-      intent.
+    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred intent.
     cluster_id: gpt61-after-speed-mixed
     official_acknowledgment: false
     fix:
@@ -594,8 +586,8 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: A firsthand lifecycle analysis reports 162.3 minutes for one Sol 6.1 High desktop task, with
-    only 11.5 minutes of non-overlapping shell execution.
+  claim: A firsthand lifecycle analysis reports 162.3 minutes for one Sol 6.1 High desktop task, with only
+    11.5 minutes of non-overlapping shell execution.
   change_type: unresolved
   metrics:
   - kind: total_agent_time
@@ -650,8 +642,8 @@ records:
     confidence: medium
     research_source_ids:
     - gpt_reddit_lifecycle
-    claim: A firsthand lifecycle analysis reports 162.3 minutes for one Sol 6.1 High desktop task, with
-      only 11.5 minutes of non-overlapping shell execution.
+    claim: A firsthand lifecycle analysis reports 162.3 minutes for one Sol 6.1 High desktop task, with only
+      11.5 minutes of non-overlapping shell execution.
     observed_at: null
     reported_at: null
     reported_date_precision: Search index places report around Oct 4; exact task date unknown
@@ -678,11 +670,10 @@ records:
     - Wait time is not isolated model TTFT; may include reasoning, network, orchestration and queueing.
     - Some measurements overlap and must not be added.
     - Task changes and unmatched contexts invalidate causal model-speed comparison.
-    actionable: Expose TTFT, streaming throughput, tool wait, compaction, retries, human intervention
-      and total accepted-task duration separately.
+    actionable: Expose TTFT, streaming throughput, tool wait, compaction, retries, human intervention and total
+      accepted-task duration separately.
     assessed_at: '2026-10-07T10:05:00Z'
-    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred
-      intent.
+    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred intent.
     cluster_id: gpt61-long-task-latency
     official_acknowledgment: false
     fix:
@@ -716,8 +707,8 @@ records:
   - src-18beea801ab8
   - src-5bc5d6383c52
   contradictory_evidence_ids: []
-  official_acknowledgment: Research packet identifies an official statement; inspect the linked source
-    for its bounded scope.
+  official_acknowledgment: Research packet identifies an official statement; inspect the linked source for
+    its bounded scope.
   fix:
     published_at: '2026-10-01'
     version: 0.160.0
@@ -775,11 +766,9 @@ records:
     caveats:
     - A merged client fix does not prove model generation became faster.
     - Desktop bundled-runtime equality must be verified rather than inferred from standalone CLI version.
-    actionable: Show affected harness and fixed version; do not replace all Sol speed complaints with
-      'resolved'.
+    actionable: Show affected harness and fixed version; do not replace all Sol speed complaints with 'resolved'.
     assessed_at: '2026-10-07T10:05:00Z'
-    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred
-      intent.
+    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred intent.
     cluster_id: gpt61-codex-sqlite-fix
     catalog_model_ids:
     - gpt-6-1-sol
@@ -793,8 +782,8 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: One logged Sol High session compacted at an internal 266,425 tokens while latest server-reported
-    total was 193,193; the reporter reconstructed the difference from client estimates.
+  claim: One logged Sol High session compacted at an internal 266,425 tokens while latest server-reported total
+    was 193,193; the reporter reconstructed the difference from client estimates.
   change_type: harness_change
   metrics:
   - kind: unspecified
@@ -883,8 +872,7 @@ records:
     actionable: Retain as a scoped context/latency defect. Record both provider usage and client compaction
       counters.
     assessed_at: '2026-10-07T10:05:00Z'
-    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred
-      intent.
+    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred intent.
     cluster_id: gpt61-early-compaction-accounting
     catalog_model_ids:
     - gpt-6-1-sol
@@ -898,8 +886,8 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: A Windows desktop reporter used the same project and minimal prompt and observed about 208k/258k
-    initial context for Sol 6.1 versus 40k/258k for Sol 6/Astra.
+  claim: A Windows desktop reporter used the same project and minimal prompt and observed about 208k/258k initial
+    context for Sol 6.1 versus 40k/258k for Sol 6/Astra.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -967,11 +955,10 @@ records:
     - Actual extra input transmission versus accounting/UI error is not known.
     - Steps are supplied, screenshots offered but not attached; client version missing.
     - 'Do not merge causally with #49961 merely because both involve compaction.'
-    actionable: Capture fresh-thread context and client version before attributing rapid compaction to
-      weak long-context intelligence.
+    actionable: Capture fresh-thread context and client version before attributing rapid compaction to weak
+      long-context intelligence.
     assessed_at: '2026-10-07T10:05:00Z'
-    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred
-      intent.
+    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred intent.
     cluster_id: gpt61-fresh-context
     catalog_model_ids:
     - gpt-6-1-sol
@@ -985,8 +972,8 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: A public evidence bundle records Sol 6.1 High ending an active investigation after explanation
-    and zero actions; other cases lose current work around compaction.
+  claim: A public evidence bundle records Sol 6.1 High ending an active investigation after explanation and
+    zero actions; other cases lose current work around compaction.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -1014,8 +1001,7 @@ records:
   - Multiple cases from one reporter are one evidence cluster, not independent population samples.
   - Related older-model issues do not establish a new Sol 6.1 regression or weights cause.
   - Native cross-thread control is not identical to direct Desktop steering.
-  - The same bundle preserves a successful October 3 bounded task with supplementary instructions and
-    no compaction.
+  - The same bundle preserves a successful October 3 bounded task with supplementary instructions and no compaction.
   - 'Claim adjudication: supported'
   - 'Layer: model_harness_interaction'
   - 'Weights change established: False'
@@ -1035,8 +1021,8 @@ records:
     confidence: medium
     research_source_ids:
     - gpt_task_stopping
-    claim: A public evidence bundle records Sol 6.1 High ending an active investigation after explanation
-      and zero actions; other cases lose current work around compaction.
+    claim: A public evidence bundle records Sol 6.1 High ending an active investigation after explanation and
+      zero actions; other cases lose current work around compaction.
     observed_at: 2026-09-30/2026-10-03
     reported_at: '2026-10-04'
     state: ongoing_report
@@ -1054,8 +1040,8 @@ records:
       version: null
       commit: null
       measured_post_fix_outcome: null
-    counterevidence: The same bundle preserves a successful October 3 bounded task with supplementary
-      instructions and no compaction.
+    counterevidence: The same bundle preserves a successful October 3 bounded task with supplementary instructions
+      and no compaction.
     caveats:
     - Multiple cases from one reporter are one evidence cluster, not independent population samples.
     - Related older-model issues do not establish a new Sol 6.1 regression or weights cause.
@@ -1063,8 +1049,7 @@ records:
     actionable: Track autonomous completion, false claims of ongoing work, task retention and human nudges
       separately from code correctness.
     assessed_at: '2026-10-07T10:05:00Z'
-    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred
-      intent.
+    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred intent.
     cluster_id: gpt61-task-stopping
     catalog_model_ids:
     - gpt-6-1-sol
@@ -1078,8 +1063,8 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: A Sol 6.1 multi-agent reporter found missing spaces already in persisted tool-call input before
-    MCP execution, suggesting an upstream generation/input defect rather than rendering.
+  claim: A Sol 6.1 multi-agent reporter found missing spaces already in persisted tool-call input before MCP
+    execution, suggesting an upstream generation/input defect rather than rendering.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -1152,8 +1137,7 @@ records:
     actionable: Use a closed-but-unverified outcome label until linked fix or post-fix reproduction evidence
       is available.
     assessed_at: '2026-10-07T10:05:00Z'
-    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred
-      intent.
+    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred intent.
     cluster_id: gpt61-whitespace
     catalog_model_ids:
     - gpt-6-1-sol
@@ -1167,8 +1151,7 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: A user reports worse code quality, instruction following and completion than GPT-5.6 at Extra
-    High.
+  claim: A user reports worse code quality, instruction following and completion than GPT-5.6 at Extra High.
   change_type: unresolved
   metrics: []
   observed_at: '2026-10-07'
@@ -1217,8 +1200,7 @@ records:
     confidence: low
     research_source_ids:
     - gpt_xhigh_regression
-    claim: A user reports worse code quality, instruction following and completion than GPT-5.6 at Extra
-      High.
+    claim: A user reports worse code quality, instruction following and completion than GPT-5.6 at Extra High.
     observed_at: null
     reported_at: '2026-10-01'
     state: unknown
@@ -1237,13 +1219,11 @@ records:
       measured_post_fix_outcome: null
     caveats:
     - No paired source-code cases; broad regression is self-report.
-    - Troubleshooting narrative does show unsupported effort/rollback suggestions but not model-level
-      causality.
+    - Troubleshooting narrative does show unsupported effort/rollback suggestions but not model-level causality.
     - This compares versions, not launch-day versus current Sol 6.1.
     actionable: Keep as a low-confidence comparison, not a confirmed postlaunch nerf.
     assessed_at: '2026-10-07T10:05:00Z'
-    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred
-      intent.
+    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred intent.
     cluster_id: gpt61-xhigh-complaint
     catalog_model_ids:
     - gpt-6-1-sol
@@ -1257,8 +1237,8 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: Desktop build 26.1002.51308 can fail to create Work threads; Linux/macOS updates are released
-    and Windows fix was still rolling out.
+  claim: Desktop build 26.1002.51308 can fail to create Work threads; Linux/macOS updates are released and
+    Windows fix was still rolling out.
   change_type: product_change
   metrics: []
   observed_at: '2026-10-07'
@@ -1270,8 +1250,8 @@ records:
   supporting_evidence_ids:
   - src-e3b736337d73
   contradictory_evidence_ids: []
-  official_acknowledgment: Research packet identifies an official statement; inspect the linked source
-    for its bounded scope.
+  official_acknowledgment: Research packet identifies an official statement; inspect the linked source for
+    its bounded scope.
   fix:
     published_at: null
     version: null
@@ -1305,8 +1285,8 @@ records:
     confidence: high
     research_source_ids:
     - gpt_today_desktop
-    claim: Desktop build 26.1002.51308 can fail to create Work threads; Linux/macOS updates are released
-      and Windows fix was still rolling out.
+    claim: Desktop build 26.1002.51308 can fail to create Work threads; Linux/macOS updates are released and
+      Windows fix was still rolling out.
     observed_at: '2026-10-07T02:00:00Z'
     reported_at: '2026-10-07T02:00:00Z'
     last_status_at: '2026-10-07T09:28:00Z'
@@ -1327,8 +1307,7 @@ records:
       measured_post_fix_outcome: No independent check; Windows unresolved at last source update
     actionable: Time-stamp current warnings and show platform scope; do not call a model unavailable globally.
     assessed_at: '2026-10-07T10:05:00Z'
-    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred
-      intent.
+    confidence_scope: Confidence in the bounded claim and evidence, not general model quality or inferred intent.
     cluster_id: gpt61-desktop-create-current
     catalog_model_ids:
     - gpt-6-1-sol
@@ -1366,8 +1345,8 @@ records:
     evidence_ids: []
     measured_improvement: null
   conditions:
-  - 'conditions: Claude apps, Claude Code and third-party routes are mixed in reports; most anecdotes
-    omit exact effort, harness, context and paired tasks.'
+  - 'conditions: Claude apps, Claude Code and third-party routes are mixed in reports; most anecdotes omit
+    exact effort, harness, context and paired tasks.'
   - 'model_attribution: Product/harness-wide where category indicates it; no weights cause established'
   notes:
   - No controlled full-stack before/after test supplied by most complainants. No official Opus 5.5 weights
@@ -1405,12 +1384,12 @@ records:
     reported_date_range: 2026-09-23 to 2026-10-07
     reported_date_precision: null
     scope:
-      conditions: Claude apps, Claude Code and third-party routes are mixed in reports; most anecdotes
-        omit exact effort, harness, context and paired tasks.
+      conditions: Claude apps, Claude Code and third-party routes are mixed in reports; most anecdotes omit
+        exact effort, harness, context and paired tasks.
       model_attribution: Product/harness-wide where category indicates it; no weights cause established
-    judgment: There is a substantial complaint cluster plus contradictory firsthand reports. Available
-      longitudinal evidence does not establish a broad decline or deliberate downgrade. High confidence
-      in this evidence classification, not in unchanged quality.
+    judgment: There is a substantial complaint cluster plus contradictory firsthand reports. Available longitudinal
+      evidence does not establish a broad decline or deliberate downgrade. High confidence in this evidence
+      classification, not in unchanged quality.
     official_acknowledgment: null
     fix:
       stage: none_found
@@ -1421,8 +1400,8 @@ records:
     caveats:
     - No controlled full-stack before/after test supplied by most complainants. No official Opus 5.5 weights
       downgrade or broad quality incident found.
-    actionable: Treat individual failures as real observations; diagnose the route and harness before
-      attributing them to weights.
+    actionable: Treat individual failures as real observations; diagnose the route and harness before attributing
+      them to weights.
     cluster_id: opus55_overall_postlaunch_nerf
     assessed_at: '2026-10-07T10:00:00Z'
     catalog_model_ids:
@@ -1437,8 +1416,8 @@ records:
   model_version: claude-opus-5-5
   harness: null
   effort: null
-  claim: Opus 5.5 is a real September 22 release; claude-opus-5-5 is a pinned API model ID rather than
-    a floating latest alias.
+  claim: Opus 5.5 is a real September 22 release; claude-opus-5-5 is a pinned API model ID rather than a floating
+    latest alias.
   change_type: product_change
   metrics: []
   observed_at: '2026-10-07'
@@ -1473,8 +1452,8 @@ records:
   - 'Post-change validation: No independent post-fix measurement found'
   research_details:
     id: opus55_identity_and_launch
-    title: Opus 5.5 is a real September 22 release; claude-opus-5-5 is a pinned API model ID rather than
-      a floating latest alias.
+    title: Opus 5.5 is a real September 22 release; claude-opus-5-5 is a pinned API model ID rather than a
+      floating latest alias.
     kind: release
     layer: model_release
     research_model_ids:
@@ -1482,8 +1461,8 @@ records:
     reported_model_label: Claude Opus 5.5
     snapshot_id: claude-opus-5-5
     weights_change_established: false
-    claim: Opus 5.5 is a real September 22 release; claude-opus-5-5 is a pinned API model ID rather than
-      a floating latest alias.
+    claim: Opus 5.5 is a real September 22 release; claude-opus-5-5 is a pinned API model ID rather than a
+      floating latest alias.
     claim_status: supported
     confidence: high
     confidence_scope: Confidence in the bounded evidence classification, not proof of general model quality
@@ -1501,9 +1480,9 @@ records:
     scope:
       conditions: Canonical API ID differs from product family selections such as Opus/latest.
       model_attribution: Product/harness-wide where category indicates it; no weights cause established
-    judgment: Anthropic documents fixed weights/configuration for an existing model ID while allowing
-      serving infrastructure such as routing, safety classifiers and sampling to evolve. Claude Code's
-      generic Opus selection became 5.5 in v2.1.280.
+    judgment: Anthropic documents fixed weights/configuration for an existing model ID while allowing serving
+      infrastructure such as routing, safety classifiers and sampling to evolve. Claude Code's generic Opus
+      selection became 5.5 in v2.1.280.
     official_acknowledgment: Official release and model-versioning policy.
     fix:
       stage: none_found
@@ -1513,8 +1492,8 @@ records:
       resolution_scope: null
     caveats:
     - Vendor guarantee is not independent verification of deployed weights.
-    actionable: Record requested and returned model IDs and provider; do not treat the label Opus alone
-      as a reproducible checkpoint.
+    actionable: Record requested and returned model IDs and provider; do not treat the label Opus alone as
+      a reproducible checkpoint.
     cluster_id: opus55_identity_and_launch
     assessed_at: '2026-10-07T10:00:00Z'
     catalog_model_ids:
@@ -1529,8 +1508,8 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: Defaults and migration differences can change perceived quality, latency and tool reliability
-    without a postlaunch downgrade.
+  claim: Defaults and migration differences can change perceived quality, latency and tool reliability without
+    a postlaunch downgrade.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -1550,8 +1529,7 @@ records:
     evidence_ids: []
     measured_improvement: null
   conditions:
-  - 'conditions: API integrations migrated from Opus 5; apps that assume text-block progress or old tool
-    schemas.'
+  - 'conditions: API integrations migrated from Opus 5; apps that assume text-block progress or old tool schemas.'
   - 'model_attribution: Product/harness-wide where category indicates it; no weights cause established'
   notes:
   - Does not identify the cause of any particular anecdotal regression.
@@ -1563,8 +1541,8 @@ records:
   - 'Post-change validation: No independent post-fix measurement found'
   research_details:
     id: opus55_effort_and_api_migration
-    title: Defaults and migration differences can change perceived quality, latency and tool reliability
-      without a postlaunch downgrade.
+    title: Defaults and migration differences can change perceived quality, latency and tool reliability without
+      a postlaunch downgrade.
     kind: release
     layer: model_harness_interaction
     research_model_ids:
@@ -1572,8 +1550,8 @@ records:
     reported_model_label: Claude Opus 5.5
     snapshot_id: null
     weights_change_established: false
-    claim: Defaults and migration differences can change perceived quality, latency and tool reliability
-      without a postlaunch downgrade.
+    claim: Defaults and migration differences can change perceived quality, latency and tool reliability without
+      a postlaunch downgrade.
     claim_status: supported
     confidence: high
     confidence_scope: Confidence in the bounded evidence classification, not proof of general model quality
@@ -1586,12 +1564,11 @@ records:
     reported_date_range: null
     reported_date_precision: null
     scope:
-      conditions: API integrations migrated from Opus 5; apps that assume text-block progress or old tool
-        schemas.
+      conditions: API integrations migrated from Opus 5; apps that assume text-block progress or old tool schemas.
       model_attribution: Product/harness-wide where category indicates it; no weights cause established
     judgment: Official migration docs say omitted effort is medium versus Opus 5's high, with more thinking
-      per turn at the same level. Disabled/manual-budget thinking and forced tool_choice any/tool return
-      400s. Between-tool progress may be hidden in omitted thinking blocks. These are launch behaviors.
+      per turn at the same level. Disabled/manual-budget thinking and forced tool_choice any/tool return 400s.
+      Between-tool progress may be hidden in omitted thinking blocks. These are launch behaviors.
     official_acknowledgment: Documented behavior and breaking changes.
     fix:
       stage: none_found
@@ -1672,19 +1649,17 @@ records:
     scope:
       conditions: Users with an older global effort preference; VS Code clients.
       model_attribution: Product/harness-wide where category indicates it; no weights cause established
-    judgment: v2.1.280 says pre-per-model effort preferences no longer carry into new releases, which
-      start at their default until chosen. It also fixed a VS Code effort chip showing a stale saved value.
+    judgment: v2.1.280 says pre-per-model effort preferences no longer carry into new releases, which start
+      at their default until chosen. It also fixed a VS Code effort chip showing a stale saved value.
     official_acknowledgment: Official release notes.
     fix:
       stage: released
       version: 2.1.280
       commit: 56f3653
       measured_post_fix_outcome: No independent post-fix measurement found
-      resolution_scope: Setting change/stale-display fix published; individual outcome not independently
-        tested.
+      resolution_scope: Setting change/stale-display fix published; individual outcome not independently tested.
     caveats: []
-    actionable: Verify the active session effort rather than relying on an old preference or remembered
-      display.
+    actionable: Verify the active session effort rather than relying on an old preference or remembered display.
     cluster_id: opus55_launch_effort_setting
     assessed_at: '2026-10-07T10:00:00Z'
     catalog_model_ids:
@@ -1753,8 +1728,8 @@ records:
     scope:
       conditions: Claude Code 2.1.284 and newer; Ultracode users and pinned Opus safety fallbacks.
       model_attribution: Product/harness-wide where category indicates it; no weights cause established
-    judgment: v2.1.284 decoupled Ultracode into its own toggle usable at any effort. It also changed API
-      safeguard fallback selection for pinned Opus overrides.
+    judgment: v2.1.284 decoupled Ultracode into its own toggle usable at any effort. It also changed API safeguard
+      fallback selection for pinned Opus overrides.
     official_acknowledgment: Official release notes.
     fix:
       stage: none_found
@@ -1763,8 +1738,8 @@ records:
       measured_post_fix_outcome: No independent post-fix measurement found
       resolution_scope: null
     caveats: []
-    actionable: Log Ultracode and effort separately; do not compare an old Ultracode run with a new one
-      without checking effort.
+    actionable: Log Ultracode and effort separately; do not compare an old Ultracode run with a new one without
+      checking effort.
     cluster_id: opus55_ultracode_effort_change
     assessed_at: '2026-10-07T10:00:00Z'
     change_version: 2.1.284
@@ -1802,8 +1777,7 @@ records:
     - src-0b14b0c43ad6
     measured_improvement: null
   conditions:
-  - 'conditions: --continue/--resume; /model, /rename or immediate commands during work; changed --tools
-    list.'
+  - 'conditions: --continue/--resume; /model, /rename or immediate commands during work; changed --tools list.'
   - 'model_attribution: Product/harness-wide where category indicates it; no weights cause established'
   notes:
   - 'Claim adjudication: supported'
@@ -1835,12 +1809,11 @@ records:
     reported_date_range: null
     reported_date_precision: null
     scope:
-      conditions: --continue/--resume; /model, /rename or immediate commands during work; changed --tools
-        list.
+      conditions: --continue/--resume; /model, /rename or immediate commands during work; changed --tools list.
       model_attribution: Product/harness-wide where category indicates it; no weights cause established
-    judgment: v2.1.282 fixed changed history on resume, immediate slash commands, and resumed sessions
-      with a shortened tool list dropping earlier thinking. These are harness defects with potential Opus
-      5.5 impact, not a model-specific weight regression.
+    judgment: v2.1.282 fixed changed history on resume, immediate slash commands, and resumed sessions with
+      a shortened tool list dropping earlier thinking. These are harness defects with potential Opus 5.5 impact,
+      not a model-specific weight regression.
     official_acknowledgment: Official fix published.
     fix:
       stage: released
@@ -1849,8 +1822,8 @@ records:
       measured_post_fix_outcome: No independent post-fix measurement found
       resolution_scope: Published fix only; no measured post-fix quality recovery found.
     caveats: []
-    actionable: For an affected history, compare a fresh session on a fixed release and preserve full
-      diagnostic metadata.
+    actionable: For an affected history, compare a fresh session on a fixed release and preserve full diagnostic
+      metadata.
     cluster_id: opus55_preserved_thinking_fixes
     assessed_at: '2026-10-07T10:00:00Z'
     catalog_model_ids:
@@ -1920,8 +1893,8 @@ records:
     scope:
       conditions: A dynamic workflow launched during an active model fallback.
       model_attribution: Product/harness-wide where category indicates it; no weights cause established
-    judgment: v2.1.283 explicitly fixed this dynamic-workflow behavior. This provides a concrete routing
-      confounder for claims that the selected Opus model seemed different.
+    judgment: v2.1.283 explicitly fixed this dynamic-workflow behavior. This provides a concrete routing confounder
+      for claims that the selected Opus model seemed different.
     official_acknowledgment: Official fix published.
     fix:
       stage: released
@@ -1945,8 +1918,8 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: Additional real Claude Code defects affecting context, fallback effort and fetched evidence had
-    fixes published October 5.
+  claim: Additional real Claude Code defects affecting context, fallback effort and fetched evidence had fixes
+    published October 5.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -1967,8 +1940,8 @@ records:
     - src-d9b88297cf0d
     measured_improvement: null
   conditions:
-  - 'conditions: Resumed/messaged subagents, safeguard fallback with per-model saved effort, long fetched
-    pages, long remote sessions.'
+  - 'conditions: Resumed/messaged subagents, safeguard fallback with per-model saved effort, long fetched pages,
+    long remote sessions.'
   - 'model_attribution: Product/harness-wide where category indicates it; no weights cause established'
   notes:
   - 'Claim adjudication: supported'
@@ -1979,8 +1952,8 @@ records:
   - 'Post-change validation: No independent post-fix measurement found'
   research_details:
     id: opus55_recent_context_effort_fixes
-    title: Additional real Claude Code defects affecting context, fallback effort and fetched evidence
-      had fixes published October 5.
+    title: Additional real Claude Code defects affecting context, fallback effort and fetched evidence had
+      fixes published October 5.
     kind: harness_change
     layer: client_harness
     research_model_ids:
@@ -1988,8 +1961,8 @@ records:
     reported_model_label: Claude Opus 5.5
     snapshot_id: null
     weights_change_established: false
-    claim: Additional real Claude Code defects affecting context, fallback effort and fetched evidence
-      had fixes published October 5.
+    claim: Additional real Claude Code defects affecting context, fallback effort and fetched evidence had
+      fixes published October 5.
     claim_status: supported
     confidence: high
     confidence_scope: Confidence in the bounded evidence classification, not proof of general model quality
@@ -2005,9 +1978,9 @@ records:
       conditions: Resumed/messaged subagents, safeguard fallback with per-model saved effort, long fetched
         pages, long remote sessions.
       model_attribution: Product/harness-wide where category indicates it; no weights cause established
-    judgment: v2.1.290 fixed resumed subagents losing previous thinking/cache after a mid-run message,
-      fallback retries adopting another saved effort, and WebFetch silently discarding text after 100,000
-      characters. It also fixed long cloud/Remote Control streaming appearing in blocks.
+    judgment: v2.1.290 fixed resumed subagents losing previous thinking/cache after a mid-run message, fallback
+      retries adopting another saved effort, and WebFetch silently discarding text after 100,000 characters.
+      It also fixed long cloud/Remote Control streaming appearing in blocks.
     official_acknowledgment: Official release notes.
     fix:
       stage: released
@@ -2017,8 +1990,8 @@ records:
       resolution_scope: These exact fixes are published; no controlled post-fix quality or latency measurement
         located.
     caveats: []
-    actionable: Match symptoms to these exact conditions and verify behavior on a fixed release; do not
-      call all Opus complaints resolved.
+    actionable: Match symptoms to these exact conditions and verify behavior on a fixed release; do not call
+      all Opus complaints resolved.
     cluster_id: opus55_recent_context_effort_fixes
     assessed_at: '2026-10-07T10:00:00Z'
     catalog_model_ids:
@@ -2088,8 +2061,8 @@ records:
     scope:
       conditions: Cross-product request/sign-in/session/upload failures.
       model_attribution: Product/harness-wide where category indicates it; no weights cause established
-    judgment: Anthropic reported recovery and possible loss of messages sent during the impact window.
-      The page establishes service disruption, not persistent lower model intelligence.
+    judgment: Anthropic reported recovery and possible loss of messages sent during the impact window. The
+      page establishes service disruption, not persistent lower model intelligence.
     official_acknowledgment: Resolved incident at 16:27 UTC; normal service since 14:59 UTC.
     fix:
       stage: provider_resolved
@@ -2098,8 +2071,7 @@ records:
       measured_post_fix_outcome: No independent post-fix measurement found
       resolution_scope: Vendor operational recovery, no independent capability measurement.
     caveats: []
-    actionable: Separate failed/lost requests around this window from successful-answer quality after
-      recovery.
+    actionable: Separate failed/lost requests around this window from successful-answer quality after recovery.
     cluster_id: opus55_september29_outage
     assessed_at: '2026-10-07T10:00:00Z'
     impact_start: '2026-09-29T14:00:00Z'
@@ -2171,8 +2143,8 @@ records:
     scope:
       conditions: claude.ai, API, Claude Code and Cowork.
       model_attribution: Product/harness-wide where category indicates it; no weights cause established
-    judgment: Official investigation began 12:24 UTC, cause was identified 12:37, and resolution posted
-      12:43. Actual incident start was not stated.
+    judgment: Official investigation began 12:24 UTC, cause was identified 12:37, and resolution posted 12:43.
+      Actual incident start was not stated.
     official_acknowledgment: Official resolved status incident.
     fix:
       stage: provider_resolved
@@ -2181,8 +2153,7 @@ records:
       measured_post_fix_outcome: No independent post-fix measurement found
       resolution_scope: Vendor resolution verified; no post-fix quality study.
     caveats: []
-    actionable: Correlate errors by timestamp; don't reinterpret a request-error incident as a weights
-      change.
+    actionable: Correlate errors by timestamp; don't reinterpret a request-error incident as a weights change.
     cluster_id: opus55_october6_errors
     assessed_at: '2026-10-07T10:00:00Z'
     catalog_model_ids:
@@ -2212,8 +2183,7 @@ records:
   - src-78a1de7eb064
   - src-990d87c7cf60
   contradictory_evidence_ids: []
-  official_acknowledgment: General docs acknowledge classifier refusals; no issue-specific confirmed fix
-    found.
+  official_acknowledgment: General docs acknowledge classifier refusals; no issue-specific confirmed fix found.
   fix:
     published_at: null
     version: null
@@ -2259,14 +2229,14 @@ records:
     reported_date_range: 2026-09-28 to 2026-10-05
     reported_date_precision: null
     scope:
-      conditions: Long development contexts, visible-history preservation/export requests, subsequent
-        unrelated tool output.
+      conditions: Long development contexts, visible-history preservation/export requests, subsequent unrelated
+        tool output.
       model_attribution: Product/harness-wide where category indicates it; no weights cause established
-    judgment: 'One cluster spans macOS/VS Code 2.1.283, Linux 2.1.287, and WSL2 2.1.289. The strongest
-      report includes exact request IDs and 21:40–21:49 UTC timing: a Figma/SVG frontend turn was cut
-      twice. A visible-transcript export request earlier in context is a disclosed confounder.'
-    official_acknowledgment: General docs acknowledge classifier refusals; no issue-specific confirmed
-      fix found.
+    judgment: 'One cluster spans macOS/VS Code 2.1.283, Linux 2.1.287, and WSL2 2.1.289. The strongest report
+      includes exact request IDs and 21:40–21:49 UTC timing: a Figma/SVG frontend turn was cut twice. A visible-transcript
+      export request earlier in context is a disclosed confounder.'
+    official_acknowledgment: General docs acknowledge classifier refusals; no issue-specific confirmed fix
+      found.
     fix:
       stage: none_found
       version: null
@@ -2276,8 +2246,8 @@ records:
     caveats:
     - Reports support that the interruptions occurred; safe-task false-positive classification is reporter-attributed,
       not independently reproduced. Duplicate issue labels do not constitute official causal confirmation.
-    actionable: Record stop_details.category and request IDs; isolate a minimal safe repro and inspect
-      conversation history. Respect safeguards; use documented provider support/feedback paths.
+    actionable: Record stop_details.category and request IDs; isolate a minimal safe repro and inspect conversation
+      history. Respect safeguards; use documented provider support/feedback paths.
     cluster_id: opus55_reasoning_extraction
     assessed_at: '2026-10-07T10:00:00Z'
     catalog_model_ids:
@@ -2288,12 +2258,11 @@ records:
   model_ids:
   - claude-opus-5-5
   provider_id: null
-  product: null
-  model_version: null
-  harness: null
+  product: VS Code Insiders Plan mode
+  model_version: Opus 5.5 UI label; returned API model ID undisclosed
+  harness: Local Plan mode; VS Code 1.140.0-insider c718b461a175300ec6f4949c808291d2149f3f8d; Windows 10 x64
   effort: null
-  claim: Opus 5.5 sometimes wrote an abbreviated plan file while presenting a detailed chat plan in VS
-    Code.
+  claim: Opus 5.5 sometimes wrote an abbreviated plan file while presenting a detailed chat plan in VS Code.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -2301,7 +2270,7 @@ records:
   effective_from: null
   status: unknown
   fact_status: reported
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-180d4ee013fb
   contradictory_evidence_ids: []
@@ -2322,10 +2291,11 @@ records:
   - 'Source event observed_at: None'
   - Repository first observation is 2026-10-07; no retrospective availability inferred.
   - 'Post-change validation: No independent post-fix measurement found'
+  - '2026-10-08 reinspection: natestrom reports two occurrences; the issue is open with no comments. One author
+    and no paired control justify Low evidence confidence; the model-generated explanation is not causal proof.'
   research_details:
     id: opus55_plan_mode_instruction_regression
-    title: Opus 5.5 sometimes wrote an abbreviated plan file while presenting a detailed chat plan in
-      VS Code.
+    title: Opus 5.5 sometimes wrote an abbreviated plan file while presenting a detailed chat plan in VS Code.
     kind: behavior_incident
     layer: model_harness_interaction
     research_model_ids:
@@ -2333,10 +2303,9 @@ records:
     reported_model_label: Claude Opus 5.5
     snapshot_id: null
     weights_change_established: false
-    claim: Opus 5.5 sometimes wrote an abbreviated plan file while presenting a detailed chat plan in
-      VS Code.
+    claim: Opus 5.5 sometimes wrote an abbreviated plan file while presenting a detailed chat plan in VS Code.
     claim_status: unresolved
-    confidence: medium
+    confidence: low
     confidence_scope: Confidence in the bounded evidence classification, not proof of general model quality
       or causal attribution.
     state: unknown
@@ -2360,8 +2329,8 @@ records:
       measured_post_fix_outcome: No independent post-fix measurement found
       resolution_scope: null
     caveats: []
-    actionable: Validate the saved plan against the handoff before handing execution to another agent;
-      retain exact prompt and harness version.
+    actionable: Validate the saved plan against the handoff before handing execution to another agent; retain
+      exact prompt and harness version.
     cluster_id: opus55_plan_mode_instruction_regression
     assessed_at: '2026-10-07T10:00:00Z'
     catalog_model_ids:
@@ -2372,20 +2341,20 @@ records:
   model_ids:
   - claude-opus-5-5
   provider_id: null
-  product: null
-  model_version: null
-  harness: null
-  effort: null
-  claim: Workflow prompt framing can make subagents follow a parent chat message rather than the computed
-    task.
+  product: Claude Desktop Code tab / Claude Code workflows
+  model_version: Opus 5.5 reporter label; returned model trace not provided
+  harness: Desktop Code 2.1.283, dynamic Workflow, roughly 20-hour session
+  effort: Ultracode enabled; achieved effort not independently logged
+  claim: A practitioner reports that Claude Code workflow prompt framing caused Opus 5.5 subagents to follow
+    the latest parent chat message instead of their computed tasks.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
-  reported_at: '2026-09-18'
+  reported_at: '2026-09-27'
   effective_from: null
   status: unknown
   fact_status: reported
-  confidence: medium
+  confidence: low
   supporting_evidence_ids:
   - src-e8baec81d888
   contradictory_evidence_ids: []
@@ -2400,14 +2369,18 @@ records:
   - 'conditions: Dynamic Workflow subagents created after messages to the main agent.'
   - 'model_attribution: Product/harness-wide where category indicates it; no weights cause established'
   notes:
-  - Detailed reproduction label and versioned report; no confirmed fix or independent reproduction found.
-    The Sep 27 comment appeared in indexed search but not the retrieved main issue body.
+  - Detailed reproduction label and versioned report; no confirmed fix or independent reproduction found. The
+    Sep 27 comment appeared in indexed search but not the retrieved main issue body.
   - 'Claim adjudication: unresolved'
   - 'Layer: client_harness'
   - 'Weights change established: False'
   - 'Source event observed_at: None'
   - Repository first observation is 2026-10-07; no retrospective availability inferred.
   - 'Post-change validation: No independent post-fix measurement found'
+  - '2026-10-08 reinspection: PeaBrane posted the explicitly identified Opus 5.5 reproduction September 27.
+    The parent issue opened September 18, before this model release; its historical date remains in research_details.
+    New October 8 comments concern Haiku executors or undisclosed executor identities, so their counts are
+    not transferred to Opus 5.5. No official fix is posted in the inspected issue.'
   research_details:
     id: opus55_workflow_prompt_relay
     title: Workflow prompt framing can make subagents follow a parent chat message rather than the computed
@@ -2422,7 +2395,7 @@ records:
     claim: Workflow prompt framing can make subagents follow a parent chat message rather than the computed
       task.
     claim_status: unresolved
-    confidence: medium
+    confidence: low
     confidence_scope: Confidence in the bounded evidence classification, not proof of general model quality
       or causal attribution.
     state: unknown
@@ -2436,9 +2409,8 @@ records:
       conditions: Dynamic Workflow subagents created after messages to the main agent.
       model_attribution: Product/harness-wide where category indicates it; no weights cause established
     judgment: 'Issue #95369 predates Opus 5.5. A September 27 indexed firsthand reproduction names Desktop
-      Code 2.1.283, Opus 5.5, Ultracode and a roughly 20-hour session: newly spawned agents allegedly
-      prioritize the latest parent chat message. It is a harness lead, not evidence of postlaunch weight
-      degradation.'
+      Code 2.1.283, Opus 5.5, Ultracode and a roughly 20-hour session: newly spawned agents allegedly prioritize
+      the latest parent chat message. It is a harness lead, not evidence of postlaunch weight degradation.'
     official_acknowledgment: null
     fix:
       stage: none_found
@@ -2449,8 +2421,8 @@ records:
     caveats:
     - Detailed reproduction label and versioned report; no confirmed fix or independent reproduction found.
       The Sep 27 comment appeared in indexed search but not the retrieved main issue body.
-    actionable: Inspect actual subagent input and ownership of instructions when status questions derail
-      ongoing workflow tasks.
+    actionable: Inspect actual subagent input and ownership of instructions when status questions derail ongoing
+      workflow tasks.
     cluster_id: opus55_workflow_prompt_relay
     assessed_at: '2026-10-07T10:00:00Z'
     opus_specific_report_date: '2026-09-27'
@@ -2487,8 +2459,8 @@ records:
     evidence_ids: []
     measured_improvement: null
   conditions:
-  - 'conditions: Consumer chat versus coding workflow; different tasks, context and tier. Positive thread
-    includes medium-effort dissatisfaction and xhigh success comments.'
+  - 'conditions: Consumer chat versus coding workflow; different tasks, context and tier. Positive thread includes
+    medium-effort dissatisfaction and xhigh success comments.'
   - 'model_attribution: Product/harness-wide where category indicates it; no weights cause established'
   notes:
   - Subjective outcomes; no matched prompts, raw paired outputs or stable harness metadata.
@@ -2520,17 +2492,15 @@ records:
     observed_at: null
     reported_at: null
     reported_date_range: null
-    reported_date_precision: Reddit sources indexed in late September/early October; exact timestamps
-      not recovered
+    reported_date_precision: Reddit sources indexed in late September/early October; exact timestamps not recovered
     scope:
       conditions: Consumer chat versus coding workflow; different tasks, context and tier. Positive thread
         includes medium-effort dissatisfaction and xhigh success comments.
       model_attribution: Product/harness-wide where category indicates it; no weights cause established
-    judgment: Negative report describes invented document details, context loss and new Minecraft-mod
-      bugs after an outage, and says fresh chats/devices were also tried. Positive marketing-agency report
-      describes finding missed production bugs in a resort CRM on Max 20x; it also reports sloppiness
-      beyond roughly 500k tokens and improvement after removing stale instructions. Neither is a controlled
-      comparison.
+    judgment: Negative report describes invented document details, context loss and new Minecraft-mod bugs
+      after an outage, and says fresh chats/devices were also tried. Positive marketing-agency report describes
+      finding missed production bugs in a resort CRM on Max 20x; it also reports sloppiness beyond roughly
+      500k tokens and improvement after removing stale instructions. Neither is a controlled comparison.
     official_acknowledgment: null
     fix:
       stage: none_found
@@ -2540,8 +2510,8 @@ records:
       resolution_scope: null
     caveats:
     - Subjective outcomes; no matched prompts, raw paired outputs or stable harness metadata.
-    actionable: Use these as task-specific failure leads and counterexamples to universal claims, not
-      prevalence estimates.
+    actionable: Use these as task-specific failure leads and counterexamples to universal claims, not prevalence
+      estimates.
     cluster_id: opus55_anecdote_pair
     assessed_at: '2026-10-07T10:00:00Z'
     catalog_model_ids:
@@ -2579,8 +2549,8 @@ records:
     evidence_ids: []
     measured_improvement: null
   conditions:
-  - 'conditions: Single Max subscription, headless Claude Code 2.1.280, explicit high effort; 78 primary
-    items plus 12 control samples daily; harness hash 461391b6fce64167.'
+  - 'conditions: Single Max subscription, headless Claude Code 2.1.280, explicit high effort; 78 primary items
+    plus 12 control samples daily; harness hash 461391b6fce64167.'
   - 'model_attribution: Product/harness-wide where category indicates it; no weights cause established'
   notes:
   - Only one account/machine/region; once daily; no agent/tool workflow evaluation. Baseline-period changes
@@ -2618,13 +2588,13 @@ records:
     reported_date_range: null
     reported_date_precision: null
     scope:
-      conditions: Single Max subscription, headless Claude Code 2.1.280, explicit high effort; 78 primary
-        items plus 12 control samples daily; harness hash 461391b6fce64167.
+      conditions: Single Max subscription, headless Claude Code 2.1.280, explicit high effort; 78 primary items
+        plus 12 control samples daily; harness hash 461391b6fce64167.
       model_attribution: Product/harness-wide where category indicates it; no weights cause established
-    judgment: As of Oct 6, 13 days are collected. First series run was Sep 24 22:10 UTC, about 2.5 days
-      after launch. Its completed 10-day baseline is followed by two 10-day windows; the preregistered
-      decision cannot occur before day 30, approximately Oct 23–24. The Oct 7 Reddit day-13 update is
-      another update of this same experiment.
+    judgment: As of Oct 6, 13 days are collected. First series run was Sep 24 22:10 UTC, about 2.5 days after
+      launch. Its completed 10-day baseline is followed by two 10-day windows; the preregistered decision cannot
+      occur before day 30, approximately Oct 23–24. The Oct 7 Reddit day-13 update is another update of this
+      same experiment.
     official_acknowledgment: null
     fix:
       stage: none_found
@@ -2633,9 +2603,9 @@ records:
       measured_post_fix_outcome: No independent post-fix measurement found
       resolution_scope: null
     caveats:
-    - Only one account/machine/region; once daily; no agent/tool workflow evaluation. Baseline-period
-      changes become part of baseline. Classifier events excluded. Validation could not distinguish Opus
-      5 substitution at 99%.
+    - Only one account/machine/region; once daily; no agent/tool workflow evaluation. Baseline-period changes
+      become part of baseline. Classifier events excluded. Validation could not distinguish Opus 5 substitution
+      at 99%.
     actionable: Describe current result as immature evidence, not an acquittal or confirmation of degradation.
     cluster_id: livenerf_single_series
     assessed_at: '2026-10-07T10:00:00Z'
@@ -2672,13 +2642,13 @@ records:
     evidence_ids: []
     measured_improvement: null
   conditions:
-  - 'conditions: 50 private tasks, three attempts each, no tools/repository per attempt; composite is
-    60% correctness, 20% inverse output tokens, 20% inverse cost.'
+  - 'conditions: 50 private tasks, three attempts each, no tools/repository per attempt; composite is 60% correctness,
+    20% inverse output tokens, 20% inverse cost.'
   - 'model_attribution: Product/harness-wide where category indicates it; no weights cause established'
   notes:
-  - Power is not accuracy. Cheaper/fewer-token outputs can offset lower correctness; speed is excluded.
-    Bench supports OpenRouter, Claude Code and Codex series, but the public extracted Opus board did not
-    expose this series' exact provider/effort/CLI. Private suite not independently rerun.
+  - Power is not accuracy. Cheaper/fewer-token outputs can offset lower correctness; speed is excluded. Bench
+    supports OpenRouter, Claude Code and Codex series, but the public extracted Opus board did not expose this
+    series' exact provider/effort/CLI. Private suite not independently rerun.
   - 'Claim adjudication: refuted'
   - 'Layer: observed_end_to_end'
   - 'Weights change established: False'
@@ -2709,8 +2679,8 @@ records:
     reported_date_range: null
     reported_date_precision: null
     scope:
-      conditions: 50 private tasks, three attempts each, no tools/repository per attempt; composite is
-        60% correctness, 20% inverse output tokens, 20% inverse cost.
+      conditions: 50 private tasks, three attempts each, no tools/repository per attempt; composite is 60%
+        correctness, 20% inverse output tokens, 20% inverse cost.
       model_attribution: Product/harness-wide where category indicates it; no weights cause established
     judgment: Published composite power scores are Sep 22 100.0%, Sep 27 99.2%, Oct 1 103.8%, Oct 2 94.2%,
       Oct 4 96.5%. All are inside its 90–110 normal-variance band. This is meaningful narrow counterevidence
@@ -2723,11 +2693,10 @@ records:
       measured_post_fix_outcome: No independent post-fix measurement found
       resolution_scope: null
     caveats:
-    - Power is not accuracy. Cheaper/fewer-token outputs can offset lower correctness; speed is excluded.
-      Bench supports OpenRouter, Claude Code and Codex series, but the public extracted Opus board did
-      not expose this series' exact provider/effort/CLI. Private suite not independently rerun.
-    actionable: Don't label these percentages intelligence retention or latency. Preserve route/settings
-      uncertainty.
+    - Power is not accuracy. Cheaper/fewer-token outputs can offset lower correctness; speed is excluded. Bench
+      supports OpenRouter, Claude Code and Codex series, but the public extracted Opus board did not expose
+      this series' exact provider/effort/CLI. Private suite not independently rerun.
+    actionable: Don't label these percentages intelligence retention or latency. Preserve route/settings uncertainty.
     cluster_id: opus55_bridgebench_nondetection
     assessed_at: '2026-10-07T10:00:00Z'
     catalog_model_ids:
@@ -2803,9 +2772,9 @@ records:
       conditions: Social amplification around outage, new releases and benchmark screenshots.
       model_attribution: Product/harness-wide where category indicates it; no weights cause established
     judgment: 'The LiveNerf day-8/day-10/day-13 and cross-subreddit posts are one experiment; HN discusses
-      that same project. A sentiment tracker measures Reddit opinion, not performance: its own author
-      explicitly separates those. It reports scores 71–73 Sep 25–28, 69 Sep 29, 58 Sep 30, but those numbers
-      cannot establish model degradation.'
+      that same project. A sentiment tracker measures Reddit opinion, not performance: its own author explicitly
+      separates those. It reports scores 71–73 Sep 25–28, 69 Sep 29, 58 Sep 30, but those numbers cannot establish
+      model degradation.'
     official_acknowledgment: null
     fix:
       stage: none_found
@@ -2814,10 +2783,9 @@ records:
       measured_post_fix_outcome: No independent post-fix measurement found
       resolution_scope: null
     caveats:
-    - Do not infer intentional manipulation, demand-throttled reasoning, quantization or tier-specific
-      downgrades from comments alone.
-    actionable: Count experiments and distinct reproductions, not posts, shares, comments or sentiment
-      scores.
+    - Do not infer intentional manipulation, demand-throttled reasoning, quantization or tier-specific downgrades
+      from comments alone.
+    actionable: Count experiments and distinct reproductions, not posts, shares, comments or sentiment scores.
     cluster_id: opus55_rumor_deduplication
     assessed_at: '2026-10-07T10:00:00Z'
     catalog_model_ids:
@@ -2832,8 +2800,8 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: 'September 1 report: Fable 5.1 on Claude Code 2.1.252 compacted near 160–178K while other models
-    in the same environment passed 800K. Official 2.1.257 adds Fable 5.1 with 1M context.'
+  claim: 'September 1 report: Fable 5.1 on Claude Code 2.1.252 compacted near 160–178K while other models in
+    the same environment passed 800K. Official 2.1.257 adds Fable 5.1 with 1M context.'
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -2880,8 +2848,8 @@ records:
       in the same environment passed 800K. Official 2.1.257 adds Fable 5.1 with 1M context.'
     claim_status: supported
     confidence: medium
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: client_harness
     scope:
       client: Claude Code 2.1.252
@@ -2957,12 +2925,12 @@ records:
     - claude-fable-5-1
     kind: behavior_report
     title: Question tool can hide preceding explanation
-    claim: Report identifies answer-like prose in thinking rather than text blocks immediately before
-      AskUserQuestion, leaving the visible question without context.
+    claim: Report identifies answer-like prose in thinking rather than text blocks immediately before AskUserQuestion,
+      leaving the visible question without context.
     claim_status: supported
     confidence: medium
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: model_harness_interaction
     scope:
       client: Desktop 1.44121.4; Claude Code 2.1.255/2.1.258
@@ -3041,8 +3009,8 @@ records:
       documentation requires at least 4,096 cacheable tokens for Haiku 4.5.
     claim_status: unresolved
     confidence: low
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: model_harness_interaction
     scope:
       route: Anthropic API
@@ -3066,8 +3034,8 @@ records:
     caveats:
     - Payload equivalence does not control different model cache minimums.
     - No paired payload or later validated fix found; cannot call a current global regression.
-    actionable: Capture cacheable token count and read/write usage before attributing cache misses to
-      service quality.
+    actionable: Capture cacheable token count and read/write usage before attributing cache misses to service
+      quality.
     incident_status: unknown
 - schema_version: '1.0'
   id: behavior-737097ef57123684
@@ -3121,13 +3089,13 @@ records:
     - claude-sonnet-5-5
     kind: documented_behavior
     title: Known effort-sensitive verification and tool-name behavior
-    claim: Current provider guidance documents occasional skipped executable checks at low effort and
-      tool-name/parameter variants; effort levels are recalibrated from Sonnet 5. Practitioner responses
-      include dissatisfaction with conversation style and successful Medium-effort app creation.
+    claim: Current provider guidance documents occasional skipped executable checks at low effort and tool-name/parameter
+      variants; effort levels are recalibrated from Sonnet 5. Practitioner responses include dissatisfaction
+      with conversation style and successful Medium-effort app creation.
     claim_status: supported
     confidence: high
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: model_harness_interaction
     scope:
       route: API behavior guidance; separate consumer/Claude Code anecdotes
@@ -3152,8 +3120,8 @@ records:
     caveats:
     - This establishes conditions to validate, not a worsening after Sonnet 5.5 launch.
     - Opposing anecdotes use different tasks and settings; do not average them into a quality trend.
-    actionable: Log effort and require actual test/build evidence; tolerate unambiguous tool-name case
-      differences or return corrective tool errors.
+    actionable: Log effort and require actual test/build evidence; tolerate unambiguous tool-name case differences
+      or return corrective tool errors.
     incident_status: unknown
 - schema_version: '1.0'
   id: behavior-f98cc32ada93a6ba
@@ -3164,8 +3132,8 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: Two August 8 video jobs remained pending through August 9 in the hosted MCP history; equivalent
-    non-MCP generation succeeded.
+  claim: Two August 8 video jobs remained pending through August 9 in the hosted MCP history; equivalent non-MCP
+    generation succeeded.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -3211,8 +3179,8 @@ records:
       non-MCP generation succeeded.
     claim_status: supported
     confidence: medium
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: client_harness
     scope:
       route: mcp.bfl.ai
@@ -3248,9 +3216,9 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: October 2 listeners reported overperformed voices and improvement after an app update. Current
-    ElevenReader documentation specifies Subtle uses v2; Balanced and Expressive use v4. Other October
-    5 users report strong v4 cloning and delivery.
+  claim: October 2 listeners reported overperformed voices and improvement after an app update. Current ElevenReader
+    documentation specifies Subtle uses v2; Balanced and Expressive use v4. Other October 5 users report strong
+    v4 cloning and delivery.
   change_type: product_change
   metrics: []
   observed_at: '2026-10-07'
@@ -3292,13 +3260,13 @@ records:
     - elevenlabs-eleven-v4
     kind: product_change
     title: ElevenReader expressiveness control can change the underlying model
-    claim: October 2 listeners reported overperformed voices and improvement after an app update. Current
-      ElevenReader documentation specifies Subtle uses v2; Balanced and Expressive use v4. Other October
-      5 users report strong v4 cloning and delivery.
+    claim: October 2 listeners reported overperformed voices and improvement after an app update. Current ElevenReader
+      documentation specifies Subtle uses v2; Balanced and Expressive use v4. Other October 5 users report
+      strong v4 cloning and delivery.
     claim_status: supported
     confidence: medium
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: client_product
     scope:
       product: ElevenReader, not a controlled ElevenAPI test
@@ -3333,9 +3301,9 @@ records:
   model_version: null
   harness: null
   effort: High as displayed
-  claim: May 9 AI Studio report describes fragmented code fences, numbering failures and absent visible
-    thinking despite High. Replies report similar experiences; no controlled before/after outputs or provider
-    fix are supplied.
+  claim: May 9 AI Studio report describes fragmented code fences, numbering failures and absent visible thinking
+    despite High. Replies report similar experiences; no controlled before/after outputs or provider fix are
+    supplied.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -3376,13 +3344,13 @@ records:
     - gemini-3-1-pro-preview
     kind: behavior_report
     title: Historical formatting and apparent-thinking regression remains unconfirmed
-    claim: May 9 AI Studio report describes fragmented code fences, numbering failures and absent visible
-      thinking despite High. Replies report similar experiences; no controlled before/after outputs or
-      provider fix are supplied.
+    claim: May 9 AI Studio report describes fragmented code fences, numbering failures and absent visible thinking
+      despite High. Replies report similar experiences; no controlled before/after outputs or provider fix
+      are supplied.
     claim_status: unresolved
     confidence: low
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: model_harness_interaction
     scope:
       product: AI Studio Playground; Vertex mentioned by commenter
@@ -3405,8 +3373,7 @@ records:
     cluster_id: gemini31pro-may-quality-complaint
     caveats:
     - Visible reasoning is not a reliable measure of internal reasoning effort.
-    - Old report cannot establish October conditions; no verified quantified downgrade or quantization
-      cause.
+    - Old report cannot establish October conditions; no verified quantified downgrade or quantization cause.
     incident_status: unknown
 - schema_version: '1.0'
   id: behavior-f52c387debb1a96b
@@ -3462,8 +3429,8 @@ records:
       but fail later tool turns because thought signatures are not replayed.
     claim_status: supported
     confidence: medium
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: client_harness
     scope:
       product: Cursor 3.16.17
@@ -3498,9 +3465,9 @@ records:
   model_version: null
   harness: null
   effort: LOW
-  claim: 'September 5 report supplies eight runs per cell: short findings produced save_note decisions
-    8/8; added reflective prose reduced this to 0/8, versus 8/8 on Gemini 3.5 Flash. Explicit prompted
-    actions still worked.'
+  claim: 'September 5 report supplies eight runs per cell: short findings produced save_note decisions 8/8;
+    added reflective prose reduced this to 0/8, versus 8/8 on Gemini 3.5 Flash. Explicit prompted actions still
+    worked.'
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -3542,13 +3509,13 @@ records:
     - gemini-3-8-flash
     kind: behavior_report
     title: Reflective history suppresses a structured action decision in a bounded repro
-    claim: 'September 5 report supplies eight runs per cell: short findings produced save_note decisions
-      8/8; added reflective prose reduced this to 0/8, versus 8/8 on Gemini 3.5 Flash. Explicit prompted
-      actions still worked.'
+    claim: 'September 5 report supplies eight runs per cell: short findings produced save_note decisions 8/8;
+      added reflective prose reduced this to 0/8, versus 8/8 on Gemini 3.5 Flash. Explicit prompted actions
+      still worked.'
     claim_status: supported
     confidence: medium
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: model_harness_interaction
     scope:
       route: Gemini API AI Studio key
@@ -3574,8 +3541,7 @@ records:
     caveats:
     - This is structured action selection, not a general native function-calling failure.
     - Small synthetic case; investigator's imitation explanation remains causal hypothesis.
-    actionable: Separate proactive decision tests from explicit tool-use tests and preserve interface
-      shape.
+    actionable: Separate proactive decision tests from explicit tool-use tests and preserve interface shape.
     incident_status: unknown
 - schema_version: '1.0'
   id: behavior-8734dd25c066a5cb
@@ -3586,8 +3552,8 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: September 27 Pipecat/WebSocket report says non-US language settings yield unintended language
-    switching while accent instructions are ignored; subsequent users corroborate through October 6.
+  claim: September 27 Pipecat/WebSocket report says non-US language settings yield unintended language switching
+    while accent instructions are ignored; subsequent users corroborate through October 6.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -3628,12 +3594,12 @@ records:
     - gemini-3-8-live
     kind: behavior_report
     title: Live API accent/language behavior has specific migration complaints
-    claim: September 27 Pipecat/WebSocket report says non-US language settings yield unintended language
-      switching while accent instructions are ignored; subsequent users corroborate through October 6.
+    claim: September 27 Pipecat/WebSocket report says non-US language settings yield unintended language switching
+      while accent instructions are ignored; subsequent users corroborate through October 6.
     claim_status: supported
     confidence: medium
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: model_harness_interaction
     scope:
       route: Gemini Live API via Pipecat/WebSocket
@@ -3667,8 +3633,8 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: October 6 report says LiveKit logs TTFT as 0.0 on Gemini 3.8 Live while manual response latency
-    feels below 500ms.
+  claim: October 6 report says LiveKit logs TTFT as 0.0 on Gemini 3.8 Live while manual response latency feels
+    below 500ms.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -3711,8 +3677,8 @@ records:
       feels below 500ms.
     claim_status: supported
     confidence: low
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: client_harness
     scope:
       route: Vertex AI; location us
@@ -3745,9 +3711,8 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: August 6 report cites a resolved June 18–19 configuration incident, then reports a 19% median
-    sharpness reduction in one view class of 2K eyewear drawings; most view classes showed no significant
-    change.
+  claim: August 6 report cites a resolved June 18–19 configuration incident, then reports a 19% median sharpness
+    reduction in one view class of 2K eyewear drawings; most view classes showed no significant change.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -3789,13 +3754,12 @@ records:
     - gemini-3-pro-image
     kind: behavior_report
     title: Residual image-quality measurement is narrower than a global downgrade
-    claim: August 6 report cites a resolved June 18–19 configuration incident, then reports a 19% median
-      sharpness reduction in one view class of 2K eyewear drawings; most view classes showed no significant
-      change.
+    claim: August 6 report cites a resolved June 18–19 configuration incident, then reports a 19% median sharpness
+      reduction in one view class of 2K eyewear drawings; most view classes showed no significant change.
     claim_status: supported
     confidence: medium
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: model_harness_interaction
     scope:
       route: Gemini Developer API; @google/genai
@@ -3875,8 +3839,8 @@ records:
       beyond an hour; chaining the next scene returned HTTP 500.'
     claim_status: supported
     confidence: medium
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: serving_infrastructure
     scope:
       route: Vertex AI global Interactions
@@ -3911,8 +3875,8 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: 'April 11 report tests 31B IT on Ollama 0.20.5: long JSON descriptions looped in 10/10 seeded
-    cases, while unconstrained generation had no loops in 10/10.'
+  claim: 'April 11 report tests 31B IT on Ollama 0.20.5: long JSON descriptions looped in 10/10 seeded cases,
+    while unconstrained generation had no loops in 10/10.'
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -3957,12 +3921,12 @@ records:
     - gemma-4-31b-it
     kind: behavior_report
     title: Grammar-constrained generation triggers repetition in a reported local test
-    claim: 'April 11 report tests 31B IT on Ollama 0.20.5: long JSON descriptions looped in 10/10 seeded
-      cases, while unconstrained generation had no loops in 10/10.'
+    claim: 'April 11 report tests 31B IT on Ollama 0.20.5: long JSON descriptions looped in 10/10 seeded cases,
+      while unconstrained generation had no loops in 10/10.'
     claim_status: supported
     confidence: medium
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: model_harness_interaction
     scope:
       route: Local Ollama/llama.cpp
@@ -4001,9 +3965,8 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: September 28 API report compares successful two-minute baselines with timing-only/format-only
-    variants rejected as PROHIBITED_CONTENT in roughly 0.5–0.75 seconds; no audio or detailed category
-    returned.
+  claim: September 28 API report compares successful two-minute baselines with timing-only/format-only variants
+    rejected as PROHIBITED_CONTENT in roughly 0.5–0.75 seconds; no audio or detailed category returned.
   change_type: service_change
   metrics: []
   observed_at: '2026-10-07'
@@ -4044,13 +4007,12 @@ records:
     - lyria-3-5
     kind: behavior_report
     title: Lyria requests can be blocked without detailed rejection classification
-    claim: September 28 API report compares successful two-minute baselines with timing-only/format-only
-      variants rejected as PROHIBITED_CONTENT in roughly 0.5–0.75 seconds; no audio or detailed category
-      returned.
+    claim: September 28 API report compares successful two-minute baselines with timing-only/format-only variants
+      rejected as PROHIBITED_CONTENT in roughly 0.5–0.75 seconds; no audio or detailed category returned.
     claim_status: supported
     confidence: medium
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: serving_policy_or_request_handling
     scope:
       route: Gemini Developer API generateContent
@@ -4129,8 +4091,8 @@ records:
       could reject an explicitly supplied Lyria 3.5 ID.
     claim_status: supported
     confidence: medium
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: client_harness
     scope:
       route: VideoDraft CLI/backend; not direct Gemini
@@ -4162,9 +4124,9 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: Google published January 13 improvements to Ingredients-to-Video and output upscaling. Current
-    API docs still warn about audio-processing blocks and variable latency; community reports include
-    failures and successful rollback from Omni to Veo.
+  claim: Google published January 13 improvements to Ingredients-to-Video and output upscaling. Current API
+    docs still warn about audio-processing blocks and variable latency; community reports include failures
+    and successful rollback from Omni to Veo.
   change_type: unresolved
   metrics: []
   observed_at: '2026-10-07'
@@ -4205,13 +4167,13 @@ records:
     - veo-3-1-generate-preview
     kind: documented_change_and_limit
     title: Veo's documented updates coexist with unresolved audio complaints
-    claim: Google published January 13 improvements to Ingredients-to-Video and output upscaling. Current
-      API docs still warn about audio-processing blocks and variable latency; community reports include
-      failures and successful rollback from Omni to Veo.
+    claim: Google published January 13 improvements to Ingredients-to-Video and output upscaling. Current API
+      docs still warn about audio-processing blocks and variable latency; community reports include failures
+      and successful rollback from Omni to Veo.
     claim_status: supported
     confidence: low
-    confidence_scope: Official product/API rollout and warnings are documented; mixed product/variant
-      anecdotes do not establish the causal layer, prevalence or exact-endpoint recovery.
+    confidence_scope: Official product/API rollout and warnings are documented; mixed product/variant anecdotes
+      do not establish the causal layer, prevalence or exact-endpoint recovery.
     layer: unresolved
     scope:
       route: Gemini API documentation; Flow community reports separate
@@ -4234,8 +4196,7 @@ records:
     cluster_id: veo31-updates-and-audio-limits
     caveats:
     - Provider update does not guarantee every prompt improved.
-    - Community product labels often omit exact endpoint; no controlled longitudinal general downgrade
-      established.
+    - Community product labels often omit exact endpoint; no controlled longitudinal general downgrade established.
     actionable: Separate normal, Fast and Lite; retain duration, resolution, reference mode and audio-block
       outcome.
     incident_status: unknown
@@ -4275,8 +4236,8 @@ records:
   - 'billing: Pro'
   - 'requested_id: gpt-6-astra'
   notes:
-  - Original September 12 social statement could not be retrieved; do not upgrade quoted 'fixed engines'
-    to independently checked primary fact.
+  - Original September 12 social statement could not be retrieved; do not upgrade quoted 'fixed engines' to
+    independently checked primary fact.
   - No proof fix reached this route or that failure shared that cause.
   - 'Claim adjudication: supported'
   - 'Layer: model_harness_interaction'
@@ -4291,12 +4252,12 @@ records:
     - gpt-6-astra
     kind: behavior_report
     title: Instruction-retention failures reported after a claimed September fix
-    claim: September 14 report provides reproducible UI geometry damage and non-convergent correction
-      behavior in Windows Codex, following the reporter's cited September 12 provider update.
+    claim: September 14 report provides reproducible UI geometry damage and non-convergent correction behavior
+      in Windows Codex, following the reporter's cited September 12 provider update.
     claim_status: supported
     confidence: medium
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: model_harness_interaction
     scope:
       client: 26.908.4834.0; bundled 0.154.0-alpha.6.2
@@ -4335,9 +4296,8 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: 'September 24 controlled report: configuration_update accepted high after low, but Luna emitted
-    zero reasoning tokens, unlike request-level high. Direct route tests found 34/35 updates behaved like
-    low.'
+  claim: 'September 24 controlled report: configuration_update accepted high after low, but Luna emitted zero
+    reasoning tokens, unlike request-level high. Direct route tests found 34/35 updates behaved like low.'
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -4381,12 +4341,12 @@ records:
     kind: behavior_report
     title: Experimental in-thread effort update can leave Luna reasoning at low
     claim: 'September 24 controlled report: configuration_update accepted high after low, but Luna emitted
-      zero reasoning tokens, unlike request-level high. Direct route tests found 34/35 updates behaved
-      like low.'
+      zero reasoning tokens, unlike request-level high. Direct route tests found 34/35 updates behaved like
+      low.'
     claim_status: supported
     confidence: medium
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: model_harness_interaction
     scope:
       route: ChatGPT Codex backend only
@@ -4469,12 +4429,12 @@ records:
     - gpt-image-2-5-sunburst
     kind: behavior_report
     title: Codex OAuth image settings can be replaced by backend defaults
-    claim: September 10 controlled probe found Flare/Sunburst selection, quality and size replaced in
-      echoed tool settings by gpt-image-2-codex/auto, including invalid-model and omitted-setting controls.
+    claim: September 10 controlled probe found Flare/Sunburst selection, quality and size replaced in echoed
+      tool settings by gpt-image-2-codex/auto, including invalid-model and omitted-setting controls.
     claim_status: supported
     confidence: medium
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: alias_or_router
     scope:
       route: ChatGPT Codex OAuth responses; Hermes integration
@@ -4502,8 +4462,8 @@ records:
     caveats:
     - Echo supports ignored selectors, not knowledge of actual internal image weights.
     - Closed issue has no verified fix in retrieved body; direct Images API may differ.
-    actionable: Do not label outputs as Flare/Sunburst based only on requested model; record returned
-      tool spec.
+    actionable: Do not label outputs as Flare/Sunburst based only on requested model; record returned tool
+      spec.
     incident_status: unknown
 - schema_version: '1.0'
   id: behavior-793779fbc77e958f
@@ -4514,9 +4474,9 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: September reports describe missing delegation events after promised actions, with frozen-config
-    successes and failures. A later synthetic cancellation test reports 1/8 immediate cancellations versus
-    2/2 after settled acknowledgment.
+  claim: September reports describe missing delegation events after promised actions, with frozen-config successes
+    and failures. A later synthetic cancellation test reports 1/8 immediate cancellations versus 2/2 after
+    settled acknowledgment.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -4559,12 +4519,12 @@ records:
     kind: behavior_report
     title: Verbal commitment does not guarantee voice delegation
     claim: September reports describe missing delegation events after promised actions, with frozen-config
-      successes and failures. A later synthetic cancellation test reports 1/8 immediate cancellations
-      versus 2/2 after settled acknowledgment.
+      successes and failures. A later synthetic cancellation test reports 1/8 immediate cancellations versus
+      2/2 after settled acknowledgment.
     claim_status: supported
     confidence: medium
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: model_harness_interaction
     scope:
       route: Live WebSocket; Responses delegation; PCMU 8kHz
@@ -4577,8 +4537,8 @@ records:
     reported_at: '2026-09-17'
     assessed_at: '2026-10-07T10:34:51Z'
     state: unknown
-    official_acknowledgment: OpenAI staff advised explicit frontend delegation policy September 22; no
-      confirmed fix
+    official_acknowledgment: OpenAI staff advised explicit frontend delegation policy September 22; no confirmed
+      fix
     fix:
       stage: none_found
       version: null
@@ -4647,8 +4607,8 @@ records:
       commands on gpt-realtime to about 25% on 2.1, often speaking instead of invoking an available tool.
     claim_status: supported
     confidence: medium
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: model_harness_interaction
     scope:
       route: Realtime API
@@ -4683,8 +4643,8 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: April 24 report measures output throughput down 16.2% and median per-token latency up 20.1% from
-    vLLM 0.16.0 to 0.19.0 at concurrency 300; median TTFT changed little.
+  claim: April 24 report measures output throughput down 16.2% and median per-token latency up 20.1% from vLLM
+    0.16.0 to 0.19.0 at concurrency 300; median TTFT changed little.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -4725,12 +4685,12 @@ records:
     - gpt-oss-120b
     kind: behavior_report
     title: vLLM version changes altered throughput without a weights change
-    claim: April 24 report measures output throughput down 16.2% and median per-token latency up 20.1%
-      from vLLM 0.16.0 to 0.19.0 at concurrency 300; median TTFT changed little.
+    claim: April 24 report measures output throughput down 16.2% and median per-token latency up 20.1% from
+      vLLM 0.16.0 to 0.19.0 at concurrency 300; median TTFT changed little.
     claim_status: supported
     confidence: medium
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: inference_engine
     scope:
       route: Local vLLM
@@ -4765,8 +4725,8 @@ records:
   model_version: null
   harness: null
   effort: null
-  claim: Reporter measured about 144 to 109 tokens/s after upgrading Ollama 0.24 to 0.30.6, using five
-    warm runs; rollback restored prior performance.
+  claim: Reporter measured about 144 to 109 tokens/s after upgrading Ollama 0.24 to 0.30.6, using five warm
+    runs; rollback restored prior performance.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -4809,12 +4769,12 @@ records:
     - gpt-oss-20b
     kind: behavior_report
     title: Ollama upgrade regression recovered after rollback in one test
-    claim: Reporter measured about 144 to 109 tokens/s after upgrading Ollama 0.24 to 0.30.6, using five
-      warm runs; rollback restored prior performance.
+    claim: Reporter measured about 144 to 109 tokens/s after upgrading Ollama 0.24 to 0.30.6, using five warm
+      runs; rollback restored prior performance.
     claim_status: supported
     confidence: medium
-    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression
-      prevalence and causal diagnosis remain unresolved.
+    confidence_scope: Evidence supports this bounded report or documented behavior; broader regression prevalence
+      and causal diagnosis remain unresolved.
     layer: inference_engine
     scope:
       route: Local Ollama /api/generate
@@ -4849,10 +4809,10 @@ records:
   model_version: Unsloth 2026.2.1; Transformers 4.57.6; torch 2.8.0+cu128
   harness: Unsloth FastLanguageModel
   effort: null
-  claim: A February report fails during FastLanguageModel.from_pretrained with a missing feed_forward
-    attribute. The local Jamba2-Mini-int4_hf conversion is named; this is deployment/training-tool compatibility
-    evidence, not a demonstrated quality regression of the official checkpoint. Later discussion changes
-    model to Reasoning-3B, so its recovery cannot be transferred to Mini.
+  claim: A February report fails during FastLanguageModel.from_pretrained with a missing feed_forward attribute.
+    The local Jamba2-Mini-int4_hf conversion is named; this is deployment/training-tool compatibility evidence,
+    not a demonstrated quality regression of the official checkpoint. Later discussion changes model to Reasoning-3B,
+    so its recovery cannot be transferred to Mini.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -4881,8 +4841,8 @@ records:
   - 'hardware: 4×Tesla V100-SXM2-16GB'
   notes:
   - No paired quality or speed comparison for unmodified Jamba2 Mini.
-  - Reporter says plain Transformers works; maintainer says newer packages resolve their reproduction,
-    but thread mixes Mini and Reasoning-3B.
+  - Reporter says plain Transformers works; maintainer says newer packages resolve their reproduction, but
+    thread mixes Mini and Reasoning-3B.
   - 'Claim adjudication: supported'
   - 'Layer: deployment_or_harness_unless_explicitly_scoped'
   - 'Weights change established: False'
@@ -4896,10 +4856,10 @@ records:
     - ai21-jamba2-mini
     kind: deployment_compatibility
     title: Unsloth loading failure on a local INT4 Jamba2 Mini conversion
-    claim: A February report fails during FastLanguageModel.from_pretrained with a missing feed_forward
-      attribute. The local Jamba2-Mini-int4_hf conversion is named; this is deployment/training-tool compatibility
-      evidence, not a demonstrated quality regression of the official checkpoint. Later discussion changes
-      model to Reasoning-3B, so its recovery cannot be transferred to Mini.
+    claim: A February report fails during FastLanguageModel.from_pretrained with a missing feed_forward attribute.
+      The local Jamba2-Mini-int4_hf conversion is named; this is deployment/training-tool compatibility evidence,
+      not a demonstrated quality regression of the official checkpoint. Later discussion changes model to Reasoning-3B,
+      so its recovery cannot be transferred to Mini.
     claim_status: supported
     confidence: medium
     confidence_scope: medium; Only the named checkpoint/route/configuration; no deliberate nerf inference.
@@ -4917,8 +4877,7 @@ records:
       hardware: 4×Tesla V100-SXM2-16GB
     observed_at: null
     reported_at: '2026-02-12'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -4930,8 +4889,8 @@ records:
       measured_recovery: null
       independent_reproduction_by_this_research: false
     counterevidence:
-    - Reporter says plain Transformers works; maintainer says newer packages resolve their reproduction,
-      but thread mixes Mini and Reasoning-3B.
+    - Reporter says plain Transformers works; maintainer says newer packages resolve their reproduction, but
+      thread mixes Mini and Reasoning-3B.
     caveats:
     - No paired quality or speed comparison for unmodified Jamba2 Mini.
     cluster_id: other28_jamba-loader
@@ -4949,9 +4908,9 @@ records:
   model_version: 0.5.14
   harness: SGLang OpenAI-compatible chat, qwen3 reasoning + qwen3_coder parser
   effort: null
-  claim: Reporter measures 51/1056 defective agent turns with rank-32 SFT LoRA, versus 2/901 base, 2/817
-    identity LoRA, 2/107 merged vLLM and 0/782 merged Fireworks. Tool markup leaks into reasoning or becomes
-    malformed. This localizes the report to adapter × runtime path, not the base model generally.
+  claim: Reporter measures 51/1056 defective agent turns with rank-32 SFT LoRA, versus 2/901 base, 2/817 identity
+    LoRA, 2/107 merged vLLM and 0/782 merged Fireworks. Tool markup leaks into reasoning or becomes malformed.
+    This localizes the report to adapter × runtime path, not the base model generally.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -4996,12 +4955,12 @@ records:
     kind: inference_defect
     title: Tool-turn loss specific to SGLang runtime LoRA
     claim: Reporter measures 51/1056 defective agent turns with rank-32 SFT LoRA, versus 2/901 base, 2/817
-      identity LoRA, 2/107 merged vLLM and 0/782 merged Fireworks. Tool markup leaks into reasoning or
-      becomes malformed. This localizes the report to adapter × runtime path, not the base model generally.
+      identity LoRA, 2/107 merged vLLM and 0/782 merged Fireworks. Tool markup leaks into reasoning or becomes
+      malformed. This localizes the report to adapter × runtime path, not the base model generally.
     claim_status: supported
     confidence: high
-    confidence_scope: high_for_reported_comparison; Only the named checkpoint/route/configuration; no
-      deliberate nerf inference.
+    confidence_scope: high_for_reported_comparison; Only the named checkpoint/route/configuration; no deliberate
+      nerf inference.
     layer: deployment_or_harness_unless_explicitly_scoped
     scope:
       provider: null
@@ -5016,8 +4975,7 @@ records:
       hardware: 1×H100 80GB; GCP a3-highgpu-1g
     observed_at: null
     reported_at: '2026-07-10'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -5046,9 +5004,9 @@ records:
   model_version: 0.28.1rc1.dev130+g44fe2a392; torch 2.13.0+cu130
   harness: vLLM compiled CUDA graphs
   effort: null
-  claim: 'NVIDIA NVFP4 checkpoint fails on 32 A100s through unsupported CUTLASS FP8 selection and PyTorch
-    functionalization. Reporter applies vLLM #53376 plus PyTorch #189530 and completes startup, CUDA graphs
-    and all 1,319 GSM8K questions.'
+  claim: 'NVIDIA NVFP4 checkpoint fails on 32 A100s through unsupported CUTLASS FP8 selection and PyTorch functionalization.
+    Reporter applies vLLM #53376 plus PyTorch #189530 and completes startup, CUDA graphs and all 1,319 GSM8K
+    questions.'
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -5093,8 +5051,8 @@ records:
     kind: inference_defect
     title: Ampere startup blocked by two stack defects; patched run succeeds
     claim: 'NVIDIA NVFP4 checkpoint fails on 32 A100s through unsupported CUTLASS FP8 selection and PyTorch
-      functionalization. Reporter applies vLLM #53376 plus PyTorch #189530 and completes startup, CUDA
-      graphs and all 1,319 GSM8K questions.'
+      functionalization. Reporter applies vLLM #53376 plus PyTorch #189530 and completes startup, CUDA graphs
+      and all 1,319 GSM8K questions.'
     claim_status: supported
     confidence: high
     confidence_scope: high_for_scoped_recovery; Only the named checkpoint/route/configuration; no deliberate
@@ -5113,8 +5071,7 @@ records:
       hardware: 32×A100-SXM4-80GB; TP16×PP2
     observed_at: null
     reported_at: '2026-09-02'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -5148,8 +5105,8 @@ records:
   harness: llama.cpp CUDA under WSL
   effort: null
   claim: A WSL/RTX3090 user gets garbage with Q4_K_XL and Q6_K at commit 221f0f6 even without MTP or vision.
-    Same files generate normal text on Vulkan; upgrading CUDA build to around b10450/ece963f41 restores
-    normal output with MTP and vision enabled.
+    Same files generate normal text on Vulkan; upgrading CUDA build to around b10450/ece963f41 restores normal
+    output with MTP and vision enabled.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -5192,9 +5149,9 @@ records:
     - qwen3-8-27b
     kind: inference_defect
     title: Old llama.cpp CUDA path corrupts output; later build restores it
-    claim: A WSL/RTX3090 user gets garbage with Q4_K_XL and Q6_K at commit 221f0f6 even without MTP or
-      vision. Same files generate normal text on Vulkan; upgrading CUDA build to around b10450/ece963f41
-      restores normal output with MTP and vision enabled.
+    claim: A WSL/RTX3090 user gets garbage with Q4_K_XL and Q6_K at commit 221f0f6 even without MTP or vision.
+      Same files generate normal text on Vulkan; upgrading CUDA build to around b10450/ece963f41 restores normal
+      output with MTP and vision enabled.
     claim_status: supported
     confidence: medium
     confidence_scope: medium; Only the named checkpoint/route/configuration; no deliberate nerf inference.
@@ -5212,8 +5169,7 @@ records:
       hardware: RTX 3090 24GB
     observed_at: null
     reported_at: '2026-08-16'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: fix_published
@@ -5242,8 +5198,8 @@ records:
   model_version: null
   harness: vLLM, llama.cpp, LM Studio
   effort: xhigh central; later enumeration-heavy case also medium
-  claim: Repeated structured-output calls sometimes terminate inside reasoning with HTTP 200/stop and
-    empty answer. Later thread corrections retract mislabeled LM Studio effort tests and distinguish base-model,
+  claim: Repeated structured-output calls sometimes terminate inside reasoning with HTTP 200/stop and empty
+    answer. Later thread corrections retract mislabeled LM Studio effort tests and distinguish base-model,
     derivative, first-party and gateway routes; final engine-side report reproduces EOS-inside-think across
     multiple precisions and engines.
   change_type: harness_change
@@ -5277,8 +5233,8 @@ records:
   - No single global failure rate; headline ~17% is not portable; latest release behavior unmeasured.
   - Some low/medium and bounded penalty tests avoid failure; LM Studio overrides invalidate naive effort-label
     comparisons.
-  - First-party successful control in this discussion used a different Max/2.4T identity; do not present
-    as a matched 27B all-clear.
+  - First-party successful control in this discussion used a different Max/2.4T identity; do not present as
+    a matched 27B all-clear.
   - 'Claim adjudication: supported'
   - 'Layer: deployment_or_harness_unless_explicitly_scoped'
   - 'Weights change established: False'
@@ -5292,10 +5248,10 @@ records:
     - qwen3-8-27b
     kind: inference_defect
     title: Empty completed answers interact with effort, sampling and harness
-    claim: Repeated structured-output calls sometimes terminate inside reasoning with HTTP 200/stop and
-      empty answer. Later thread corrections retract mislabeled LM Studio effort tests and distinguish
-      base-model, derivative, first-party and gateway routes; final engine-side report reproduces EOS-inside-think
-      across multiple precisions and engines.
+    claim: Repeated structured-output calls sometimes terminate inside reasoning with HTTP 200/stop and empty
+      answer. Later thread corrections retract mislabeled LM Studio effort tests and distinguish base-model,
+      derivative, first-party and gateway routes; final engine-side report reproduces EOS-inside-think across
+      multiple precisions and engines.
     claim_status: supported
     confidence: medium
     confidence_scope: medium; Only the named checkpoint/route/configuration; no deliberate nerf inference.
@@ -5313,8 +5269,7 @@ records:
       hardware: null
     observed_at: null
     reported_at: '2026-08-19'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -5347,9 +5302,9 @@ records:
   model_version: null
   harness: llama.cpp Vulkan/RADV and ROCm CI versus Windows reporters
   effort: null
-  claim: Unsloth maintainer compares reports from Windows discrete AMD GPUs against 20 measured Linux
-    Strix Halo cells. All measured cells pass; V2 Q4_K_M versus V3 UD-Q4_K_M is a recipe change, not just
-    a revision change. Checkpoint disabling is the first suggested diagnostic.
+  claim: Unsloth maintainer compares reports from Windows discrete AMD GPUs against 20 measured Linux Strix
+    Halo cells. All measured cells pass; V2 Q4_K_M versus V3 UD-Q4_K_M is a recipe change, not just a revision
+    change. Checkpoint disabling is the first suggested diagnostic.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -5389,9 +5344,9 @@ records:
     - qwen3-8-27b
     kind: counterevidence
     title: V3 GGUF crash reports not reproduced in bounded Linux CI
-    claim: Unsloth maintainer compares reports from Windows discrete AMD GPUs against 20 measured Linux
-      Strix Halo cells. All measured cells pass; V2 Q4_K_M versus V3 UD-Q4_K_M is a recipe change, not
-      just a revision change. Checkpoint disabling is the first suggested diagnostic.
+    claim: Unsloth maintainer compares reports from Windows discrete AMD GPUs against 20 measured Linux Strix
+      Halo cells. All measured cells pass; V2 Q4_K_M versus V3 UD-Q4_K_M is a recipe change, not just a revision
+      change. Checkpoint disabling is the first suggested diagnostic.
     claim_status: unresolved
     confidence: medium
     confidence_scope: medium; Only the named checkpoint/route/configuration; no deliberate nerf inference.
@@ -5409,8 +5364,7 @@ records:
       hardware: Linux integrated gfx1151 control; Windows RDNA3/4 reports
     observed_at: null
     reported_at: '2026-08-26'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -5439,9 +5393,8 @@ records:
   harness: vLLM QSA; piecewise graphs; multiple deployments
   effort: thinking; temperature 0 diagnostic
   claim: GB10 users document unstable identical greedy requests on FP8/NVFP4 serving paths. DocAI isolates
-    a top-k overlay and reports 13/50 unstable tasks falling to 0/50, at lower prefill throughput. Later
-    issue comments show some machines need four combined fixes; one successful overlay is not a universal
-    recovery.
+    a top-k overlay and reports 13/50 unstable tasks falling to 0/50, at lower prefill throughput. Later issue
+    comments show some machines need four combined fixes; one successful overlay is not a universal recovery.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -5474,8 +5427,8 @@ records:
   - 'hardware: DGX Spark GB10 SM121, TP1/TP2'
   notes:
   - No model-wide throughput or quality inference; release/container uptake not fully checked.
-  - Greedy+thinking is contrary to model sampling recommendations. Determinism and semantic quality are
-    different outcomes.
+  - Greedy+thinking is contrary to model sampling recommendations. Determinism and semantic quality are different
+    outcomes.
   - Later independent tests require top-k, NVFP4 finalize, autotune-cache and PLE semaphore fixes together;
     some rows were retracted for invalid layouts.
   - 'Claim adjudication: supported'
@@ -5513,8 +5466,7 @@ records:
       hardware: DGX Spark GB10 SM121, TP1/TP2
     observed_at: null
     reported_at: '2026-08-28'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -5532,8 +5484,8 @@ records:
         later_TP1_all_four_fixes: 40 distinct outputs/40 → 1/40
       independent_reproduction_by_this_research: false
     counterevidence:
-    - Greedy+thinking is contrary to model sampling recommendations. Determinism and semantic quality
-      are different outcomes.
+    - Greedy+thinking is contrary to model sampling recommendations. Determinism and semantic quality are different
+      outcomes.
     - Later independent tests require top-k, NVFP4 finalize, autotune-cache and PLE semaphore fixes together;
       some rows were retracted for invalid layouts.
     caveats:
@@ -5555,8 +5507,8 @@ records:
   harness: llama.cpp server
   effort: null
   claim: 'Tool calls mixed with prose or consecutive tools can crash llama-server b7968. PR #19765 replaces
-    the problematic parsing with a stopgap PEG parser, adds parallel tools and fixes JSON schema support;
-    merged Feb 20. Responses API history conversion was a separate follow-on issue.'
+    the problematic parsing with a stopgap PEG parser, adds parallel tools and fixes JSON schema support; merged
+    Feb 20. Responses API history conversion was a separate follow-on issue.'
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -5570,8 +5522,8 @@ records:
   - src-71b3fd269cc8
   - src-91bf818fcd17
   contradictory_evidence_ids: []
-  official_acknowledgment: 'llama.cpp maintainers merged #19765, explicitly fixing #19430; not a Qwen
-    weight update.'
+  official_acknowledgment: 'llama.cpp maintainers merged #19765, explicitly fixing #19430; not a Qwen weight
+    update.'
   fix:
     published_at: null
     version: null
@@ -5622,15 +5574,14 @@ records:
       hardware: AMD EPYC 7532 + 7×RTX3090
     observed_at: null
     reported_at: '2026-02-08'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: '2026-02-20'
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: fix_published
     incident_status: unknown
     status_detail: Specific grammar patch merged; unrelated EOS/history issues not blanket-cleared
-    official_acknowledgment: 'llama.cpp maintainers merged #19765, explicitly fixing #19430; not a Qwen
-      weight update.'
+    official_acknowledgment: 'llama.cpp maintainers merged #19765, explicitly fixing #19430; not a Qwen weight
+      update.'
     fix:
       stage: merged
       measured_recovery: null
@@ -5700,9 +5651,9 @@ records:
     - cohere-command-a-plus
     kind: inference_defect
     title: MLX native W4A4 blocked, while BF16-to-Q8 path validated
-    claim: 'MLX-LM PR #1294 adds Command A+ MoE support. Native W4A4/NVFP4 loading remains blocked by
-      global-scale support in MLX MoE operations; an independent tester validates BF16-to-Q8 conversion,
-      coherent generation, tools and multi-turn KV continuation.'
+    claim: 'MLX-LM PR #1294 adds Command A+ MoE support. Native W4A4/NVFP4 loading remains blocked by global-scale
+      support in MLX MoE operations; an independent tester validates BF16-to-Q8 conversion, coherent generation,
+      tools and multi-turn KV continuation.'
     claim_status: supported
     confidence: medium
     confidence_scope: medium; Only the named checkpoint/route/configuration; no deliberate nerf inference.
@@ -5720,8 +5671,7 @@ records:
       hardware: Apple Silicon; validated run 241GB peak
     observed_at: null
     reported_at: '2026-05-21'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -5754,9 +5704,9 @@ records:
   model_version: null
   harness: OpenCode desktop 1.18.31, Windows 11
   effort: actual request effort unspecified
-  claim: OpenCode desktop report counts 5 blank final answers among 1,715 assistant messages on Go, with
-    answers in reasoning only. Direct DeepSeek path instead exposes planning text in output. Older V4
-    routes did not show this across thousands of messages in the same environment.
+  claim: OpenCode desktop report counts 5 blank final answers among 1,715 assistant messages on Go, with answers
+    in reasoning only. Direct DeepSeek path instead exposes planning text in output. Older V4 routes did not
+    show this across thousands of messages in the same environment.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -5799,9 +5749,9 @@ records:
     - deepseek-v4-1-flash
     kind: inference_defect
     title: OpenCode loses or exposes reasoning-channel answers
-    claim: OpenCode desktop report counts 5 blank final answers among 1,715 assistant messages on Go,
-      with answers in reasoning only. Direct DeepSeek path instead exposes planning text in output. Older
-      V4 routes did not show this across thousands of messages in the same environment.
+    claim: OpenCode desktop report counts 5 blank final answers among 1,715 assistant messages on Go, with
+      answers in reasoning only. Direct DeepSeek path instead exposes planning text in output. Older V4 routes
+      did not show this across thousands of messages in the same environment.
     claim_status: supported
     confidence: medium
     confidence_scope: medium; Only the named checkpoint/route/configuration; no deliberate nerf inference.
@@ -5819,8 +5769,7 @@ records:
       hardware: null
     observed_at: 2026-09-17/2026-09-18
     reported_at: '2026-09-18'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -5850,9 +5799,9 @@ records:
   harness: custom current/anchored-rw/dsh-aligned 3×2 study
   effort: max; THINKING_MODE=deepseek
   claim: A firsthand 3-scaffold × 2-prompt × 3-repeat study uses 50-tool-call budgets. Three runs actively
-    finish; 0/17 evaluable runs meet the author’s strict prevalidated healthy-stop criterion, while 12/18
-    final artifacts pass the 10K benchmark. The experiment does not show that switching to a DSH-style
-    interface restores healthy stopping.
+    finish; 0/17 evaluable runs meet the author’s strict prevalidated healthy-stop criterion, while 12/18 final
+    artifacts pass the 10K benchmark. The experiment does not show that switching to a DSH-style interface
+    restores healthy stopping.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -5897,9 +5846,9 @@ records:
     kind: behavioral_measurement
     title: Scaffold comparison finds stopping-control weakness with harness confounds
     claim: A firsthand 3-scaffold × 2-prompt × 3-repeat study uses 50-tool-call budgets. Three runs actively
-      finish; 0/17 evaluable runs meet the author’s strict prevalidated healthy-stop criterion, while
-      12/18 final artifacts pass the 10K benchmark. The experiment does not show that switching to a DSH-style
-      interface restores healthy stopping.
+      finish; 0/17 evaluable runs meet the author’s strict prevalidated healthy-stop criterion, while 12/18
+      final artifacts pass the 10K benchmark. The experiment does not show that switching to a DSH-style interface
+      restores healthy stopping.
     claim_status: supported
     confidence: medium
     confidence_scope: medium; Only the named checkpoint/route/configuration; no deliberate nerf inference.
@@ -5917,8 +5866,7 @@ records:
       hardware: null
     observed_at: '2026-08-15'
     reported_at: '2026-08-16'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -5948,9 +5896,9 @@ records:
   model_version: 0.8.5.post1
   harness: vLLM Ray distributed executor; lm_eval GSM8K
   effort: null
-  claim: Maverick forward passes crash across two H100 nodes with V1/Ray on vLLM 0.8.5.post1; removing
-    Ray falls back to V0 and GSM8K runs. Reporter explicitly cannot determine whether issue is model-specific
-    or a vLLM distributed-executor defect.
+  claim: Maverick forward passes crash across two H100 nodes with V1/Ray on vLLM 0.8.5.post1; removing Ray
+    falls back to V0 and GSM8K runs. Reporter explicitly cannot determine whether issue is model-specific or
+    a vLLM distributed-executor defect.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -5993,8 +5941,8 @@ records:
     - llama-4-maverick
     kind: inference_defect
     title: vLLM V1/Ray crashes while V0 succeeds
-    claim: Maverick forward passes crash across two H100 nodes with V1/Ray on vLLM 0.8.5.post1; removing
-      Ray falls back to V0 and GSM8K runs. Reporter explicitly cannot determine whether issue is model-specific
+    claim: Maverick forward passes crash across two H100 nodes with V1/Ray on vLLM 0.8.5.post1; removing Ray
+      falls back to V0 and GSM8K runs. Reporter explicitly cannot determine whether issue is model-specific
       or a vLLM distributed-executor defect.
     claim_status: supported
     confidence: medium
@@ -6013,8 +5961,7 @@ records:
       hardware: 2×8 H100; TP8 PP2
     observed_at: '2025-05-12'
     reported_at: '2025-05-12'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -6086,8 +6033,8 @@ records:
     - llama-4-maverick
     kind: serving_performance
     title: NIM acknowledges concurrency-related TTFT degradation
-    claim: NVIDIA NIM VLM 1.4.0 release notes list Maverick TTFT degradation at concurrency ≥16 while
-      end-to-end latency is unaffected, plus deployment failure with slow tokenizer mode.
+    claim: NVIDIA NIM VLM 1.4.0 release notes list Maverick TTFT degradation at concurrency ≥16 while end-to-end
+      latency is unaffected, plus deployment failure with slow tokenizer mode.
     claim_status: supported
     confidence: high
     confidence_scope: high; Only the named checkpoint/route/configuration; no deliberate nerf inference.
@@ -6105,8 +6052,7 @@ records:
       hardware: profile-dependent
     observed_at: null
     reported_at: null
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -6134,8 +6080,8 @@ records:
   model_version: 'b5236 good; b5237 bad; #13299 merged 93c4e23'
   harness: llama.cpp CUDA
   effort: null
-  claim: 'b5237 breaks Scout perplexity with illegal CUDA access. First proposed #13294 is insufficient;
-    #13299 stops the crash. Reporter still finds a small math-score drop, while maintainer’s broader 6,688-question
+  claim: 'b5237 breaks Scout perplexity with illegal CUDA access. First proposed #13294 is insufficient; #13299
+    stops the crash. Reporter still finds a small math-score drop, while maintainer’s broader 6,688-question
     comparison and perplexity tests show much smaller changes. Keep crash recovery separate from unresolved
     numeric-quality interpretation.'
   change_type: harness_change
@@ -6169,8 +6115,7 @@ records:
   - 'hardware: RTX4070 partial offload; maintainer RTX4090 full-offload countertest'
   notes:
   - No universal residual accuracy conclusion.
-  - Maintainer perplexity improves slightly; custom 100-question benchmark is narrow and quant/hardware
-    differ.
+  - Maintainer perplexity improves slightly; custom 100-question benchmark is narrow and quant/hardware differ.
   - 'Claim adjudication: supported'
   - 'Layer: deployment_or_harness_unless_explicitly_scoped'
   - 'Weights change established: False'
@@ -6185,9 +6130,9 @@ records:
     kind: inference_defect
     title: CUDA crash fixed; residual quality claim remains contested
     claim: 'b5237 breaks Scout perplexity with illegal CUDA access. First proposed #13294 is insufficient;
-      #13299 stops the crash. Reporter still finds a small math-score drop, while maintainer’s broader
-      6,688-question comparison and perplexity tests show much smaller changes. Keep crash recovery separate
-      from unresolved numeric-quality interpretation.'
+      #13299 stops the crash. Reporter still finds a small math-score drop, while maintainer’s broader 6,688-question
+      comparison and perplexity tests show much smaller changes. Keep crash recovery separate from unresolved
+      numeric-quality interpretation.'
     claim_status: supported
     confidence: high
     confidence_scope: high_crash_medium_quality; Only the named checkpoint/route/configuration; no deliberate
@@ -6206,8 +6151,7 @@ records:
       hardware: RTX4070 partial offload; maintainer RTX4090 full-offload countertest
     observed_at: null
     reported_at: '2025-05-03'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: '2025-05-04'
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: fix_published
@@ -6222,8 +6166,7 @@ records:
         broader_test_after: 3716/6688
       independent_reproduction_by_this_research: false
     counterevidence:
-    - Maintainer perplexity improves slightly; custom 100-question benchmark is narrow and quant/hardware
-      differ.
+    - Maintainer perplexity improves slightly; custom 100-question benchmark is narrow and quant/hardware differ.
     caveats:
     - No universal residual accuracy conclusion.
     cluster_id: other28_scout-cuda-regression
@@ -6242,10 +6185,9 @@ records:
   model_version: 0.7.3
   harness: vLLM continuous batching
   effort: null
-  claim: Reporter shows 23% JSON failures with parallel requests versus 4% sequential on long prompts.
-    Microsoft suggests copying long_factor into short_factor; reporter confirms it works and closes the
-    discussion March 10. This is a config workaround, not evidence of updated weights or general release
-    recovery.
+  claim: Reporter shows 23% JSON failures with parallel requests versus 4% sequential on long prompts. Microsoft
+    suggests copying long_factor into short_factor; reporter confirms it works and closes the discussion March
+    10. This is a config workaround, not evidence of updated weights or general release recovery.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -6290,14 +6232,13 @@ records:
     - phi-4-mini-instruct
     kind: inference_defect
     title: Concurrent long prompts produce garbage; RoPE workaround confirmed
-    claim: Reporter shows 23% JSON failures with parallel requests versus 4% sequential on long prompts.
-      Microsoft suggests copying long_factor into short_factor; reporter confirms it works and closes
-      the discussion March 10. This is a config workaround, not evidence of updated weights or general
-      release recovery.
+    claim: Reporter shows 23% JSON failures with parallel requests versus 4% sequential on long prompts. Microsoft
+      suggests copying long_factor into short_factor; reporter confirms it works and closes the discussion
+      March 10. This is a config workaround, not evidence of updated weights or general release recovery.
     claim_status: supported
     confidence: high
-    confidence_scope: high_for_reported_workaround; Only the named checkpoint/route/configuration; no
-      deliberate nerf inference.
+    confidence_scope: high_for_reported_workaround; Only the named checkpoint/route/configuration; no deliberate
+      nerf inference.
     layer: deployment_or_harness_unless_explicitly_scoped
     scope:
       provider: null
@@ -6312,8 +6253,7 @@ records:
       hardware: A100 80GB
     observed_at: null
     reported_at: '2025-02-28'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: '2025-03-06'
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -6347,8 +6287,8 @@ records:
   harness: Transformers remote-code model test
   effort: null
   claim: 'Transformers 5.3.0.dev0 cannot load Phi-4 multimodal refs/pr/70 because CommonKwargs was removed.
-    Issue author moves fix to model hub and later closes as fixed by Transformers PR #45692. This is a
-    specified remote-code revision, not a demonstrated regression in all Phi-4 multimodal deployments.'
+    Issue author moves fix to model hub and later closes as fixed by Transformers PR #45692. This is a specified
+    remote-code revision, not a demonstrated regression in all Phi-4 multimodal deployments.'
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -6361,8 +6301,8 @@ records:
   - src-29885c43e537
   - src-fb948c6b1fdc
   contradictory_evidence_ids: []
-  official_acknowledgment: Transformers discussion directs repair to model-hub compatibility path; no
-    general Microsoft quality incident.
+  official_acknowledgment: Transformers discussion directs repair to model-hub compatibility path; no general
+    Microsoft quality incident.
   fix:
     published_at: null
     version: null
@@ -6391,8 +6331,8 @@ records:
     kind: deployment_compatibility
     title: Transformers update breaks remote-code model test
     claim: 'Transformers 5.3.0.dev0 cannot load Phi-4 multimodal refs/pr/70 because CommonKwargs was removed.
-      Issue author moves fix to model hub and later closes as fixed by Transformers PR #45692. This is
-      a specified remote-code revision, not a demonstrated regression in all Phi-4 multimodal deployments.'
+      Issue author moves fix to model hub and later closes as fixed by Transformers PR #45692. This is a specified
+      remote-code revision, not a demonstrated regression in all Phi-4 multimodal deployments.'
     claim_status: supported
     confidence: medium
     confidence_scope: medium; Only the named checkpoint/route/configuration; no deliberate nerf inference.
@@ -6410,15 +6350,14 @@ records:
       hardware: null
     observed_at: null
     reported_at: '2026-03-24'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
     incident_status: unknown
     status_detail: 'Author reports fixed via PR #45692; deployed recovery not independently measured'
-    official_acknowledgment: Transformers discussion directs repair to model-hub compatibility path; no
-      general Microsoft quality incident.
+    official_acknowledgment: Transformers discussion directs repair to model-hub compatibility path; no general
+      Microsoft quality incident.
     fix:
       stage: fix_reported_by_issue_author
       measured_recovery: null
@@ -6441,9 +6380,9 @@ records:
   model_version: logs 0.18.0; environment header differs; comment 0.18.1 vs 0.16.0
   harness: vLLM Transformers fallback / Microsoft plugin
   effort: null
-  claim: vLLM 0.18.0 startup fails after falling back to Transformers implementation. A commenter reports
-    the Microsoft Phi-4 RV plugin works on v0.16.0 but not v0.18.1 and still investigates missing reasoning
-    output. A native-support PR is proposed.
+  claim: vLLM 0.18.0 startup fails after falling back to Transformers implementation. A commenter reports the
+    Microsoft Phi-4 RV plugin works on v0.16.0 but not v0.18.1 and still investigates missing reasoning output.
+    A native-support PR is proposed.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -6507,8 +6446,7 @@ records:
       hardware: TP2; CUDA SM80 logs
     observed_at: '2026-03-23'
     reported_at: '2026-03-27'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -6538,9 +6476,9 @@ records:
   model_version: null
   harness: OpenCode 1.17.3 Windows 11
   effort: default/none/thinking toggle
-  claim: OpenCode 1.17.3 user reports M3 caching/quota behavior changes around a thinking-toggle update
-    on June 10. Same workflow through OpenRouter BYOK still appears to cache normally. The report does
-    not isolate billing, cache accounting or request-format cause.
+  claim: OpenCode 1.17.3 user reports M3 caching/quota behavior changes around a thinking-toggle update on
+    June 10. Same workflow through OpenRouter BYOK still appears to cache normally. The report does not isolate
+    billing, cache accounting or request-format cause.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -6583,13 +6521,12 @@ records:
     - minimax-m3
     kind: route_reliability
     title: Direct Token Plan route burns quota faster after harness update
-    claim: OpenCode 1.17.3 user reports M3 caching/quota behavior changes around a thinking-toggle update
-      on June 10. Same workflow through OpenRouter BYOK still appears to cache normally. The report does
-      not isolate billing, cache accounting or request-format cause.
+    claim: OpenCode 1.17.3 user reports M3 caching/quota behavior changes around a thinking-toggle update on
+      June 10. Same workflow through OpenRouter BYOK still appears to cache normally. The report does not isolate
+      billing, cache accounting or request-format cause.
     claim_status: unresolved
     confidence: low
-    confidence_scope: low_to_medium; Only the named checkpoint/route/configuration; no deliberate nerf
-      inference.
+    confidence_scope: low_to_medium; Only the named checkpoint/route/configuration; no deliberate nerf inference.
     layer: deployment_or_harness_unless_explicitly_scoped
     scope:
       provider: MiniMax direct API versus OpenRouter BYOK
@@ -6604,8 +6541,7 @@ records:
       hardware: null
     observed_at: 2026-06-10 around noon; timezone unspecified
     reported_at: '2026-06-10'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -6634,9 +6570,9 @@ records:
   model_version: 0.22.1 bad; 0.21.0 prior working
   harness: vLLM Mistral tokenizer/tool parser
   effort: null
-  claim: Devstral Small 2 fails during image-processor warmup because fetch_images is absent. Reporter
-    gives a previously working 0.21.0 route and failing 0.22.1 setup. Follow-up fixes are linked, but
-    related Mistral models continue to show different processor failures in 0.23.0.
+  claim: Devstral Small 2 fails during image-processor warmup because fetch_images is absent. Reporter gives
+    a previously working 0.21.0 route and failing 0.22.1 setup. Follow-up fixes are linked, but related Mistral
+    models continue to show different processor failures in 0.23.0.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -6680,13 +6616,13 @@ records:
     - devstral-small-2
     kind: inference_defect
     title: vLLM 0.22.1 startup regression versus 0.21.0
-    claim: Devstral Small 2 fails during image-processor warmup because fetch_images is absent. Reporter
-      gives a previously working 0.21.0 route and failing 0.22.1 setup. Follow-up fixes are linked, but
-      related Mistral models continue to show different processor failures in 0.23.0.
+    claim: Devstral Small 2 fails during image-processor warmup because fetch_images is absent. Reporter gives
+      a previously working 0.21.0 route and failing 0.22.1 setup. Follow-up fixes are linked, but related Mistral
+      models continue to show different processor failures in 0.23.0.
     claim_status: supported
     confidence: high
-    confidence_scope: high_for_reported_regression; Only the named checkpoint/route/configuration; no
-      deliberate nerf inference.
+    confidence_scope: high_for_reported_regression; Only the named checkpoint/route/configuration; no deliberate
+      nerf inference.
     layer: deployment_or_harness_unless_explicitly_scoped
     scope:
       provider: null
@@ -6701,8 +6637,7 @@ records:
       hardware: 2×RTX PRO6000 Blackwell; TP2
     observed_at: '2026-06-08'
     reported_at: '2026-06-08'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -6733,8 +6668,8 @@ records:
   harness: LM Studio internal chat + generic stdio MCP
   effort: null
   claim: An Aug 1 commenter reproduces an HTTP 500 chat-template error with exact Ministral-3-8B-Instruct-2512
-    after a successful first MCP call and mixed explanatory text/additional calls. Original issue title
-    concerns 3B; the 8B applicability comes specifically from this firsthand comment.
+    after a successful first MCP call and mixed explanatory text/additional calls. Original issue title concerns
+    3B; the 8B applicability comes specifically from this firsthand comment.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -6778,8 +6713,8 @@ records:
     kind: harness_interop
     title: LM Studio MCP tool history violates chat-template role order
     claim: An Aug 1 commenter reproduces an HTTP 500 chat-template error with exact Ministral-3-8B-Instruct-2512
-      after a successful first MCP call and mixed explanatory text/additional calls. Original issue title
-      concerns 3B; the 8B applicability comes specifically from this firsthand comment.
+      after a successful first MCP call and mixed explanatory text/additional calls. Original issue title concerns
+      3B; the 8B applicability comes specifically from this firsthand comment.
     claim_status: supported
     confidence: medium
     confidence_scope: medium; Only the named checkpoint/route/configuration; no deliberate nerf inference.
@@ -6797,8 +6732,7 @@ records:
       hardware: macOS; hardware unspecified
     observed_at: '2026-08-01'
     reported_at: '2026-08-01'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -6828,9 +6762,9 @@ records:
   model_version: 0.23.0
   harness: vLLM Mistral format / Pixtral vision
   effort: null
-  claim: A follow-up to Devstral’s processor issue reports Large 3 NVFP4 fails dummy vision warmup with
-    return_tensors=None in vLLM 0.23.0, despite an earlier fetch_images fix. Disabling image inputs permits
-    text serving. Reporter explicitly allows that this is a separate regression.
+  claim: A follow-up to Devstral’s processor issue reports Large 3 NVFP4 fails dummy vision warmup with return_tensors=None
+    in vLLM 0.23.0, despite an earlier fetch_images fix. Disabling image inputs permits text serving. Reporter
+    explicitly allows that this is a separate regression.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -6873,9 +6807,9 @@ records:
     - mistral-large-3
     kind: inference_defect
     title: 0.23.0 vision warmup still fails; text-only route works
-    claim: A follow-up to Devstral’s processor issue reports Large 3 NVFP4 fails dummy vision warmup with
-      return_tensors=None in vLLM 0.23.0, despite an earlier fetch_images fix. Disabling image inputs
-      permits text serving. Reporter explicitly allows that this is a separate regression.
+    claim: A follow-up to Devstral’s processor issue reports Large 3 NVFP4 fails dummy vision warmup with return_tensors=None
+      in vLLM 0.23.0, despite an earlier fetch_images fix. Disabling image inputs permits text serving. Reporter
+      explicitly allows that this is a separate regression.
     claim_status: supported
     confidence: medium
     confidence_scope: medium; Only the named checkpoint/route/configuration; no deliberate nerf inference.
@@ -6893,8 +6827,7 @@ records:
       hardware: 4×H200 NVL; TP4
     observed_at: null
     reported_at: null
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -6923,9 +6856,9 @@ records:
   model_version: null
   harness: vLLM recipe
   effort: null
-  claim: vLLM recipe warns of NVFP4 quality loss beyond 64k context and minor vision degradation from
-    predominantly text calibration. FP8 is recommended for longer context; Blackwell NVFP4 speed gains
-    do not transfer to older GPUs using Marlin fallback.
+  claim: vLLM recipe warns of NVFP4 quality loss beyond 64k context and minor vision degradation from predominantly
+    text calibration. FP8 is recommended for longer context; Blackwell NVFP4 speed gains do not transfer to
+    older GPUs using Marlin fallback.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -6969,9 +6902,9 @@ records:
     - mistral-large-3
     kind: documented_deployment_caveat
     title: Official serving recipe limits NVFP4 long-context/vision quality
-    claim: vLLM recipe warns of NVFP4 quality loss beyond 64k context and minor vision degradation from
-      predominantly text calibration. FP8 is recommended for longer context; Blackwell NVFP4 speed gains
-      do not transfer to older GPUs using Marlin fallback.
+    claim: vLLM recipe warns of NVFP4 quality loss beyond 64k context and minor vision degradation from predominantly
+      text calibration. FP8 is recommended for longer context; Blackwell NVFP4 speed gains do not transfer
+      to older GPUs using Marlin fallback.
     claim_status: supported
     confidence: high
     confidence_scope: high_documented_limitation; Only the named checkpoint/route/configuration; no deliberate
@@ -6990,8 +6923,7 @@ records:
       hardware: B200 speed claim; A100/H100 fallback
     observed_at: null
     reported_at: null
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -7006,8 +6938,7 @@ records:
     counterevidence:
     - FP8 recommended for longer-context accuracy.
     caveats:
-    - No date proving change after initial launch; treat as deployment caveat rather than longitudinal
-      regression.
+    - No date proving change after initial launch; treat as deployment caveat rather than longitudinal regression.
     cluster_id: other28_mlarge-nvfp4-boundary
     research_source_ids:
     - other28_mlarge_recipe_verified
@@ -7023,8 +6954,8 @@ records:
   harness: Transformers and derived GGUF / quant / fine-tune paths
   effort: null
   claim: Mistral acknowledges incorrect Transformers configuration degrading medium/long-context behavior,
-    propagated to GGUFs, quantizations and fine-tunes made from the old config. May 1 config commit and
-    updated Unsloth GGUFs address it; Mistral states its recommended vLLM format was unaffected.
+    propagated to GGUFs, quantizations and fine-tunes made from the old config. May 1 config commit and updated
+    Unsloth GGUFs address it; Mistral states its recommended vLLM format was unaffected.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -7069,8 +7000,8 @@ records:
     kind: inference_defect
     title: Official May 1 RoPE/YaRN config fix repairs affected exports
     claim: Mistral acknowledges incorrect Transformers configuration degrading medium/long-context behavior,
-      propagated to GGUFs, quantizations and fine-tunes made from the old config. May 1 config commit
-      and updated Unsloth GGUFs address it; Mistral states its recommended vLLM format was unaffected.
+      propagated to GGUFs, quantizations and fine-tunes made from the old config. May 1 config commit and updated
+      Unsloth GGUFs address it; Mistral states its recommended vLLM format was unaffected.
     claim_status: supported
     confidence: high
     confidence_scope: high; Only the named checkpoint/route/configuration; no deliberate nerf inference.
@@ -7088,8 +7019,7 @@ records:
       hardware: null
     observed_at: null
     reported_at: '2026-05-02'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: '2026-05-01'
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: fix_published
@@ -7120,9 +7050,9 @@ records:
   model_version: 0.4.20+1; llama.cpp backend2.28.2, fe2adf0
   harness: LM Studio managed runtime vs direct bundled llama-server
   effort: null
-  claim: One reproducible structured request leaves LM Studio generating tokens but returning no text;
-    later trivial prompts also fail until reload. Exact same Q4_K_M works via bundled llama-server launched
-    directly, including similar runtime flags, at reported 74–76 tokens/s.
+  claim: One reproducible structured request leaves LM Studio generating tokens but returning no text; later
+    trivial prompts also fail until reload. Exact same Q4_K_M works via bundled llama-server launched directly,
+    including similar runtime flags, at reported 74–76 tokens/s.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -7166,9 +7096,9 @@ records:
     - mistral-small-4
     kind: inference_defect
     title: LM Studio managed instance enters persistent empty-output state
-    claim: One reproducible structured request leaves LM Studio generating tokens but returning no text;
-      later trivial prompts also fail until reload. Exact same Q4_K_M works via bundled llama-server launched
-      directly, including similar runtime flags, at reported 74–76 tokens/s.
+    claim: One reproducible structured request leaves LM Studio generating tokens but returning no text; later
+      trivial prompts also fail until reload. Exact same Q4_K_M works via bundled llama-server launched directly,
+      including similar runtime flags, at reported 74–76 tokens/s.
     claim_status: supported
     confidence: medium
     confidence_scope: medium; Only the named checkpoint/route/configuration; no deliberate nerf inference.
@@ -7186,8 +7116,7 @@ records:
       hardware: Apple Silicon Mac Studio 256GB
     observed_at: null
     reported_at: '2026-08-16'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -7216,9 +7145,9 @@ records:
   model_version: null
   harness: Node 18 minimal script; no dependencies
   effort: null
-  claim: Direct Kimi API user reproduces tokenization HTTP 400 on the documented web-search echo flow
-    in ~8 attempts/3 queries. Byte-identical K2.6 comparison succeeds. Rewriting builtin_function as function
-    returns 200 but loses injected results, so that is not a functional fix.
+  claim: Direct Kimi API user reproduces tokenization HTTP 400 on the documented web-search echo flow in ~8
+    attempts/3 queries. Byte-identical K2.6 comparison succeeds. Rewriting builtin_function as function returns
+    200 but loses injected results, so that is not a functional fix.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -7247,8 +7176,8 @@ records:
   - 'context_tokens: round 2 reference ~8700; max output 8192'
   notes:
   - No later direct API retest; tier/region unspecified.
-  - First search turn succeeds; K2.6 control succeeds; error is request-tokenization path, not generic
-    reasoning quality.
+  - First search turn succeeds; K2.6 control succeeds; error is request-tokenization path, not generic reasoning
+    quality.
   - 'Claim adjudication: supported'
   - 'Layer: deployment_or_harness_unless_explicitly_scoped'
   - 'Weights change established: False'
@@ -7262,9 +7191,9 @@ records:
     - kimi-k3
     kind: harness_interop
     title: Builtin web-search second turn rejects tool-result echo
-    claim: Direct Kimi API user reproduces tokenization HTTP 400 on the documented web-search echo flow
-      in ~8 attempts/3 queries. Byte-identical K2.6 comparison succeeds. Rewriting builtin_function as
-      function returns 200 but loses injected results, so that is not a functional fix.
+    claim: Direct Kimi API user reproduces tokenization HTTP 400 on the documented web-search echo flow in
+      ~8 attempts/3 queries. Byte-identical K2.6 comparison succeeds. Rewriting builtin_function as function
+      returns 200 but loses injected results, so that is not a functional fix.
     claim_status: supported
     confidence: medium
     confidence_scope: medium; Only the named checkpoint/route/configuration; no deliberate nerf inference.
@@ -7282,8 +7211,7 @@ records:
       hardware: null
     observed_at: '2026-07-23'
     reported_at: '2026-07-23'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -7295,8 +7223,8 @@ records:
       measured_recovery: null
       independent_reproduction_by_this_research: false
     counterevidence:
-    - First search turn succeeds; K2.6 control succeeds; error is request-tokenization path, not generic
-      reasoning quality.
+    - First search turn succeeds; K2.6 control succeeds; error is request-tokenization path, not generic reasoning
+      quality.
     caveats:
     - No later direct API retest; tier/region unspecified.
     cluster_id: other28_kimi-websearch
@@ -7314,8 +7242,8 @@ records:
   harness: unspecified
   effort: null
   claim: TokenReply user posts coherent text turning into mixed-language token soup and says similar behavior
-    occurs at other unnamed providers. A second user reports persistent formatting after 10–20 turns on
-    OpenRouter free, explicitly distinguishing it from token corruption.
+    occurs at other unnamed providers. A second user reports persistent formatting after 10–20 turns on OpenRouter
+    free, explicitly distinguishing it from token corruption.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -7343,8 +7271,7 @@ records:
   - 'harness: unspecified'
   - 'tier: secondary different-symptom report is OpenRouter free'
   notes:
-  - No pinned weights/quantization/context/version or matched control; not proof of universal base-model
-    degradation.
+  - No pinned weights/quantization/context/version or matched control; not proof of universal base-model degradation.
   - Second report is not independent reproduction of the same corruption mechanism.
   - 'Claim adjudication: unresolved'
   - 'Layer: deployment_or_harness_unless_explicitly_scoped'
@@ -7359,13 +7286,12 @@ records:
     - nemotron-3-ultra
     kind: inference_defect
     title: Late-September third-party route output corruption reports
-    claim: TokenReply user posts coherent text turning into mixed-language token soup and says similar
-      behavior occurs at other unnamed providers. A second user reports persistent formatting after 10–20
-      turns on OpenRouter free, explicitly distinguishing it from token corruption.
+    claim: TokenReply user posts coherent text turning into mixed-language token soup and says similar behavior
+      occurs at other unnamed providers. A second user reports persistent formatting after 10–20 turns on OpenRouter
+      free, explicitly distinguishing it from token corruption.
     claim_status: unresolved
     confidence: low
-    confidence_scope: low_to_medium; Only the named checkpoint/route/configuration; no deliberate nerf
-      inference.
+    confidence_scope: low_to_medium; Only the named checkpoint/route/configuration; no deliberate nerf inference.
     layer: deployment_or_harness_unless_explicitly_scoped
     scope:
       provider: TokenReply; other unnamed providers
@@ -7380,8 +7306,7 @@ records:
       hardware: null
     observed_at: '2026-09-27'
     reported_at: '2026-09-27'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -7407,13 +7332,14 @@ records:
   model_ids:
   - xai-grok-4-7
   provider_id: null
-  product: null
+  product: Cursor IDE
   model_version: null
-  harness: Cursor IDE subagent handoff
+  harness: Cursor IDE local coordinator/developer subagent handoff
   effort: Grok 4.7 Extra High label
-  claim: Cursor staff confirms first subagent could run Auto even when labeled Grok 4.7 Extra High, then
-    nested agents inherit Auto. Oct 1 staff says server-side routing fixed and reporter confirms recovery
-    that afternoon.
+  claim: Cursor staff confirmed that local subagents launched from a Grok 4.7 Extra High chat actually used
+    Auto, including a first subagent mislabeled as Grok 4.7. Staff announced a server-side correction on October
+    1, and the original reporter later confirmed correct routing. This verifies reported routing recovery,
+    not measured coding-quality recovery.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -7423,26 +7349,30 @@ records:
   fact_status: acknowledged
   confidence: high
   supporting_evidence_ids:
-  - src-2b950d5a745e
-  - src-39b901174b54
   - src-4583eb1b0101
+  - src-8d4d12e3718b
   contradictory_evidence_ids: []
-  official_acknowledgment: Cursor staff Kevin Neilson acknowledges; Colin announces server fix. This is
-    Cursor routing, not xAI weight modification.
+  official_acknowledgment: Kevin Neilson diagnosed actual Auto routing on September 29; Colin announced a server-side
+    fix on October 1. This concerns Cursor local model selection, not a demonstrated change to xAI model weights.
   fix:
-    published_at: null
+    published_at: '2026-10-01'
     version: null
-    summary: deployed_reporter_recovery
+    summary: Server-side local subagent routing correction; original reporter confirmed routing on October
+      1, without a quantified task-quality retest.
     evidence_ids:
-    - src-2b950d5a745e
-    - src-39b901174b54
     - src-4583eb1b0101
+    - src-8d4d12e3718b
     measured_improvement: null
   conditions:
   - 'provider: Cursor'
   - 'route: main Grok4.7 → first/nested subagents Auto before fix'
   - 'harness: Cursor IDE subagent handoff'
   - 'effort: Grok 4.7 Extra High label'
+  - 'Reporter runtime: Cursor IDE 3.22.12 on Windows_NT x64 10.0.26200; client build date 2026-09-26.'
+  - Built-in Explore Subagent Model differs from coordinator/developer agents, which inherit the main-chat
+    model; the latter handoff was affected.
+  - Corroborating September 28 thread reports local Task/frontmatter routing on Cursor 3.20.21, macOS Darwin
+    arm64 25.6.0; staff distinguished unaffected Cloud Agent subagents.
   notes:
   - No large post-fix evaluation or proof all quality complaints share cause.
   - Mislabeling makes some earlier impressions unfit to attribute to Grok 4.7 itself.
@@ -7451,6 +7381,8 @@ records:
   - 'Weights change established: False'
   - 'Source event observed_at: None'
   - Repository first observation is 2026-10-07; no retrospective availability inferred.
+  - October 8 reinspection separates a server fix announcement from qualitative reporter confirmation; measured_improvement
+    remains null.
   research_details:
     id: other28_grok-cursor-routing
     catalog_model_ids:
@@ -7459,18 +7391,20 @@ records:
     - xai-grok-4-7
     kind: harness_routing
     title: Cursor subagents silently fall back to Auto; server fix verified by user
-    claim: Cursor staff confirms first subagent could run Auto even when labeled Grok 4.7 Extra High,
-      then nested agents inherit Auto. Oct 1 staff says server-side routing fixed and reporter confirms
-      recovery that afternoon.
+    claim: Cursor staff confirmed that local subagents launched from a Grok 4.7 Extra High chat actually used
+      Auto, including a first subagent mislabeled as Grok 4.7. Staff announced a server-side correction on
+      October 1, and the original reporter later confirmed correct routing. This verifies reported routing
+      recovery, not measured coding-quality recovery.
     claim_status: supported
     confidence: high
-    confidence_scope: high; Only the named checkpoint/route/configuration; no deliberate nerf inference.
+    confidence_scope: High confidence that Cursor staff acknowledged this routing defect and the original reporter
+      reported recovery; not confidence in universal model quality or measured recovery.
     layer: deployment_or_harness_unless_explicitly_scoped
     scope:
       provider: Cursor
       route: main Grok4.7 → first/nested subagents Auto before fix
-      harness: Cursor IDE subagent handoff
-      version: null
+      harness: Cursor IDE local coordinator/developer subagent handoff
+      version: Cursor IDE 3.22.12 in the original report; not an xAI checkpoint identifier.
       effort: Grok 4.7 Extra High label
       quantization: null
       context_tokens: null
@@ -7479,25 +7413,30 @@ records:
       hardware: null
     observed_at: null
     reported_at: '2026-09-29'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: '2026-10-01'
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: resolved_reported
     incident_status: resolved
-    status_detail: Staff-confirmed deployed fix plus reporter-confirmed recovery
-    official_acknowledgment: Cursor staff Kevin Neilson acknowledges; Colin announces server fix. This
-      is Cursor routing, not xAI weight modification.
+    status_detail: Staff-announced routing fix and original reporter-confirmed routing; no numerical quality
+      recovery established.
+    official_acknowledgment: Kevin Neilson diagnosed actual Auto routing on September 29; Colin announced a
+      server-side fix on October 1. This concerns Cursor local model selection, not a demonstrated change to
+      xAI model weights.
     fix:
       stage: deployed_reporter_recovery
       measured_recovery:
         date: '2026-10-01'
-        result: Original reporter confirms looks good.
+        result: Original reporter qualitatively confirmed correct subagent routing on October 1; no measured
+          task-success recovery.
       independent_reproduction_by_this_research: false
     counterevidence:
     - Mislabeling makes some earlier impressions unfit to attribute to Grok 4.7 itself.
     caveats:
     - No large post-fix evaluation or proof all quality complaints share cause.
+    - Corroborating same-incident thread is not an independent model-quality evaluation.
+    - Colin posted the server fix October 1 at 00:04 and Rodolfo confirmed at 17:07, as displayed by the forum;
+      display timezone is not declared.
     cluster_id: other28_grok-cursor-routing
     research_source_ids:
     - other28_grok_cursor_fix
@@ -7509,38 +7448,49 @@ records:
   model_ids:
   - xai-grok-4-7
   provider_id: null
-  product: null
+  product: Cursor IDE and reported headless workflows
   model_version: null
   harness: IDE and headless workflows
   effort: some reports extra-high; others unspecified
-  claim: Cursor users report thinking loops, weaker analysis and shallow repairs; another describes improved
-    adherence to prior decisions across structured agent workflows without changing prompts. These are
-    conflicting firsthand impressions, not matched longitudinal evidence of a universal regression.
-  change_type: harness_change
+  claim: Named Cursor users report Grok 4.7 thinking loops, incomplete analysis and missed follow-up work,
+    while other users report better adherence and communication. October 7 adds a reduced-autonomy complaint;
+    October 8 adds a positive reliability report. These conflicting, unmatched workflow impressions do not
+    establish a universal regression or its cause.
+  change_type: unresolved
   metrics: []
   observed_at: '2026-10-07'
   reported_at: '2026-09-28'
   effective_from: null
   status: unknown
-  fact_status: acknowledged
+  fact_status: reported
   confidence: low
   supporting_evidence_ids:
-  - src-2b950d5a745e
   - src-571097b630c2
-  contradictory_evidence_ids: []
-  official_acknowledgment: No model-provider acknowledgment found in inspected sources.
+  - src-65a4b6c722b2
+  contradictory_evidence_ids:
+  - src-571097b630c2
+  - src-65a4b6c722b2
+  official_acknowledgment: No exact-model quality-regression acknowledgment or general quality fix was located
+    in the inspected release material and discussions; separate Cursor routing incidents have staff acknowledgments.
   fix:
     published_at: null
     version: null
-    summary: none_verified
+    summary: No general quality fix established. Some Reddit participants report a low/medium-effort workaround;
+      it is not a controlled recovery test.
     evidence_ids:
-    - src-2b950d5a745e
     - src-571097b630c2
+    - src-65a4b6c722b2
     measured_improvement: null
   conditions:
   - 'provider: Cursor'
   - 'harness: IDE and headless workflows'
   - 'effort: some reports extra-high; others unspecified'
+  - Rodolfo’s positive report specifies xHigh with a 500k setting and unchanged conversational, repository-structured
+    and external orchestration workflows.
+  - Daniel Rizberg’s October 7 report names Grok 4.6 and 4.7 in Cursor IDE 3.18.9 on Windows, explicitly excluding
+    the forum Grok Bot.
+  - Other reports vary by high/xhigh/unspecified effort, context size and client build; no matched prompt suite,
+    run denominator or pinned backend checkpoint.
   notes:
   - No fixed tasks, raw traces, pinned build, matched effort or repeated scoring.
   - Positive Sept 28 report says instruction/decision adherence improved in both structured workflows.
@@ -7550,6 +7500,12 @@ records:
   - 'Weights change established: False'
   - 'Source event observed_at: None'
   - Repository first observation is 2026-10-07; no retrospective availability inferred.
+  - 'October 8: Branko Radovanović reports better reliability and communication than 4.6 but slow operation;
+    October 3: DjWarmonger reports stalled plan execution at high effort and explicitly leaves harness causation
+    unresolved.'
+  - Reddit reports include a medium-effort workaround and counterclaims of faster xHigh/256k behavior; no quantified
+    before/after recovery.
+  - Generic Grok/Auto comments are not independently attributed to exact Grok 4.7.
   research_details:
     id: other28_grok-quality-mixed
     catalog_model_ids:
@@ -7558,9 +7514,10 @@ records:
     - xai-grok-4-7
     kind: practitioner_quality_report
     title: Practitioners disagree on 4.7 versus 4.6 quality
-    claim: Cursor users report thinking loops, weaker analysis and shallow repairs; another describes
-      improved adherence to prior decisions across structured agent workflows without changing prompts.
-      These are conflicting firsthand impressions, not matched longitudinal evidence of a universal regression.
+    claim: Named Cursor users report Grok 4.7 thinking loops, incomplete analysis and missed follow-up work,
+      while other users report better adherence and communication. October 7 adds a reduced-autonomy complaint;
+      October 8 adds a positive reliability report. These conflicting, unmatched workflow impressions do not
+      establish a universal regression or its cause.
     claim_status: unresolved
     confidence: low
     confidence_scope: low; Only the named checkpoint/route/configuration; no deliberate nerf inference.
@@ -7577,24 +7534,32 @@ records:
       region: null
       hardware: null
     observed_at: null
-    reported_at: 2026-09-28/2026-10-04
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    reported_at: 2026-09-28/2026-10-08
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
     incident_status: unknown
-    status_detail: Mixed recent reports; no universal quality conclusion
-    official_acknowledgment: No model-provider acknowledgment found in inspected sources.
+    status_detail: Conflicting recent workflow reports; universal regression, current rate and causal layer
+      remain unknown.
+    official_acknowledgment: No exact-model quality-regression acknowledgment or general quality fix was located
+      in the inspected release material and discussions; separate Cursor routing incidents have staff acknowledgments.
     fix:
-      stage: none_verified
+      stage: no_general_fix_verified; anecdotal_effort_workaround
       measured_recovery: null
       independent_reproduction_by_this_research: false
     counterevidence:
     - Positive Sept 28 report says instruction/decision adherence improved in both structured workflows.
     - Cursor routing defect is a potential confound, not established explanation of each complaint.
+    - October 8 Branko reports better reliability and communication than 4.6; source has no controlled task
+      denominator.
+    - In a separate Reddit thread, u/r8e8tion reports faster xHigh/256k performance with similar token usage
+      but less proactive debugging; setup differs from other complaints.
     caveats:
     - No fixed tasks, raw traces, pinned build, matched effort or repeated scoring.
+    - Some negative reports postdate the October 1 routing fix; no evidence connects every report to that incident.
+    - Reddit absolute post dates are undisclosed in the inspected body; they are not back-calculated from relative
+      labels.
     cluster_id: other28_grok-quality-mixed
     research_source_ids:
     - other28_grok_quality
@@ -7609,9 +7574,9 @@ records:
   model_version: first bad ce2e343be; bad40824284b; prior44fe2a392
   harness: vLLM lm_eval GSM8K 5-shot full 1319
   effort: null
-  claim: Bisected ROCm change inadvertently routes GLM-5.3 through MRV1, dropping full GSM8K flexible
-    accuracy from 91.58% to 14.86% on AMD’s Quark MXFP4/AttnFP8 export. Same build with MRV2 restores
-    91.58%. A contributor tests official FP8 weights and does not reproduce collapse.
+  claim: Bisected ROCm change inadvertently routes GLM-5.3 through MRV1, dropping full GSM8K flexible accuracy
+    from 91.58% to 14.86% on AMD’s Quark MXFP4/AttnFP8 export. Same build with MRV2 restores 91.58%. A contributor
+    tests official FP8 weights and does not reproduce collapse.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -7624,8 +7589,8 @@ records:
   - src-4424584ee706
   - src-8114065536fd
   contradictory_evidence_ids: []
-  official_acknowledgment: 'Runtime contributors investigate; latest inspected comment points to pending
-    PR #51915 and AITER bump. No Z.ai model-wide acknowledgment.'
+  official_acknowledgment: 'Runtime contributors investigate; latest inspected comment points to pending PR
+    #51915 and AITER bump. No Z.ai model-wide acknowledgment.'
   fix:
     published_at: null
     version: null
@@ -7656,9 +7621,9 @@ records:
     - glm-5-3
     kind: inference_defect
     title: Quark MXFP4 runner regression; matched MRV2 override recovers
-    claim: Bisected ROCm change inadvertently routes GLM-5.3 through MRV1, dropping full GSM8K flexible
-      accuracy from 91.58% to 14.86% on AMD’s Quark MXFP4/AttnFP8 export. Same build with MRV2 restores
-      91.58%. A contributor tests official FP8 weights and does not reproduce collapse.
+    claim: Bisected ROCm change inadvertently routes GLM-5.3 through MRV1, dropping full GSM8K flexible accuracy
+      from 91.58% to 14.86% on AMD’s Quark MXFP4/AttnFP8 export. Same build with MRV2 restores 91.58%. A contributor
+      tests official FP8 weights and does not reproduce collapse.
     claim_status: supported
     confidence: high
     confidence_scope: high_for_scoped_comparison; Only the named checkpoint/route/configuration; no deliberate
@@ -7677,8 +7642,7 @@ records:
       hardware: MI350/MI355 gfx950; TP4
     observed_at: null
     reported_at: '2026-09-02'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -7712,10 +7676,9 @@ records:
   model_version: 0.1.dev20051+g487ecf187 vs0.28.1rc1.dev580+g385dce36b; FlashInfer0.6.17→0.6.18; Transformers5.15.1→5.16.1
   harness: vLLM; ClaudeCode/OpenCode-style long agent sessions
   effort: null
-  claim: Same configuration is clean on Aug 26 vLLM g487ecf187 and degenerates on Sep 8 g385dce36b, with
-    FlashInfer and Transformers also changed. About 30 short/synthetic probes pass on the bad build, including
-    34k context. Disabling MTP does not fix the original report; parser and long-decode defects remain
-    distinct.
+  claim: Same configuration is clean on Aug 26 vLLM g487ecf187 and degenerates on Sep 8 g385dce36b, with FlashInfer
+    and Transformers also changed. About 30 short/synthetic probes pass on the bad build, including 34k context.
+    Disabling MTP does not fix the original report; parser and long-decode defects remain distinct.
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -7760,10 +7723,9 @@ records:
     - glm-5-3-flash
     kind: inference_defect
     title: Long agent sessions degrade after stack update; short probes pass
-    claim: Same configuration is clean on Aug 26 vLLM g487ecf187 and degenerates on Sep 8 g385dce36b,
-      with FlashInfer and Transformers also changed. About 30 short/synthetic probes pass on the bad build,
-      including 34k context. Disabling MTP does not fix the original report; parser and long-decode defects
-      remain distinct.
+    claim: Same configuration is clean on Aug 26 vLLM g487ecf187 and degenerates on Sep 8 g385dce36b, with
+      FlashInfer and Transformers also changed. About 30 short/synthetic probes pass on the bad build, including
+      34k context. Disabling MTP does not fix the original report; parser and long-decode defects remain distinct.
     claim_status: supported
     confidence: medium
     confidence_scope: medium; Only the named checkpoint/route/configuration; no deliberate nerf inference.
@@ -7781,8 +7743,7 @@ records:
       hardware: 8×H200; TP8
     observed_at: 2026-08-26 good /2026-09-08 bad
     reported_at: '2026-09-12'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: null
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: unknown
@@ -7794,8 +7755,8 @@ records:
       measured_recovery: null
       independent_reproduction_by_this_research: false
     counterevidence:
-    - Short/synthetic tests coherent; contributor cannot reproduce original garbage and says proposed
-      parser fix is separate.
+    - Short/synthetic tests coherent; contributor cannot reproduce original garbage and says proposed parser
+      fix is separate.
     caveats:
     - No standalone minimal reproducer; multiple dependencies changed; do not attribute solely to weights.
     cluster_id: other28_glmflash-longdecode-regression
@@ -7813,10 +7774,9 @@ records:
   model_version: null
   harness: vLLM pooled sparse indexer with speculative decoding
   effort: null
-  claim: 'vLLM PR #58454 identifies rejected speculative draft rows overwriting committed pooled keys,
-    includes an isolated reproduction, and merges Sep 25. It is explicitly a surgical fix for one defect.
-    Related long-context reports and runtime variants prevent treating this merge as model-wide measured
-    recovery.'
+  claim: 'vLLM PR #58454 identifies rejected speculative draft rows overwriting committed pooled keys, includes
+    an isolated reproduction, and merges Sep 25. It is explicitly a surgical fix for one defect. Related long-context
+    reports and runtime variants prevent treating this merge as model-wide measured recovery.'
   change_type: harness_change
   metrics: []
   observed_at: '2026-10-07'
@@ -7861,14 +7821,13 @@ records:
     - glm-5-3-flash
     kind: inference_defect
     title: Speculative-decoding kpool corruption patch merged
-    claim: 'vLLM PR #58454 identifies rejected speculative draft rows overwriting committed pooled keys,
-      includes an isolated reproduction, and merges Sep 25. It is explicitly a surgical fix for one defect.
-      Related long-context reports and runtime variants prevent treating this merge as model-wide measured
-      recovery.'
+    claim: 'vLLM PR #58454 identifies rejected speculative draft rows overwriting committed pooled keys, includes
+      an isolated reproduction, and merges Sep 25. It is explicitly a surgical fix for one defect. Related
+      long-context reports and runtime variants prevent treating this merge as model-wide measured recovery.'
     claim_status: supported
     confidence: high
-    confidence_scope: high_for_code_fix; Only the named checkpoint/route/configuration; no deliberate
-      nerf inference.
+    confidence_scope: high_for_code_fix; Only the named checkpoint/route/configuration; no deliberate nerf
+      inference.
     layer: deployment_or_harness_unless_explicitly_scoped
     scope:
       provider: null
@@ -7883,15 +7842,14 @@ records:
       hardware: multiple; related 8×B200
     observed_at: null
     reported_at: '2026-09-23'
-    date_caveat: Null means not established; issue creation is a report date, not automatically defect
-      onset.
+    date_caveat: Null means not established; issue creation is a report date, not automatically defect onset.
     fix_date: '2026-09-25'
     assessed_at: '2026-10-07T10:43:58.237008+00:00'
     state: fix_published
     incident_status: unknown
     status_detail: Merged; full affected deployment recovery not verified
-    official_acknowledgment: vLLM maintainers review and merge; HF thread also distinguishes outdated
-      Docker images from source fixes.
+    official_acknowledgment: vLLM maintainers review and merge; HF thread also distinguishes outdated Docker
+      images from source fixes.
     fix:
       stage: merged_not_release_or_measured_recovery
       measured_recovery: null
@@ -7938,8 +7896,11 @@ records:
     measured_improvement: null
   conditions:
   - One public synthetic reproduction; no local execution.
+  - Published reproduction sets max_turns=5 and max_tokens=2048; sampling parameters and thinking are not specified.
   notes:
   - Closed not planned is not proof of recovery or a model fix.
+  - Full issue comments record automatic inactivity closure on 2026-01-08 and lock on 2026-01-17; neither establishes
+    a fix.
   research_details:
     layer: model_or_harness_unresolved
     weights_change_established: false
@@ -7952,9 +7913,9 @@ records:
   model_version: veo-3-1-generate-preview
   harness: '@google/genai generateVideos; SDK version labeled latest but unpinned'
   effort: null
-  claim: A January 23, 2026 reporter describes intermittent audio-filter blocks for the exact Standard preview endpoint
-    with an input image, eight-second output and 9:16 aspect ratio. Repeated identical requests reportedly sometimes
-    succeed; this does not establish recovery or the responsible layer.
+  claim: A January 23, 2026 reporter describes intermittent audio-filter blocks for the exact Standard preview
+    endpoint with an input image, eight-second output and 9:16 aspect ratio. Repeated identical requests reportedly
+    sometimes succeed; this does not establish recovery or the responsible layer.
   change_type: unresolved
   metrics: []
   observed_at: '2026-10-07'
@@ -7977,7 +7938,8 @@ records:
   - Public exact-ID practitioner report only; no model calls or local reproduction.
   - Image input and short portrait output; do not transfer to Fast/Lite, Vertex or Flow.
   notes:
-  - Tracker closed not planned with stale/awaiting-response labels. Closure and retry successes do not prove a fix.
+  - Tracker closed not planned with stale/awaiting-response labels. Closure and retry successes do not prove
+    a fix.
   - October 7 is repository observation date; January 23 is report date, not established onset or recovery.
   research_details:
     layer: audio_filter_or_service_or_harness_unresolved
@@ -7991,10 +7953,13 @@ records:
   model_version: claude-haiku-5-5
   harness: null
   effort: low/medium
-  claim: Creator reports early stopping in long low-effort agent prompts and missing verification of code changes
-    at low/medium effort.
+  claim: Creator reports early stopping with long coding-agent system prompts at low effort and omitted verification
+    of code changes at low or medium effort.
   change_type: product_change
-  metrics: []
+  metrics:
+  - kind: quality
+    measurement: Anthropic reports that low-to-medium effort roughly halved early stopping while output tokens
+      per attempt more than doubled; absolute rates and sample counts are undisclosed.
   observed_at: '2026-10-07'
   reported_at: null
   effective_from: null
@@ -8013,9 +7978,14 @@ records:
     measured_improvement: null
   conditions:
   - Creator API scope; partner feature compatibility differs.
+  - Short system prompts rarely stopped early in the creator tests; the warning concerns long coding-agent
+    prompts.
+  - Prompting mitigations and higher effort were tested by the creator; exact prompts beyond suggested text,
+    evaluation set, run dates and absolute denominators are undisclosed.
   notes:
-  - Suggested mitigations are not independently measured recovery.
-  - No exact-model dated practitioner regression/fix reproduction located.
+  - Keep the historical observation date; official guidance was reinspected on 2026-10-08.
+  - Creator-reported relative mitigation is not a released software fix or independently replicated recovery.
+  - No task-complete rate or long-horizon aggregate suitability follows from this warning.
 - schema_version: '1.0'
   id: behavior-24c645e83fd64401
   model_ids:
@@ -8025,8 +7995,8 @@ records:
   model_version: claude-haiku-5-5
   harness: null
   effort: null
-  claim: Creator documents new thinking/tokenizer and toolset behavior; unadapted Haiku 4.5 request patterns
-    can return 400 errors.
+  claim: Creator documents changed thinking/tokenizer and toolset contracts; incompatible Haiku 4.5 request
+    patterns can return 400 errors on the Haiku 5.5 Claude API.
   change_type: product_change
   metrics: []
   observed_at: '2026-10-07'
@@ -8037,6 +8007,8 @@ records:
   confidence: low
   supporting_evidence_ids:
   - src-e471bc2bb72f
+  - src-fdd6f11500c5
+  - src-30dab146c692
   contradictory_evidence_ids: []
   official_acknowledgment: Creator guide documents behavior; exact original event date unspecified.
   fix:
@@ -8047,9 +8019,18 @@ records:
     measured_improvement: null
   conditions:
   - Creator API scope; partner feature compatibility differs.
+  - Manual budget_tokens, assistant prefill and obsolete computer tool declarations are incompatible. Sampling-parameter
+    exceptions are temperature=1 or top_p=0.99 individually; top_k and combining temperature with top_p are
+    rejected.
+  - Thinking replay binds to the producing or linked account and an unchanged earlier prefix. Prefix enforcement
+    differs for accounts created before 2026-08-31 00:00 UTC.
+  - Claude Managed Agents migration is separately documented as requiring only the model-name change; direct
+    Messages API migration requirements must not be generalized to every client.
   notes:
-  - Suggested mitigations are not independently measured recovery.
-  - No exact-model dated practitioner regression/fix reproduction located.
+  - Compatibility and request-shape changes, not evidence of a base-model quality regression.
+  - Original October 8 API reports corroborate subsets of request rejection and output-budget behavior; untested
+    provider/client paths remain unresolved.
+  - Suggested migrations are not an independent measured recovery of all affected workloads.
 - schema_version: '1.0'
   id: behavior-1cda4926622435ba
   model_ids:

@@ -114,8 +114,8 @@ records:
   - src-ea74e2fffbc5
   notes:
   - Included allowance and model-specific availability vary; not an unlimited API entitlement
-  - 'API price join removed: ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise
-    USD is separately documented with Codex no-cache-write and Astra no-long-context exceptions.'
+  - 'API price join removed: ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise USD
+    is separately documented with Codex no-cache-write and Astra no-long-context exceptions.'
   - 'Conditional authentication: Codex CLI/IDE authenticated using OpenAI API key and the exact model/service
     tier is selected. Batch tariff is not an interactive tariff.'
   client_id: null
@@ -147,8 +147,8 @@ records:
   - src-f2dca02215ef
   notes:
   - Shared plan usage; actual allowance/reset account-specific
-  - 'API price join removed: ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise
-    USD is separately documented with Codex no-cache-write and Astra no-long-context exceptions.'
+  - 'API price join removed: ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise USD
+    is separately documented with Codex no-cache-write and Astra no-long-context exceptions.'
   - 'Conditional authentication: Codex CLI/IDE authenticated using OpenAI API key and the exact model/service
     tier is selected. Batch tariff is not an interactive tariff.'
   client_id: null
@@ -180,8 +180,8 @@ records:
   - src-f2dca02215ef
   notes:
   - Shared plan usage; actual allowance/reset account-specific
-  - 'API price join removed: ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise
-    USD is separately documented with Codex no-cache-write and Astra no-long-context exceptions.'
+  - 'API price join removed: ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise USD
+    is separately documented with Codex no-cache-write and Astra no-long-context exceptions.'
   - 'Conditional authentication: Codex CLI/IDE authenticated using OpenAI API key and the exact model/service
     tier is selected. Batch tariff is not an interactive tariff.'
   client_id: null
@@ -213,8 +213,8 @@ records:
   - src-f2dca02215ef
   notes:
   - Shared plan usage; actual allowance/reset account-specific
-  - 'API price join removed: ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise
-    USD is separately documented with Codex no-cache-write and Astra no-long-context exceptions.'
+  - 'API price join removed: ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise USD
+    is separately documented with Codex no-cache-write and Astra no-long-context exceptions.'
   - 'Conditional authentication: Codex CLI/IDE authenticated using OpenAI API key and the exact model/service
     tier is selected. Batch tariff is not an interactive tariff.'
   client_id: null
@@ -246,8 +246,8 @@ records:
   - src-f2dca02215ef
   notes:
   - Plan allowances are not model/API token limits
-  - 'API price join removed: ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise
-    USD is separately documented with Codex no-cache-write and Astra no-long-context exceptions.'
+  - 'API price join removed: ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise USD
+    is separately documented with Codex no-cache-write and Astra no-long-context exceptions.'
   - 'Conditional authentication: Codex CLI/IDE authenticated using OpenAI API key and the exact model/service
     tier is selected. Batch tariff is not an interactive tariff.'
   client_id: null
@@ -279,8 +279,8 @@ records:
   - src-f2dca02215ef
   notes:
   - Plan allowances are not model/API token limits
-  - 'API price join removed: ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise
-    USD is separately documented with Codex no-cache-write and Astra no-long-context exceptions.'
+  - 'API price join removed: ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise USD
+    is separately documented with Codex no-cache-write and Astra no-long-context exceptions.'
   - 'Conditional authentication: Codex CLI/IDE authenticated using OpenAI API key and the exact model/service
     tier is selected. Batch tariff is not an interactive tariff.'
   client_id: null
@@ -312,8 +312,8 @@ records:
   - src-f2dca02215ef
   notes:
   - Plan allowances are not model/API token limits
-  - 'API price join removed: ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise
-    USD is separately documented with Codex no-cache-write and Astra no-long-context exceptions.'
+  - 'API price join removed: ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise USD
+    is separately documented with Codex no-cache-write and Astra no-long-context exceptions.'
   - 'Conditional authentication: Codex CLI/IDE authenticated using OpenAI API key and the exact model/service
     tier is selected. Batch tariff is not an interactive tariff.'
   client_id: null
@@ -345,8 +345,8 @@ records:
   - src-f2dca02215ef
   notes:
   - Plan allowances are not model/API token limits
-  - 'API price join removed: ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise
-    USD is separately documented with Codex no-cache-write and Astra no-long-context exceptions.'
+  - 'API price join removed: ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise USD
+    is separately documented with Codex no-cache-write and Astra no-long-context exceptions.'
   - 'Conditional authentication: Codex CLI/IDE authenticated using OpenAI API key and the exact model/service
     tier is selected. Batch tariff is not an interactive tariff.'
   client_id: null
@@ -378,8 +378,8 @@ records:
   - src-f2dca02215ef
   notes:
   - Plan allowances are not model/API token limits
-  - 'API price join removed: ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise
-    USD is separately documented with Codex no-cache-write and Astra no-long-context exceptions.'
+  - 'API price join removed: ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise USD
+    is separately documented with Codex no-cache-write and Astra no-long-context exceptions.'
   - 'Conditional authentication: Codex CLI/IDE authenticated using OpenAI API key and the exact model/service
     tier is selected. Batch tariff is not an interactive tariff.'
   client_id: null
@@ -411,8 +411,8 @@ records:
   - src-f2dca02215ef
   notes:
   - Plan allowances are not model/API token limits
-  - 'API price join removed: ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise
-    USD is separately documented with Codex no-cache-write and Astra no-long-context exceptions.'
+  - 'API price join removed: ChatGPT sign-in draws included/credit usage; BYOK uses API rates. Enterprise USD
+    is separately documented with Codex no-cache-write and Astra no-long-context exceptions.'
   - 'Conditional authentication: Codex CLI/IDE authenticated using OpenAI API key and the exact model/service
     tier is selected. Batch tariff is not an interactive tariff.'
   client_id: null
@@ -556,8 +556,8 @@ records:
   - src-b62a5d4c8c44
   - src-df583c7c7998
   notes:
-  - 'API price join removed: Images 2.5 product access does not identify Flare versus Sunburst; API token
-    pricing is not subscription fee. Enterprise rate card names 2.0, not 2.5.'
+  - 'API price join removed: Images 2.5 product access does not identify Flare versus Sunburst; API token pricing
+    is not subscription fee. Enterprise rate card names 2.0, not 2.5.'
   - 'Conditional authentication: No verified exact API-key variant in this record.'
   client_id: null
   requires_account: null
@@ -609,8 +609,8 @@ records:
   - src-cee7a5257e77
   - src-df583c7c7998
   notes:
-  - 'API price join removed: Images 2.5 product access does not identify Flare versus Sunburst; API token
-    pricing is not subscription fee. Enterprise rate card names 2.0, not 2.5.'
+  - 'API price join removed: Images 2.5 product access does not identify Flare versus Sunburst; API token pricing
+    is not subscription fee. Enterprise rate card names 2.0, not 2.5.'
   - 'Conditional authentication: No verified exact API-key variant in this record.'
   client_id: null
   requires_account: null
@@ -657,8 +657,8 @@ records:
   - src-b62a5d4c8c44
   - src-c84f0489248c
   notes:
-  - 'API price join removed: Chat Voice has rolling 24h allowances and plan-specific credits. Enterprise
-    USD has separately documented $0.05/min, but API and client rate records need different evidence/context.'
+  - 'API price join removed: Chat Voice has rolling 24h allowances and plan-specific credits. Enterprise USD
+    has separately documented $0.05/min, but API and client rate records need different evidence/context.'
   - 'Conditional authentication: No verified exact API-key variant in this record.'
   client_id: null
   requires_account: null
@@ -681,8 +681,8 @@ records:
   - price-proprietary-gpt-realtime-2-1-openai-86fb999c9b89
   - price-proprietary-gpt-realtime-2-1-openai-b208bfb265cc
   restrictions:
-  - 'quota: {"actual_account_remaining": null, "free": "not supported", "tier1": {"RPD": 1000, "RPM":
-    200, "TPM": 40000}}'
+  - 'quota: {"actual_account_remaining": null, "free": "not supported", "tier1": {"RPD": 1000, "RPM": 200,
+    "TPM": 40000}}'
   evidence_ids:
   - src-49e8d0577a5e
   notes:
@@ -1057,8 +1057,8 @@ records:
   notes:
   - Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
   - 'API price join removed: Claude subscription sign-in, API-key billing, partner billing, included usage
-    and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage; batch
-    rows do not apply to interactive clients.'
+    and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage; batch rows
+    do not apply to interactive clients.'
   - 'Conditional authentication: Anthropic API-key authentication or explicitly documented API-rate Enterprise/usage-credit
     schedule; not the monthly subscription fee.'
   client_id: null
@@ -1080,25 +1080,44 @@ records:
   status: All paid Claude plans include Code; API-credit billing is a separate option
   price_ids: []
   restrictions:
-  - 'quota: Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified'
+  - Model selection remains subject to organization and plan controls. Supported IDEs include VS Code/Cursor
+    and JetBrains; plan-authenticated IDE and terminal activity share the plan pool.
+  - Interactive Claude Code cannot spend monthly subscriber API credits. Self-run API-key claude -p/Agent SDK
+    eligibility is a separate programmatic condition.
   evidence_ids:
   - src-50846cd1ff36
   - src-58333316475e
   - src-b2ab15dd01eb
   - src-f61234c4ee64
+  - src-4159ec1ffae5
+  - src-72eb512e62c1
+  - src-26606ff14841
   notes:
-  - Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
-  - 'API price join removed: Claude subscription sign-in, API-key billing, partner billing, included usage
-    and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage; batch
-    rows do not apply to interactive clients.'
-  - 'Conditional authentication: Anthropic API-key authentication or explicitly documented API-rate Enterprise/usage-credit
-    schedule; not the monthly subscription fee.'
+  - Supported IDE/terminal entitlement and shared pools are documented; individual account eligibility remains
+    untested.
+  - Subscription fees are not token tariffs. Paid API-key/partner schedules, usage credits and client-plan
+    pools remain separate; Batch discounts do not apply to interactive requests.
   client_id: null
-  requires_account: null
+  requires_account: true
   subscription_includes_api: null
-  reset_cadence: null
+  reset_cadence: Pro/Max plan sign-in shares five-hour and weekly pools across Claude and Code, including supported
+    IDEs. API-key and partner billing have separate limits.
   conditions:
-  - Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
+  - For Pro/Max subscription sign-in, supported IDEs including VS Code, Cursor, other VS Code forks and JetBrains
+    share the Claude/Claude Code plan limits across web, desktop, mobile and terminal. Individual account entitlement
+    remains untested.
+  - Eligible active Max 5x/20x subscribers can claim USD100/USD200 monthly first-party API credits; Team pools
+    USD20 per Standard seat and USD100 per Premium seat, capped at USD500. Seven-day eligibility, required
+    roles, one linked Console organization and rollout apply. Free, Pro and Enterprise are excluded.
+  - Subscriber API credits cover self-run claude -p and Agent SDK with an API key from the linked Console organization.
+    Plan-authenticated runs use plan limits; interactive Code and IDE/desktop/GitHub Action initiated runs
+    are excluded, even with -p. Partner platforms are excluded.
+  - Credits refresh by billing cycle (monthly on annual plans), expire without rollover, and are spent before
+    purchased credits; app/Code plan usage limits are separate.
+  - Use full claude-opus-5-5 to pin this release. The opus client alias resolves to Opus 5.5 on direct/AWS/Google
+    routes but Opus 4.6 on Foundry in current documentation; aliases/version history can change.
+  - An ANTHROPIC_API_KEY takes priority over subscription sign-in and bills that API account. Interactive API-key
+    Code requires purchased or invoiced API balance, not subscriber promotional credits.
   billing_class: unknown
 - schema_version: '1.0'
   id: access-proprietary-access-22-2
@@ -1118,20 +1137,32 @@ records:
   - src-58333316475e
   - src-b2ab15dd01eb
   - src-f61234c4ee64
+  - src-4159ec1ffae5
+  - src-72eb512e62c1
+  - src-26606ff14841
   notes:
   - Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
   - 'API price join removed: Claude subscription sign-in, API-key billing, partner billing, included usage
-    and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage; batch
-    rows do not apply to interactive clients.'
+    and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage; batch rows
+    do not apply to interactive clients.'
   - 'Conditional authentication: Anthropic API-key authentication or explicitly documented API-rate Enterprise/usage-credit
     schedule; not the monthly subscription fee.'
   client_id: null
-  requires_account: null
+  requires_account: true
   subscription_includes_api: null
-  reset_cadence: null
+  reset_cadence: Subscription-authenticated Pro and Max usage shares a rolling five-hour session window and
+    weekly limits across Claude apps, terminal and supported IDEs; Max also has a separate Fable weekly limit.
+    API-key-authenticated usage follows the API organization’s rate and spend policies instead. Other plan-specific
+    or negotiated restrictions can differ.
   conditions:
   - Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
+  - Included Max/Team API credits exclude interactive Claude Code, IDE, desktop and Code GitHub Action runs.
+    Self-run claude -p or Agent SDK calls qualify only with an API key from the linked Console organization;
+    plan-authenticated calls still use plan limits.
+  - Pro/Max subscriptions cover supported terminal and IDE usage with shared five-hour and weekly limits; exact
+    account/organization eligibility is untested.
   billing_class: unknown
+  availability: documented
 - schema_version: '1.0'
   id: access-proprietary-access-22-3
   verified_at: '2026-10-07'
@@ -1153,8 +1184,8 @@ records:
   notes:
   - Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
   - 'API price join removed: Claude subscription sign-in, API-key billing, partner billing, included usage
-    and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage; batch
-    rows do not apply to interactive clients.'
+    and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage; batch rows
+    do not apply to interactive clients.'
   - 'Conditional authentication: Anthropic API-key authentication or explicitly documented API-rate Enterprise/usage-credit
     schedule; not the monthly subscription fee.'
   client_id: null
@@ -1186,8 +1217,8 @@ records:
   - Exact IDE integration model entitlement not verified in this bounded pass
   - Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
   - 'API price join removed: Claude subscription sign-in, API-key billing, partner billing, included usage
-    and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage; batch
-    rows do not apply to interactive clients.'
+    and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage; batch rows
+    do not apply to interactive clients.'
   - 'Conditional authentication: Anthropic API-key authentication or explicitly documented API-rate Enterprise/usage-credit
     schedule; not the monthly subscription fee.'
   client_id: null
@@ -1207,25 +1238,42 @@ records:
   - IDE
   status: documented route; account eligibility unverified
   price_ids: []
-  restrictions: []
+  restrictions:
+  - Model selection remains subject to organization and plan controls. Supported IDEs include VS Code/Cursor
+    and JetBrains; plan-authenticated IDE and terminal activity share the plan pool.
+  - Interactive Claude Code cannot spend monthly subscriber API credits. Self-run API-key claude -p/Agent SDK
+    eligibility is a separate programmatic condition.
   evidence_ids:
   - src-50846cd1ff36
   - src-58333316475e
   - src-b2ab15dd01eb
   - src-f61234c4ee64
+  - src-4159ec1ffae5
+  - src-72eb512e62c1
+  - src-26606ff14841
   notes:
-  - Exact IDE integration model entitlement not verified in this bounded pass
-  - Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
-  - 'API price join removed: Claude subscription sign-in, API-key billing, partner billing, included usage
-    and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage; batch
-    rows do not apply to interactive clients.'
-  - 'Conditional authentication: Anthropic API-key authentication or explicitly documented API-rate Enterprise/usage-credit
-    schedule; not the monthly subscription fee.'
+  - Supported IDE/terminal entitlement and shared pools are documented; individual account eligibility remains
+    untested.
+  - Subscription fees are not token tariffs. Paid API-key/partner schedules, usage credits and client-plan
+    pools remain separate; Batch discounts do not apply to interactive requests.
   client_id: null
-  requires_account: null
+  requires_account: true
   subscription_includes_api: null
-  reset_cadence: null
-  conditions: []
+  reset_cadence: Pro/Max plan sign-in shares five-hour and weekly pools across Claude and Code, including supported
+    IDEs. API-key and partner billing have separate limits.
+  conditions:
+  - Eligible active Max 5x/20x subscribers can claim USD100/USD200 monthly first-party API credits; Team pools
+    USD20 per Standard seat and USD100 per Premium seat, capped at USD500. Seven-day eligibility, required
+    roles, one linked Console organization and rollout apply. Free, Pro and Enterprise are excluded.
+  - Subscriber API credits cover self-run claude -p and Agent SDK with an API key from the linked Console organization.
+    Plan-authenticated runs use plan limits; interactive Code and IDE/desktop/GitHub Action initiated runs
+    are excluded, even with -p. Partner platforms are excluded.
+  - Credits refresh by billing cycle (monthly on annual plans), expire without rollover, and are spent before
+    purchased credits; app/Code plan usage limits are separate.
+  - Use full claude-opus-5-5 to pin this release. The opus client alias resolves to Opus 5.5 on direct/AWS/Google
+    routes but Opus 4.6 on Foundry in current documentation; aliases/version history can change.
+  - An ANTHROPIC_API_KEY takes priority over subscription sign-in and bills that API account. Interactive API-key
+    Code requires purchased or invoiced API balance, not subscriber promotional credits.
   billing_class: unknown
 - schema_version: '1.0'
   id: access-proprietary-access-22-ide-2
@@ -1244,20 +1292,34 @@ records:
   - src-58333316475e
   - src-b2ab15dd01eb
   - src-f61234c4ee64
+  - src-4159ec1ffae5
+  - src-72eb512e62c1
+  - src-26606ff14841
   notes:
   - Exact IDE integration model entitlement not verified in this bounded pass
   - Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
   - 'API price join removed: Claude subscription sign-in, API-key billing, partner billing, included usage
-    and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage; batch
-    rows do not apply to interactive clients.'
+    and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage; batch rows
+    do not apply to interactive clients.'
   - 'Conditional authentication: Anthropic API-key authentication or explicitly documented API-rate Enterprise/usage-credit
     schedule; not the monthly subscription fee.'
+  - 'October 8 clarification: current Pro/Max help explicitly covers supported IDEs and the shared usage pool;
+    prior unverified notes above are historical, not an assertion that the IDE route is absent.'
   client_id: null
-  requires_account: null
+  requires_account: true
   subscription_includes_api: null
-  reset_cadence: null
-  conditions: []
+  reset_cadence: Subscription-authenticated Pro and Max usage shares a rolling five-hour session window and
+    weekly limits across Claude apps, terminal and supported IDEs; Max also has a separate Fable weekly limit.
+    API-key-authenticated usage follows the API organization’s rate and spend policies instead. Other plan-specific
+    or negotiated restrictions can differ.
+  conditions:
+  - Included Max/Team API credits exclude interactive Claude Code, IDE, desktop and Code GitHub Action runs.
+    Self-run claude -p or Agent SDK calls qualify only with an API key from the linked Console organization;
+    plan-authenticated calls still use plan limits.
+  - Pro/Max subscriptions cover supported terminal and IDE usage with shared five-hour and weekly limits; exact
+    account/organization eligibility is untested.
   billing_class: unknown
+  availability: documented
 - schema_version: '1.0'
   id: access-proprietary-access-22-ide-3
   verified_at: '2026-10-07'
@@ -1279,8 +1341,8 @@ records:
   - Exact IDE integration model entitlement not verified in this bounded pass
   - Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
   - 'API price join removed: Claude subscription sign-in, API-key billing, partner billing, included usage
-    and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage; batch
-    rows do not apply to interactive clients.'
+    and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage; batch rows
+    do not apply to interactive clients.'
   - 'Conditional authentication: Anthropic API-key authentication or explicitly documented API-rate Enterprise/usage-credit
     schedule; not the monthly subscription fee.'
   client_id: null
@@ -1310,8 +1372,8 @@ records:
   notes:
   - Rolling5h window; paid plans additionally weekly caps; no fixed message count
   - 'API price join removed: Claude subscription sign-in, API-key billing, partner billing, included usage
-    and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage; batch
-    rows do not apply to interactive clients.'
+    and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage; batch rows
+    do not apply to interactive clients.'
   - 'Conditional authentication: Anthropic API-key authentication or explicitly documented API-rate Enterprise/usage-credit
     schedule; not the monthly subscription fee.'
   client_id: null
@@ -1342,8 +1404,8 @@ records:
   notes:
   - Rolling5h window; paid plans additionally weekly caps; no fixed message count
   - 'API price join removed: Claude subscription sign-in, API-key billing, partner billing, included usage
-    and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage; batch
-    rows do not apply to interactive clients.'
+    and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage; batch rows
+    do not apply to interactive clients.'
   - 'Conditional authentication: Anthropic API-key authentication or explicitly documented API-rate Enterprise/usage-credit
     schedule; not the monthly subscription fee.'
   client_id: null
@@ -1374,8 +1436,8 @@ records:
   notes:
   - Same shared usage pool; model weighting/actual remainder account-specific
   - 'API price join removed: Claude subscription sign-in, API-key billing, partner billing, included usage
-    and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage; batch
-    rows do not apply to interactive clients.'
+    and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage; batch rows
+    do not apply to interactive clients.'
   - 'Conditional authentication: Anthropic API-key authentication or explicitly documented API-rate Enterprise/usage-credit
     schedule; not the monthly subscription fee.'
   client_id: null
@@ -1407,8 +1469,8 @@ records:
   notes:
   - Not equivalent to unlimited subscription access
   - 'API price join removed: Claude subscription sign-in, API-key billing, partner billing, included usage
-    and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage; batch
-    rows do not apply to interactive clients.'
+    and usage credits are distinct. Usage-based Enterprise separately documents API-rate usage; batch rows
+    do not apply to interactive clients.'
   - 'Conditional authentication: Anthropic API-key authentication or explicitly documented API-rate Enterprise/usage-credit
     schedule; not the monthly subscription fee.'
   client_id: null
@@ -1455,22 +1517,22 @@ records:
   status: Production model
   price_ids: []
   restrictions:
-  - 'quota: {"actual_account_remaining": null, "developer": {"RPM": 1000, "TPM": 250000}, "free": {"RPD":
-    1000, "RPM": 30, "TPD": 200000, "TPM": 8000}}'
+  - 'quota: {"actual_account_remaining": null, "developer": {"RPM": 1000, "TPM": 250000}, "free": {"RPD": 1000,
+    "RPM": 30, "TPD": 200000, "TPM": 8000}}'
   evidence_ids:
   - src-027b0340f566
   - src-c03a6de01b20
   notes:
-  - '{''free'': {''RPM'': 30, ''RPD'': 1000, ''TPM'': 8000, ''TPD'': 200000}, ''developer'': {''RPM'':
-    1000, ''TPM'': 250000}, ''actual_account_remaining'': None}'
+  - '{''free'': {''RPM'': 30, ''RPD'': 1000, ''TPM'': 8000, ''TPD'': 200000}, ''developer'': {''RPM'': 1000,
+    ''TPM'': 250000}, ''actual_account_remaining'': None}'
   - Use the 2026-10-07 qualified route for updated price observations.
   client_id: null
   requires_account: null
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - '{''free'': {''RPM'': 30, ''RPD'': 1000, ''TPM'': 8000, ''TPD'': 200000}, ''developer'': {''RPM'':
-    1000, ''TPM'': 250000}, ''actual_account_remaining'': None}'
+  - '{''free'': {''RPM'': 30, ''RPD'': 1000, ''TPM'': 8000, ''TPD'': 200000}, ''developer'': {''RPM'': 1000,
+    ''TPM'': 250000}, ''actual_account_remaining'': None}'
 - schema_version: '1.0'
   id: access-proprietary-access-28
   verified_at: '2026-10-06'
@@ -1529,22 +1591,22 @@ records:
   status: Production model
   price_ids: []
   restrictions:
-  - 'quota: {"actual_account_remaining": null, "developer": {"RPM": 1000, "TPM": 250000}, "free": {"RPD":
-    1000, "RPM": 30, "TPD": 200000, "TPM": 8000}}'
+  - 'quota: {"actual_account_remaining": null, "developer": {"RPM": 1000, "TPM": 250000}, "free": {"RPD": 1000,
+    "RPM": 30, "TPD": 200000, "TPM": 8000}}'
   evidence_ids:
   - src-027b0340f566
   - src-c03a6de01b20
   notes:
-  - '{''free'': {''RPM'': 30, ''RPD'': 1000, ''TPM'': 8000, ''TPD'': 200000}, ''developer'': {''RPM'':
-    1000, ''TPM'': 250000}, ''actual_account_remaining'': None}'
+  - '{''free'': {''RPM'': 30, ''RPD'': 1000, ''TPM'': 8000, ''TPD'': 200000}, ''developer'': {''RPM'': 1000,
+    ''TPM'': 250000}, ''actual_account_remaining'': None}'
   - Use the 2026-10-07 qualified route for updated price observations.
   client_id: null
   requires_account: null
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - '{''free'': {''RPM'': 30, ''RPD'': 1000, ''TPM'': 8000, ''TPD'': 200000}, ''developer'': {''RPM'':
-    1000, ''TPM'': 250000}, ''actual_account_remaining'': None}'
+  - '{''free'': {''RPM'': 30, ''RPD'': 1000, ''TPM'': 8000, ''TPD'': 200000}, ''developer'': {''RPM'': 1000,
+    ''TPM'': 250000}, ''actual_account_remaining'': None}'
 - schema_version: '1.0'
   id: access-proprietary-access-31
   verified_at: '2026-10-06'
@@ -1691,12 +1753,12 @@ records:
   evidence_ids:
   - src-521c059d5d6a
   notes:
-  - Current consumer product selector was not verified; do not equate historical Flow availability with
-    this precise endpoint.
+  - Current consumer product selector was not verified; do not equate historical Flow availability with this
+    precise endpoint.
   - 'API documented: true'
   - 'Developer web UI: {"available": true, "provider": "google_aistudio"}'
-  - Baseline joins three different endpoint tariffs to a single exact-model record. Keep Fast/Lite as
-    related variants, not standard preview prices. Add Oct 22 shutdown.
+  - Baseline joins three different endpoint tariffs to a single exact-model record. Keep Fast/Lite as related
+    variants, not standard preview prices. Add Oct 22 shutdown.
   client_id: null
   requires_account: null
   subscription_includes_api: null
@@ -1771,8 +1833,8 @@ records:
   - src-ded81031faae
   - src-2f3ae40d3bb7
   notes:
-  - 31B/26B hosted through Gemini API/AI Studio; downloaded weights permit separate local runtimes and
-    tuning. No consumer Gemini model-selector access established.
+  - 31B/26B hosted through Gemini API/AI Studio; downloaded weights permit separate local runtimes and tuning.
+    No consumer Gemini model-selector access established.
   - 'API documented: true'
   - 'Developer web UI: {"available": true, "provider": "google_aistudio"}'
   client_id: null
@@ -1800,8 +1862,8 @@ records:
   - Catalog placement under Preview conflicts with model page and dated GA notes; use exact stable endpoint.
   - 'API documented: true'
   - 'Developer web UI: {"available": true, "provider": "google_aistudio"}'
-  - 'Consumer distribution reference (not exact entitlement): ["Google Flow", "Gemini app video feature
-    (exact selector unknown)"]'
+  - 'Consumer distribution reference (not exact entitlement): ["Google Flow", "Gemini app video feature (exact
+    selector unknown)"]'
   client_id: null
   requires_account: null
   subscription_includes_api: null
@@ -1825,8 +1887,8 @@ records:
   - src-6381db252dee
   - src-919b66e84fc3
   notes:
-  - Official announcement restricts initial access to trusted Fairwind cyber defenders. Public catalog
-    updated Oct 1 still omits Argon. Do not infer access from Ultra subscription alone.
+  - Official announcement restricts initial access to trusted Fairwind cyber defenders. Public catalog updated
+    Oct 1 still omits Argon. Do not infer access from Ultra subscription alone.
   - 'API documented: null'
   - 'Developer web UI: {"available": null, "provider": "google_aistudio"}'
   - Broad API and Ultra access remains future in current announcement; no exact public endpoint verified.
@@ -2340,8 +2402,7 @@ records:
   evidence_ids:
   - src-e7129e9021b6
   notes:
-  - Official pricing page accessible, but monetary table did not extract; primary-verified price left
-    null.
+  - Official pricing page accessible, but monetary table did not extract; primary-verified price left null.
   client_id: null
   requires_account: null
   subscription_includes_api: null
@@ -3006,16 +3067,16 @@ records:
   evidence_ids:
   - src-35b3dc84644e
   notes:
-  - Typical coding-agent traffic and session identification required; only one subscriber per workspace.
-    Optional Zen-balance fallback can incur metered usage after limits.
+  - Typical coding-agent traffic and session identification required; only one subscriber per workspace. Optional
+    Zen-balance fallback can incur metered usage after limits.
   - 5-hour, weekly and monthly limits; consumption model varies; request tables are estimates
   client_id: null
   requires_account: true
   subscription_includes_api: null
   reset_cadence: 5-hour, weekly and monthly limits; consumption model varies; request tables are estimates
   conditions:
-  - Typical coding-agent traffic and session identification required; only one subscriber per workspace.
-    Optional Zen-balance fallback can incur metered usage after limits.
+  - Typical coding-agent traffic and session identification required; only one subscriber per workspace. Optional
+    Zen-balance fallback can incur metered usage after limits.
   - 5-hour, weekly and monthly limits; consumption model varies; request tables are estimates
 - schema_version: '1.0'
   id: access-proprietary-33-google-ai-studio
@@ -3026,8 +3087,8 @@ records:
   product: Google AI Studio
   methods:
   - developer-web-ui
-  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement
-    may vary.
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
   price_ids: []
   restrictions: []
   evidence_ids:
@@ -3051,8 +3112,8 @@ records:
   product: Gemini app / Google AI plans
   methods:
   - first-party-chat
-  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement
-    may vary.
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
   price_ids: []
   restrictions: []
   evidence_ids:
@@ -3076,8 +3137,8 @@ records:
   product: Google Antigravity
   methods:
   - ide
-  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement
-    may vary.
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
   price_ids: []
   restrictions: []
   evidence_ids:
@@ -3101,8 +3162,8 @@ records:
   product: Google AI Studio
   methods:
   - developer-web-ui
-  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement
-    may vary.
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
   price_ids: []
   restrictions: []
   evidence_ids:
@@ -3126,8 +3187,8 @@ records:
   product: Gemini app / Google AI plans
   methods:
   - first-party-chat
-  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement
-    may vary.
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
   price_ids: []
   restrictions: []
   evidence_ids:
@@ -3151,8 +3212,8 @@ records:
   product: Google Antigravity
   methods:
   - ide
-  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement
-    may vary.
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
   price_ids: []
   restrictions: []
   evidence_ids:
@@ -3176,8 +3237,8 @@ records:
   product: Gemini CLI
   methods:
   - cli
-  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement
-    may vary.
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
   price_ids: []
   restrictions: []
   evidence_ids:
@@ -3201,8 +3262,8 @@ records:
   product: Google AI Studio
   methods:
   - developer-web-ui
-  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement
-    may vary.
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
   price_ids: []
   restrictions: []
   evidence_ids:
@@ -3225,8 +3286,8 @@ records:
   product: Gemini app / Google AI plans
   methods:
   - first-party-chat
-  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement
-    may vary.
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
   price_ids: []
   restrictions: []
   evidence_ids:
@@ -3249,8 +3310,8 @@ records:
   product: Google AI Studio
   methods:
   - developer-web-ui
-  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement
-    may vary.
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
   price_ids: []
   restrictions: []
   evidence_ids:
@@ -3273,8 +3334,8 @@ records:
   product: Gemini app / Google AI plans
   methods:
   - first-party-chat
-  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement
-    may vary.
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
   price_ids: []
   restrictions: []
   evidence_ids:
@@ -3297,15 +3358,15 @@ records:
   product: Google AI Studio
   methods:
   - developer-web-ui
-  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement
-    may vary.
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
   price_ids: []
   restrictions: []
   evidence_ids:
   - src-521c059d5d6a
   notes:
-  - Current consumer product selector was not verified; do not equate historical Flow availability with
-    this precise endpoint.
+  - Current consumer product selector was not verified; do not equate historical Flow availability with this
+    precise endpoint.
   - Do not infer API entitlement from access in this product.
   client_id: null
   requires_account: null
@@ -3321,8 +3382,8 @@ records:
   product: Google AI Studio
   methods:
   - developer-web-ui
-  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement
-    may vary.
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
   price_ids: []
   restrictions: []
   evidence_ids:
@@ -3345,8 +3406,8 @@ records:
   product: Gemini app / Google AI plans
   methods:
   - first-party-chat
-  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement
-    may vary.
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
   price_ids: []
   restrictions: []
   evidence_ids:
@@ -3369,8 +3430,8 @@ records:
   product: Google AI Studio
   methods:
   - developer-web-ui
-  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement
-    may vary.
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
   price_ids: []
   restrictions: []
   evidence_ids:
@@ -3393,8 +3454,8 @@ records:
   product: Gemini app / Google AI plans
   methods:
   - first-party-chat
-  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement
-    may vary.
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
   price_ids: []
   restrictions: []
   evidence_ids:
@@ -3417,8 +3478,8 @@ records:
   product: Google AI Studio
   methods:
   - developer-web-ui
-  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement
-    may vary.
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
   price_ids: []
   restrictions: []
   evidence_ids:
@@ -3426,8 +3487,8 @@ records:
   - src-ded81031faae
   - src-2f3ae40d3bb7
   notes:
-  - 31B/26B hosted through Gemini API/AI Studio; downloaded weights permit separate local runtimes and
-    tuning. No consumer Gemini model-selector access established.
+  - 31B/26B hosted through Gemini API/AI Studio; downloaded weights permit separate local runtimes and tuning.
+    No consumer Gemini model-selector access established.
   - Do not infer API entitlement from access in this product.
   client_id: null
   requires_account: null
@@ -3443,8 +3504,8 @@ records:
   product: Google AI Studio
   methods:
   - developer-web-ui
-  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement
-    may vary.
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
   price_ids: []
   restrictions: []
   evidence_ids:
@@ -3467,8 +3528,8 @@ records:
   product: Gemini app / Google AI plans
   methods:
   - first-party-chat
-  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement
-    may vary.
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
   price_ids: []
   restrictions: []
   evidence_ids:
@@ -3491,16 +3552,16 @@ records:
   product: Google AI Studio
   methods:
   - developer-web-ui
-  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement
-    may vary.
+  status: Distribution documented; exact model selector, rollout, regional and subscription entitlement may
+    vary.
   price_ids: []
   restrictions: []
   evidence_ids:
   - src-6381db252dee
   - src-919b66e84fc3
   notes:
-  - Official announcement restricts initial access to trusted Fairwind cyber defenders. Public catalog
-    updated Oct 1 still omits Argon. Do not infer access from Ultra subscription alone.
+  - Official announcement restricts initial access to trusted Fairwind cyber defenders. Public catalog updated
+    Oct 1 still omits Argon. Do not infer access from Ultra subscription alone.
   - Do not infer API entitlement from access in this product.
   - Broad API and Ultra access remains future in current announcement; no exact public endpoint verified.
   client_id: null
@@ -3628,8 +3689,8 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Preview. Draft enhancement and video-edit tool are separate operations; compute cost not zero when
-    output weights unavailable.
+  - Preview. Draft enhancement and video-edit tool are separate operations; compute cost not zero when output
+    weights unavailable.
   research_details:
     research_provider_id: bfl
     model_alias: flux-3-video
@@ -3657,8 +3718,8 @@ records:
     limits:
       max_duration_seconds: 20
       fps: 24
-    conditions: Preview. Draft enhancement and video-edit tool are separate operations; compute cost not
-      zero when output weights unavailable.
+    conditions: Preview. Draft enhancement and video-edit tool are separate operations; compute cost not zero
+      when output weights unavailable.
 - schema_version: '1.0'
   id: access-d806a0c3a1f82a84
   verified_at: '2026-10-07'
@@ -3722,8 +3783,8 @@ records:
   notes:
   - 'Research route class: hosted_metered_api'
   - Source documented; inference execution and individual eligibility were not tested.
-  - Price verification dates remain attached to their original records; this route check does not refresh
-    old tariffs.
+  - Price verification dates remain attached to their original records; this route check does not refresh old
+    tariffs.
   client_id: null
   requires_account: null
   subscription_includes_api: null
@@ -3798,11 +3859,11 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Read exact AWS card/launch and pricing page; no numeric per-model Bedrock tariff retrieved. Do not
-    fill with direct API rates.
+  - Read exact AWS card/launch and pricing page; no numeric per-model Bedrock tariff retrieved. Do not fill
+    with direct API rates.
   - Regional/global profiles and service tiers are model-specific.
-  - AWS launch identifies Fable 5.1 as a Covered Model with additional data-retention, safety-review and
-    access policies; account-specific eligibility is not verified.
+  - AWS launch identifies Fable 5.1 as a Covered Model with additional data-retention, safety-review and access
+    policies; account-specific eligibility is not verified.
   research_details:
     research_provider_id: aws-bedrock
     product: Amazon Bedrock
@@ -3819,11 +3880,11 @@ records:
     account_entitlement_verified: false
     price_status: numeric_partner_tariff_not_retrieved
     conditions:
-    - Read exact AWS card/launch and pricing page; no numeric per-model Bedrock tariff retrieved. Do not
-      fill with direct API rates.
+    - Read exact AWS card/launch and pricing page; no numeric per-model Bedrock tariff retrieved. Do not fill
+      with direct API rates.
     - Regional/global profiles and service tiers are model-specific.
-    - AWS launch identifies Fable 5.1 as a Covered Model with additional data-retention, safety-review
-      and access policies; account-specific eligibility is not verified.
+    - AWS launch identifies Fable 5.1 as a Covered Model with additional data-retention, safety-review and
+      access policies; account-specific eligibility is not verified.
 - schema_version: '1.0'
   id: access-31784893c7841e82
   verified_at: '2026-10-07'
@@ -3891,8 +3952,8 @@ records:
         cache_write_1h: 22.0
       conditions:
       - 10% premium explicitly stated for Claude 4.5 and later; region support must be checked.
-      calculation: standard rate multiplied by explicitly documented 1.1; not independently quoted for
-        every region
+      calculation: standard rate multiplied by explicitly documented 1.1; not independently quoted for every
+        region
     account_entitlement_verified: false
     conditions:
     - Cloud project/model enablement and supported geography required.
@@ -3952,8 +4013,7 @@ records:
         cache_write_5m: 12.5
         cache_write_1h: 20
       conditions:
-      - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through
-        marketplace.
+      - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through marketplace.
     account_entitlement_verified: false
     invoice_unit:
       name: Claude Consumption Unit
@@ -4010,8 +4070,7 @@ records:
         cache_write_5m: 12.5
         cache_write_1h: 20
       conditions:
-      - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through
-        marketplace.
+      - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through marketplace.
     account_entitlement_verified: false
     invoice_unit:
       name: Claude Consumption Unit
@@ -4042,8 +4101,8 @@ records:
   billing_class: subscription
   price_ids: []
   restrictions:
-  - Full model IDs can be selected subject to plan and organization permissions. Separate subscription
-    sign-in from API-key/partner billing.
+  - Full model IDs can be selected subject to plan and organization permissions. Separate subscription sign-in
+    from API-key/partner billing.
   evidence_ids:
   - src-26606ff14841
   - src-ad9aa6f1b8ed
@@ -4066,8 +4125,8 @@ records:
     - a-byok
     - a-code-plan
     - a-claude-fable-5-1
-    entitlement: Full model IDs can be selected subject to plan and organization permissions. Separate
-      subscription sign-in from API-key/partner billing.
+    entitlement: Full model IDs can be selected subject to plan and organization permissions. Separate subscription
+      sign-in from API-key/partner billing.
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
     authentication_modes:
@@ -4097,8 +4156,8 @@ records:
   price_ids: []
   restrictions:
   - 'All paid plans can access, with materially different inclusion: Max and premium Team/legacy Enterprise
-    seats include up to 50% of shared weekly usage; Pro and standard Team/legacy Enterprise seats use
-    usage credits from first request.'
+    seats include up to 50% of shared weekly usage; Pro and standard Team/legacy Enterprise seats use usage
+    credits from first request.'
   evidence_ids:
   - src-9b374de3e978
   notes:
@@ -4117,8 +4176,8 @@ records:
     research_source_ids:
     - a-fable-plan
     entitlement: 'All paid plans can access, with materially different inclusion: Max and premium Team/legacy
-      Enterprise seats include up to 50% of shared weekly usage; Pro and standard Team/legacy Enterprise
-      seats use usage credits from first request.'
+      Enterprise seats include up to 50% of shared weekly usage; Pro and standard Team/legacy Enterprise seats
+      use usage credits from first request.'
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
     conditions:
@@ -4208,16 +4267,16 @@ records:
   notes:
   - 'Research route class: hosted_metered_api'
   - Source documented; inference execution and individual eligibility were not tested.
-  - Price verification dates remain attached to their original records; this route check does not refresh
-    old tariffs.
+  - Price verification dates remain attached to their original records; this route check does not refresh old
+    tariffs.
   client_id: null
   requires_account: true
   subscription_includes_api: false
   reset_cadence: Rate token buckets replenish continuously; spend cap resets monthly at 00:00 UTC.
   conditions:
   - API key and billing account required; public listing does not establish individual access.
-  - Haiku 4.5 does not support inference_geo; current 1.1x first-party US-only parameter pricing applies
-    to Claude 4.6 and later.
+  - Haiku 4.5 does not support inference_geo; current 1.1x first-party US-only parameter pricing applies to
+    Claude 4.6 and later.
   research_details:
     research_provider_id: anthropic
     product: Claude API
@@ -4302,8 +4361,8 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Read exact AWS card/launch and pricing page; no numeric per-model Bedrock tariff retrieved. Do not
-    fill with direct API rates.
+  - Read exact AWS card/launch and pricing page; no numeric per-model Bedrock tariff retrieved. Do not fill
+    with direct API rates.
   - Regional/global profiles and service tiers are model-specific.
   - Runtime requires geo/global profile (e.g. global.anthropic.claude-haiku-4-5-20251001-v1:0); bare alias
     only Mantle.
@@ -4323,11 +4382,11 @@ records:
     account_entitlement_verified: false
     price_status: numeric_partner_tariff_not_retrieved
     conditions:
-    - Read exact AWS card/launch and pricing page; no numeric per-model Bedrock tariff retrieved. Do not
-      fill with direct API rates.
+    - Read exact AWS card/launch and pricing page; no numeric per-model Bedrock tariff retrieved. Do not fill
+      with direct API rates.
     - Regional/global profiles and service tiers are model-specific.
-    - Runtime requires geo/global profile (e.g. global.anthropic.claude-haiku-4-5-20251001-v1:0); bare
-      alias only Mantle.
+    - Runtime requires geo/global profile (e.g. global.anthropic.claude-haiku-4-5-20251001-v1:0); bare alias
+      only Mantle.
 - schema_version: '1.0'
   id: access-24c6a305d07c8ce0
   verified_at: '2026-10-07'
@@ -4395,8 +4454,8 @@ records:
         cache_write_1h: 2.2
       conditions:
       - 10% premium explicitly stated for Claude 4.5 and later; region support must be checked.
-      calculation: standard rate multiplied by explicitly documented 1.1; not independently quoted for
-        every region
+      calculation: standard rate multiplied by explicitly documented 1.1; not independently quoted for every
+        region
     account_entitlement_verified: false
     conditions:
     - Cloud project/model enablement and supported geography required.
@@ -4435,11 +4494,10 @@ records:
   client_id: null
   requires_account: true
   subscription_includes_api: false
-  reset_cadence: Hourly marketplace metering, monthly postpaid invoice; monthly spend caps reset at 00:00
-    UTC on the first day.
+  reset_cadence: Hourly marketplace metering, monthly postpaid invoice; monthly spend caps reset at 00:00 UTC
+    on the first day.
   conditions:
-  - 'Anthropic-operated service billed through AWS Marketplace: hourly CCU metering and monthly postpaid
-    invoice.'
+  - 'Anthropic-operated service billed through AWS Marketplace: hourly CCU metering and monthly postpaid invoice.'
   - Partner-operated Bedrock is a separate route.
   - Negotiated discounts are separate; Haiku 4.5 does not support the newer inference_geo parameter.
   research_details:
@@ -4462,8 +4520,7 @@ records:
         cache_write_5m: 1.25
         cache_write_1h: 2
       conditions:
-      - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through
-        marketplace.
+      - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through marketplace.
     account_entitlement_verified: false
     invoice_unit:
       name: Claude Consumption Unit
@@ -4511,8 +4568,8 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - 'Anthropic-operated Claude service billed through Azure Marketplace: hourly CCU metering and monthly
-    postpaid invoice.'
+  - 'Anthropic-operated Claude service billed through Azure Marketplace: hourly CCU metering and monthly postpaid
+    invoice.'
   - Azure-hosted and Anthropic-hosted deployment versions have different geography and privacy conditions.
   - US Data Zone pricing is documented generally; exact Haiku deployment eligibility must be checked independently.
   research_details:
@@ -4546,8 +4603,7 @@ records:
     - 'Anthropic-operated Claude service billed through Azure Marketplace: hourly CCU metering and monthly
       postpaid invoice.'
     - Azure-hosted and Anthropic-hosted deployment versions have different geography and privacy conditions.
-    - US Data Zone pricing is documented generally; exact Haiku deployment eligibility must be checked
-      independently.
+    - US Data Zone pricing is documented generally; exact Haiku deployment eligibility must be checked independently.
 - schema_version: '1.0'
   id: access-fa30f26749bf50d7
   verified_at: '2026-10-07'
@@ -4563,8 +4619,8 @@ records:
   billing_class: subscription
   price_ids: []
   restrictions:
-  - Full model IDs can be selected subject to plan and organization permissions. Separate subscription
-    sign-in from API-key/partner billing.
+  - Full model IDs can be selected subject to plan and organization permissions. Separate subscription sign-in
+    from API-key/partner billing.
   evidence_ids:
   - src-26606ff14841
   - src-b2ab15dd01eb
@@ -4587,8 +4643,8 @@ records:
     - a-byok
     - a-code-plan
     - a-claude-haiku-4-5
-    entitlement: Full model IDs can be selected subject to plan and organization permissions. Separate
-      subscription sign-in from API-key/partner billing.
+    entitlement: Full model IDs can be selected subject to plan and organization permissions. Separate subscription
+      sign-in from API-key/partner billing.
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
     authentication_modes:
@@ -4617,8 +4673,8 @@ records:
   billing_class: subscription
   price_ids: []
   restrictions:
-  - Official model launch says all users; current plan table lists Haiku on Free and paid plans. Quotas
-    apply; no per-token consumer free tariff.
+  - Official model launch says all users; current plan table lists Haiku on Free and paid plans. Quotas apply;
+    no per-token consumer free tariff.
   evidence_ids:
   - src-58333316475e
   - src-e99bd76836c1
@@ -4635,8 +4691,8 @@ records:
     research_source_ids:
     - a-haiku-launch
     - a-plans
-    entitlement: Official model launch says all users; current plan table lists Haiku on Free and paid
-      plans. Quotas apply; no per-token consumer free tariff.
+    entitlement: Official model launch says all users; current plan table lists Haiku on Free and paid plans.
+      Quotas apply; no per-token consumer free tariff.
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
 - schema_version: '1.0'
@@ -4720,8 +4776,8 @@ records:
   notes:
   - 'Research route class: hosted_metered_api'
   - Source documented; inference execution and individual eligibility were not tested.
-  - Price verification dates remain attached to their original records; this route check does not refresh
-    old tariffs.
+  - Price verification dates remain attached to their original records; this route check does not refresh old
+    tariffs.
   client_id: null
   requires_account: null
   subscription_includes_api: null
@@ -4804,8 +4860,8 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Read exact AWS card/launch and pricing page; no numeric per-model Bedrock tariff retrieved. Do not
-    fill with direct API rates.
+  - Read exact AWS card/launch and pricing page; no numeric per-model Bedrock tariff retrieved. Do not fill
+    with direct API rates.
   - Regional/global profiles and service tiers are model-specific.
   research_details:
     research_provider_id: aws-bedrock
@@ -4823,8 +4879,8 @@ records:
     account_entitlement_verified: false
     price_status: numeric_partner_tariff_not_retrieved
     conditions:
-    - Read exact AWS card/launch and pricing page; no numeric per-model Bedrock tariff retrieved. Do not
-      fill with direct API rates.
+    - Read exact AWS card/launch and pricing page; no numeric per-model Bedrock tariff retrieved. Do not fill
+      with direct API rates.
     - Regional/global profiles and service tiers are model-specific.
 - schema_version: '1.0'
   id: access-51e50c52598dd165
@@ -4893,8 +4949,8 @@ records:
         cache_write_1h: 8.8
       conditions:
       - 10% premium explicitly stated for Claude 4.5 and later; region support must be checked.
-      calculation: standard rate multiplied by explicitly documented 1.1; not independently quoted for
-        every region
+      calculation: standard rate multiplied by explicitly documented 1.1; not independently quoted for every
+        region
     - tier: global_batch_as_printed
       currency: USD
       unit: per_1M_tokens
@@ -4902,8 +4958,8 @@ records:
         input: 2.5
         output: 12.5
       conditions:
-      - Google Cloud printed table differs from 50% of its $4/$20 standard row. Retain as conflicting
-        published quote; reconfirm before cost estimates.
+      - Google Cloud printed table differs from 50% of its $4/$20 standard row. Retain as conflicting published
+        quote; reconfirm before cost estimates.
       status: conflicting_source_value
     account_entitlement_verified: false
     conditions:
@@ -4964,8 +5020,7 @@ records:
         cache_write_5m: 5
         cache_write_1h: 8
       conditions:
-      - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through
-        marketplace.
+      - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through marketplace.
     account_entitlement_verified: false
     invoice_unit:
       name: Claude Consumption Unit
@@ -5025,8 +5080,7 @@ records:
         cache_write_5m: 5
         cache_write_1h: 8
       conditions:
-      - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through
-        marketplace.
+      - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through marketplace.
     account_entitlement_verified: false
     invoice_unit:
       name: Claude Consumption Unit
@@ -5043,8 +5097,8 @@ records:
     deployment_types:
     - Global Standard
     - US Data Zone Standard
-    data_processing: Prompts and completions remain on Azure; usage metadata and safety-flagged content
-      may egress to Anthropic.
+    data_processing: Prompts and completions remain on Azure; usage metadata and safety-flagged content may
+      egress to Anthropic.
 - schema_version: '1.0'
   id: access-e54a01965f6e1cf1
   verified_at: '2026-10-07'
@@ -5060,8 +5114,8 @@ records:
   billing_class: subscription
   price_ids: []
   restrictions:
-  - Full model IDs can be selected subject to plan and organization permissions. Separate subscription
-    sign-in from API-key/partner billing.
+  - Full model IDs can be selected subject to plan and organization permissions. Separate subscription sign-in
+    from API-key/partner billing.
   evidence_ids:
   - src-26606ff14841
   - src-4d070c5c8c67
@@ -5084,8 +5138,8 @@ records:
     - a-byok
     - a-code-plan
     - a-claude-opus-5-5
-    entitlement: Full model IDs can be selected subject to plan and organization permissions. Separate
-      subscription sign-in from API-key/partner billing.
+    entitlement: Full model IDs can be selected subject to plan and organization permissions. Separate subscription
+      sign-in from API-key/partner billing.
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
     authentication_modes:
@@ -5153,13 +5207,17 @@ records:
   evidence_ids:
   - src-50846cd1ff36
   - src-58333316475e
+  - src-4159ec1ffae5
+  - src-72eb512e62c1
   notes:
   - Authentication and billing modes are separate; no API price inherited.
   client_id: null
-  requires_account: null
+  requires_account: true
   subscription_includes_api: false
   reset_cadence: null
-  conditions: []
+  conditions:
+  - Usage-based Enterprise lists USD20 per seat/month billed annually plus model/task usage at API rates; this
+    is a client plan, not API entitlement. Enterprise is ineligible for monthly Max/Team subscriber API credits.
   research_details:
     product: Usage-based Claude Enterprise
     route_class: consumer_or_client
@@ -5217,8 +5275,8 @@ records:
   notes:
   - 'Research route class: hosted_metered_api'
   - Source documented; inference execution and individual eligibility were not tested.
-  - Price verification dates remain attached to their original records; this route check does not refresh
-    old tariffs.
+  - Price verification dates remain attached to their original records; this route check does not refresh old
+    tariffs.
   client_id: null
   requires_account: null
   subscription_includes_api: null
@@ -5297,8 +5355,8 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Read exact AWS card/launch and pricing page; no numeric per-model Bedrock tariff retrieved. Do not
-    fill with direct API rates.
+  - Read exact AWS card/launch and pricing page; no numeric per-model Bedrock tariff retrieved. Do not fill
+    with direct API rates.
   - Regional/global profiles and service tiers are model-specific.
   research_details:
     research_provider_id: aws-bedrock
@@ -5316,8 +5374,8 @@ records:
     account_entitlement_verified: false
     price_status: numeric_partner_tariff_not_retrieved
     conditions:
-    - Read exact AWS card/launch and pricing page; no numeric per-model Bedrock tariff retrieved. Do not
-      fill with direct API rates.
+    - Read exact AWS card/launch and pricing page; no numeric per-model Bedrock tariff retrieved. Do not fill
+      with direct API rates.
     - Regional/global profiles and service tiers are model-specific.
 - schema_version: '1.0'
   id: access-c32876dd4871b040
@@ -5388,8 +5446,8 @@ records:
         cache_write_1h: 4.4
       conditions:
       - 10% premium explicitly stated for Claude 4.5 and later; region support must be checked.
-      calculation: standard rate multiplied by explicitly documented 1.1; not independently quoted for
-        every region
+      calculation: standard rate multiplied by explicitly documented 1.1; not independently quoted for every
+        region
     account_entitlement_verified: false
     conditions:
     - Cloud project/model enablement and supported geography required.
@@ -5451,8 +5509,7 @@ records:
         cache_write_5m: 2.5
         cache_write_1h: 4
       conditions:
-      - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through
-        marketplace.
+      - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through marketplace.
       - 'Conflicting current documentation: Sonnet 5.5 overview and pricing table list USD 0.20 per million
         cache-read tokens; pricing-page multiplier section says USD 0.10. Actual billed rate unresolved.'
     account_entitlement_verified: false
@@ -5514,8 +5571,7 @@ records:
         cache_write_5m: 2.5
         cache_write_1h: 4
       conditions:
-      - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through
-        marketplace.
+      - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through marketplace.
       - 'Conflicting current documentation: Sonnet 5.5 overview and pricing table list USD 0.20 per million
         cache-read tokens; pricing-page multiplier section says USD 0.10. Actual billed rate unresolved.'
     account_entitlement_verified: false
@@ -5532,8 +5588,8 @@ records:
     hosting_option: Azure
     deployment_types:
     - Global Standard
-    data_processing: Prompts and completions remain on Azure; usage metadata and safety-flagged content
-      may egress to Anthropic.
+    data_processing: Prompts and completions remain on Azure; usage metadata and safety-flagged content may
+      egress to Anthropic.
 - schema_version: '1.0'
   id: access-f8b1175b0cecaf06
   verified_at: '2026-10-07'
@@ -5549,8 +5605,8 @@ records:
   billing_class: subscription
   price_ids: []
   restrictions:
-  - Full model IDs can be selected subject to plan and organization permissions. Separate subscription
-    sign-in from API-key/partner billing.
+  - Full model IDs can be selected subject to plan and organization permissions. Separate subscription sign-in
+    from API-key/partner billing.
   evidence_ids:
   - src-26606ff14841
   - src-752375ff0c97
@@ -5573,8 +5629,8 @@ records:
     - a-byok
     - a-code-plan
     - a-claude-sonnet-5-5
-    entitlement: Full model IDs can be selected subject to plan and organization permissions. Separate
-      subscription sign-in from API-key/partner billing.
+    entitlement: Full model IDs can be selected subject to plan and organization permissions. Separate subscription
+      sign-in from API-key/partner billing.
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
     authentication_modes:
@@ -5625,8 +5681,8 @@ records:
     - a-release
     - a-search
     - a-plans
-    entitlement: 5.5 app model is documented; current plan table lists Sonnet for Free and paid plans.
-      Exact Free picker routing/remaining allowance not verified.
+    entitlement: 5.5 app model is documented; current plan table lists Sonnet for Free and paid plans. Exact
+      Free picker routing/remaining allowance not verified.
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
     exact_free_alias_status: family_entitlement_plus_exact_model_release_not_account_tested
@@ -5835,8 +5891,8 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Hosted SaaS training and retention controls differ from private/partner deployments; training can
-    be opted out, not universally disabled.
+  - Hosted SaaS training and retention controls differ from private/partner deployments; training can be opted
+    out, not universally disabled.
   research_details:
     research_provider_id: cohere
     model_alias: embed-v5.0-fast
@@ -5894,8 +5950,8 @@ records:
   reset_cadence: null
   conditions:
   - Hourly and committed monthly options, not per-token rates.
-  - 'Standard Vault: Fixed capacity or Flex baseline with additional instance-hour autoscaling; regional
-    GPU availability requires confirmation.'
+  - 'Standard Vault: Fixed capacity or Flex baseline with additional instance-hour autoscaling; regional GPU
+    availability requires confirmation.'
   research_details:
     research_provider_id: cohere
     model_alias: embed-v5.0-fast
@@ -5944,10 +6000,10 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Creator Azure guide explicitly lists Embed v5 Fast under pay-as-you-go token billing. This scoped PAYG route
-    does not establish an exact numeric regional tariff or Fast-specific PTU offer.
-  - Catalog quick facts conflict with the vector-only model description; Preview label is route-specific and not
-    proof of creator-wide lifecycle.
+  - Creator Azure guide explicitly lists Embed v5 Fast under pay-as-you-go token billing. This scoped PAYG
+    route does not establish an exact numeric regional tariff or Fast-specific PTU offer.
+  - Catalog quick facts conflict with the vector-only model description; Preview label is route-specific and
+    not proof of creator-wide lifecycle.
   research_details:
     research_provider_id: azure-foundry
     model_alias: Cohere-Embed-V5-Fast
@@ -5988,11 +6044,9 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Marketplace subscription and SageMaker IAM/deployment required; caller uses its deployment endpoint
-    name.
+  - Marketplace subscription and SageMaker IAM/deployment required; caller uses its deployment endpoint name.
   - Published software fee varies by instance; AWS infrastructure is additional.
-  - Model-specific usage explicitly excludes batch transform despite generic Marketplace batch delivery
-    copy.
+  - Model-specific usage explicitly excludes batch transform despite generic Marketplace batch delivery copy.
   research_details:
     research_provider_id: aws-sagemaker
     model_alias: null
@@ -6007,11 +6061,9 @@ records:
       - Additional AWS infrastructure charges; examples, not a complete instance table.
     verified_at: '2026-10-07'
     conditions:
-    - Marketplace subscription and SageMaker IAM/deployment required; caller uses its deployment endpoint
-      name.
+    - Marketplace subscription and SageMaker IAM/deployment required; caller uses its deployment endpoint name.
     - Published software fee varies by instance; AWS infrastructure is additional.
-    - Model-specific usage explicitly excludes batch transform despite generic Marketplace batch delivery
-      copy.
+    - Model-specific usage explicitly excludes batch transform despite generic Marketplace batch delivery copy.
     marketplace_product_id: prodview-qffayhd7sgkja
     software_version: '1.0'
     canonical_software_price_ids:
@@ -6560,8 +6612,7 @@ records:
     inputs:
     - text
     - image
-    conditions: Dedicated GPU deployment supported; serverless unsupported. GPU count and total price
-      unverified.
+    conditions: Dedicated GPU deployment supported; serverless unsupported. GPU count and total price unverified.
 - schema_version: '1.0'
   id: access-a0b4c7d41e9fe052
   verified_at: '2026-10-07'
@@ -6635,8 +6686,8 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Displayed included-character estimate depends on temporary v4 rate; do not preserve this allowance
-    after promo without rechecking.
+  - Displayed included-character estimate depends on temporary v4 rate; do not preserve this allowance after
+    promo without rechecking.
   research_details:
     research_provider_id: elevenlabs
     model_alias: eleven_v4
@@ -6650,8 +6701,8 @@ records:
       current_calculator_included_characters: 272727
     verified_at: '2026-10-07'
     product: ElevenAPI Starter
-    conditions: Displayed included-character estimate depends on temporary v4 rate; do not preserve this
-      allowance after promo without rechecking.
+    conditions: Displayed included-character estimate depends on temporary v4 rate; do not preserve this allowance
+      after promo without rechecking.
 - schema_version: '1.0'
   id: access-19adfeee35641105
   verified_at: '2026-10-07'
@@ -6937,8 +6988,8 @@ records:
   billing_class: subscription
   price_ids: []
   restrictions:
-  - Launch explicitly names these clients. Authentication, plan allowances and exact live defaults must
-    be separated from paid API tariff.
+  - Launch explicitly names these clients. Authentication, plan allowances and exact live defaults must be
+    separated from paid API tariff.
   evidence_ids:
   - src-24717f621aa3
   notes:
@@ -6953,8 +7004,8 @@ records:
     route_class: consumer_or_client
     research_source_ids:
     - g-pro-launch
-    entitlement: Launch explicitly names these clients. Authentication, plan allowances and exact live
-      defaults must be separated from paid API tariff.
+    entitlement: Launch explicitly names these clients. Authentication, plan allowances and exact live defaults
+      must be separated from paid API tariff.
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
     exact_current_client_quota: null
@@ -7115,8 +7166,8 @@ records:
   billing_class: subscription
   price_ids: []
   restrictions:
-  - July model-specific app release names 3.5 Flash-Lite; current help shows Flash-Lite on all plans,
-    subject to usage limits and model changes.
+  - July model-specific app release names 3.5 Flash-Lite; current help shows Flash-Lite on all plans, subject
+    to usage limits and model changes.
   evidence_ids:
   - src-04e5894ab585
   - src-d3e41dcc2800
@@ -7133,8 +7184,8 @@ records:
     research_source_ids:
     - g-lite-app
     - g-app-limits
-    entitlement: July model-specific app release names 3.5 Flash-Lite; current help shows Flash-Lite on
-      all plans, subject to usage limits and model changes.
+    entitlement: July model-specific app release names 3.5 Flash-Lite; current help shows Flash-Lite on all
+      plans, subject to usage limits and model changes.
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
     exact_live_picker_alias_verified: false
@@ -7272,8 +7323,8 @@ records:
   reset_cadence: null
   conditions:
   - Separate Cloud project/billing/regions from Gemini Developer API.
-  - Cloud pricing footnote says promotional pricing is provided through 50% credits back on net spend;
-    treat listed effective rate and credit settlement separately.
+  - Cloud pricing footnote says promotional pricing is provided through 50% credits back on net spend; treat
+    listed effective rate and credit settlement separately.
   research_details:
     research_provider_id: google-cloud
     product: Gemini Enterprise Agent Platform
@@ -7305,8 +7356,8 @@ records:
     account_entitlement_verified: false
     conditions:
     - Separate Cloud project/billing/regions from Gemini Developer API.
-    - Cloud pricing footnote says promotional pricing is provided through 50% credits back on net spend;
-      treat listed effective rate and credit settlement separately.
+    - Cloud pricing footnote says promotional pricing is provided through 50% credits back on net spend; treat
+      listed effective rate and credit settlement separately.
 - schema_version: '1.0'
   id: access-de56c906b98cef0f
   verified_at: '2026-10-07'
@@ -7323,8 +7374,8 @@ records:
   billing_class: subscription
   price_ids: []
   restrictions:
-  - Model-specific launch documents AI Pro/Ultra access. Current app help permits Flash family on all
-    plans, without exact minor-version mapping.
+  - Model-specific launch documents AI Pro/Ultra access. Current app help permits Flash family on all plans,
+    without exact minor-version mapping.
   evidence_ids:
   - src-1e5b8618d900
   - src-d3e41dcc2800
@@ -7382,8 +7433,7 @@ records:
   reset_cadence: null
   conditions:
   - Public API/Studio documentation verified; no inference executed and account allowance unknown.
-  - 'API model page: audio response modality; use output transcription for text. Caching and Batch not
-    supported.'
+  - 'API model page: audio response modality; use output transcription for text. Caching and Batch not supported.'
   research_details:
     research_provider_id: google-developer-api
     product: Gemini Developer API / Google AI Studio
@@ -7409,8 +7459,7 @@ records:
     requires_account: true
     conditions:
     - Public API/Studio documentation verified; no inference executed and account allowance unknown.
-    - 'API model page: audio response modality; use output transcription for text. Caching and Batch not
-      supported.'
+    - 'API model page: audio response modality; use output transcription for text. Caching and Batch not supported.'
     free_api_tier: true
 - schema_version: '1.0'
   id: access-f6fe69964e7f6830
@@ -7487,8 +7536,8 @@ records:
   billing_class: subscription
   price_ids: []
   restrictions:
-  - Model family rollout documented across consumer voice surfaces. Exact base versus Extended Thinking
-    assignment and account limits not verified.
+  - Model family rollout documented across consumer voice surfaces. Exact base versus Extended Thinking assignment
+    and account limits not verified.
   evidence_ids:
   - src-850203855328
   notes:
@@ -7629,8 +7678,8 @@ records:
   reset_cadence: null
   conditions:
   - Separate Cloud project/billing/regions from Gemini Developer API.
-  - Cloud price table prints cached-input $0.20, but Developer API model page says caching unsupported.
-    Price row alone is not a capability guarantee; keep provider contexts separate.
+  - Cloud price table prints cached-input $0.20, but Developer API model page says caching unsupported. Price
+    row alone is not a capability guarantee; keep provider contexts separate.
   research_details:
     research_provider_id: google-cloud
     product: Gemini Enterprise Agent Platform
@@ -7653,8 +7702,8 @@ records:
     account_entitlement_verified: false
     conditions:
     - Separate Cloud project/billing/regions from Gemini Developer API.
-    - Cloud price table prints cached-input $0.20, but Developer API model page says caching unsupported.
-      Price row alone is not a capability guarantee; keep provider contexts separate.
+    - Cloud price table prints cached-input $0.20, but Developer API model page says caching unsupported. Price
+      row alone is not a capability guarantee; keep provider contexts separate.
 - schema_version: '1.0'
   id: access-42e20aeb4ffad0b4
   verified_at: '2026-10-07'
@@ -7671,8 +7720,8 @@ records:
   billing_class: subscription
   price_ids: []
   restrictions:
-  - Nano Banana Pro redo is listed for AI Plus/Pro/Ultra, not without an AI plan. App quotas differ from
-    API; no free API tier.
+  - Nano Banana Pro redo is listed for AI Plus/Pro/Ultra, not without an AI plan. App quotas differ from API;
+    no free API tier.
   evidence_ids:
   - src-d3e41dcc2800
   notes:
@@ -7687,8 +7736,8 @@ records:
     route_class: consumer_or_client
     research_source_ids:
     - g-app-limits
-    entitlement: Nano Banana Pro redo is listed for AI Plus/Pro/Ultra, not without an AI plan. App quotas
-      differ from API; no free API tier.
+    entitlement: Nano Banana Pro redo is listed for AI Plus/Pro/Ultra, not without an AI plan. App quotas differ
+      from API; no free API tier.
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
     exact_variant_entitlement: Nano Banana Pro is officially mapped to gemini-3-pro-image on model page.
@@ -7844,8 +7893,8 @@ records:
     research_source_ids:
     - g-omni-launch
     - g-flow
-    entitlement: Omni 1.1 launch documents Plus/Pro/Ultra; Flow has its own generation-credit tariffs.
-      Exact minor-version mapping for current generic Omni Flash credit rows remains unstated.
+    entitlement: Omni 1.1 launch documents Plus/Pro/Ultra; Flow has its own generation-credit tariffs. Exact
+      minor-version mapping for current generic Omni Flash credit rows remains unstated.
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
 - schema_version: '1.0'
@@ -7862,8 +7911,8 @@ records:
   billing_class: subscription
   price_ids: []
   restrictions:
-  - Omni 1.1 HD generation documented at no cost for Google or Workspace account holders; precise quota
-    not stated.
+  - Omni 1.1 HD generation documented at no cost for Google or Workspace account holders; precise quota not
+    stated.
   evidence_ids:
   - src-c52229f1bfad
   notes:
@@ -7878,8 +7927,8 @@ records:
     route_class: consumer_or_client
     research_source_ids:
     - g-omni-vids
-    entitlement: Omni 1.1 HD generation documented at no cost for Google or Workspace account holders;
-      precise quota not stated.
+    entitlement: Omni 1.1 HD generation documented at no cost for Google or Workspace account holders; precise
+      quota not stated.
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
     free_consumer_access: true
@@ -7900,8 +7949,8 @@ records:
   billing_class: subscription
   price_ids: []
   restrictions:
-  - Paid Google AI plan or qualifying Workspace license, age 18+; scene extension explicitly announced
-    for Plus/Pro/Ultra.
+  - Paid Google AI plan or qualifying Workspace license, age 18+; scene extension explicitly announced for
+    Plus/Pro/Ultra.
   evidence_ids:
   - src-7d8f7d49cd6d
   - src-f661101cf480
@@ -7918,8 +7967,8 @@ records:
     research_source_ids:
     - g-omni-launch
     - g-app-video
-    entitlement: Paid Google AI plan or qualifying Workspace license, age 18+; scene extension explicitly
-      announced for Plus/Pro/Ultra.
+    entitlement: Paid Google AI plan or qualifying Workspace license, age 18+; scene extension explicitly announced
+      for Plus/Pro/Ultra.
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
 - schema_version: '1.0'
@@ -8071,8 +8120,8 @@ records:
       cache_storage: null
     verified_at: '2026-10-07'
     authentication: Gemini API key
-    conditions: Free tier subject to quotas; paid tier not available for this model. Free-tier data can
-      improve Google products.
+    conditions: Free tier subject to quotas; paid tier not available for this model. Free-tier data can improve
+      Google products.
 - schema_version: '1.0'
   id: access-313f8f51e65be23a
   verified_at: '2026-10-07'
@@ -8153,8 +8202,8 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Cache storage currently limited-time free. Former/current coding subscribers have protocol/account
-    restrictions; check exact key.
+  - Cache storage currently limited-time free. Former/current coding subscribers have protocol/account restrictions;
+    check exact key.
   research_details:
     research_provider_id: zai-api
     model_alias: glm-5.3
@@ -8207,8 +8256,8 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Supported tools only, single subscriber. Quota credits not USD. No PAYG fallback. Dated promotional
-    usage campaigns must not become baseline unlimited entitlement.
+  - Supported tools only, single subscriber. Quota credits not USD. No PAYG fallback. Dated promotional usage
+    campaigns must not become baseline unlimited entitlement.
   research_details:
     research_provider_id: zai-api
     model_alias: glm-5.3
@@ -8228,8 +8277,8 @@ records:
       pro_weekly_credits: 60000
       max_5h_credits: 28000
       max_weekly_credits: 140000
-    conditions: Supported tools only, single subscriber. Quota credits not USD. No PAYG fallback. Dated
-      promotional usage campaigns must not become baseline unlimited entitlement.
+    conditions: Supported tools only, single subscriber. Quota credits not USD. No PAYG fallback. Dated promotional
+      usage campaigns must not become baseline unlimited entitlement.
 - schema_version: '1.0'
   id: access-be1523030319a65a
   verified_at: '2026-10-07'
@@ -8356,8 +8405,8 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Cache storage currently limited-time free. Former/current coding subscribers have protocol/account
-    restrictions; check exact key.
+  - Cache storage currently limited-time free. Former/current coding subscribers have protocol/account restrictions;
+    check exact key.
   research_details:
     research_provider_id: zai-api
     model_alias: glm-5.3-flash
@@ -8412,8 +8461,8 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Supported tools only, single subscriber. Quota credits not USD. No PAYG fallback. Dated promotional
-    usage campaigns must not become baseline unlimited entitlement.
+  - Supported tools only, single subscriber. Quota credits not USD. No PAYG fallback. Dated promotional usage
+    campaigns must not become baseline unlimited entitlement.
   research_details:
     research_provider_id: zai-api
     model_alias: glm-5.3-flash
@@ -8433,8 +8482,8 @@ records:
       pro_weekly_credits: 60000
       max_5h_credits: 28000
       max_weekly_credits: 140000
-    conditions: Supported tools only, single subscriber. Quota credits not USD. No PAYG fallback. Dated
-      promotional usage campaigns must not become baseline unlimited entitlement.
+    conditions: Supported tools only, single subscriber. Quota credits not USD. No PAYG fallback. Dated promotional
+      usage campaigns must not become baseline unlimited entitlement.
 - schema_version: '1.0'
   id: access-ad53fe6557ca6ae7
   verified_at: '2026-10-07'
@@ -8516,8 +8565,8 @@ records:
   notes:
   - 'Research route class: hosted_metered_api'
   - Source documented; inference execution and individual eligibility were not tested.
-  - Price verification dates remain attached to their original records; this route check does not refresh
-    old tariffs.
+  - Price verification dates remain attached to their original records; this route check does not refresh old
+    tariffs.
   client_id: null
   requires_account: null
   subscription_includes_api: null
@@ -8710,8 +8759,8 @@ records:
   conditions:
   - Runtime requires supported inference profile; bare alias is Mantle.
   - 'Mantle region: us-east-1'
-  - Explicit prompt caching unsupported according to fetched card, even though cache-write price column
-    is printed. Published price is not proof of supported caching operation.
+  - Explicit prompt caching unsupported according to fetched card, even though cache-write price column is
+    printed. Published price is not proof of supported caching operation.
   research_details:
     research_provider_id: aws-bedrock
     product: Bedrock Runtime / Mantle
@@ -8749,8 +8798,8 @@ records:
     conditions:
     - Runtime requires supported inference profile; bare alias is Mantle.
     - 'Mantle region: us-east-1'
-    - Explicit prompt caching unsupported according to fetched card, even though cache-write price column
-      is printed. Published price is not proof of supported caching operation.
+    - Explicit prompt caching unsupported according to fetched card, even though cache-write price column is
+      printed. Published price is not proof of supported caching operation.
     price_status: official_card
     limitations:
     - No inference executed.
@@ -8769,8 +8818,8 @@ records:
   billing_class: subscription
   price_ids: []
   restrictions:
-  - Eligible paid plans and workspace model permissions; ChatGPT authentication uses shared plan usage.
-    API-key authentication is separately metered.
+  - Eligible paid plans and workspace model permissions; ChatGPT authentication uses shared plan usage. API-key
+    authentication is separately metered.
   evidence_ids:
   - src-0cfdd4c3ce00
   - src-5f85c478f0bc
@@ -8787,8 +8836,8 @@ records:
     research_source_ids:
     - o-work
     - o-codex
-    entitlement: Eligible paid plans and workspace model permissions; ChatGPT authentication uses shared
-      plan usage. API-key authentication is separately metered.
+    entitlement: Eligible paid plans and workspace model permissions; ChatGPT authentication uses shared plan
+      usage. API-key authentication is separately metered.
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
     authentication_modes:
@@ -8919,8 +8968,8 @@ records:
   notes:
   - 'Research route class: hosted_metered_api'
   - Source documented; inference execution and individual eligibility were not tested.
-  - Price verification dates remain attached to their original records; this route check does not refresh
-    old tariffs.
+  - Price verification dates remain attached to their original records; this route check does not refresh old
+    tariffs.
   client_id: null
   requires_account: null
   subscription_includes_api: null
@@ -9252,8 +9301,8 @@ records:
   billing_class: subscription
   price_ids: []
   restrictions:
-  - Eligible paid plans and workspace model permissions; ChatGPT authentication uses shared plan usage.
-    API-key authentication is separately metered.
+  - Eligible paid plans and workspace model permissions; ChatGPT authentication uses shared plan usage. API-key
+    authentication is separately metered.
   evidence_ids:
   - src-0cfdd4c3ce00
   - src-5f85c478f0bc
@@ -9270,8 +9319,8 @@ records:
     research_source_ids:
     - o-work
     - o-codex
-    entitlement: Eligible paid plans and workspace model permissions; ChatGPT authentication uses shared
-      plan usage. API-key authentication is separately metered.
+    entitlement: Eligible paid plans and workspace model permissions; ChatGPT authentication uses shared plan
+      usage. API-key authentication is separately metered.
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
     authentication_modes:
@@ -9365,12 +9414,12 @@ records:
     - o-chat
     - o-work
     - o-enterprise
-    entitlement: Pro $100, Pro $200, Business and Enterprise; workspace permissions apply. Plus Astra
-      access is Work/Codex, not established Chat access.
+    entitlement: Pro $100, Pro $200, Business and Enterprise; workspace permissions apply. Plus Astra access
+      is Work/Codex, not established Chat access.
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
-    pricing_context: Enterprise USD Chat rate separately documented at 10 input / 1 cached input / 50
-      output USD per 1M tokens.
+    pricing_context: Enterprise USD Chat rate separately documented at 10 input / 1 cached input / 50 output
+      USD per 1M tokens.
 - schema_version: '1.0'
   id: access-bd972486b653028f
   verified_at: '2026-10-07'
@@ -9407,8 +9456,8 @@ records:
   notes:
   - 'Research route class: hosted_metered_api'
   - Source documented; inference execution and individual eligibility were not tested.
-  - Price verification dates remain attached to their original records; this route check does not refresh
-    old tariffs.
+  - Price verification dates remain attached to their original records; this route check does not refresh old
+    tariffs.
   client_id: null
   requires_account: null
   subscription_includes_api: null
@@ -9718,8 +9767,8 @@ records:
   billing_class: subscription
   price_ids: []
   restrictions:
-  - Eligible paid plans and workspace model permissions; ChatGPT authentication uses shared plan usage.
-    API-key authentication is separately metered.
+  - Eligible paid plans and workspace model permissions; ChatGPT authentication uses shared plan usage. API-key
+    authentication is separately metered.
   evidence_ids:
   - src-0cfdd4c3ce00
   - src-5f85c478f0bc
@@ -9736,8 +9785,8 @@ records:
     research_source_ids:
     - o-work
     - o-codex
-    entitlement: Eligible paid plans and workspace model permissions; ChatGPT authentication uses shared
-      plan usage. API-key authentication is separately metered.
+    entitlement: Eligible paid plans and workspace model permissions; ChatGPT authentication uses shared plan
+      usage. API-key authentication is separately metered.
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
     authentication_modes:
@@ -9811,8 +9860,8 @@ records:
   billing_class: subscription
   price_ids: []
   restrictions:
-  - Regular Chat explicitly unavailable. Launch documents Luna access for Free and Go on desktop; no free
-    API entitlement follows.
+  - Regular Chat explicitly unavailable. Launch documents Luna access for Free and Go on desktop; no free API
+    entitlement follows.
   evidence_ids:
   - src-0cfdd4c3ce00
   - src-608eb672ebb7
@@ -9829,8 +9878,8 @@ records:
     research_source_ids:
     - o-luna-launch
     - o-work
-    entitlement: Regular Chat explicitly unavailable. Launch documents Luna access for Free and Go on
-      desktop; no free API entitlement follows.
+    entitlement: Regular Chat explicitly unavailable. Launch documents Luna access for Free and Go on desktop;
+      no free API entitlement follows.
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
 - schema_version: '1.0'
@@ -9865,15 +9914,15 @@ records:
   notes:
   - 'Research route class: hosted_metered_api'
   - Source documented; inference execution and individual eligibility were not tested.
-  - Price verification dates remain attached to their original records; this route check does not refresh
-    old tariffs.
+  - Price verification dates remain attached to their original records; this route check does not refresh old
+    tariffs.
   client_id: null
   requires_account: null
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Price is per image token, not a flat per-image quote. GPT Image 2 calculator does not estimate 2.5
-    token consumption.
+  - Price is per image token, not a flat per-image quote. GPT Image 2 calculator does not estimate 2.5 token
+    consumption.
   - Text output not billed because image model emits images.
   research_details:
     research_provider_id: openai
@@ -9909,8 +9958,8 @@ records:
     free_api_tier: false
     snapshot_alias: gpt-image-2.5-flare-2026-09-08
     conditions:
-    - Price is per image token, not a flat per-image quote. GPT Image 2 calculator does not estimate 2.5
-      token consumption.
+    - Price is per image token, not a flat per-image quote. GPT Image 2 calculator does not estimate 2.5 token
+      consumption.
     - Text output not billed because image model emits images.
 - schema_version: '1.0'
   id: access-4f9b3bc4f09b659a
@@ -9996,8 +10045,7 @@ records:
       described as coming soon.
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
-    exact_variant_entitlement: Product docs do not establish user selection or routing between Flare and
-      Sunburst.
+    exact_variant_entitlement: Product docs do not establish user selection or routing between Flare and Sunburst.
     pricing: []
 - schema_version: '1.0'
   id: access-8e3f38822230e442
@@ -10031,15 +10079,15 @@ records:
   notes:
   - 'Research route class: hosted_metered_api'
   - Source documented; inference execution and individual eligibility were not tested.
-  - Price verification dates remain attached to their original records; this route check does not refresh
-    old tariffs.
+  - Price verification dates remain attached to their original records; this route check does not refresh old
+    tariffs.
   client_id: null
   requires_account: null
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Price is per image token, not a flat per-image quote. GPT Image 2 calculator does not estimate 2.5
-    token consumption.
+  - Price is per image token, not a flat per-image quote. GPT Image 2 calculator does not estimate 2.5 token
+    consumption.
   - Text output not billed because image model emits images.
   research_details:
     research_provider_id: openai
@@ -10075,8 +10123,8 @@ records:
     free_api_tier: false
     snapshot_alias: gpt-image-2.5-sunburst-2026-09-08
     conditions:
-    - Price is per image token, not a flat per-image quote. GPT Image 2 calculator does not estimate 2.5
-      token consumption.
+    - Price is per image token, not a flat per-image quote. GPT Image 2 calculator does not estimate 2.5 token
+      consumption.
     - Text output not billed because image model emits images.
 - schema_version: '1.0'
   id: access-23ee420238d5323d
@@ -10162,8 +10210,7 @@ records:
       described as coming soon.
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
-    exact_variant_entitlement: Product docs do not establish user selection or routing between Flare and
-      Sunburst.
+    exact_variant_entitlement: Product docs do not establish user selection or routing between Flare and Sunburst.
     pricing: []
 - schema_version: '1.0'
   id: access-b70e525c16e7f196
@@ -10196,8 +10243,8 @@ records:
   notes:
   - 'Research route class: hosted_metered_api'
   - Source documented; inference execution and individual eligibility were not tested.
-  - Price verification dates remain attached to their original records; this route check does not refresh
-    old tariffs.
+  - Price verification dates remain attached to their original records; this route check does not refresh old
+    tariffs.
   client_id: null
   requires_account: null
   subscription_includes_api: null
@@ -10289,8 +10336,8 @@ records:
   billing_class: subscription
   price_ids: []
   restrictions:
-  - 'GPT-Live-1: Plus 3h; Pro $100 15h; Pro $200 unlimited; Business Standard 3h and Premium 15h. Rolling
-    24 hours. Free and Go use mini.'
+  - 'GPT-Live-1: Plus 3h; Pro $100 15h; Pro $200 unlimited; Business Standard 3h and Premium 15h. Rolling 24
+    hours. Free and Go use mini.'
   evidence_ids:
   - src-a1730436fd21
   notes:
@@ -10307,8 +10354,8 @@ records:
     route_class: consumer_or_client
     research_source_ids:
     - o-voice
-    entitlement: 'GPT-Live-1: Plus 3h; Pro $100 15h; Pro $200 unlimited; Business Standard 3h and Premium
-      15h. Rolling 24 hours. Free and Go use mini.'
+    entitlement: 'GPT-Live-1: Plus 3h; Pro $100 15h; Pro $200 unlimited; Business Standard 3h and Premium 15h.
+      Rolling 24 hours. Free and Go use mini.'
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
     overage:
@@ -10611,8 +10658,8 @@ records:
   notes:
   - 'Research route class: hosted_metered_api'
   - Source documented; inference execution and individual eligibility were not tested.
-  - Price verification dates remain attached to their original records; this route check does not refresh
-    old tariffs.
+  - Price verification dates remain attached to their original records; this route check does not refresh old
+    tariffs.
   client_id: null
   requires_account: null
   subscription_includes_api: null
@@ -10721,8 +10768,8 @@ records:
     route_class: consumer_or_client
     research_source_ids:
     - o-voice
-    entitlement: No exact GPT-Realtime-2.1 consumer entitlement established; Advanced mode presence is
-      not a model-alias mapping.
+    entitlement: No exact GPT-Realtime-2.1 consumer entitlement established; Advanced mode presence is not
+      a model-alias mapping.
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
     status: exact_model_unverified
@@ -10757,8 +10804,8 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Current docs add TTL cache-write billing; launch price alone is insufficient complete cost. China
-    eligibility does not automatically transfer to overseas.
+  - Current docs add TTL cache-write billing; launch price alone is insufficient complete cost. China eligibility
+    does not automatically transfer to overseas.
   research_details:
     research_provider_id: kimi-api
     model_alias: kimi-k3
@@ -10782,8 +10829,8 @@ records:
     - text
     - image
     - video
-    conditions: Current docs add TTL cache-write billing; launch price alone is insufficient complete
-      cost. China eligibility does not automatically transfer to overseas.
+    conditions: Current docs add TTL cache-write billing; launch price alone is insufficient complete cost.
+      China eligibility does not automatically transfer to overseas.
 - schema_version: '1.0'
   id: access-f8d59a392c3a9e82
   verified_at: '2026-10-07'
@@ -10830,8 +10877,8 @@ records:
     base_urls:
     - https://api.kimi.ai/coding/v1
     - https://api.kimi.com/coding/v1
-    eligibility: Plus/Moderato or higher; Plus k3 limited256K, Pro/Allegretto or higher up to 1M; new
-      Go no coding quota.
+    eligibility: Plus/Moderato or higher; Plus k3 limited256K, Pro/Allegretto or higher up to 1M; new Go no
+      coding quota.
     conditions: k3-256k does not accept video. Disabling thinking routes to K2.8 Preview, not exact K3.
 - schema_version: '1.0'
   id: access-c58642f96c2da75d
@@ -11227,8 +11274,8 @@ records:
   billing_class: subscription
   price_ids: []
   restrictions:
-  - Lyria 3.5 explicitly documented for all users globally in Gemini web/mobile; Flow Music, AI Studio
-    and Vids also named. No fixed generation count verified.
+  - Lyria 3.5 explicitly documented for all users globally in Gemini web/mobile; Flow Music, AI Studio and
+    Vids also named. No fixed generation count verified.
   evidence_ids:
   - src-d0b16425fcb6
   - src-d3e41dcc2800
@@ -11245,8 +11292,8 @@ records:
     research_source_ids:
     - g-lyria-app
     - g-app-limits
-    entitlement: Lyria 3.5 explicitly documented for all users globally in Gemini web/mobile; Flow Music,
-      AI Studio and Vids also named. No fixed generation count verified.
+    entitlement: Lyria 3.5 explicitly documented for all users globally in Gemini web/mobile; Flow Music, AI
+      Studio and Vids also named. No fixed generation count verified.
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
     free_consumer_access: true
@@ -11324,8 +11371,8 @@ records:
     endpoint: https://api.minimax.io/v1/text/chatcompletion_v2
     context: up to 1M, guaranteed minimum 512K per model page
     authentication: PAYG API key
-    conditions: Priority set via service_tier; rates displayed as permanent50% discount. Standard and
-      Priority separate.
+    conditions: Priority set via service_tier; rates displayed as permanent50% discount. Standard and Priority
+      separate.
 - schema_version: '1.0'
   id: access-2e5fa663d1fb047e
   verified_at: '2026-10-07'
@@ -11505,8 +11552,8 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Current English subscription docs support shared monthly API usage; API rates meter consumption. Plan
-    price/allowance are separate. Account/key eligibility and translated-doc discrepancy retained.
+  - Current English subscription docs support shared monthly API usage; API rates meter consumption. Plan price/allowance
+    are separate. Account/key eligibility and translated-doc discrepancy retained.
   research_details:
     research_provider_id: mistral-api
     model_alias: ministral-8b-2512
@@ -11556,8 +11603,7 @@ records:
     prices: null
     verified_at: '2026-10-07'
     product: On-demand GPU deployment
-    conditions: Hourly GPU rates cannot become a per-model total without GPU count and configuration;
-      not serverless.
+    conditions: Hourly GPU rates cannot become a per-model total without GPU count and configuration; not serverless.
 - schema_version: '1.0'
   id: access-17d4a122e58be631
   verified_at: '2026-10-07'
@@ -11642,8 +11688,8 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Current English subscription docs support shared monthly API usage; API rates meter consumption. Plan
-    price/allowance are separate. Account/key eligibility and translated-doc discrepancy retained.
+  - Current English subscription docs support shared monthly API usage; API rates meter consumption. Plan price/allowance
+    are separate. Account/key eligibility and translated-doc discrepancy retained.
   research_details:
     research_provider_id: mistral-api
     model_alias: mistral-large-2512
@@ -11693,8 +11739,7 @@ records:
     prices: null
     verified_at: '2026-10-07'
     product: On-demand GPU deployment
-    conditions: Hourly GPU rates cannot become a per-model total without GPU count and configuration;
-      not serverless.
+    conditions: Hourly GPU rates cannot become a per-model total without GPU count and configuration; not serverless.
 - schema_version: '1.0'
   id: access-d4336bab86e8aed3
   verified_at: '2026-10-07'
@@ -11781,8 +11826,8 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Current English subscription docs support shared monthly API usage; API rates meter consumption. Plan
-    price/allowance are separate. Account/key eligibility and translated-doc discrepancy retained.
+  - Current English subscription docs support shared monthly API usage; API rates meter consumption. Plan price/allowance
+    are separate. Account/key eligibility and translated-doc discrepancy retained.
   research_details:
     research_provider_id: mistral-api
     model_alias: mistral-medium-3-5
@@ -11840,8 +11885,7 @@ records:
       cache_write: null
       cache_storage: null
     verified_at: '2026-10-07'
-    conditions: Gateway-listed base rate; provider routing/regional variants and credit-purchase fees
-      separate.
+    conditions: Gateway-listed base rate; provider routing/regional variants and credit-purchase fees separate.
 - schema_version: '1.0'
   id: access-0b140e18b825f285
   verified_at: '2026-10-07'
@@ -11873,8 +11917,8 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Explicit creator model integration; runtime model selection can evolve. Do not apply its API rate
-    as monthly plan fee.
+  - Explicit creator model integration; runtime model selection can evolve. Do not apply its API rate as monthly
+    plan fee.
   research_details:
     research_provider_id: mistral-ai
     model_alias: mistral-medium-3-5
@@ -11883,8 +11927,8 @@ records:
     prices: null
     verified_at: '2026-10-07'
     product: Vibe / formerly Le Chat
-    conditions: Explicit creator model integration; runtime model selection can evolve. Do not apply its
-      API rate as monthly plan fee.
+    conditions: Explicit creator model integration; runtime model selection can evolve. Do not apply its API
+      rate as monthly plan fee.
 - schema_version: '1.0'
   id: access-5fc2b9e6cb949ac9
   verified_at: '2026-10-07'
@@ -11969,8 +12013,8 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Current English subscription docs support shared monthly API usage; API rates meter consumption. Plan
-    price/allowance are separate. Account/key eligibility and translated-doc discrepancy retained.
+  - Current English subscription docs support shared monthly API usage; API rates meter consumption. Plan price/allowance
+    are separate. Account/key eligibility and translated-doc discrepancy retained.
   research_details:
     research_provider_id: mistral-api
     model_alias: mistral-small-2603
@@ -12027,8 +12071,7 @@ records:
       cache_write: null
       cache_storage: null
     verified_at: '2026-10-07'
-    conditions: Gateway-listed base rate; provider routing/regional variants and credit-purchase fees
-      separate.
+    conditions: Gateway-listed base rate; provider routing/regional variants and credit-purchase fees separate.
 - schema_version: '1.0'
   id: access-bfda58b1f1e87f34
   verified_at: '2026-10-07'
@@ -12135,8 +12178,7 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Canonical profile representative is BF16. Variant relation must be explicit, not silent checkpoint
-    substitution.
+  - Canonical profile representative is BF16. Variant relation must be explicit, not silent checkpoint substitution.
   research_details:
     research_provider_id: fireworks
     model_alias: accounts/fireworks/models/nemotron-3-ultra-nvfp4
@@ -12153,8 +12195,8 @@ records:
     verified_at: '2026-10-07'
     context: 262144
     variant: NVFP4 sibling checkpoint
-    conditions: Canonical profile representative is BF16. Variant relation must be explicit, not silent
-      checkpoint substitution.
+    conditions: Canonical profile representative is BF16. Variant relation must be explicit, not silent checkpoint
+      substitution.
 - schema_version: '1.0'
   id: access-a52f9c294f41f9f3
   verified_at: '2026-10-07'
@@ -12255,8 +12297,8 @@ records:
     quantization: BF16
     concurrent_units_per_request: 1
     authentication: Featherless API key
-    conditions: Exact listing serves32K even though descriptive model text says 128K. Developer plan cap
-      cannot increase a model-specific limit. HF router billing not inferred from direct plan.
+    conditions: Exact listing serves32K even though descriptive model text says 128K. Developer plan cap cannot
+      increase a model-specific limit. HF router billing not inferred from direct plan.
 - schema_version: '1.0'
   id: access-4f38855edac192f0
   verified_at: '2026-10-07'
@@ -12439,8 +12481,7 @@ records:
     - Exact account entitlement and regional access
     - Unpublished or unverified media/token limits
     - Cache-write/storage charge if any
-    source_confidence: high for direct alias, listed input/output, context; operational availability not
-      tested
+    source_confidence: high for direct alias, listed input/output, context; operational availability not tested
 - schema_version: '1.0'
   id: access-b5b2eba4cf6b7da1
   verified_at: '2026-10-07'
@@ -12536,8 +12577,7 @@ records:
     - Unpublished or unverified media/token limits
     - Cache-write/storage charge if any
     api_base_url: https://api.novita.ai/openai
-    source_confidence: high for direct alias, published token rates and stated capabilities; no inference
-      performed
+    source_confidence: high for direct alias, published token rates and stated capabilities; no inference performed
 - schema_version: '1.0'
   id: access-b63286675de81cc9
   verified_at: '2026-10-07'
@@ -12732,8 +12772,7 @@ records:
     - Unpublished or unverified media/token limits
     - Cache-write/storage charge if any
     api_base_url: https://api.novita.ai/openai
-    source_confidence: high for direct alias, published token rates and stated capabilities; no inference
-      performed
+    source_confidence: high for direct alias, published token rates and stated capabilities; no inference performed
 - schema_version: '1.0'
   id: access-486a36ce89c8916c
   verified_at: '2026-10-07'
@@ -12827,8 +12866,8 @@ records:
     - Exact account entitlement and regional access
     - Unpublished or unverified media/token limits
     - Cache-write/storage charge if any
-    - Earlier Featherless blog quotes lower input/output than the current model listing; prefer current
-      listing, preserve contradiction.
+    - Earlier Featherless blog quotes lower input/output than the current model listing; prefer current listing,
+      preserve contradiction.
 - schema_version: '1.0'
   id: access-236beec7ad439196
   verified_at: '2026-10-07'
@@ -12912,8 +12951,8 @@ records:
       concurrent_requests: null
       concurrent_units_per_request: 4
       plan_concurrent_units: 100
-      note: Concurrent units are not requests. 25 simultaneous Flash-Next requests is derived at 100/4
-        with no other usage, not a throughput SLA.
+      note: Concurrent units are not requests. 25 simultaneous Flash-Next requests is derived at 100/4 with
+        no other usage, not a throughput SLA.
     multimodal_billing:
       separate_image_rate: null
       separate_video_rate: null
@@ -13029,8 +13068,7 @@ records:
     - Unpublished or unverified media/token limits
     - Cache-write/storage charge if any
     api_base_url: https://api.novita.ai/openai
-    source_confidence: high for direct alias, published token rates and stated capabilities; no inference
-      performed
+    source_confidence: high for direct alias, published token rates and stated capabilities; no inference performed
 - schema_version: '1.0'
   id: access-b747dfdee4cd4439
   verified_at: '2026-10-07'
@@ -13186,8 +13224,7 @@ records:
   billing_class: subscription
   price_ids: []
   restrictions:
-  - 'Veo 3.1 Quality: 100 credits/generation for 8s videos or Extend, all users; Fast/Lite have separate
-    costs.'
+  - 'Veo 3.1 Quality: 100 credits/generation for 8s videos or Extend, all users; Fast/Lite have separate costs.'
   evidence_ids:
   - src-f40c983ca27f
   - src-23807cea284a
@@ -13198,16 +13235,15 @@ records:
   subscription_includes_api: false
   reset_cadence: null
   conditions:
-  - 'Official Flow pages conflict: credit table lists Quality Extend at 100 credits, while feature table
-    marks Quality Extend unsupported and assigns Veo extensions to Lite. Exact Quality Extend eligibility
-    is unknown.'
+  - 'Official Flow pages conflict: credit table lists Quality Extend at 100 credits, while feature table marks
+    Quality Extend unsupported and assigns Veo extensions to Lite. Exact Quality Extend eligibility is unknown.'
   research_details:
     product: Google Flow Veo 3.1 Quality
     route_class: consumer_or_client
     research_source_ids:
     - g-flow
-    entitlement: 'Veo 3.1 Quality: 100 credits/generation for 8s videos or Extend, all users; Fast/Lite
-      have separate costs.'
+    entitlement: 'Veo 3.1 Quality: 100 credits/generation for 8s videos or Extend, all users; Fast/Lite have
+      separate costs.'
     subscription_fee_is_token_price: false
     account_entitlement_verified: false
     exact_alias_mapping: Quality label not proven equal to exact Developer API preview endpoint.
@@ -13280,8 +13316,8 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - All tokens charged at long-context tier once threshold applies. Exact 200K boundary conflicts across
-    official texts. US regional premium 10%. Tool invocations may add fees.
+  - All tokens charged at long-context tier once threshold applies. Exact 200K boundary conflicts across official
+    texts. US regional premium 10%. Tool invocations may add fees.
   research_details:
     research_provider_id: xai
     model_alias: grok-4.7
@@ -13419,8 +13455,8 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Model card says fixed quota supported; standard PAYG and provisioned throughput unsupported. Provider
-    billing not same as direct account.
+  - Model card says fixed quota supported; standard PAYG and provisioned throughput unsupported. Provider billing
+    not same as direct account.
   research_details:
     research_provider_id: google-cloud
     model_alias: grok-4.7
@@ -13570,8 +13606,8 @@ records:
   subscription_includes_api: null
   reset_cadence: null
   conditions:
-  - Same model on faster infrastructure, billed through client plan; expressly not public xAI API and
-    not included in free Grok Build.
+  - Same model on faster infrastructure, billed through client plan; expressly not public xAI API and not included
+    in free Grok Build.
   research_details:
     research_provider_id: xai
     model_alias: grok-4.7
@@ -13596,8 +13632,8 @@ records:
         cache_storage: null
     verified_at: '2026-10-07'
     product: Grok 4.7 Fast in Cursor / Grok Build
-    conditions: Same model on faster infrastructure, billed through client plan; expressly not public
-      xAI API and not included in free Grok Build.
+    conditions: Same model on faster infrastructure, billed through client plan; expressly not public xAI API
+      and not included in free Grok Build.
 - schema_version: '1.0'
   id: access-e049c0bfd67b6a3e
   verified_at: '2026-10-07'
@@ -13613,12 +13649,26 @@ records:
   client_id: null
   requires_account: true
   subscription_includes_api: null
-  reset_cadence: null
+  reset_cadence: Rate-limit token buckets replenish continuously; tier monthly spend caps reset at 00:00 UTC
+    on the first calendar day. Subscriber credits refresh separately by billing cycle.
   restrictions:
-  - Exact account quota, entitlement and negotiated conditions unknown.
+  - 'Published Haiku 5.5 maxima for Start, Build and Scale respectively: 1,000/5,000/10,000 RPM; 2M/5M/10M
+    input TPM; 0.4M/1M/2M output TPM. Evaluation/account settings may be lower; maxima are not guaranteed capacity.'
+  - Start/Build/Scale monthly spend caps are USD 500/USD 1000/USD 200000; workspace caps may be lower. US/global
+    requests share one model rate pool.
   conditions:
   - Haiku 5.5 uses a 512-token prompt-cache minimum.
   - Tier/account limits apply; published limits are maximums, not guaranteed capacity.
+  - Eligible active Max 5x/Max 20x plans can claim USD 100/USD 200 monthly first-party API credits; Team receives
+    USD 20 per Standard seat and USD 100 per Premium seat, pooled up to USD 500. After seven eligible days,
+    the Max subscriber or Team Primary Owner/Owner must link one Console organization as its Owner/Admin/Billing
+    member. Discounted Team plans are included; rollout can delay visibility. Free, Pro and Enterprise are
+    excluded.
+  - Credits expire each billing cycle without rollover (monthly for annual plans), are used before purchased
+    credits and do not change app/Code plan limits. Self-run claude -p or Agent SDK with a linked Console API
+    key is covered; plan-authenticated runs use plan limits. Interactive Code and IDE/desktop/GitHub Action
+    initiated runs are excluded.
+  - Global inference uses standard rates; inference_geo us applies 1.1× to every token pricing category.
   price_ids:
   - price-729ac6158cd411fd
   - price-033812acbb533c13
@@ -13632,6 +13682,8 @@ records:
   - src-9a3bbc4f637b
   - src-7dea3b226d0f
   - src-89e4a5e6eadc
+  - src-4159ec1ffae5
+  - src-72eb512e62c1
   notes:
   - No account access or inference was used to verify the public offering.
 - schema_version: '1.0'
@@ -13820,8 +13872,7 @@ records:
         cache_write_5m: 5
         cache_write_1h: 8
       conditions:
-      - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through
-        marketplace.
+      - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through marketplace.
     account_entitlement_verified: false
     invoice_unit:
       name: Claude Consumption Unit
@@ -13884,8 +13935,7 @@ records:
         cache_write_5m: 2.5
         cache_write_1h: 4
       conditions:
-      - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through
-        marketplace.
+      - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through marketplace.
       - 'Conflicting current documentation: Sonnet 5.5 overview and pricing table list USD 0.20 per million
         cache-read tokens; pricing-page multiplier section says USD 0.10. Actual billed rate unresolved.'
     account_entitlement_verified: false

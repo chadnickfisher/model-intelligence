@@ -1227,8 +1227,8 @@ records:
     currency: USD
     unit: per 1 million tokens
     conditions:
-    - 'Conflicting current documentation: Sonnet 5.5 overview and pricing table list USD 0.20 per million
-      cache-read tokens; pricing-page multiplier section says USD 0.10. Actual billed rate unresolved.'
+    - 'Conflicting current documentation: Sonnet 5.5 overview and pricing table list USD 0.20 per million cache-read
+      tokens; pricing-page multiplier section says USD 0.10. Actual billed rate unresolved.'
   - metric: cache_write_5m
     amount: 2.5
     currency: USD
@@ -1943,8 +1943,7 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - 720p outputs billed at 5,792 tokens/second, approximately $0.10/second; not a flat quote for every
-    resolution.
+  - 720p outputs billed at 5,792 tokens/second, approximately $0.10/second; not a flat quote for every resolution.
   evidence_ids:
   - src-b88c4950bbf3
   notes: []
@@ -1976,8 +1975,7 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - Gemma 4 pricing section; paid tier unavailable. Quota limited, data-use terms differ from paid Gemini
-    API.
+  - Gemma 4 pricing section; paid tier unavailable. Quota limited, data-use terms differ from paid Gemini API.
   evidence_ids:
   - src-b88c4950bbf3
   notes: []
@@ -2149,8 +2147,8 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - Announced future introductory API price; cached input derived from explicit 95% discount. No exact
-    public endpoint or effective date verified.
+  - Announced future introductory API price; cached input derived from explicit 95% discount. No exact public
+    endpoint or effective date verified.
   evidence_ids:
   - src-6381db252dee
   notes:
@@ -2183,8 +2181,7 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - Announced price after introductory period; expiry date is not specified in the fetched main English
-    announcement.
+  - Announced price after introductory period; expiry date is not specified in the fetched main English announcement.
   evidence_ids:
   - src-6381db252dee
   notes:
@@ -2416,8 +2413,8 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other
-    times. Reasoning and final tokens contribute to output billing.
+  - Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other times.
+    Reasoning and final tokens contribute to output billing.
   evidence_ids:
   - src-280758cc57a6
   notes: []
@@ -2459,8 +2456,8 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other
-    times. Reasoning and final tokens contribute to output billing.
+  - Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other times.
+    Reasoning and final tokens contribute to output billing.
   evidence_ids:
   - src-280758cc57a6
   notes: []
@@ -2502,8 +2499,8 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other
-    times. Reasoning and final tokens contribute to output billing.
+  - Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other times.
+    Reasoning and final tokens contribute to output billing.
   evidence_ids:
   - src-280758cc57a6
   notes: []
@@ -2545,8 +2542,8 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other
-    times. Reasoning and final tokens contribute to output billing.
+  - Peak weekdays 01:00–04:00 and 06:00–10:00 UTC, excluding Chinese public holidays. Off-peak all other times.
+    Reasoning and final tokens contribute to output billing.
   evidence_ids:
   - src-280758cc57a6
   notes: []
@@ -3059,8 +3056,8 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - Higher-context pricing exists above 200k; exact boundary/rates require reconciliation with general
-    page. These are base displayed rates.
+  - Higher-context pricing exists above 200k; exact boundary/rates require reconciliation with general page.
+    These are base displayed rates.
   - not stated
   evidence_ids:
   - src-d14fea025626
@@ -3340,8 +3337,8 @@ records:
   reset_cadence: monthly
   overage: []
   conditions:
-  - Subscription price not verified; this is included compute credit, not subscription price. Inference
-    pass-through without markup.
+  - Subscription price not verified; this is included compute credit, not subscription price. Inference pass-through
+    without markup.
   evidence_ids:
   - src-64b25f3342fd
   notes: []
@@ -4668,8 +4665,8 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - Cache storage currently limited-time free. Former/current coding subscribers have protocol/account
-    restrictions; check exact key.
+  - Cache storage currently limited-time free. Former/current coding subscribers have protocol/account restrictions;
+    check exact key.
   evidence_ids:
   - src-7e6c3dd9add1
   - src-667e800254a1
@@ -4799,8 +4796,8 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - Cache storage currently limited-time free. Former/current coding subscribers have protocol/account
-    restrictions; check exact key.
+  - Cache storage currently limited-time free. Former/current coding subscribers have protocol/account restrictions;
+    check exact key.
   evidence_ids:
   - src-80c359151519
   - src-667e800254a1
@@ -5446,8 +5443,7 @@ records:
   reset_cadence: null
   overage: []
   conditions:
-  - Canonical profile representative is BF16. Variant relation must be explicit, not silent checkpoint
-    substitution.
+  - Canonical profile representative is BF16. Variant relation must be explicit, not silent checkpoint substitution.
   evidence_ids:
   - src-9d8e52b601dc
   - src-0c70d291307a
@@ -5918,7 +5914,7 @@ records:
   tier: Standard / <=100k
   status: current
   billing_method: metered-api
-  region: null
+  region: global
   rates:
   - metric: input
     amount: 0.1
@@ -5950,6 +5946,8 @@ records:
   reset_cadence: null
   conditions:
   - Prompt <=100,000 tokens
+  - Global routing at published base rates; US-only inference_geo us applies 1.1× to every token category.
+    Server-side tools may add separate charges.
   effective_from: '2026-10-07'
   effective_to: null
   evidence_ids:
@@ -5965,7 +5963,7 @@ records:
   tier: Standard / >100k
   status: current
   billing_method: metered-api
-  region: null
+  region: global
   rates:
   - metric: input
     amount: 0.5
@@ -5997,6 +5995,8 @@ records:
   reset_cadence: null
   conditions:
   - Prompt >100,000 tokens
+  - Global routing at published base rates; US-only inference_geo us applies 1.1× to every token category.
+    Server-side tools may add separate charges.
   effective_from: '2026-10-07'
   effective_to: null
   evidence_ids:
@@ -6012,7 +6012,7 @@ records:
   tier: Batch / <=100k
   status: current
   billing_method: metered-api
-  region: null
+  region: global
   rates:
   - metric: input
     amount: 0.05
@@ -6029,6 +6029,8 @@ records:
   reset_cadence: null
   conditions:
   - Prompt <=100,000 tokens
+  - Global routing at published base rates; US-only inference_geo us applies 1.1× to every token category.
+    Server-side tools may add separate charges.
   effective_from: '2026-10-07'
   effective_to: null
   evidence_ids:
@@ -6044,7 +6046,7 @@ records:
   tier: Batch / >100k
   status: current
   billing_method: metered-api
-  region: null
+  region: global
   rates:
   - metric: input
     amount: 0.25
@@ -6061,6 +6063,8 @@ records:
   reset_cadence: null
   conditions:
   - Prompt >100,000 tokens
+  - Global routing at published base rates; US-only inference_geo us applies 1.1× to every token category.
+    Server-side tools may add separate charges.
   effective_from: '2026-10-07'
   effective_to: null
   evidence_ids:

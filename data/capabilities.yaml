@@ -924,6 +924,656 @@ records:
     origin: research
     research_batch_id: task-evidence-2026-10-08
     method: Curated original public task evidence with exact scope, configuration limits and attributed counterevidence.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-01c94f547da25077
+  scope: direct
+  task_ids:
+  - agent.long_horizon
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Original exact-model source inspected against this task rubric; no transfer to neighboring tasks.
+  judgment: Sustains useful iterative engineering work under a long-running scaffold, while final acceptance
+    still needs checking.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-00b8399a64cf
+  contradictory_evidence_ids: []
+  conditions:
+  - Proximus, max effort, 20 hours per task, 34 tasks, mean of 5 trials; Fable 5.1 with Opus 5 fallback scores
+    56.29% normalized reward.
+  - Scaffold supplies compaction, progress files, self-check feedback and checkpointed submissions.
+  known_failure_modes:
+  - Partial solutions remain; normalized reward does not mean a complete outcome.
+  evidence_notes:
+  - Original trajectory examples show feedback-driven revisions, including reverting a compiler optimization
+    and generating new astrometry test inputs.
+  - Fallback and evaluation-aware prompting limit attribution to a standalone Fable checkpoint.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspection on 2026-10-08; source-specific task, setup and limitations retained.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-028a36af1a3ac2ad
+  scope: direct
+  task_ids:
+  - language.summarization
+  related_task_ids: []
+  assessment: warning
+  scope_note: Exact assigned rubric task; conclusion applies only to the documented evaluation or reported
+    behavior.
+  judgment: Check source attribution in document summaries; Anthropic reports unmarked reuse of source wording.
+  confidence: low
+  supporting_evidence_ids:
+  - src-557f96ccb327
+  contradictory_evidence_ids: []
+  conditions:
+  - Vendor prompting guidance for Fable 5.1; no disclosed sample size, effort or measured recovery.
+  known_failure_modes:
+  - Source passages may be reproduced without quotation marking.
+  evidence_notes:
+  - A prompting remedy is not a fidelity or completeness benchmark. Aggregate suitability remains unknown.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspected on 2026-10-08; task-rubric 1.1 applied without transferring neighboring-task
+      scores.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-03386ed90ef9abfd
+  scope: direct
+  task_ids:
+  - knowledge.retrieval
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact assigned rubric task; conclusion applies only to the documented evaluation or reported
+    behavior.
+  judgment: Can shortlist research literature, but incomplete recall requires additional search and expert
+    screening.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-a898bb616c7a
+  contradictory_evidence_ids: []
+  conditions:
+  - ScholarCatalyst tool-calling agent; 207 CoreQ and687 SubQ; default thinking, Gemini Embedding 2, five search
+    rounds and 60-paper pool.
+  - Titles/abstracts in temporally filtered local corpus; no web; unknown API checkpoint, run date and precision.
+  known_failure_modes:
+  - R@20 misses roughly half the labeled inspirations; declines and ranking backfill affect results.
+  evidence_notes:
+  - Post-cutoff comparison only; does not establish RAG answer grounding or research synthesis.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspected on 2026-10-08; task-rubric 1.1 applied without transferring neighboring-task
+      scores.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-0632bedb804079d6
+  scope: direct
+  task_ids:
+  - coding.repository_work
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Original exact-model source inspected against this task rubric; no transfer to neighboring tasks.
+  judgment: The reported Snake conversion integrates an engine, browser interface, CLI simulator and tests,
+    supporting assisted repository changes with material review.
+  confidence: low
+  supporting_evidence_ids:
+  - src-2f822bc8e7fe
+  contradictory_evidence_ids: []
+  conditions:
+  - One existing-app transformation with shared deterministic outcomes required across browser and CLI.
+  known_failure_modes:
+  - No published patch or hidden acceptance results establish full cross-file consistency or repeatability.
+  evidence_notes:
+  - This case is distinct from review metrics and is not a repository-wide completion rate.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspection on 2026-10-08; source-specific task, setup and limitations retained.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-066745f9ef77af12
+  scope: direct
+  task_ids:
+  - vision.question_answering
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact task in one evaluator workflow.
+  judgment: Useful for checked image-grounded answers; material answer and output-format errors remain.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-efd1db045882
+  - src-12127a4ce5a0
+  - src-5a898812893e
+  contradictory_evidence_ids: []
+  conditions:
+  - Roboflow low/high benchmark tiers, three repeated runs per tier; exact native effort mapping unspecified.
+  - Provider endpoint, snapshot, precision, context length, sample denominator and measurement dates undisclosed.
+  known_failure_modes:
+  - Judge-accepted correctness substantially exceeds exact-match compliance.
+  evidence_notes:
+  - Judge accuracy low72.0/high73.1; strict accuracy low18.3/high36.2. Gemini3.5 Flash temperature0 judge.
+  - Displayed ± is half-range, not confidence interval. Independent evaluator but one study; no external replication
+    found.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original evaluator task page and methodology inspected; one source/task identity consolidated across
+      effort tiers.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-21c1f66c73e4b3b1
+  scope: direct
+  task_ids:
+  - coding.frontend
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Original exact-model source inspected against this task rubric; no transfer to neighboring tasks.
+  judgment: Produces useful initial interfaces, with interaction, responsiveness and product-logic corrections
+    still needed.
+  confidence: low
+  supporting_evidence_ids:
+  - src-646a48b2dcda
+  contradictory_evidence_ids: []
+  conditions:
+  - 'Three briefs: finance dashboard, reference-guided portfolio and video-editor prototype; one focused feedback
+    round.'
+  - Author reports functioning dashboard tooltips; website task used Mobbin and 21st.dev MCP references.
+  known_failure_modes:
+  - Responsive and interaction decisions needed correction; the editor was a shell rather than a verified full
+    editing product.
+  evidence_notes:
+  - Named practitioner, small subjective sample and affiliate disclosure. Exact serving configuration and systematic
+    acceptance tests are absent.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspection on 2026-10-08; source-specific task, setup and limitations retained.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-226284e4e8c7d97e
+  scope: direct
+  task_ids:
+  - context.reasoning
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact assigned rubric task; conclusion applies only to the documented evaluation or reported
+    behavior.
+  judgment: Useful cross-document reasoning at tested lengths, with explicit checking of derived conclusions.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-bc2410652a3c
+  - src-1ea3e75f96c3
+  - src-a13e90c351de
+  contradictory_evidence_ids:
+  - src-bc2410652a3c
+  - src-762b457920fe
+  conditions:
+  - AA-LCR v1.1:~10K–100K supplied text, 100 questions × 3, no tools, GPT-5.6 Luna (medium) equality checker.
+  - Fable 5.1 max/default-fallback service; task-specific fallback share and measurement date unknown.
+  known_failure_modes:
+  - Some questions fail; separate professional-document all-pass performance is substantially lower.
+  evidence_notes:
+  - AA-LCR 85% cannot be extrapolated to 1M context. GDP.pdf 26% all-pass has different criteria and document
+    input.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspected on 2026-10-08; task-rubric 1.1 applied without transferring neighboring-task
+      scores.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-2baa77d0e49174ac
+  scope: direct
+  task_ids:
+  - context.reasoning
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact assigned rubric task; conclusion applies only to the documented evaluation or reported
+    behavior.
+  judgment: Can aggregate facts across supplied enterprise documents in the tested 128K setup; verify important
+    conclusions.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-da0a1b7f074e
+  - src-61425dc99484
+  contradictory_evidence_ids: []
+  conditions:
+  - Anthropic API thinking mode, measured2026-09-02; RIKER 128K, no retrieval tools, generated-ground-truth
+    grading.
+  - Exact effort, per-component task denominator, repetitions, provider checkpoint and precision undisclosed.
+  known_failure_modes:
+  - Aggregation not perfect; generated corpora limit real-document generalization.
+  evidence_notes:
+  - Aggregation 95.3 is distinct from RIKER retrieval 97.3 and the agentic workflow total.
+  observed_at: '2026-10-08'
+  effective_from: '2026-09-02'
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspected on 2026-10-08; task-rubric 1.1 applied without transferring neighboring-task
+      scores.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-386854e040d319d5
+  scope: direct
+  task_ids:
+  - language.writing
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact assigned rubric task; conclusion applies only to the documented evaluation or reported
+    behavior.
+  judgment: Useful English creative-writing drafts; edit for audience, readability and preferred style.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-d6a1516325c4
+  - src-d8d48de1253a
+  - src-ed7dde47f5c6
+  - src-c37c7c421a60
+  contradictory_evidence_ids:
+  - src-557f96ccb327
+  conditions:
+  - Exact claude-fable-5-1 rows in evaluator site data; effort, underlying provider and measurement date undisclosed.
+  - Creative Writing v3:32 prompts × 3; longform:eight chapters; LLM judgments, not human acceptance.
+  known_failure_modes:
+  - Judge style preferences may differ from readers; vendor reports dense prose.
+  evidence_notes:
+  - Longform 85.3/100 and v3 Elo 2152.7/rubric 16.95 are separate, subjective metrics from one evaluator group.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspected on 2026-10-08; task-rubric 1.1 applied without transferring neighboring-task
+      scores.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-5716da0bdaa18296
+  scope: direct
+  task_ids:
+  - reasoning.math
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact assigned rubric task; conclusion applies only to the documented evaluation or reported
+    behavior.
+  judgment: Strong mathematical answer-solving candidate; check derivations and final answers before relying
+    on them.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-47ab448cf23c
+  - src-7ae2dea476f9
+  - src-746dd121a2db
+  contradictory_evidence_ids: []
+  conditions:
+  - Epoch mathematical evaluations; FrontierMath permits Python and1M combined-token budget; OTIS scores integer
+    answers.
+  - Rendered model rows do not disclose Fable effort, provider, checkpoint, repeat counts, actual denominator
+    or measurement date.
+  known_failure_modes:
+  - Advanced problems still receive incorrect answers; proof validity is not separately evaluated.
+  evidence_notes:
+  - Rounded original scorecard:90% FrontierMath1–3, 88% Tier 4, 100% OTIS. Final-answer scores do not certify
+    proofs.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspected on 2026-10-08; task-rubric 1.1 applied without transferring neighboring-task
+      scores.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-689bb2ecd898d750
+  scope: direct
+  task_ids:
+  - coding.scoped_edit
+  related_task_ids: []
+  assessment: warning
+  scope_note: Original exact-model source inspected against this task rubric; no transfer to neighboring tasks.
+  judgment: 'Constrain the edit boundary: the vendor reports unrequested additions and larger edits than necessary.'
+  confidence: low
+  supporting_evidence_ids:
+  - src-557f96ccb327
+  contradictory_evidence_ids: []
+  conditions:
+  - Open-ended feature requests; official guidance says nearby fixes or extra tests may be added.
+  - Whole-file rewriting can increase output tokens and time even when the resulting file is equivalent.
+  known_failure_modes:
+  - Scope expansion and edit overhead require review; overhead alone is not correctness failure.
+  evidence_notes:
+  - Prompting advice does not establish measured recovery or a bounded edit success rate.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspection on 2026-10-08; source-specific task, setup and limitations retained.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-7072f78efd6409e3
+  scope: direct
+  task_ids:
+  - agent.long_horizon
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Original exact-model source inspected against this task rubric; no transfer to neighboring tasks.
+  judgment: Completes a useful subset of dependent terminal workflows with a minimal agent loop, with many
+    tasks still requiring intervention.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-bc2410652a3c
+  - src-1ea3e75f96c3
+  contradictory_evidence_ids: []
+  conditions:
+  - 'Fable 5.1 Max, Default Fallback: 52% Terminal-Bench 4.0 pass@1 averaged across three repeats of 66 tasks.'
+  - mini-swe-agent; bash; 500 steps; no compaction; task success requires all verifier tests.
+  known_failure_modes:
+  - Nearly half of the rounded aggregate does not pass all task tests; a mixed terminal total does not isolate
+    a coding skill.
+  evidence_notes:
+  - Independent evaluation configuration differs from the vendor launch harness. Fallback, missing checkpoint
+    and run dates constrain transfer.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspection on 2026-10-08; source-specific task, setup and limitations retained.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-792deb882f31613b
+  scope: direct
+  task_ids:
+  - agent.computer_use
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Original exact-model source inspected against this task rubric; no transfer to neighboring tasks.
+  judgment: Vendor evidence supports assisted desktop workflows, with checkpoints and human recovery required
+    for incomplete tasks.
+  confidence: low
+  supporting_evidence_ids:
+  - src-e7232d52f37f
+  contradictory_evidence_ids: []
+  conditions:
+  - 'OSWorld 2.0 August 2026 task release: 77.9% partial credit and 41.7% strict completion; production safeguards
+    enabled and refused tasks scored zero.'
+  known_failure_modes:
+  - Most tasks did not reach strict completion; partial progress must not be presented as a saved or completed
+    outcome.
+  evidence_notes:
+  - Vendor-only task evidence. Original system card body could not be fetched; effort, client, step limit,
+    trials and task denominator remain unverified.
+  - No independent exact-model OSWorld reproduction located in the allotted searches.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspection on 2026-10-08; source-specific task, setup and limitations retained.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-86bb987e0b07f068
+  scope: direct
+  task_ids:
+  - knowledge.extraction
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact assigned rubric task; conclusion applies only to the documented evaluation or reported
+    behavior.
+  judgment: Useful for specified fields in images, with value verification and output-format checks.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-e8dd758dd28d
+  - src-5a898812893e
+  contradictory_evidence_ids: []
+  conditions:
+  - Roboflow low/high benchmark tiers; three runs each; native API effort mapping, sample denominator and run
+    dates unknown.
+  - Gemini 3.5 Flash temperature0 judge plus normalized exact-match companion.
+  known_failure_modes:
+  - Incorrect values remain; strict output matching trails semantic correctness.
+  evidence_notes:
+  - Low 93.1% judged/89.7% strict; high 93.5%/92.1%. Reported±values are half-ranges, not confidence intervals.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspected on 2026-10-08; task-rubric 1.1 applied without transferring neighboring-task
+      scores.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-aa593e899e272552
+  scope: direct
+  task_ids:
+  - language.translation
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact assigned rubric task; conclusion applies only to the documented evaluation or reported
+    behavior.
+  judgment: Useful ancient-text translation drafts; require scholarly fidelity review and English style revision.
+  confidence: low
+  supporting_evidence_ids:
+  - src-e3d69f4d01f5
+  contradictory_evidence_ids: []
+  conditions:
+  - Ancient Greek/Classical Chinese into English; ten passages, one cold draft per passage; Opus 5 blind/adversarial
+    judging.
+  - Provider, API effort, immutable snapshot, token budget and precision were not disclosed.
+  known_failure_modes:
+  - Minor translation errors and excessively literal English persisted.
+  evidence_notes:
+  - 24/30 preferences are judge votes, not30 independent translations. Historical controls and prompts were
+    unmatched.
+  observed_at: '2026-10-08'
+  effective_from: '2026-09-01'
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspected on 2026-10-08; task-rubric 1.1 applied without transferring neighboring-task
+      scores.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-aabef5a9b68bec41
+  scope: direct
+  task_ids:
+  - vision.grounding
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact task in one evaluator workflow.
+  judgment: Useful for reviewed zero-shot bounding boxes; localization errors require material correction.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-aac5808af0ec
+  - src-12127a4ce5a0
+  - src-5a898812893e
+  contradictory_evidence_ids: []
+  conditions:
+  - Roboflow low/high benchmark tiers, three repeated runs per tier; exact native effort mapping unspecified.
+  - Provider endpoint, snapshot, precision, context length, sample denominator and measurement dates undisclosed.
+  known_failure_modes:
+  - Stricter box-overlap scores are substantially lower; do not treat mAP as complete-task success.
+  evidence_notes:
+  - mAP@50 low61.4/high65.0; mAP@75 low40.2/high40.4; mAP@50:95 low38.0/high39.6.
+  - Displayed ± is half-range, not confidence interval. Independent evaluator but one study; no external replication
+    found.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original evaluator task page and methodology inspected; one source/task identity consolidated across
+      effort tiers.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-aae2313e7b9446b7
+  scope: direct
+  task_ids:
+  - agent.tool_use
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Original exact-model source inspected against this task rubric; no transfer to neighboring tasks.
+  judgment: Can complete many multi-tool workflows in MCP Atlas, but validate final claims and consequential
+    tool effects.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-19f038745d53
+  - src-38bd374632c5
+  contradictory_evidence_ids: []
+  conditions:
+  - Fable 5.1 default configuration; 87.20% pass rate, displayed ±2.05; public 500-task subset; 100 tool-call
+    cap.
+  - A pass requires at least 75% claim coverage, not every objective.
+  known_failure_modes:
+  - Failures remain, and a passing task may still omit part of its answer.
+  evidence_notes:
+  - Exact effort, trial count, serving checkpoint and run date undisclosed.
+  - 'Judge identity unresolved: leaderboard says Gemini 2.5 Pro, linked current code says Gemini 3.1 Pro Preview.
+    These are one study, not corroborating streams.'
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspection on 2026-10-08; source-specific task, setup and limitations retained.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-b9dc2f9ad518ea55
+  scope: direct
+  task_ids:
+  - coding.frontend
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Original exact-model source inspected against this task rubric; no transfer to neighboring tasks.
+  judgment: A reported Battlesnake prototype demonstrates useful working interface generation, but does not
+    establish production acceptance.
+  confidence: low
+  supporting_evidence_ids:
+  - src-2f822bc8e7fe
+  contradictory_evidence_ids: []
+  conditions:
+  - CodeRabbit changed an existing Snake app into a five-agent spectator arena with a shared browser/CLI engine;
+    its recorded match reached turn 793.
+  known_failure_modes:
+  - One showcased coding case is not a measured general frontend success rate.
+  evidence_notes:
+  - Separate from the 45-task code-review study. Effort, endpoint, attempts, executable artifact and accessibility
+    checks were not disclosed.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspection on 2026-10-08; source-specific task, setup and limitations retained.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-c62c550542276e11
+  scope: unresolved
+  task_ids: []
+  related_task_ids:
+  - coding.debugging
+  - coding.scoped_edit
+  assessment: conditional
+  scope_note: Repair-only pilot does not disclose whether diagnosis or implementing a supplied correction is
+    the measured work.
+  judgment: A small saturated pilot corroborates basic repair execution, without isolating diagnosis from implementing
+    a supplied correction.
+  confidence: low
+  supporting_evidence_ids:
+  - src-197c483f8b0e
+  contradictory_evidence_ids: []
+  conditions:
+  - 'September 1 pilot: Fable 5.1 low, Vercel AI Gateway pinned to Anthropic; all six JavaScript repair cases
+    passed hidden tests.'
+  known_failure_modes:
+  - Six small tasks cannot establish broad repository or debugging reliability.
+  evidence_notes:
+  - The overall 30/30 includes 20 streaming checks and four research cases; it is never used as a coding success
+    denominator.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspection on 2026-10-08; source-specific task, setup and limitations retained.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-e3faa2efb33104c6
+  scope: direct
+  task_ids:
+  - coding.tests
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Original exact-model source inspected against this task rubric; no transfer to neighboring tasks.
+  judgment: Useful for drafting behavior-focused repository tests, with material correction and mutation checking
+    still required.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-6d6d4946296a
+  contradictory_evidence_ids: []
+  conditions:
+  - 'Fable-5.1 (Claude Code) xHigh*: 67.04% mean resolve rate, displayed ±5.33; 90 tasks and 3 trials.'
+  - Tests must pass before mutation, fail after the relevant code mutation, and meet mandatory coverage rubrics.
+  known_failure_modes:
+  - A substantial fraction of tasks still failed the combined acceptance checks; pooled error taxonomy is not
+    a Fable-specific rate.
+  evidence_notes:
+  - Independent task-specific evaluation; exact checkpoint, client build and measurement dates remain unknown.
+  - Star footnote explicitly names Fable 5; no Fable 5.1-specific refusal frequency is inferred.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspection on 2026-10-08; source-specific task, setup and limitations retained.
+- model_id: claude-fable-5-1
+  profile: models/anthropic/claude-fable-5-1/profile.yaml
+  id: judgment-ee5501be80efeccf
+  scope: direct
+  task_ids:
+  - agent.tool_use
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Original exact-model source inspected against this task rubric; no transfer to neighboring tasks.
+  judgment: Useful partial SaaS workflow execution under structured API tools; do not treat partial objectives
+    as complete business workflows.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-bc2410652a3c
+  - src-1ea3e75f96c3
+  contradictory_evidence_ids: []
+  conditions:
+  - 'Fable 5.1 Max, Default Fallback: 59% AutomationBench-AA headline score.'
+  - 657 tasks, dataset 1.0.6, one run per task, 50-turn cap; final-state assertions; any guardrail violation
+    zeros the task.
+  known_failure_modes:
+  - Unmet objectives and policy failures can remain; headline is average objective share rather than full completion.
+  evidence_notes:
+  - Fallback affects provenance; exact model-only result and run dates unavailable.
+  - Separate API workflow evidence supports tool use, not graphical computer use.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspection on 2026-10-08; source-specific task, setup and limitations retained.
 - model_id: claude-haiku-4-5
   profile: models/anthropic/claude-haiku-4-5/profile.yaml
   id: judgment-86b4ad915dcef6a0
@@ -1001,19 +1651,25 @@ records:
   related_task_ids: []
   assessment: warning
   scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
-  judgment: Generated tests require semantic checks after code changes, even when original-program tests pass.
+  judgment: 'The source does isolate Haiku test validity under code evolution: Figure 7 reports 88.4% test
+    passing after semantics-preserving edits and 63.6% after semantic-changing edits. Useful fault detection
+    remains unestablished; these are freshly generated tests intended to match the new supplied code.'
   confidence: low
   supporting_evidence_ids:
   - src-995284168dc8
+  - src-ded49f004360
   contradictory_evidence_ids: []
   conditions:
-  - Two-shot snippet workflow; dated API experiment; not ClaudeCode.
-  - Named release matches; preserve source-specific provider, snapshot and precision limitations.
+  - Two-shot API snippet workflow; fresh session per changed valid program; baseline programs selected for
+    all-passing tests.
+  - Figure 7 combines the documented Java/Python evolution conditions; exact serving checkpoint, effort and
+    experiment day are unreported.
   known_failure_modes:
-  - Behavioral changes materially reduced test pass rate.
+  - Generated assertions can fail the newly supplied code semantics. Coverage and test pass rate are not fault-detection
+    success.
   evidence_notes:
   - Confidence concerns this bounded claim, not a capability score.
-  observed_at: '2026-10-07'
+  observed_at: '2026-10-08'
   effective_from: null
   provenance:
     origin: research
@@ -1063,16 +1719,20 @@ records:
   confidence: low
   supporting_evidence_ids:
   - src-e495b08b40a6
+  - src-973625333a94
+  - src-5630fbf63aaf
   contradictory_evidence_ids: []
   conditions:
   - Temperature zero; 200 single-turn literary prompts and 100 three-turn conversations.
+  - Original saved single-turn artifacts establish OpenRouter requested model anthropic/claude-haiku-4.5, 147/200
+    strict prompts and 334/405 constraints.
   known_failure_modes:
   - Rule-based constraint compliance does not establish factual literary correctness or all-language instruction
     quality.
   evidence_notes:
   - Low confidence reflects limited tasks, source/setup uncertainty and lack of independent replication; scores
     do not define confidence. Empty contradictory evidence means none was located in this bounded pass.
-  observed_at: '2026-10-07'
+  observed_at: '2026-10-08'
   effective_from: null
   provenance:
     origin: research
@@ -1114,10 +1774,11 @@ records:
   task_ids:
   - language.summarization
   related_task_ids: []
-  assessment: weak
+  assessment: warning
   scope_note: The measured task fits this rubric boundary; no transfer to adjacent tasks.
-  judgment: ORCFLO cautions against summary-heavy executive digests and meeting recaps. This supports a tentative
-    negative task-fit conclusion, with public error-level evidence unavailable.
+  judgment: ORCFLO recommends avoiding summary-heavy executive digests and meeting recaps, but its public five-case
+    mean and comparative rank do not establish that core summary fidelity failures undermine usefulness. Preserve
+    this as an attributed caution; aggregate task suitability remains unknown.
   confidence: low
   supporting_evidence_ids:
   - src-bfdf4f90e154
@@ -1131,6 +1792,7 @@ records:
   - The caution is principally comparative; neither score nor cohort rank defines a suitability threshold.
   - Five English single-turn cases and four LLM judges form one evaluation stream. Public summary-specific
     fidelity failures and correction burden are unestablished.
+  - A relative rank and evaluator recommendation are not themselves a rubric-grounded Low suitability threshold.
   observed_at: '2026-10-08'
   effective_from: null
   provenance:
@@ -1269,22 +1931,624 @@ records:
   confidence: low
   supporting_evidence_ids:
   - src-28f7598af662
+  - src-45a5ce926864
   contradictory_evidence_ids: []
   conditions:
   - Anthropic API, temperature zero, eight-shot examples, tuned format and reasoning prefill; no code execution
     in CoT.
+  - Paper-linked implementation requests claude-haiku-4-5-20251001 with max_tokens=1024; response-level serving
+    metadata remains unverified.
   known_failure_modes:
-  - Immutable revision unknown; prompt tuning and familiar corpus; two collection runs; numerical answer matching
-    does not evaluate proofs.
+  - Prompt tuning and familiar corpus; two collection runs across methods; numerical-answer matching does not
+    evaluate proof validity; experiment day unreported.
   evidence_notes:
   - Direct task scope follows the reported output and metric; confidence is low because this is one bounded
     study with the stated setup limitations.
-  observed_at: '2026-10-07'
+  observed_at: '2026-10-08'
   effective_from: null
   provenance:
     origin: research
     research_batch_id: research-run-pilot-2026-10-07-v1-1
     method: Inspected original public reports and recorded bounded searches; no inference or benchmark execution.
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-0e2ad8ff50a90bd1
+  scope: direct
+  task_ids:
+  - coding.refactoring
+  related_task_ids: []
+  assessment: warning
+  scope_note: Bounded to the explicitly evaluated task and recorded configuration.
+  judgment: The structured workflow preserves tests but completes no API-usage repairs, including two genuine
+    cases, and no unstable-dependency repairs. These core cross-module failures undermine usefulness for that
+    difficult refactoring scope.
+  confidence: low
+  supporting_evidence_ids:
+  - src-b927ea5d3000
+  contradictory_evidence_ids: []
+  conditions:
+  - '65 hard-tier scikit-learn smells: 11 genuine, 41 false positives, 13 partial. One run per configuration;
+    no repeated trials.'
+  - 18/65 disappeared, including cascading effects;16 new smells, net +2; full test suite showed no deviations.
+  known_failure_modes:
+  - Single project/detector; task ordering and false-positive mix affect counts; this is not a genuine-bug
+    success rate.
+  - Exact endpoint, CLI version, decoding, context, precision and experiment date undisclosed.
+  evidence_notes:
+  - Architectural-smell repair is distinct from designing a new software architecture.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku45-evidence-review-2026-10
+    method: Original public body inspection; no inference execution.
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-10d8ce2322d17da0
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - research.synthesis
+  - research.fact_check
+  - reasoning.scientific
+  assessment: warning
+  scope_note: Bounded source-specific finding; no transfer to other tasks or serving configurations.
+  judgment: Controlled multi-source estimate and source-choice probes show sensitivity to credible presentation
+    despite impossible numerical claims.
+  confidence: low
+  supporting_evidence_ids:
+  - src-a44e3cdec40a
+  contradictory_evidence_ids: []
+  conditions:
+  - Four-source synthetic threads across three domains; Bedrock; temperature 1, max_tokens 4000; both thinking
+    modes.
+  known_failure_modes:
+  - Source weighting fails to discriminate valid from impossible statistics; explicit statistical detection
+    depends on domain.
+  evidence_notes:
+  - These probes do not measure complete attributed research synthesis or source-based fact-checking; no direct
+    task aggregate follows.
+  - Mechanistic claims from Qwen/OLMo do not establish the internal cause in Haiku.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: haiku45-public-source-review-2026-10-08
+    method: Read original public source and available configuration; no model execution.
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-1a104280be08ac23
+  scope: direct
+  task_ids:
+  - coding.review
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Directly measured task subset; neighboring tasks and unmeasured operating conditions are not
+    endorsed.
+  judgment: A separate six-diff test found useful bug-specific reviews and 10 of 18 pairwise wins for Haiku.
+    This small relative-preference result does not establish recall on larger real changes.
+  confidence: low
+  supporting_evidence_ids:
+  - src-c3b032962bda
+  contradictory_evidence_ids: []
+  conditions:
+  - Six common-defect prompts, with no few-shot examples. A Sonnet 4 judge evaluated both presentation orders.
+  known_failure_modes:
+  - No absolute bug-recall or completeness metric. Checkpoint, provider route and decoding settings are unknown.
+  evidence_notes: []
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    method: Inspected original public source bodies and supplied exact task rubric; no model or benchmark execution.
+    research_batch_id: research-run-haiku45-public-source-review-2026-10-08
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-3c8d2ae9d1bfffd7
+  scope: direct
+  task_ids:
+  - vision.question_answering
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Bounded to the explicitly evaluated task and recorded configuration.
+  judgment: Quantum-plot visual descriptions are useful with checks on axes and features; scientific diagnosis
+    is separately assessed.
+  confidence: low
+  supporting_evidence_ids:
+  - src-8c34675c07eb
+  - src-0b70e8e50a2d
+  contradictory_evidence_ids: []
+  conditions:
+  - Zero-shot without demonstrations; 243 calibration plots, each question an independent single-turn API request;
+    temperature 0, max output 16384, default top_p; up to 3 API-failure retries.
+  - PNG image plus family background; no shared conversation; no hidden system prompt.
+  known_failure_modes:
+  - Original repository labels the identical archived April scores as GPT-5.4-judged; paper claims a GPT-5.4/Gemini3.1Pro
+    average. Exact scoring provenance unresolved.
+  - Paper lists Haiku in results but omits it from the appendix exact-ID/April 6 access list; serving snapshot
+    and run date remain unknown.
+  - One study; reported repeated-run denominator, precision and endpoint not disclosed.
+  evidence_notes:
+  - Does not measure coordinate localization or general-image performance.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku45-evidence-review-2026-10
+    method: Original public body inspection; no inference execution.
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-4d7a4a67517d2ef4
+  scope: direct
+  task_ids:
+  - knowledge.classification
+  related_task_ids: []
+  assessment: warning
+  scope_note: Bounded source-specific finding; no transfer to other tasks or serving configurations.
+  judgment: Classification quality varies materially with schema layout and instruction consistency on four
+    argumentative-structure labels.
+  confidence: low
+  supporting_evidence_ids:
+  - src-07726bccff52
+  - src-37177d625111
+  contradictory_evidence_ids: []
+  conditions:
+  - Same 48-message taxonomy and five-repeat conditions as the schema-conflict behavior record.
+  known_failure_modes:
+  - Near-half accuracy under ordinary schema/system placement; substantial residual errors after the intermediate-field
+    intervention.
+  evidence_notes:
+  - Single taxonomy; not an independent replication of the Reddit classification study.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: haiku45-public-source-review-2026-10-08
+    method: Read original public source and available configuration; no model execution.
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-4fea9b29bcbbbfba
+  scope: direct
+  task_ids:
+  - language.translation
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Bounded to the explicitly evaluated task and recorded configuration.
+  judgment: 'Ukrainian-English idiom translation is useful with material semantic review: scored meaning loss
+    occurs in 23.1% of English-to-Ukrainian outputs and 12.8% in the reverse direction. Literal meaning-preserving
+    outputs are not counted as failures.'
+  confidence: low
+  supporting_evidence_ids:
+  - src-c797c226aadf
+  - src-8b699ba6c657
+  - src-cf7bab40a0e4
+  - src-ae0a47d047ce
+  - src-e28da843552b
+  contradictory_evidence_ids: []
+  conditions:
+  - Ukrainian↔English; source-only versus named-idiom prompts. Paper says API defaults; released code sets
+    temperature 0.3/max_tokens 1024 and the dated request ID. Historical script-to-run equivalence unresolved.
+  - 'Gemini 2.5 Flash judge: 3 idiomatic meaning preserved,2 meaning preserved without idiom, 1 meaning lost/distorted.'
+  known_failure_modes:
+  - Published Haiku CSVs contain 5,724 EN→UK and 5,474 UK→EN scored outputs (11,198 total); generation-attempt
+    denominator and repeated trials remain unknown. Missing translations and failed judge calls are omitted
+    by the released scorer.
+  - Single language pair; judge agrees with human sample 87% UK→EN and 78% EN→UK; no qualitative error analysis.
+  evidence_notes:
+  - Literal meaning-preserving output is separated from semantic distortion; no transfer to other language
+    pairs.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku45-evidence-review-2026-10
+    method: Original public body inspection; no inference execution.
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-758101839480474d
+  scope: direct
+  task_ids:
+  - language.writing
+  related_task_ids: []
+  assessment: warning
+  scope_note: Directly measured task subset; neighboring tasks and unmeasured operating conditions are not
+    endorsed.
+  judgment: For scientific sentence paraphrasing and news-style rewriting, frequent certainty changes undermine
+    the requirement to preserve the source meaning and qualifications. Ordinary stylistic review is insufficient;
+    source-by-source certainty checking is needed.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-92c74f3bbf1d
+  contradictory_evidence_ids: []
+  conditions:
+  - 397 scientific sentence inputs. Haiku certainty distortion was 48.1% for paraphrase and 74.8% for news-style
+    rewriting. Generation used temperature 1, top_p 0.9 and a 3,500-token budget.
+  - A GPT-5.4-mini judge evaluated both presentation orders. Human validation used 240 pairs and 129 annotators;
+    human agreement alpha was about 0.25.
+  known_failure_modes:
+  - The metric concerns subjective certainty judgments. Provider, experiment day and repeated-generation variance
+    are unknown. No claim is made about unconstrained fiction or every kind of prose.
+  evidence_notes:
+  - Judge-human consensus Kendall tau-B was 0.47 (SD 0.09), compared with 0.34 (SD 0.19) for individual humans.
+    Opposite-direction judgments across presentation orders were flagged separately; no numeric inconsistency
+    rate was verified in this pass.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    method: Inspected original public source bodies and supplied exact task rubric; no model or benchmark execution.
+    research_batch_id: research-run-haiku45-public-source-review-2026-10-08
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-7e7ea26a42505283
+  scope: direct
+  task_ids:
+  - coding.frontend
+  related_task_ids: []
+  assessment: warning
+  scope_note: Directly measured task subset; neighboring tasks and unmeasured operating conditions are not
+    endorsed.
+  judgment: Public generated-HTML examples contain automated accessibility violations. They add concrete caution
+    to preference rankings but do not establish complete frontend interaction correctness.
+  confidence: low
+  supporting_evidence_ids:
+  - src-5d3a74a063b2
+  - src-840bbb3c17c1
+  contradictory_evidence_ids: []
+  conditions:
+  - Visible first-variation metrics showed eight axe violations on the landing page and 21 on the dashboard.
+    Scores combine automatic audits and static structural markers.
+  known_failure_modes:
+  - Selected harness option, checkpoint, experiment date and functional acceptance tests are unknown.
+  evidence_notes: []
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    method: Inspected original public source bodies and supplied exact task rubric; no model or benchmark execution.
+    research_batch_id: research-run-haiku45-public-source-review-2026-10-08
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-82dd0466ce1765b0
+  scope: direct
+  task_ids:
+  - reasoning.scientific
+  related_task_ids: []
+  assessment: warning
+  scope_note: Bounded to the explicitly evaluated task and recorded configuration.
+  judgment: Zero-shot quantum-calibration explanations omit much of the required scientific analysis; demonstrations
+    help but do not establish unattended reliability.
+  confidence: low
+  supporting_evidence_ids:
+  - src-8c34675c07eb
+  - src-0b70e8e50a2d
+  contradictory_evidence_ids: []
+  conditions:
+  - Zero-shot without demonstrations; 243 calibration plots, each question an independent single-turn API request;
+    temperature 0, max output 16384, default top_p; up to 3 API-failure retries.
+  - PNG image plus family background; no shared conversation; no hidden system prompt.
+  known_failure_modes:
+  - Original repository labels the identical archived April scores as GPT-5.4-judged; paper claims a GPT-5.4/Gemini3.1Pro
+    average. Exact scoring provenance unresolved.
+  - Paper lists Haiku in results but omits it from the appendix exact-ID/April 6 access list; serving snapshot
+    and run date remain unknown.
+  - One study; reported repeated-run denominator, precision and endpoint not disclosed.
+  evidence_notes:
+  - Judge-scored scientific key-point coverage, not a pass rate or general science score.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku45-evidence-review-2026-10
+    method: Original public body inspection; no inference execution.
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-8c70704b38a694d3
+  scope: direct
+  task_ids:
+  - context.retrieval
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Bounded source-specific finding; no transfer to other tasks or serving configurations.
+  judgment: The documented full-context setup retrieves many requested conversational facts but needs material
+    verification for omissions and incorrect references.
+  confidence: low
+  supporting_evidence_ids:
+  - src-f49228a34110
+  contradictory_evidence_ids: []
+  conditions:
+  - 'LongMemEval S single-session subsets: user facts 54/70 and assistant facts 54/56; one December 12,2025
+    run through OpenRouter.'
+  - Whole-run mean input 116,833 tokens; max_tokens 8192; GPT-4o binary judge; immutable endpoint and sampling
+    unpinned.
+  known_failure_modes:
+  - Inspected failures deny available commute/internet facts or select the wrong numbered-list entry.
+  - Binary target-answer grading can miss unsupported extra elaboration in otherwise passing outputs.
+  evidence_notes:
+  - Recommended bounded Medium suitability, Low evidence confidence; not a full-context or all-memory endorsement.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: haiku45-public-source-review-2026-10-08
+    method: Read original public source and available configuration; no model execution.
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-8e60e5da087e6417
+  scope: direct
+  task_ids:
+  - knowledge.extraction
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Directly measured task subset; neighboring tasks and unmeasured operating conditions are not
+    endorsed.
+  judgment: Structured extraction from scholarly PDFs is useful with material human verification. Haiku returned
+    90.6% fully correct values across 770 graded cells; 8.7% were incorrect and 0.6% required checking.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-2db96f59bd00
+  - src-254a5634e649
+  contradictory_evidence_ids: []
+  conditions:
+  - claude-haiku-4-5-20251001 at temperature 0; 43 PDF articles, one API call per article; tuned JSON prompt
+    requiring verbatim evidence and an uncertainty option.
+  known_failure_modes:
+  - Missing outputs were excluded. One generation per article; prompt piloted on five papers. Reference coding
+    was corrected after model disagreement. Difficult variables performed worse.
+  evidence_notes: []
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    method: Inspected original public source bodies and supplied exact task rubric; no model or benchmark execution.
+    research_batch_id: research-run-haiku45-public-source-review-2026-10-08
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-b07849d170385317
+  scope: direct
+  task_ids:
+  - coding.repository_work
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Bounded to the explicitly evaluated task and recorded configuration.
+  judgment: Repository maintenance is useful with substantial correction in the Russian RuBench setup; the
+    product resolves only part of the sampled workload.
+  confidence: low
+  supporting_evidence_ids:
+  - src-8f47498481bf
+  contradictory_evidence_ids: []
+  conditions:
+  - 25 Russian repository-maintenance tasks; 75 rollouts, 14/25,14/25,12/25 resolved; July 5–7, 2026.
+  - Fresh macOS 15.7.3 arm64 workspaces; one-hour timeout; no custom instruction files.
+  - 'Judge: withheld upstream regression tests. Wilson task-level 95% interval35–71%; all runs, no best-of
+    selection.'
+  known_failure_modes:
+  - Reported xhigh setting conflicts with Haiku manual-thinking documentation; effective thinking budget remains
+    unknown.
+  - Main text says web-tool restriction ineffective, appendix says web tools disabled; preserve this setup
+    contradiction.
+  - Private oracles, five repositories; no universal repository guarantee.
+  evidence_notes:
+  - Confidence remains Low because effective thinking and web-tool setup are contradictory despite exact checkpoint
+    and repeated runs.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku45-evidence-review-2026-10
+    method: Original public body inspection; no inference execution.
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-b3102f36ea72719b
+  scope: direct
+  task_ids:
+  - coding.scoped_edit
+  related_task_ids: []
+  assessment: warning
+  scope_note: Directly measured task subset; neighboring tasks and unmeasured operating conditions are not
+    endorsed.
+  judgment: Bulk one-shot Project Euler implementation in Java/Spring Boot produced few correct answers in
+    these Haiku/CLI configurations, despite structural conformance. Do not transfer the nine easy Python-function
+    result to this harder batched workload.
+  confidence: low
+  supporting_evidence_ids:
+  - src-9ed314df795b
+  contradictory_evidence_ids: []
+  conditions:
+  - 992 supplied problems per configuration. Cursor and Claude Code were tested separately. P1 grouped up to
+    100 methods per class; P2 used one class per problem. Each configuration was generated once and repair
+    iteration was forbidden.
+  known_failure_modes:
+  - Correct answers ranged from 36 to 76 out of 992 across the four setups. Missing methods, wrong constants
+    and runtime failures occurred. The exact checkpoint and effort were unreported.
+  evidence_notes: []
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    method: Inspected original public source bodies and supplied exact task rubric; no model or benchmark execution.
+    research_batch_id: research-run-haiku45-public-source-review-2026-10-08
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-b4b2fdfa65bc0ad1
+  scope: direct
+  task_ids:
+  - context.reasoning
+  related_task_ids: []
+  assessment: warning
+  scope_note: Bounded to the explicitly evaluated task and recorded configuration.
+  judgment: Long-context graph traversal misses substantial required node relationships even when relevant
+    edges remain present.
+  confidence: low
+  supporting_evidence_ids:
+  - src-28ef96954527
+  contradictory_evidence_ids: []
+  conditions:
+  - 50 longest BFS samples within 200k-token filter; median realized input about 68k; max output 4096; temperature
+    0.
+  - Full signal-aware arm 0.538; 25%-retention 0.621. Separate naive full-context run 0.582, not a replicated
+    mean.
+  known_failure_modes:
+  - Synthetic English graphs; selection seed fixed; no independent replication.
+  - Effort, tool configuration, serving provider, exact run dates and precision undisclosed.
+  - Header says August 4 while manuscript text says August 24; neither is a proven experiment date.
+  evidence_notes:
+  - This supports a narrow caution for synthetic graph integration, not a claim about every long document.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku45-evidence-review-2026-10
+    method: Original public body inspection; no inference execution.
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-b60f654a5d08e6d7
+  scope: direct
+  task_ids:
+  - language.instruction_following
+  related_task_ids: []
+  assessment: warning
+  scope_note: Bounded source-specific finding; no transfer to other tasks or serving configurations.
+  judgment: An attributable Claude Code subagent report describes invented field names despite a supplied seven-dimension
+    rubric.
+  confidence: low
+  supporting_evidence_ids:
+  - src-2e8458176352
+  - src-d5180defe452
+  contradictory_evidence_ids: []
+  conditions:
+  - 'March archive: six scenarios and 18 subagent evaluations; May API batch: thirteen scenarios and 39 calls.'
+  known_failure_modes:
+  - Fourteen reported field-name substitutions; one refusal and one source-file lookup also reported.
+  evidence_notes:
+  - F 2 percentages measure risk detection, not compliance rate. Different dates, scenario sets and harnesses
+    preclude a controlled route/model regression claim.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: haiku45-public-source-review-2026-10-08
+    method: Read original public source and available configuration; no model execution.
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-b82993d0f0bc5b0a
+  scope: direct
+  task_ids:
+  - language.instruction_following
+  related_task_ids: []
+  assessment: warning
+  scope_note: Directly measured task subset; neighboring tasks and unmeasured operating conditions are not
+    endorsed.
+  judgment: 'Explicit length instructions improved a word-count closeness metric in a small paired test. This
+    does not resolve exact-count failures: the metric gives partial credit and is not the strict exact-length
+    pass rate claimed by some chart labels.'
+  confidence: low
+  supporting_evidence_ids:
+  - src-6f06612f466e
+  - src-ac1de590bc36
+  - src-59cbde8f1f62
+  contradictory_evidence_ids: []
+  conditions:
+  - API request used claude-haiku-4-5 and the returned version was claude-haiku-4-5-20251001. Temperature 0;
+    10 tasks, five passes per arm collapsed to task pairs; target lengths of 25, 100 and 250 words.
+  known_failure_modes:
+  - Small fixed task set. Control used a bare number, not a vague instruction. Reported measurement dates are
+    inconsistent. No strict exact-count pass denominator.
+  evidence_notes: []
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    method: Inspected original public source bodies and supplied exact task rubric; no model or benchmark execution.
+    research_batch_id: research-run-haiku45-public-source-review-2026-10-08
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-d1715bde7b56a4b0
+  scope: direct
+  task_ids:
+  - knowledge.extraction
+  related_task_ids: []
+  assessment: warning
+  scope_note: Directly measured task subset; neighboring tasks and unmeasured operating conditions are not
+    endorsed.
+  judgment: A four-document claim-extraction pipeline recovered about two-thirds of required claims under its
+    fixed prompt and judge, supporting the need to inspect omissions rather than trust an apparently complete
+    extraction.
+  confidence: low
+  supporting_evidence_ids:
+  - src-c3013291f6f8
+  contradictory_evidence_ids: []
+  conditions:
+  - 35 required claims across four cases, three runs on September 13, 2026. General-extractor 0.14.0, suite
+    v0.2.0, embedding cosine threshold at least 0.80, Anthropic route with a 16,384-token output budget.
+  known_failure_modes:
+  - Prompt and judge were tuned for Sonnet. No acceptance threshold; alias without a verified served checkpoint;
+    only four documents.
+  evidence_notes: []
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    method: Inspected original public source bodies and supplied exact task rubric; no model or benchmark execution.
+    research_batch_id: research-run-haiku45-public-source-review-2026-10-08
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-ead74c5a7dd5e11c
+  scope: direct
+  task_ids:
+  - coding.review
+  related_task_ids: []
+  assessment: warning
+  scope_note: Directly measured task subset; neighboring tasks and unmeasured operating conditions are not
+    endorsed.
+  judgment: In the VibeOps diff-only study, Haiku detects common synthetic defects but misses most issues in
+    larger real pull-request diffs. Standalone broad review is unreliable under this prompt and context setup.
+  confidence: low
+  supporting_evidence_ids:
+  - src-e642668a5ed9
+  contradictory_evidence_ids: []
+  conditions:
+  - 100 synthetic cases and 50 real pull requests. Every model received the same JSON prompt at temperature
+    0.1. Deterministic matching was followed by Opus 4.6 judging.
+  known_failure_modes:
+  - Real-PR F1 was 0.066, versus 0.847 on synthetic cases. Automatically extracted ground truth, one prompt
+    and inconsistent summary tables limit confidence.
+  evidence_notes: []
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    method: Inspected original public source bodies and supplied exact task rubric; no model or benchmark execution.
+    research_batch_id: research-run-haiku45-public-source-review-2026-10-08
+- model_id: claude-haiku-4-5
+  profile: models/anthropic/claude-haiku-4-5/profile.yaml
+  id: judgment-fa364716cf875e26
+  scope: direct
+  task_ids:
+  - language.instruction_following
+  related_task_ids: []
+  assessment: warning
+  scope_note: Bounded source-specific finding; no transfer to other tasks or serving configurations.
+  judgment: Conflicting tool-schema label definitions can displace correct system instructions in this compact
+    Haiku classification setup.
+  confidence: low
+  supporting_evidence_ids:
+  - src-07726bccff52
+  - src-37177d625111
+  contradictory_evidence_ids: []
+  conditions:
+  - 48 messages; four nonce labels; five repeats; Anthropic rolling alias, temperature 0, max_tokens 2048,
+    forced classify tool.
+  known_failure_modes:
+  - Incorrect lower-level schema definitions drive most labels under maximal conflict.
+  evidence_notes:
+  - One study; schema-only reasoning-field improvement does not demonstrate conflict recovery.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: haiku45-public-source-review-2026-10-08
+    method: Read original public source and available configuration; no model execution.
 - model_id: claude-haiku-5-5
   profile: models/anthropic/claude-haiku-5-5/profile.yaml
   id: judgment-27ba5595ff0f118f
@@ -1378,20 +2642,21 @@ records:
   related_task_ids: []
   assessment: conditional
   scope_note: Limited to the stated task and inspected evidence; no universal ranking.
-  judgment: Conditional computer operation evidence is limited to the vendor OSWorld 2.1 offline subset (72.4%);
-    harness and effort are incompletely specified.
+  judgment: Vendor OSWorld 2.1 offline results show 72.4% partial checkpoint credit but 37.1% strict all-checkpoint
+    completion. Supervised GUI work can be useful; reliable final-state verification and recovery remain material
+    requirements.
   confidence: low
   supporting_evidence_ids:
   - src-cdb1d51fae04
+  - src-5a6452e14543
   contradictory_evidence_ids: []
   conditions:
-  - Launch-day public evidence; exact deployment must match the recorded setup.
+  - 82 offline tasks, five independent attempts each, 1080 p, max 500 actions, max effort, no VM internet.
   known_failure_modes:
-  - Independent task-specific replication and production acceptance remain unknown.
+  - Most attempts did not satisfy every checkpoint; partial score is not complete workflow success.
   evidence_notes:
-  - Low confidence because source/setup support is sparse or vendor-heavy; no contrary result located in this
-    bounded pass is not agreement.
-  observed_at: '2026-10-07'
+  - Original system-card text and rendered figure freshly inspected; vendor-only confidence remains low.
+  observed_at: '2026-10-08'
   effective_from: null
   provenance:
     origin: research
@@ -1406,20 +2671,22 @@ records:
   related_task_ids: []
   assessment: conditional
   scope_note: Limited to the stated task and inspected evidence; no universal ranking.
-  judgment: Vendor HLE results provide narrow academic reasoning evidence (45.9% without tools, 57.4% with
-    tools), with unresolved effort and measurement dates.
+  judgment: HLE 45.9% no-tools and 57.4% tool-assisted are multidisciplinary academic results. They do not
+    isolate the general logical-reasoning rubric.
   confidence: low
   supporting_evidence_ids:
   - src-cdb1d51fae04
+  - src-5a6452e14543
   contradictory_evidence_ids: []
   conditions:
-  - Launch-day public evidence; exact deployment must match the recorded setup.
+  - Max adaptive thinking, 980k task budget, no compaction; Opus 4.6 grader; tool-enabled search/fetch/code
+    configuration kept separate.
   known_failure_modes:
-  - Independent task-specific replication and production acceptance remain unknown.
+  - No exact general-logic score can be derived from this mixed benchmark.
   evidence_notes:
-  - Low confidence because source/setup support is sparse or vendor-heavy; no contrary result located in this
-    bounded pass is not agreement.
-  observed_at: '2026-10-07'
+  - Existing direct finding identity/scope preserved; this legacy link is not treated as a direct general-reasoning
+    endorsement.
+  observed_at: '2026-10-08'
   effective_from: null
   provenance:
     origin: research
@@ -1434,20 +2701,22 @@ records:
   related_task_ids: []
   assessment: conditional
   scope_note: Limited to the stated task and inspected evidence; no universal ranking.
-  judgment: Vendor Chartography result (46.4%, no tools) supports only a conditional chart-question trial;
-    visual grounding and general image reliability remain unknown.
+  judgment: Vendor Chartography gives 46.4% without tools and 86.2% with a container/image cropping. Both are
+    conditional specialized-chart QA results; tool assistance changes the assessed setup.
   confidence: low
   supporting_evidence_ids:
   - src-cdb1d51fae04
+  - src-5a6452e14543
   contradictory_evidence_ids: []
   conditions:
-  - Launch-day public evidence; exact deployment must match the recorded setup.
+  - 100 specialized chart tasks, mean of five runs, max adaptive thinking; Gemini 3.5 Flash grader with expert
+    acceptable ranges.
   known_failure_modes:
-  - Independent task-specific replication and production acceptance remain unknown.
+  - Unassisted chart answers remain frequently incorrect; no transfer to precise visual grounding.
   evidence_notes:
-  - Low confidence because source/setup support is sparse or vendor-heavy; no contrary result located in this
-    bounded pass is not agreement.
-  observed_at: '2026-10-07'
+  - One vendor study across two configurations; confidence remains low. Independent Roboflow task evidence
+    is a separate new finding.
+  observed_at: '2026-10-08'
   effective_from: null
   provenance:
     origin: research
@@ -1518,25 +2787,1273 @@ records:
   related_task_ids: []
   assessment: warning
   scope_note: Limited to the stated task and inspected evidence; no universal ranking.
-  judgment: 'Warning: the creator reports code changes can be declared complete without verification at low/medium
-    effort; broad repository correctness remains unknown.'
+  judgment: Creator documents that low/medium-effort code changes can be reported complete without an exercising
+    check. A verification prompt reportedly helps, but frequency and independent recovery are unmeasured.
   confidence: low
   supporting_evidence_ids:
   - src-8ac74a7d6b30
   contradictory_evidence_ids: []
   conditions:
-  - Effort and prompt length matter; no transfer to arbitrary harnesses.
+  - Exact Haiku 5.5 prompting guide; effort, prompt length and harness affect behavior.
   known_failure_modes:
-  - Creator-reported limitation; frequency and independent recovery unknown.
+  - Skipped testing or early stopping; no quantified broad repository-failure rate.
   evidence_notes:
-  - Low confidence because source/setup support is sparse or vendor-heavy; no contrary result located in this
-    bounded pass is not agreement.
-  observed_at: '2026-10-07'
+  - Fresh original guide inspection; retain low-confidence warning alongside independently measured repository
+    work.
+  observed_at: '2026-10-08'
   effective_from: null
   provenance:
     origin: research
     research_batch_id: research-run-haiku-5-5-2026-10-07
     method: Public original-source inspection against rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-011a2b23f886e43e
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Limited to the named task and the stated setup; no transfer from a mixed score or grader identity.
+  judgment: A single range-merging repair diagnosed and corrected mutation, boundary, nesting and invalid-range
+    defects. One generated program passed 19, 448 valid executions and 16 invalid inputs, but mixed list/tuple
+    pairs still raised TypeError.
+  confidence: low
+  supporting_evidence_ids:
+  - src-8c17dc7abf0e
+  contradictory_evidence_ids: []
+  conditions:
+  - Claude.ai Free, Medium effort, fresh chat, no tools; Python 3 function and four requested assertions.
+  - Execution count tests one generated program, not 19, 448 independent model trials.
+  known_failure_modes:
+  - Input-container assumption was unresolved; one function cannot establish repository-wide debugging reliability.
+  evidence_notes: []
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-benchmark-evidence-review
+    method: Original public-source inspection against task rubric1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-0e2407bb0e5c40df
+  scope: direct
+  task_ids:
+  - agent.tool_use
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Only the source-described task and setup; no transfer to unrelated tasks or routes.
+  judgment: Crazyrouter reports 3/3 successful two-turn read-only order lookups, including tool selection,
+    arguments and use of the fixed simulated result.
+  confidence: low
+  supporting_evidence_ids:
+  - src-702fe405e315
+  contradictory_evidence_ids: []
+  conditions:
+  - Chinese prompts, thinking disabled, max_tokens=2048, fixed undisclosed upstream using native Anthropic
+    protocol.
+  - One order-lookup task repeated three times; final JSON formatting scored separately.
+  known_failure_modes:
+  - No permissions, writes, multi-tool planning or sustained error recovery tested.
+  - Unknown upstream implementation limits transfer to first-party API or other clients.
+  evidence_notes:
+  - Original public body inspected on 2026-10-08; attribution and setup preserved.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-behavior-evidence-review
+    method: Original public-source inspection against task rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-13c2b90c21a358d4
+  scope: direct
+  task_ids:
+  - language.instruction_following
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Only the source-described task and setup; no transfer to unrelated tasks or routes.
+  judgment: AINews demonstrates that a label-only instruction is insufficient for some migrated short-output
+    requests; disabled thinking or a low-effort enum schema recovered valid label formatting in its selected
+    test.
+  confidence: low
+  supporting_evidence_ids:
+  - src-30dab146c692
+  contradictory_evidence_ids:
+  - src-8ac74a7d6b30
+  conditions:
+  - Fifteen selected tickets, three attempts each per configuration on the Claude API.
+  - Default cap 10 returned 38/45 valid labels; disabled-thinking cap 10 and low+schema cap 32 each 45/45.
+  known_failure_modes:
+  - Unchanged small token caps can end in thinking before any text; prose can violate label-only instructions.
+  - Valid label format does not establish correct label semantics or general instruction following.
+  evidence_notes:
+  - 'Source reports a local exception to the guide’s visible-reasoning tendency: disabled thinking produced
+    no prose here. Prompt/setup differences prevent a general conflict claim.'
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-behavior-evidence-review
+    method: Original public-source inspection against task rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-14b370d8ea21baf6
+  scope: direct
+  task_ids:
+  - language.writing
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Only the stated task and source-described setup; no universal model ranking.
+  judgment: Polish client-email, LinkedIn and story samples were judged natural and useful; editing remains
+    necessary for constraint-sensitive prose.
+  confidence: low
+  supporting_evidence_ids:
+  - src-a73697043308
+  - src-f21349d0715d
+  contradictory_evidence_ids: []
+  conditions:
+  - Piotr Olszewski; OpenRouter low effort; one output per task; GPT-6 Sol and Gemini 3.1 Pro judges.
+  known_failure_modes:
+  - Small heterogeneous sample; model judges and undisclosed downstream serving route; no human calibration
+    for this exact model.
+  evidence_notes:
+  - Reported task scores 8.2–8.3/10 are judge ratings, not correctness rates; composite 76.8 is not assigned
+    to writing.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-task-evidence-review
+    method: Original public source inspection against the supplied task rubric; no model execution.
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-167a64ec15f54fe0
+  scope: direct
+  task_ids:
+  - knowledge.classification
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Only the stated task and source-described setup; no universal model ranking.
+  judgment: One eight-ticket routing response matched the supplied policy and JSON contract, including a conflicting
+    ticket instruction.
+  confidence: low
+  supporting_evidence_ids:
+  - src-8c17dc7abf0e
+  contradictory_evidence_ids: []
+  conditions:
+  - Claude.ai Free, Medium effort, fresh chat, no tools; eight fictional tickets.
+  known_failure_modes:
+  - Only one response; all-users outage scope ambiguous; no general injection-resistance conclusion.
+  evidence_notes:
+  - Author Karthikeya Meesala checked the eight expected labels and four-field JSON structure.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-task-evidence-review
+    method: Original public source inspection against the supplied task rubric; no model execution.
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-1ab53d0b016215de
+  scope: direct
+  task_ids:
+  - language.writing
+  related_task_ids: []
+  assessment: warning
+  scope_note: Only the stated task and source-described setup; no universal model ranking.
+  judgment: The author reports chat titles sometimes answer the message rather than naming it, requiring checking
+    before automatic use.
+  confidence: low
+  supporting_evidence_ids:
+  - src-71ea095aee2f
+  contradictory_evidence_ids: []
+  conditions:
+  - Fifty-two application messages; reasoning off; one run per setup; blind Opus judge in both A/B orders.
+  known_failure_modes:
+  - Provider and precise prompt undisclosed; 28 comparator wins, 8 Haiku wins, 9 order-disagreement ties, 7
+    identical titles.
+  evidence_notes:
+  - Preference counts are not a semantic accuracy rate; one injected message became a title.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-task-evidence-review
+    method: Original public source inspection against the supplied task rubric; no model execution.
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-2eeb54292ab8e544
+  scope: direct
+  task_ids:
+  - language.instruction_following
+  related_task_ids: []
+  assessment: warning
+  scope_note: Only the source-described task and setup; no transfer to unrelated tasks or routes.
+  judgment: u/dergachoff reports that Haiku 5.5 often answered messages rather than naming the chat, and copied
+    one prompt-injection test message into the title.
+  confidence: low
+  supporting_evidence_ids:
+  - src-71ea095aee2f
+  contradictory_evidence_ids: []
+  conditions:
+  - 52 messages; reasoning disabled; one run per setup; app route/provider not disclosed.
+  - Blind Opus judges used both A/B orders; order disagreement counted as a tie.
+  known_failure_modes:
+  - The frequency of answer-instead-of-title failures is not enumerated.
+  - Preference counts against another model are not a correctness pass rate.
+  evidence_notes:
+  - Retain this thinking-disabled title workflow separately from low/medium-effort Polish and Claude.ai examples.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-behavior-evidence-review
+    method: Original public-source inspection against task rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-3b72450649afcdb5
+  scope: direct
+  task_ids:
+  - coding.repository_work
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Limited to the named task and the stated setup; no transfer from a mixed score or grader identity.
+  judgment: Cognition’s repository tasks show useful but incomplete merge-ready work in Claude Code:medium
+    Main composite 41.63 and max 46.36, with separate correctness rates 46.2% and 51.65%. Repository conventions
+    and hidden checks remain necessary.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-cbb33e0a8075
+  - src-a2775c826853
+  - src-8e26d954ad88
+  - src-5a6452e14543
+  contradictory_evidence_ids: []
+  conditions:
+  - Main 100 tasks, Extended 150; five runs per task; fair internet use allowed with solution-bearing access
+    zeroed.
+  - Composite combines functionality and code-quality criteria; no direct architecture/refactoring/test-design
+    rating from its total.
+  known_failure_modes:
+  - Roughly half of Main functional outcomes fail in these configurations; complete prompt/runtime/provider
+    and run dates undisclosed.
+  evidence_notes: []
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-benchmark-evidence-review
+    method: Original public-source inspection against task rubric1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-426b1ceddfdc7b59
+  scope: direct
+  task_ids:
+  - reasoning.scientific
+  related_task_ids: []
+  assessment: warning
+  scope_note: Limited to the named task and the stated setup; no transfer from a mixed score or grader identity.
+  judgment: In five statistical-inference traps, the Plotly agent passed 2 and failed 3. It omitted a confounder
+    check, used the wrong observational unit, and abandoned a supported causal explanation; these are core
+    limits for this bounded causal-analysis workflow.
+  confidence: low
+  supporting_evidence_ids:
+  - src-b5840ea93831
+  contradictory_evidence_ids: []
+  conditions:
+  - Plotly Studio Embedded over a private synthetic wind-fleet warehouse; each question requires a correct
+    answer or the relevant catch, no partial credit.
+  known_failure_modes:
+  - Effort, run date, provider and replication undisclosed; 2/5 is a small subset and does not characterize
+    all science.
+  evidence_notes: []
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-benchmark-evidence-review
+    method: Original public-source inspection against task rubric1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-4907576ea352b1d3
+  scope: direct
+  task_ids:
+  - knowledge.rag
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Only the source-described task and setup; no transfer to unrelated tasks or routes.
+  judgment: Anthropic’s modified WANDR evaluates cited fact collections retrieved from a frozen index, with
+    Haiku 5.5 soft F1 rising from 3.5% at low to 49.9% at max effort.
+  confidence: low
+  supporting_evidence_ids:
+  - src-5a6452e14543
+  contradictory_evidence_ids: []
+  conditions:
+  - 500 tasks requiring tens to hundreds of entities and facts; frozen-index web search/fetch, programmatic
+    tool calling and code execution with 980k-token task budget.
+  - Opus 4.6 re-fetches cited URLs to judge whether they support each fact; invalid-format entity rows are
+    dropped.
+  - Visual graph inspection p123:low 3.5%,medium 12.9%,high 37.3%,xhigh 45.9%,max 49.9%.
+  known_failure_modes:
+  - Soft F1 mixes verified fact precision and requested collection recall; it is not an all-correct answer
+    or retrieval-ranking rate.
+  - Frozen index and judge differ from Perplexity’s live-web/GPT-5.4 setup; no cross-harness score equivalence.
+  evidence_notes:
+  - A documented external-retrieval and answer-support workflow is established, unlike the preselected-document
+    OfficeQA configuration. General application RAG fit remains unestablished.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-behavior-evidence-review
+    method: Original public-source inspection against task rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-4d393d5034eb0aee
+  scope: direct
+  task_ids:
+  - coding.tests
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Limited to the named task and the stated setup; no transfer from a mixed score or grader identity.
+  judgment: The same reply supplied four meaningful assertions for touching boundaries, nesting, input preservation
+    and invalid ranges. Their visible expected outcomes distinguish the supplied defects, but the suite omitted
+    mixed pair-container inputs.
+  confidence: low
+  supporting_evidence_ids:
+  - src-8c17dc7abf0e
+  contradictory_evidence_ids: []
+  conditions:
+  - 'Original screenshot inspected: assertions include expected outputs and explicit ValueError flag; reviewer
+    reports execution unchanged.'
+  - Test categories were supplied in the prompt; one generated suite for one function.
+  known_failure_modes:
+  - No mutation-testing/coverage study; homogeneous tuple input cannot test nested mutable-input preservation
+    or heterogeneous-container behavior.
+  evidence_notes: []
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-benchmark-evidence-review
+    method: Original public-source inspection against task rubric1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-4edd9c57ae9dfb08
+  scope: direct
+  task_ids:
+  - coding.scoped_edit
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Limited to the named task and the stated setup; no transfer from a mixed score or grader identity.
+  judgment: Eight selected Python functions passed hidden assertions at low, medium and high effort; max failed
+    to emit one implementation before its output cap. This supports bounded implementation work with executable
+    acceptance checks.
+  confidence: low
+  supporting_evidence_ids:
+  - src-fdd6f11500c5
+  contradictory_evidence_ids: []
+  conditions:
+  - Direct Claude API, 32k output cap; one generation for each task/effort; corrected SemVer rerun replaces
+    original attempt.
+  known_failure_modes:
+  - Small selected corpus; unreported full artifacts and a max-effort budget failure limit repeatability.
+  evidence_notes: []
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-benchmark-evidence-review
+    method: Original public-source inspection against task rubric1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-5a56884ee5c3c4a1
+  scope: direct
+  task_ids:
+  - agent.long_horizon
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Only the source-described task and setup; no transfer to unrelated tasks or routes.
+  judgment: The system card reports 43.8% mean fractional reward on FrontierSWE v2:34 ultra-long-horizon tasks
+    with five 20-hour-budget trials each under Proximus at max effort.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-595e7d6ffd58
+  - src-00b8399a64cf
+  - src-5a6452e14543
+  - src-6167e7bf070d
+  contradictory_evidence_ids: []
+  conditions:
+  - Proximus supplies compaction, progress logging, self-check feedback and checkpointed submissions; no native-client
+    equivalence is assumed.
+  - Original public Proximal data identifies Haiku 5.5 with 43.76868294117648% mean@5,52.753011764705896%best@5
+    and34.486967647058805%worst@5; reported mean duration is 44698.909 seconds.
+  known_failure_modes:
+  - Mean fractional reward does not reveal the share of fully completed goals, intervention needs or sustained
+    success for a specific user workflow.
+  - No independent reproduction of the low-effort early-stopping mitigation is established.
+  evidence_notes:
+  - Original Proximal data and methodology establish the bounded result; the card repeats the same study and
+    does not provide independent replication.
+  - Per-task trajectories and provider deployment details remain uninspected or undisclosed.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-behavior-evidence-review
+    method: Original public-source inspection against task rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-5db6d8e9c5912ec9
+  scope: direct
+  task_ids:
+  - language.writing
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Only the stated task and source-described setup; no universal model ranking.
+  judgment: 'Short writing is useful with editing: three of five constrained prompts pass, but a plain-language
+    rewrite retains jargon and one argument exceeds the paragraph limit.'
+  confidence: low
+  supporting_evidence_ids:
+  - src-78dcb07e48d6
+  - src-d2b215df9595
+  - src-2e4bfe44c369
+  - src-63c3f4e3712d
+  - src-7f024ab0f607
+  - src-395c3ceaf095
+  - src-f11b84e2a4e0
+  contradictory_evidence_ids: []
+  conditions:
+  - llmwise app prompt via OpenRouter, host Anthropic; no tools; max output 8,000; actual response rows October
+    7, 2026; effort undisclosed.
+  known_failure_modes:
+  - Corporate rewrite graded 3.3/5 with lowest criterion 2; bus argument passes quality but 103 words exceeds
+    a 90-word paragraph cap.
+  evidence_notes:
+  - Claude Opus 5.5 low-effort judge; one attempt per prompt. Failed-provider replies are excluded by method.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-task-evidence-review
+    method: Original public source inspection against the supplied task rubric; no model execution.
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-5e8af0f7fabe963e
+  scope: direct
+  task_ids:
+  - language.summarization
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Only the stated task and source-described setup; no universal model ranking.
+  judgment: 'Short summaries preserve useful content but require length and salience checks: three of five
+    pass, while the other two exceed their hard word limits.'
+  confidence: low
+  supporting_evidence_ids:
+  - src-387324d65e28
+  - src-d2b215df9595
+  - src-475033497c97
+  - src-1f1d3170f6c4
+  - src-247a216c9083
+  - src-1d13287c6cc8
+  - src-caf4a0b06fc2
+  contradictory_evidence_ids: []
+  conditions:
+  - llmwise app prompt via OpenRouter, host Anthropic; no tools; max output 8,000; actual response rows October
+    7, 2026; effort undisclosed.
+  known_failure_modes:
+  - Article summary 61 words versus 60 and quality 3.7/5; email summary 39 versus 30 despite quality 4.3/5.
+  evidence_notes:
+  - Claude Opus 5.5 low-effort judge; one attempt per prompt. Failed-provider replies are excluded by method.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-task-evidence-review
+    method: Original public source inspection against the supplied task rubric; no model execution.
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-67aa3dd593d907df
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - context.retrieval
+  - context.reasoning
+  - knowledge.rag
+  - knowledge.retrieval
+  - knowledge.extraction
+  assessment: unknown
+  scope_note: Only the source-described task and setup; no transfer to unrelated tasks or routes.
+  judgment: Anthropic’s selected launch testimonials describe AlphaSense document-question answering and Rogo
+    10-K lookups, but do not isolate extended-context retrieval, reasoning, or a documented RAG retriever.
+  confidence: low
+  supporting_evidence_ids:
+  - src-cdb1d51fae04
+  contradictory_evidence_ids: []
+  conditions:
+  - AlphaSense’s Daniel Campos describes400questions over one or a few documents and an unspecified score0.84
+    versus0.76 for Haiku 4.5.
+  - Rogo’s Alex Wang describes retrieving a segment-revenue line for a larger-model deck workflow.
+  known_failure_modes:
+  - Input lengths, placement, corpus/retriever setup, grading, effort and provider route are undisclosed.
+  - Selected customer testimony is not independent original evaluation publication.
+  evidence_notes:
+  - One launch source independence group; no direct task endorsement or transfer of another model’s result.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-behavior-evidence-review
+    method: Original public-source inspection against task rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-774b4c9c38835241
+  scope: direct
+  task_ids:
+  - language.instruction_following
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Only the source-described task and setup; no transfer to unrelated tasks or routes.
+  judgment: Piotr Olszewski reports 23/26 explicit instruction rules satisfied in his 13-prompt Polish test;
+    the five-point summary exceeded its 80-word limit.
+  confidence: low
+  supporting_evidence_ids:
+  - src-a73697043308
+  contradictory_evidence_ids: []
+  conditions:
+  - OpenRouter anthropic/claude-haiku-5.5; low reasoning; tested 2026-10-08.
+  - GPT-6 Sol and Gemini 3.1 Pro judged the writing suite; exact token caps and repeat count are not disclosed
+    in the article.
+  known_failure_modes:
+  - Hard length limits require checking; 26 rule checks are not 26 independent prompts.
+  evidence_notes:
+  - This direct instruction score is separate from the mixed writing composite and factual quiz.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-behavior-evidence-review
+    method: Original public-source inspection against task rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-836668f2db6aac0b
+  scope: direct
+  task_ids:
+  - language.translation
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Only the stated task and source-described setup; no universal model ranking.
+  judgment: Five short English-to-Spanish/French/German/Japanese/Portuguese examples pass the publisher meaning-retention
+    screen; lenient back-translation and absent human checking limit the conclusion.
+  confidence: low
+  supporting_evidence_ids:
+  - src-34ea48a4faa8
+  - src-d2b215df9595
+  - src-e13f7503f163
+  - src-11b3486f8e43
+  - src-95c7cf97e22d
+  - src-36af3597d45e
+  - src-7d8036798734
+  contradictory_evidence_ids: []
+  conditions:
+  - llmwise app prompt via OpenRouter, host Anthropic; no tools; max output 8,000; actual response rows October
+    7, 2026; effort undisclosed.
+  known_failure_modes:
+  - Back-translation can miss target-language awkwardness or untranslated fragments; one example per language
+    pair.
+  evidence_notes:
+  - Claude Opus 5.5 low-effort judge; one attempt per prompt. Failed-provider replies are excluded by method.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-task-evidence-review
+    method: Original public source inspection against the supplied task rubric; no model execution.
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-8519c22c2d0cdf56
+  scope: direct
+  task_ids:
+  - coding.scoped_edit
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Limited to the named task and the stated setup; no transfer from a mixed score or grader identity.
+  judgment: On fixed-contract PHP and Go modifications, medium/high settings produced useful implementations
+    but PHP import/sync attempts still incurred failed checks; shipping quotes earned all 5 points in both
+    settings.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-e26a5c9bdee9
+  - src-f79710555d62
+  contradictory_evidence_ids: []
+  conditions:
+  - Claude Code; five fresh attempts per project with hidden deterministic checks; CSV and sync results are
+    quality-point sums, not pass counts.
+  known_failure_modes:
+  - Partial failures require material acceptance testing; exact provider and CLI version undisclosed.
+  evidence_notes: []
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-benchmark-evidence-review
+    method: Original public-source inspection against task rubric1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-8867f39aa4bdde41
+  scope: direct
+  task_ids:
+  - language.writing
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Only the stated task and source-described setup; no universal model ranking.
+  judgment: A support draft preserved important policy distinctions and requested missing evidence, but its
+    internal note exceeded the length limit and needed tone editing.
+  confidence: low
+  supporting_evidence_ids:
+  - src-8c17dc7abf0e
+  contradictory_evidence_ids: []
+  conditions:
+  - Claude.ai Free Medium, one fresh no-tool chat; fictional refund/deletion policy.
+  known_failure_modes:
+  - Internal note 64 words versus under 60; customer reply 86 words; author would soften final sentence.
+  evidence_notes:
+  - Whitespace count excludes headings. Content success does not erase the instruction miss.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-task-evidence-review
+    method: Original public source inspection against the supplied task rubric; no model execution.
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-98608fcccfe9ab7a
+  scope: unresolved
+  task_ids: []
+  related_task_ids:
+  - reasoning.general
+  assessment: unknown
+  scope_note: Limited to the named task and the stated setup; no transfer from a mixed score or grader identity.
+  judgment: The article reports a correct minimal 5-minute schedule repair, confirmed by enumeration. Its published
+    prompt block also includes the solution summary; the screenshot shows only the answer, so clean unassisted
+    reasoning remains unresolved.
+  confidence: low
+  supporting_evidence_ids:
+  - src-8c17dc7abf0e
+  contradictory_evidence_ids: []
+  conditions:
+  - One Claude.ai Free Medium reply with no tools; underlying prompt transcript not independently visible.
+  known_failure_modes:
+  - Potential editorial formatting error versus answer-bearing input cannot be resolved from the public body.
+  evidence_notes: []
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-benchmark-evidence-review
+    method: Original public-source inspection against task rubric1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-aa99bcfcb8165b0a
+  scope: direct
+  task_ids:
+  - vision.question_answering
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Limited to the named task and the stated setup; no transfer from a mixed score or grader identity.
+  judgment: Image-question results are useful with checking:visual reasoning judge accuracy 68.9% low/74.8%
+    high and counting 68.9%/73.0%, with lower strict-match scores in some settings.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-efd1db045882
+  - src-657f3a6037f7
+  - src-12127a4ce5a0
+  contradictory_evidence_ids: []
+  conditions:
+  - Three runs per effort; Gemini 3.5 Flash temperature 0 judges against ground truth, with strict normalized
+    answer matching shown separately.
+  known_failure_modes:
+  - Residual interpretation errors are material; unknown dataset denominator/resolution and inconsistent site-wide
+    composite prevent stronger generalization.
+  evidence_notes: []
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-benchmark-evidence-review
+    method: Original public-source inspection against task rubric1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-acdb24a71a38f8c7
+  scope: direct
+  task_ids:
+  - vision.grounding
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Limited to the named task and the stated setup; no transfer from a mixed score or grader identity.
+  judgment: Roboflow’s repeated detection task supports zero-shot labeled boxes with material localization
+    checking:mAP@50 is 65.8 at low and 68.2 at high, falling to 52.3/53.0 across stricter IoU thresholds.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-aac5808af0ec
+  - src-12127a4ce5a0
+  contradictory_evidence_ids: []
+  conditions:
+  - Three runs per native effort; normalized box coordinates and fixed class labels; ground-truth mAP scoring.
+  known_failure_modes:
+  - Exact sample count, resolution and request manifest undisclosed; no GUI-workflow completion inference.
+  evidence_notes: []
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-benchmark-evidence-review
+    method: Original public-source inspection against task rubric1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-b03703cf1d5e9d5f
+  scope: direct
+  task_ids:
+  - language.instruction_following
+  related_task_ids: []
+  assessment: warning
+  scope_note: Only the source-described task and setup; no transfer to unrelated tasks or routes.
+  judgment: Crazyrouter reports only 1/24 original final outputs directly parseable as plain JSON despite prompt-only
+    format instructions; Haiku also missed an 80–120-character rewrite minimum in two of three runs.
+  confidence: low
+  supporting_evidence_ids:
+  - src-702fe405e315
+  contradictory_evidence_ids: []
+  conditions:
+  - Same Chinese-prompt suite, thinking disabled and max_tokens=2048 on a fixed undisclosed upstream.
+  - The rewrite outputs were 78, 84 and 76 characters; all reportedly preserved source facts.
+  known_failure_modes:
+  - Fences/explanations can break JSON consumers despite correct content.
+  - Native schema-constrained output was not evaluated; do not infer that it fails.
+  evidence_notes:
+  - Content score 24/27 uses a different denominator and tolerates wrapper prose; it is not the strict-format
+    pass rate.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-behavior-evidence-review
+    method: Original public-source inspection against task rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-b4eaf3079f3bd70d
+  scope: direct
+  task_ids:
+  - language.instruction_following
+  related_task_ids: []
+  assessment: warning
+  scope_note: Only the source-described task and setup; no transfer to unrelated tasks or routes.
+  judgment: Creator warnings show that strict system-prompt adherence and mid-task user-message handling depend
+    on effort, prompting and harness message placement.
+  confidence: low
+  supporting_evidence_ids:
+  - src-8ac74a7d6b30
+  contradictory_evidence_ids: []
+  conditions:
+  - High effort is suggested for strict instruction following; user input should be delivered as a user text
+    block rather than inside tool results.
+  known_failure_modes:
+  - User pressure can weaken chatbot system-prompt adherence; legitimate mid-turn input in tool-result/system
+    positions can be ignored.
+  evidence_notes:
+  - Suggestions and vendor internal improvements have no disclosed task denominator or independent recovery;
+    they do not establish aggregate suitability alone.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-behavior-evidence-review
+    method: Original public-source inspection against task rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-ba1e32b7164d9463
+  scope: direct
+  task_ids:
+  - coding.repository_work
+  related_task_ids: []
+  assessment: warning
+  scope_note: Limited to the named task and the stated setup; no transfer from a mixed score or grader identity.
+  judgment: One practitioner reported correct medium-effort cross-language repository integration with tests
+    and conventions, but low effort skipped checks, missed an error fallback and gave an unsupported reason
+    for not testing.
+  confidence: low
+  supporting_evidence_ids:
+  - src-cb6abd8d17ce
+  contradictory_evidence_ids: []
+  conditions:
+  - Rust plus legacy scripting repository; effort-specific self-report; exact CLI/provider/run dates beyondOctober
+    8 publication unknown.
+  known_failure_modes:
+  - Private task/artifact set and no repeated trial count; does not justify the author’s broad daily-agent
+    recommendation.
+  evidence_notes: []
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-benchmark-evidence-review
+    method: Original public-source inspection against task rubric1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-baf6423c421fc5ca
+  scope: direct
+  task_ids:
+  - language.instruction_following
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Only the source-described task and setup; no transfer to unrelated tasks or routes.
+  judgment: Karthikeya Meesala reports correct JSON ordering/keys on eight fictional tickets, but a 64-word
+    internal support note violated the under-60-word instruction.
+  confidence: low
+  supporting_evidence_ids:
+  - src-8c17dc7abf0e
+  contradictory_evidence_ids: []
+  conditions:
+  - Four fresh Claude.ai Free-plan chats at Medium effort on 2026-10-08; no tools requested.
+  - The customer reply was 86 words under a 120-word limit. Counts exclude headings and use whitespace-separated
+    words.
+  known_failure_modes:
+  - One embedded ticket instruction was ignored successfully; this single case does not establish general prompt-injection
+    resistance.
+  - Hard length compliance was not universal.
+  evidence_notes:
+  - Routing success and support-note miss can coexist; the narrow result supports validation rather than a
+    blanket pass rate.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-behavior-evidence-review
+    method: Original public-source inspection against task rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-bbc616d7eebd7a45
+  scope: direct
+  task_ids:
+  - language.summarization
+  related_task_ids: []
+  assessment: warning
+  scope_note: Only the stated task and source-described setup; no universal model ranking.
+  judgment: A single five-bullet Polish summary exceeded its 80-word limit and contained a syntax error; source-fidelity
+    performance was not separately reported.
+  confidence: low
+  supporting_evidence_ids:
+  - src-a73697043308
+  - src-f21349d0715d
+  contradictory_evidence_ids: []
+  conditions:
+  - OpenRouter low effort; one summary among thirteen mixed tasks; two non-Anthropic judges.
+  known_failure_modes:
+  - Summary task received 5.8/10 on the publisher grading; salience, factual preservation and exact output
+    were not separately inspectable.
+  evidence_notes:
+  - A format/language weakness is recorded without turning a mixed score into a fidelity conclusion.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-task-evidence-review
+    method: Original public source inspection against the supplied task rubric; no model execution.
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-c6c14e837cdab3b5
+  scope: direct
+  task_ids:
+  - knowledge.classification
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Only the stated task and source-described setup; no universal model ranking.
+  judgment: A small invoice-policy test assigned all twenty-four pay/hold/return labels correctly, supporting
+    bounded classification use with validation.
+  confidence: low
+  supporting_evidence_ids:
+  - src-3446600040dc
+  contradictory_evidence_ids: []
+  conditions:
+  - Haiku 5.5 high effort; twenty-four invoices paired with purchase orders and delivery notes; one test.
+  known_failure_modes:
+  - No repeated-trial or production label-distribution evidence; provider, client and output budget unknown.
+  evidence_notes:
+  - Josef Waples reports twenty-four correct policy decisions; extraction fields and payment execution were
+    not measured.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-task-evidence-review
+    method: Original public source inspection against the supplied task rubric; no model execution.
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-c9352a63e1b4d9f2
+  scope: direct
+  task_ids:
+  - reasoning.math
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Limited to the named task and the stated setup; no transfer from a mixed score or grader identity.
+  judgment: All five elementary arithmetic, combinatorics and probability replies reached the expected final
+    answer and displayed valid short derivations on inspection. Evidence supports these bounded problem types,
+    with no advanced-mathematics conclusion.
+  confidence: low
+  supporting_evidence_ids:
+  - src-354a85681004
+  - src-d2b215df9595
+  contradictory_evidence_ids: []
+  conditions:
+  - One reply per prompt dated 2026-10-07; llmwise via OpenRouter and Anthropic; 8k output cap, no tools; actual
+    effort undisclosed.
+  known_failure_modes:
+  - Only five fixed prompts; automatic grade checks final answer, not every derivation; no repeated generations.
+  evidence_notes: []
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-benchmark-evidence-review
+    method: Original public-source inspection against task rubric1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-cc9e887e3c17d763
+  scope: direct
+  task_ids:
+  - coding.frontend
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Limited to the named task and the stated setup; no transfer from a mixed score or grader identity.
+  judgment: The Flutter transaction-feed task provides direct interface evidence:3.5/5 points at medium and
+    3/5 at high across five attempts, with rendering, state, retry and pagination tests. Useful starting implementations
+    still need material checking.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-e26a5c9bdee9
+  - src-f79710555d62
+  contradictory_evidence_ids: []
+  conditions:
+  - Fixed widget constructor/data-source contract; 48 checks per attempt including phone-size layout and async
+    updates; points are not success percentages.
+  known_failure_modes:
+  - No broad accessibility/visual-design assessment; repeated project-specific failures remain.
+  evidence_notes: []
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-benchmark-evidence-review
+    method: Original public-source inspection against task rubric1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-d3ee677a27e49d79
+  scope: direct
+  task_ids:
+  - context.reasoning
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Only the source-described task and setup; no transfer to unrelated tasks or routes.
+  judgment: Vendor OfficeQA evaluates grounded reasoning with relevant documents preselected as extracted text;
+    Haiku 5.5 scored 73.5% on OfficeQA and 60.3% on its 133-question Pro subset at max effort, mean of five
+    runs.
+  confidence: low
+  supporting_evidence_ids:
+  - src-5a6452e14543
+  contradictory_evidence_ids: []
+  conditions:
+  - Agentic reasoning over historical U.S. Treasury Bulletin documents; the retrieval selection step is supplied.
+  - The card does not disclose per-question supplied-context length, placement or dependency distribution.
+  known_failure_modes:
+  - Nontrivial answer errors remain; no inference to arbitrary1M-token reasoning or position-robust retrieval.
+  evidence_notes:
+  - This is direct supplied-document reasoning evidence. It does not establish end-to-end external retrieval
+    or reranking performance.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-behavior-evidence-review
+    method: Original public-source inspection against task rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-d5e38e96dfec2d99
+  scope: direct
+  task_ids:
+  - knowledge.extraction
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Only the stated task and source-described setup; no universal model ranking.
+  judgment: A long-interview task produced source-matching quotes, but widely variable item counts and no gold
+    coverage list leave complete extraction unestablished.
+  confidence: low
+  supporting_evidence_ids:
+  - src-eaa56d3523ad
+  contradictory_evidence_ids: []
+  conditions:
+  - Sixty-two-minute interview; every extracted item must quote the original verbatim. Haiku ran three times
+    at Medium and three at High.
+  known_failure_modes:
+  - Six Haiku outputs contain 45–85 items; comparison outputs contain more, but this is not a gold recall denominator
+    and different granularity may matter.
+  - Exact prompt/input token length, backend, checkpoint request and output cap undisclosed.
+  evidence_notes:
+  - Author reports quote checks passed. Increasing effort did not reliably increase coverage; no source-grounded
+    completeness score is published.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-task-evidence-review
+    method: Original public source inspection against the supplied task rubric; no model execution.
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-dab8687c81a7a991
+  scope: direct
+  task_ids:
+  - research.synthesis
+  related_task_ids: []
+  assessment: warning
+  scope_note: Only the stated task and source-described setup; no universal model ranking.
+  judgment: In four application research briefs, missed authoritative material and unsupported source handling
+    undermined grounded reporting, even after effort increased.
+  confidence: low
+  supporting_evidence_ids:
+  - src-71ea095aee2f
+  contradictory_evidence_ids: []
+  conditions:
+  - One run per setup at low, medium and high; Exa/Brave search, page fetch, image search/analysis; blind Opus
+    judging.
+  known_failure_modes:
+  - Brand-guideline source missed and colors guessed from screenshots; a forum-quote win used search excerpts
+    without opening source pages.
+  evidence_notes:
+  - Four briefs and subjective pairwise judging provide a narrow Low-confidence warning. Higher effort is not
+    evidence of recovered source fidelity.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-task-evidence-review
+    method: Original public source inspection against the supplied task rubric; no model execution.
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-df67900e20adda9d
+  scope: direct
+  task_ids:
+  - coding.review
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Limited to the named task and the stated setup; no transfer from a mixed score or grader identity.
+  judgment: A repeated supplied-code review case identified a hardcoded secret and personal-data logging risks
+    with concrete fixes. Severity labeling varied and a cosmetic naming issue was over-prioritized without
+    the skill; this supports reviewed triage, not exhaustive defect detection.
+  confidence: low
+  supporting_evidence_ids:
+  - src-ad432a6151be
+  - src-592e1496bf8f
+  contradictory_evidence_ids: []
+  conditions:
+  - Claude Code 2.1.284, runner 0.10.1; 2026-10-07 run 1; one case, 3 with-skill and 4 baseline generated replies,
+    each judged 3 times by Claude Opus 5.
+  - Receipt gives grading rationale; the three-run report studies skill lift, not a broad model ranking.
+  known_failure_modes:
+  - Only one review scenario; full code/transcripts not published; repeated grader scores are not additional
+    model generations.
+  evidence_notes: []
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-benchmark-evidence-review
+    method: Original public-source inspection against task rubric1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-e38ef14d0467ef9e
+  scope: direct
+  task_ids:
+  - coding.review
+  related_task_ids: []
+  assessment: conditional
+  scope_note: One validation-script bug-finding scenario,not repair execution or a mixed-task total.
+  judgment: All three planted validation-script bugs were found in each of three medium and three high effort
+    runs. This corroborates narrow supplied-code review usefulness without establishing broad defect recall.
+  confidence: low
+  supporting_evidence_ids:
+  - src-eaa56d3523ad
+  contradictory_evidence_ids: []
+  conditions:
+  - Answer key established before model runs; one script,three planted bugs,two effort configurations with
+    three generations each.
+  known_failure_modes:
+  - Full script/outputs,precise client/provider/tool manifest and run dates are undisclosed; private selected-task
+    evidence.
+  evidence_notes:
+  - Original article Q6 inspected; unrelated permission-block failure and seven-task totals are not mapped
+    onto this task.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-benchmark-evidence-review
+    method: Original public-source inspection against task rubric1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-e8a4640fbffb0def
+  scope: compound
+  task_ids: []
+  related_task_ids:
+  - context.reasoning
+  - context.retrieval
+  - coding.repository_work
+  assessment: conditional
+  scope_note: Only the source-described task and setup; no transfer to unrelated tasks or routes.
+  judgment: Anthropic reports 82.0% hidden behavioral-test pass rate for long-context program reconstruction,
+    with episodes reaching up to 1M tokens.
+  confidence: low
+  supporting_evidence_ids:
+  - src-5a6452e14543
+  contradictory_evidence_ids: []
+  conditions:
+  - ProgramBench retained166 of 200 tasks after excluding 34 where the reference binary scored below 0.9; only
+    tests passed by the reference are scored.
+  - Input is a compiled binary plus project documentation; internet and decompilation tools unavailable; mini-swe-agent
+    without the upstream six-hour limit.
+  known_failure_modes:
+  - Coding reconstruction and behavioral testpass are not isolated passage retrieval or position-controlled
+    context reasoning.
+  - Task length varies and no retrieval-only breakdown is supplied.
+  evidence_notes:
+  - Direct task conclusions should not be inferred from the broad long-context label.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-behavior-evidence-review
+    method: Original public-source inspection against task rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-ebf985b28bd05114
+  scope: direct
+  task_ids:
+  - knowledge.classification
+  related_task_ids: []
+  assessment: warning
+  scope_note: Only the stated task and source-described setup; no universal model ranking.
+  judgment: A tight migrated output budget dropped usable labels on ambiguous tickets; disabling thinking restored
+    label-set membership in this small test, without establishing semantic label accuracy.
+  confidence: low
+  supporting_evidence_ids:
+  - src-30dab146c692
+  contradictory_evidence_ids: []
+  conditions:
+  - Claude API claude-haiku-5-5; fifteen tickets repeated three times per row; output budget and thinking vary.
+  known_failure_modes:
+  - Default adaptive thinking with max_tokens 10 yields 38/45 valid labels; five empty responses and two prose
+    outputs.
+  evidence_notes:
+  - Thinking-disabled 10-token and low-effort 32-token enum-schema rows reach 45/45 valid labels. These are
+    measured configuration outcomes, not service fixes or accuracy guarantees.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-task-evidence-review
+    method: Original public source inspection against the supplied task rubric; no model execution.
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-ecb2349a787cc3e7
+  scope: direct
+  task_ids:
+  - agent.tool_use
+  related_task_ids: []
+  assessment: warning
+  scope_note: Only the source-described task and setup; no transfer to unrelated tasks or routes.
+  judgment: In u/dergachoff’s four-brief research workflow, Haiku used tools but missed a brand’s official
+    guide at all tested effort levels and relied on search excerpts without page inspection on a forum-quote
+    brief.
+  confidence: low
+  supporting_evidence_ids:
+  - src-71ea095aee2f
+  contradictory_evidence_ids: []
+  conditions:
+  - Same Exa/Brave search, page fetch, image search and image analysis tools for compared models.
+  - Haiku low/medium/high; one run per setup; one high-effort brand task used60 tool calls without finding
+    the official page.
+  known_failure_modes:
+  - Guessed colors from screenshots rather than recovering exact official values.
+  - Excerpts alone did not establish quote author or full context.
+  - Tool-argument validity and error handling were not separately scored.
+  evidence_notes:
+  - The four-brief W/T/L totals concern mixed research reports and are not a narrow tool-use success rate.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-behavior-evidence-review
+    method: Original public-source inspection against task rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-ee4d2ab242a02eca
+  scope: direct
+  task_ids:
+  - context.reasoning
+  related_task_ids: []
+  assessment: warning
+  scope_note: Only the source-described task and setup; no transfer to unrelated tasks or routes.
+  judgment: 'On a 180-record conditional lookup, Crazyrouter reports 0/3 fully correct results: Haiku found
+    the 117-day maximum but named extra IDs rather than only the two tied records.'
+  confidence: low
+  supporting_evidence_ids:
+  - src-702fe405e315
+  contradictory_evidence_ids: []
+  conditions:
+  - Chinese prompts, thinking disabled,max_tokens=2048; no output truncation reported.
+  - Combines filtering with maximum/tie reasoning; record count is known but context-token length and information
+    placement are not.
+  known_failure_modes:
+  - Correct headline value can be paired with factually wrong supporting IDs.
+  - Diagnostic recovery changed two settings and used manual thinking syntax incompatible with official Haiku
+    5.5 API documentation.
+  evidence_notes:
+  - Retest 3/3 is retained as an unresolved route-specific report, not causal or independently measured native-model
+    recovery.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-behavior-evidence-review
+    method: Original public-source inspection against task rubric 1.1
+- model_id: claude-haiku-5-5
+  profile: models/anthropic/claude-haiku-5-5/profile.yaml
+  id: judgment-f35c41eac25b47a9
+  scope: direct
+  task_ids:
+  - agent.tool_use
+  related_task_ids: []
+  assessment: warning
+  scope_note: Only the source-described task and setup; no transfer to unrelated tasks or routes.
+  judgment: Dustin reports fragile recovery from permission-denied command choices under a python3-only calculation
+    harness, including one empty handback, followed by a 3/3 explicit-command-list retest.
+  confidence: low
+  supporting_evidence_ids:
+  - src-eaa56d3523ad
+  contradictory_evidence_ids: []
+  conditions:
+  - 'Main suite: medium/high, three trials each; original allowlist prompt visibility and permission-event
+    denominator are not disclosed.'
+  known_failure_modes:
+  - Blocked attempts included wc, cd, mkdir and command chains; most recovered but extra turns increased cost.
+  - A permission denial is a harness event; no blocked command executed and no general model-quality fix was
+    established.
+  evidence_notes:
+  - Author corrected grader bugs before reviewing the scores; those scoring mistakes are not Haiku failures.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-haiku55-behavior-evidence-review
+    method: Original public-source inspection against task rubric 1.1
 - model_id: claude-opus-5-5
   profile: models/anthropic/claude-opus-5-5/profile.yaml
   id: judgment-a58a16e37a99fdcb
@@ -1667,7 +4184,9 @@ records:
   known_failure_modes: []
   evidence_notes:
   - Confidence concerns this bounded claim, not a capability score.
-  observed_at: '2026-10-07'
+  - Oct 8 row is 1857 +/-19 with 1,687 votes; this small movement does not change the retained preference conclusion.
+    Executable LWC evidence is recorded in a separate finding.
+  observed_at: '2026-10-08'
   effective_from: null
   provenance:
     origin: research
@@ -1909,6 +4428,195 @@ records:
     research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate review_tests_frontend:review-sonnet55; exact identity gates and original
       sources retained.
+- model_id: claude-sonnet-5-5
+  profile: models/anthropic/claude-sonnet-5-5/profile.yaml
+  id: judgment-1d166a8ffd058c04
+  scope: direct
+  task_ids:
+  - coding.refactoring
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Direct conclusion is limited to this task and the stated published configuration; no transfer
+    to neighboring tasks.
+  judgment: One small shipping-cost refactor preserved the tested behavior, including coercion edge cases;
+    broader restructuring remains unvalidated.
+  confidence: low
+  supporting_evidence_ids:
+  - src-0351220a07ba
+  contradictory_evidence_ids: []
+  conditions:
+  - OneSeptember 28 reply via llmwise/OpenRouter; eight Node.js fixture checks,8000-token cap; effort and downstream
+    provider unknown.
+  known_failure_modes:
+  - Passing eight checks does not prove equivalence for all inputs or larger cross-module refactors.
+  evidence_notes:
+  - One task with eight checks, not eight independent samples. The marketing refactor sketch from Kunya is
+    not treated as executed preservation evidence.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-sonnet55-task-evidence-review
+    method: Original public task result and setup inspected; no model execution.
+- model_id: claude-sonnet-5-5
+  profile: models/anthropic/claude-sonnet-5-5/profile.yaml
+  id: judgment-595a98b01c403e74
+  scope: direct
+  task_ids:
+  - language.writing
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exactly one supplied task rubric under the recorded setup.
+  judgment: Produces fluent, well-structured German expositions, but substantive factual and lexical claims
+    require checking despite favorable blind ratings.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-d802b13b5eaa
+  - src-2d7cd40cbb51
+  - src-23b2761eb941
+  contradictory_evidence_ids: []
+  conditions:
+  - Seventeen passages × English/German instruction variants =34 Sonnet outputs; exact claude-sonnet-5-5 traces
+    datedOctober 3.
+  - Author reports adaptive high effort; trace labels adaptive without a numeric budget; identical source packets,
+    no web.
+  known_failure_modes:
+  - Judges flagged seven serious issues per prompt-language condition, including invented translator identity
+    and incorrect word/family facts.
+  - Two automated judges, private system prompts and one application constrain generalization.
+  evidence_notes:
+  - 8.7/10 rounded mean in each condition; 68 absolute Sonnet judgments.
+  - 136 paired verdicts comprise17 inputs ×2 prompt variants ×2 judges ×2 presentation orders; they are not
+    independent generation trials.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-sonnet55-task-evidence-review
+    method: Original public evidence inspected; task boundaries, configuration, denominators and limitations
+      retained.
+- model_id: claude-sonnet-5-5
+  profile: models/anthropic/claude-sonnet-5-5/profile.yaml
+  id: judgment-6158a48b2e47c111
+  scope: direct
+  task_ids:
+  - language.instruction_following
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exactly one supplied task rubric under the recorded setup.
+  judgment: Retained all seven required section tags in the34 observed German expositions; broader semantic-constraint
+    compliance remains unmeasured.
+  confidence: low
+  supporting_evidence_ids:
+  - src-d802b13b5eaa
+  - src-2d7cd40cbb51
+  - src-23b2761eb941
+  contradictory_evidence_ids: []
+  conditions:
+  - Same17 inputs with two prompt-language variants; exact seven tags verified in every Sonnet output.
+  known_failure_modes:
+  - Correct parsing does not establish every instruction or source-fidelity requirement; private system prompts
+    prevent full contract checking.
+  evidence_notes:
+  - 17/17 outputs per prompt variant parsed; content errors remain despite format success.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-sonnet55-task-evidence-review
+    method: Original public evidence inspected; task boundaries, configuration, denominators and limitations
+      retained.
+- model_id: claude-sonnet-5-5
+  profile: models/anthropic/claude-sonnet-5-5/profile.yaml
+  id: judgment-6f5d23ad596ea68c
+  scope: direct
+  task_ids:
+  - coding.scoped_edit
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Direct conclusion is limited to this task and the stated published configuration; no transfer
+    to neighboring tasks.
+  judgment: Small specified JavaScript functions passed the publisher acceptance fixtures; use explicit acceptance
+    tests before expanding to repository changes.
+  confidence: low
+  supporting_evidence_ids:
+  - src-0351220a07ba
+  contradictory_evidence_ids: []
+  conditions:
+  - One reply per fixture through llmwise/OpenRouter; ISBN-10 function8tests and hashtag function5tests; no
+    effort disclosed.
+  known_failure_modes:
+  - Tiny isolated examples do not establish reliable edits across an existing repository.
+  evidence_notes:
+  - Tests were executed by the publisher; this research inspected their original outputs and reported outcomes
+    only.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-sonnet55-task-evidence-review
+    method: Original public task result and setup inspected; no model execution.
+- model_id: claude-sonnet-5-5
+  profile: models/anthropic/claude-sonnet-5-5/profile.yaml
+  id: judgment-b96cb26fcff545d2
+  scope: direct
+  task_ids:
+  - vision.grounding
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exactly one supplied task rubric under the recorded setup.
+  judgment: Zero-shot boxes provide useful localization but need spatial correction; coarse-overlap success
+    does not establish precise grounding.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-aac5808af0ec
+  - src-12127a4ce5a0
+  contradictory_evidence_ids: []
+  conditions:
+  - Normalized y-min/x-min/y-max/x-max boxes and labels; three runs at each low/high native effort.
+  known_failure_modes:
+  - 'mAP@50 is74.3 low/76.8 high, while mAP@75 is60.0/63.1 and mAP@50: 95 is57.1/59.5.'
+  - Sample denominator and precise model route not disclosed; no GUI-action success inferred.
+  evidence_notes:
+  - mAP metrics score object detection and overlap, not an all-objects-correct rate.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-sonnet55-task-evidence-review
+    method: Original public evidence inspected; task boundaries, configuration, denominators and limitations
+      retained.
+- model_id: claude-sonnet-5-5
+  profile: models/anthropic/claude-sonnet-5-5/profile.yaml
+  id: judgment-de743a67836582cd
+  scope: direct
+  task_ids:
+  - vision.question_answering
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exactly one supplied task rubric under the recorded setup.
+  judgment: Useful for image-grounded comparisons and spatial questions with material answer checking in both
+    effort settings.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-efd1db045882
+  - src-12127a4ce5a0
+  contradictory_evidence_ids: []
+  conditions:
+  - Three runs each at low/high native effort; same visual samples; Gemini 3.5 Flash temperature0 grades against
+    ground truth.
+  known_failure_modes:
+  - Low judged accuracy76.4% versus strict11.9%; high83.9% versus strict72.8%; verbosity affects strict matching.
+  - Sample denominator, exact endpoint and run dates not disclosed; range is not a confidence interval.
+  evidence_notes:
+  - Reported±0.7 low and±1.7 high are half-ranges over three runs, not standard deviations.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-sonnet55-task-evidence-review
+    method: Original public evidence inspected; task boundaries, configuration, denominators and limitations
+      retained.
 - model_id: bfl-flux3-video
   profile: models/black-forest-labs/bfl-flux3-video/profile.yaml
   id: judgment-da95efcb747baa7e
@@ -6081,13 +8789,234 @@ records:
   known_failure_modes: []
   evidence_notes:
   - Confidence concerns this bounded claim, not a capability score.
-  observed_at: '2026-10-07'
+  - Fresh October 8 snapshot is 1658 ±12 from 3, 082 votes, rank spread 11–21. This remains preference evidence
+    and is not the reason for the separate executable-frontend assessment.
+  observed_at: '2026-10-08'
   effective_from: null
   provenance:
     origin: research
     research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate review_tests_frontend:frontend-arena-xai-grok-4-7; exact identity gates
       and original sources retained.
+- model_id: xai-grok-4-7
+  profile: models/xai-spacexai/xai-grok-4-7/profile.yaml
+  id: judgment-018736055ee45c29
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact task and recorded conditions only; no transfer from benchmark components to neighboring
+    tasks.
+  judgment: 'Repairs were highly prompt-sensitive in a small test: the familiar JavaScript median formulation
+    passed all five checks, while the Python reformulation repeatedly retained defects.'
+  confidence: low
+  supporting_evidence_ids:
+  - src-3721a84d53ae
+  contradictory_evidence_ids: []
+  conditions:
+  - Five responses per code prompt, default settings, output code executed against five assertions; actual
+    run date and route undisclosed.
+  known_failure_modes:
+  - Python outputs never fixed even-length averaging or empty input; only two of five fixed lexicographic sorting.
+  evidence_notes:
+  - The Python mean was 2.4 defects fixed of 5; this does not measure test generation or prove an internal
+    self-checking mechanism.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public evidence inspected under exact task rubric; source independence and undisclosed
+      setup retained.
+- model_id: xai-grok-4-7
+  profile: models/xai-spacexai/xai-grok-4-7/profile.yaml
+  id: judgment-0ba4cb2ee9068e43
+  scope: direct
+  task_ids:
+  - vision.question_answering
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact task and recorded public setup only; no transfer from compound scores or neighboring tasks.
+  judgment: Useful for questions requiring visual relationships and derived answers, but needs material checking
+    under the measured image-question setup.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-efd1db045882
+  - src-12127a4ce5a0
+  contradictory_evidence_ids: []
+  conditions:
+  - Roboflow current visual-reasoning task; Grok 4.7 low/high native effort;3runs each; fixed public examples
+    require interpreting diagrams and images.
+  - Gemini 3.5 Flash temperature 0 judges against ground truth; strict normalized-match score also provided;
+    sample count, resolution, model-run date, immutable snapshot and exact inference route undisclosed.
+  known_failure_modes:
+  - Mean judged accuracy 64.2%low and 66.9%high; additional effort did not establish uniformly correct interpretation.
+  evidence_notes:
+  - Half-range bars and observed run range are not confidence intervals; model-page six-task composite not
+    used.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-grok47-evidence-review-2026-10-08
+    method: Original public study/task/model/configuration inspection; source identity and limitations retained.
+- model_id: xai-grok-4-7
+  profile: models/xai-spacexai/xai-grok-4-7/profile.yaml
+  id: judgment-50e15107482eac41
+  scope: direct
+  task_ids:
+  - coding.scoped_edit
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact task and recorded conditions only; no transfer from benchmark components to neighboring
+    tasks.
+  judgment: 'Useful bounded script generation still requires runtime validation: the tested backup scripts
+    worked, while every first-pass non-root nginx manifest crash-looped despite clean schema validation.'
+  confidence: low
+  supporting_evidence_ids:
+  - src-706225e4588a
+  contradictory_evidence_ids: []
+  conditions:
+  - Josphat Mutai tested three prompts three times each at default high and low via xAI API on September 25.
+  - Bash was tested with stubbed commands; Terraform was only validated/formatted, not deployed.
+  known_failure_modes:
+  - All six nginx manifests omitted necessary writable mounts; generated scripts generally used the current
+    directory for backups.
+  evidence_notes:
+  - Do not convert the mixed 6-of-9 checks total into a narrow function, repository or security rate.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public evidence inspected under exact task rubric; source independence and undisclosed
+      setup retained.
+- model_id: xai-grok-4-7
+  profile: models/xai-spacexai/xai-grok-4-7/profile.yaml
+  id: judgment-539a094d8fd79d60
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact task and recorded conditions only; no transfer from benchmark components to neighboring
+    tasks.
+  judgment: A single log-assisted follow-up repaired a crashing non-root nginx manifest on the tested cluster;
+    the result supports a narrow corrective workflow, not general autonomous recovery.
+  confidence: low
+  supporting_evidence_ids:
+  - src-706225e4588a
+  contradictory_evidence_ids: []
+  conditions:
+  - Original failed manifest and two-line error supplied; xAI API, September 25, k3s 1.36.4 on Ubuntu 26.04.
+  known_failure_modes:
+  - The repaired manifest relies on the runtime allowing unprivileged port 80; its added capability line did
+    not confer the claimed effective capability.
+  evidence_notes:
+  - The author deployed the repaired output and observed HTTP 200. One repair is not a repeat estimate.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public evidence inspected under exact task rubric; source independence and undisclosed
+      setup retained.
+- model_id: xai-grok-4-7
+  profile: models/xai-spacexai/xai-grok-4-7/profile.yaml
+  id: judgment-545f5cc024f99a3d
+  scope: unresolved
+  task_ids: []
+  related_task_ids:
+  - coding.repository_work
+  - coding.architecture
+  - coding.refactoring
+  - coding.tests
+  assessment: unknown
+  scope_note: Unresolved compound evidence retained for navigation only; no direct task endorsement.
+  judgment: Attributable Cursor users report both useful Rust multi-file work and architecture/refactor drift;
+    the anecdotes do not isolate model quality or establish behavior-preserving refactoring.
+  confidence: low
+  supporting_evidence_ids:
+  - src-aee499e96a53
+  contradictory_evidence_ids: []
+  conditions:
+  - Exact effort, serving route, patches and acceptance checks were not disclosed.
+  known_failure_modes:
+  - Unnecessary abstractions, unreadable refactors and unapplied changes are reported, without controlled reproduction.
+  evidence_notes:
+  - Mixed user experiences are not sufficient by themselves for an aggregate Disputed rating.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public evidence inspected under exact task rubric; source independence and undisclosed
+      setup retained.
+- model_id: xai-grok-4-7
+  profile: models/xai-spacexai/xai-grok-4-7/profile.yaml
+  id: judgment-a610fa0194677cb5
+  scope: direct
+  task_ids:
+  - coding.frontend
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact task and recorded conditions only; no transfer from benchmark components to neighboring
+    tasks.
+  judgment: Grok Build xhigh produced usable visual code and a game satisfying the explicit brief, but visible
+    animation, camera and interaction-polish problems required direct rendered-output review.
+  confidence: low
+  supporting_evidence_ids:
+  - src-6fb2505d493e
+  - src-2be166d8cf0e
+  contradictory_evidence_ids: []
+  conditions:
+  - One attempt per brief. Browser self-check was forbidden for three initial builds and required/available
+    for the separate Hill Climb game.
+  known_failure_modes:
+  - Reported faults included disconnected animation layers, a camera losing the rocket, abrupt coasting and
+    floating background scenery.
+  evidence_notes:
+  - All explicit Hill Climb requirements passed. Its 6/20 subjective score is not a functional failure rate;
+    exact prompts and blinded grading were unavailable.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public evidence inspected under exact task rubric; source independence and undisclosed
+      setup retained.
+- model_id: xai-grok-4-7
+  profile: models/xai-spacexai/xai-grok-4-7/profile.yaml
+  id: judgment-b638cfe00b628c73
+  scope: direct
+  task_ids:
+  - vision.grounding
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact task and recorded public setup only; no transfer from compound scores or neighboring tasks.
+  judgment: Can emit normalized boxes for described image classes, but localization is weak enough that precise
+    coordinates need substantial correction.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-aac5808af0ec
+  - src-12127a4ce5a0
+  contradictory_evidence_ids: []
+  conditions:
+  - Roboflow zero-shot object detection; requested labels and normalized[ymin,xmin,ymax,xmax]coordinates; Grok
+    4.7 low/high;3runs each.
+  - Deterministic box-overlap mAP; sample/object denominators, image resolution, immutable checkpoint and route
+    undisclosed.
+  known_failure_modes:
+  - mAP@50= 40.4% low / 41.2% high; mAP@75=23.0%/23.7% and mAP@50:95=23.6%/24.4%.
+  evidence_notes:
+  - mAP is not a fraction of task successes; no GUI-action or segmentation conclusion.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-grok47-evidence-review-2026-10-08
+    method: Original public study/task/model/configuration inspection; source identity and limitations retained.
 - model_id: glm-5-3
   profile: models/z-ai-zhipu-ai/glm-5-3/profile.yaml
   id: judgment-7617cc55522b828a

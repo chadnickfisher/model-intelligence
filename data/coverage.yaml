@@ -1,12 +1,12 @@
 schema_version: '1.0'
 generated: true
-as_of: '2026-10-08'
+as_of: '2026-10-09'
 counts:
   models: 54
   providers_and_access_products: 44
-  capability_judgments: 195
-  performance_judgments: 13
+  capability_judgments: 289
+  performance_judgments: 14
   price_records: 169
   access_routes: 324
-  public_sources: 664
+  public_sources: 828
   evidence_observations: 55

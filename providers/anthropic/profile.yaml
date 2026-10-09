@@ -10,7 +10,14 @@ api_compatibility:
 access_methods:
 - Commercial API key and billing account; consumer app/Code subscription sign-in is separate.
 geographic_availability:
-- Supported Regions Policy has separate API and Claude.ai lists; geography and ownership restrictions apply.
+- The current Supported Regions Policy uses one country/region list across apps, API/developer platform, cloud
+  platforms and authorized resellers; location, entity headquarters and majority ownership/control restrictions
+  apply.
+- Supported Regions Policy now publishes one list covering apps, API/developer platform, cloud platforms and
+  authorized resellers; physical location, incorporation/headquarters, majority-ownership/control restrictions
+  apply.
+- One Supported Regions Policy covers apps, API/developer platform, cloud platforms and authorized resellers;
+  physical location, incorporation/headquarters and majority-ownership/control restrictions apply.
 rate_limits:
 - Haiku 4.5 standard maximums depend on Start/Build/Scale tiers; new-account evaluation and organization limits
   may be lower.
@@ -22,6 +29,8 @@ privacy_data_use:
   Free/Pro/Max and their Code sessions have separate policies.
 - Approved zero retention applies only to eligible commercial APIs/products and Enterprise Code, with safety/legal
   exceptions; no universal consumer guarantee.
+- Fable 5.1 is a Covered Model with 30-day retention requirements unless Anthropic expressly authorizes an
+  exception; general approved-ZDR language is not automatic Fable eligibility.
 reliability: []
 model_ids:
 - claude-fable-5-1
