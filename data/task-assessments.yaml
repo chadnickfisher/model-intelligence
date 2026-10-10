@@ -36007,25 +36007,44 @@ records:
     - Applies to the documented native interface. External tools, wrappers and downstream systems require a
       separate assessment.
     access_ids: []
-- model_id: llama-4-maverick
-  task_id: vision.grounding
-  applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Investigated Localize a described visual entity or interface element to a region, coordinate,
-    or other explicit visual reference. No exact-model direct task conclusion was established. Custom license
-    and provider runtime conditions; BF16 instruction benchmarks do not establish quantized equivalence.
-  judgment_ids: []
-  confidence_rationale: No ability or confidence score is inferred from missing task evidence.
-  evidence_ids:
-  - src-65471a2c7ad5
-  - src-8cb15ff6ddd4
-  - src-df5d5aa8ed0e
+- applicability: applicable
+  checked_at: '2026-10-10'
   conditions:
-  - Interface applicability does not establish task quality.
-  remaining_gaps:
-  - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
+  - Maverick total Accuracy@0.5 is 13.0 percent under greedy temperature-zero and no-thinking-where-supported
+    protocol.
+  - The task measures bounding-box overlap, not general image description or interactive computer use.
+  - Assessment concerns the source-described native or research-serving setup; no listed commercial access
+    route is presumed equivalent.
+  confidence_rationale: 'Low confidence in this bounded conclusion: source method and relevant limitations
+    are stated; no universal ability claim or independent replication is inferred.'
+  evidence_ids:
+  - src-d6408d95b976
   id: task-assessment-fd5aeb4f8edbdfd0
+  judgment_ids:
+  - judgment-e988a23ee43a7664
+  model_id: llama-4-maverick
+  rationale: Complex visual localization frequently misses the required region in GroundingME, undermining
+    dependable coordinate-level grounding in that benchmark.
+  remaining_gaps:
+  - Exact serving checkpoint revision, precision and independent replication remain unavailable.
+  result: assessed
+  task_id: vision.grounding
+  aggregate:
+    policy_version: '1'
+    suitability: low
+    evidence_confidence: low
+    assessed_at: '2026-10-10'
+    rationale: Complex visual localization frequently misses the required region in GroundingME, undermining
+      dependable coordinate-level grounding in that benchmark.
+    confidence_rationale: 'Low confidence in this bounded conclusion: source method and relevant limitations
+      are stated; no universal ability claim or independent replication is inferred.'
+    supporting_evidence_ids:
+    - src-d6408d95b976
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Exact serving checkpoint revision, precision and independent replication remain unavailable.
+    access_ids: []
 - model_id: llama-4-maverick
   task_id: vision.question_answering
   applicability: applicable
@@ -36390,26 +36409,42 @@ records:
   remaining_gaps:
   - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
   id: task-assessment-6af0d3cb6043644e
-- model_id: llama-4-scout
-  task_id: context.retrieval
-  applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Investigated Locate and accurately recover relevant information from extended supplied context
-    across its positions and distractions. No exact-model direct task conclusion was established. Advertised
-    10M context is not reliable long-document reasoning. Filtered positive refactorings measure preference,
-    not defect detection.
-  judgment_ids: []
-  confidence_rationale: No ability or confidence score is inferred from missing task evidence.
-  evidence_ids:
-  - src-8cb15ff6ddd4
-  - src-65471a2c7ad5
-  - src-3d8e22441afa
+- applicability: applicable
+  checked_at: '2026-10-10'
   conditions:
-  - Interface applicability does not establish task quality.
+  - 'HELM report: 100 RULER SQuAD instances at configured 128K whitespace tokens; not a 10M test.'
+  confidence_rationale: Confidence reflects the bounded evidence and missing immutable revision, not the numerical
+    score.
+  evidence_ids:
+  - src-22035a256b27
+  judgment_ids:
+  - judgment-10152f2ec22e17bb
+  model_id: llama-4-scout
+  rationale: Useful but unreliable for single-hop retrieval among distractors at the tested 128K whitespace-token
+    setting; repeated-reference retrieval remains weak.
   remaining_gaps:
-  - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
+  - RULER SQuAD score 0.68; OpenAI MRCR 0.171 under a different retrieval protocol.
+  - Unknown hosting route, quantization and immutable revision limit transfer.
+  result: assessed
+  task_id: context.retrieval
   id: task-assessment-b4b720530b207e99
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: low
+    assessed_at: '2026-10-10'
+    rationale: Useful but unreliable for single-hop retrieval among distractors at the tested 128K whitespace-token
+      setting; repeated-reference retrieval remains weak.
+    confidence_rationale: Confidence reflects the bounded evidence and missing immutable revision, not the
+      numerical score.
+    supporting_evidence_ids:
+    - src-22035a256b27
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - RULER SQuAD score 0.68; OpenAI MRCR 0.171 under a different retrieval protocol.
+    - Unknown hosting route, quantization and immutable revision limit transfer.
+    access_ids: []
 - model_id: llama-4-scout
   task_id: image.editing
   applicability: excluded
@@ -36876,26 +36911,42 @@ records:
     - Applies to the documented native interface. External tools, wrappers and downstream systems require a
       separate assessment.
     access_ids: []
-- model_id: llama-4-scout
-  task_id: vision.grounding
-  applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Investigated Localize a described visual entity or interface element to a region, coordinate,
-    or other explicit visual reference. No exact-model direct task conclusion was established. Advertised 10M
-    context is not reliable long-document reasoning. Filtered positive refactorings measure preference, not
-    defect detection.
-  judgment_ids: []
-  confidence_rationale: No ability or confidence score is inferred from missing task evidence.
-  evidence_ids:
-  - src-8cb15ff6ddd4
-  - src-65471a2c7ad5
-  - src-3d8e22441afa
+- applicability: applicable
+  checked_at: '2026-10-10'
   conditions:
-  - Interface applicability does not establish task quality.
+  - 1005 high-resolution examples; unified box prompt, greedy decoding; accuracy requires IoU above 0.5.
+  confidence_rationale: Confidence reflects the bounded evidence and missing immutable revision, not the numerical
+    score.
+  evidence_ids:
+  - src-d6408d95b976
+  - src-c053df9d4961
+  judgment_ids:
+  - judgment-a40e011a9e6508e8
+  model_id: llama-4-scout
+  rationale: 'Poor fit for difficult referring-expression localization under GroundingME: most target regions
+    were missed.'
   remaining_gaps:
-  - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
+  - Overall accuracy 8.9%; rejection 2.5%; route and immutable revision unspecified.
+  result: assessed
+  task_id: vision.grounding
   id: task-assessment-b4f6297a5b23e567
+  aggregate:
+    policy_version: '1'
+    suitability: low
+    evidence_confidence: low
+    assessed_at: '2026-10-10'
+    rationale: 'Poor fit for difficult referring-expression localization under GroundingME: most target regions
+      were missed.'
+    confidence_rationale: Confidence reflects the bounded evidence and missing immutable revision, not the
+      numerical score.
+    supporting_evidence_ids:
+    - src-d6408d95b976
+    - src-c053df9d4961
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Overall accuracy 8.9%; rejection 2.5%; route and immutable revision unspecified.
+    access_ids: []
 - model_id: llama-4-scout
   task_id: vision.question_answering
   applicability: applicable

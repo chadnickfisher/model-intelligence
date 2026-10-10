@@ -466,22 +466,22 @@ records:
   accessed_at: '2026-10-06'
   claim_scope: []
   limitations: []
-- id: src-29885c43e537
-  url: https://huggingface.co/microsoft/Phi-4-multimodal-instruct
-  title: Phi-4 Multimodal official card
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-08'
+- accessed_at: '2026-10-10'
   claim_scope:
   - Dated post-launch finding; retain its model, client, service or runtime scope.
   - No HF Inference Provider on this exact card; Azure catalog remains documented.
   - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   - English zero-shot text-query visual QA and BLINK subtask results; separate from spoken-query s_DocVQA.
+  id: src-29885c43e537
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
   - Vendor evaluation only; exact evaluated revision, measurement date, decoding and versioned harness unknown.
+  published_at: null
+  publisher: null
+  source_type: primary
+  title: Phi-4 Multimodal official card
+  url: https://huggingface.co/microsoft/Phi-4-multimodal-instruct
 - id: src-29ae95a372cc
   url: https://www.cerebras.ai/pricing
   title: null
@@ -1107,17 +1107,17 @@ records:
   accessed_at: '2026-10-06'
   claim_scope: []
   limitations: []
-- id: src-65471a2c7ad5
-  url: https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct
-  title: Llama 4 Maverick official card
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-10'
   claim_scope:
-  - No HF Inference Provider on this exact BF16 card; Novita FP8 is separately documented.
-  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
-  limitations: []
+  - Exact Maverick identity, model boundaries, release date, official BF16 evaluations and gated artifacts.
+  id: src-65471a2c7ad5
+  limitations:
+  - Vendor evaluations; runtime examples do not establish a global maximum generation length.
+  published_at: null
+  publisher: Meta
+  source_type: primary
+  title: Llama 4 Maverick official card
+  url: https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct
 - id: src-65ad2b8b0099
   url: https://huggingface.co/docs/inference-endpoints/pricing
   title: null
@@ -1615,14 +1615,15 @@ records:
     as licensing authority.
 - id: src-96b521869e71
   url: https://www.microsoft.com/en-us/research/blog/phi-4-reasoning-vision-and-the-lessons-of-training-a-multimodal-reasoning-model/
-  title: Microsoft selective vision-reasoning evaluation
-  publisher: null
+  title: Phi-4-reasoning-vision and the lessons of training a multimodal reasoning model
+  publisher: Microsoft Research
   source_type: primary
-  published_at: null
-  accessed_at: '2026-10-06'
-  claim_scope: []
+  published_at: '2026-03-04'
+  accessed_at: '2026-10-10'
   limitations:
-  - Vendor-run comparison; benchmark modes, output budgets and prompts vary.
+  - Same vendor evidence stream as card/report; 5B ablations are not the released 15B checkpoint.
+  claim_scope:
+  - Release announcement and architecture/evaluation discussion.
 - id: src-97b73e99f5cd
   url: https://artificialanalysis.ai/models/comparisons/gpt-6-astra-high-vs-gpt-6-astra
   title: Astra high versus max benchmark comparison
@@ -5456,18 +5457,20 @@ records:
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
-- id: src-6ab4f3f5fdd6
-  url: https://docs.nvidia.com/nim/vision-language-models/1.4.0/release-notes.html
-  title: https://docs.nvidia.com/nim/vision-language-models/1.4.0/release-notes.html
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-10'
   claim_scope:
-  - Dated post-launch finding; retain its model, client, service or runtime scope.
+  - Maverick-specific slow-tokenizer failure and concurrency-related TTFT limitation.
+  - Scout tool-calling runtime support added in NIM VLM 1.3.2 relative to 1.3.1; historical default sequence
+    and image limits.
+  id: src-6ab4f3f5fdd6
   limitations:
-  - Imported public-source research inspection metadata; no operational access or model execution performed
-    by this integration.
+  - Source-specific configuration and transfer limits are retained in the linked findings and measurements;
+    inspected without running inference.
+  published_at: null
+  publisher: NVIDIA
+  source_type: primary
+  title: NVIDIA NIM VLM 1.4.0 release notes
+  url: https://docs.nvidia.com/nim/vision-language-models/1.4.0/release-notes.html
 - id: src-6eee4bf48e7d
   url: https://github.com/vllm-project/vllm/issues/18023
   title: https://github.com/vllm-project/vllm/issues/18023
@@ -6094,16 +6097,17 @@ records:
   claim_scope:
   - Current K3 serverless listing3/15; avoid treating full catalog as all serverless.
   limitations: []
-- id: src-4281e218a491
-  url: https://novita.ai/models/model-detail/meta-llama-llama-4-maverick-17b-128e-instruct-fp8?from=pricing
-  title: https://novita.ai/models/model-detail/meta-llama-llama-4-maverick-17b-128e-instruct-fp8?from=pricing
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-10'
   claim_scope:
-  - Direct serverless exact model alias/rate/served limits and image capability.
-  limitations: []
+  - Exact FP8 alias; public serverless input/output rates, context and output limits.
+  id: src-4281e218a491
+  limitations:
+  - Public documentation only; no logged-in eligibility, paid deployment, API call, or account quota tested.
+  published_at: null
+  publisher: Novita
+  source_type: primary
+  title: Novita Maverick FP8 model route
+  url: https://novita.ai/models/model-detail/meta-llama-llama-4-maverick-17b-128e-instruct-fp8?from=pricing
 - id: src-3865f58cb533
   url: https://fireworks.ai/models
   title: https://fireworks.ai/models
@@ -6275,16 +6279,19 @@ records:
   claim_scope:
   - Exact gateway model slug and starting input/output rate; current underlying routes not fully rendered.
   limitations: []
-- id: src-cc6d3cc44a13
-  url: https://fireworks.ai/models/fireworks/nemotron-3-ultra-nvfp4
-  title: https://fireworks.ai/models/fireworks/nemotron-3-ultra-nvfp4
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-10'
   claim_scope:
   - Serverless exact NVFP4 variant .60/.12/2.40; 262K context.
-  limitations: []
+  - Original catalog shows NVFP4 serverless and dedicated availability,262k advertised context and0.60/0.12/2.40
+    Standard input/cached/output pricing.
+  id: src-cc6d3cc44a13
+  limitations:
+  - Separate quantized serving variant, not BF16 checkpoint identity; no execution or eligibility test.
+  published_at: null
+  publisher: Fireworks AI
+  source_type: primary
+  title: Fireworks Nemotron 3 Ultra NVFP4
+  url: https://fireworks.ai/models/fireworks/nemotron-3-ultra-nvfp4
 - id: src-d79bd46f15b8
   url: https://fireworks.ai/models/fireworks/nemotron-3-ultra-bf16
   title: https://fireworks.ai/models/fireworks/nemotron-3-ultra-bf16
@@ -6325,17 +6332,17 @@ records:
   claim_scope:
   - NVIDIA endpoint is deprecated, so not a current free-hosted route.
   limitations: []
-- id: src-4ca560b8430b
-  url: https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/
-  title: https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/
+- accessed_at: '2026-10-10'
+  claim_scope:
+  - February 26, 2025 public announcement separately introduces text Mini and Multimodal.
+  id: src-4ca560b8430b
+  limitations:
+  - Public source inspection; no inference execution or account entitlement test.
+  published_at: '2025-02-26'
   publisher: null
   source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
-  claim_scope:
-  - Historical launch price has suspicious mini input/output asymmetry; not accepted as current price.
-  - Historical text/image vs audio token prices found; current Azure pricing not resolved.
-  limitations: []
+  title: https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/
+  url: https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/
 - id: src-9182f506d099
   url: https://featherless.ai/models/microsoft/Phi-4-mini-instruct
   title: https://featherless.ai/models/microsoft/Phi-4-mini-instruct
@@ -9870,3 +9877,85 @@ records:
   - Underlying inference provider and returned-model trace are undisclosed; configured model is explicit.
   claim_scope:
   - Configured Opus 5.5 Cursor SDK stalls, contrasting later success and support explanation
+- id: src-22035a256b27
+  url: https://crfm.stanford.edu/2025/09/29/helm-long-context.html
+  title: HELM Long Context report
+  publisher: Stanford CRFM
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-10'
+  limitations:
+  - Source-specific configuration and transfer limits are retained in the linked findings and measurements;
+    inspected without running inference.
+  claim_scope:
+  - Maverick FP8 long-context task scores, sampling and whitespace-token length filter.
+  - Scout RULER SQuAD and HotPotQA, OpenAI MRCR and InfinityBench En.Sum scores under the reported 100-instance,
+    128K whitespace-token evaluation setup.
+- id: src-48b30f19fa4f
+  url: https://github.com/NVIDIA/NemoClaw/issues/10551
+  title: 'NemoClaw10551: Ultra managed inference route fails while direct request succeeds'
+  publisher: NVIDIA/NemoClaw issue reporter and contributor
+  source_type: practitioner
+  published_at: '2026-08-28'
+  accessed_at: '2026-10-10'
+  claim_scope:
+  - 'Original August28 user reproduction: managed path503 while same111564-character prompt succeeds direct,
+    Super control works; contributor acknowledges detailed report, open issue without displayed fix.'
+  limitations:
+  - Underlying checkpoint/precision and causal responsibility remain unproven; one user configuration, no independent
+    reproduction.
+- id: src-6062bd1a0be5
+  url: https://docs.fireworks.ai/serverless/rate-limits
+  title: Fireworks serverless rate limits
+  publisher: Fireworks AI
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-10'
+  limitations:
+  - Public documentation only; no logged-in eligibility, paid deployment, API call, or account quota tested.
+  - Published ceilings are not promised actual account quotas.
+  claim_scope:
+  - Adaptive serverless TPM limits, distinct from dedicated serving and global account quotas.
+  - Adaptive per-model account TPM, Small <600B tier ceilings,25% growth at qualifying utilization,72h inactivity
+    reset,503load shedding; Priority shares Standard limits.
+- id: src-81a2564df2e6
+  url: https://arxiv.org/html/2603.03975v1
+  title: Phi-4-reasoning-vision-15B Technical Report
+  publisher: Microsoft Research
+  source_type: primary
+  published_at: '2026-03-04'
+  accessed_at: '2026-10-10'
+  limitations:
+  - Vendor study; exact measurement date, harness commit, immutable evaluated revision and full trial details
+    not established.
+  - Small 5B ablations and 100-example latency subset must not be attributed to full 15B accuracy evaluation.
+  claim_scope:
+  - Vendor evaluation protocol and separate thinking/non-thinking accuracy results.
+- id: src-c053df9d4961
+  url: https://groundingme.github.io/
+  title: GroundingME project
+  publisher: GroundingME authors
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-10'
+  limitations:
+  - Same study as paper; not replication.
+  claim_scope:
+  - Original project result table
+- id: src-d6408d95b976
+  url: https://arxiv.org/html/2512.17495v1
+  title: 'GroundingME: Exposing the Visual Grounding Gap in MLLMs through Multi-Dimensional Evaluation'
+  publisher: GroundingME authors
+  source_type: independent-evaluation
+  published_at: '2025-12-19'
+  accessed_at: '2026-10-10'
+  limitations:
+  - Source-specific configuration and transfer limits are retained in the linked findings and measurements;
+    inspected without running inference.
+  - Difficult natural-image localization, not GUI action execution; immutable checkpoint and full runtime settings
+    unspecified.
+  claim_scope:
+  - Maverick localization accuracy under the published no-thinking/greedy protocol.
+  - Exact Phi-4-multimodal-instruct scoped research
+  - Scout localization and rejection results under the same published GroundingME referring-expression protocol;
+    no GUI action or autonomous computer-use evaluation.

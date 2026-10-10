@@ -1,7 +1,7 @@
 # Phi-4 Multimodal Instruct
 
 **Creator:** Microsoft · **Family:** Phi-4 · **Status:** active
-**Verified:** 2026-10-06 · **Release:** Unknown
+**Verified:** 2026-10-06 · **Release:** 2025-02-26
 
 [Canonical data](profile.yaml) · [Methodology](../../../methodology.md) · [Catalog](../../../data/models.md)
 
@@ -71,7 +71,7 @@ Supporting sources: [Phi-4 Multimodal official card](https://huggingface.co/micr
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Vendor-only evidence; independent reproduction, immutable checkpoint, measurement date and full decoding/harness settings remain unknown.; Text-query DocVQA is distinct from synthetic spoken-query s_DocVQA; no transfer to other languages or fine-tuned audio adapters.
+Evidence notes: Vendor-only evidence; independent reproduction, immutable checkpoint, measurement date and full decoding/harness settings remain unknown.; Text-query DocVQA is distinct from synthetic spoken-query s_DocVQA; no transfer to other languages or fine-tuned audio adapters.; Fresh inspection retains the narrow short-document/chart judgment. Independent long-document and grounding studies concern materially different tasks/setups and do not independently replicate this vendor table.
 
 ## Specifications
 

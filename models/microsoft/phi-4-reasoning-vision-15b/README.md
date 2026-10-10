@@ -23,9 +23,9 @@ Conditions: English-focused; selective thinking can save compute but benchmark a
 
 Failure modes / limitations: 16k window; hallucination/visual reasoning limitations; independent matched evaluation not verified.
 
-Supporting sources: [Phi-4-Reasoning-Vision-15B model card](https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B) · [Microsoft selective vision-reasoning evaluation](https://www.microsoft.com/en-us/research/blog/phi-4-reasoning-vision-and-the-lessons-of-training-a-multimodal-reasoning-model/)
+Supporting sources: [Phi-4-Reasoning-Vision-15B model card](https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B) · [Phi-4-reasoning-vision and the lessons of training a multimodal reasoning model](https://www.microsoft.com/en-us/research/blog/phi-4-reasoning-vision-and-the-lessons-of-training-a-multimodal-reasoning-model/)
 
-Contradictory or limiting sources: [Microsoft selective vision-reasoning evaluation](https://www.microsoft.com/en-us/research/blog/phi-4-reasoning-vision-and-the-lessons-of-training-a-multimodal-reasoning-model/)
+Contradictory or limiting sources: [Phi-4-reasoning-vision and the lessons of training a multimodal reasoning model](https://www.microsoft.com/en-us/research/blog/phi-4-reasoning-vision-and-the-lessons-of-training-a-multimodal-reasoning-model/)
 
 ### Vision.grounding (low confidence)
 
@@ -104,4 +104,4 @@ Local conditions: Batch 1, short/moderate context unless otherwise stated.; Weig
 
 ## Sources
 
-[MIT License](https://opensource.org/license/mit) · [Phi-4-Reasoning-Vision-15B model card](https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B) · [Microsoft selective vision-reasoning evaluation](https://www.microsoft.com/en-us/research/blog/phi-4-reasoning-vision-and-the-lessons-of-training-a-multimodal-reasoning-model/)
+[MIT License](https://opensource.org/license/mit) · [Phi-4-Reasoning-Vision-15B model card](https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B) · [Phi-4-reasoning-vision and the lessons of training a multimodal reasoning model](https://www.microsoft.com/en-us/research/blog/phi-4-reasoning-vision-and-the-lessons-of-training-a-multimodal-reasoning-model/)

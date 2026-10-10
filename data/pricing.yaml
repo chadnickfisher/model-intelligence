@@ -5048,41 +5048,39 @@ records:
   - src-b0caa8675a4a
   - src-95ebabb9d4ec
   notes: []
-- schema_version: '1.0'
-  id: price-e795792e1db1a71f
-  verified_at: '2026-10-07'
-  model_id: llama-4-maverick
-  provider_id: novita
-  product: hosted metered api
-  model_label: meta-llama/llama-4-maverick-17b-128e-instruct-fp8
-  billing_method: metered-api
-  status: current
-  region: null
-  tier: Standard
+- billing_method: metered-api
+  conditions: []
   effective_from: null
   effective_to: null
-  rates:
-  - metric: input
-    amount: 0.27
-    currency: USD
-    unit: per 1 million tokens
-    conditions: []
-  - metric: output
-    amount: 0.85
-    currency: USD
-    unit: per 1 million tokens
-    conditions: []
-  included_usage: []
-  reset_cadence: null
-  overage: []
-  conditions: []
   evidence_ids:
   - src-4281e218a491
-  - src-1f8330a8a801
-  - src-3865f58cb533
-  - src-fe77d146b253
-  - src-65471a2c7ad5
-  notes: []
+  id: price-e795792e1db1a71f
+  included_usage: []
+  model_id: llama-4-maverick
+  model_label: meta-llama/llama-4-maverick-17b-128e-instruct-fp8
+  notes:
+  - The public listing labels the service Serverless; a distinct pricing tier named Standard is not established.
+    Rates are retained, and no cache or region-specific price is inferred.
+  overage: []
+  product: hosted metered api
+  provider_id: novita
+  rates:
+  - amount: 0.27
+    conditions: []
+    currency: USD
+    metric: input
+    unit: per 1 million tokens
+  - amount: 0.85
+    conditions: []
+    currency: USD
+    metric: output
+    unit: per 1 million tokens
+  region: null
+  reset_cadence: null
+  schema_version: '1.0'
+  status: current
+  tier: null
+  verified_at: '2026-10-07'
 - schema_version: '1.0'
   id: price-cb51214b8cd407bd
   verified_at: '2026-10-07'

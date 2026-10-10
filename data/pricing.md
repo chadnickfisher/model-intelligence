@@ -145,7 +145,7 @@ Generated from canonical YAML. Units, route conditions and dates are essential.
 | gpt-oss-120b | together | metered-api / Standard / current | input: 0.15 USD / per 1 million tokens; output: 0.6 USD / per 1 million tokens | 2026-10-07 |
 | gpt-oss-20b | groq | metered-api / Standard / current | input: 0.075 USD / per 1 million tokens; output: 0.3 USD / per 1 million tokens; cached_input: 0.0375 USD / per 1 million tokens | 2026-10-07 |
 | gpt-oss-20b | groq | free / Capped free evaluation / tier / current | input: 0 USD / per 1 million tokens; output: 0 USD / per 1 million tokens | 2026-10-07 |
-| llama-4-maverick | novita | metered-api / Standard / current | input: 0.27 USD / per 1 million tokens; output: 0.85 USD / per 1 million tokens | 2026-10-07 |
+| llama-4-maverick | novita | metered-api / None / current | input: 0.27 USD / per 1 million tokens; output: 0.85 USD / per 1 million tokens | 2026-10-07 |
 | llama-4-scout | novita | metered-api / Standard / current | input: 0.18 USD / per 1 million tokens; output: 0.59 USD / per 1 million tokens | 2026-10-07 |
 | minimax-m3 | together | metered-api / Standard / current | input: 0.3 USD / per 1 million tokens; output: 1.2 USD / per 1 million tokens; cached_input: 0.06 USD / per 1 million tokens | 2026-10-07 |
 | ministral-3-8b | mistral-api | metered-api / Standard / current | input: 0.15 USD / per 1 million tokens; output: 0.15 USD / per 1 million tokens; cached_input: 0.015 USD / per 1 million tokens | 2026-10-07 |

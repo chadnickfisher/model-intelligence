@@ -3181,36 +3181,37 @@ records:
     date is not the measurement date.
   evidence_notes:
   - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
-- schema_version: '1.0'
-  id: benchmark-f4e8c25ca011bcdc
-  model_id: llama-4-maverick
-  judgment_ids: []
-  benchmark:
-    name: MMMU
-    version: null
-    metric: zero-shot accuracy
-    unit: percent
+- benchmark:
     direction: higher
-  value: 73.4
-  model_version: meta-llama/Llama-4-Maverick-17B-128E-Instruct
-  harness: null
-  effort: null
-  provider_id: null
-  tools: null
-  measured_at: null
-  observed_at: '2026-10-07'
-  evidence_class: vendor_claim
-  source_ids:
-  - src-65471a2c7ad5
+    metric: zero-shot accuracy
+    name: MMMU
+    unit: percent
+    version: null
   conditions:
-  - Scale route llama4-maverick-17b-instruct; provider precision/serving revision not extracted. Experimental
-    Arena chat-variant Elo excluded.
-  limitations:
-  - Exact cost cap/turn-limit row styling and immutable route configuration remain unverified.
-  - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
-    date is not the measurement date.
+  - Meta official instruction-tuned evaluation; zero-shot MMMU accuracy measured in BF16.
+  - A quantized or hosted route is not established to reproduce this result.
+  effort: null
+  evidence_class: vendor_claim
   evidence_notes:
   - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+  - Fresh inspection corrected unrelated SWE-bench route and cap/turn conditions mistakenly attached to this
+    vendor measurement.
+  harness: null
+  id: benchmark-f4e8c25ca011bcdc
+  judgment_ids: []
+  limitations:
+  - Exact dataset revision, harness, sampling settings, sample count, uncertainty and measurement date are
+    not disclosed in the inspected card.
+  measured_at: null
+  model_id: llama-4-maverick
+  model_version: meta-llama/Llama-4-Maverick-17B-128E-Instruct
+  observed_at: '2026-10-10'
+  provider_id: null
+  schema_version: '1.0'
+  source_ids:
+  - src-65471a2c7ad5
+  tools: null
+  value: 73.4
 - schema_version: '1.0'
   id: benchmark-a7177f3e98d42815
   model_id: phi-4-mini-instruct
@@ -3244,37 +3245,41 @@ records:
     date is not the measurement date.
   evidence_notes:
   - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
-- schema_version: '1.0'
-  id: benchmark-9f7e180fbf50c2b6
-  model_id: phi-4-multimodal-instruct
-  judgment_ids:
-  - judgment-61024ceeda4b1074
-  benchmark:
-    name: s_DocVQA
-    version: null
-    metric: reported document-question score
-    unit: reported score
+- benchmark:
     direction: higher
-  value: 87.3
-  model_version: microsoft/Phi-4-multimodal-instruct
-  harness: null
-  effort: null
-  provider_id: null
-  tools: null
-  measured_at: null
-  observed_at: '2026-10-07'
-  evidence_class: vendor_claim
-  source_ids:
-  - src-29885c43e537
+    metric: reported document-question score
+    name: s_DocVQA
+    unit: reported score
+    version: null
   conditions:
   - Image plus synthetic spoken query; retain the s_ benchmark prefix. Korean fine-tuned adapter scores excluded.
+  effort: null
+  evidence_class: vendor_claim
+  evidence_notes:
+  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+  - Exact named score re-read in the current creator table on 2026-10-10. No new measurement performed; retained
+    vendor classification and independent-setup limitations.
+  harness: null
+  id: benchmark-9f7e180fbf50c2b6
+  judgment_ids:
+  - judgment-61024ceeda4b1074
   limitations:
   - Independent reproduction for this exact checkpoint and task was not established in this bounded search.
   - The card does not specify the s_DocVQA metric formula, benchmark revision or full harness configuration.
   - Measurement date, immutable serving revision and some decoding/harness settings remain unspecified; observation
     date is not the measurement date.
-  evidence_notes:
-  - Added by public-task-followup-2026-10-07; current observed result, not a claim of earlier availability.
+  - Do not substitute example inference requirements for the benchmark runtime, or transfer the speech no-sampling
+    statement to the vision evaluation.
+  measured_at: null
+  model_id: phi-4-multimodal-instruct
+  model_version: microsoft/Phi-4-multimodal-instruct
+  observed_at: '2026-10-10'
+  provider_id: null
+  schema_version: '1.0'
+  source_ids:
+  - src-29885c43e537
+  tools: null
+  value: 87.3
 - schema_version: '1.0'
   id: benchmark-913104c644772c7b
   model_id: phi-4-reasoning-vision-15b
@@ -4499,192 +4504,216 @@ records:
   - No repository-wide context or execution-based behavioral validation.
   evidence_notes:
   - Paper publication is not measurement date; preference agreement does not establish deep design judgment.
-- schema_version: '1.0'
-  id: benchmark-007310554f9ad9a1
-  model_id: phi-4-multimodal-instruct
-  judgment_ids:
-  - judgment-2d69fe2e03e66c8c
-  benchmark:
+- benchmark:
+    direction: higher
+    metric: creator-reported visual-question score
     name: DocVQA
-    version: null
-    metric: creator-reported visual-question score
     unit: reported score
-    direction: higher
+    version: null
+  conditions:
+  - English image-plus-text questions; zero-shot prompts on the creator internal evaluation platform.
+  - Dataset images; API formatting and JPEG conversion where interfaces require it; shared answer extraction.
+  - Native model assessment; no specific provider route or quantized deployment assessed.
+  effort: null
+  evidence_class: vendor_claim
+  evidence_notes:
+  - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
+  - Exact named score re-read in the current creator table on 2026-10-10. No new measurement performed; retained
+    vendor classification and independent-setup limitations.
+  harness: Creator internal zero-shot vision platform; full version unknown
+  id: benchmark-007310554f9ad9a1
+  judgment_ids:
+  - judgment-2d69fe2e03e66c8c
+  limitations:
+  - Vendor-only; metric formula, benchmark revision, immutable model revision, measurement date and full decoding
+    setup not established.
+  - Do not substitute example inference requirements for the benchmark runtime, or transfer the speech no-sampling
+    statement to the vision evaluation.
+  measured_at: null
+  model_id: phi-4-multimodal-instruct
+  model_version: Phi-4-multimodal-instruct; immutable revision unknown
+  observed_at: '2026-10-10'
+  provider_id: null
+  schema_version: '1.0'
+  source_ids:
+  - src-29885c43e537
+  tools: null
   value: 93.2
-  model_version: Phi-4-multimodal-instruct; immutable revision unknown
-  harness: Creator internal zero-shot vision platform; full version unknown
-  effort: null
-  provider_id: null
-  tools: null
-  measured_at: null
-  observed_at: '2026-10-08'
-  evidence_class: vendor_claim
-  source_ids:
-  - src-29885c43e537
-  conditions:
-  - English image-plus-text questions; zero-shot prompts on the creator internal evaluation platform.
-  - Dataset images; API formatting and JPEG conversion where interfaces require it; shared answer extraction.
-  - Native model assessment; no specific provider route or quantized deployment assessed.
-  limitations:
-  - Vendor-only; metric formula, benchmark revision, immutable model revision, measurement date and full decoding
-    setup not established.
-  evidence_notes:
-  - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
-- schema_version: '1.0'
-  id: benchmark-1009920600cb96da
-  model_id: phi-4-multimodal-instruct
-  judgment_ids:
-  - judgment-2d69fe2e03e66c8c
-  benchmark:
+- benchmark:
+    direction: higher
+    metric: creator-reported visual-question score
     name: ChartQA
-    version: null
-    metric: creator-reported visual-question score
     unit: reported score
-    direction: higher
+    version: null
+  conditions:
+  - English image-plus-text questions; zero-shot prompts on the creator internal evaluation platform.
+  - Dataset images; API formatting and JPEG conversion where interfaces require it; shared answer extraction.
+  - Native model assessment; no specific provider route or quantized deployment assessed.
+  effort: null
+  evidence_class: vendor_claim
+  evidence_notes:
+  - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
+  - Exact named score re-read in the current creator table on 2026-10-10. No new measurement performed; retained
+    vendor classification and independent-setup limitations.
+  harness: Creator internal zero-shot vision platform; full version unknown
+  id: benchmark-1009920600cb96da
+  judgment_ids:
+  - judgment-2d69fe2e03e66c8c
+  limitations:
+  - Vendor-only; metric formula, benchmark revision, immutable model revision, measurement date and full decoding
+    setup not established.
+  - Do not substitute example inference requirements for the benchmark runtime, or transfer the speech no-sampling
+    statement to the vision evaluation.
+  measured_at: null
+  model_id: phi-4-multimodal-instruct
+  model_version: Phi-4-multimodal-instruct; immutable revision unknown
+  observed_at: '2026-10-10'
+  provider_id: null
+  schema_version: '1.0'
+  source_ids:
+  - src-29885c43e537
+  tools: null
   value: 81.4
-  model_version: Phi-4-multimodal-instruct; immutable revision unknown
-  harness: Creator internal zero-shot vision platform; full version unknown
-  effort: null
-  provider_id: null
-  tools: null
-  measured_at: null
-  observed_at: '2026-10-08'
-  evidence_class: vendor_claim
-  source_ids:
-  - src-29885c43e537
-  conditions:
-  - English image-plus-text questions; zero-shot prompts on the creator internal evaluation platform.
-  - Dataset images; API formatting and JPEG conversion where interfaces require it; shared answer extraction.
-  - Native model assessment; no specific provider route or quantized deployment assessed.
-  limitations:
-  - Vendor-only; metric formula, benchmark revision, immutable model revision, measurement date and full decoding
-    setup not established.
-  evidence_notes:
-  - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
-- schema_version: '1.0'
-  id: benchmark-4a89dd24cdf91c76
-  model_id: phi-4-multimodal-instruct
-  judgment_ids:
-  - judgment-2d69fe2e03e66c8c
-  benchmark:
+- benchmark:
+    direction: higher
+    metric: creator-reported visual-question score
     name: TextVQA (val)
-    version: null
-    metric: creator-reported visual-question score
     unit: reported score
-    direction: higher
+    version: null
+  conditions:
+  - English image-plus-text questions; zero-shot prompts on the creator internal evaluation platform.
+  - Dataset images; API formatting and JPEG conversion where interfaces require it; shared answer extraction.
+  - Native model assessment; no specific provider route or quantized deployment assessed.
+  effort: null
+  evidence_class: vendor_claim
+  evidence_notes:
+  - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
+  - Exact named score re-read in the current creator table on 2026-10-10. No new measurement performed; retained
+    vendor classification and independent-setup limitations.
+  harness: Creator internal zero-shot vision platform; full version unknown
+  id: benchmark-4a89dd24cdf91c76
+  judgment_ids:
+  - judgment-2d69fe2e03e66c8c
+  limitations:
+  - Vendor-only; metric formula, benchmark revision, immutable model revision, measurement date and full decoding
+    setup not established.
+  - Do not substitute example inference requirements for the benchmark runtime, or transfer the speech no-sampling
+    statement to the vision evaluation.
+  measured_at: null
+  model_id: phi-4-multimodal-instruct
+  model_version: Phi-4-multimodal-instruct; immutable revision unknown
+  observed_at: '2026-10-10'
+  provider_id: null
+  schema_version: '1.0'
+  source_ids:
+  - src-29885c43e537
+  tools: null
   value: 75.6
-  model_version: Phi-4-multimodal-instruct; immutable revision unknown
-  harness: Creator internal zero-shot vision platform; full version unknown
-  effort: null
-  provider_id: null
-  tools: null
-  measured_at: null
-  observed_at: '2026-10-08'
-  evidence_class: vendor_claim
-  source_ids:
-  - src-29885c43e537
-  conditions:
-  - English image-plus-text questions; zero-shot prompts on the creator internal evaluation platform.
-  - Dataset images; API formatting and JPEG conversion where interfaces require it; shared answer extraction.
-  - Native model assessment; no specific provider route or quantized deployment assessed.
-  limitations:
-  - Vendor-only; metric formula, benchmark revision, immutable model revision, measurement date and full decoding
-    setup not established.
-  evidence_notes:
-  - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
-- schema_version: '1.0'
-  id: benchmark-674da69746ce8de9
-  model_id: phi-4-multimodal-instruct
-  judgment_ids:
-  - judgment-2d69fe2e03e66c8c
-  benchmark:
+- benchmark:
+    direction: higher
+    metric: creator-reported visual-question score
     name: BLINK Counting
-    version: null
-    metric: creator-reported visual-question score
     unit: reported score
-    direction: higher
+    version: null
+  conditions:
+  - English image-plus-text questions; zero-shot prompts on the creator internal evaluation platform.
+  - Dataset images; API formatting and JPEG conversion where interfaces require it; shared answer extraction.
+  - Native model assessment; no specific provider route or quantized deployment assessed.
+  effort: null
+  evidence_class: vendor_claim
+  evidence_notes:
+  - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
+  - Exact named score re-read in the current creator table on 2026-10-10. No new measurement performed; retained
+    vendor classification and independent-setup limitations.
+  harness: Creator internal zero-shot vision platform; full version unknown
+  id: benchmark-674da69746ce8de9
+  judgment_ids:
+  - judgment-2d69fe2e03e66c8c
+  limitations:
+  - Vendor-only; metric formula, benchmark revision, immutable model revision, measurement date and full decoding
+    setup not established.
+  - Do not substitute example inference requirements for the benchmark runtime, or transfer the speech no-sampling
+    statement to the vision evaluation.
+  measured_at: null
+  model_id: phi-4-multimodal-instruct
+  model_version: Phi-4-multimodal-instruct; immutable revision unknown
+  observed_at: '2026-10-10'
+  provider_id: null
+  schema_version: '1.0'
+  source_ids:
+  - src-29885c43e537
+  tools: null
   value: 60.0
-  model_version: Phi-4-multimodal-instruct; immutable revision unknown
-  harness: Creator internal zero-shot vision platform; full version unknown
-  effort: null
-  provider_id: null
-  tools: null
-  measured_at: null
-  observed_at: '2026-10-08'
-  evidence_class: vendor_claim
-  source_ids:
-  - src-29885c43e537
-  conditions:
-  - English image-plus-text questions; zero-shot prompts on the creator internal evaluation platform.
-  - Dataset images; API formatting and JPEG conversion where interfaces require it; shared answer extraction.
-  - Native model assessment; no specific provider route or quantized deployment assessed.
-  limitations:
-  - Vendor-only; metric formula, benchmark revision, immutable model revision, measurement date and full decoding
-    setup not established.
-  evidence_notes:
-  - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
-- schema_version: '1.0'
-  id: benchmark-c86abee3d15f29a3
-  model_id: phi-4-multimodal-instruct
-  judgment_ids:
-  - judgment-2d69fe2e03e66c8c
-  benchmark:
+- benchmark:
+    direction: higher
+    metric: creator-reported visual-question score
     name: BLINK Spatial Relation
-    version: null
-    metric: creator-reported visual-question score
     unit: reported score
-    direction: higher
-  value: 72.7
-  model_version: Phi-4-multimodal-instruct; immutable revision unknown
-  harness: Creator internal zero-shot vision platform; full version unknown
-  effort: null
-  provider_id: null
-  tools: null
-  measured_at: null
-  observed_at: '2026-10-08'
-  evidence_class: vendor_claim
-  source_ids:
-  - src-29885c43e537
+    version: null
   conditions:
   - English image-plus-text questions; zero-shot prompts on the creator internal evaluation platform.
   - Dataset images; API formatting and JPEG conversion where interfaces require it; shared answer extraction.
   - Native model assessment; no specific provider route or quantized deployment assessed.
-  limitations:
-  - Vendor-only; metric formula, benchmark revision, immutable model revision, measurement date and full decoding
-    setup not established.
+  effort: null
+  evidence_class: vendor_claim
   evidence_notes:
   - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
-- schema_version: '1.0'
-  id: benchmark-d0e9c582333c75dc
-  model_id: phi-4-multimodal-instruct
+  - Exact named score re-read in the current creator table on 2026-10-10. No new measurement performed; retained
+    vendor classification and independent-setup limitations.
+  harness: Creator internal zero-shot vision platform; full version unknown
+  id: benchmark-c86abee3d15f29a3
   judgment_ids:
   - judgment-2d69fe2e03e66c8c
-  benchmark:
-    name: BLINK Functional Correspondence
-    version: null
-    metric: creator-reported visual-question score
-    unit: reported score
-    direction: higher
-  value: 30.0
-  model_version: Phi-4-multimodal-instruct; immutable revision unknown
-  harness: Creator internal zero-shot vision platform; full version unknown
-  effort: null
-  provider_id: null
-  tools: null
+  limitations:
+  - Vendor-only; metric formula, benchmark revision, immutable model revision, measurement date and full decoding
+    setup not established.
+  - Do not substitute example inference requirements for the benchmark runtime, or transfer the speech no-sampling
+    statement to the vision evaluation.
   measured_at: null
-  observed_at: '2026-10-08'
-  evidence_class: vendor_claim
+  model_id: phi-4-multimodal-instruct
+  model_version: Phi-4-multimodal-instruct; immutable revision unknown
+  observed_at: '2026-10-10'
+  provider_id: null
+  schema_version: '1.0'
   source_ids:
   - src-29885c43e537
+  tools: null
+  value: 72.7
+- benchmark:
+    direction: higher
+    metric: creator-reported visual-question score
+    name: BLINK Functional Correspondence
+    unit: reported score
+    version: null
   conditions:
   - English image-plus-text questions; zero-shot prompts on the creator internal evaluation platform.
   - Dataset images; API formatting and JPEG conversion where interfaces require it; shared answer extraction.
   - Native model assessment; no specific provider route or quantized deployment assessed.
+  effort: null
+  evidence_class: vendor_claim
+  evidence_notes:
+  - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
+  - Exact named score re-read in the current creator table on 2026-10-10. No new measurement performed; retained
+    vendor classification and independent-setup limitations.
+  harness: Creator internal zero-shot vision platform; full version unknown
+  id: benchmark-d0e9c582333c75dc
+  judgment_ids:
+  - judgment-2d69fe2e03e66c8c
   limitations:
   - Vendor-only; metric formula, benchmark revision, immutable model revision, measurement date and full decoding
     setup not established.
-  evidence_notes:
-  - Task-specific measurement; no cross-benchmark averaging or automatic score-to-suitability conversion.
+  - Do not substitute example inference requirements for the benchmark runtime, or transfer the speech no-sampling
+    statement to the vision evaluation.
+  measured_at: null
+  model_id: phi-4-multimodal-instruct
+  model_version: Phi-4-multimodal-instruct; immutable revision unknown
+  observed_at: '2026-10-10'
+  provider_id: null
+  schema_version: '1.0'
+  source_ids:
+  - src-29885c43e537
+  tools: null
+  value: 30.0
 - schema_version: '1.0'
   id: benchmark-a4fca5424eb2ac82
   model_id: qwen3-8-27b
@@ -5197,3 +5226,185 @@ records:
   - Publication date is not an established measurement date; no real-world repair probability inferred.
   evidence_notes:
   - Category result is separate from the study's overall pass@1, pass@5 and mean reward.
+- schema_version: '1.0'
+  id: benchmark-12ed21c1bac4fe4c
+  model_id: llama-4-scout
+  judgment_ids:
+  - judgment-a40e011a9e6508e8
+  benchmark:
+    name: GroundingME
+    version: arXiv 2512.17495v1
+    metric: overall localization accuracy, IoU > 0.5
+    unit: percent
+    direction: higher
+  value: 8.9
+  model_version: Llama 4 Scout (source label); immutable revision and exact serving artifact unspecified
+  harness: Unified referring-expression bounding-box prompt
+  effort: Greedy decoding, temperature 0
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-10'
+  evidence_class: independent_quality
+  source_ids:
+  - src-d6408d95b976
+  - src-c053df9d4961
+  conditions:
+  - '1005 examples: 204 discriminative, 300 spatial, 300 limited-space, 201 rejection.'
+  limitations:
+  - Provider, quantization, exact checkpoint and measurement date not established; project and paper are one
+    stream.
+  evidence_notes:
+  - Original published evaluation inspected; this research ran no benchmark. Publication or page-update date
+    is not substituted for measurement date.
+- schema_version: '1.0'
+  id: benchmark-24daab2a067a1826
+  model_id: llama-4-scout
+  judgment_ids: []
+  benchmark:
+    name: InfinityBench En.Sum
+    version: HELM report 2025-09-29
+    metric: ROUGE-L
+    unit: fraction
+    direction: higher
+  value: 0.176
+  model_version: Llama-4-Scout-17B-16E-Instruct; immutable revision unspecified
+  harness: HELM Long Context, 100 subsampled instances per task
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-10'
+  evidence_class: independent_quality
+  source_ids:
+  - src-22035a256b27
+  conditions:
+  - Novel inputs filtered at <=128K whitespace tokens
+  limitations:
+  - Not a 10M evaluation; hosting route, precision, immutable revision and exact run date absent from inspected
+    report.
+  - Scores have different meanings across tasks; neither mean nor ROUGE-L proves factual summary quality.
+  evidence_notes:
+  - Original published evaluation inspected; this research ran no benchmark. Publication or page-update date
+    is not substituted for measurement date.
+- schema_version: '1.0'
+  id: benchmark-82ec432f86ba3c75
+  model_id: llama-4-maverick
+  judgment_ids:
+  - judgment-e988a23ee43a7664
+  benchmark:
+    name: GroundingME
+    version: paper v1, 1005 examples
+    metric: Accuracy@0.5 IoU
+    unit: percent
+    direction: higher
+  value: 13.0
+  model_version: Llama-4-Maverick
+  harness: GroundingME unified image/description prompt
+  effort: Greedy, temperature 0; no-thinking where supported
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-10'
+  evidence_class: independent_quality
+  source_ids:
+  - src-d6408d95b976
+  conditions:
+  - Predict bounding boxes across discriminative, spatial, limited-visibility and rejection cases.
+  - A prediction passes when IoU exceeds 0.5.
+  limitations:
+  - Exact checkpoint revision, precision, runtime and repeat uncertainty are not supplied for this row.
+  evidence_notes:
+  - Original result and methods freshly inspected; observed_at is the inspection date, not the run date.
+- schema_version: '1.0'
+  id: benchmark-c577b26d9783108b
+  model_id: llama-4-scout
+  judgment_ids:
+  - judgment-10152f2ec22e17bb
+  benchmark:
+    name: OpenAI MRCR
+    version: HELM report 2025-09-29
+    metric: prefix-gated SequenceMatcher score
+    unit: fraction
+    direction: higher
+  value: 0.171
+  model_version: Llama-4-Scout-17B-16E-Instruct; immutable revision unspecified
+  harness: HELM Long Context, 100 subsampled instances per task
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-10'
+  evidence_class: independent_quality
+  source_ids:
+  - src-22035a256b27
+  conditions:
+  - Inputs filtered at <=128K whitespace tokens; repeated-reference retrieval
+  limitations:
+  - Not a 10M evaluation; hosting route, precision, immutable revision and exact run date absent from inspected
+    report.
+  - Scores have different meanings across tasks; neither mean nor ROUGE-L proves factual summary quality.
+  evidence_notes:
+  - Original published evaluation inspected; this research ran no benchmark. Publication or page-update date
+    is not substituted for measurement date.
+- schema_version: '1.0'
+  id: benchmark-e7fa9a731c8963f6
+  model_id: llama-4-scout
+  judgment_ids:
+  - judgment-10152f2ec22e17bb
+  benchmark:
+    name: RULER SQuAD
+    version: HELM report 2025-09-29
+    metric: RULER string-match score
+    unit: fraction
+    direction: higher
+  value: 0.68
+  model_version: Llama-4-Scout-17B-16E-Instruct; immutable revision unspecified
+  harness: HELM Long Context, 100 subsampled instances per task
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-10'
+  evidence_class: independent_quality
+  source_ids:
+  - src-22035a256b27
+  conditions:
+  - 128K whitespace-token configured sequences; distractor passages
+  limitations:
+  - Not a 10M evaluation; hosting route, precision, immutable revision and exact run date absent from inspected
+    report.
+  - Scores have different meanings across tasks; neither mean nor ROUGE-L proves factual summary quality.
+  evidence_notes:
+  - Original published evaluation inspected; this research ran no benchmark. Publication or page-update date
+    is not substituted for measurement date.
+- schema_version: '1.0'
+  id: benchmark-fac9532c85344ece
+  model_id: llama-4-scout
+  judgment_ids: []
+  benchmark:
+    name: RULER HotPotQA
+    version: HELM report 2025-09-29
+    metric: RULER string-match score
+    unit: fraction
+    direction: higher
+  value: 0.47
+  model_version: Llama-4-Scout-17B-16E-Instruct; immutable revision unspecified
+  harness: HELM Long Context, 100 subsampled instances per task
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-10'
+  evidence_class: independent_quality
+  source_ids:
+  - src-22035a256b27
+  conditions:
+  - 128K whitespace-token configured sequences; multi-hop QA with distractors
+  limitations:
+  - Not a 10M evaluation; hosting route, precision, immutable revision and exact run date absent from inspected
+    report.
+  - Scores have different meanings across tasks; neither mean nor ROUGE-L proves factual summary quality.
+  evidence_notes:
+  - Original published evaluation inspected; this research ran no benchmark. Publication or page-update date
+    is not substituted for measurement date.

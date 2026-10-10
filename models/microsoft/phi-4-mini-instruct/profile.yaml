@@ -6,7 +6,7 @@ identity:
   creator: Microsoft
   family: Phi-4
   version: Phi-4-mini-instruct
-  release_date: null
+  release_date: '2025-02-26'
   latest_meaningful_update: null
   status: active
   model_types:

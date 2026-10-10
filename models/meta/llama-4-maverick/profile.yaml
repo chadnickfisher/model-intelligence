@@ -220,6 +220,36 @@ capabilities:
     research_batch_id: public-task-followup-2026-10-07
     method: Inspected original model/evaluator sources and performed the recorded public search; no inference
       or benchmarking calls.
+- id: judgment-e988a23ee43a7664
+  judgment: Complex visual localization frequently misses the required region in GroundingME, undermining dependable
+    coordinate-level grounding in that benchmark.
+  scope: direct
+  task_ids:
+  - vision.grounding
+  related_task_ids: []
+  assessment: warning
+  confidence: low
+  supporting_evidence_ids:
+  - src-d6408d95b976
+  contradictory_evidence_ids: []
+  conditions:
+  - Maverick total Accuracy@0.5 is 13.0 percent under greedy temperature-zero and no-thinking-where-supported
+    protocol.
+  - The task measures bounding-box overlap, not general image description or interactive computer use.
+  - Assessment concerns the source-described native or research-serving setup; no listed commercial access
+    route is presumed equivalent.
+  known_failure_modes:
+  - Exact serving checkpoint revision, precision and independent replication remain unavailable.
+  evidence_notes:
+  - Suitability and confidence are assessed separately; evidence applies only to the task and setup stated
+    here.
+  scope_note: Direct task assessment against the frozen task rubric; no sibling-model or neighboring-task transfer.
+  observed_at: '2026-10-10'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-review-20261010
+    method: Fresh original public-body inspection and bounded source comparison; no model execution.
 performance_characteristics: []
 access_ids:
 - access-1451bc03a5c0b1c0

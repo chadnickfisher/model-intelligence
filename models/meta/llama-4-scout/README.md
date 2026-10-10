@@ -73,6 +73,50 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
+### Context.retrieval (low confidence)
+
+Useful but unreliable for single-hop retrieval among distractors at the tested 128K whitespace-token setting; repeated-reference retrieval remains weak.
+
+Scope: direct / conditional. Direct evidence only for the stated task and setup; no transfer to adjacent tasks.
+
+Direct task IDs: context.retrieval
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-10152f2ec22e17bb
+
+Conditions: HELM report: 100 RULER SQuAD instances at configured 128K whitespace tokens; not a 10M test.
+
+Failure modes / limitations: RULER SQuAD score 0.68; OpenAI MRCR 0.171 under a different retrieval protocol.; Unknown hosting route, quantization and immutable revision limit transfer.
+
+Supporting sources: [HELM Long Context report](https://crfm.stanford.edu/2025/09/29/helm-long-context.html)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Confidence reflects the bounded evidence and missing immutable revision, not the numerical score.
+
+### Vision.grounding (low confidence)
+
+Poor fit for difficult referring-expression localization under GroundingME: most target regions were missed.
+
+Scope: direct / weak. Direct evidence only for the stated task and setup; no transfer to adjacent tasks.
+
+Direct task IDs: vision.grounding
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-a40e011a9e6508e8
+
+Conditions: 1005 high-resolution examples; unified box prompt, greedy decoding; accuracy requires IoU above 0.5.
+
+Failure modes / limitations: Overall accuracy 8.9%; rejection 2.5%; route and immutable revision unspecified.
+
+Supporting sources: [GroundingME: Exposing the Visual Grounding Gap in MLLMs through Multi-Dimensional Evaluation](https://arxiv.org/html/2512.17495v1) · [GroundingME project](https://groundingme.github.io/)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Confidence reflects the bounded evidence and missing immutable revision, not the numerical score.
+
 ## Specifications
 
 | Field | Recorded value |

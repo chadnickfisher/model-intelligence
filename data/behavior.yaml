@@ -8071,3 +8071,76 @@ records:
   - Delegation is part of the evaluated deployment.
   notes:
   - Model revision, evaluation configuration and measurement dates remain incompletely specified.
+- schema_version: '1.0'
+  id: behavior-3b646c526962fc39
+  model_ids:
+  - llama-4-scout
+  provider_id: null
+  product: null
+  model_version: Llama-4-Scout-17B-16E-Instruct; immutable revision unspecified
+  harness: NVIDIA NIM VLM 1.3.2, documented in version 1.4.0 release notes
+  effort: null
+  claim: NIM 1.3.2 adds Scout tool calling relative to 1.3.1. This is runtime support, not evidence of reliable
+    end-to-end tool use.
+  change_type: harness_change
+  metrics: []
+  observed_at: '2026-10-10'
+  reported_at: null
+  effective_from: null
+  status: unknown
+  fact_status: acknowledged
+  confidence: high
+  supporting_evidence_ids:
+  - src-6ab4f3f5fdd6
+  contradictory_evidence_ids: []
+  official_acknowledgment: NVIDIA official runtime release notes.
+  fix:
+    published_at: null
+    version: null
+    summary: null
+    evidence_ids: []
+    measured_improvement: null
+  conditions:
+  - Historical release notes retain 131k default maximum sequence, five images, and possible lower text-only
+    accuracy with FP8 on Hopper.
+  - Exact release date and measured recovery are not established.
+  notes:
+  - Runtime-scoped report; no changed Meta weights established and no local reproduction performed.
+- schema_version: '1.0'
+  id: behavior-490713119f19bc84
+  model_ids:
+  - nemotron-3-ultra
+  provider_id: nvidia
+  product: NemoClaw managed inference / Deep Agents Code
+  model_version: nvidia/nemotron-3-ultra-550b-a55b (serving alias; weight precision unreported)
+  harness: DeepAgents Code0.1.34 via NemoClaw/OpenShell0.0.101, Linux GCP x86_64 VM,4vCPU/15.6GiB RAM, no local
+    GPU
+  effort: null
+  claim: A managed-inference route returns HTTP 503 while the same prompt succeeds at the direct NVIDIA endpoint;
+    exact underlying cause remains unconfirmed.
+  change_type: unresolved
+  metrics: []
+  observed_at: '2026-10-10'
+  reported_at: '2026-08-28'
+  effective_from: null
+  status: unknown
+  fact_status: reported
+  confidence: low
+  supporting_evidence_ids:
+  - src-48b30f19fa4f
+  contradictory_evidence_ids: []
+  official_acknowledgment: NemoClaw contributor wscurran thanked the reporter for detailed investigation and
+    marked the inference path; this acknowledges a report, not a demonstrated root cause or fix.
+  fix:
+    published_at: null
+    version: null
+    summary: null
+    evidence_ids: []
+    measured_improvement: null
+  conditions:
+  - Reporter comparison of direct endpoint and managed path; no independent reproduction.
+  - Reported111564-character prompt succeeds direct but managed route returns503; Nemotron Super comparison
+    reportedly succeeds.
+  notes:
+  - Service/harness observation; not evidence of a BF16 weights regression.
+  - No verified fix or measured recovery in the inspected open issue.

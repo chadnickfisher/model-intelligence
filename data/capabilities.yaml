@@ -6393,6 +6393,38 @@ records:
     research_batch_id: public-task-followup-2026-10-07
     method: Inspected original model/evaluator sources and performed the recorded public search; no inference
       or benchmarking calls.
+- model_id: llama-4-maverick
+  profile: models/meta/llama-4-maverick/profile.yaml
+  id: judgment-e988a23ee43a7664
+  judgment: Complex visual localization frequently misses the required region in GroundingME, undermining dependable
+    coordinate-level grounding in that benchmark.
+  scope: direct
+  task_ids:
+  - vision.grounding
+  related_task_ids: []
+  assessment: warning
+  confidence: low
+  supporting_evidence_ids:
+  - src-d6408d95b976
+  contradictory_evidence_ids: []
+  conditions:
+  - Maverick total Accuracy@0.5 is 13.0 percent under greedy temperature-zero and no-thinking-where-supported
+    protocol.
+  - The task measures bounding-box overlap, not general image description or interactive computer use.
+  - Assessment concerns the source-described native or research-serving setup; no listed commercial access
+    route is presumed equivalent.
+  known_failure_modes:
+  - Exact serving checkpoint revision, precision and independent replication remain unavailable.
+  evidence_notes:
+  - Suitability and confidence are assessed separately; evidence applies only to the task and setup stated
+    here.
+  scope_note: Direct task assessment against the frozen task rubric; no sibling-model or neighboring-task transfer.
+  observed_at: '2026-10-10'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-review-20261010
+    method: Fresh original public-body inspection and bounded source comparison; no model execution.
 - model_id: llama-4-scout
   profile: models/meta/llama-4-scout/profile.yaml
   id: judgment-3bdbe688baf73a67
@@ -6486,6 +6518,62 @@ records:
     research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate review_tests_frontend:review-scout; exact identity gates and original
       sources retained.
+- model_id: llama-4-scout
+  profile: models/meta/llama-4-scout/profile.yaml
+  id: judgment-10152f2ec22e17bb
+  scope: direct
+  task_ids:
+  - context.retrieval
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Direct evidence only for the stated task and setup; no transfer to adjacent tasks.
+  judgment: Useful but unreliable for single-hop retrieval among distractors at the tested 128K whitespace-token
+    setting; repeated-reference retrieval remains weak.
+  confidence: low
+  supporting_evidence_ids:
+  - src-22035a256b27
+  contradictory_evidence_ids: []
+  conditions:
+  - 'HELM report: 100 RULER SQuAD instances at configured 128K whitespace tokens; not a 10M test.'
+  known_failure_modes:
+  - RULER SQuAD score 0.68; OpenAI MRCR 0.171 under a different retrieval protocol.
+  - Unknown hosting route, quantization and immutable revision limit transfer.
+  evidence_notes:
+  - Confidence reflects the bounded evidence and missing immutable revision, not the numerical score.
+  observed_at: '2026-10-10'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-scout-2026-10-10
+    method: Fresh original-public-source inspection against the frozen task rubric; no model execution.
+- model_id: llama-4-scout
+  profile: models/meta/llama-4-scout/profile.yaml
+  id: judgment-a40e011a9e6508e8
+  scope: direct
+  task_ids:
+  - vision.grounding
+  related_task_ids: []
+  assessment: weak
+  scope_note: Direct evidence only for the stated task and setup; no transfer to adjacent tasks.
+  judgment: 'Poor fit for difficult referring-expression localization under GroundingME: most target regions
+    were missed.'
+  confidence: low
+  supporting_evidence_ids:
+  - src-d6408d95b976
+  - src-c053df9d4961
+  contradictory_evidence_ids: []
+  conditions:
+  - 1005 high-resolution examples; unified box prompt, greedy decoding; accuracy requires IoU above 0.5.
+  known_failure_modes:
+  - Overall accuracy 8.9%; rejection 2.5%; route and immutable revision unspecified.
+  evidence_notes:
+  - Confidence reflects the bounded evidence and missing immutable revision, not the numerical score.
+  observed_at: '2026-10-10'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-scout-2026-10-10
+    method: Fresh original-public-source inspection against the frozen task rubric; no model execution.
 - model_id: phi-4-mini-instruct
   profile: models/microsoft/phi-4-mini-instruct/profile.yaml
   id: judgment-9eb4330410834153
@@ -6582,68 +6670,70 @@ records:
     history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
 - model_id: phi-4-multimodal-instruct
   profile: models/microsoft/phi-4-multimodal-instruct/profile.yaml
-  id: judgment-61024ceeda4b1074
-  scope: direct
-  task_ids:
-  - vision.question_answering
-  related_task_ids: []
   assessment: conditional
-  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
-  judgment: The exact card supports a candidate for document questions delivered as synthetic speech, with
-    a vendor s_DocVQA result; pure text-query and all-language performance are separate.
-  confidence: low
-  supporting_evidence_ids:
-  - src-29885c43e537
-  contradictory_evidence_ids: []
   conditions:
   - Image plus synthetic spoken query; retain the s_ benchmark prefix. Korean fine-tuned adapter scores excluded.
-  known_failure_modes: []
+  confidence: low
+  contradictory_evidence_ids: []
+  effective_from: null
   evidence_notes:
   - 'Low confidence: limited exact-task evidence, vendor-heavy or unresolved configuration; scores are not
     confidence.'
   - No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the
     coverage ledger.
-  observed_at: '2026-10-07'
-  effective_from: null
+  id: judgment-61024ceeda4b1074
+  judgment: The exact card supports a candidate for document questions delivered as synthetic speech, with
+    a vendor s_DocVQA result; pure text-query and all-language performance are separate.
+  known_failure_modes: []
+  observed_at: '2026-10-10'
   provenance:
-    origin: research
-    research_batch_id: public-task-followup-2026-10-07
     method: Inspected original model/evaluator sources and performed the recorded public search; no inference
       or benchmarking calls.
-- model_id: phi-4-multimodal-instruct
-  profile: models/microsoft/phi-4-multimodal-instruct/profile.yaml
-  id: judgment-2d69fe2e03e66c8c
-  scope: direct
-  task_ids:
-  - vision.question_answering
+    origin: research
+    research_batch_id: public-task-followup-2026-10-07
   related_task_ids: []
-  assessment: conditional
-  scope_note: English text-query visual QA under the creator zero-shot setup; spoken queries remain a separate
-    finding.
-  judgment: Document and chart question results support useful visual answers, with counting and relationship
-    limits that require material checking.
-  confidence: low
+  scope: direct
+  scope_note: Task-specific source investigation; original migration bundles remain unchanged.
   supporting_evidence_ids:
   - src-29885c43e537
-  contradictory_evidence_ids: []
+  task_ids:
+  - vision.question_answering
+- model_id: phi-4-multimodal-instruct
+  profile: models/microsoft/phi-4-multimodal-instruct/profile.yaml
+  assessment: conditional
   conditions:
   - English image-plus-text questions; zero-shot prompts on the creator internal evaluation platform.
   - Dataset images; API formatting and JPEG conversion where interfaces require it; shared answer extraction.
   - Native model assessment; no specific provider route or quantized deployment assessed.
-  known_failure_modes:
-  - Counting and functional relationships require checking; scores across different benchmarks are not a common
-    difficulty scale.
+  confidence: low
+  contradictory_evidence_ids: []
+  effective_from: null
   evidence_notes:
   - Vendor-only evidence; independent reproduction, immutable checkpoint, measurement date and full decoding/harness
     settings remain unknown.
   - Text-query DocVQA is distinct from synthetic spoken-query s_DocVQA; no transfer to other languages or fine-tuned
     audio adapters.
-  observed_at: '2026-10-08'
-  effective_from: null
+  - Fresh inspection retains the narrow short-document/chart judgment. Independent long-document and grounding
+    studies concern materially different tasks/setups and do not independently replicate this vendor table.
+  id: judgment-2d69fe2e03e66c8c
+  judgment: Document and chart question results support useful visual answers, with counting and relationship
+    limits that require material checking.
+  known_failure_modes:
+  - Counting and functional relationships require checking; scores across different benchmarks are not a common
+    difficulty scale.
+  observed_at: '2026-10-10'
   provenance:
+    method: Inspected creator visual benchmark tables and vision methodology; no inference or benchmark execution.
     origin: research
     research_batch_id: research-run-task-ratings-2026-10-08
-    method: Inspected creator visual benchmark tables and vision methodology; no inference or benchmark execution.
+  related_task_ids: []
+  scope: direct
+  scope_note: English text-query visual QA under the creator zero-shot setup; spoken queries remain a separate
+    finding.
+  supporting_evidence_ids:
+  - src-29885c43e537
+  task_ids:
+  - vision.question_answering
 - model_id: phi-4-reasoning-vision-15b
   profile: models/microsoft/phi-4-reasoning-vision-15b/profile.yaml
   id: judgment-3947e022646bea11

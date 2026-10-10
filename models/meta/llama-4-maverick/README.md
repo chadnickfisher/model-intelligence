@@ -51,6 +51,28 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: Low confidence in generalization: one independent scaffold and incomplete route/turn-limit configuration.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
 
+### Vision.grounding (low confidence)
+
+Complex visual localization frequently misses the required region in GroundingME, undermining dependable coordinate-level grounding in that benchmark.
+
+Scope: direct / warning. Direct task assessment against the frozen task rubric; no sibling-model or neighboring-task transfer.
+
+Direct task IDs: vision.grounding
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-e988a23ee43a7664
+
+Conditions: Maverick total Accuracy@0.5 is 13.0 percent under greedy temperature-zero and no-thinking-where-supported protocol.; The task measures bounding-box overlap, not general image description or interactive computer use.; Assessment concerns the source-described native or research-serving setup; no listed commercial access route is presumed equivalent.
+
+Failure modes / limitations: Exact serving checkpoint revision, precision and independent replication remain unavailable.
+
+Supporting sources: [GroundingME: Exposing the Visual Grounding Gap in MLLMs through Multi-Dimensional Evaluation](https://arxiv.org/html/2512.17495v1)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Suitability and confidence are assessed separately; evidence applies only to the task and setup stated here.
+
 ## Specifications
 
 | Field | Recorded value |
@@ -99,7 +121,7 @@ Local conditions: Batch 1, short/moderate context unless otherwise stated.; Weig
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
-| novita | Standard / current | input: 0.27 USD / per 1 million tokens; output: 0.85 USD / per 1 million tokens | Not established in this pass | 2026-10-07 |
+| novita | None / current | input: 0.27 USD / per 1 million tokens; output: 0.85 USD / per 1 million tokens | Not established in this pass | 2026-10-07 |
 
 ## Recorded access routes
 

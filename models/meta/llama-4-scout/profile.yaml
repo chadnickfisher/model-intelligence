@@ -255,6 +255,58 @@ capabilities:
     research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate review_tests_frontend:review-scout; exact identity gates and original
       sources retained.
+- id: judgment-10152f2ec22e17bb
+  scope: direct
+  task_ids:
+  - context.retrieval
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Direct evidence only for the stated task and setup; no transfer to adjacent tasks.
+  judgment: Useful but unreliable for single-hop retrieval among distractors at the tested 128K whitespace-token
+    setting; repeated-reference retrieval remains weak.
+  confidence: low
+  supporting_evidence_ids:
+  - src-22035a256b27
+  contradictory_evidence_ids: []
+  conditions:
+  - 'HELM report: 100 RULER SQuAD instances at configured 128K whitespace tokens; not a 10M test.'
+  known_failure_modes:
+  - RULER SQuAD score 0.68; OpenAI MRCR 0.171 under a different retrieval protocol.
+  - Unknown hosting route, quantization and immutable revision limit transfer.
+  evidence_notes:
+  - Confidence reflects the bounded evidence and missing immutable revision, not the numerical score.
+  observed_at: '2026-10-10'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-scout-2026-10-10
+    method: Fresh original-public-source inspection against the frozen task rubric; no model execution.
+- id: judgment-a40e011a9e6508e8
+  scope: direct
+  task_ids:
+  - vision.grounding
+  related_task_ids: []
+  assessment: weak
+  scope_note: Direct evidence only for the stated task and setup; no transfer to adjacent tasks.
+  judgment: 'Poor fit for difficult referring-expression localization under GroundingME: most target regions
+    were missed.'
+  confidence: low
+  supporting_evidence_ids:
+  - src-d6408d95b976
+  - src-c053df9d4961
+  contradictory_evidence_ids: []
+  conditions:
+  - 1005 high-resolution examples; unified box prompt, greedy decoding; accuracy requires IoU above 0.5.
+  known_failure_modes:
+  - Overall accuracy 8.9%; rejection 2.5%; route and immutable revision unspecified.
+  evidence_notes:
+  - Confidence reflects the bounded evidence and missing immutable revision, not the numerical score.
+  observed_at: '2026-10-10'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-scout-2026-10-10
+    method: Fresh original-public-source inspection against the frozen task rubric; no model execution.
 performance_characteristics: []
 access_ids:
 - access-1f0dacab6d7622e8
