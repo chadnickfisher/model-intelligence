@@ -1,7 +1,6 @@
 """Bounded research accounting. Local data only; never certifies evidence quality."""
 from copy import deepcopy
 from datetime import date
-from hashlib import sha256
 import argparse
 import json
 from pathlib import Path
@@ -10,10 +9,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from tools.knowledge import ROOT, canonical, read, integrity_errors
-
-
-def digest(value):
-    return sha256(json.dumps(value, sort_keys=True, ensure_ascii=True).encode()).hexdigest()
+from tools.research_fields import digest, leaves, field_manifest, required_fields
 
 
 def state_hash(state):
@@ -51,63 +47,10 @@ def task_rubric_errors(tasks):
     return errors
 
 
-def leaves(value, path):
-    """Lists remain atomic factual bundles; never split a broad claim into tags."""
-    if isinstance(value, dict) and value:
-        for key, nested in sorted(value.items()):
-            if key not in {'id', 'schema_version', 'verified_at', 'evidence_ids', 'source_ids',
-                           'supporting_evidence_ids', 'contradictory_evidence_ids'}:
-                escaped = key.replace('~', '~0').replace('/', '~1')
-                yield from leaves(nested, path + '/' + escaped)
-    else:
-        yield path, value
-
-
-def field_manifest(state, target_ids, contract):
-    rows = []
-    for model_id in sorted(target_ids):
-        model = state[('model', model_id)]
-        linked = {}
-        for kind in ['access', 'price', 'benchmark', 'behavior', 'release']:
-            linked[kind] = [(ident, record) for (typ, ident), record in sorted(state.items())
-                            if typ == kind and (record.get('model_id') == model_id
-                                                or model_id in record.get('model_ids', []))]
-        provider_ids = {row.get('provider_id') for kind in ['access', 'price']
-                        for _, row in linked[kind]} - {None}
-        linked['provider'] = [(ident, state[('provider', ident)]) for ident in sorted(provider_ids)]
-        linked['model'] = [(model_id, model)]
-        for kind, groups in contract['field_groups'].items():
-            for domain, fields in groups.items():
-                if not linked[kind]:
-                    rows.append({'model_id': model_id, 'domain': domain, 'entity_type': 'inventory',
-                                 'entity_id': model_id, 'path': '/' + kind,
-                                 'baseline_value_hash': digest([])})
-                for ident, record in linked[kind]:
-                    for field in fields:
-                        # Absent expected fields remain explicit pending work, including nulls.
-                        for path, value in leaves(record.get(field), '/' + field):
-                            rows.append({'model_id': model_id, 'domain': domain, 'entity_type': kind,
-                                         'entity_id': ident, 'path': path,
-                                         'baseline_value_hash': digest(value)})
-    return rows
-
-
 def pending_check(identity):
     return {**identity, 'result': 'not_checked', 'checked_at': None, 'rationale': '',
             'evidence_ids': [], 'search_references': [], 'conditions': [],
             'remaining_gaps': ['Pending actual source investigation'], 'blocked_reason': None}
-
-
-def required_fields(state, targets, contract, candidate=None):
-    rows = field_manifest(state, targets, contract)
-    if candidate is not None:
-        keys = ['model_id', 'domain', 'entity_type', 'entity_id', 'path']
-        known = {tuple(row[k] for k in keys) for row in rows}
-        for row in field_manifest(candidate, targets, contract):
-            if tuple(row[k] for k in keys) not in known:
-                # Newly discovered records/fields have no baseline value.
-                rows.append({**row, 'baseline_value_hash': digest(None)})
-    return rows
 
 
 def make_run(state, revision_id, base_commit, run_id, targets, bounds, created_at):
@@ -132,6 +75,89 @@ def make_run(state, revision_id, base_commit, run_id, targets, bounds, created_a
                                for ident in targets for task in tasks if task['status'] == 'active'],
             'source_checks': [pending_check({'model_id': ident, 'category': category})
                               for ident in targets for category in contract['source_categories']]}
+
+
+def row_errors(name, row, run, evidence, *, sources=None, observations=None):
+    """Validate one accounting row without weakening packet-wide identity checks."""
+    errors = []
+    targets = set(run['target_model_ids'])
+    if sources is None:
+        sources = {ident: value for (kind, ident), value in evidence.items() if kind == 'source'}
+    if observations is None:
+        observations = {ident: value for (kind, ident), value in evidence.items() if kind == 'observation'}
+    label = name + ' ' + row['model_id']
+    result = row['result']
+    if name == 'domain_checks' and row['model_id'] not in targets and result != 'not_checked':
+        errors.append(label + ': non-target domain must stay not_checked')
+    if result == 'not_checked':
+        if row['checked_at'] or row['evidence_ids'] or row['search_references'] or row['rationale'] or row['blocked_reason']:
+            errors.append(label + ': unchecked cannot claim investigation')
+        if not row['remaining_gaps']:
+            errors.append(label + ': unchecked needs a pending gap')
+        if name == 'task_decisions' and (row['applicability'] != 'not_checked' or row['judgment_ids'] or row['confidence_rationale']):
+            errors.append(label + ': unchecked task cannot assert a decision')
+        return errors
+    checked = row['checked_at']
+    if not checked or checked < run['created_at'] or checked > date.today().isoformat():
+        errors.append(label + ': actual check date must be within the run')
+    if not row['rationale'].strip():
+        errors.append(label + ': investigated result needs rationale')
+    if result == 'blocked' and not row['blocked_reason']:
+        errors.append(label + ': blocked needs a reason')
+    if result != 'blocked' and row['blocked_reason']:
+        errors.append(label + ': blocker must use blocked result')
+    if result != 'blocked' and not row['evidence_ids'] and not row['search_references']:
+        errors.append(label + ': investigated result needs source/search references')
+    if result != 'blocked' and not row['evidence_ids'] and row['search_references'] and all(
+            search['outcome'] == 'blocked' for search in row['search_references']):
+        errors.append(label + ': failed searches remain blocked, not investigated unknown')
+    for ident in row['evidence_ids']:
+        expanded = observations.get(ident, {}).get('source_ids', [ident])
+        if not expanded:
+            errors.append(label + ': editorial observation cannot establish a source check ' + ident)
+        for source_id in expanded:
+            source = sources.get(source_id)
+            if not source or not checked or source['accessed_at'] < checked or source['accessed_at'] > date.today().isoformat():
+                errors.append(label + ': source inspection missing, predates check, or is in the future ' + source_id)
+    for search in row['search_references']:
+        if search['checked_at'] != checked:
+            errors.append(label + ': search/check dates differ')
+    if result in {'unknown', 'blocked'} and not row['remaining_gaps']:
+        errors.append(label + ': unresolved result needs remaining gaps')
+    if result in {'not_applicable', 'excluded'} and not row['evidence_ids']:
+        errors.append(label + ': exclusion needs positive mismatch evidence; absence is unknown')
+    if name == 'source_checks' and result == 'checked':
+        source_ids = [source_id for ident in row['evidence_ids']
+                      for source_id in observations.get(ident, {}).get('source_ids', [ident])]
+        category = row['category'].replace('_', '-')
+        if not any(sources.get(ident, {}).get('source_type') == category for ident in source_ids):
+            errors.append(label + ': checked category needs an inspected source of that category')
+    if name == 'field_checks' and result == 'value' and not row['evidence_ids']:
+        errors.append(label + ': factual value needs inspected evidence')
+    if name == 'field_checks' and result == 'value' and row['entity_type'] != 'inventory':
+        actual = evidence.get((row['entity_type'], row['entity_id']))
+        for part in row['path'].split('/')[1:]:
+            key = part.replace('~1', '/').replace('~0', '~')
+            actual = actual.get(key) if isinstance(actual, dict) else None
+        if actual is None:
+            errors.append(label + ': absent/null factual value must remain unknown')
+    if name == 'task_decisions':
+        applicability = row['applicability']
+        if ((result == 'excluded') != (applicability == 'excluded') or
+                (result == 'assessed' and applicability != 'applicable') or
+                (result == 'unknown' and applicability not in {'unknown', 'applicable'})):
+            errors.append(label + ': task result/applicability differ')
+        if result == 'assessed':
+            judgments = {j['id']: j for j in evidence[('model', row['model_id'])]['capabilities']}
+            if not row['judgment_ids'] or not row['confidence_rationale'].strip() or not row['evidence_ids']:
+                errors.append(label + ': assessed task needs judgments and confidence rationale')
+            for ident in row['judgment_ids']:
+                judgment = judgments.get(ident)
+                if not judgment or row['task_id'] not in judgment['task_ids']:
+                    errors.append(label + ': assessment needs a direct exact-model task judgment ' + ident)
+        elif row['judgment_ids']:
+            errors.append(label + ': non-assessed task cannot endorse judgments')
+    return errors
 
 
 def run_errors(run, state, evidence_state=None):
@@ -171,78 +197,7 @@ def run_errors(run, state, evidence_state=None):
         if len(found) != len(set(found)) or set(found) != {identity(row) for row in expected}:
             errors.append(name + ': checklist omitted, duplicated or altered baseline entries')
         for row in run[name]:
-            label = name + ' ' + row['model_id']
-            result = row['result']
-            if name == 'domain_checks' and row['model_id'] not in targets and result != 'not_checked':
-                errors.append(label + ': non-target domain must stay not_checked')
-            if result == 'not_checked':
-                if row['checked_at'] or row['evidence_ids'] or row['search_references'] or row['rationale'] or row['blocked_reason']:
-                    errors.append(label + ': unchecked cannot claim investigation')
-                if not row['remaining_gaps']:
-                    errors.append(label + ': unchecked needs a pending gap')
-                if name == 'task_decisions' and (row['applicability'] != 'not_checked' or row['judgment_ids'] or row['confidence_rationale']):
-                    errors.append(label + ': unchecked task cannot assert a decision')
-                continue
-            checked = row['checked_at']
-            if not checked or checked < run['created_at'] or checked > date.today().isoformat():
-                errors.append(label + ': actual check date must be within the run')
-            if not row['rationale'].strip():
-                errors.append(label + ': investigated result needs rationale')
-            if result == 'blocked' and not row['blocked_reason']:
-                errors.append(label + ': blocked needs a reason')
-            if result != 'blocked' and row['blocked_reason']:
-                errors.append(label + ': blocker must use blocked result')
-            if result != 'blocked' and not row['evidence_ids'] and not row['search_references']:
-                errors.append(label + ': investigated result needs source/search references')
-            if result != 'blocked' and not row['evidence_ids'] and row['search_references'] and all(
-                    search['outcome'] == 'blocked' for search in row['search_references']):
-                errors.append(label + ': failed searches remain blocked, not investigated unknown')
-            for ident in row['evidence_ids']:
-                expanded = observations.get(ident, {}).get('source_ids', [ident])
-                if not expanded:
-                    errors.append(label + ': editorial observation cannot establish a source check ' + ident)
-                for source_id in expanded:
-                    source = sources.get(source_id)
-                    if not source or not checked or source['accessed_at'] < checked or source['accessed_at'] > date.today().isoformat():
-                        errors.append(label + ': source inspection missing, predates check, or is in the future ' + source_id)
-            for search in row['search_references']:
-                if search['checked_at'] != checked:
-                    errors.append(label + ': search/check dates differ')
-            if result in {'unknown', 'blocked'} and not row['remaining_gaps']:
-                errors.append(label + ': unresolved result needs remaining gaps')
-            if result in {'not_applicable', 'excluded'} and not row['evidence_ids']:
-                errors.append(label + ': exclusion needs positive mismatch evidence; absence is unknown')
-            if name == 'source_checks' and result == 'checked':
-                source_ids = [source_id for ident in row['evidence_ids']
-                              for source_id in observations.get(ident, {}).get('source_ids', [ident])]
-                category = row['category'].replace('_', '-')
-                if not any(sources.get(ident, {}).get('source_type') == category for ident in source_ids):
-                    errors.append(label + ': checked category needs an inspected source of that category')
-            if name == 'field_checks' and result == 'value' and not row['evidence_ids']:
-                errors.append(label + ': factual value needs inspected evidence')
-            if name == 'field_checks' and result == 'value' and row['entity_type'] != 'inventory':
-                actual = evidence.get((row['entity_type'], row['entity_id']))
-                for part in row['path'].split('/')[1:]:
-                    key = part.replace('~1', '/').replace('~0', '~')
-                    actual = actual.get(key) if isinstance(actual, dict) else None
-                if actual is None:
-                    errors.append(label + ': absent/null factual value must remain unknown')
-            if name == 'task_decisions':
-                applicability = row['applicability']
-                if ((result == 'excluded') != (applicability == 'excluded') or
-                        (result == 'assessed' and applicability != 'applicable') or
-                        (result == 'unknown' and applicability not in {'unknown', 'applicable'})):
-                    errors.append(label + ': task result/applicability differ')
-                if result == 'assessed':
-                    judgments = {j['id']: j for j in evidence[('model', row['model_id'])]['capabilities']}
-                    if not row['judgment_ids'] or not row['confidence_rationale'].strip() or not row['evidence_ids']:
-                        errors.append(label + ': assessed task needs judgments and confidence rationale')
-                    for ident in row['judgment_ids']:
-                        judgment = judgments.get(ident)
-                        if not judgment or row['task_id'] not in judgment['task_ids']:
-                            errors.append(label + ': assessment needs a direct exact-model task judgment ' + ident)
-                elif row['judgment_ids']:
-                    errors.append(label + ': non-assessed task cannot endorse judgments')
+            errors.extend(row_errors(name, row, run, evidence, sources=sources, observations=observations))
     for model_id in targets:
         searches = {(search['checked_at'], search['query'])
                     for name, _, _ in groups for row in run[name] if row['model_id'] == model_id
@@ -273,6 +228,8 @@ def main():
     scaffold.add_argument('--max-minutes-per-model', type=int, required=True)
     scaffold.add_argument('--max-searches-per-model', type=int, required=True)
     scaffold.add_argument('--output', type=Path, required=True)
+    scaffold.add_argument('--followups-output', type=Path,
+                          help='Create immutable private follow-up inputs from the same pinned baseline')
     inspect = commands.add_parser('check')
     inspect.add_argument('path', type=Path)
     inspect.add_argument('--require-complete', action='store_true')
@@ -297,6 +254,16 @@ def main():
                         'max_searches_per_model': args.max_searches_per_model,
                         'source_categories': contract['source_categories']}, date.today().isoformat())
         validator.validate(run)
+        if not args.followups_output and any(kind=='research_followup' and row['status']=='open'
+                                            for (kind,_),row in current.items()):
+            from tools.research_followups import assignment_inputs
+            if assignment_inputs(run,current)['direct_followup_ids']:
+                raise ValueError('Open follow-ups require --followups-output for the new assignment')
+        if args.followups_output:
+            if args.output.exists():
+                raise ValueError('Do not overwrite a retained run')
+            from tools.research_followups import write_assignment_inputs
+            write_assignment_inputs(run, current, args.followups_output)
         # Exclusive create: never overwrite a completed or partially researched packet.
         with args.output.open('x', encoding='utf-8') as output:
             import yaml

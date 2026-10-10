@@ -488,7 +488,31 @@
           "remaining_gaps",
           "blocked_reason"
         ],
-        "additionalProperties": false
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "result": {
+                  "const": "excluded"
+                }
+              },
+              "required": [
+                "result"
+              ]
+            },
+            "then": {
+              "properties": {
+                "judgment_ids": {
+                  "maxItems": 0
+                },
+                "applicability": {
+                  "const": "excluded"
+                }
+              }
+            }
+          }
+        ]
       }
     },
     "source_checks": {

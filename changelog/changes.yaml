@@ -14150,3 +14150,1751 @@ records:
     canonical_path: data/task-assessments.yaml
     operation: update
   id: change-58e05098ecc735d6
+- observed_at: '2026-10-08'
+  summary: 'Updated Claude Fable 5.1 task evidence: retained Medium suitability with Low confidence for debugging,
+    raised refactoring confidence to Medium with bounded corroboration, and corrected single-run benchmark
+    metadata.'
+  evidence_ids:
+  - src-11bea9016ff0
+  - src-4f597f653005
+  - src-4fbde637dbf3
+  - src-ad78a04807f9
+  - src-b6ffa931564a
+  - src-d3e6e49a01b9
+  - src-e7c2a679eb16
+  changed_entities:
+  - entity_type: benchmark
+    entity_id: benchmark-62a20a5dbc74fc59
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-89d613f9d34529e9
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-a8f574f60a829c01
+    canonical_path: data/benchmarks.yaml
+    operation: add
+  - entity_type: model
+    entity_id: claude-fable-5-1
+    canonical_path: models/anthropic/claude-fable-5-1/profile.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-02b09208ceab
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-0b72694a5dea
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-11bea9016ff0
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-4f597f653005
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-4fbde637dbf3
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-96cec7bbd029
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-ad78a04807f9
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-b6ffa931564a
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-c7eceee3e7d1
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-d3e6e49a01b9
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-e7c2a679eb16
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-e86e19b3dd2c
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-e9c984ecc940
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-293c9899ca23b224
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-50c1b1bcd5a6522b
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  id: change-1d53367d369cf0dd
+- observed_at: '2026-10-09'
+  summary: Recorded researched model, task, measurement and access updates with their evidence and limitations.
+  evidence_ids:
+  - src-00b8399a64cf
+  - src-027740f2ec3a
+  - src-0351220a07ba
+  - src-07726bccff52
+  - src-07c29d610258
+  - src-0afd7c8fdf82
+  - src-0b70e8e50a2d
+  - src-0c158ebfff24
+  - src-0d18fb415950
+  - src-0e7b36859ec7
+  - src-11b3486f8e43
+  - src-12127a4ce5a0
+  - src-180d4ee013fb
+  - src-197c483f8b0e
+  - src-19f038745d53
+  - src-1b978423c3c5
+  - src-1d13287c6cc8
+  - src-1ea3e75f96c3
+  - src-1f1d3170f6c4
+  - src-2072257ca7d3
+  - src-224f047cb6ec
+  - src-23b2761eb941
+  - src-23ef4e3f1996
+  - src-247a216c9083
+  - src-254a5634e649
+  - src-26606ff14841
+  - src-271417aade31
+  - src-27e3b6f59e79
+  - src-28e7d62747c5
+  - src-28ef96954527
+  - src-28f7598af662
+  - src-294ac6d01ed0
+  - src-2be166d8cf0e
+  - src-2bf9d5fecb2c
+  - src-2d3b0f2c4ce5
+  - src-2d4a5189dfd0
+  - src-2d7cd40cbb51
+  - src-2db96f59bd00
+  - src-2e03cb5a63cf
+  - src-2e4bfe44c369
+  - src-2e8458176352
+  - src-2f5e8929f807
+  - src-2f822bc8e7fe
+  - src-2f9ece653a0f
+  - src-3044b3f1e225
+  - src-30dab146c692
+  - src-3108814ff259
+  - src-3446600040dc
+  - src-34ea48a4faa8
+  - src-354a85681004
+  - src-36af3597d45e
+  - src-37177d625111
+  - src-3721a84d53ae
+  - src-387324d65e28
+  - src-38bd374632c5
+  - src-395c3ceaf095
+  - src-3b2d0dcdbe22
+  - src-3badde5180c1
+  - src-3df062ca530b
+  - src-3df83358dfed
+  - src-4159ec1ffae5
+  - src-4182359e79e6
+  - src-4228c246c84d
+  - src-427f26e1d576
+  - src-428f483ecfb6
+  - src-4313a1decc61
+  - src-45084a6538d2
+  - src-4583eb1b0101
+  - src-45a5ce926864
+  - src-475033497c97
+  - src-47ab448cf23c
+  - src-491013fa24c3
+  - src-4d8fd7a10219
+  - src-4db2307f55ee
+  - src-4e6f4ff35504
+  - src-4eba9a9f0afe
+  - src-4ff3ae14b471
+  - src-50846cd1ff36
+  - src-512e1b1f9f78
+  - src-53419f67134c
+  - src-557f96ccb327
+  - src-558e405b8479
+  - src-5630fbf63aaf
+  - src-571097b630c2
+  - src-58333316475e
+  - src-592e1496bf8f
+  - src-595e7d6ffd58
+  - src-59cbde8f1f62
+  - src-5a27e3e4bac2
+  - src-5a6452e14543
+  - src-5a898812893e
+  - src-5c510b458547
+  - src-5d3a74a063b2
+  - src-5e305fe78828
+  - src-5e8e1c654dfb
+  - src-6042302df83d
+  - src-61425dc99484
+  - src-6167e7bf070d
+  - src-61e1f4d1aadb
+  - src-634e05a0d606
+  - src-63c3f4e3712d
+  - src-646a48b2dcda
+  - src-657f3a6037f7
+  - src-65a4b6c722b2
+  - src-66b7be4f6287
+  - src-6bd484fad5a5
+  - src-6d6d4946296a
+  - src-6f06612f466e
+  - src-6fb2505d493e
+  - src-6fea481a4699
+  - src-702fe405e315
+  - src-706225e4588a
+  - src-70d96e780ce1
+  - src-71ea095aee2f
+  - src-72eb512e62c1
+  - src-7435c41604e4
+  - src-746dd121a2db
+  - src-762b457920fe
+  - src-7728fa2f91b7
+  - src-78a1de7eb064
+  - src-78dcb07e48d6
+  - src-79fe7e214fdd
+  - src-7ae2dea476f9
+  - src-7d8036798734
+  - src-7dc93e85c023
+  - src-7dea3b226d0f
+  - src-7ec0287dc7c1
+  - src-7ed93bce3f22
+  - src-7f024ab0f607
+  - src-82c97913adaf
+  - src-838e6e7f9992
+  - src-840bbb3c17c1
+  - src-846f5cf1e705
+  - src-855b523a3d50
+  - src-86952b1e5dc3
+  - src-88ad926ffd53
+  - src-89852246e77a
+  - src-89e4a5e6eadc
+  - src-8ac74a7d6b30
+  - src-8b31e76b4300
+  - src-8b699ba6c657
+  - src-8b93d3d2b71b
+  - src-8c17dc7abf0e
+  - src-8c34675c07eb
+  - src-8cb4ce8e8a24
+  - src-8d4d12e3718b
+  - src-8e26d954ad88
+  - src-8edd087d89ca
+  - src-8f47498481bf
+  - src-92c74f3bbf1d
+  - src-9307f31a886d
+  - src-9332683246db
+  - src-95c7cf97e22d
+  - src-973625333a94
+  - src-98b203ee96ea
+  - src-995284168dc8
+  - src-99f7f1fb215d
+  - src-9a3bbc4f637b
+  - src-9aa357ecfe3f
+  - src-9b374de3e978
+  - src-9be7b13428d4
+  - src-9d3919791a72
+  - src-9e446dfc0c1d
+  - src-9ed314df795b
+  - src-a13e90c351de
+  - src-a221a35057e7
+  - src-a2775c826853
+  - src-a44e3cdec40a
+  - src-a5d9c5f9d95b
+  - src-a73697043308
+  - src-a898bb616c7a
+  - src-aac5808af0ec
+  - src-ab8901f1a6fe
+  - src-abcf985b3d88
+  - src-ac1de590bc36
+  - src-ad41a7b3a864
+  - src-ad432a6151be
+  - src-ad9aa6f1b8ed
+  - src-ae0a47d047ce
+  - src-aee499e96a53
+  - src-af46cfa236f4
+  - src-b03f06e4ffc9
+  - src-b2ab15dd01eb
+  - src-b5840ea93831
+  - src-b922da870c3a
+  - src-b927ea5d3000
+  - src-b9e7915be186
+  - src-bb4952bada00
+  - src-bc2410652a3c
+  - src-bf924fcc3f44
+  - src-bfdf4f90e154
+  - src-c3013291f6f8
+  - src-c37c7c421a60
+  - src-c3b032962bda
+  - src-c57fac32d95c
+  - src-c797c226aadf
+  - src-ca9a77d5b237
+  - src-caf4a0b06fc2
+  - src-cb6abd8d17ce
+  - src-cbb33e0a8075
+  - src-cdb1d51fae04
+  - src-cf7bab40a0e4
+  - src-d2b215df9595
+  - src-d4e351b075e1
+  - src-d5180defe452
+  - src-d5a9f20503bd
+  - src-d69b0e2a2d12
+  - src-d6a1516325c4
+  - src-d802b13b5eaa
+  - src-d8d48de1253a
+  - src-da0a1b7f074e
+  - src-dc06fff663d6
+  - src-dc1c9e6b2717
+  - src-dc337252fd3b
+  - src-ded49f004360
+  - src-e00f601dac94
+  - src-e13f7503f163
+  - src-e2515f12cc88
+  - src-e26a5c9bdee9
+  - src-e28da843552b
+  - src-e3d69f4d01f5
+  - src-e471bc2bb72f
+  - src-e495b08b40a6
+  - src-e50c57a33d69
+  - src-e642668a5ed9
+  - src-e7232d52f37f
+  - src-e7ad291536d1
+  - src-e7bbd7b591b2
+  - src-e86418b60c92
+  - src-e8baec81d888
+  - src-e8dd758dd28d
+  - src-e8de12d93859
+  - src-eaa56d3523ad
+  - src-ed2ea3ed3dc1
+  - src-ed7dde47f5c6
+  - src-efd1db045882
+  - src-f1078602a2b4
+  - src-f10e40cc0139
+  - src-f11b84e2a4e0
+  - src-f21349d0715d
+  - src-f34fd90d33e8
+  - src-f3655eaf1407
+  - src-f49228a34110
+  - src-f5bf04075971
+  - src-f61234c4ee64
+  - src-f79710555d62
+  - src-fd4ba7e94258
+  - src-fdd6f11500c5
+  - src-ffcfe3121d4a
+  changed_entities:
+  - entity_type: access
+    entity_id: access-e049c0bfd67b6a3e
+    canonical_path: data/access.yaml
+    operation: update
+  - entity_type: access
+    entity_id: access-efe64fb09d83013c
+    canonical_path: data/access.yaml
+    operation: update
+  - entity_type: access
+    entity_id: access-proprietary-access-22-1
+    canonical_path: data/access.yaml
+    operation: update
+  - entity_type: access
+    entity_id: access-proprietary-access-22-2
+    canonical_path: data/access.yaml
+    operation: update
+  - entity_type: access
+    entity_id: access-proprietary-access-22-ide-1
+    canonical_path: data/access.yaml
+    operation: update
+  - entity_type: access
+    entity_id: access-proprietary-access-22-ide-2
+    canonical_path: data/access.yaml
+    operation: update
+  - entity_type: behavior
+    entity_id: behavior-17a5867c2f79c6be
+    canonical_path: data/behavior.yaml
+    operation: update
+  - entity_type: behavior
+    entity_id: behavior-24c645e83fd64401
+    canonical_path: data/behavior.yaml
+    operation: update
+  - entity_type: behavior
+    entity_id: behavior-65105ca2c240c05e
+    canonical_path: data/behavior.yaml
+    operation: update
+  - entity_type: behavior
+    entity_id: behavior-673ed051498bc83c
+    canonical_path: data/behavior.yaml
+    operation: update
+  - entity_type: behavior
+    entity_id: behavior-7b737b41c12a1613
+    canonical_path: data/behavior.yaml
+    operation: update
+  - entity_type: behavior
+    entity_id: behavior-911eeba982beafe0
+    canonical_path: data/behavior.yaml
+    operation: update
+  - entity_type: behavior
+    entity_id: behavior-a82e02d05dfd77ff
+    canonical_path: data/behavior.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-1c18d7ce5e1bbd58
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-391bee7f74fddbd3
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-3bc03f02f03efb69
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-4003965d6bea5a48
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-48202fa54f873b0b
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-593cf848a4905e28
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-623c7e8d247d4615
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-82d23a40db419ede
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-899e981e916002fc
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-9452545fa1dffecc
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-978d5d1cbfc2ea43
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-9fea728e3f829e8e
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-b2faa817d8c223c8
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-b3fd41b3e28b580c
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-be8acf4305714add
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-d14d5e6960fa913c
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: benchmark
+    entity_id: benchmark-e0b76bd735e8cdce
+    canonical_path: data/benchmarks.yaml
+    operation: update
+  - entity_type: model
+    entity_id: claude-fable-5-1
+    canonical_path: models/anthropic/claude-fable-5-1/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: claude-haiku-4-5
+    canonical_path: models/anthropic/claude-haiku-4-5/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: claude-haiku-5-5
+    canonical_path: models/anthropic/claude-haiku-5-5/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: claude-opus-5-5
+    canonical_path: models/anthropic/claude-opus-5-5/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: claude-sonnet-5-5
+    canonical_path: models/anthropic/claude-sonnet-5-5/profile.yaml
+    operation: update
+  - entity_type: model
+    entity_id: xai-grok-4-7
+    canonical_path: models/xai-spacexai/xai-grok-4-7/profile.yaml
+    operation: update
+  - entity_type: price
+    entity_id: price-033812acbb533c13
+    canonical_path: data/pricing.yaml
+    operation: update
+  - entity_type: price
+    entity_id: price-729ac6158cd411fd
+    canonical_path: data/pricing.yaml
+    operation: update
+  - entity_type: price
+    entity_id: price-851b345d1ce20f50
+    canonical_path: data/pricing.yaml
+    operation: update
+  - entity_type: price
+    entity_id: price-ff990a87ae69bd0a
+    canonical_path: data/pricing.yaml
+    operation: update
+  - entity_type: provider
+    entity_id: anthropic
+    canonical_path: providers/anthropic/profile.yaml
+    operation: update
+  - entity_type: provider
+    entity_id: azure-foundry
+    canonical_path: providers/azure-foundry/profile.yaml
+    operation: update
+  - entity_type: provider
+    entity_id: claude-platform-on-aws
+    canonical_path: providers/claude-platform-on-aws/profile.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-00b8399a64cf
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-027740f2ec3a
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-0351220a07ba
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-07726bccff52
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-07c29d610258
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-0afd7c8fdf82
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-0b70e8e50a2d
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-0c158ebfff24
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-0d18fb415950
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-0e7b36859ec7
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-11b3486f8e43
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-12127a4ce5a0
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-180d4ee013fb
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-197c483f8b0e
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-19f038745d53
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-1b978423c3c5
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-1d13287c6cc8
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-1ea3e75f96c3
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-1f1d3170f6c4
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-2072257ca7d3
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-224f047cb6ec
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-23b2761eb941
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-23ef4e3f1996
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-247a216c9083
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-254a5634e649
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-26606ff14841
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-271417aade31
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-27e3b6f59e79
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-28e7d62747c5
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-28ef96954527
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-294ac6d01ed0
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-2be166d8cf0e
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-2bf9d5fecb2c
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-2d3b0f2c4ce5
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-2d4a5189dfd0
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-2d7cd40cbb51
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-2db96f59bd00
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-2e03cb5a63cf
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-2e4bfe44c369
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-2e8458176352
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-2f5e8929f807
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-2f822bc8e7fe
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-2f9ece653a0f
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-3044b3f1e225
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-30dab146c692
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-3108814ff259
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-3446600040dc
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-34ea48a4faa8
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-354a85681004
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-36af3597d45e
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-37177d625111
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-3721a84d53ae
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-387324d65e28
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-38bd374632c5
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-395c3ceaf095
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-3b2d0dcdbe22
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-3badde5180c1
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-3df062ca530b
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-3df83358dfed
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-4159ec1ffae5
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-4182359e79e6
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-4228c246c84d
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-427f26e1d576
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-428f483ecfb6
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-4313a1decc61
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-45084a6538d2
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-4583eb1b0101
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-45a5ce926864
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-475033497c97
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-47ab448cf23c
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-491013fa24c3
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-4d8fd7a10219
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-4db2307f55ee
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-4e6f4ff35504
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-4eba9a9f0afe
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-4ff3ae14b471
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-50846cd1ff36
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-512e1b1f9f78
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-53419f67134c
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-557f96ccb327
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-558e405b8479
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-5630fbf63aaf
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-571097b630c2
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-58333316475e
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-592e1496bf8f
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-595e7d6ffd58
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-59cbde8f1f62
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-5a27e3e4bac2
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-5a6452e14543
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-5a898812893e
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-5c510b458547
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-5d3a74a063b2
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-5e305fe78828
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-5e8e1c654dfb
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-6042302df83d
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-61425dc99484
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-6167e7bf070d
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-61e1f4d1aadb
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-634e05a0d606
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-63c3f4e3712d
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-646a48b2dcda
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-657f3a6037f7
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-65a4b6c722b2
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-66b7be4f6287
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-6bd484fad5a5
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-6d6d4946296a
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-6f06612f466e
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-6fb2505d493e
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-6fea481a4699
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-702fe405e315
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-706225e4588a
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-70d96e780ce1
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-71ea095aee2f
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-72eb512e62c1
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-7435c41604e4
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-746dd121a2db
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-762b457920fe
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-7728fa2f91b7
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-78a1de7eb064
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-78dcb07e48d6
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-79fe7e214fdd
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-7ae2dea476f9
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-7d8036798734
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-7dc93e85c023
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-7dea3b226d0f
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-7ec0287dc7c1
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-7ed93bce3f22
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-7f024ab0f607
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-82c97913adaf
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-838e6e7f9992
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-840bbb3c17c1
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-846f5cf1e705
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-855b523a3d50
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-86952b1e5dc3
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-88ad926ffd53
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-89852246e77a
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-89e4a5e6eadc
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-8ac74a7d6b30
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-8b31e76b4300
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-8b699ba6c657
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-8b93d3d2b71b
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-8c17dc7abf0e
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-8c34675c07eb
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-8cb4ce8e8a24
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-8d4d12e3718b
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-8e26d954ad88
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-8edd087d89ca
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-8f47498481bf
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-92c74f3bbf1d
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-9307f31a886d
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-9332683246db
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-95c7cf97e22d
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-973625333a94
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-98b203ee96ea
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-995284168dc8
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-99f7f1fb215d
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-9a3bbc4f637b
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-9aa357ecfe3f
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-9b374de3e978
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-9be7b13428d4
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-9d3919791a72
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-9e446dfc0c1d
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-9ed314df795b
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-a13e90c351de
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-a221a35057e7
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-a2775c826853
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-a44e3cdec40a
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-a5d9c5f9d95b
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-a73697043308
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-a898bb616c7a
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-aac5808af0ec
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-ab8901f1a6fe
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-abcf985b3d88
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-ac1de590bc36
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-ad41a7b3a864
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-ad432a6151be
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-ad9aa6f1b8ed
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-ae0a47d047ce
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-aee499e96a53
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-af46cfa236f4
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-b03f06e4ffc9
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-b2ab15dd01eb
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-b5840ea93831
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-b922da870c3a
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-b927ea5d3000
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-b9e7915be186
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-bb4952bada00
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-bc2410652a3c
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-bf924fcc3f44
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-c3013291f6f8
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-c37c7c421a60
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-c3b032962bda
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-c57fac32d95c
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-c797c226aadf
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-ca9a77d5b237
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-caf4a0b06fc2
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-cb6abd8d17ce
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-cbb33e0a8075
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-cdb1d51fae04
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-cf7bab40a0e4
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-d2b215df9595
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-d4e351b075e1
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-d5180defe452
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-d5a9f20503bd
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-d69b0e2a2d12
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-d6a1516325c4
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-d802b13b5eaa
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-d8d48de1253a
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-da0a1b7f074e
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-dc06fff663d6
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-dc1c9e6b2717
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-dc337252fd3b
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-ded49f004360
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-e00f601dac94
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-e13f7503f163
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-e2515f12cc88
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-e26a5c9bdee9
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-e28da843552b
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-e3d69f4d01f5
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-e471bc2bb72f
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-e495b08b40a6
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-e50c57a33d69
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-e642668a5ed9
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-e7232d52f37f
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-e7ad291536d1
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-e7bbd7b591b2
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-e86418b60c92
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-e8baec81d888
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-e8dd758dd28d
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-e8de12d93859
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-eaa56d3523ad
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-ed2ea3ed3dc1
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-ed7dde47f5c6
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-efd1db045882
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-f1078602a2b4
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-f10e40cc0139
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-f11b84e2a4e0
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-f21349d0715d
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-f34fd90d33e8
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-f3655eaf1407
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-f49228a34110
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-f5bf04075971
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-f61234c4ee64
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-f79710555d62
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-fd4ba7e94258
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-fdd6f11500c5
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-ffcfe3121d4a
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: task_assessment
+    entity_id: task-assessment-00995d010b732e38
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-00fcaa516ef8e113
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-070c4cf809080b7a
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-0f30a5835019c235
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-1043dd04c51e382a
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-125bdec834549880
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-18dd0a0f459f8462
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-1b0fb30d39474ae8
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-1c140690071bddbe
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-1c6d29ed4df8ddd4
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-23bab6c2ee79504a
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-2489457cdc600233
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-2a4b6c25405e04af
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-2c3296e9d8da744e
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-2e885e1ca620ef62
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-2f74a9cd8bc0256d
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-2ff68166c3e02d02
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-30b59fee8e68d79e
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-326b7b712ec16138
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-34f7c4b503ee4dae
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-3708053cd29c211e
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-38fa48f06c4e25a4
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-3e2254d6ed03b5dc
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-3ef5c7f28faa2fbc
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-40621d8c483b753c
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-45060bc73fea456f
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-499e4a1aeab3a323
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-6054473604e5d63f
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-62ce149b20f55554
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-6b5d42fcbe23e5cf
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-6c12258868cc56b6
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-6f250c04f5cc2109
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-70acb95d3946a2a0
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-726103d8f98518b0
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-755706c9523d5646
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-7f40f93eccc45929
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-8f6233faac73b939
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-90478ea3d7160ee0
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-950325cee30bc61b
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-9876a6a73050ac63
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-993554c2dacaacc2
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-99c458e8f0177913
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-99d4d97c5179942e
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-a50311f0ac269e97
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-a9238a6155ba837c
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-be1059e3be2c76c5
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-c4d08737257b9d09
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-c4edf245f3de0db4
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-c89209987372bb95
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-d0e5a4d550b0cd7d
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-d45046a69b444f64
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-d533159f8053b5c9
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-dcc5526d2e5aed56
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-e917473258788d20
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-ecc4e04d13da8e1f
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-f34cd39639dc1c4e
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-f5984a7e326c5042
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-f5d314fd7a92ac1b
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-f61008b6059654a6
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-f93f6a5d9b45ce15
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-fb33dd1364414b14
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  id: change-41320f8d761de15d

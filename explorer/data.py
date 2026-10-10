@@ -1,6 +1,7 @@
 from datetime import date
 from tools.knowledge import ROOT, canonical, read
 from tools.task_assessments import select_task_assessments
+from tools.research_followups import select_followups
 
 REPO_URL = 'https://github.com/chadnickfisher/model-intelligence'
 UNKNOWN = 'Unknown / not established'
@@ -8,7 +9,7 @@ UNKNOWN = 'Unknown / not established'
 
 def load(root=ROOT):
     records = canonical(root)
-    result = {kind: {} for kind in ['model', 'provider', 'price', 'access', 'release', 'source', 'observation', 'task', 'alias', 'behavior', 'access_coverage', 'benchmark', 'research_coverage', 'research_contract', 'research_run', 'maintenance_contract', 'maintenance_pass', 'task_assessment']}
+    result = {kind: {} for kind in ['model', 'provider', 'price', 'access', 'release', 'source', 'observation', 'task', 'alias', 'behavior', 'access_coverage', 'benchmark', 'research_coverage', 'research_contract', 'research_run', 'maintenance_contract', 'maintenance_pass', 'task_assessment', 'research_followup']}
     result['paths'] = {}
     for (kind, ident), (path, record) in records.items():
         result[kind][ident] = record

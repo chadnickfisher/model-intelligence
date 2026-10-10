@@ -15,7 +15,8 @@ specifications:
   architecture:
     value: null
     status: unknown
-    conditions: []
+    conditions:
+    - Not disclosed in the Fable 5.1 overview or Bedrock model card inspected on 2026-10-08.
     evidence_ids:
     - src-ad9aa6f1b8ed
     - src-f3655eaf1407
@@ -25,7 +26,8 @@ specifications:
   parameters:
     value: null
     status: unknown
-    conditions: []
+    conditions:
+    - Not disclosed in the Fable 5.1 overview or Bedrock model card inspected on 2026-10-08.
     evidence_ids:
     - src-ad9aa6f1b8ed
     - src-f3655eaf1407
@@ -121,7 +123,9 @@ additional_specifications:
   api_id:
     value: claude-fable-5-1
     status: documented
-    conditions: []
+    conditions:
+    - claude-fable-5-1 is a pinned dateless model ID, not an automatically rolling convenience alias. Serving
+      infrastructure can still change.
     evidence_ids:
     - src-ad9aa6f1b8ed
     - src-f3655eaf1407
@@ -146,7 +150,9 @@ additional_specifications:
     - xhigh
     - max
     status: documented
-    conditions: []
+    conditions:
+    - The five stored levels are documented by the Bedrock model card. Microsoft Foundry instead lists low/medium/high/xhigh
+      for Fable 5.1 and marks max unsupported; provider-specific execution was not tested.
     evidence_ids:
     - src-ad9aa6f1b8ed
     - src-f3655eaf1407
@@ -186,12 +192,17 @@ additional_specifications:
     - src-e7232d52f37f
     - src-f10e40cc0139
 licensing:
-  name: null
-  commercial_use: null
+  name: Anthropic Commercial Terms of Service (Claude API route)
+  commercial_use: Commercial API use may power customer-facing products, subject to the Commercial Terms and
+    incorporated policies.
   redistribution: null
   fine_tuning: null
-  hosted_service: null
-  restrictions: []
+  hosted_service: Claude API access is governed by Anthropic Commercial Terms; consumer plans and partner offerings
+    have separate applicable terms.
+  restrictions:
+  - Usage, Supported Regions and Service Specific Terms apply to commercial API use.
+  - Competing-service development, competing-model training, duplication/reverse engineering, and unapproved
+    resale are restricted by the Commercial Terms.
   evidence_ids:
   - src-ad9aa6f1b8ed
   - src-f3655eaf1407
@@ -251,31 +262,39 @@ capabilities:
   related_task_ids: []
   assessment: conditional
   scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
-  judgment: Can repair a subset of hidden repository defects; use as an assisted audit, not a completeness
-    guarantee.
+  judgment: Repaired 43 of 105 hidden defects in one Claude Code/max run; use for assisted diagnosis and repair
+    with material verification.
   confidence: low
   supporting_evidence_ids:
   - src-ad78a04807f9
   - src-02b09208ceab
   - src-0b72694a5dea
+  - src-e86e19b3dd2c
+  - src-e9c984ecc940
+  - src-96cec7bbd029
   contradictory_evidence_ids: []
   conditions:
-  - Single configuration run; no robust ranking implied.
-  - 'Harness: Claude Code; effort: max; effort evidence: first_party.'
-  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
-  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
-    and budgets.
-  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
-    external reproduction.
+  - One round per repository on 2026-09-01; one configuration run, not repeated trials.
+  - Approximately 28K-line TypeScript extension and 60K-line React/TypeScript Supabase LMS; 76 reverted real
+    fixes plus 29 authored defects.
+  - Native Claude Code; max is a documented first-party tier requested explicitly, not separately probed as
+    binding.
+  - No network or git history; preserve passing checks; diagnose symptoms and root causes and edit source in
+    place.
+  - Blind non-sibling judge compares diffs with withheld answer key; partials, claimed-only and extras do not
+    increase strict score.
+  - Metrics identify model=claude-fable-5-1 and a [1m] window request; precise CLI version and exact provider
+    endpoint are not established in these inspected max-row receipts.
   known_failure_modes:
-  - Many planted defects remained unresolved in the measured runs.
-  - Run variance and harness differences prevent fine-grained cross-model ranking.
+  - 62 seeded defects were not fully repaired in the inspected run; two fixes were partial and four were claimed
+    without implementation.
   evidence_notes:
-  - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
-    quality.
-  - No matched independent contradiction located; partial successes and misses coexist.
-  - Confidence concerns this bounded claim, not a capability score.
-  observed_at: '2026-10-07'
+  - One run across two repositories; partial fixes and eleven unscored genuine extras do not increase the strict
+    score.
+  - Low confidence reflects withheld artifacts, no exact-configuration replication and unknown run variance.
+  - Zero recorded false-positive fixes does not establish absence of regressions; this is repair evidence,
+    not code-review recall.
+  observed_at: '2026-10-08'
   effective_from: null
   provenance:
     origin: research
@@ -289,27 +308,32 @@ capabilities:
   related_task_ids: []
   assessment: conditional
   scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
-  judgment: Strong benchmark candidate; bound edit scope and retain regression checks.
+  judgment: Completed a useful subset of behavior-preserving refactors under tests and structural checks; substantial
+    independent verification remains necessary.
   confidence: medium
   supporting_evidence_ids:
   - src-b6ffa931564a
   - src-c7eceee3e7d1
   contradictory_evidence_ids: []
   conditions:
-  - 70 tasks, 10 production repositories, 6 languages; Harbor/Modal sandboxes. Resolve requires unchanged tests,
-    zero regressions, and every mandatory Opus 4.5-judged rubric.
-  - Always-on adaptive thinking; effort-controlled operation.
+  - 'Published dataset: 70 tasks from 10 production repositories in six languages.'
+  - Task resolution requires unchanged test files, no relevant baseline-test regressions or failing added interface
+    tests, and all mandatory rubric criteria.
+  - Rubric judge is Claude Opus 4.5, not the evaluated model; documentation criteria are optional.
+  - Study uses Harbor with Modal sandboxing and repository shell/build/test access.
   known_failure_modes:
-  - Incomplete extraction, unwired callers, stale implementations/artifacts; failure taxonomy is pooled, not
-    per-model.
-  - Official documentation warns it favors whole-file rewrites for small changes, increasing output/time; targeted-edit
-    prompting recommended.
+  - Pooled benchmark analysis reports incomplete extraction, unwired call sites and stale artifacts; these
+    are not Fable-specific frequencies.
+  - Anthropic documents whole-file rewrites for small edits, usually preserving the result but increasing output
+    and time.
   evidence_notes:
-  - Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve xHigh as board label.
-    Intro's below 50% statement is stale. Gemini 3.1 Pro 33.81±6.64 is withheld pending preview-ID mapping.
-  - Vendor behavior description supplements E07; it is not an independent refactor success measurement.
-  - Confidence concerns this bounded claim, not a capability score.
-  observed_at: '2026-10-07'
+  - Scale reports 56.67 percent with displayed uncertainty 6.52 for Claude Code/xHigh; actual Fable trial count
+    and interval semantics remain unconfirmed.
+  - Medium finding confidence concerns the bounded independent task evaluation; it does not establish equivalent
+    performance on other routes or efforts.
+  - Official edit guidance supplements the evaluation; it is not an independent correctness measurement or
+    measured recovery.
+  observed_at: '2026-10-08'
   effective_from: null
   provenance:
     origin: research
@@ -380,6 +404,776 @@ capabilities:
     research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate review_tests_frontend:review-fable51; exact identity gates and original
       sources retained.
+- id: judgment-6c7a3c099d3c4be7
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact task evidence under its reported setup; no transfer to adjacent tasks or model/provider
+    configurations.
+  judgment: Snorkel reports 87% on four debugging tasks with executable feedback; this is bounded independent
+    corroboration.
+  confidence: low
+  supporting_evidence_ids:
+  - src-d3e6e49a01b9
+  contradictory_evidence_ids: []
+  conditions:
+  - Only the source-described task and setup are assessed; unspecified settings remain unknown.
+  known_failure_modes:
+  - Not a controlled comparison with Bug Hunt.
+  evidence_notes:
+  - Proprietary four-task subset; attempt denominator, aggregation and served configuration undisclosed.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: task-evidence-2026-10-08
+    method: Curated original public task evidence with exact scope, configuration limits and attributed counterevidence.
+- id: judgment-ad43fedfa9593401
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: warning
+  scope_note: Exact task evidence under its reported setup; no transfer to adjacent tasks or model/provider
+    configurations.
+  judgment: owen800q reports that Fable 5.1, while implementing Jira bug fixes, added unsolicited helper functions,
+    unrelated refactors, and architectural changes. This is a reported scope-control failure during repair;
+    comments propose mitigations without verifying recovery.
+  confidence: low
+  supporting_evidence_ids:
+  - src-e7c2a679eb16
+  contradictory_evidence_ids: []
+  conditions:
+  - First-person Jira bug-repair workflow; exact provider, snapshot, client version, effort and patches undisclosed.
+  known_failure_modes:
+  - Single unverified account, with no executable reproduction, rate, or pinned client/provider/effort.
+  - Does not test success at a requested behavior-preserving refactor; do not generalize to all setups.
+  evidence_notes:
+  - Original first-person report explicitly names Fable 5.1 but supplies no code, diff, trace, exact model
+    snapshot, client version, effort, or provider route.
+  - Unrequested refactoring during bug repair is a debugging scope-control concern, not a tested failure at
+    a requested behavior-preserving refactor.
+  - Suggested prompts, restricted edits, and diff checks in comments lack controlled before/after validation.
+    Stable publication date not established.
+  - Unrequested refactoring is related context, not evidence of failure at a requested behavior-preserving
+    refactor.
+  - Prompting advice in comments does not establish controlled recovery.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: task-evidence-2026-10-08
+    method: Curated original public task evidence with exact scope, configuration limits and attributed counterevidence.
+- id: judgment-7bb7ec6d2a29dc85
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: warning
+  scope_note: Exact task evidence under its reported setup; no transfer to adjacent tasks or model/provider
+    configurations.
+  judgment: returnity reports that Fable 5.1 at xhigh did not resolve a gensim 4.4 compiled-kernel problem,
+    instead suppressing its stderr notices while disclosing that choice, and missed a separate sentence-final
+    token-loss bug. The same workflow report praises its UTF-8 handling and readable code.
+  confidence: low
+  supporting_evidence_ids:
+  - src-11bea9016ff0
+  contradictory_evidence_ids: []
+  conditions:
+  - Author reports Fable 5.1/xhigh during one ML workflow; provider, client version, snapshot and run date
+    undisclosed.
+  known_failure_modes:
+  - No independently reproduced trace or pinned client/provider/model snapshot; claimed error cause is author-attributed.
+  - Cross-posts are one experiment. A failure in this case does not establish a general regression or comparative
+    ranking.
+  - No verified later recovery by Fable 5.1 is reported for these defects.
+  evidence_notes:
+  - Original body inspected. User names Fable 5.1 and xhigh; underlying provider route, client version, immutable
+    model snapshot, exact run date, and raw reproduction artifacts are not established.
+  - One reported ML workflow with human feedback, not a repeated controlled debugging benchmark. The claimed
+    gensim cause is the author’s account, not independently validated here.
+  - Same-author cross-posts and search hits in r/OpenAI/r/ArtificialInteligence are the same experiment, not
+    replications. Model-training F1/accuracy is not a debugging success score.
+  - Original body contains relative age only; published_at remains null.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: task-evidence-2026-10-08
+    method: Curated original public task evidence with exact scope, configuration limits and attributed counterevidence.
+- id: judgment-bdd86c4657d2dabd
+  scope: direct
+  task_ids:
+  - coding.debugging
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact task evidence under its reported setup; no transfer to adjacent tasks or model/provider
+    configurations.
+  judgment: 'Gradle reports claude-fable-5-1 diagnosed and repaired issue #34751, reproduced the Dokka link-target
+    error, and passed a new regression test plus an existing test. The author preferred its patch, while explicitly
+    limiting the comparison to one run on one bug.'
+  confidence: low
+  supporting_evidence_ids:
+  - src-4fbde637dbf3
+  contradictory_evidence_ids: []
+  conditions:
+  - Reported run on 2026-09-07; claude-fable-5-1 through Claude Code 2.1.263 and gradle-eval/Inspect AI.
+  - 'Gradle commit 8606a2c1, JDK 21 container, network available; limits: 50 turns, 5 million tokens and 45
+    minutes.'
+  - Dokka 2.2.0 reproduction, new Spock/TestKit regression check and existing GradleReleaseNotesPluginTest;
+    effort/provider endpoint undisclosed.
+  known_failure_modes:
+  - Effort, provider, immutable snapshot and judge unknown; no general ranking or independent rerun.
+  evidence_notes:
+  - One reported bug/run; tools differ between comparison models. Not independently reproduced; proposed PR
+    not verified merged.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: task-evidence-2026-10-08
+    method: Curated original public task evidence with exact scope, configuration limits and attributed counterevidence.
+- id: judgment-0d56d17e388e4a0a
+  scope: direct
+  task_ids:
+  - coding.refactoring
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact task evidence under its reported setup; no transfer to adjacent tasks or model/provider
+    configurations.
+  judgment: Wmedia includes extracting shared validation from three controllers, checked for centralization
+    and passing controller tests. All mixed-task runs passed; no separate refactoring score is tabulated.
+  confidence: low
+  supporting_evidence_ids:
+  - src-4f597f653005
+  contradictory_evidence_ids: []
+  conditions:
+  - Claude Code 2.1.280 at high effort; clean 11-file PHP repository, no user settings or MCP servers.
+  - Shared validation extracted from three controllers; centralization and controller tests checked; three
+    repetitions per task.
+  - The published 12/12 total covers four mixed tasks; no separate refactoring-only score is tabulated.
+  known_failure_modes:
+  - Small simple task with prewritten checks; results do not establish multi-repository refactoring reliability.
+  - The unrelated bug-task test remained failing and was excluded from refactor scoring; raw results ZIP not
+    inspected.
+  evidence_notes:
+  - One small mixed-task study; linked raw ZIP was not inspected.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: task-evidence-2026-10-08
+    method: Curated original public task evidence with exact scope, configuration limits and attributed counterevidence.
+- id: judgment-01c94f547da25077
+  scope: direct
+  task_ids:
+  - agent.long_horizon
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Original exact-model source inspected against this task rubric; no transfer to neighboring tasks.
+  judgment: Sustains useful iterative engineering work under a long-running scaffold, while final acceptance
+    still needs checking.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-00b8399a64cf
+  contradictory_evidence_ids: []
+  conditions:
+  - Proximus, max effort, 20 hours per task, 34 tasks, mean of 5 trials; Fable 5.1 with Opus 5 fallback scores
+    56.29% normalized reward.
+  - Scaffold supplies compaction, progress files, self-check feedback and checkpointed submissions.
+  known_failure_modes:
+  - Partial solutions remain; normalized reward does not mean a complete outcome.
+  evidence_notes:
+  - Original trajectory examples show feedback-driven revisions, including reverting a compiler optimization
+    and generating new astrometry test inputs.
+  - Fallback and evaluation-aware prompting limit attribution to a standalone Fable checkpoint.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspection on 2026-10-08; source-specific task, setup and limitations retained.
+- id: judgment-028a36af1a3ac2ad
+  scope: direct
+  task_ids:
+  - language.summarization
+  related_task_ids: []
+  assessment: warning
+  scope_note: Exact assigned rubric task; conclusion applies only to the documented evaluation or reported
+    behavior.
+  judgment: Check source attribution in document summaries; Anthropic reports unmarked reuse of source wording.
+  confidence: low
+  supporting_evidence_ids:
+  - src-557f96ccb327
+  contradictory_evidence_ids: []
+  conditions:
+  - Vendor prompting guidance for Fable 5.1; no disclosed sample size, effort or measured recovery.
+  known_failure_modes:
+  - Source passages may be reproduced without quotation marking.
+  evidence_notes:
+  - A prompting remedy is not a fidelity or completeness benchmark. Aggregate suitability remains unknown.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspected on 2026-10-08; task-rubric 1.1 applied without transferring neighboring-task
+      scores.
+- id: judgment-03386ed90ef9abfd
+  scope: direct
+  task_ids:
+  - knowledge.retrieval
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact assigned rubric task; conclusion applies only to the documented evaluation or reported
+    behavior.
+  judgment: Can shortlist research literature, but incomplete recall requires additional search and expert
+    screening.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-a898bb616c7a
+  contradictory_evidence_ids: []
+  conditions:
+  - ScholarCatalyst tool-calling agent; 207 CoreQ and687 SubQ; default thinking, Gemini Embedding 2, five search
+    rounds and 60-paper pool.
+  - Titles/abstracts in temporally filtered local corpus; no web; unknown API checkpoint, run date and precision.
+  known_failure_modes:
+  - R@20 misses roughly half the labeled inspirations; declines and ranking backfill affect results.
+  evidence_notes:
+  - Post-cutoff comparison only; does not establish RAG answer grounding or research synthesis.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspected on 2026-10-08; task-rubric 1.1 applied without transferring neighboring-task
+      scores.
+- id: judgment-0632bedb804079d6
+  scope: direct
+  task_ids:
+  - coding.repository_work
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Original exact-model source inspected against this task rubric; no transfer to neighboring tasks.
+  judgment: The reported Snake conversion integrates an engine, browser interface, CLI simulator and tests,
+    supporting assisted repository changes with material review.
+  confidence: low
+  supporting_evidence_ids:
+  - src-2f822bc8e7fe
+  contradictory_evidence_ids: []
+  conditions:
+  - One existing-app transformation with shared deterministic outcomes required across browser and CLI.
+  known_failure_modes:
+  - No published patch or hidden acceptance results establish full cross-file consistency or repeatability.
+  evidence_notes:
+  - This case is distinct from review metrics and is not a repository-wide completion rate.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspection on 2026-10-08; source-specific task, setup and limitations retained.
+- id: judgment-066745f9ef77af12
+  scope: direct
+  task_ids:
+  - vision.question_answering
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact task in one evaluator workflow.
+  judgment: Useful for checked image-grounded answers; material answer and output-format errors remain.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-efd1db045882
+  - src-12127a4ce5a0
+  - src-5a898812893e
+  contradictory_evidence_ids: []
+  conditions:
+  - Roboflow low/high benchmark tiers, three repeated runs per tier; exact native effort mapping unspecified.
+  - Provider endpoint, snapshot, precision, context length, sample denominator and measurement dates undisclosed.
+  known_failure_modes:
+  - Judge-accepted correctness substantially exceeds exact-match compliance.
+  evidence_notes:
+  - Judge accuracy low72.0/high73.1; strict accuracy low18.3/high36.2. Gemini3.5 Flash temperature0 judge.
+  - Displayed ± is half-range, not confidence interval. Independent evaluator but one study; no external replication
+    found.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original evaluator task page and methodology inspected; one source/task identity consolidated across
+      effort tiers.
+- id: judgment-21c1f66c73e4b3b1
+  scope: direct
+  task_ids:
+  - coding.frontend
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Original exact-model source inspected against this task rubric; no transfer to neighboring tasks.
+  judgment: Produces useful initial interfaces, with interaction, responsiveness and product-logic corrections
+    still needed.
+  confidence: low
+  supporting_evidence_ids:
+  - src-646a48b2dcda
+  contradictory_evidence_ids: []
+  conditions:
+  - 'Three briefs: finance dashboard, reference-guided portfolio and video-editor prototype; one focused feedback
+    round.'
+  - Author reports functioning dashboard tooltips; website task used Mobbin and 21st.dev MCP references.
+  known_failure_modes:
+  - Responsive and interaction decisions needed correction; the editor was a shell rather than a verified full
+    editing product.
+  evidence_notes:
+  - Named practitioner, small subjective sample and affiliate disclosure. Exact serving configuration and systematic
+    acceptance tests are absent.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspection on 2026-10-08; source-specific task, setup and limitations retained.
+- id: judgment-226284e4e8c7d97e
+  scope: direct
+  task_ids:
+  - context.reasoning
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact assigned rubric task; conclusion applies only to the documented evaluation or reported
+    behavior.
+  judgment: Useful cross-document reasoning at tested lengths, with explicit checking of derived conclusions.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-bc2410652a3c
+  - src-1ea3e75f96c3
+  - src-a13e90c351de
+  contradictory_evidence_ids:
+  - src-bc2410652a3c
+  - src-762b457920fe
+  conditions:
+  - AA-LCR v1.1:~10K–100K supplied text, 100 questions × 3, no tools, GPT-5.6 Luna (medium) equality checker.
+  - Fable 5.1 max/default-fallback service; task-specific fallback share and measurement date unknown.
+  known_failure_modes:
+  - Some questions fail; separate professional-document all-pass performance is substantially lower.
+  evidence_notes:
+  - AA-LCR 85% cannot be extrapolated to 1M context. GDP.pdf 26% all-pass has different criteria and document
+    input.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspected on 2026-10-08; task-rubric 1.1 applied without transferring neighboring-task
+      scores.
+- id: judgment-2baa77d0e49174ac
+  scope: direct
+  task_ids:
+  - context.reasoning
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact assigned rubric task; conclusion applies only to the documented evaluation or reported
+    behavior.
+  judgment: Can aggregate facts across supplied enterprise documents in the tested 128K setup; verify important
+    conclusions.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-da0a1b7f074e
+  - src-61425dc99484
+  contradictory_evidence_ids: []
+  conditions:
+  - Anthropic API thinking mode, measured2026-09-02; RIKER 128K, no retrieval tools, generated-ground-truth
+    grading.
+  - Exact effort, per-component task denominator, repetitions, provider checkpoint and precision undisclosed.
+  known_failure_modes:
+  - Aggregation not perfect; generated corpora limit real-document generalization.
+  evidence_notes:
+  - Aggregation 95.3 is distinct from RIKER retrieval 97.3 and the agentic workflow total.
+  observed_at: '2026-10-08'
+  effective_from: '2026-09-02'
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspected on 2026-10-08; task-rubric 1.1 applied without transferring neighboring-task
+      scores.
+- id: judgment-386854e040d319d5
+  scope: direct
+  task_ids:
+  - language.writing
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact assigned rubric task; conclusion applies only to the documented evaluation or reported
+    behavior.
+  judgment: Useful English creative-writing drafts; edit for audience, readability and preferred style.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-d6a1516325c4
+  - src-d8d48de1253a
+  - src-ed7dde47f5c6
+  - src-c37c7c421a60
+  contradictory_evidence_ids:
+  - src-557f96ccb327
+  conditions:
+  - Exact claude-fable-5-1 rows in evaluator site data; effort, underlying provider and measurement date undisclosed.
+  - Creative Writing v3:32 prompts × 3; longform:eight chapters; LLM judgments, not human acceptance.
+  known_failure_modes:
+  - Judge style preferences may differ from readers; vendor reports dense prose.
+  evidence_notes:
+  - Longform 85.3/100 and v3 Elo 2152.7/rubric 16.95 are separate, subjective metrics from one evaluator group.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspected on 2026-10-08; task-rubric 1.1 applied without transferring neighboring-task
+      scores.
+- id: judgment-5716da0bdaa18296
+  scope: direct
+  task_ids:
+  - reasoning.math
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact assigned rubric task; conclusion applies only to the documented evaluation or reported
+    behavior.
+  judgment: Strong mathematical answer-solving candidate; check derivations and final answers before relying
+    on them.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-47ab448cf23c
+  - src-7ae2dea476f9
+  - src-746dd121a2db
+  contradictory_evidence_ids: []
+  conditions:
+  - Epoch mathematical evaluations; FrontierMath permits Python and1M combined-token budget; OTIS scores integer
+    answers.
+  - Rendered model rows do not disclose Fable effort, provider, checkpoint, repeat counts, actual denominator
+    or measurement date.
+  known_failure_modes:
+  - Advanced problems still receive incorrect answers; proof validity is not separately evaluated.
+  evidence_notes:
+  - Rounded original scorecard:90% FrontierMath1–3, 88% Tier 4, 100% OTIS. Final-answer scores do not certify
+    proofs.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspected on 2026-10-08; task-rubric 1.1 applied without transferring neighboring-task
+      scores.
+- id: judgment-689bb2ecd898d750
+  scope: direct
+  task_ids:
+  - coding.scoped_edit
+  related_task_ids: []
+  assessment: warning
+  scope_note: Original exact-model source inspected against this task rubric; no transfer to neighboring tasks.
+  judgment: 'Constrain the edit boundary: the vendor reports unrequested additions and larger edits than necessary.'
+  confidence: low
+  supporting_evidence_ids:
+  - src-557f96ccb327
+  contradictory_evidence_ids: []
+  conditions:
+  - Open-ended feature requests; official guidance says nearby fixes or extra tests may be added.
+  - Whole-file rewriting can increase output tokens and time even when the resulting file is equivalent.
+  known_failure_modes:
+  - Scope expansion and edit overhead require review; overhead alone is not correctness failure.
+  evidence_notes:
+  - Prompting advice does not establish measured recovery or a bounded edit success rate.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspection on 2026-10-08; source-specific task, setup and limitations retained.
+- id: judgment-7072f78efd6409e3
+  scope: direct
+  task_ids:
+  - agent.long_horizon
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Original exact-model source inspected against this task rubric; no transfer to neighboring tasks.
+  judgment: Completes a useful subset of dependent terminal workflows with a minimal agent loop, with many
+    tasks still requiring intervention.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-bc2410652a3c
+  - src-1ea3e75f96c3
+  contradictory_evidence_ids: []
+  conditions:
+  - 'Fable 5.1 Max, Default Fallback: 52% Terminal-Bench 4.0 pass@1 averaged across three repeats of 66 tasks.'
+  - mini-swe-agent; bash; 500 steps; no compaction; task success requires all verifier tests.
+  known_failure_modes:
+  - Nearly half of the rounded aggregate does not pass all task tests; a mixed terminal total does not isolate
+    a coding skill.
+  evidence_notes:
+  - Independent evaluation configuration differs from the vendor launch harness. Fallback, missing checkpoint
+    and run dates constrain transfer.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspection on 2026-10-08; source-specific task, setup and limitations retained.
+- id: judgment-792deb882f31613b
+  scope: direct
+  task_ids:
+  - agent.computer_use
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Original exact-model source inspected against this task rubric; no transfer to neighboring tasks.
+  judgment: Vendor evidence supports assisted desktop workflows, with checkpoints and human recovery required
+    for incomplete tasks.
+  confidence: low
+  supporting_evidence_ids:
+  - src-e7232d52f37f
+  contradictory_evidence_ids: []
+  conditions:
+  - 'OSWorld 2.0 August 2026 task release: 77.9% partial credit and 41.7% strict completion; production safeguards
+    enabled and refused tasks scored zero.'
+  known_failure_modes:
+  - Most tasks did not reach strict completion; partial progress must not be presented as a saved or completed
+    outcome.
+  evidence_notes:
+  - Vendor-only task evidence. Original system card body could not be fetched; effort, client, step limit,
+    trials and task denominator remain unverified.
+  - No independent exact-model OSWorld reproduction located in the allotted searches.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspection on 2026-10-08; source-specific task, setup and limitations retained.
+- id: judgment-86bb987e0b07f068
+  scope: direct
+  task_ids:
+  - knowledge.extraction
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact assigned rubric task; conclusion applies only to the documented evaluation or reported
+    behavior.
+  judgment: Useful for specified fields in images, with value verification and output-format checks.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-e8dd758dd28d
+  - src-5a898812893e
+  contradictory_evidence_ids: []
+  conditions:
+  - Roboflow low/high benchmark tiers; three runs each; native API effort mapping, sample denominator and run
+    dates unknown.
+  - Gemini 3.5 Flash temperature0 judge plus normalized exact-match companion.
+  known_failure_modes:
+  - Incorrect values remain; strict output matching trails semantic correctness.
+  evidence_notes:
+  - Low 93.1% judged/89.7% strict; high 93.5%/92.1%. Reported±values are half-ranges, not confidence intervals.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspected on 2026-10-08; task-rubric 1.1 applied without transferring neighboring-task
+      scores.
+- id: judgment-aa593e899e272552
+  scope: direct
+  task_ids:
+  - language.translation
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact assigned rubric task; conclusion applies only to the documented evaluation or reported
+    behavior.
+  judgment: Useful ancient-text translation drafts; require scholarly fidelity review and English style revision.
+  confidence: low
+  supporting_evidence_ids:
+  - src-e3d69f4d01f5
+  contradictory_evidence_ids: []
+  conditions:
+  - Ancient Greek/Classical Chinese into English; ten passages, one cold draft per passage; Opus 5 blind/adversarial
+    judging.
+  - Provider, API effort, immutable snapshot, token budget and precision were not disclosed.
+  known_failure_modes:
+  - Minor translation errors and excessively literal English persisted.
+  evidence_notes:
+  - 24/30 preferences are judge votes, not30 independent translations. Historical controls and prompts were
+    unmatched.
+  observed_at: '2026-10-08'
+  effective_from: '2026-09-01'
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspected on 2026-10-08; task-rubric 1.1 applied without transferring neighboring-task
+      scores.
+- id: judgment-aabef5a9b68bec41
+  scope: direct
+  task_ids:
+  - vision.grounding
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exact task in one evaluator workflow.
+  judgment: Useful for reviewed zero-shot bounding boxes; localization errors require material correction.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-aac5808af0ec
+  - src-12127a4ce5a0
+  - src-5a898812893e
+  contradictory_evidence_ids: []
+  conditions:
+  - Roboflow low/high benchmark tiers, three repeated runs per tier; exact native effort mapping unspecified.
+  - Provider endpoint, snapshot, precision, context length, sample denominator and measurement dates undisclosed.
+  known_failure_modes:
+  - Stricter box-overlap scores are substantially lower; do not treat mAP as complete-task success.
+  evidence_notes:
+  - mAP@50 low61.4/high65.0; mAP@75 low40.2/high40.4; mAP@50:95 low38.0/high39.6.
+  - Displayed ± is half-range, not confidence interval. Independent evaluator but one study; no external replication
+    found.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original evaluator task page and methodology inspected; one source/task identity consolidated across
+      effort tiers.
+- id: judgment-aae2313e7b9446b7
+  scope: direct
+  task_ids:
+  - agent.tool_use
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Original exact-model source inspected against this task rubric; no transfer to neighboring tasks.
+  judgment: Can complete many multi-tool workflows in MCP Atlas, but validate final claims and consequential
+    tool effects.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-19f038745d53
+  - src-38bd374632c5
+  contradictory_evidence_ids: []
+  conditions:
+  - Fable 5.1 default configuration; 87.20% pass rate, displayed ±2.05; public 500-task subset; 100 tool-call
+    cap.
+  - A pass requires at least 75% claim coverage, not every objective.
+  known_failure_modes:
+  - Failures remain, and a passing task may still omit part of its answer.
+  evidence_notes:
+  - Exact effort, trial count, serving checkpoint and run date undisclosed.
+  - 'Judge identity unresolved: leaderboard says Gemini 2.5 Pro, linked current code says Gemini 3.1 Pro Preview.
+    These are one study, not corroborating streams.'
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspection on 2026-10-08; source-specific task, setup and limitations retained.
+- id: judgment-b9dc2f9ad518ea55
+  scope: direct
+  task_ids:
+  - coding.frontend
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Original exact-model source inspected against this task rubric; no transfer to neighboring tasks.
+  judgment: A reported Battlesnake prototype demonstrates useful working interface generation, but does not
+    establish production acceptance.
+  confidence: low
+  supporting_evidence_ids:
+  - src-2f822bc8e7fe
+  contradictory_evidence_ids: []
+  conditions:
+  - CodeRabbit changed an existing Snake app into a five-agent spectator arena with a shared browser/CLI engine;
+    its recorded match reached turn 793.
+  known_failure_modes:
+  - One showcased coding case is not a measured general frontend success rate.
+  evidence_notes:
+  - Separate from the 45-task code-review study. Effort, endpoint, attempts, executable artifact and accessibility
+    checks were not disclosed.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspection on 2026-10-08; source-specific task, setup and limitations retained.
+- id: judgment-c62c550542276e11
+  scope: unresolved
+  task_ids: []
+  related_task_ids:
+  - coding.debugging
+  - coding.scoped_edit
+  assessment: conditional
+  scope_note: Repair-only pilot does not disclose whether diagnosis or implementing a supplied correction is
+    the measured work.
+  judgment: A small saturated pilot corroborates basic repair execution, without isolating diagnosis from implementing
+    a supplied correction.
+  confidence: low
+  supporting_evidence_ids:
+  - src-197c483f8b0e
+  contradictory_evidence_ids: []
+  conditions:
+  - 'September 1 pilot: Fable 5.1 low, Vercel AI Gateway pinned to Anthropic; all six JavaScript repair cases
+    passed hidden tests.'
+  known_failure_modes:
+  - Six small tasks cannot establish broad repository or debugging reliability.
+  evidence_notes:
+  - The overall 30/30 includes 20 streaming checks and four research cases; it is never used as a coding success
+    denominator.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspection on 2026-10-08; source-specific task, setup and limitations retained.
+- id: judgment-e3faa2efb33104c6
+  scope: direct
+  task_ids:
+  - coding.tests
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Original exact-model source inspected against this task rubric; no transfer to neighboring tasks.
+  judgment: Useful for drafting behavior-focused repository tests, with material correction and mutation checking
+    still required.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-6d6d4946296a
+  contradictory_evidence_ids: []
+  conditions:
+  - 'Fable-5.1 (Claude Code) xHigh*: 67.04% mean resolve rate, displayed ±5.33; 90 tasks and 3 trials.'
+  - Tests must pass before mutation, fail after the relevant code mutation, and meet mandatory coverage rubrics.
+  known_failure_modes:
+  - A substantial fraction of tasks still failed the combined acceptance checks; pooled error taxonomy is not
+    a Fable-specific rate.
+  evidence_notes:
+  - Independent task-specific evaluation; exact checkpoint, client build and measurement dates remain unknown.
+  - Star footnote explicitly names Fable 5; no Fable 5.1-specific refusal frequency is inferred.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspection on 2026-10-08; source-specific task, setup and limitations retained.
+- id: judgment-ee5501be80efeccf
+  scope: direct
+  task_ids:
+  - agent.tool_use
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Original exact-model source inspected against this task rubric; no transfer to neighboring tasks.
+  judgment: Useful partial SaaS workflow execution under structured API tools; do not treat partial objectives
+    as complete business workflows.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-bc2410652a3c
+  - src-1ea3e75f96c3
+  contradictory_evidence_ids: []
+  conditions:
+  - 'Fable 5.1 Max, Default Fallback: 59% AutomationBench-AA headline score.'
+  - 657 tasks, dataset 1.0.6, one run per task, 50-turn cap; final-state assertions; any guardrail violation
+    zeros the task.
+  known_failure_modes:
+  - Unmet objectives and policy failures can remain; headline is average objective share rather than full completion.
+  evidence_notes:
+  - Fallback affects provenance; exact model-only result and run dates unavailable.
+  - Separate API workflow evidence supports tool use, not graphical computer use.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-research-2026-10-08
+    method: Original public body inspection on 2026-10-08; source-specific task, setup and limitations retained.
 performance_characteristics:
 - id: judgment-b82fd561ee151f9f
   scope: performance

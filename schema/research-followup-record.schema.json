@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Public research follow-up",
+  "type": "object",
+  "$defs": {
+    "text": {"type": "string", "pattern": "\\S"},
+    "ids": {"type": "array", "items": {"$ref": "#/$defs/text"}, "uniqueItems": true},
+    "date": {"type": "string", "format": "date"},
+    "field": {
+      "type": "object",
+      "properties": {
+        "entity_type": {"enum": ["model", "provider", "access", "price", "benchmark", "behavior", "release", "task_assessment", "source"]},
+        "entity_id": {"$ref": "#/$defs/text"},
+        "path": {"type": "string", "pattern": "^(?:/(?:[^~/]|~[01])*)*$"}
+      },
+      "required": ["entity_type", "entity_id", "path"],
+      "additionalProperties": false
+    },
+    "resolution": {
+      "type": "object",
+      "properties": {
+        "method": {"enum": ["source_inspection", "public_record_reconciliation"]},
+        "checked_at": {"$ref": "#/$defs/date"},
+        "evidence_ids": {"$ref": "#/$defs/ids", "minItems": 1},
+        "rationale": {"$ref": "#/$defs/text"}
+      },
+      "required": ["method", "checked_at", "evidence_ids", "rationale"],
+      "additionalProperties": false
+    }
+  },
+  "properties": {
+    "id": {"type": "string", "pattern": "^research-followup-[a-f0-9]{16}$"},
+    "issue_key": {"type": "string", "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"},
+    "category": {"enum": ["missing_setup", "conflicting_evidence", "unresolved_claim", "source_access_gap", "identity_ambiguity"]},
+    "model_ids": {"$ref": "#/$defs/ids"},
+    "provider_ids": {"$ref": "#/$defs/ids"},
+    "task_ids": {"$ref": "#/$defs/ids"},
+    "fields": {"type": "array", "items": {"$ref": "#/$defs/field"}, "uniqueItems": true},
+    "opened_at": {"$ref": "#/$defs/date"},
+    "updated_at": {"$ref": "#/$defs/date"},
+    "source_checked_at": {"anyOf": [{"$ref": "#/$defs/date"}, {"type": "null"}]},
+    "evidence_ids": {"$ref": "#/$defs/ids"},
+    "urls": {"type": "array", "items": {"type": "string", "format": "uri"}, "uniqueItems": true},
+    "reason": {"$ref": "#/$defs/text"},
+    "requested_action": {"$ref": "#/$defs/text"},
+    "dependencies": {"$ref": "#/$defs/ids"},
+    "priority": {"enum": ["high", "normal", "low"]},
+    "status": {"enum": ["open", "resolved"]},
+    "resolutions": {"type": "array", "items": {"$ref": "#/$defs/resolution"}, "uniqueItems": true}
+  },
+  "required": ["id", "issue_key", "category", "model_ids", "provider_ids", "task_ids", "fields", "opened_at", "updated_at", "source_checked_at", "evidence_ids", "urls", "reason", "requested_action", "dependencies", "priority", "status", "resolutions"],
+  "additionalProperties": false,
+  "allOf": [
+    {"if": {"properties": {"status": {"const": "resolved"}}}, "then": {"properties": {"resolutions": {"minItems": 1}}}},
+    {"if": {"properties": {"source_checked_at": {"type": "string"}}}, "then": {"properties": {"evidence_ids": {"minItems": 1}}}}
+  ]
+}

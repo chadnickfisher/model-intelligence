@@ -93,7 +93,7 @@ Supporting sources: [Code Arena WebDev Frontend](https://arena.ai/leaderboard/co
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.; Oct 8 row is 1857 +/-19 with 1,687 votes; this small movement does not change the retained preference conclusion. Executable LWC evidence is recorded in a separate finding.
 
 ### Coding.review (low confidence)
 
@@ -140,15 +140,15 @@ Provider routes and subscriptions are separate. Read billing units, thresholds, 
 
 ## Licensing and local use
 
-License: Not established / proprietary terms must be checked
+License: Anthropic Commercial Terms of Service for hosted commercial API use; consumer and partner terms vary.
 
-Restrictions: Not established in this pass
+Restrictions: Comply with usage, service-specific and supported-region policies.; Reverse engineering or duplicating the service and using it to build a competing product or train competing models are restricted; service resale requires express approval.; Output ownership and commercial API permission do not grant a model-weight redistribution or fine-tuning license.
 
-Commercial use: Unknown / not established
+Commercial use: Permitted through the commercial hosted service, including customer applications, subject to applicable terms and policies.
 
 Redistribution: Unknown / not established
 
-Hosted service: Unknown / not established
+Hosted service: Anthropic supplies the hosted service; customer applications are permitted. Reselling the service requires express approval.
 
 Local weights/runtime availability: unavailable
 
@@ -183,8 +183,8 @@ Local conditions: Not established in this pass
 - aws-bedrock / Amazon Bedrock: Listed by creator; independent provider pricing and regional entitlement not verified. Not established in this pass
 - azure-foundry / Microsoft Foundry / Azure: Listed by creator; independent provider pricing and regional entitlement not verified. Not established in this pass
 - google-cloud / Google Cloud: Listed by creator; independent provider pricing and regional entitlement not verified. Not established in this pass
-- anthropic / Claude Code terminal: All paid Claude plans include Code; API-credit billing is a separate option. quota: Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified
-- anthropic / Claude Code IDE integrations: documented route; account eligibility unverified. Not established in this pass
+- anthropic / Claude Code terminal: All paid Claude plans include Code; API-credit billing is a separate option. Model selection remains subject to organization and plan controls. Supported IDEs include VS Code/Cursor and JetBrains; plan-authenticated IDE and terminal activity share the plan pool.; Interactive Claude Code cannot spend monthly subscriber API credits. Self-run API-key claude -p/Agent SDK eligibility is a separate programmatic condition.
+- anthropic / Claude Code IDE integrations: documented route; account eligibility unverified. Model selection remains subject to organization and plan controls. Supported IDEs include VS Code/Cursor and JetBrains; plan-authenticated IDE and terminal activity share the plan pool.; Interactive Claude Code cannot spend monthly subscriber API credits. Self-run API-key claude -p/Agent SDK eligibility is a separate programmatic condition.
 - anthropic / Claude apps: Opus family on paid plans. quota: Same shared usage pool; model weighting/actual remainder account-specific
 
 ## Sources

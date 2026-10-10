@@ -32,6 +32,7 @@ def canonical(root=ROOT):
         result[('alias', record['id'])] = ('data/aliases.yaml', record)
     # Optional for older retained fixtures/snapshots; present in the current repository.
     for kind, name in [('research_run', 'data/research-runs.yaml'),
+                       ('research_followup', 'data/research-followups.yaml'),
                        ('maintenance_contract', 'data/maintenance-contract.yaml'),
                        ('maintenance_pass', 'data/maintenance-passes.yaml')]:
         if (root / name).exists():

@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "research-scoped-batch.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "package_type": {
+      "const": "research-scoped-batch"
+    },
+    "assignment_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]+$"
+    },
+    "baseline_commit": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "scope_run": {
+      "$ref": "research-scope-run.schema.json"
+    },
+    "changes": {
+      "type": "array",
+      "items": {
+        "$ref": "research-batch.schema.json#/$defs/change"
+      }
+    },
+    "discoveries": {
+      "type": "array",
+      "items": {
+        "$ref": "research-batch.schema.json#/$defs/discovery"
+      }
+    },
+    "resolutions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "candidate_id": {
+            "type": "string"
+          },
+          "result": {
+            "enum": [
+              "not_checked",
+              "resolved",
+              "ambiguous",
+              "blocked"
+            ]
+          },
+          "identity": {
+            "anyOf": [
+              {
+                "$ref": "discovery-identity.schema.json"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "checked_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "search_references": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "query": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "checked_at": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "outcome": {
+                  "enum": [
+                    "sources_located",
+                    "no_matched_sources",
+                    "blocked"
+                  ]
+                },
+                "urls": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "notes": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "query",
+                "checked_at",
+                "outcome",
+                "urls",
+                "notes"
+              ]
+            }
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "remaining_gaps": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "blocked_reason": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "candidate_id",
+          "result",
+          "identity",
+          "checked_at",
+          "evidence_ids",
+          "search_references",
+          "rationale",
+          "remaining_gaps",
+          "blocked_reason"
+        ]
+      }
+    },
+    "source_groups": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "package_type",
+    "assignment_id",
+    "baseline_commit",
+    "created_at",
+    "scope_run",
+    "changes",
+    "discoveries",
+    "resolutions",
+    "source_groups"
+  ]
+}

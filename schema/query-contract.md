@@ -117,3 +117,19 @@ source absence is unknown. Accounting validation does not certify research quali
 Both record types retain evidence and dates; previous versions are retained by Git.
 
 Current task applicability and assessment conclusions are in data/task-assessments.yaml. Return their actual dates, rationale, direct judgment references and gaps. Missing assessment records remain unknown; local research/checklist files are outside the query layer.
+
+Public unresolved research is recorded in [research follow-ups](../data/research-followups.yaml).
+The shared `tools.research_followups.select_followups` helper intersects exact
+model, provider, task, field owner/path, category, status and priority filters.
+Open is the default status; an explicit null status also returns resolved records
+with retained resolution evidence. The future MCP `list_research_followups` query
+must use these semantics and return scope, issue, requested action, dependencies,
+actual source-inspection dates (including null), supporting public references and
+resolution history. An empty queue does not imply research completeness. Missing
+setup, failed access and unresolved claims do not establish model inability.
+
+Stable follow-up IDs identify a public issue within an exact scope. Recurrence
+updates that issue rather than generating daily duplicates. Resolution requires
+dated source evidence and reasoning; evidence validation checks provenance but
+does not certify semantic adequacy. Private assignments, delivery identifiers,
+processing failures and operational logs remain outside this registry and queries.

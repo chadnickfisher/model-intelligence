@@ -19,6 +19,7 @@ canonical:
   research_contract: data/research-contract.yaml
   maintenance_contract: data/maintenance-contract.yaml
   task_assessments: data/task-assessments.yaml
+  research_followups: data/research-followups.yaml
 indexes:
   models: data/models.yaml
   providers: data/providers.yaml
@@ -39,3 +40,4 @@ query_start:
   new_releases: data/releases.yaml
   benchmark_comparison: data/benchmarks.yaml
   research_accounting: data/research-coverage.yaml
+  unresolved_research: data/research-followups.yaml

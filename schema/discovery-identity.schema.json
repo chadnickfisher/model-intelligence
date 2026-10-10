@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "discovery-identity.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "entity_type": {
+      "enum": [
+        "model",
+        "provider",
+        "product"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "creator": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "creator_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "checkpoint": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "identity_mode": {
+      "enum": [
+        "immutable",
+        "rolling",
+        "service",
+        "unknown"
+      ]
+    },
+    "provider_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "product": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "official_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "existing_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "entity_type",
+    "name",
+    "creator",
+    "creator_id",
+    "checkpoint",
+    "identity_mode",
+    "provider_id",
+    "product",
+    "official_url",
+    "existing_id"
+  ]
+}

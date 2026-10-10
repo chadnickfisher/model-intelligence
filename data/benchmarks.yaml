@@ -276,6 +276,8 @@ records:
   - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
     checkpoint hashes.
   - exact_named_release_effort_retained
+  - Anonymous community pairwise judgments; Bradley-Terry aggregation. Vote count is not unique tasks or replicated
+    trials.
   limitations:
   - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
     rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
@@ -286,6 +288,8 @@ records:
   evidence_notes:
   - '{"model_id": "claude-opus-5-5", "preliminary": false, "rank_spread": "1–1", "reported_model": "claude-opus-5.5-max",
     "score": 1859, "score_interval_plus_minus": 19}'
+  - 'Fresh October 8 snapshot: claude-opus-5.5-max, 1857 +/-19, rank spread 1-1, 1,687 votes. Historical 1859
+    observed October 7 is retained, not freshly reproduced; movement is immaterial within the interval.'
 - schema_version: '1.0'
   id: benchmark-baf6e2f186535f58
   model_id: gpt-6-astra
@@ -537,14 +541,14 @@ records:
     metric: preference rating
     unit: Arena rating
     direction: higher
-  value: 1656
+  value: 1658
   model_version: grok-4.7-xhigh
   harness: null
-  effort: null
+  effort: xhigh (public Arena model label)
   provider_id: null
   tools: null
   measured_at: null
-  observed_at: '2026-10-07'
+  observed_at: '2026-10-08'
   evidence_class: preference
   source_ids:
   - src-4e6f4ff35504
@@ -563,9 +567,13 @@ records:
   - Preference evidence; user/task mix and harness effects require consideration.
   - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
     comparability.
+  - Exact vote-collection window, repeated prompt count, tool manifest and provider endpoint are undisclosed;
+    model-label effort is not a serving receipt.
   evidence_notes:
   - '{"model_id": "xai-grok-4-7", "preliminary": false, "rank_spread": "11–22", "reported_model": "grok-4.7-xhigh",
     "score": 1656, "score_interval_plus_minus": 12}'
+  - 'October 8 displayed snapshot: grok-4.7-xhigh, rating 1658, interval ±12, 3082 votes, rank spread 11–21,
+    not labeled Preliminary. The earlier1656 record above is preserved historical evidence, not freshly reverified.'
 - schema_version: '1.0'
   id: benchmark-cf0a52d31d015ff5
   model_id: qwen3-8-flash-next
@@ -1019,12 +1027,12 @@ records:
     direction: higher
   value: 1326
   model_version: claude-haiku-4-5-20251001
-  harness: null
+  harness: Hosted Arena Frontend; anonymous paired community votes aggregated with Bradley–Terry
   effort: null
   provider_id: null
   tools: null
   measured_at: null
-  observed_at: '2026-10-07'
+  observed_at: '2026-10-08'
   evidence_class: preference
   source_ids:
   - src-4e6f4ff35504
@@ -1046,6 +1054,8 @@ records:
   evidence_notes:
   - '{"model_id": "claude-haiku-4-5", "preliminary": false, "rank_spread": "113–119", "reported_model": "claude-haiku-4-5-20251001",
     "score": 1326, "score_interval_plus_minus": 5}'
+  - '2026-10-08 current row: rating 1326±5 unchanged; rank 118, rank interval 114–120, 26, 744 votes. Prior
+    note preserves the earlier snapshot.'
 - schema_version: '1.0'
   id: benchmark-238395f1e7c9ff1d
   model_id: mistral-medium-3-5
@@ -1304,34 +1314,53 @@ records:
     name: Bug Hunt Bench
     version: 1217192a6d04e89da3f6106ca3a304d2734882eb
     metric: planted defects fixed
-    unit: mean planted defects fixed out of 105
+    unit: planted defects fixed out of 105 (one run)
     direction: higher
   value: 43
-  model_version: Fable 5.1 (max effort)
-  harness: null
+  model_version: claude-fable-5-1
+  harness: Claude Code (exact build undisclosed)
   effort: max
   provider_id: null
-  tools: null
+  tools:
+  - repository reading/editing and shell checks
   measured_at: '2026-09-01'
-  observed_at: '2026-10-07'
+  observed_at: '2026-10-08'
   evidence_class: independent_quality
   source_ids:
   - src-ad78a04807f9
   - src-02b09208ceab
   - src-0b72694a5dea
+  - src-e86e19b3dd2c
+  - src-e9c984ecc940
+  - src-96cec7bbd029
   conditions:
-  - Single configuration run; no robust ranking implied.
-  - 'Harness: Claude Code; effort: max; effort evidence: first_party.'
-  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
-  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
-    and budgets.
-  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
-    external reproduction.
+  - One round per repository on 2026-09-01; one configuration run, not repeated trials.
+  - Approximately 28K-line TypeScript extension and 60K-line React/TypeScript Supabase LMS; 76 reverted real
+    fixes plus 29 authored defects.
+  - Native Claude Code; max is a documented first-party tier requested explicitly, not separately probed as
+    binding.
+  - No network or git history; preserve passing checks; diagnose symptoms and root causes and edit source in
+    place.
+  - Blind non-sibling judge compares diffs with withheld answer key; partials, claimed-only and extras do not
+    increase strict score.
+  - Metrics identify model=claude-fable-5-1 and a [1m] window request; precise CLI version and exact provider
+    endpoint are not established in these inspected max-row receipts.
   limitations:
-  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  - Single unreplicated max run across two related-language repositories; unknown run-to-run variance.
+  - Model-plus-harness outcome, not isolated base-model capability.
+  - Private seeded artifacts prevent full external reproduction; repo 1 itself derives from public code.
+  - Zero recorded false-positive fixes does not establish absence of regressions or security defects.
+  - Other effort rows are separate single configurations, not replication of max.
+  - Effort, context behavior and judge are material; no ranking or completeness claim is justified.
+  - sample_size counts seeded defects, not independent repository-level trials; n_runs=1.
+  - Exact provider endpoint, CLI build, temperature and numeric precision are unknown.
+  - Blind model-judged diff outcomes; withheld answer keys and patches.
   evidence_notes:
-  - '{"fixed_of_105": 43, "individual_scores": null, "measured_at": "2026-09-01", "n_runs": 1, "repo1_fixed_of45":
-    19, "repo2_fixed_of60": 24, "row_id": "Fable 5.1 (max effort)"}'
+  - 'One configuration run; 43/105 strict repairs: 19/45 and 24/60. Two partial fixes, four claimed-only and
+    eleven extras excluded.'
+  - Requested effort is documented first-party max, not independently probed as binding.
+  - Per-repository metric receipts identify claude-fable-5-1 and requested [1m] context; exact endpoint/build
+    unknown.
 - schema_version: '1.0'
   id: benchmark-f80fe80eb23c9afa
   model_id: claude-opus-5-5
@@ -2150,35 +2179,30 @@ records:
   harness: Claude Code
   effort: xHigh
   provider_id: null
-  tools: null
+  tools:
+  - repository shell
+  - build and test tools
   measured_at: null
-  observed_at: '2026-10-07'
+  observed_at: '2026-10-08'
   evidence_class: independent_quality
   source_ids:
   - src-b6ffa931564a
-  - src-c7eceee3e7d1
   conditions:
-  - 70 tasks, 10 production repositories, 6 languages; Harbor/Modal sandboxes. Resolve requires unchanged tests,
-    zero regressions, and every mandatory Opus 4.5-judged rubric.
-  - Always-on adaptive thinking; effort-controlled operation.
+  - 'Published dataset: 70 tasks from 10 production repositories in six languages.'
+  - Task resolution requires unchanged test files, no relevant baseline-test regressions or failing added interface
+    tests, and all mandatory rubric criteria.
+  - Rubric judge is Claude Opus 4.5, not the evaluated model; documentation criteria are optional.
+  - Study uses Harbor with Modal sandboxing and repository shell/build/test access.
   limitations:
-  - Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve xHigh as board label.
-    Intro's below 50% statement is stale. Gemini 3.1 Pro 33.81Â±6.64 is withheld pending preview-ID mapping.
-  - Incomplete extraction, unwired callers, stale implementations/artifacts; failure taxonomy is pooled, not
-    per-model.
-  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  - Fable-specific sample count, repetitions, dates, API/provider ID, token budget, client version and exact
+    effort implementation are unreported.
+  - Pooled failure categories cannot be assigned to Fable individually.
+  - Model-agent score does not isolate base-model ability or prove unattended production reliability.
   evidence_notes:
-  - '{"conditions": "70 tasks, 10 production repositories, 6 languages; Harbor/Modal sandboxes. Resolve requires
-    unchanged tests, zero regressions, and every mandatory Opus 4.5-judged rubric.", "failures": "Incomplete
-    extraction, unwired callers, stale implementations/artifacts; failure taxonomy is pooled, not per-model.",
-    "id": "E07", "identity": "Exact live-board display names; immutable snapshots and current full run settings
-    unavailable.", "limits": "Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve
-    xHigh as board label. Intro''s below 50% statement is stale. Gemini 3.1 Pro 33.81Â±6.64 is withheld pending
-    preview-ID mapping.", "results": [{"display_name": "GPT 6 Astra (Codex) xHigh", "displayed_uncertainty":
-    6.43, "model_id": "gpt-6-astra", "resolve_percent": 59.05}, {"display_name": "Fable-5.1 (Claude Code) xHigh",
-    "displayed_uncertainty": 6.52, "model_id": "claude-fable-5-1", "resolve_percent": 56.67}, {"display_name":
-    "Gemini 3.8 Flash (Mini-SWE-Agent)", "displayed_uncertainty": 6.76, "model_id": "gemini-3-8-flash", "resolve_percent":
-    44.76}], "source_ids": ["S07"], "task": "coding.refactoring"}'
+  - Displayed uncertainty is 6.52; its Fable-specific definition, trial count and run date are unconfirmed.
+  - Benchmark dataset contains 70 tasks; do not treat that inventory as the confirmed scored Fable sample.
+  - Leaderboard label is xHigh; exact implementation and provider endpoint unknown.
+  - Introductory below-50-percent prose is stale relative to the current table.
 - schema_version: '1.0'
   id: benchmark-aced647406d4639e
   model_id: gemini-3-8-flash
@@ -3775,11 +3799,15 @@ records:
   - src-9be7b13428d4
   conditions:
   - Requested temperature 0 and max_tokens 4000; one attempt per task; API errors alone retried.
+  - Zero reasoning tokens were reported on all nine tasks; this is observed output metadata, not an inferred
+    effort setting.
   limitations:
   - Nine tasks, with 18 of 21 models saturated; no variance or contamination analysis.
   - Hosted backend and exact decoding support unverified.
   evidence_notes:
   - Original public measurement; observed date is not a measurement date.
+  - One scored response per function, no model retries for wrong answers; tests execute generated implementations
+    and do not measure test generation.
 - schema_version: '1.0'
   id: benchmark-91c0fd3fc867b0c8
   model_id: cohere-embed-5-fast
@@ -3888,7 +3916,7 @@ records:
   effort: null
   provider_id: null
   tools: null
-  measured_at: null
+  measured_at: '2026-05-10'
   observed_at: '2026-10-07'
   evidence_class: independent_quality
   source_ids:
@@ -3896,11 +3924,15 @@ records:
   - src-61e1f4d1aadb
   conditions:
   - Category score, not general model quality; four judges include contestant-vendor models.
+  - 'Publisher-reported test date May 10, 2026; five category cases, four LLM judges: Gemini 2.5 Pro, Claude
+    Opus 4.7, GPT 5.5, Mistral Large; unweighted case/category means.'
   limitations:
   - Public prompts/responses, decoding and exact provider unknown; commercial evaluator, no replication.
-  - May 10 is the cohort/report date; exact experiment day is not independently established.
+  - Publisher test date is explicit, but raw execution timestamps and independent replication remain unavailable.
   evidence_notes:
   - Recorded original setup; observation date is not the measurement date.
+  - Original report and methodology explicitly identify the cohort test date; this is not inferred merely from
+    publication.
 - schema_version: '1.0'
   id: benchmark-d14d5e6960fa913c
   model_id: claude-haiku-4-5
@@ -3918,7 +3950,7 @@ records:
   effort: null
   provider_id: null
   tools: null
-  measured_at: null
+  measured_at: '2026-05-10'
   observed_at: '2026-10-07'
   evidence_class: independent_quality
   source_ids:
@@ -3926,11 +3958,15 @@ records:
   - src-61e1f4d1aadb
   conditions:
   - Category score, not general model quality; four judges include contestant-vendor models.
+  - 'Publisher-reported test date May 10, 2026; five category cases, four LLM judges: Gemini 2.5 Pro, Claude
+    Opus 4.7, GPT 5.5, Mistral Large; unweighted case/category means.'
   limitations:
   - Public prompts/responses, decoding and exact provider unknown; commercial evaluator, no replication.
-  - May 10 is the cohort/report date; exact experiment day is not independently established.
+  - Publisher test date is explicit, but raw execution timestamps and independent replication remain unavailable.
   evidence_notes:
   - Recorded original setup; observation date is not the measurement date.
+  - Original report and methodology explicitly identify the cohort test date; this is not inferred merely from
+    publication.
 - schema_version: '1.0'
   id: benchmark-623c7e8d247d4615
   model_id: claude-haiku-4-5
@@ -3948,7 +3984,7 @@ records:
   effort: null
   provider_id: null
   tools: null
-  measured_at: null
+  measured_at: '2026-05-10'
   observed_at: '2026-10-07'
   evidence_class: independent_quality
   source_ids:
@@ -3956,11 +3992,15 @@ records:
   - src-61e1f4d1aadb
   conditions:
   - Category score, not general model quality; four judges include contestant-vendor models.
+  - 'Publisher-reported test date May 10, 2026; five category cases, four LLM judges: Gemini 2.5 Pro, Claude
+    Opus 4.7, GPT 5.5, Mistral Large; unweighted case/category means.'
   limitations:
   - Public prompts/responses, decoding and exact provider unknown; commercial evaluator, no replication.
-  - May 10 is the cohort/report date; exact experiment day is not independently established.
+  - Publisher test date is explicit, but raw execution timestamps and independent replication remain unavailable.
   evidence_notes:
   - Recorded original setup; observation date is not the measurement date.
+  - Original report and methodology explicitly identify the cohort test date; this is not inferred merely from
+    publication.
 - schema_version: '1.0'
   id: benchmark-9fea728e3f829e8e
   model_id: claude-haiku-4-5
@@ -3988,8 +4028,12 @@ records:
   limitations:
   - AI-drafted ground truth, single-author checked; unknown serving revision and measurement date; not general
     fix success.
+  - The paper inconsistently describes some cross-method top-three rankings; the retained Haiku number is read
+    directly from Table 3, not ranking prose.
   evidence_notes:
   - Recorded original setup; observation date is not the measurement date.
+  - Table 3 Haiku-specific 0.624 is distinct from the 0.670 three-model overall. Metric combines category,
+    required-signal/file/test recall, checklist coverage and valid evidence quotes, with incorrect-claim penalties.
 - schema_version: '1.0'
   id: benchmark-48202fa54f873b0b
   model_id: claude-haiku-4-5
@@ -3997,23 +4041,29 @@ records:
   - judgment-e35ebbffc833ea6a
   benchmark:
     name: LLM review bench v1
-    version: null
+    version: v1
     metric: rubric review score
     unit: points out of 10
     direction: higher
   value: 5.5
-  model_version: Haiku 4.5; immutable revision unknown
-  harness: Six-bug fixture, one-shot tools disabled, two blind LLM judges
+  model_version: claude-haiku-4-5 requested through Claude Code CLI; served checkpoint unreported
+  harness: 'FastAPI/Datastar SSE fixture: six bugs, two traps; Claude Code CLI with --tools empty and num_turns==1;
+    trial-1 quality judged blind by Fable 5 and Grok'
   effort: null
   provider_id: null
-  tools: null
+  tools: []
   measured_at: null
   observed_at: '2026-10-07'
   evidence_class: practitioner_test
   source_ids:
   - src-5a27e3e4bac2
+  - src-7435c41604e4
+  - src-558e405b8479
+  - src-e2515f12cc88
   conditions:
   - One scored review response; cost/latency repetitions do not enlarge scored quality sample.
+  - Both judges scored 5.5/10, identifying B 1, B 2 and B 5 with no false positives; only one response was
+    quality-scored.
   limitations:
   - Tiny practitioner fixture; source adaptive-thinking explanation is inconsistent with official support.
   evidence_notes:
@@ -4059,7 +4109,7 @@ records:
     unit: percent
     direction: higher
   value: 97.9
-  model_version: Claude Haiku 4.5; immutable revision unknown
+  model_version: claude-haiku-4-5-20251001 in paper-linked API implementation; run response identity unverified
   harness: 1000 paired problems; eight-shot CoT; temperature zero
   effort: null
   provider_id: anthropic
@@ -4069,11 +4119,14 @@ records:
   evidence_class: independent_quality
   source_ids:
   - src-28f7598af662
+  - src-45a5ce926864
   conditions:
   - Anthropic API; tuned format and prefill; CoT has no Python execution.
+  - Paper-linked Claude_API.py explicitly requests max_tokens=1024 and temperature=0; checkpoint constant is
+    dated.
   limitations:
-  - Serving revision and experiment day unknown; prompt tuning, familiar corpus and two collection runs; restricted
-    grade-school numerics.
+  - Run-level served identity and experiment day unverified; prompt tuning, familiar corpus and two collection
+    runs; restricted grade-school numerics.
   evidence_notes:
   - Observed today; publication date is not the experiment date.
 - schema_version: '1.0'
@@ -4088,7 +4141,7 @@ records:
     unit: percent
     direction: higher
   value: 96.6
-  model_version: Claude Haiku 4.5; immutable revision unknown
+  model_version: claude-haiku-4-5-20251001 in paper-linked API implementation; run response identity unverified
   harness: 1000 paired problems; eight-shot CoT; temperature zero
   effort: null
   provider_id: anthropic
@@ -4098,11 +4151,14 @@ records:
   evidence_class: independent_quality
   source_ids:
   - src-28f7598af662
+  - src-45a5ce926864
   conditions:
   - Anthropic API; tuned format and prefill; CoT has no Python execution.
+  - Paper-linked Claude_API.py explicitly requests max_tokens=1024 and temperature=0; checkpoint constant is
+    dated.
   limitations:
-  - Serving revision and experiment day unknown; prompt tuning, familiar corpus and two collection runs; restricted
-    grade-school numerics.
+  - Run-level served identity and experiment day unverified; prompt tuning, familiar corpus and two collection
+    runs; restricted grade-school numerics.
   evidence_notes:
   - Observed today; publication date is not the experiment date.
 - schema_version: '1.0'
@@ -4113,27 +4169,39 @@ records:
   benchmark:
     name: OSWorld
     version: '2.1'
-    metric: accuracy
+    metric: partial checkpoint score
     unit: percent
     direction: higher
   value: 72.4
   model_version: claude-haiku-5-5
   harness: null
-  effort: null
+  effort: max
   provider_id: null
-  tools: null
+  tools:
+  - Screenshots
+  - Mouse and keyboard actions
   measured_at: null
-  observed_at: '2026-10-07'
+  observed_at: '2026-10-08'
   evidence_class: vendor_claim
   source_ids:
   - src-cdb1d51fae04
+  - src-5a6452e14543
   conditions:
-  - OSWorld is the offline subset.
+  - 'Official offline subset: 82 of 108 tasks; five independent attempts per task (410 attempts).'
+  - Ubuntu GUI; screenshots and mouse/keyboard actions; 1080 p; at most 500 action steps; max adaptive thinking;
+    no VM internet.
+  - Partial metric is mean checkpoint credit per task, averaged across attempts; it is not the strict all-checkpoints
+    pass rate.
+  - Claude Opus 4.8 grades tasks requiring a model grader. Other tasks use benchmark grading; grader is not
+    the evaluated model.
   limitations:
-  - Measurement date, effort and complete run configuration unknown; system card failed inspection.
-  - No comparison or narrow-task inference from a shared benchmark name.
+  - Exact run dates, numerical sampling settings, serving route and precision are undisclosed; observed_at
+    is this inspection date, not the measurement date.
+  - Named agent harness and precise server-side compaction request configuration remain undisclosed; offline
+    subset does not establish web-site reliability.
   evidence_notes:
-  - Retained as creator claim, separate from independent results.
+  - System card section 8.9.3, pages 127-128, original PDF text and rendered table inspected. Strict pass is
+    37.1% in the same setup.
 - schema_version: '1.0'
   id: benchmark-be8acf4305714add
   model_id: claude-haiku-5-5
@@ -4148,21 +4216,30 @@ records:
   value: 45.9
   model_version: claude-haiku-5-5
   harness: null
-  effort: null
+  effort: max
   provider_id: null
   tools: []
   measured_at: null
-  observed_at: '2026-10-07'
+  observed_at: '2026-10-08'
   evidence_class: vendor_claim
   source_ids:
   - src-cdb1d51fae04
+  - src-5a6452e14543
   conditions:
-  - Creator launch table; exact task/harness scope required.
+  - HLE has 2, 500 multidisciplinary multimodal questions. Standard reported result is average of five trials;
+    exact used-instance exclusions/attempt denominator not enumerated.
+  - Adaptive thinking; section 8.8.1 says auto thinking and 980k-token task budget per attempt; no context
+    compaction.
+  - Claude Opus 4.6 is the answer grader. Tool-assisted runs block known HLE-bearing sources; suspected contamination
+    reviewed with Claude Opus 5 and confirmed cases counted incorrect.
   limitations:
-  - Measurement date, effort and complete run configuration unknown; system card failed inspection.
-  - No comparison or narrow-task inference from a shared benchmark name.
+  - Exact run dates, numerical sampling settings, serving route and precision are undisclosed; observed_at
+    is this inspection date, not the measurement date.
+  - A multidisciplinary total does not isolate general logic, mathematics, scientific reasoning or visual QA;
+    no transfer between tool and no-tool setups.
   evidence_notes:
-  - Retained as creator claim, separate from independent results.
+  - Original system card sections 8.1 and 8.8.1 inspected; 45.9% without tools and 57.4% with tools are separate
+    configurations.
 - schema_version: '1.0'
   id: benchmark-4003965d6bea5a48
   model_id: claude-haiku-5-5
@@ -4177,22 +4254,34 @@ records:
   value: 57.4
   model_version: claude-haiku-5-5
   harness: null
-  effort: null
+  effort: max
   provider_id: null
   tools:
-  - Unspecified tools
+  - Web search
+  - Web fetch
+  - Programmatic tool calling
+  - Code execution
   measured_at: null
-  observed_at: '2026-10-07'
+  observed_at: '2026-10-08'
   evidence_class: vendor_claim
   source_ids:
   - src-cdb1d51fae04
+  - src-5a6452e14543
   conditions:
-  - Creator launch table; exact task/harness scope required.
+  - HLE has 2, 500 multidisciplinary multimodal questions. Standard reported result is average of five trials;
+    exact used-instance exclusions/attempt denominator not enumerated.
+  - Adaptive thinking; section 8.8.1 says auto thinking and 980k-token task budget per attempt; no context
+    compaction.
+  - Claude Opus 4.6 is the answer grader. Tool-assisted runs block known HLE-bearing sources; suspected contamination
+    reviewed with Claude Opus 5 and confirmed cases counted incorrect.
   limitations:
-  - Measurement date, effort and complete run configuration unknown; system card failed inspection.
-  - No comparison or narrow-task inference from a shared benchmark name.
+  - Exact run dates, numerical sampling settings, serving route and precision are undisclosed; observed_at
+    is this inspection date, not the measurement date.
+  - A multidisciplinary total does not isolate general logic, mathematics, scientific reasoning or visual QA;
+    no transfer between tool and no-tool setups.
   evidence_notes:
-  - Retained as creator claim, separate from independent results.
+  - Original system card sections 8.1 and 8.8.1 inspected; 45.9% without tools and 57.4% with tools are separate
+    configurations.
 - schema_version: '1.0'
   id: benchmark-3bc03f02f03efb69
   model_id: claude-haiku-5-5
@@ -4207,21 +4296,26 @@ records:
   value: 46.4
   model_version: claude-haiku-5-5
   harness: null
-  effort: null
+  effort: max
   provider_id: null
   tools: []
   measured_at: null
-  observed_at: '2026-10-07'
+  observed_at: '2026-10-08'
   evidence_class: vendor_claim
   source_ids:
   - src-cdb1d51fae04
+  - src-5a6452e14543
   conditions:
-  - Creator launch table; exact task/harness scope required.
+  - 100 specialized chart questions; each result is averaged over five runs (500 task attempts).
+  - Adaptive thinking at max effort; Gemini 3.5 Flash grades against expert acceptable answer ranges.
+  - No-tool setup supplies chart images without external tools.
   limitations:
-  - Measurement date, effort and complete run configuration unknown; system card failed inspection.
-  - No comparison or narrow-task inference from a shared benchmark name.
+  - Exact run dates, numerical sampling settings, serving route and precision are undisclosed; observed_at
+    is this inspection date, not the measurement date.
+  - Image resolution and exact harness version are not disclosed; a specialized chart set does not establish
+    all-image QA or localization.
   evidence_notes:
-  - Retained as creator claim, separate from independent results.
+  - System card section 8.9.1; 46.4% no-tool result freshly verified.
 - schema_version: '1.0'
   id: benchmark-b3fd41b3e28b580c
   model_id: claude-haiku-5-5
@@ -4234,22 +4328,29 @@ records:
     direction: higher
   value: 39.2
   model_version: claude-haiku-5-5
-  harness: null
-  effort: null
+  harness: Claude Code --bare
+  effort: max
   provider_id: null
   tools: null
   measured_at: null
-  observed_at: '2026-10-07'
+  observed_at: '2026-10-08'
   evidence_class: vendor_claim
   source_ids:
   - src-cdb1d51fae04
+  - src-5a6452e14543
   conditions:
-  - Creator launch table; exact task/harness scope required.
+  - 66 tasks; 10 trials per task, 660 total; reported standard error 1.9 percentage points treating trials
+    as independent.
+  - Containerized command-line tasks; internet egress disabled with resources pre-cached from historical logs.
+  - Safeguards enabled, no fallback model; 12/660 trials stopped and failed, 10 on a single task.
   limitations:
-  - Measurement date, effort and complete run configuration unknown; system card failed inspection.
-  - No comparison or narrow-task inference from a shared benchmark name.
+  - Exact run dates, numerical sampling settings, serving route and precision are undisclosed; observed_at
+    is this inspection date, not the measurement date.
+  - Exact Claude Code version, task timeout and compute allocation for this run not enumerated; no-egress effect
+    not rigorously quantified.
+  - Mixed science/engineering terminal tasks do not isolate narrower coding or scientific reasoning tasks.
   evidence_notes:
-  - Retained as creator claim, separate from independent results.
+  - System card 8.4 verifies 39.2% and 10 trials/task, an exception to general five-trial defaults.
 - schema_version: '1.0'
   id: benchmark-819a736dbe98ffff
   model_id: claude-haiku-5-5
@@ -4291,23 +4392,25 @@ records:
   value: 34
   model_version: claude-haiku-5-5
   harness: null
-  effort: medium with default fallback
+  effort: medium
   provider_id: null
   tools: null
   measured_at: null
-  observed_at: '2026-10-07'
+  observed_at: '2026-10-08'
   evidence_class: independent_quality
   source_ids:
   - src-dc1c9e6b2717
   - src-1ea3e75f96c3
   conditions:
-  - Numeric result appears in FAQ; dashboard breakdown unavailable.
-  - Fallback identity/configuration unresolved.
+  - Current page reports Intelligence Indexv 4.3.2=34 and labels configuration medium without Default Fallback.
+  - Ten-evaluation composite; per-task plot values are not publicly available in inspected body.
   limitations:
-  - Composite does not directly endorse any individual task.
-  - Exact serving provider, fallback, measurement date and per-task runs unknown.
+  - Exact historical fallback behavior, serving route, request manifests, trial/sample denominator and measurement
+    dates remain unknown.
+  - Removing a label is not evidence of rerunning the benchmark; composite cannot directly endorse a task.
   evidence_notes:
-  - Original evaluator page inspected; incomplete exact setup keeps confidence low.
+  - Original evaluator page and methodology freshly inspected; index 34 unchanged, current configuration label
+    clarified.
 - schema_version: '1.0'
   id: benchmark-fb02bb28efaaac58
   model_id: qwen3-8-27b
@@ -5064,3 +5167,33 @@ records:
   evidence_notes:
   - Creator report tables 3/4; task suites and scaffolds remain separate. No cross-model universal ranking
     is inferred.
+- schema_version: '1.0'
+  id: benchmark-a8f574f60a829c01
+  model_id: claude-fable-5-1
+  judgment_ids:
+  - judgment-6c7a3c099d3c4be7
+  benchmark:
+    name: Snorkel Terminal-Bench+ debugging subset
+    version: null
+    metric: reported debugging-category rate
+    unit: percent
+    direction: higher
+  value: 87
+  model_version: Fable 5.1 (reported label)
+  harness: null
+  effort: null
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-08'
+  evidence_class: independent_quality
+  source_ids:
+  - src-d3e6e49a01b9
+  conditions:
+  - Four debugging tasks with executable environment feedback; not a matched comparison with Bug Hunt Bench.
+  limitations:
+  - Exact served ID, harness, effort, attempt denominator and category aggregation undisclosed.
+  - Four tasks are not four independent trial estimates; the reported rate is descriptive of this task set.
+  - Publication date is not an established measurement date; no real-world repair probability inferred.
+  evidence_notes:
+  - Category result is separate from the study's overall pass@1, pass@5 and mean reward.

@@ -398,6 +398,183 @@ capabilities:
     research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate review_tests_frontend:review-sonnet55; exact identity gates and original
       sources retained.
+- id: judgment-1d166a8ffd058c04
+  scope: direct
+  task_ids:
+  - coding.refactoring
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Direct conclusion is limited to this task and the stated published configuration; no transfer
+    to neighboring tasks.
+  judgment: One small shipping-cost refactor preserved the tested behavior, including coercion edge cases;
+    broader restructuring remains unvalidated.
+  confidence: low
+  supporting_evidence_ids:
+  - src-0351220a07ba
+  contradictory_evidence_ids: []
+  conditions:
+  - OneSeptember 28 reply via llmwise/OpenRouter; eight Node.js fixture checks,8000-token cap; effort and downstream
+    provider unknown.
+  known_failure_modes:
+  - Passing eight checks does not prove equivalence for all inputs or larger cross-module refactors.
+  evidence_notes:
+  - One task with eight checks, not eight independent samples. The marketing refactor sketch from Kunya is
+    not treated as executed preservation evidence.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-sonnet55-task-evidence-review
+    method: Original public task result and setup inspected; no model execution.
+- id: judgment-595a98b01c403e74
+  scope: direct
+  task_ids:
+  - language.writing
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exactly one supplied task rubric under the recorded setup.
+  judgment: Produces fluent, well-structured German expositions, but substantive factual and lexical claims
+    require checking despite favorable blind ratings.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-d802b13b5eaa
+  - src-2d7cd40cbb51
+  - src-23b2761eb941
+  contradictory_evidence_ids: []
+  conditions:
+  - Seventeen passages × English/German instruction variants =34 Sonnet outputs; exact claude-sonnet-5-5 traces
+    datedOctober 3.
+  - Author reports adaptive high effort; trace labels adaptive without a numeric budget; identical source packets,
+    no web.
+  known_failure_modes:
+  - Judges flagged seven serious issues per prompt-language condition, including invented translator identity
+    and incorrect word/family facts.
+  - Two automated judges, private system prompts and one application constrain generalization.
+  evidence_notes:
+  - 8.7/10 rounded mean in each condition; 68 absolute Sonnet judgments.
+  - 136 paired verdicts comprise17 inputs ×2 prompt variants ×2 judges ×2 presentation orders; they are not
+    independent generation trials.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-sonnet55-task-evidence-review
+    method: Original public evidence inspected; task boundaries, configuration, denominators and limitations
+      retained.
+- id: judgment-6158a48b2e47c111
+  scope: direct
+  task_ids:
+  - language.instruction_following
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exactly one supplied task rubric under the recorded setup.
+  judgment: Retained all seven required section tags in the34 observed German expositions; broader semantic-constraint
+    compliance remains unmeasured.
+  confidence: low
+  supporting_evidence_ids:
+  - src-d802b13b5eaa
+  - src-2d7cd40cbb51
+  - src-23b2761eb941
+  contradictory_evidence_ids: []
+  conditions:
+  - Same17 inputs with two prompt-language variants; exact seven tags verified in every Sonnet output.
+  known_failure_modes:
+  - Correct parsing does not establish every instruction or source-fidelity requirement; private system prompts
+    prevent full contract checking.
+  evidence_notes:
+  - 17/17 outputs per prompt variant parsed; content errors remain despite format success.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-sonnet55-task-evidence-review
+    method: Original public evidence inspected; task boundaries, configuration, denominators and limitations
+      retained.
+- id: judgment-6f5d23ad596ea68c
+  scope: direct
+  task_ids:
+  - coding.scoped_edit
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Direct conclusion is limited to this task and the stated published configuration; no transfer
+    to neighboring tasks.
+  judgment: Small specified JavaScript functions passed the publisher acceptance fixtures; use explicit acceptance
+    tests before expanding to repository changes.
+  confidence: low
+  supporting_evidence_ids:
+  - src-0351220a07ba
+  contradictory_evidence_ids: []
+  conditions:
+  - One reply per fixture through llmwise/OpenRouter; ISBN-10 function8tests and hashtag function5tests; no
+    effort disclosed.
+  known_failure_modes:
+  - Tiny isolated examples do not establish reliable edits across an existing repository.
+  evidence_notes:
+  - Tests were executed by the publisher; this research inspected their original outputs and reported outcomes
+    only.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-sonnet55-task-evidence-review
+    method: Original public task result and setup inspected; no model execution.
+- id: judgment-b96cb26fcff545d2
+  scope: direct
+  task_ids:
+  - vision.grounding
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exactly one supplied task rubric under the recorded setup.
+  judgment: Zero-shot boxes provide useful localization but need spatial correction; coarse-overlap success
+    does not establish precise grounding.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-aac5808af0ec
+  - src-12127a4ce5a0
+  contradictory_evidence_ids: []
+  conditions:
+  - Normalized y-min/x-min/y-max/x-max boxes and labels; three runs at each low/high native effort.
+  known_failure_modes:
+  - 'mAP@50 is74.3 low/76.8 high, while mAP@75 is60.0/63.1 and mAP@50: 95 is57.1/59.5.'
+  - Sample denominator and precise model route not disclosed; no GUI-action success inferred.
+  evidence_notes:
+  - mAP metrics score object detection and overlap, not an all-objects-correct rate.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-sonnet55-task-evidence-review
+    method: Original public evidence inspected; task boundaries, configuration, denominators and limitations
+      retained.
+- id: judgment-de743a67836582cd
+  scope: direct
+  task_ids:
+  - vision.question_answering
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Exactly one supplied task rubric under the recorded setup.
+  judgment: Useful for image-grounded comparisons and spatial questions with material answer checking in both
+    effort settings.
+  confidence: medium
+  supporting_evidence_ids:
+  - src-efd1db045882
+  - src-12127a4ce5a0
+  contradictory_evidence_ids: []
+  conditions:
+  - Three runs each at low/high native effort; same visual samples; Gemini 3.5 Flash temperature0 grades against
+    ground truth.
+  known_failure_modes:
+  - Low judged accuracy76.4% versus strict11.9%; high83.9% versus strict72.8%; verbosity affects strict matching.
+  - Sample denominator, exact endpoint and run dates not disclosed; range is not a confidence interval.
+  evidence_notes:
+  - Reported±0.7 low and±1.7 high are half-ranges over three runs, not standard deviations.
+  observed_at: '2026-10-08'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-sonnet55-task-evidence-review
+    method: Original public evidence inspected; task boundaries, configuration, denominators and limitations
+      retained.
 performance_characteristics:
 - id: judgment-d11bf2f6847f9b57
   scope: performance

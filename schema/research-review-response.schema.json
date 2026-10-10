@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Private evidence reviewer response; not a certification flag",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["request_sha256", "decisions"],
+  "properties": {
+    "request_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "decisions": {
+      "type": "array",
+      "maxItems": 32,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["unit_id", "decision", "rationale", "checks", "citations", "followup"],
+        "properties": {
+          "unit_id": {"type": "string", "pattern": "^unit-[a-f0-9]{20}$"},
+          "decision": {"enum": ["accept", "defer"]},
+          "rationale": {"type": "string", "pattern": "\\S"},
+          "checks": {
+            "type": "object", "additionalProperties": false,
+            "required": ["identity", "task_scope", "setup", "claim_support", "contradictions", "confidence", "source_dates"],
+            "properties": {
+              "identity": {"enum": ["pass", "fail", "unknown", "not_applicable"]},
+              "task_scope": {"enum": ["pass", "fail", "unknown", "not_applicable"]},
+              "setup": {"enum": ["pass", "fail", "unknown", "not_applicable"]},
+              "claim_support": {"enum": ["pass", "fail", "unknown", "not_applicable"]},
+              "contradictions": {"enum": ["pass", "fail", "unknown", "not_applicable"]},
+              "confidence": {"enum": ["pass", "fail", "unknown", "not_applicable"]},
+              "source_dates": {"enum": ["pass", "fail", "unknown", "not_applicable"]}
+            }
+          },
+          "citations": {
+            "type": "array", "maxItems": 64,
+            "items": {
+              "type": "object", "additionalProperties": false,
+              "required": ["source_id", "body_sha256", "text_sha256", "start", "end", "quote"],
+              "properties": {
+                "source_id": {"type": "string", "pattern": "\\S"},
+                "body_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+                "text_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+                "start": {"type": "integer", "minimum": 0},
+                "end": {"type": "integer", "minimum": 1},
+                "quote": {"type": "string", "minLength": 1, "maxLength": 500}
+              }
+            }
+          },
+          "followup": {
+            "anyOf": [{"type": "null"}, {
+              "type": "object", "additionalProperties": false,
+              "required": ["issue_key", "category", "reason", "requested_action"],
+              "properties": {
+                "issue_key": {"type": "string", "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"},
+                "category": {"enum": ["missing_setup", "conflicting_evidence", "unresolved_claim", "source_access_gap", "identity_ambiguity"]},
+                "reason": {"type": "string", "pattern": "\\S"},
+                "requested_action": {"type": "string", "pattern": "\\S"}
+              }
+            }]
+          }
+        }
+      }
+    }
+  }
+}

@@ -45,11 +45,11 @@ Generated from canonical YAML. Units, route conditions and dates are essential.
 | claude-haiku-4-5 | google-cloud | third_party_API | Listed by creator; independent provider pricing and regional entitlement not verified; Not established in this pass |
 | claude-haiku-4-5 | azure-foundry | third_party_API | Listed by creator; independent provider pricing and regional entitlement not verified; Not established in this pass |
 | claude-fable-5-1 | anthropic | CLI | All paid Claude plans include Code; API-credit billing is a separate option; quota: Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified |
-| claude-opus-5-5 | anthropic | CLI | All paid Claude plans include Code; API-credit billing is a separate option; quota: Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified |
+| claude-opus-5-5 | anthropic | CLI | All paid Claude plans include Code; API-credit billing is a separate option; Model selection remains subject to organization and plan controls. Supported IDEs include VS Code/Cursor and JetBrains; plan-authenticated IDE and terminal activity share the plan pool.; Interactive Claude Code cannot spend monthly subscriber API credits. Self-run API-key claude -p/Agent SDK eligibility is a separate programmatic condition. |
 | claude-sonnet-5-5 | anthropic | CLI | All paid Claude plans include Code; API-credit billing is a separate option; quota: Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified |
 | claude-haiku-4-5 | anthropic | CLI | All paid Claude plans include Code; API-credit billing is a separate option; quota: Shared with web/desktop/mobile plan pool; IDE entitlement details not separately verified |
 | claude-fable-5-1 | anthropic | IDE | documented route; account eligibility unverified; Not established in this pass |
-| claude-opus-5-5 | anthropic | IDE | documented route; account eligibility unverified; Not established in this pass |
+| claude-opus-5-5 | anthropic | IDE | documented route; account eligibility unverified; Model selection remains subject to organization and plan controls. Supported IDEs include VS Code/Cursor and JetBrains; plan-authenticated IDE and terminal activity share the plan pool.; Interactive Claude Code cannot spend monthly subscriber API credits. Self-run API-key claude -p/Agent SDK eligibility is a separate programmatic condition. |
 | claude-sonnet-5-5 | anthropic | IDE | documented route; account eligibility unverified; Not established in this pass |
 | claude-haiku-4-5 | anthropic | IDE | documented route; account eligibility unverified; Not established in this pass |
 | claude-sonnet-5-5 | anthropic | chat_subscription | Sonnet/Haiku families on Free and paid plans; version selection can change; quota: Rolling5h window; paid plans additionally weekly caps; no fixed message count |
@@ -320,7 +320,7 @@ Generated from canonical YAML. Units, route conditions and dates are essential.
 | xai-grok-4-7 | xai | chat | documented_not_execution_tested; Not established in this pass |
 | xai-grok-4-7 | xai | hosted_api | shared_API_allowance_described_but_exact_auth_entitlement_unverified; Not established in this pass |
 | xai-grok-4-7 | xai | chat_subscription | documented_not_execution_tested; Not established in this pass |
-| claude-haiku-5-5 | anthropic | API | Active; Exact account quota, entitlement and negotiated conditions unknown. |
+| claude-haiku-5-5 | anthropic | API | Active; Published Haiku 5.5 maxima for Start, Build and Scale respectively: 1,000/5,000/10,000 RPM; 2M/5M/10M input TPM; 0.4M/1M/2M output TPM. Evaluation/account settings may be lower; maxima are not guaranteed capacity.; Start/Build/Scale monthly spend caps are USD 500/USD 1000/USD 200000; workspace caps may be lower. US/global requests share one model rate pool. |
 | claude-haiku-5-5 | aws-bedrock | API | Active; Exact account quota, entitlement and negotiated conditions unknown. |
 | claude-haiku-5-5 | google-cloud | API | Active; Exact account quota, entitlement and negotiated conditions unknown. |
 | claude-haiku-5-5 | azure-foundry | API | Active; Exact account quota, entitlement and negotiated conditions unknown. |

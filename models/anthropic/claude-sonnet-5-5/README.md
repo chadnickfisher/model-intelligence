@@ -139,6 +139,138 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: Confidence concerns this bounded claim, not a capability score.; CodeRabbit judged 13 Signal cases; thinking-on caught 6 while thinking-off caught 5. The 44-PR OSS run still lacked quality scoring.; Low confidence reflects the inspected evaluator, corpus/pipeline dependence and unpublished replication inputs; it is not a low ability rating.
 
+### Coding.refactoring (low confidence)
+
+One small shipping-cost refactor preserved the tested behavior, including coercion edge cases; broader restructuring remains unvalidated.
+
+Scope: direct / conditional. Direct conclusion is limited to this task and the stated published configuration; no transfer to neighboring tasks.
+
+Direct task IDs: coding.refactoring
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-1d166a8ffd058c04
+
+Conditions: OneSeptember 28 reply via llmwise/OpenRouter; eight Node.js fixture checks,8000-token cap; effort and downstream provider unknown.
+
+Failure modes / limitations: Passing eight checks does not prove equivalence for all inputs or larger cross-module refactors.
+
+Supporting sources: [AI prompts for coding, checked by running the code](https://llmwise.ai/prompts/for/coding)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: One task with eight checks, not eight independent samples. The marketing refactor sketch from Kunya is not treated as executed preservation evidence.
+
+### Language.writing (medium confidence)
+
+Produces fluent, well-structured German expositions, but substantive factual and lexical claims require checking despite favorable blind ratings.
+
+Scope: direct / conditional. Exactly one supplied task rubric under the recorded setup.
+
+Direct task IDs: language.writing
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-595a98b01c403e74
+
+Conditions: Seventeen passages × English/German instruction variants =34 Sonnet outputs; exact claude-sonnet-5-5 traces datedOctober 3.; Author reports adaptive high effort; trace labels adaptive without a numeric budget; identical source packets, no web.
+
+Failure modes / limitations: Judges flagged seven serious issues per prompt-language condition, including invented translator identity and incorrect word/family facts.; Two automated judges, private system prompts and one application constrain generalization.
+
+Supporting sources: [Kolibri vs Claude Sonnet 5.5: A German LLM Benchmark](https://tej.as/blog/kolibri-vs-claude-german-llm-benchmark) · [Dewfall German study original generation traces](https://tej.as/blog/kolibri-vs-claude-german-llm-benchmark/traces/runs.jsonl) · [Dewfall German study judge verdicts](https://tej.as/blog/kolibri-vs-claude-german-llm-benchmark/traces/verdicts.jsonl)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: 8.7/10 rounded mean in each condition; 68 absolute Sonnet judgments.; 136 paired verdicts comprise17 inputs ×2 prompt variants ×2 judges ×2 presentation orders; they are not independent generation trials.
+
+### Language.instruction_following (low confidence)
+
+Retained all seven required section tags in the34 observed German expositions; broader semantic-constraint compliance remains unmeasured.
+
+Scope: direct / conditional. Exactly one supplied task rubric under the recorded setup.
+
+Direct task IDs: language.instruction_following
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-6158a48b2e47c111
+
+Conditions: Same17 inputs with two prompt-language variants; exact seven tags verified in every Sonnet output.
+
+Failure modes / limitations: Correct parsing does not establish every instruction or source-fidelity requirement; private system prompts prevent full contract checking.
+
+Supporting sources: [Kolibri vs Claude Sonnet 5.5: A German LLM Benchmark](https://tej.as/blog/kolibri-vs-claude-german-llm-benchmark) · [Dewfall German study original generation traces](https://tej.as/blog/kolibri-vs-claude-german-llm-benchmark/traces/runs.jsonl) · [Dewfall German study judge verdicts](https://tej.as/blog/kolibri-vs-claude-german-llm-benchmark/traces/verdicts.jsonl)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: 17/17 outputs per prompt variant parsed; content errors remain despite format success.
+
+### Coding.scoped_edit (low confidence)
+
+Small specified JavaScript functions passed the publisher acceptance fixtures; use explicit acceptance tests before expanding to repository changes.
+
+Scope: direct / conditional. Direct conclusion is limited to this task and the stated published configuration; no transfer to neighboring tasks.
+
+Direct task IDs: coding.scoped_edit
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-6f5d23ad596ea68c
+
+Conditions: One reply per fixture through llmwise/OpenRouter; ISBN-10 function8tests and hashtag function5tests; no effort disclosed.
+
+Failure modes / limitations: Tiny isolated examples do not establish reliable edits across an existing repository.
+
+Supporting sources: [AI prompts for coding, checked by running the code](https://llmwise.ai/prompts/for/coding)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Tests were executed by the publisher; this research inspected their original outputs and reported outcomes only.
+
+### Vision.grounding (medium confidence)
+
+Zero-shot boxes provide useful localization but need spatial correction; coarse-overlap success does not establish precise grounding.
+
+Scope: direct / conditional. Exactly one supplied task rubric under the recorded setup.
+
+Direct task IDs: vision.grounding
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-b96cb26fcff545d2
+
+Conditions: Normalized y-min/x-min/y-max/x-max boxes and labels; three runs at each low/high native effort.
+
+Failure modes / limitations: mAP@50 is74.3 low/76.8 high, while mAP@75 is60.0/63.1 and mAP@50: 95 is57.1/59.5.; Sample denominator and precise model route not disclosed; no GUI-action success inferred.
+
+Supporting sources: [Object Detection Benchmark](https://playground.roboflow.com/evals/object-detection) · [Vision Evals methodology](https://playground.roboflow.com/evals)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: mAP metrics score object detection and overlap, not an all-objects-correct rate.
+
+### Vision.question_answering (medium confidence)
+
+Useful for image-grounded comparisons and spatial questions with material answer checking in both effort settings.
+
+Scope: direct / conditional. Exactly one supplied task rubric under the recorded setup.
+
+Direct task IDs: vision.question_answering
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-de743a67836582cd
+
+Conditions: Three runs each at low/high native effort; same visual samples; Gemini 3.5 Flash temperature0 grades against ground truth.
+
+Failure modes / limitations: Low judged accuracy76.4% versus strict11.9%; high83.9% versus strict72.8%; verbosity affects strict matching.; Sample denominator, exact endpoint and run dates not disclosed; range is not a confidence interval.
+
+Supporting sources: [Visual Reasoning Benchmark](https://playground.roboflow.com/evals/visual-reasoning) · [Vision Evals methodology](https://playground.roboflow.com/evals)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Reported±0.7 low and±1.7 high are half-ranges over three runs, not standard deviations.
+
 ### Cost sensitive professional workflows (medium confidence)
 
 Low per-token price is useful only when effort and total tokens are controlled.

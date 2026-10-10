@@ -1959,55 +1959,72 @@ records:
   task_id: coding.debugging
   applicability: applicable
   result: assessed
-  checked_at: '2026-10-07'
-  rationale: The recorded agent configurations fixed real planted repository defects, making them useful for
-    assisted diagnosis and repair. Many defects remained; independent review and executable regression checks
-    are material requirements, and the result does not establish a complete audit.
+  checked_at: '2026-10-08'
+  rationale: Implemented repairs and separate task evaluations support useful assisted debugging. Many defects
+    remain unresolved, so diagnosis, patch and regression checks are material requirements.
   judgment_ids:
   - judgment-f023edc397fdd671
-  confidence_rationale: 'Low confidence: The exact-task evidence is narrow, incompletely pinned or independently
-    unreplicated; separate configurations are not replications. The conclusion retains the cited findings,
-    their original inspection dates and the conditions below. Many planted defects remained unresolved in the
-    measured runs. Run variance and harness differences prevent fine-grained cross-model ranking.'
+  - judgment-6c7a3c099d3c4be7
+  - judgment-ad43fedfa9593401
+  - judgment-7bb7ec6d2a29dc85
+  - judgment-bdd86c4657d2dabd
+  confidence_rationale: 'Low confidence: the broad repair result is one run on withheld snapshots; the separate
+    four-task category lacks exact settings and aggregation. The detailed Gradle case and attributed failures
+    add context but establish neither repeated exact-configuration replication nor general success or failure
+    rates.'
   evidence_ids:
   - src-ad78a04807f9
   - src-02b09208ceab
   - src-0b72694a5dea
+  - src-e86e19b3dd2c
+  - src-e9c984ecc940
+  - src-96cec7bbd029
+  - src-d3e6e49a01b9
+  - src-4fbde637dbf3
+  - src-e7c2a679eb16
+  - src-11bea9016ff0
   conditions:
-  - Single configuration run; no robust ranking implied.
-  - 'Harness: Claude Code; effort: max; effort evidence: first_party.'
-  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
-  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
-    and budgets.
-  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
-    external reproduction.
-  - Only the source-described task subsets and setups are assessed; no equivalent provider route is assumed.
+  - Supervised diagnosis and repair with executable reproduction and independent regression checks.
+  - 'Bug Hunt: Claude Code/max, one run across 105 defects; Snorkel: four debugging tasks with incomplete setup.'
+  - 'Gradle: one diagnosis-and-repair case under Claude Code 2.1.263/gradle-eval; practitioner failures concern
+    different setups.'
+  - Only the reported model-agent setups are assessed; no equivalent provider/API route is assumed.
   remaining_gaps:
-  - Many planted defects remained unresolved in the measured runs.
-  - Run variance and harness differences prevent fine-grained cross-model ranking.
+  - Independent replication with accessible seeded artifacts and larger debugging-only samples.
+  - Exact Snorkel served settings, attempt denominator and category aggregation.
+  - No controlled recovery or general failure rate established for the practitioner reports.
   id: task-assessment-50c1b1bcd5a6522b
   aggregate:
     policy_version: '1'
     suitability: medium
     evidence_confidence: low
     assessed_at: '2026-10-08'
-    rationale: The recorded agent configurations fixed real planted repository defects, making them useful
-      for assisted diagnosis and repair. Many defects remained; independent review and executable regression
-      checks are material requirements, and the result does not establish a complete audit.
-    confidence_rationale: 'Low confidence: The exact-task evidence is narrow, incompletely pinned or independently
-      unreplicated; separate configurations are not replications. The conclusion retains the cited findings,
-      their original inspection dates and the conditions below. Many planted defects remained unresolved in
-      the measured runs. Run variance and harness differences prevent fine-grained cross-model ranking.'
+    rationale: Implemented repairs and separate task evaluations support useful assisted debugging. Many defects
+      remain unresolved, so diagnosis, patch and regression checks are material requirements.
+    confidence_rationale: 'Low confidence: the broad repair result is one run on withheld snapshots; the separate
+      four-task category lacks exact settings and aggregation. The detailed Gradle case and attributed failures
+      add context but establish neither repeated exact-configuration replication nor general success or failure
+      rates.'
     supporting_evidence_ids:
     - src-ad78a04807f9
     - src-02b09208ceab
     - src-0b72694a5dea
-    contradictory_evidence_ids: []
-    conflict_rationale: null
+    - src-e86e19b3dd2c
+    - src-e9c984ecc940
+    - src-96cec7bbd029
+    - src-d3e6e49a01b9
+    - src-4fbde637dbf3
+    contradictory_evidence_ids:
+    - src-e7c2a679eb16
+    - src-11bea9016ff0
+    conflict_rationale: Reported successes and failures concern different tasks and setups; they justify conditional
+      assisted use and do not establish an unresolved matched contradiction.
     watch_outs:
-    - Many planted defects remained unresolved in the measured runs.
-    - Run variance and harness differences prevent fine-grained cross-model ranking.
-    - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+    - 62/105 seeded defects were not fully repaired; inspect patches and execute regression checks before accepting
+      completion.
+    - Snorkel's reported 87 percent describes four tasks, not a real-world bug-repair probability.
+    - Practitioners report unsolicited Jira edits and one unresolved gensim issue handled by suppressing stderr;
+      these are attributed cases, not prevalence estimates.
     access_ids: []
 - model_id: claude-fable-5-1
   task_id: coding.frontend
@@ -2067,58 +2084,51 @@ records:
   task_id: coding.refactoring
   applicability: applicable
   result: assessed
-  checked_at: '2026-10-07'
-  rationale: The exact model-and-agent configuration completed a useful subset of multi-file refactorings under
-    tests, regression checks and structural rubrics. Failed or incomplete cases make supervision and behavior-preservation
-    checks necessary; retain the measured configuration rather than transferring the result to every route.
+  checked_at: '2026-10-08'
+  rationale: Direct restructuring and preservation checks demonstrate useful refactoring capability. Incomplete
+    benchmark resolution and limited corroboration make material behavior and completeness checks necessary.
   judgment_ids:
   - judgment-a0a1fd6ff5e17879
-  confidence_rationale: 'Low confidence: The exact-task evidence is narrow, incompletely pinned or independently
-    unreplicated; separate configurations are not replications. The conclusion retains the cited findings,
-    their original inspection dates and the conditions below. Incomplete extraction, unwired callers, stale
-    implementations/artifacts; failure taxonomy is pooled, not per-model. Official documentation warns it favors
-    whole-file rewrites for small changes, increasing output/time; targeted-edit prompting recommended.'
+  - judgment-0d56d17e388e4a0a
+  confidence_rationale: 'Medium confidence for bounded assisted use: Scale provides direct multi-repository
+    task evidence and a separate small controller-extraction study corroborates narrow refactoring. Confidence
+    is limited by missing Fable-specific Scale artifacts/settings and the small simple corroborating task;
+    these are not exact-configuration replications.'
   evidence_ids:
   - src-b6ffa931564a
+  - src-4f597f653005
   - src-c7eceee3e7d1
   conditions:
-  - 70 tasks, 10 production repositories, 6 languages; Harbor/Modal sandboxes. Resolve requires unchanged tests,
-    zero regressions, and every mandatory Opus 4.5-judged rubric.
-  - Always-on adaptive thinking; effort-controlled operation.
-  - Only the source-described task subsets and setups are assessed; no equivalent provider route is assumed.
+  - Specify protected behavior and intended restructuring; independently check tests, call sites and cleanup.
+  - 'Scale: Fable-5.1 (Claude Code) xHigh, test preservation plus all mandatory structural rubrics.'
+  - 'Wmedia: Claude Code 2.1.280/high on a small PHP extraction task; mixed-task totals are not refactoring-only
+    rates.'
+  - No equivalence to default-effort API or other provider routes is established.
   remaining_gaps:
-  - Incomplete extraction, unwired callers, stale implementations/artifacts; failure taxonomy is pooled, not
-    per-model.
-  - Official documentation warns it favors whole-file rewrites for small changes, increasing output/time; targeted-edit
-    prompting recommended.
+  - Fable-specific Scale run artifacts, trial count and displayed interval definition.
+  - Larger independent behavior-preserving refactoring replications.
   id: task-assessment-293c9899ca23b224
   aggregate:
     policy_version: '1'
     suitability: medium
-    evidence_confidence: low
+    evidence_confidence: medium
     assessed_at: '2026-10-08'
-    rationale: The exact model-and-agent configuration completed a useful subset of multi-file refactorings
-      under tests, regression checks and structural rubrics. Failed or incomplete cases make supervision and
-      behavior-preservation checks necessary; retain the measured configuration rather than transferring the
-      result to every route.
-    confidence_rationale: 'Low confidence: The exact-task evidence is narrow, incompletely pinned or independently
-      unreplicated; separate configurations are not replications. The conclusion retains the cited findings,
-      their original inspection dates and the conditions below. Incomplete extraction, unwired callers, stale
-      implementations/artifacts; failure taxonomy is pooled, not per-model. Official documentation warns it
-      favors whole-file rewrites for small changes, increasing output/time; targeted-edit prompting recommended.'
+    rationale: Direct restructuring and preservation checks demonstrate useful refactoring capability. Incomplete
+      benchmark resolution and limited corroboration make material behavior and completeness checks necessary.
+    confidence_rationale: 'Medium confidence for bounded assisted use: Scale provides direct multi-repository
+      task evidence and a separate small controller-extraction study corroborates narrow refactoring. Confidence
+      is limited by missing Fable-specific Scale artifacts/settings and the small simple corroborating task;
+      these are not exact-configuration replications.'
     supporting_evidence_ids:
     - src-b6ffa931564a
+    - src-4f597f653005
     - src-c7eceee3e7d1
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Incomplete extraction, unwired callers, stale implementations/artifacts; failure taxonomy is pooled,
-      not per-model.
-    - Official documentation warns it favors whole-file rewrites for small changes, increasing output/time;
-      targeted-edit prompting recommended.
-    - Harnesses differ; uncertainty overlaps, so no significant ordering claimed. Preserve xHigh as board label.
-      Intro's below 50% statement is stale. Gemini 3.1 Pro 33.81Â±6.64 is withheld pending preview-ID mapping.
-    - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+    - Passing tests alone does not establish that every requested structural change and cleanup was completed.
+    - Scale's pooled failure taxonomy is not a measured Fable-specific failure frequency.
+    - Whole-file rewrites can increase output and time; prompting guidance is not measured correctness recovery.
     access_ids: []
 - model_id: claude-fable-5-1
   task_id: coding.repository_work
@@ -2813,19 +2823,43 @@ records:
   task_id: agent.long_horizon
   applicability: applicable
   result: unknown
-  checked_at: '2026-10-07'
-  rationale: Launch context-awareness and small gateway loops do not establish sustained independent completion
-    under an exact long-horizon scaffold.
+  checked_at: '2026-10-08'
+  rationale: RuBench multi-step repository work and gateway short tasks were inspected, but do not isolate
+    sustained constraint tracking, recovery and final-goal reliability over a broader horizon. Five-turn synthetic
+    loop and isolated structured-output subagent calls do not establish sustained autonomous completion. UiPath
+    lead blocked.
   judgment_ids: []
-  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
-    judgment is inferred from insufficient task evidence.
+  confidence_rationale: 'No aggregate confidence: suitability remains unestablished under this task rubric.'
   evidence_ids:
-  - src-ce7f65873843
+  - src-8f47498481bf
   - src-ab8901f1a6fe
-  conditions: []
+  - src-e86418b60c92
+  conditions:
+  - Native documented Haiku 4.5 interface or the explicitly described study setup; no individual access tested.
   remaining_gaps:
-  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  - Exact task-fit under a fully identifiable serving setup remains unestablished.
+  - Need accessible original long-agent study or exact long-horizon trajectory evidence.
   id: task-assessment-6b5d42fcbe23e5cf
+  aggregate:
+    policy_version: '1'
+    suitability: unknown
+    evidence_confidence: null
+    assessed_at: '2026-10-08'
+    rationale: RuBench multi-step repository work and gateway short tasks were inspected, but do not isolate
+      sustained constraint tracking, recovery and final-goal reliability over a broader horizon. Five-turn
+      synthetic loop and isolated structured-output subagent calls do not establish sustained autonomous completion.
+      UiPath lead blocked.
+    confidence_rationale: 'No aggregate confidence: suitability remains unestablished under this task rubric.'
+    supporting_evidence_ids:
+    - src-8f47498481bf
+    - src-ab8901f1a6fe
+    - src-e86418b60c92
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Exact task-fit under a fully identifiable serving setup remains unestablished.
+    - Need accessible original long-agent study or exact long-horizon trajectory evidence.
+    access_ids: []
 - model_id: claude-haiku-4-5
   task_id: agent.tool_use
   applicability: applicable
@@ -2950,19 +2984,33 @@ records:
   task_id: coding.architecture
   applicability: applicable
   result: unknown
-  checked_at: '2026-10-07'
-  rationale: Business-analysis text, short functions and code review do not measure design tradeoffs across
-    a real system.
+  checked_at: '2026-10-08'
+  rationale: Architectural-smell repair and explanations of existing code were inspected, but neither evaluates
+    proposing new component interfaces and design tradeoffs.
   judgment_ids: []
-  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
-    judgment is inferred from insufficient task evidence.
+  confidence_rationale: 'No aggregate confidence: suitability remains unestablished under this task rubric.'
   evidence_ids:
-  - src-bfdf4f90e154
-  - src-5a27e3e4bac2
-  conditions: []
+  - src-b927ea5d3000
+  conditions:
+  - Native documented Haiku 4.5 interface or the explicitly described study setup; no individual access tested.
   remaining_gaps:
-  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  - Exact task-fit under a fully identifiable serving setup remains unestablished.
   id: task-assessment-45060bc73fea456f
+  aggregate:
+    policy_version: '1'
+    suitability: unknown
+    evidence_confidence: null
+    assessed_at: '2026-10-08'
+    rationale: Architectural-smell repair and explanations of existing code were inspected, but neither evaluates
+      proposing new component interfaces and design tradeoffs.
+    confidence_rationale: 'No aggregate confidence: suitability remains unestablished under this task rubric.'
+    supporting_evidence_ids:
+    - src-b927ea5d3000
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Exact task-fit under a fully identifiable serving setup remains unestablished.
+    access_ids: []
 - model_id: claude-haiku-4-5
   task_id: coding.debugging
   applicability: applicable
@@ -3063,126 +3111,182 @@ records:
 - model_id: claude-haiku-4-5
   task_id: coding.refactoring
   applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Short implementation and diagnosis evaluations do not measure behavior-preserving restructuring
-    with validation.
-  judgment_ids: []
-  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
-    judgment is inferred from insufficient task evidence.
-  evidence_ids:
-  - src-2e03cb5a63cf
-  - src-5a27e3e4bac2
-  conditions: []
-  remaining_gaps:
-  - Exact task-specific quality under an identifiable serving setup remains unestablished.
-  id: task-assessment-a50311f0ac269e97
-- model_id: claude-haiku-4-5
-  task_id: coding.repository_work
-  applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Vendor SWE-bench aggregate and gateway package fixes are compound scaffolds; no independent general
-    repository-work conclusion established.
-  judgment_ids: []
-  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
-    judgment is inferred from insufficient task evidence.
-  evidence_ids:
-  - src-ce7f65873843
-  - src-ab8901f1a6fe
-  conditions: []
-  remaining_gaps:
-  - Exact task-specific quality under an identifiable serving setup remains unestablished.
-  id: task-assessment-c4d08737257b9d09
-- model_id: claude-haiku-4-5
-  task_id: coding.review
-  applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Two small review fixtures and model-graded scores expose possible misses but do not establish
-    how reliably this model produces actionable review findings. Preserve the warnings without assigning a
-    general performance level.
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: The structured workflow preserves tests but completes no API-usage repairs, including two genuine
+    cases, and no unstable-dependency repairs. These core cross-module failures undermine usefulness for that
+    difficult refactoring scope.
   judgment_ids:
-  - judgment-e35ebbffc833ea6a
-  confidence_rationale: 'No aggregate confidence badge: Two small review fixtures and model-graded scores expose
-    possible misses but do not establish how reliably this model produces actionable review findings. Preserve
-    the warnings without assigning a general performance level.'
+  - judgment-0e2ad8ff50a90bd1
+  confidence_rationale: 'Low confidence: one bounded study, with serving/setup and replication limits retained;
+    suitability is separate from the metric.'
   evidence_ids:
-  - src-5a27e3e4bac2
+  - src-b927ea5d3000
   conditions:
-  - Tools disabled and one-turn assertion; one scored response per review fixture; LLM rubric and two blind
-    judges.
-  - Only the source-described task subsets and setups are assessed; no equivalent provider route is assumed.
+  - '65 hard-tier scikit-learn smells: 11 genuine, 41 false positives, 13 partial. One run per configuration;
+    no repeated trials.'
+  - 18/65 disappeared, including cascading effects;16 new smells, net +2; full test suite showed no deviations.
   remaining_gaps:
-  - Independent replication, serving identity and broader task transfer remain limited.
-  - Two small review fixtures and model-graded scores expose possible misses but do not establish how reliably
-    this model produces actionable review findings. Preserve the warnings without assigning a general performance
-    level.
-  id: task-assessment-3708053cd29c211e
+  - Single project/detector; task ordering and false-positive mix affect counts; this is not a genuine-bug
+    success rate.
+  - Exact endpoint, CLI version, decoding, context, precision and experiment date undisclosed.
+  id: task-assessment-a50311f0ac269e97
   aggregate:
     policy_version: '1'
-    suitability: unknown
-    evidence_confidence: null
+    suitability: low
+    evidence_confidence: low
     assessed_at: '2026-10-08'
-    rationale: Two small review fixtures and model-graded scores expose possible misses but do not establish
-      how reliably this model produces actionable review findings. Preserve the warnings without assigning
-      a general performance level.
-    confidence_rationale: 'No aggregate confidence badge: Two small review fixtures and model-graded scores
-      expose possible misses but do not establish how reliably this model produces actionable review findings.
-      Preserve the warnings without assigning a general performance level.'
+    rationale: The structured workflow preserves tests but completes no API-usage repairs, including two genuine
+      cases, and no unstable-dependency repairs. These core cross-module failures undermine usefulness for
+      that difficult refactoring scope.
+    confidence_rationale: 'Low confidence: one bounded study, with serving/setup and replication limits retained;
+      suitability is separate from the metric.'
     supporting_evidence_ids:
-    - src-5a27e3e4bac2
+    - src-b927ea5d3000
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Unpinned CLI/backend and tiny review sample; source adaptive-thinking explanation conflicts with official
-      manual-thinking support.
-    - Performance is not established for this exact task rubric.
-    - Tiny practitioner fixture; source adaptive-thinking explanation is inconsistent with official support.
+    - Single project/detector; task ordering and false-positive mix affect counts; this is not a genuine-bug
+      success rate.
+    - Exact endpoint, CLI version, decoding, context, precision and experiment date undisclosed.
+    access_ids: []
+- model_id: claude-haiku-4-5
+  task_id: coding.repository_work
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: Repository maintenance is useful with substantial correction in the Russian RuBench setup; the
+    product resolves only part of the sampled workload.
+  judgment_ids:
+  - judgment-b07849d170385317
+  confidence_rationale: 'Low confidence: one bounded study, with serving/setup and replication limits retained;
+    suitability is separate from the metric.'
+  evidence_ids:
+  - src-8f47498481bf
+  conditions:
+  - 25 Russian repository-maintenance tasks; 75 rollouts, 14/25,14/25,12/25 resolved; July 5–7, 2026.
+  - Fresh macOS 15.7.3 arm64 workspaces; one-hour timeout; no custom instruction files.
+  - 'Judge: withheld upstream regression tests. Wilson task-level 95% interval35–71%; all runs, no best-of
+    selection.'
+  remaining_gaps:
+  - Reported xhigh setting conflicts with Haiku manual-thinking documentation; effective thinking budget remains
+    unknown.
+  - Main text says web-tool restriction ineffective, appendix says web tools disabled; preserve this setup
+    contradiction.
+  - Private oracles, five repositories; no universal repository guarantee.
+  id: task-assessment-c4d08737257b9d09
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: low
+    assessed_at: '2026-10-08'
+    rationale: Repository maintenance is useful with substantial correction in the Russian RuBench setup; the
+      product resolves only part of the sampled workload.
+    confidence_rationale: 'Low confidence: one bounded study, with serving/setup and replication limits retained;
+      suitability is separate from the metric.'
+    supporting_evidence_ids:
+    - src-8f47498481bf
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Reported xhigh setting conflicts with Haiku manual-thinking documentation; effective thinking budget
+      remains unknown.
+    - Main text says web-tool restriction ineffective, appendix says web tools disabled; preserve this setup
+      contradiction.
+    - Private oracles, five repositories; no universal repository guarantee.
+    access_ids: []
+- model_id: claude-haiku-4-5
+  task_id: coding.review
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: For standalone diff-only review of larger real pull requests, missed defects and noisy findings
+    undermine core review usefulness. Small, common-defect fixtures sometimes produce useful findings; this
+    narrower positive evidence does not resolve broad real-change coverage.
+  judgment_ids:
+  - judgment-e35ebbffc833ea6a
+  - judgment-ead74c5a7dd5e11c
+  - judgment-1a104280be08ac23
+  confidence_rationale: 'Low confidence: the real-PR evidence shows core misses but uses automatically derived
+    ground truth and has accounting inconsistencies; smaller tests are limited and use different judges.'
+  evidence_ids:
+  - src-5a27e3e4bac2
+  - src-558e405b8479
+  - src-e642668a5ed9
+  - src-c3b032962bda
+  conditions:
+  - The Low rating concerns standalone diff-only review of larger real pull requests. It does not assess tool-assisted
+    repository review.
+  remaining_gaps:
+  - Human-validated real-PR ground truth, run replication, exact endpoint and matched harness; source accounting
+    inconsistencies.
+  id: task-assessment-3708053cd29c211e
+  aggregate:
+    policy_version: '1'
+    suitability: low
+    evidence_confidence: low
+    assessed_at: '2026-10-08'
+    rationale: For standalone diff-only review of larger real pull requests, missed defects and noisy findings
+      undermine core review usefulness. Small, common-defect fixtures sometimes produce useful findings; this
+      narrower positive evidence does not resolve broad real-change coverage.
+    confidence_rationale: 'Low confidence: the real-PR evidence shows core misses but uses automatically derived
+      ground truth and has accounting inconsistencies; smaller tests are limited and use different judges.'
+    supporting_evidence_ids:
+    - src-5a27e3e4bac2
+    - src-558e405b8479
+    - src-e642668a5ed9
+    - src-c3b032962bda
+    contradictory_evidence_ids:
+    - src-c3b032962bda
+    conflict_rationale: null
+    watch_outs:
+    - Human-validated real-PR ground truth, run replication, exact endpoint and matched harness; source accounting
+      inconsistencies.
     access_ids: []
 - model_id: claude-haiku-4-5
   task_id: coding.scoped_edit
   applicability: applicable
   result: assessed
-  checked_at: '2026-10-07'
-  rationale: Passing hidden assertions on nine short Python functions supports small self-contained implementation
-    with an explicit specification. The small saturated suite leaves untested edge cases, so independent acceptance
-    tests remain necessary.
+  checked_at: '2026-10-08'
+  rationale: Useful for small, explicitly specified implementations with independent acceptance tests. The
+    nine easy Python functions do not establish difficult bulk algorithm implementation; the latter has substantial
+    failures under distinct one-shot CLI setups.
   judgment_ids:
   - judgment-c01714fd674be14c
-  confidence_rationale: 'Low confidence: The exact-task evidence is narrow, incompletely pinned or independently
-    unreplicated; separate configurations are not replications. The conclusion retains the cited findings,
-    their original inspection dates and the conditions below. Small saturated suite does not establish repository,
-    debugging, tool-use or production correctness.'
+  - judgment-b3102f36ea72719b
+  confidence_rationale: 'Low confidence for useful small-function implementation: the positive executed test
+    set has only nine saturated cases and no repeated run. The larger negative study tests a materially different
+    workload.'
   evidence_ids:
   - src-9d3919791a72
   - src-9be7b13428d4
+  - src-9ed314df795b
   conditions:
-  - Single-turn function signature and specification; nine hidden-assertion tasks; one attempt each.
-  - Only the source-described task subsets and setups are assessed; no equivalent provider route is assumed.
-  remaining_gaps: []
+  - Small self-contained implementations and difficult 992-problem Java batches are separate operating conditions.
+  remaining_gaps:
+  - Independent replication of the small-function setup and preservation of existing repository behavior unestablished.
   id: task-assessment-9876a6a73050ac63
   aggregate:
     policy_version: '1'
     suitability: medium
     evidence_confidence: low
     assessed_at: '2026-10-08'
-    rationale: Passing hidden assertions on nine short Python functions supports small self-contained implementation
-      with an explicit specification. The small saturated suite leaves untested edge cases, so independent
-      acceptance tests remain necessary.
-    confidence_rationale: 'Low confidence: The exact-task evidence is narrow, incompletely pinned or independently
-      unreplicated; separate configurations are not replications. The conclusion retains the cited findings,
-      their original inspection dates and the conditions below. Small saturated suite does not establish repository,
-      debugging, tool-use or production correctness.'
+    rationale: Useful for small, explicitly specified implementations with independent acceptance tests. The
+      nine easy Python functions do not establish difficult bulk algorithm implementation; the latter has substantial
+      failures under distinct one-shot CLI setups.
+    confidence_rationale: 'Low confidence for useful small-function implementation: the positive executed test
+      set has only nine saturated cases and no repeated run. The larger negative study tests a materially different
+      workload.'
     supporting_evidence_ids:
     - src-9d3919791a72
     - src-9be7b13428d4
-    contradictory_evidence_ids: []
+    - src-9ed314df795b
+    contradictory_evidence_ids:
+    - src-9ed314df795b
     conflict_rationale: null
     watch_outs:
-    - Small saturated suite does not establish repository, debugging, tool-use or production correctness.
-    - Nine tasks, with 18 of 21 models saturated; no variance or contamination analysis.
-    - Hosted backend and exact decoding support unverified.
+    - Independent replication of the small-function setup and preservation of existing repository behavior
+      unestablished.
     access_ids: []
 - model_id: claude-haiku-4-5
   task_id: coding.tests
@@ -3230,37 +3334,83 @@ records:
 - model_id: claude-haiku-4-5
   task_id: context.reasoning
   applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Long-context composite and grade-school questions do not isolate cross-document reasoning under
-    a controlled supplied-context setup.
-  judgment_ids: []
-  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
-    judgment is inferred from insufficient task evidence.
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: Long-context graph traversal misses substantial required node relationships even when relevant
+    edges remain present.
+  judgment_ids:
+  - judgment-b4b2fdfa65bc0ad1
+  confidence_rationale: 'Low confidence: one bounded study, with serving/setup and replication limits retained;
+    suitability is separate from the metric.'
   evidence_ids:
-  - src-28f7598af662
-  - src-4313a1decc61
-  conditions: []
+  - src-28ef96954527
+  conditions:
+  - 50 longest BFS samples within 200k-token filter; median realized input about 68k; max output 4096; temperature
+    0.
+  - Full signal-aware arm 0.538; 25%-retention 0.621. Separate naive full-context run 0.582, not a replicated
+    mean.
   remaining_gaps:
-  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  - Synthetic English graphs; selection seed fixed; no independent replication.
+  - Effort, tool configuration, serving provider, exact run dates and precision undisclosed.
+  - Header says August 4 while manuscript text says August 24; neither is a proven experiment date.
   id: task-assessment-70acb95d3946a2a0
+  aggregate:
+    policy_version: '1'
+    suitability: low
+    evidence_confidence: low
+    assessed_at: '2026-10-08'
+    rationale: Long-context graph traversal misses substantial required node relationships even when relevant
+      edges remain present.
+    confidence_rationale: 'Low confidence: one bounded study, with serving/setup and replication limits retained;
+      suitability is separate from the metric.'
+    supporting_evidence_ids:
+    - src-28ef96954527
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Synthetic English graphs; selection seed fixed; no independent replication.
+    - Effort, tool configuration, serving provider, exact run dates and precision undisclosed.
+    - Header says August 4 while manuscript text says August 24; neither is a proven experiment date.
+    access_ids: []
 - model_id: claude-haiku-4-5
   task_id: context.retrieval
   applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Declared context size and structured extraction do not isolate recall from supplied long context;
-    external-corpus search is a separate task.
-  judgment_ids: []
-  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
-    judgment is inferred from insufficient task evidence.
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: The documented full-context setup retrieves many requested conversational facts but needs material
+    verification for omissions and incorrect references.
+  judgment_ids:
+  - judgment-8c70704b38a694d3
+  confidence_rationale: 'Low confidence: one commercial memory-system evaluator, with unpinned serving and
+    binary target-answer grading that does not establish whole-response grounding.'
   evidence_ids:
-  - src-bfdf4f90e154
-  - src-6042302df83d
-  conditions: []
+  - src-f49228a34110
+  conditions:
+  - 'LongMemEval S single-session subsets: user facts 54/70 and assistant facts 54/56; one December 12,2025
+    run through OpenRouter.'
+  - Whole-run mean input 116,833 tokens; max_tokens 8192; GPT-4o binary judge; immutable endpoint and sampling
+    unpinned.
   remaining_gaps:
-  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  - Inspected failures deny available commute/internet facts or select the wrong numbered-list entry.
+  - Binary target-answer grading can miss unsupported extra elaboration in otherwise passing outputs.
   id: task-assessment-dcc5526d2e5aed56
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: low
+    assessed_at: '2026-10-08'
+    rationale: The documented full-context setup retrieves many requested conversational facts but needs material
+      verification for omissions and incorrect references.
+    confidence_rationale: 'Low confidence: one commercial memory-system evaluator, with unpinned serving and
+      binary target-answer grading that does not establish whole-response grounding.'
+    supporting_evidence_ids:
+    - src-f49228a34110
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Inspected failures deny available commute/internet facts or select the wrong numbered-list entry.
+    - Binary target-answer grading can miss unsupported extra elaboration in otherwise passing outputs.
+    access_ids: []
 - model_id: claude-haiku-4-5
   task_id: image.editing
   applicability: excluded
@@ -3335,187 +3485,250 @@ records:
   task_id: knowledge.classification
   applicability: applicable
   result: assessed
-  checked_at: '2026-10-07'
-  rationale: On the specified three-class Reddit discourse task, missed belief-class distinctions materially
-    undermine label usefulness. This is a Low fit for that taxonomy and context setup, not a conclusion about
-    every classification workload.
+  checked_at: '2026-10-08'
+  rationale: For the specified universal three-label Reddit response taxonomy, belief-class errors and moderate
+    pooled macro-F1 undermine reliable labeling without substantial reannotation. This does not imply Low suitability
+    for every classification problem.
   judgment_ids:
   - judgment-889de5fb1a96f5d4
-  confidence_rationale: 'Low confidence: The exact-task evidence is narrow, incompletely pinned or independently
-    unreplicated; separate configurations are not replications. The conclusion retains the cited findings,
-    their original inspection dates and the conditions below. Belief-class misses; topic and label sensitivity;
-    no surrounding thread context; corpus prefilter/annotation limits.'
+  confidence_rationale: 'Low confidence for the bounded label-usefulness judgment: one dataset and label schema,
+    incomplete sampling details, annotation sensitivity and no independent replication.'
   evidence_ids:
   - src-4228c246c84d
   conditions:
-  - claude-haiku-4-5-20251001 via vendor CLI; empty tools; April 2–9, 2026; sampling parameters unexposed.
-  - Three response classes; fold-composition variability, not repeat-run model uncertainty.
-  - Only the source-described task subsets and setups are assessed; no equivalent provider route is assumed.
+  - 900 Reddit comments; 20251001 checkpoint; vendor CLI with no tools; April 2–9, 2026 measurement window.
+    Macro-F1 was 0.50 and belief-class F1 was 0.34.
   remaining_gaps:
-  - Independent replication, serving identity and broader task transfer remain limited.
+  - Other label schemas/corpora; full thread context; sampling parameters; independent replication.
   id: task-assessment-f5d314fd7a92ac1b
   aggregate:
     policy_version: '1'
     suitability: low
     evidence_confidence: low
     assessed_at: '2026-10-08'
-    rationale: On the specified three-class Reddit discourse task, missed belief-class distinctions materially
-      undermine label usefulness. This is a Low fit for that taxonomy and context setup, not a conclusion about
-      every classification workload.
-    confidence_rationale: 'Low confidence: The exact-task evidence is narrow, incompletely pinned or independently
-      unreplicated; separate configurations are not replications. The conclusion retains the cited findings,
-      their original inspection dates and the conditions below. Belief-class misses; topic and label sensitivity;
-      no surrounding thread context; corpus prefilter/annotation limits.'
+    rationale: For the specified universal three-label Reddit response taxonomy, belief-class errors and moderate
+      pooled macro-F1 undermine reliable labeling without substantial reannotation. This does not imply Low
+      suitability for every classification problem.
+    confidence_rationale: 'Low confidence for the bounded label-usefulness judgment: one dataset and label
+      schema, incomplete sampling details, annotation sensitivity and no independent replication.'
     supporting_evidence_ids:
     - src-4228c246c84d
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Belief-class misses; topic and label sensitivity; no surrounding thread context; corpus prefilter/annotation
-      limits.
-    - Sampling parameters unexposed; annotation, prefilter and label sensitivity; labels include fact-check
-      responses but do not measure truth verification.
+    - Other label schemas/corpora; full thread context; sampling parameters; independent replication.
     access_ids: []
 - model_id: claude-haiku-4-5
   task_id: knowledge.extraction
   applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Five business extraction cases with aggregate model-judge scores and incomplete public traces
-    do not show whether essential fields and relationships were preserved. More assessable task outcomes are
-    needed.
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: Structured scholarly-PDF extraction is useful with material human checking of values, omissions
+    and uncertain cells. The human-graded study demonstrates task-specific usefulness while a separate claim-extractor
+    pipeline highlights omitted claims under different conditions.
   judgment_ids:
   - judgment-623c7e8d247d4615
-  confidence_rationale: 'No aggregate confidence badge: Five business extraction cases with aggregate model-judge
-    scores and incomplete public traces do not show whether essential fields and relationships were preserved.
-    More assessable task outcomes are needed.'
+  - judgment-8e60e5da087e6417
+  - judgment-d1715bde7b56a4b0
+  confidence_rationale: 'Medium confidence: the detailed human-graded study directly measures field accuracy
+    under an identifiable checkpoint and prompt. A separate limited pipeline confirms omissions under different
+    conditions. Single-generation PDF results, excluded missing outputs and variable-specific errors prevent
+    High confidence.'
   evidence_ids:
+  - src-2db96f59bd00
+  - src-254a5634e649
+  - src-c3013291f6f8
   - src-bfdf4f90e154
   - src-61e1f4d1aadb
   conditions:
-  - May 10 cohort; English single-turn text; five cases in this category, four LLM judges.
-  - Only the source-described task subsets and setups are assessed; no equivalent provider route is assumed.
+  - 43 scholarly PDFs and 770 graded cells; dated Haiku checkpoint, temperature 0, one API call per article
+    and a domain-tuned prompt. A separate claim-extraction pipeline uses four documents, 35 required claims
+    and three runs.
   remaining_gaps:
-  - Independent replication, serving identity and broader task transfer remain limited.
-  - Five business extraction cases with aggregate model-judge scores and incomplete public traces do not show
-    whether essential fields and relationships were preserved. More assessable task outcomes are needed.
+  - Broader document types; unexcluded missing outputs; repeatability of the PDF study; unbiased claim-equivalence
+    grading.
   id: task-assessment-1b0fb30d39474ae8
   aggregate:
     policy_version: '1'
-    suitability: unknown
-    evidence_confidence: null
+    suitability: medium
+    evidence_confidence: medium
     assessed_at: '2026-10-08'
-    rationale: Five business extraction cases with aggregate model-judge scores and incomplete public traces
-      do not show whether essential fields and relationships were preserved. More assessable task outcomes
-      are needed.
-    confidence_rationale: 'No aggregate confidence badge: Five business extraction cases with aggregate model-judge
-      scores and incomplete public traces do not show whether essential fields and relationships were preserved.
-      More assessable task outcomes are needed.'
+    rationale: Structured scholarly-PDF extraction is useful with material human checking of values, omissions
+      and uncertain cells. The human-graded study demonstrates task-specific usefulness while a separate claim-extractor
+      pipeline highlights omitted claims under different conditions.
+    confidence_rationale: 'Medium confidence: the detailed human-graded study directly measures field accuracy
+      under an identifiable checkpoint and prompt. A separate limited pipeline confirms omissions under different
+      conditions. Single-generation PDF results, excluded missing outputs and variable-specific errors prevent
+      High confidence.'
     supporting_evidence_ids:
+    - src-2db96f59bd00
+    - src-254a5634e649
+    - src-c3013291f6f8
     - src-bfdf4f90e154
     - src-61e1f4d1aadb
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - No public full response traces, immutable serving revision or independent replication.
-    - Performance is not established for this exact task rubric.
-    - Public prompts/responses, decoding and exact provider unknown; commercial evaluator, no replication.
-    - May 10 is the cohort/report date; exact experiment day is not independently established.
+    - Broader document types; unexcluded missing outputs; repeatability of the PDF study; unbiased claim-equivalence
+      grading.
     access_ids: []
 - model_id: claude-haiku-4-5
   task_id: knowledge.rag
   applicability: applicable
   result: unknown
-  checked_at: '2026-10-07'
-  rationale: Inspected RAG paper measures injected-failure localization; patent retrieval measures legal rewriting.
-    Neither is exact-model grounded-answer quality.
+  checked_at: '2026-10-08'
+  rationale: AgenticRAG-FP measures attribution of injected failures, while patent retrieval studies amendment
+    mechanisms; neither provides a clean general answer-grounding success rate.
   judgment_ids: []
-  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
-    judgment is inferred from insufficient task evidence.
+  confidence_rationale: 'No aggregate confidence: suitability remains unestablished under this task rubric.'
   evidence_ids:
   - src-6042302df83d
   - src-4313a1decc61
-  conditions: []
+  conditions:
+  - Native documented Haiku 4.5 interface or the explicitly described study setup; no individual access tested.
   remaining_gaps:
-  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  - Exact task-fit under a fully identifiable serving setup remains unestablished.
   id: task-assessment-23bab6c2ee79504a
+  aggregate:
+    policy_version: '1'
+    suitability: unknown
+    evidence_confidence: null
+    assessed_at: '2026-10-08'
+    rationale: AgenticRAG-FP measures attribution of injected failures, while patent retrieval studies amendment
+      mechanisms; neither provides a clean general answer-grounding success rate.
+    confidence_rationale: 'No aggregate confidence: suitability remains unestablished under this task rubric.'
+    supporting_evidence_ids:
+    - src-6042302df83d
+    - src-4313a1decc61
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Exact task-fit under a fully identifiable serving setup remains unestablished.
+    access_ids: []
 - model_id: claude-haiku-4-5
   task_id: knowledge.retrieval
   applicability: applicable
   result: unknown
-  checked_at: '2026-10-07'
-  rationale: Haiku text output can propose search/ranking, but retrieved evidence concerns RAG diagnosis or
-    patent revision rather than isolated corpus ranking quality.
+  checked_at: '2026-10-08'
+  rationale: The original RAG and patent studies use external retrieval but do not isolate this model as a
+    retriever/reranker with standalone relevance labels.
   judgment_ids: []
-  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
-    judgment is inferred from insufficient task evidence.
+  confidence_rationale: 'No aggregate confidence: suitability remains unestablished under this task rubric.'
   evidence_ids:
   - src-6042302df83d
   - src-4313a1decc61
-  conditions: []
+  conditions:
+  - Native documented Haiku 4.5 interface or the explicitly described study setup; no individual access tested.
   remaining_gaps:
-  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  - Exact task-fit under a fully identifiable serving setup remains unestablished.
   id: task-assessment-070c4cf809080b7a
+  aggregate:
+    policy_version: '1'
+    suitability: unknown
+    evidence_confidence: null
+    assessed_at: '2026-10-08'
+    rationale: The original RAG and patent studies use external retrieval but do not isolate this model as
+      a retriever/reranker with standalone relevance labels.
+    confidence_rationale: 'No aggregate confidence: suitability remains unestablished under this task rubric.'
+    supporting_evidence_ids:
+    - src-6042302df83d
+    - src-4313a1decc61
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Exact task-fit under a fully identifiable serving setup remains unestablished.
+    access_ids: []
 - model_id: claude-haiku-4-5
   task_id: language.instruction_following
   applicability: applicable
   result: assessed
-  checked_at: '2026-10-07'
-  rationale: The Portuguese constraint evaluation shows useful adherence with material strict-constraint failures.
-    Check all requested constraints rather than relying on response fluency; other languages and prompts are
-    not established.
+  checked_at: '2026-10-08'
+  rationale: Portuguese literary constraints are often followed but require material verification, especially
+    stacked constraints, exact counts and structure. A separate small word-count study supports better closeness
+    with explicit instructions but does not prove exact-count success.
   judgment_ids:
   - judgment-7156ae35731ec615
-  confidence_rationale: 'Low confidence: The exact-task evidence is narrow, incompletely pinned or independently
-    unreplicated; separate configurations are not replications. The conclusion retains the cited findings,
-    their original inspection dates and the conditions below. Rule-based constraint compliance does not establish
-    factual literary correctness or all-language instruction quality.'
+  - judgment-b82993d0f0bc5b0a
+  confidence_rationale: 'Low confidence for transfer beyond the observed Portuguese constraints: one detailed
+    study and a small independent length-closeness experiment use different criteria and incompletely pinned
+    serving conditions.'
   evidence_ids:
   - src-e495b08b40a6
+  - src-973625333a94
+  - src-5630fbf63aaf
+  - src-6f06612f466e
+  - src-ac1de590bc36
   conditions:
-  - Temperature zero; 200 single-turn literary prompts and 100 three-turn conversations.
-  - Only the source-described task subsets and setups are assessed; no equivalent provider route is assumed.
+  - CAPITU reports 147/200 strictly compliant prompts, 46.7% on hard constraints and 72/100 fully compliant
+    conversations. The OpenRouter request alias is recorded; saved responses report zero reasoning tokens.
   remaining_gaps:
-  - Independent replication, serving identity and broader task transfer remain limited.
+  - Generalization across languages; independent repeatability of CAPITU; strict-count and closeness metrics
+    are not comparable.
   id: task-assessment-a9238a6155ba837c
   aggregate:
     policy_version: '1'
     suitability: medium
     evidence_confidence: low
     assessed_at: '2026-10-08'
-    rationale: The Portuguese constraint evaluation shows useful adherence with material strict-constraint
-      failures. Check all requested constraints rather than relying on response fluency; other languages and
-      prompts are not established.
-    confidence_rationale: 'Low confidence: The exact-task evidence is narrow, incompletely pinned or independently
-      unreplicated; separate configurations are not replications. The conclusion retains the cited findings,
-      their original inspection dates and the conditions below. Rule-based constraint compliance does not establish
-      factual literary correctness or all-language instruction quality.'
+    rationale: Portuguese literary constraints are often followed but require material verification, especially
+      stacked constraints, exact counts and structure. A separate small word-count study supports better closeness
+      with explicit instructions but does not prove exact-count success.
+    confidence_rationale: 'Low confidence for transfer beyond the observed Portuguese constraints: one detailed
+      study and a small independent length-closeness experiment use different criteria and incompletely pinned
+      serving conditions.'
     supporting_evidence_ids:
     - src-e495b08b40a6
+    - src-973625333a94
+    - src-5630fbf63aaf
+    - src-6f06612f466e
+    - src-ac1de590bc36
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Rule-based constraint compliance does not establish factual literary correctness or all-language instruction
-      quality.
-    - Brazilian Portuguese literary context only; provider, serving revision and measurement date unknown.
+    - Generalization across languages; independent repeatability of CAPITU; strict-count and closeness metrics
+      are not comparable.
     access_ids: []
 - model_id: claude-haiku-4-5
   task_id: language.multilingual_chat
   applicability: applicable
   result: unknown
-  checked_at: '2026-10-07'
-  rationale: Translated MMLU and Portuguese literary constraints do not establish multi-language conversational
-    quality.
+  checked_at: '2026-10-08'
+  rationale: Translated-MMLU and idiom translation establish language applicability, not multi-turn dialogue
+    coherence or cultural/register fidelity. Dedicated query located constraint tests, fixed translation, and
+    Haiku-as-judge studies rather than exact-model conversational quality. CAPITU persistence does not establish
+    dialogue coherence/register.
   judgment_ids: []
-  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
-    judgment is inferred from insufficient task evidence.
+  confidence_rationale: 'No aggregate confidence: suitability remains unestablished under this task rubric.'
   evidence_ids:
   - src-07c29d610258
+  - src-c797c226aadf
   - src-e495b08b40a6
-  conditions: []
+  conditions:
+  - Native documented Haiku 4.5 interface or the explicitly described study setup; no individual access tested.
   remaining_gaps:
-  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  - Exact task-fit under a fully identifiable serving setup remains unestablished.
+  - No inspected direct multi-language dialogue-quality evaluation.
   id: task-assessment-30b59fee8e68d79e
+  aggregate:
+    policy_version: '1'
+    suitability: unknown
+    evidence_confidence: null
+    assessed_at: '2026-10-08'
+    rationale: Translated-MMLU and idiom translation establish language applicability, not multi-turn dialogue
+      coherence or cultural/register fidelity. Dedicated query located constraint tests, fixed translation,
+      and Haiku-as-judge studies rather than exact-model conversational quality. CAPITU persistence does not
+      establish dialogue coherence/register.
+    confidence_rationale: 'No aggregate confidence: suitability remains unestablished under this task rubric.'
+    supporting_evidence_ids:
+    - src-07c29d610258
+    - src-c797c226aadf
+    - src-e495b08b40a6
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Exact task-fit under a fully identifiable serving setup remains unestablished.
+    - No inspected direct multi-language dialogue-quality evaluation.
+    access_ids: []
 - model_id: claude-haiku-4-5
   task_id: language.summarization
   applicability: applicable
@@ -3561,63 +3774,104 @@ records:
 - model_id: claude-haiku-4-5
   task_id: language.translation
   applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Translated question comprehension is not model translation; no exact-model translation fidelity
-    result established in the inspected sources.
-  judgment_ids: []
-  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
-    judgment is inferred from insufficient task evidence.
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: 'Ukrainian-English idiom translation is useful with material semantic review: scored meaning loss
+    occurs in 23.1% of English-to-Ukrainian outputs and 12.8% in the reverse direction. Literal meaning-preserving
+    outputs are not counted as failures.'
+  judgment_ids:
+  - judgment-4fea9b29bcbbbfba
+  confidence_rationale: 'Low confidence: one bounded study, with serving/setup and replication limits retained;
+    suitability is separate from the metric.'
   evidence_ids:
-  - src-07c29d610258
-  - src-e495b08b40a6
-  conditions: []
+  - src-c797c226aadf
+  - src-8b699ba6c657
+  - src-cf7bab40a0e4
+  - src-ae0a47d047ce
+  - src-e28da843552b
+  conditions:
+  - Ukrainian↔English; source-only versus named-idiom prompts. Paper says API defaults; released code sets
+    temperature 0.3/max_tokens 1024 and the dated request ID. Historical script-to-run equivalence unresolved.
+  - 'Gemini 2.5 Flash judge: 3 idiomatic meaning preserved,2 meaning preserved without idiom, 1 meaning lost/distorted.'
   remaining_gaps:
-  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  - Published Haiku CSVs contain 5,724 EN→UK and 5,474 UK→EN scored outputs (11,198 total); generation-attempt
+    denominator and repeated trials remain unknown. Missing translations and failed judge calls are omitted
+    by the released scorer.
+  - Single language pair; judge agrees with human sample 87% UK→EN and 78% EN→UK; no qualitative error analysis.
   id: task-assessment-c4edf245f3de0db4
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: low
+    assessed_at: '2026-10-08'
+    rationale: 'Ukrainian-English idiom translation is useful with material semantic review: scored meaning
+      loss occurs in 23.1% of English-to-Ukrainian outputs and 12.8% in the reverse direction. Literal meaning-preserving
+      outputs are not counted as failures.'
+    confidence_rationale: 'Low confidence: one bounded study, with serving/setup and replication limits retained;
+      suitability is separate from the metric.'
+    supporting_evidence_ids:
+    - src-c797c226aadf
+    - src-8b699ba6c657
+    - src-cf7bab40a0e4
+    - src-ae0a47d047ce
+    - src-e28da843552b
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Published Haiku CSVs contain 5,724 EN→UK and 5,474 UK→EN scored outputs (11,198 total); generation-attempt
+      denominator and repeated trials remain unknown. Missing translations and failed judge calls are omitted
+      by the released scorer.
+    - Single language pair; judge agrees with human sample 87% UK→EN and 78% EN→UK; no qualitative error analysis.
+    access_ids: []
 - model_id: claude-haiku-4-5
   task_id: language.writing
   applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: The small business-writing score lacks enough public outputs and audience-specific error analysis
-    to judge whether ordinary review or substantial rewriting is required.
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: For scientific paraphrase and news-style rewriting that must preserve the source certainty and
+    qualifications, frequent judge-scored certainty changes misses a core requirement. This is a narrow fidelity
+    judgment, not a verdict on fiction, free composition or every business-writing task.
   judgment_ids:
   - judgment-391bee7f74fddbd3
-  confidence_rationale: 'No aggregate confidence badge: The small business-writing score lacks enough public
-    outputs and audience-specific error analysis to judge whether ordinary review or substantial rewriting
-    is required.'
+  - judgment-758101839480474d
+  confidence_rationale: 'Medium confidence for this narrow rewriting-fidelity warning: the study directly evaluates
+    the task and calibrates GPT-5.4-mini against 129 retained human raters on 240 pairs (Kendall tau-b 0.47
+    against leave-one-out consensus, SD 0.09). Low human agreement and incomplete serving details prevent High
+    confidence.'
   evidence_ids:
+  - src-92c74f3bbf1d
   - src-bfdf4f90e154
   - src-61e1f4d1aadb
   conditions:
-  - May 10 cohort; English single-turn text; five cases in this category, four LLM judges.
-  - Only the source-described task subsets and setups are assessed; no equivalent provider route is assumed.
+  - 397 scientific sentence inputs; generation temperature 1, top_p 0.9 and a 3,500-token budget; pairwise
+    certainty judge with reversed input order.
+  - Human inter-annotator alpha was about 0.25; pairwise reversed-order judgments were conservatively reconciled.
+    These are judge-scored certainty changes, not objective human-confirmed error labels.
   remaining_gaps:
-  - Independent replication, serving identity and broader task transfer remain limited.
-  - The small business-writing score lacks enough public outputs and audience-specific error analysis to judge
-    whether ordinary review or substantial rewriting is required.
+  - Independent replication; exact provider/day; other writing genres; human agreement limits.
+  - Subjective certainty judgments; judge inconsistency rate and broader writing transfer remain unverified.
   id: task-assessment-be1059e3be2c76c5
   aggregate:
     policy_version: '1'
-    suitability: unknown
-    evidence_confidence: null
+    suitability: low
+    evidence_confidence: medium
     assessed_at: '2026-10-08'
-    rationale: The small business-writing score lacks enough public outputs and audience-specific error analysis
-      to judge whether ordinary review or substantial rewriting is required.
-    confidence_rationale: 'No aggregate confidence badge: The small business-writing score lacks enough public
-      outputs and audience-specific error analysis to judge whether ordinary review or substantial rewriting
-      is required.'
+    rationale: For scientific paraphrase and news-style rewriting that must preserve the source certainty and
+      qualifications, frequent judge-scored certainty changes misses a core requirement. This is a narrow fidelity
+      judgment, not a verdict on fiction, free composition or every business-writing task.
+    confidence_rationale: 'Medium confidence for this narrow rewriting-fidelity warning: the study directly
+      evaluates the task and calibrates GPT-5.4-mini against 129 retained human raters on 240 pairs (Kendall
+      tau-b 0.47 against leave-one-out consensus, SD 0.09). Low human agreement and incomplete serving details
+      prevent High confidence.'
     supporting_evidence_ids:
+    - src-92c74f3bbf1d
     - src-bfdf4f90e154
     - src-61e1f4d1aadb
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - No public full response traces, immutable serving revision or independent replication.
-    - Performance is not established for this exact task rubric.
-    - Public prompts/responses, decoding and exact provider unknown; commercial evaluator, no replication.
-    - May 10 is the cohort/report date; exact experiment day is not independently established.
+    - Independent replication; exact provider/day; other writing genres; human agreement limits.
+    - Subjective certainty judgments; judge inconsistency rate and broader writing transfer remain unverified.
     access_ids: []
 - model_id: claude-haiku-4-5
   task_id: music.generation
@@ -3658,114 +3912,210 @@ records:
   task_id: reasoning.general
   applicability: applicable
   result: unknown
-  checked_at: '2026-10-07'
-  rationale: Grade-school arithmetic, optimization/code and commercial composite scores do not isolate general
-    reasoning breadth.
+  checked_at: '2026-10-08'
+  rationale: Graph traversal, translated subject questions and specialized optimization are task-specific evidence;
+    they do not establish broad logical or causal-premise fit. Source weighting/statistical flaws are task-specific
+    and do not establish broad general logical inference quality.
   judgment_ids: []
-  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
-    judgment is inferred from insufficient task evidence.
+  confidence_rationale: 'No aggregate confidence: suitability remains unestablished under this task rubric.'
   evidence_ids:
-  - src-28f7598af662
+  - src-28ef96954527
+  - src-07c29d610258
   - src-e7bbd7b591b2
-  conditions: []
+  - src-a44e3cdec40a
+  conditions:
+  - Native documented Haiku 4.5 interface or the explicitly described study setup; no individual access tested.
   remaining_gaps:
-  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  - Exact task-fit under a fully identifiable serving setup remains unestablished.
+  - No new directly aligned general-reasoning study inspected.
   id: task-assessment-7f40f93eccc45929
+  aggregate:
+    policy_version: '1'
+    suitability: unknown
+    evidence_confidence: null
+    assessed_at: '2026-10-08'
+    rationale: Graph traversal, translated subject questions and specialized optimization are task-specific
+      evidence; they do not establish broad logical or causal-premise fit. Source weighting/statistical flaws
+      are task-specific and do not establish broad general logical inference quality.
+    confidence_rationale: 'No aggregate confidence: suitability remains unestablished under this task rubric.'
+    supporting_evidence_ids:
+    - src-28ef96954527
+    - src-07c29d610258
+    - src-e7bbd7b591b2
+    - src-a44e3cdec40a
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Exact task-fit under a fully identifiable serving setup remains unestablished.
+    - No new directly aligned general-reasoning study inspected.
+    access_ids: []
 - model_id: claude-haiku-4-5
   task_id: reasoning.math
   applicability: applicable
   result: assessed
-  checked_at: '2026-10-07'
-  rationale: For the recorded eight-shot grade-school numerical problems, the model generally derives correct
-    answers and retains performance under name/number changes. Ordinary answer checking is appropriate within
-    that narrow setup; this does not establish competition mathematics or proof validity.
+  checked_at: '2026-10-08'
+  rationale: Recorded eight-shot grade-school numerical derivations generally produce correct answers under
+    original and name/number-perturbed problems; ordinary answer checking is appropriate only within this narrow
+    setup.
   judgment_ids:
   - judgment-2e00e2f0e910045e
-  confidence_rationale: 'Low confidence: The narrow, prompt-tuned grade-school study is not independently replicated
-    and does not pin an immutable serving revision. The conclusion retains the cited findings, their original
-    inspection dates and the conditions below. Immutable revision unknown; prompt tuning and familiar corpus;
-    two collection runs; numerical answer matching does not evaluate proofs.'
+  confidence_rationale: 'Low confidence: one prompt-tuned numerical-answer study, familiar public corpus, no
+    independent replication, and no proof-validity evaluation.'
   evidence_ids:
   - src-28f7598af662
+  - src-45a5ce926864
   conditions:
-  - Anthropic API, temperature zero, eight-shot examples, tuned format and reasoning prefill; no code execution
-    in CoT.
-  - Only the source-described task subsets and setups are assessed; no equivalent provider route is assumed.
+  - 1,000 paired GSM-Symbolic main-subset problems; Anthropic API, temperature 0, eight examples and tuned
+    prefill. Linked code requests the 20251001 checkpoint with a 1,024-token output limit.
   remaining_gaps:
-  - Independent replication, serving identity and broader task transfer remain limited.
+  - Experiment day, run-level serving identity, replication, proof validity and difficult-mathematics transfer.
   id: task-assessment-00995d010b732e38
   aggregate:
     policy_version: '1'
     suitability: high
     evidence_confidence: low
     assessed_at: '2026-10-08'
-    rationale: For the recorded eight-shot grade-school numerical problems, the model generally derives correct
-      answers and retains performance under name/number changes. Ordinary answer checking is appropriate within
-      that narrow setup; this does not establish competition mathematics or proof validity.
-    confidence_rationale: 'Low confidence: The narrow, prompt-tuned grade-school study is not independently
-      replicated and does not pin an immutable serving revision. The conclusion retains the cited findings,
-      their original inspection dates and the conditions below. Immutable revision unknown; prompt tuning and
-      familiar corpus; two collection runs; numerical answer matching does not evaluate proofs.'
+    rationale: Recorded eight-shot grade-school numerical derivations generally produce correct answers under
+      original and name/number-perturbed problems; ordinary answer checking is appropriate only within this
+      narrow setup.
+    confidence_rationale: 'Low confidence: one prompt-tuned numerical-answer study, familiar public corpus,
+      no independent replication, and no proof-validity evaluation.'
     supporting_evidence_ids:
     - src-28f7598af662
+    - src-45a5ce926864
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Immutable revision unknown; prompt tuning and familiar corpus; two collection runs; numerical answer
-      matching does not evaluate proofs.
-    - Serving revision and experiment day unknown; prompt tuning, familiar corpus and two collection runs;
-      restricted grade-school numerics.
+    - Experiment day, run-level serving identity, replication, proof validity and difficult-mathematics transfer.
     access_ids: []
 - model_id: claude-haiku-4-5
   task_id: reasoning.scientific
   applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Biology safety evaluations and optimization coding do not measure scientific derivation or explanation
-    correctness.
-  judgment_ids: []
-  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
-    judgment is inferred from insufficient task evidence.
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: Zero-shot quantum-calibration explanations omit much of the required scientific analysis; demonstrations
+    help but do not establish unattended reliability.
+  judgment_ids:
+  - judgment-82dd0466ce1765b0
+  confidence_rationale: 'Low confidence: one bounded study, with serving/setup and replication limits retained;
+    suitability is separate from the metric.'
   evidence_ids:
-  - src-ce7f65873843
-  - src-e7bbd7b591b2
-  conditions: []
+  - src-8c34675c07eb
+  - src-0b70e8e50a2d
+  conditions:
+  - Zero-shot without demonstrations; 243 calibration plots, each question an independent single-turn API request;
+    temperature 0, max output 16384, default top_p; up to 3 API-failure retries.
+  - PNG image plus family background; no shared conversation; no hidden system prompt.
   remaining_gaps:
-  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  - Original repository labels the identical archived April scores as GPT-5.4-judged; paper claims a GPT-5.4/Gemini3.1Pro
+    average. Exact scoring provenance unresolved.
+  - Paper lists Haiku in results but omits it from the appendix exact-ID/April 6 access list; serving snapshot
+    and run date remain unknown.
+  - One study; reported repeated-run denominator, precision and endpoint not disclosed.
   id: task-assessment-0f30a5835019c235
+  aggregate:
+    policy_version: '1'
+    suitability: low
+    evidence_confidence: low
+    assessed_at: '2026-10-08'
+    rationale: Zero-shot quantum-calibration explanations omit much of the required scientific analysis; demonstrations
+      help but do not establish unattended reliability.
+    confidence_rationale: 'Low confidence: one bounded study, with serving/setup and replication limits retained;
+      suitability is separate from the metric.'
+    supporting_evidence_ids:
+    - src-8c34675c07eb
+    - src-0b70e8e50a2d
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Original repository labels the identical archived April scores as GPT-5.4-judged; paper claims a GPT-5.4/Gemini3.1Pro
+      average. Exact scoring provenance unresolved.
+    - Paper lists Haiku in results but omits it from the appendix exact-ID/April 6 access list; serving snapshot
+      and run date remain unknown.
+    - One study; reported repeated-run denominator, precision and endpoint not disclosed.
+    access_ids: []
 - model_id: claude-haiku-4-5
   task_id: research.fact_check
   applicability: applicable
   result: unknown
-  checked_at: '2026-10-07'
-  rationale: Reddit fact-check-response labels measure classification, not source checking or claim adjudication;
-    no exact verification study established.
+  checked_at: '2026-10-08'
+  rationale: Patent revision and injected-fault RAG diagnosis do not verify specific factual claims against
+    attributable supporting and conflicting sources. Internal statistic verification and discourse labeling
+    do not inspect provenance/date/relevance against sources; neither meets the complete fact-check rubric.
   judgment_ids: []
-  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
-    judgment is inferred from insufficient task evidence.
+  confidence_rationale: 'No aggregate confidence: suitability remains unestablished under this task rubric.'
   evidence_ids:
+  - src-4313a1decc61
+  - src-6042302df83d
+  - src-a44e3cdec40a
   - src-4228c246c84d
-  conditions: []
+  conditions:
+  - Native documented Haiku 4.5 interface or the explicitly described study setup; no individual access tested.
   remaining_gaps:
-  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  - Exact task-fit under a fully identifiable serving setup remains unestablished.
+  - No direct exact-model source-verification result found in this search pass.
   id: task-assessment-ecc4e04d13da8e1f
+  aggregate:
+    policy_version: '1'
+    suitability: unknown
+    evidence_confidence: null
+    assessed_at: '2026-10-08'
+    rationale: Patent revision and injected-fault RAG diagnosis do not verify specific factual claims against
+      attributable supporting and conflicting sources. Internal statistic verification and discourse labeling
+      do not inspect provenance/date/relevance against sources; neither meets the complete fact-check rubric.
+    confidence_rationale: 'No aggregate confidence: suitability remains unestablished under this task rubric.'
+    supporting_evidence_ids:
+    - src-4313a1decc61
+    - src-6042302df83d
+    - src-a44e3cdec40a
+    - src-4228c246c84d
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Exact task-fit under a fully identifiable serving setup remains unestablished.
+    - No direct exact-model source-verification result found in this search pass.
+    access_ids: []
 - model_id: claude-haiku-4-5
   task_id: research.synthesis
   applicability: applicable
   result: unknown
-  checked_at: '2026-10-07'
-  rationale: Business summaries and patent revision do not independently establish multi-source synthesis with
-    contradiction handling.
+  checked_at: '2026-10-08'
+  rationale: Patent-amendment retrieval and RAG diagnosis were inspected but do not establish cross-source
+    synthesis with preserved attribution and disagreement handling. New controlled evidence reveals a relevant
+    source-weighting failure, but outputs are numerical estimates/source choices rather than full attributed
+    syntheses. Keep compound warning and aggregate Unknown.
   judgment_ids: []
-  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
-    judgment is inferred from insufficient task evidence.
+  confidence_rationale: 'No aggregate confidence: suitability remains unestablished under this task rubric.'
   evidence_ids:
-  - src-bfdf4f90e154
   - src-4313a1decc61
-  conditions: []
+  - src-6042302df83d
+  - src-a44e3cdec40a
+  conditions:
+  - Native documented Haiku 4.5 interface or the explicitly described study setup; no individual access tested.
   remaining_gaps:
-  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  - Exact task-fit under a fully identifiable serving setup remains unestablished.
+  - Complete cross-source synthesis with attribution and disagreement handling unmeasured.
   id: task-assessment-f5984a7e326c5042
+  aggregate:
+    policy_version: '1'
+    suitability: unknown
+    evidence_confidence: null
+    assessed_at: '2026-10-08'
+    rationale: Patent-amendment retrieval and RAG diagnosis were inspected but do not establish cross-source
+      synthesis with preserved attribution and disagreement handling. New controlled evidence reveals a relevant
+      source-weighting failure, but outputs are numerical estimates/source choices rather than full attributed
+      syntheses. Keep compound warning and aggregate Unknown.
+    confidence_rationale: 'No aggregate confidence: suitability remains unestablished under this task rubric.'
+    supporting_evidence_ids:
+    - src-4313a1decc61
+    - src-6042302df83d
+    - src-a44e3cdec40a
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Exact task-fit under a fully identifiable serving setup remains unestablished.
+    - Complete cross-source synthesis with attribution and disagreement handling unmeasured.
+    access_ids: []
 - model_id: claude-haiku-4-5
   task_id: video.editing
   applicability: excluded
@@ -3840,76 +4190,120 @@ records:
   task_id: vision.grounding
   applicability: applicable
   result: unknown
-  checked_at: '2026-10-07'
-  rationale: Image input support and optimization figure extraction do not measure localized boxes, points
-    or spatial grounding.
+  checked_at: '2026-10-08'
+  rationale: QCalEval plot description and IntentOpt diagram-to-code generation do not isolate explicit coordinate
+    or region localization.
   judgment_ids: []
-  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
-    judgment is inferred from insufficient task evidence.
+  confidence_rationale: 'No aggregate confidence: suitability remains unestablished under this task rubric.'
   evidence_ids:
+  - src-8c34675c07eb
   - src-e7bbd7b591b2
-  conditions: []
+  conditions:
+  - Native documented Haiku 4.5 interface or the explicitly described study setup; no individual access tested.
   remaining_gaps:
-  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  - Exact task-fit under a fully identifiable serving setup remains unestablished.
   id: task-assessment-3e2254d6ed03b5dc
+  aggregate:
+    policy_version: '1'
+    suitability: unknown
+    evidence_confidence: null
+    assessed_at: '2026-10-08'
+    rationale: QCalEval plot description and IntentOpt diagram-to-code generation do not isolate explicit coordinate
+      or region localization.
+    confidence_rationale: 'No aggregate confidence: suitability remains unestablished under this task rubric.'
+    supporting_evidence_ids:
+    - src-8c34675c07eb
+    - src-e7bbd7b591b2
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Exact task-fit under a fully identifiable serving setup remains unestablished.
+    access_ids: []
 - model_id: claude-haiku-4-5
   task_id: vision.question_answering
   applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Joint figure-to-Gurobi extraction and code generation cannot isolate question-answer correctness
-    about images.
-  judgment_ids: []
-  confidence_rationale: Applicability follows the text/image/tool interface; no confidence or negative ability
-    judgment is inferred from insufficient task evidence.
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: Quantum-plot visual descriptions are useful with checks on axes and features; scientific diagnosis
+    is separately assessed.
+  judgment_ids:
+  - judgment-3c8d2ae9d1bfffd7
+  confidence_rationale: 'Low confidence: one bounded study, with serving/setup and replication limits retained;
+    suitability is separate from the metric.'
   evidence_ids:
-  - src-e7bbd7b591b2
-  conditions: []
+  - src-8c34675c07eb
+  - src-0b70e8e50a2d
+  conditions:
+  - Zero-shot without demonstrations; 243 calibration plots, each question an independent single-turn API request;
+    temperature 0, max output 16384, default top_p; up to 3 API-failure retries.
+  - PNG image plus family background; no shared conversation; no hidden system prompt.
   remaining_gaps:
-  - Exact task-specific quality under an identifiable serving setup remains unestablished.
+  - Original repository labels the identical archived April scores as GPT-5.4-judged; paper claims a GPT-5.4/Gemini3.1Pro
+    average. Exact scoring provenance unresolved.
+  - Paper lists Haiku in results but omits it from the appendix exact-ID/April 6 access list; serving snapshot
+    and run date remain unknown.
+  - One study; reported repeated-run denominator, precision and endpoint not disclosed.
   id: task-assessment-726103d8f98518b0
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: low
+    assessed_at: '2026-10-08'
+    rationale: Quantum-plot visual descriptions are useful with checks on axes and features; scientific diagnosis
+      is separately assessed.
+    confidence_rationale: 'Low confidence: one bounded study, with serving/setup and replication limits retained;
+      suitability is separate from the metric.'
+    supporting_evidence_ids:
+    - src-8c34675c07eb
+    - src-0b70e8e50a2d
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Original repository labels the identical archived April scores as GPT-5.4-judged; paper claims a GPT-5.4/Gemini3.1Pro
+      average. Exact scoring provenance unresolved.
+    - Paper lists Haiku in results but omits it from the appendix exact-ID/April 6 access list; serving snapshot
+      and run date remain unknown.
+    - One study; reported repeated-run denominator, precision and endpoint not disclosed.
+    access_ids: []
 - model_id: claude-haiku-5-5
   task_id: agent.computer_use
   applicability: applicable
   result: assessed
-  checked_at: '2026-10-07'
-  rationale: The creator computer-use evaluation shows useful completion under its offline agent setup, with
-    unresolved tasks requiring supervision and recovery. Live GUI reliability and other agent configurations
-    remain unestablished.
+  checked_at: '2026-10-08'
+  rationale: Useful supervised progress on offline desktop tasks, but only 37.1% strict complete success despite
+    72.4% partial credit requires material endpoint verification and intervention.
   judgment_ids:
   - judgment-b1c7dd3088dba162
-  confidence_rationale: 'Low confidence: The exact-task evidence is narrow, incompletely pinned or independently
-    unreplicated; separate configurations are not replications. The conclusion retains the cited findings,
-    their original inspection dates and the conditions below. Independent task-specific replication and production
-    acceptance remain unknown.'
+  confidence_rationale: 'Low confidence: one creator-run 82-task offline evaluation; five attempts improve
+    within-study precision without independent replication.'
   evidence_ids:
   - src-cdb1d51fae04
+  - src-5a6452e14543
   conditions:
-  - Launch-day public evidence; exact deployment must match the recorded setup.
-  - Only the source-described task subsets and setups are assessed; no equivalent provider route is assumed.
+  - Exact source-described configurations only; access_ids empty because findings span API, Claude.ai and/or
+    unspecified routes, not one verified canonical entitlement.
+  - Ubuntu GUI, 1080 p, max 500 actions, max effort; five independent attempts per task; offline VM.
   remaining_gaps:
-  - Independent task-specific replication and production acceptance remain unknown.
+  - Online apps, unattended workflows and independent replication remain unknown.
+  - Partial checkpoint score must not be reported as full completion rate.
   id: task-assessment-62ce149b20f55554
   aggregate:
     policy_version: '1'
     suitability: medium
     evidence_confidence: low
     assessed_at: '2026-10-08'
-    rationale: The creator computer-use evaluation shows useful completion under its offline agent setup, with
-      unresolved tasks requiring supervision and recovery. Live GUI reliability and other agent configurations
-      remain unestablished.
-    confidence_rationale: 'Low confidence: The exact-task evidence is narrow, incompletely pinned or independently
-      unreplicated; separate configurations are not replications. The conclusion retains the cited findings,
-      their original inspection dates and the conditions below. Independent task-specific replication and production
-      acceptance remain unknown.'
+    rationale: Useful supervised progress on offline desktop tasks, but only 37.1% strict complete success
+      despite 72.4% partial credit requires material endpoint verification and intervention.
+    confidence_rationale: 'Low confidence: one creator-run 82-task offline evaluation; five attempts improve
+      within-study precision without independent replication.'
     supporting_evidence_ids:
     - src-cdb1d51fae04
+    - src-5a6452e14543
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Independent task-specific replication and production acceptance remain unknown.
-    - Measurement date, effort and complete run configuration unknown; system card failed inspection.
-    - No comparison or narrow-task inference from a shared benchmark name.
+    - Online apps, unattended workflows and independent replication remain unknown.
+    - Partial checkpoint score must not be reported as full completion rate.
     access_ids: []
 - model_id: claude-haiku-5-5
   task_id: agent.long_horizon
@@ -4001,18 +4395,16 @@ records:
   task_id: audio.conversation
   applicability: excluded
   result: excluded
-  checked_at: '2026-10-07'
-  rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
-    API. External tool output does not establish native modality support.
+  checked_at: '2026-10-08'
+  rationale: Listening and speaking in interactive audio dialogue requires a modality absent from the official
+    text/image-input and text-output interface.
   judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image and outputs text, which positively mismatch this task requirement. The boundary
-    is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  confidence_rationale: High confidence in the authoritative exact-model native modality boundary.
   evidence_ids:
   - src-d69b0e2a2d12
   conditions:
-  - Exact-model public evidence; no inference or account access.
+  - Native Claude Haiku 5.5 API boundary; external synthesis, transcription, rendering and tool workflows are
+    separate.
   remaining_gaps: []
   id: task-assessment-34f7c4b503ee4dae
   aggregate:
@@ -4020,36 +4412,30 @@ records:
     suitability: not_supported
     evidence_confidence: high
     assessed_at: '2026-10-08'
-    rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
-      API. External tool output does not establish native modality support.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    rationale: Listening and speaking in interactive audio dialogue requires a modality absent from the official
+      text/image-input and text-output interface.
+    confidence_rationale: High confidence in the authoritative exact-model native modality boundary.
     supporting_evidence_ids:
     - src-d69b0e2a2d12
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
+    - This exclusion does not assess external tool-orchestrated workflows.
     access_ids: []
 - model_id: claude-haiku-5-5
   task_id: audio.speech_generation
   applicability: excluded
   result: excluded
-  checked_at: '2026-10-07'
-  rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
-    API. External tool output does not establish native modality support.
+  checked_at: '2026-10-08'
+  rationale: Producing spoken audio requires a modality absent from the official text/image-input and text-output
+    interface.
   judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image and outputs text, which positively mismatch this task requirement. The boundary
-    is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  confidence_rationale: High confidence in the authoritative exact-model native modality boundary.
   evidence_ids:
   - src-d69b0e2a2d12
   conditions:
-  - Exact-model public evidence; no inference or account access.
+  - Native Claude Haiku 5.5 API boundary; external synthesis, transcription, rendering and tool workflows are
+    separate.
   remaining_gaps: []
   id: task-assessment-c89209987372bb95
   aggregate:
@@ -4057,36 +4443,30 @@ records:
     suitability: not_supported
     evidence_confidence: high
     assessed_at: '2026-10-08'
-    rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
-      API. External tool output does not establish native modality support.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    rationale: Producing spoken audio requires a modality absent from the official text/image-input and text-output
+      interface.
+    confidence_rationale: High confidence in the authoritative exact-model native modality boundary.
     supporting_evidence_ids:
     - src-d69b0e2a2d12
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
+    - This exclusion does not assess external tool-orchestrated workflows.
     access_ids: []
 - model_id: claude-haiku-5-5
   task_id: audio.understanding
   applicability: excluded
   result: excluded
-  checked_at: '2026-10-07'
-  rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
-    API. External tool output does not establish native modality support.
+  checked_at: '2026-10-08'
+  rationale: Understanding native audio input requires a modality absent from the official text/image-input
+    and text-output interface.
   judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image and outputs text, which positively mismatch this task requirement. The boundary
-    is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  confidence_rationale: High confidence in the authoritative exact-model native modality boundary.
   evidence_ids:
   - src-d69b0e2a2d12
   conditions:
-  - Exact-model public evidence; no inference or account access.
+  - Native Claude Haiku 5.5 API boundary; external synthesis, transcription, rendering and tool workflows are
+    separate.
   remaining_gaps: []
   id: task-assessment-90478ea3d7160ee0
   aggregate:
@@ -4094,182 +4474,355 @@ records:
     suitability: not_supported
     evidence_confidence: high
     assessed_at: '2026-10-08'
-    rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
-      API. External tool output does not establish native modality support.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    rationale: Understanding native audio input requires a modality absent from the official text/image-input
+      and text-output interface.
+    confidence_rationale: High confidence in the authoritative exact-model native modality boundary.
     supporting_evidence_ids:
     - src-d69b0e2a2d12
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
+    - This exclusion does not assess external tool-orchestrated workflows.
     access_ids: []
 - model_id: claude-haiku-5-5
   task_id: coding.architecture
   applicability: unknown
   result: unknown
-  checked_at: '2026-10-07'
-  rationale: 'Investigated coding.architecture: exact-model sources do not establish the rubric inclusion rules;
-    broad/older-model results cannot complete this task.'
+  checked_at: '2026-10-08'
+  rationale: No standalone system-boundary/tradeoff design result was isolated. Repository composite and code-quality
+    judge dimensions cannot establish architecture fit.
   judgment_ids: []
-  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  confidence_rationale: 'Null aggregate confidence: exact-task performance remains unestablished after targeted
+    search and source inspection.'
   evidence_ids:
-  - src-d69b0e2a2d12
-  - src-dc1c9e6b2717
+  - src-cbb33e0a8075
+  - src-a2775c826853
+  - src-e26a5c9bdee9
+  - src-f79710555d62
+  - src-cb6abd8d17ce
   conditions:
-  - Exact-model public evidence; no inference or account access.
+  - Exact source-described configurations only; access_ids empty because findings span API, Claude.ai and/or
+    unspecified routes, not one verified canonical entitlement.
   remaining_gaps:
-  - Task-specific setup and exact-model evidence remain unknown.
+  - Need exact-model tasks that directly measure the supplied inclusion rules, with artifacts and setup.
   id: task-assessment-d0e5a4d550b0cd7d
-- model_id: claude-haiku-5-5
-  task_id: coding.debugging
-  applicability: unknown
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: 'Investigated coding.debugging: exact-model sources do not establish the rubric inclusion rules;
-    broad/older-model results cannot complete this task.'
-  judgment_ids: []
-  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
-  evidence_ids:
-  - src-d69b0e2a2d12
-  - src-dc1c9e6b2717
-  conditions:
-  - Exact-model public evidence; no inference or account access.
-  remaining_gaps:
-  - Task-specific setup and exact-model evidence remain unknown.
-  id: task-assessment-326b7b712ec16138
-- model_id: claude-haiku-5-5
-  task_id: coding.frontend
-  applicability: unknown
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: 'Investigated coding.frontend: exact-model sources do not establish the rubric inclusion rules;
-    broad/older-model results cannot complete this task.'
-  judgment_ids: []
-  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
-  evidence_ids:
-  - src-d69b0e2a2d12
-  - src-dc1c9e6b2717
-  conditions:
-  - Exact-model public evidence; no inference or account access.
-  remaining_gaps:
-  - Task-specific setup and exact-model evidence remain unknown.
-  id: task-assessment-40621d8c483b753c
-- model_id: claude-haiku-5-5
-  task_id: coding.refactoring
-  applicability: unknown
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: 'Investigated coding.refactoring: exact-model sources do not establish the rubric inclusion rules;
-    broad/older-model results cannot complete this task.'
-  judgment_ids: []
-  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
-  evidence_ids:
-  - src-d69b0e2a2d12
-  - src-dc1c9e6b2717
-  conditions:
-  - Exact-model public evidence; no inference or account access.
-  remaining_gaps:
-  - Task-specific setup and exact-model evidence remain unknown.
-  id: task-assessment-38fa48f06c4e25a4
-- model_id: claude-haiku-5-5
-  task_id: coding.repository_work
-  applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: The creator documents a material workflow failure mode, but its frequency and task outcomes are
-    insufficient to decide the aggregate performance level. Keep the warning visible without turning it into
-    a measured ability rating.
-  judgment_ids:
-  - judgment-d5a912ae74e8e488
-  confidence_rationale: 'No aggregate confidence badge: The creator documents a material workflow failure mode,
-    but its frequency and task outcomes are insufficient to decide the aggregate performance level. Keep the
-    warning visible without turning it into a measured ability rating.'
-  evidence_ids:
-  - src-8ac74a7d6b30
-  conditions:
-  - Effort and prompt length matter; no transfer to arbitrary harnesses.
-  - Only the source-described task subsets and setups are assessed; no equivalent provider route is assumed.
-  remaining_gaps:
-  - Creator-reported limitation; frequency and independent recovery unknown.
-  - The creator documents a material workflow failure mode, but its frequency and task outcomes are insufficient
-    to decide the aggregate performance level. Keep the warning visible without turning it into a measured
-    ability rating.
-  id: task-assessment-1c6d29ed4df8ddd4
   aggregate:
     policy_version: '1'
     suitability: unknown
     evidence_confidence: null
     assessed_at: '2026-10-08'
-    rationale: The creator documents a material workflow failure mode, but its frequency and task outcomes
-      are insufficient to decide the aggregate performance level. Keep the warning visible without turning
-      it into a measured ability rating.
-    confidence_rationale: 'No aggregate confidence badge: The creator documents a material workflow failure
-      mode, but its frequency and task outcomes are insufficient to decide the aggregate performance level.
-      Keep the warning visible without turning it into a measured ability rating.'
+    rationale: No standalone system-boundary/tradeoff design result was isolated. Repository composite and
+      code-quality judge dimensions cannot establish architecture fit.
+    confidence_rationale: 'Null aggregate confidence: exact-task performance remains unestablished after targeted
+      search and source inspection.'
     supporting_evidence_ids:
-    - src-8ac74a7d6b30
+    - src-cbb33e0a8075
+    - src-a2775c826853
+    - src-e26a5c9bdee9
+    - src-f79710555d62
+    - src-cb6abd8d17ce
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Creator-reported limitation; frequency and independent recovery unknown.
-    - Performance is not established for this exact task rubric.
+    - Need exact-model tasks that directly measure the supplied inclusion rules, with artifacts and setup.
+    access_ids: []
+- model_id: claude-haiku-5-5
+  task_id: coding.debugging
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: Useful diagnosis and repair of bounded supplied-code failures, with an uncovered input-type edge
+    requiring correction before reuse.
+  judgment_ids:
+  - judgment-011a2b23f886e43e
+  confidence_rationale: 'Low confidence: one detailed single-function test and one private-code self-report;
+    exhaustive executions of one generated program are not model replication.'
+  evidence_ids:
+  - src-8c17dc7abf0e
+  - src-cb6abd8d17ce
+  conditions:
+  - Exact source-described configurations only; access_ids empty because findings span API, Claude.ai and/or
+    unspecified routes, not one verified canonical entitlement.
+  - Claude.ai Medium range-merging repair; separate reported Rust fixes have incomplete setup.
+  remaining_gaps:
+  - Broader fault diagnosis and repeated reliability unknown.
+  - Heterogeneous list/tuple inputs failed in the inspected Python example.
+  id: task-assessment-326b7b712ec16138
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: low
+    assessed_at: '2026-10-08'
+    rationale: Useful diagnosis and repair of bounded supplied-code failures, with an uncovered input-type
+      edge requiring correction before reuse.
+    confidence_rationale: 'Low confidence: one detailed single-function test and one private-code self-report;
+      exhaustive executions of one generated program are not model replication.'
+    supporting_evidence_ids:
+    - src-8c17dc7abf0e
+    - src-cb6abd8d17ce
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Broader fault diagnosis and repeated reliability unknown.
+    - Heterogeneous list/tuple inputs failed in the inspected Python example.
+    access_ids: []
+- model_id: claude-haiku-5-5
+  task_id: coding.frontend
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: Useful transaction-feed implementations under a fixed contract, but partial failed behavior/layout
+    checks require material correction.
+  judgment_ids:
+  - judgment-cc9e887e3c17d763
+  confidence_rationale: 'Medium confidence: five fresh attempts and documented deterministic UI checks provide
+    relevant nonvendor evidence; one project and missing exact CLI manifests limit generalization.'
+  evidence_ids:
+  - src-e26a5c9bdee9
+  - src-f79710555d62
+  conditions:
+  - Exact source-described configurations only; access_ids empty because findings span API, Claude.ai and/or
+    unspecified routes, not one verified canonical entitlement.
+  - Flutter Bank Feed only; medium 3.5/high 3.0 out of 5 quality points.
+  remaining_gaps:
+  - No general accessibility or arbitrary design-to-code conclusion.
+  - Points are not full-pass counts.
+  id: task-assessment-40621d8c483b753c
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: medium
+    assessed_at: '2026-10-08'
+    rationale: Useful transaction-feed implementations under a fixed contract, but partial failed behavior/layout
+      checks require material correction.
+    confidence_rationale: 'Medium confidence: five fresh attempts and documented deterministic UI checks provide
+      relevant nonvendor evidence; one project and missing exact CLI manifests limit generalization.'
+    supporting_evidence_ids:
+    - src-e26a5c9bdee9
+    - src-f79710555d62
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - No general accessibility or arbitrary design-to-code conclusion.
+    - Points are not full-pass counts.
+    access_ids: []
+- model_id: claude-haiku-5-5
+  task_id: coding.refactoring
+  applicability: unknown
+  result: unknown
+  checked_at: '2026-10-08'
+  rationale: No controlled behavior-preserving restructuring result was isolated. Feature/repair tasks and
+    an ambiguously described cross-language move do not establish this rubric.
+  judgment_ids: []
+  confidence_rationale: 'Null aggregate confidence: exact-task performance remains unestablished after targeted
+    search and source inspection.'
+  evidence_ids:
+  - src-cbb33e0a8075
+  - src-a2775c826853
+  - src-e26a5c9bdee9
+  - src-f79710555d62
+  - src-cb6abd8d17ce
+  conditions:
+  - Exact source-described configurations only; access_ids empty because findings span API, Claude.ai and/or
+    unspecified routes, not one verified canonical entitlement.
+  remaining_gaps:
+  - Need exact-model tasks that directly measure the supplied inclusion rules, with artifacts and setup.
+  id: task-assessment-38fa48f06c4e25a4
+  aggregate:
+    policy_version: '1'
+    suitability: unknown
+    evidence_confidence: null
+    assessed_at: '2026-10-08'
+    rationale: No controlled behavior-preserving restructuring result was isolated. Feature/repair tasks and
+      an ambiguously described cross-language move do not establish this rubric.
+    confidence_rationale: 'Null aggregate confidence: exact-task performance remains unestablished after targeted
+      search and source inspection.'
+    supporting_evidence_ids:
+    - src-cbb33e0a8075
+    - src-a2775c826853
+    - src-e26a5c9bdee9
+    - src-f79710555d62
+    - src-cb6abd8d17ce
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Need exact-model tasks that directly measure the supplied inclusion rules, with artifacts and setup.
+    access_ids: []
+- model_id: claude-haiku-5-5
+  task_id: coding.repository_work
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: Can integrate useful repository changes when hidden tests and scope review catch substantial incomplete
+    or unmergeable outcomes; low-effort verification warnings remain relevant.
+  judgment_ids:
+  - judgment-3b72450649afcdb5
+  - judgment-d5a912ae74e8e488
+  - judgment-ba1e32b7164d9463
+  confidence_rationale: 'Medium confidence: original Cognition task data and disclosed methodology are directly
+    relevant; vendor relay is the same evaluation, not independent replication. Practitioner reports corroborate
+    verification risk under different setups.'
+  evidence_ids:
+  - src-cbb33e0a8075
+  - src-a2775c826853
+  - src-8e26d954ad88
+  - src-5a6452e14543
+  - src-8ac74a7d6b30
+  - src-cb6abd8d17ce
+  conditions:
+  - Exact source-described configurations only; access_ids empty because findings span API, Claude.ai and/or
+    unspecified routes, not one verified canonical entitlement.
+  - Claude Code FrontierCode 1.1, 100 Main/150 Extended tasks, five runs per task; separate qualitative low/medium
+    warnings.
+  remaining_gaps:
+  - Exact provider, CLI version, run dates and per-task artifacts unknown.
+  - No transfer of mixed score to architecture, review, refactoring or test generation.
+  id: task-assessment-1c6d29ed4df8ddd4
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: medium
+    assessed_at: '2026-10-08'
+    rationale: Can integrate useful repository changes when hidden tests and scope review catch substantial
+      incomplete or unmergeable outcomes; low-effort verification warnings remain relevant.
+    confidence_rationale: 'Medium confidence: original Cognition task data and disclosed methodology are directly
+      relevant; vendor relay is the same evaluation, not independent replication. Practitioner reports corroborate
+      verification risk under different setups.'
+    supporting_evidence_ids:
+    - src-cbb33e0a8075
+    - src-a2775c826853
+    - src-8e26d954ad88
+    - src-5a6452e14543
+    - src-8ac74a7d6b30
+    - src-cb6abd8d17ce
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Exact provider, CLI version, run dates and per-task artifacts unknown.
+    - No transfer of mixed score to architecture, review, refactoring or test generation.
     access_ids: []
 - model_id: claude-haiku-5-5
   task_id: coding.review
-  applicability: unknown
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: 'Investigated coding.review: exact-model sources do not establish the rubric inclusion rules;
-    broad/older-model results cannot complete this task.'
-  judgment_ids: []
-  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: Useful initial supported findings on short supplied-code review scenarios, but severity and missed-defect
+    risks need human validation.
+  judgment_ids:
+  - judgment-df67900e20adda9d
+  - judgment-e38ef14d0467ef9e
+  confidence_rationale: 'Low confidence: two different small supplied-code workflows and an unreplicated private-code
+    report are relevant,but full artifacts/setup and representative task coverage remain incomplete.'
   evidence_ids:
-  - src-d69b0e2a2d12
-  - src-dc1c9e6b2717
+  - src-ad432a6151be
+  - src-592e1496bf8f
+  - src-cb6abd8d17ce
+  - src-eaa56d3523ad
   conditions:
-  - Exact-model public evidence; no inference or account access.
+  - Exact source-described configurations only; access_ids empty because findings span API, Claude.ai and/or
+    unspecified routes, not one verified canonical entitlement.
+  - Driftproof one scenario; Claude Code 2.1.284; Opus 5 is grader, Haiku 5.5 generates reviews.
   remaining_gaps:
-  - Task-specific setup and exact-model evidence remain unknown.
+  - Full code/reviews and representative repository coverage unavailable.
+  - Skill-lift uncertainty does not prove lack of model review ability.
   id: task-assessment-00fcaa516ef8e113
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: low
+    assessed_at: '2026-10-08'
+    rationale: Useful initial supported findings on short supplied-code review scenarios, but severity and
+      missed-defect risks need human validation.
+    confidence_rationale: 'Low confidence: two different small supplied-code workflows and an unreplicated
+      private-code report are relevant,but full artifacts/setup and representative task coverage remain incomplete.'
+    supporting_evidence_ids:
+    - src-ad432a6151be
+    - src-592e1496bf8f
+    - src-cb6abd8d17ce
+    - src-eaa56d3523ad
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Full code/reviews and representative repository coverage unavailable.
+    - Skill-lift uncertainty does not prove lack of model review ability.
+    access_ids: []
 - model_id: claude-haiku-5-5
   task_id: coding.scoped_edit
-  applicability: unknown
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: 'Investigated coding.scoped_edit: exact-model sources do not establish the rubric inclusion rules;
-    broad/older-model results cannot complete this task.'
-  judgment_ids: []
-  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: Small specified implementations and fixed-contract edits are useful with acceptance tests; partial
+    failures and one max-effort no-code attempt make material checking necessary.
+  judgment_ids:
+  - judgment-4edd9c57ae9dfb08
+  - judgment-8519c22c2d0cdf56
+  confidence_rationale: 'Medium confidence: two distinct nonvendor workflows provide direct evidence, but selected
+    tasks, private test details and mismatched setups prevent a high-confidence broad conclusion.'
   evidence_ids:
-  - src-d69b0e2a2d12
-  - src-dc1c9e6b2717
+  - src-fdd6f11500c5
+  - src-e26a5c9bdee9
+  - src-f79710555d62
   conditions:
-  - Exact-model public evidence; no inference or account access.
+  - Exact source-described configurations only; access_ids empty because findings span API, Claude.ai and/or
+    unspecified routes, not one verified canonical entitlement.
+  - API Python functions and separate Claude Code PHP/Go fixed-contract tasks; do not pool results.
   remaining_gaps:
-  - Task-specific setup and exact-model evidence remain unknown.
+  - No stable failure-rate estimate; token caps and effort affect whether any code is emitted.
   id: task-assessment-d533159f8053b5c9
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: medium
+    assessed_at: '2026-10-08'
+    rationale: Small specified implementations and fixed-contract edits are useful with acceptance tests; partial
+      failures and one max-effort no-code attempt make material checking necessary.
+    confidence_rationale: 'Medium confidence: two distinct nonvendor workflows provide direct evidence, but
+      selected tasks, private test details and mismatched setups prevent a high-confidence broad conclusion.'
+    supporting_evidence_ids:
+    - src-fdd6f11500c5
+    - src-e26a5c9bdee9
+    - src-f79710555d62
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - No stable failure-rate estimate; token caps and effort affect whether any code is emitted.
+    access_ids: []
 - model_id: claude-haiku-5-5
   task_id: coding.tests
-  applicability: unknown
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: 'Investigated coding.tests: exact-model sources do not establish the rubric inclusion rules; broad/older-model
-    results cannot complete this task.'
-  judgment_ids: []
-  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: Can produce targeted assertions for explicitly requested boundary/invariant cases, but the one
+    inspected suite needs additional edge coverage.
+  judgment_ids:
+  - judgment-4d393d5034eb0aee
+  confidence_rationale: 'Low confidence: one visible four-assertion suite, with reviewer execution; static
+    inspection supports relevance but no mutation-testing or repeated-generation study.'
   evidence_ids:
-  - src-d69b0e2a2d12
-  - src-dc1c9e6b2717
+  - src-8c17dc7abf0e
   conditions:
-  - Exact-model public evidence; no inference or account access.
+  - Exact source-described configurations only; access_ids empty because findings span API, Claude.ai and/or
+    unspecified routes, not one verified canonical entitlement.
+  - Claude.ai Medium, no tools; test categories explicitly supplied.
   remaining_gaps:
-  - Task-specific setup and exact-model evidence remain unknown.
+  - Only one function; heterogeneous-container case missed; no broader testing strategy established.
   id: task-assessment-2a4b6c25405e04af
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: low
+    assessed_at: '2026-10-08'
+    rationale: Can produce targeted assertions for explicitly requested boundary/invariant cases, but the one
+      inspected suite needs additional edge coverage.
+    confidence_rationale: 'Low confidence: one visible four-assertion suite, with reviewer execution; static
+      inspection supports relevance but no mutation-testing or repeated-generation study.'
+    supporting_evidence_ids:
+    - src-8c17dc7abf0e
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Only one function; heterogeneous-container case missed; no broader testing strategy established.
+    access_ids: []
 - model_id: claude-haiku-5-5
   task_id: context.reasoning
   applicability: unknown
@@ -4291,35 +4844,35 @@ records:
   task_id: context.retrieval
   applicability: unknown
   result: unknown
-  checked_at: '2026-10-07'
-  rationale: 'Investigated context.retrieval: exact-model sources do not establish the rubric inclusion rules;
-    broad/older-model results cannot complete this task.'
+  checked_at: '2026-10-08'
+  rationale: 'Investigated extended supplied-context retrieval separately: AlphaSense document QA and Rogo
+    10-K lookup do not disclose length, information placement or competing-content controls, and no exact-model
+    position-controlled retrieval evaluation was located.'
   judgment_ids: []
-  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  confidence_rationale: 'No aggregate confidence: task-specific outcomes and required setup are insufficient.'
   evidence_ids:
-  - src-d69b0e2a2d12
+  - src-5a6452e14543
+  - src-cdb1d51fae04
   - src-dc1c9e6b2717
   conditions:
-  - Exact-model public evidence; no inference or account access.
+  - Exact-model public evidence inspected; no model inference performed.
   remaining_gaps:
-  - Task-specific setup and exact-model evidence remain unknown.
+  - Retrieval accuracy by supplied-context length, placement and distractions remains unknown.
   id: task-assessment-e917473258788d20
 - model_id: claude-haiku-5-5
   task_id: image.editing
   applicability: excluded
   result: excluded
-  checked_at: '2026-10-07'
-  rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
-    API. External tool output does not establish native modality support.
+  checked_at: '2026-10-08'
+  rationale: Editing native image pixels with preservation requires a modality absent from the official text/image-input
+    and text-output interface.
   judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image and outputs text, which positively mismatch this task requirement. The boundary
-    is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  confidence_rationale: High confidence in the authoritative exact-model native modality boundary.
   evidence_ids:
   - src-d69b0e2a2d12
   conditions:
-  - Exact-model public evidence; no inference or account access.
+  - Native Claude Haiku 5.5 API boundary; external synthesis, transcription, rendering and tool workflows are
+    separate.
   remaining_gaps: []
   id: task-assessment-2c3296e9d8da744e
   aggregate:
@@ -4327,36 +4880,30 @@ records:
     suitability: not_supported
     evidence_confidence: high
     assessed_at: '2026-10-08'
-    rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
-      API. External tool output does not establish native modality support.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    rationale: Editing native image pixels with preservation requires a modality absent from the official text/image-input
+      and text-output interface.
+    confidence_rationale: High confidence in the authoritative exact-model native modality boundary.
     supporting_evidence_ids:
     - src-d69b0e2a2d12
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
+    - This exclusion does not assess external tool-orchestrated workflows.
     access_ids: []
 - model_id: claude-haiku-5-5
   task_id: image.generation
   applicability: excluded
   result: excluded
-  checked_at: '2026-10-07'
-  rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
-    API. External tool output does not establish native modality support.
+  checked_at: '2026-10-08'
+  rationale: Creating native still-image pixels requires a modality absent from the official text/image-input
+    and text-output interface.
   judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image and outputs text, which positively mismatch this task requirement. The boundary
-    is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  confidence_rationale: High confidence in the authoritative exact-model native modality boundary.
   evidence_ids:
   - src-d69b0e2a2d12
   conditions:
-  - Exact-model public evidence; no inference or account access.
+  - Native Claude Haiku 5.5 API boundary; external synthesis, transcription, rendering and tool workflows are
+    separate.
   remaining_gaps: []
   id: task-assessment-755706c9523d5646
   aggregate:
@@ -4364,57 +4911,60 @@ records:
     suitability: not_supported
     evidence_confidence: high
     assessed_at: '2026-10-08'
-    rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
-      API. External tool output does not establish native modality support.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    rationale: Creating native still-image pixels requires a modality absent from the official text/image-input
+      and text-output interface.
+    confidence_rationale: High confidence in the authoritative exact-model native modality boundary.
     supporting_evidence_ids:
     - src-d69b0e2a2d12
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
+    - This exclusion does not assess external tool-orchestrated workflows.
     access_ids: []
 - model_id: claude-haiku-5-5
   task_id: knowledge.classification
   applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Launch positioning identifies an intended use, but it does not supply assessable exact-task outcomes
-    sufficient for a suitability level.
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: 'Policy-defined category assignment is useful with validation: two small original tests report
+    correct invoice/ticket decisions, while a separate tight-budget migration study exposes missing or unusable
+    labels.'
   judgment_ids:
-  - judgment-27ba5595ff0f118f
-  confidence_rationale: 'No aggregate confidence badge: Launch positioning identifies an intended use, but
-    it does not supply assessable exact-task outcomes sufficient for a suitability level.'
+  - judgment-c6c14e837cdab3b5
+  - judgment-167a64ec15f54fe0
+  - judgment-ebf985b28bd05114
+  confidence_rationale: Medium confidence from independent original task observations with material sample,
+    setup and grading limits; suitability is separate from confidence.
   evidence_ids:
-  - src-d69b0e2a2d12
+  - src-3446600040dc
+  - src-8c17dc7abf0e
+  - src-30dab146c692
   conditions:
-  - Launch-day public evidence; exact deployment must match the recorded setup.
-  - Only the source-described task subsets and setups are assessed; no equivalent provider route is assumed.
+  - High-effort invoice policy test, Medium-effort Claude.ai ticket routing, and separately recorded API migration
+    settings; no pooled accuracy.
+  - Validate format, budget for thinking and route ambiguous cases for review.
   remaining_gaps:
-  - Independent task-specific replication and production acceptance remain unknown.
-  - Launch positioning identifies an intended use, but it does not supply assessable exact-task outcomes sufficient
-    for a suitability level.
+  - Production class balance, ambiguous-label correctness and matched-setting replication unknown.
   id: task-assessment-fb33dd1364414b14
   aggregate:
     policy_version: '1'
-    suitability: unknown
-    evidence_confidence: null
+    suitability: medium
+    evidence_confidence: medium
     assessed_at: '2026-10-08'
-    rationale: Launch positioning identifies an intended use, but it does not supply assessable exact-task
-      outcomes sufficient for a suitability level.
-    confidence_rationale: 'No aggregate confidence badge: Launch positioning identifies an intended use, but
-      it does not supply assessable exact-task outcomes sufficient for a suitability level.'
+    rationale: 'Policy-defined category assignment is useful with validation: two small original tests report
+      correct invoice/ticket decisions, while a separate tight-budget migration study exposes missing or unusable
+      labels.'
+    confidence_rationale: Medium confidence from independent original task observations with material sample,
+      setup and grading limits; suitability is separate from confidence.
     supporting_evidence_ids:
-    - src-d69b0e2a2d12
-    contradictory_evidence_ids: []
+    - src-3446600040dc
+    - src-8c17dc7abf0e
+    - src-30dab146c692
+    contradictory_evidence_ids:
+    - src-30dab146c692
     conflict_rationale: null
     watch_outs:
-    - Independent task-specific replication and production acceptance remain unknown.
-    - Performance is not established for this exact task rubric.
+    - 45/45 usable labels does not establish semantic classification accuracy.
     access_ids: []
 - model_id: claude-haiku-5-5
   task_id: knowledge.extraction
@@ -4475,141 +5025,300 @@ records:
   task_id: knowledge.retrieval
   applicability: unknown
   result: unknown
-  checked_at: '2026-10-07'
-  rationale: 'Investigated knowledge.retrieval: exact-model sources do not establish the rubric inclusion rules;
-    broad/older-model results cannot complete this task.'
+  checked_at: '2026-10-08'
+  rationale: No exact-model query/document representation or candidate reranking study with a documented corpus
+    was located. WANDR’s grounded fact collection, web search behavior and Rogo fact lookup do not isolate
+    semantic retrieval/ranking quality.
   judgment_ids: []
-  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  confidence_rationale: 'No aggregate confidence: task-specific outcomes and required setup are insufficient.'
   evidence_ids:
-  - src-d69b0e2a2d12
-  - src-dc1c9e6b2717
+  - src-5a6452e14543
+  - src-cdb1d51fae04
+  - src-71ea095aee2f
   conditions:
-  - Exact-model public evidence; no inference or account access.
+  - Exact-model public evidence inspected; no model inference performed.
   remaining_gaps:
-  - Task-specific setup and exact-model evidence remain unknown.
+  - Corpus and candidate setup, relevance labels, recall/ranking metric and exact-model trials remain unknown.
   id: task-assessment-d45046a69b444f64
 - model_id: claude-haiku-5-5
   task_id: language.instruction_following
-  applicability: unknown
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: 'Investigated language.instruction_following: exact-model sources do not establish the rubric
-    inclusion rules; broad/older-model results cannot complete this task.'
-  judgment_ids: []
-  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: 'Medium suitability for bounded short text/JSON workflows with explicit output validation and
+    correction: original tests show useful constraint handling but repeated length, format and task-objective
+    misses. This does not endorse unattended strict-compliance or adversarial use.'
+  judgment_ids:
+  - judgment-b4eaf3079f3bd70d
+  - judgment-774b4c9c38835241
+  - judgment-baf6423c421fc5ca
+  - judgment-13c2b90c21a358d4
+  - judgment-2eeb54292ab8e544
+  - judgment-b03703cf1d5e9d5f
+  confidence_rationale: 'Medium confidence for this bounded conclusion: multiple attributable original workflows
+    agree that validation is needed, but small samples, different routes/effort, partly model-based judges
+    and an unreplicated title report limit generalization.'
   evidence_ids:
-  - src-d69b0e2a2d12
-  - src-dc1c9e6b2717
+  - src-8ac74a7d6b30
+  - src-a73697043308
+  - src-8c17dc7abf0e
+  - src-30dab146c692
+  - src-71ea095aee2f
+  - src-702fe405e315
   conditions:
-  - Exact-model public evidence; no inference or account access.
+  - Exact-model public evidence inspected; no model inference performed.
+  - Polish OpenRouter low-effort13-prompt study, Claude.ai Free Medium four-chat review, Claude API selected-label
+    tests and thinking-disabled app-title experiment are distinct setups.
   remaining_gaps:
-  - Task-specific setup and exact-model evidence remain unknown.
+  - No broad exact-model instruction benchmark or multi-turn adversarial failure rate established.
+  - No comparable cross-route controlled replication; title failures under disabled thinking are not transferred
+    to all settings.
   id: task-assessment-99d4d97c5179942e
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: medium
+    assessed_at: '2026-10-08'
+    rationale: 'Medium suitability for bounded short text/JSON workflows with explicit output validation and
+      correction: original tests show useful constraint handling but repeated length, format and task-objective
+      misses. This does not endorse unattended strict-compliance or adversarial use.'
+    confidence_rationale: 'Medium confidence for this bounded conclusion: multiple attributable original workflows
+      agree that validation is needed, but small samples, different routes/effort, partly model-based judges
+      and an unreplicated title report limit generalization.'
+    supporting_evidence_ids:
+    - src-a73697043308
+    - src-8c17dc7abf0e
+    - src-30dab146c692
+    contradictory_evidence_ids:
+    - src-8ac74a7d6b30
+    - src-71ea095aee2f
+    - src-702fe405e315
+    conflict_rationale: Successes concern selected bounded tasks; creator warnings and thinking-disabled title
+      failures show limits. Different setups support a conditional validation-required conclusion, not a universal
+      high rating or a general model regression.
+    watch_outs:
+    - Hard length and exact-format constraints need deterministic checking.
+    - Thinking budgets can leave no text; title workflow can answer instead of label.
+    - One successful injected ticket does not establish injection resistance.
+    access_ids: []
 - model_id: claude-haiku-5-5
   task_id: language.multilingual_chat
-  applicability: unknown
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: 'Investigated language.multilingual_chat: exact-model sources do not establish the rubric inclusion
-    rules; broad/older-model results cannot complete this task.'
-  judgment_ids: []
-  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
-  evidence_ids:
-  - src-d69b0e2a2d12
-  - src-dc1c9e6b2717
-  conditions:
-  - Exact-model public evidence; no inference or account access.
-  remaining_gaps:
-  - Task-specific setup and exact-model evidence remain unknown.
-  id: task-assessment-99c458e8f0177913
-- model_id: claude-haiku-5-5
-  task_id: language.summarization
   applicability: applicable
   result: unknown
-  checked_at: '2026-10-07'
-  rationale: Launch positioning identifies an intended use, but it does not supply assessable exact-task outcomes
-    sufficient for a suitability level.
-  judgment_ids:
-  - judgment-8550661dd3250cd7
-  confidence_rationale: 'No aggregate confidence badge: Launch positioning identifies an intended use, but
-    it does not supply assessable exact-task outcomes sufficient for a suitability level.'
+  checked_at: '2026-10-08'
+  rationale: The model catalog documents multilingual capability and the Polish study measures single-turn
+    writing; neither establishes multi-turn dialogue coherence, register or code-switching under this task
+    rubric.
+  judgment_ids: []
+  confidence_rationale: 'No aggregate confidence: the exact task requirement remains unestablished.'
   evidence_ids:
-  - src-cdb1d51fae04
+  - src-f3655eaf1407
+  - src-a73697043308
   conditions:
-  - Launch-day public evidence; exact deployment must match the recorded setup.
-  - Only the source-described task subsets and setups are assessed; no equivalent provider route is assumed.
+  - Native text dialogue is applicable; no native-audio inference.
   remaining_gaps:
-  - Independent task-specific replication and production acceptance remain unknown.
-  - Launch positioning identifies an intended use, but it does not supply assessable exact-task outcomes sufficient
-    for a suitability level.
-  id: task-assessment-950325cee30bc61b
+  - Exact-model multi-turn conversational evaluation and language-specific error pattern unknown.
+  id: task-assessment-99c458e8f0177913
   aggregate:
     policy_version: '1'
     suitability: unknown
     evidence_confidence: null
     assessed_at: '2026-10-08'
-    rationale: Launch positioning identifies an intended use, but it does not supply assessable exact-task
-      outcomes sufficient for a suitability level.
-    confidence_rationale: 'No aggregate confidence badge: Launch positioning identifies an intended use, but
-      it does not supply assessable exact-task outcomes sufficient for a suitability level.'
+    rationale: The model catalog documents multilingual capability and the Polish study measures single-turn
+      writing; neither establishes multi-turn dialogue coherence, register or code-switching under this task
+      rubric.
+    confidence_rationale: 'No aggregate confidence: the exact task requirement remains unestablished.'
     supporting_evidence_ids:
-    - src-cdb1d51fae04
+    - src-f3655eaf1407
+    - src-a73697043308
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Independent task-specific replication and production acceptance remain unknown.
-    - Performance is not established for this exact task rubric.
+    - Exact-model multi-turn conversational evaluation and language-specific error pattern unknown.
+    access_ids: []
+- model_id: claude-haiku-5-5
+  task_id: language.summarization
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: 'Short supplied-text summaries are useful with material checking: published outputs preserve memo
+    figures and a negative study result, but word-limit and language errors recur across two small original
+    studies.'
+  judgment_ids:
+  - judgment-8550661dd3250cd7
+  - judgment-bbc616d7eebd7a45
+  - judgment-5e8af0f7fabe963e
+  confidence_rationale: Medium confidence from independent original task observations with material sample,
+    setup and grading limits; suitability is separate from confidence.
+  evidence_ids:
+  - src-387324d65e28
+  - src-d2b215df9595
+  - src-475033497c97
+  - src-1f1d3170f6c4
+  - src-247a216c9083
+  - src-1d13287c6cc8
+  - src-caf4a0b06fc2
+  - src-a73697043308
+  - src-f21349d0715d
+  conditions:
+  - Five short English texts through llmwise/Anthropic with undisclosed effort, plus one low-effort Polish
+    summary; no long-document extrapolation.
+  remaining_gaps:
+  - Small samples, model-judge limits, undisclosed effort and no repeated attempts prevent high confidence.
+  id: task-assessment-950325cee30bc61b
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: medium
+    assessed_at: '2026-10-08'
+    rationale: 'Short supplied-text summaries are useful with material checking: published outputs preserve
+      memo figures and a negative study result, but word-limit and language errors recur across two small original
+      studies.'
+    confidence_rationale: Medium confidence from independent original task observations with material sample,
+      setup and grading limits; suitability is separate from confidence.
+    supporting_evidence_ids:
+    - src-387324d65e28
+    - src-d2b215df9595
+    - src-475033497c97
+    - src-1f1d3170f6c4
+    - src-247a216c9083
+    - src-1d13287c6cc8
+    - src-caf4a0b06fc2
+    - src-a73697043308
+    - src-f21349d0715d
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Two of five llmwise summaries fail, including 61>60 and39>30 words; Polish summary also exceeds80 words.
+    - No claim that three passes establish factual perfection on all documents.
     access_ids: []
 - model_id: claude-haiku-5-5
   task_id: language.translation
-  applicability: unknown
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: 'Investigated language.translation: exact-model sources do not establish the rubric inclusion
-    rules; broad/older-model results cannot complete this task.'
-  judgment_ids: []
-  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: 'Short translations are a bounded candidate with material native-speaker review: five examples
+    retain enough source meaning, names and numbers to pass the disclosed screen, which is too lenient to establish
+    nuance or polished target-language quality.'
+  judgment_ids:
+  - judgment-836668f2db6aac0b
+  confidence_rationale: 'Low confidence: one small attributed study with unresolved replication and serving
+    details; the conclusion is bounded to the observed task.'
   evidence_ids:
-  - src-d69b0e2a2d12
-  - src-dc1c9e6b2717
+  - src-34ea48a4faa8
+  - src-d2b215df9595
+  - src-e13f7503f163
+  - src-11b3486f8e43
+  - src-95c7cf97e22d
+  - src-36af3597d45e
+  - src-7d8036798734
   conditions:
-  - Exact-model public evidence; no inference or account access.
+  - English to Spanish, French, German, Japanese and Brazilian Portuguese; one passage each; Anthropic via
+    OpenRouter, no tools, effort undisclosed.
   remaining_gaps:
-  - Task-specific setup and exact-model evidence remain unknown.
+  - No human semantic validation, register calibration, repeated trials or other language pairs.
   id: task-assessment-1043dd04c51e382a
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: low
+    assessed_at: '2026-10-08'
+    rationale: 'Short translations are a bounded candidate with material native-speaker review: five examples
+      retain enough source meaning, names and numbers to pass the disclosed screen, which is too lenient to
+      establish nuance or polished target-language quality.'
+    confidence_rationale: 'Low confidence: one small attributed study with unresolved replication and serving
+      details; the conclusion is bounded to the observed task.'
+    supporting_evidence_ids:
+    - src-34ea48a4faa8
+    - src-d2b215df9595
+    - src-e13f7503f163
+    - src-11b3486f8e43
+    - src-95c7cf97e22d
+    - src-36af3597d45e
+    - src-7d8036798734
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Opus5.5 back-translation chrF≥0.4 is a coarse proxy, not a proof of legal or professional translation
+      accuracy.
+    access_ids: []
 - model_id: claude-haiku-5-5
   task_id: language.writing
-  applicability: unknown
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: 'Investigated language.writing: exact-model sources do not establish the rubric inclusion rules;
-    broad/older-model results cannot complete this task.'
-  judgment_ids: []
-  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: 'Short prose is useful with material editing: original Polish, support-draft and English task
+    tests preserve communicative content, while jargon, tone, hard length limits and title-as-answer errors
+    need checking.'
+  judgment_ids:
+  - judgment-14b370d8ea21baf6
+  - judgment-8867f39aa4bdde41
+  - judgment-1ab53d0b016215de
+  - judgment-5db6d8e9c5912ec9
+  confidence_rationale: Medium confidence from independent original task observations with material sample,
+    setup and grading limits; suitability is separate from confidence.
   evidence_ids:
-  - src-d69b0e2a2d12
-  - src-dc1c9e6b2717
+  - src-a73697043308
+  - src-f21349d0715d
+  - src-8c17dc7abf0e
+  - src-71ea095aee2f
+  - src-78dcb07e48d6
+  - src-d2b215df9595
+  - src-2e4bfe44c369
+  - src-63c3f4e3712d
+  - src-7f024ab0f607
+  - src-395c3ceaf095
+  - src-f11b84e2a4e0
   conditions:
-  - Exact-model public evidence; no inference or account access.
+  - 'Distinct original short-text setups: Polish OpenRouter low, Claude.ai Medium support, llmwise Anthropic
+    no-tool prompts, and reasoning-off application titles.'
+  - No pooled accuracy or universal language/genre recommendation.
   remaining_gaps:
-  - Task-specific setup and exact-model evidence remain unknown.
+  - Broader genres, exact llmwise effort, human calibration and repeated attempts remain unknown.
   id: task-assessment-993554c2dacaacc2
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: medium
+    assessed_at: '2026-10-08'
+    rationale: 'Short prose is useful with material editing: original Polish, support-draft and English task
+      tests preserve communicative content, while jargon, tone, hard length limits and title-as-answer errors
+      need checking.'
+    confidence_rationale: Medium confidence from independent original task observations with material sample,
+      setup and grading limits; suitability is separate from confidence.
+    supporting_evidence_ids:
+    - src-a73697043308
+    - src-f21349d0715d
+    - src-8c17dc7abf0e
+    - src-71ea095aee2f
+    - src-78dcb07e48d6
+    - src-d2b215df9595
+    - src-2e4bfe44c369
+    - src-63c3f4e3712d
+    - src-7f024ab0f607
+    - src-395c3ceaf095
+    - src-f11b84e2a4e0
+    contradictory_evidence_ids:
+    - src-71ea095aee2f
+    conflict_rationale: null
+    watch_outs:
+    - English rewrite retained jargon; 103-word paragraph exceeded 90. Titles sometimes answer the underlying
+      message.
+    access_ids: []
 - model_id: claude-haiku-5-5
   task_id: music.generation
   applicability: excluded
   result: excluded
-  checked_at: '2026-10-07'
-  rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
-    API. External tool output does not establish native modality support.
+  checked_at: '2026-10-08'
+  rationale: Generating musical audio requires a modality absent from the official text/image-input and text-output
+    interface.
   judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image and outputs text, which positively mismatch this task requirement. The boundary
-    is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  confidence_rationale: High confidence in the authoritative exact-model native modality boundary.
   evidence_ids:
   - src-d69b0e2a2d12
   conditions:
-  - Exact-model public evidence; no inference or account access.
+  - Native Claude Haiku 5.5 API boundary; external synthesis, transcription, rendering and tool workflows are
+    separate.
   remaining_gaps: []
   id: task-assessment-6054473604e5d63f
   aggregate:
@@ -4617,19 +5326,15 @@ records:
     suitability: not_supported
     evidence_confidence: high
     assessed_at: '2026-10-08'
-    rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
-      API. External tool output does not establish native modality support.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    rationale: Generating musical audio requires a modality absent from the official text/image-input and text-output
+      interface.
+    confidence_rationale: High confidence in the authoritative exact-model native modality boundary.
     supporting_evidence_ids:
     - src-d69b0e2a2d12
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
+    - This exclusion does not assess external tool-orchestrated workflows.
     access_ids: []
 - model_id: claude-haiku-5-5
   task_id: reasoning.general
@@ -4678,88 +5383,168 @@ records:
     access_ids: []
 - model_id: claude-haiku-5-5
   task_id: reasoning.math
-  applicability: unknown
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: 'Investigated reasoning.math: exact-model sources do not establish the rubric inclusion rules;
-    broad/older-model results cannot complete this task.'
-  judgment_ids: []
-  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: Handled the five inspected elementary arithmetic, combinatorics and probability problems with
+    correct final answers and short derivations; ordinary review suffices for these specific problem types.
+  judgment_ids:
+  - judgment-c9352a63e1b4d9f2
+  confidence_rationale: 'Low confidence: only five fixed prompts and one reply each, with unknown effort; this
+    is a bounded elementary-math conclusion, not advanced mathematics or general reliability.'
   evidence_ids:
-  - src-d69b0e2a2d12
-  - src-dc1c9e6b2717
+  - src-354a85681004
+  - src-d2b215df9595
   conditions:
-  - Exact-model public evidence; no inference or account access.
+  - Exact source-described configurations only; access_ids empty because findings span API, Claude.ai and/or
+    unspecified routes, not one verified canonical entitlement.
+  - llmwise via OpenRouter/Anthropic; October 7 replies; no tools, 8k output cap.
   remaining_gaps:
-  - Task-specific setup and exact-model evidence remain unknown.
+  - Advanced proofs, harder distributions and repeated reliability remain unknown.
   id: task-assessment-499e4a1aeab3a323
+  aggregate:
+    policy_version: '1'
+    suitability: high
+    evidence_confidence: low
+    assessed_at: '2026-10-08'
+    rationale: Handled the five inspected elementary arithmetic, combinatorics and probability problems with
+      correct final answers and short derivations; ordinary review suffices for these specific problem types.
+    confidence_rationale: 'Low confidence: only five fixed prompts and one reply each, with unknown effort;
+      this is a bounded elementary-math conclusion, not advanced mathematics or general reliability.'
+    supporting_evidence_ids:
+    - src-354a85681004
+    - src-d2b215df9595
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Advanced proofs, harder distributions and repeated reliability remain unknown.
+    access_ids: []
 - model_id: claude-haiku-5-5
   task_id: reasoning.scientific
-  applicability: unknown
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: 'Investigated reasoning.scientific: exact-model sources do not establish the rubric inclusion
-    rules; broad/older-model results cannot complete this task.'
-  judgment_ids: []
-  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: Core causal/statistical inference requirements failed on three of five traps, including confounding
+    and observational-unit handling; usefulness is undermined for this tested autonomous analytical workflow.
+  judgment_ids:
+  - judgment-426b1ceddfdc7b59
+  confidence_rationale: 'Low confidence: one private five-question subset, unknown effort and replication;
+    the conclusion is limited to the reported statistical-inference workflow.'
   evidence_ids:
-  - src-d69b0e2a2d12
-  - src-dc1c9e6b2717
+  - src-b5840ea93831
   conditions:
-  - Exact-model public evidence; no inference or account access.
+  - Exact source-described configurations only; access_ids empty because findings span API, Claude.ai and/or
+    unspecified routes, not one verified canonical entitlement.
+  - Plotly Studio Embedded, synthetic wind-fleet analysis; 2/5 statistics traps, not 37/43 mixed total.
   remaining_gaps:
-  - Task-specific setup and exact-model evidence remain unknown.
+  - No general scientific-domain assessment; request manifests and artifacts undisclosed.
   id: task-assessment-1c140690071bddbe
+  aggregate:
+    policy_version: '1'
+    suitability: low
+    evidence_confidence: low
+    assessed_at: '2026-10-08'
+    rationale: Core causal/statistical inference requirements failed on three of five traps, including confounding
+      and observational-unit handling; usefulness is undermined for this tested autonomous analytical workflow.
+    confidence_rationale: 'Low confidence: one private five-question subset, unknown effort and replication;
+      the conclusion is limited to the reported statistical-inference workflow.'
+    supporting_evidence_ids:
+    - src-b5840ea93831
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - No general scientific-domain assessment; request manifests and artifacts undisclosed.
+    access_ids: []
 - model_id: claude-haiku-5-5
   task_id: research.fact_check
-  applicability: unknown
+  applicability: applicable
   result: unknown
-  checked_at: '2026-10-07'
-  rationale: 'Investigated research.fact_check: exact-model sources do not establish the rubric inclusion rules;
-    broad/older-model results cannot complete this task.'
+  checked_at: '2026-10-08'
+  rationale: A workflow study includes a thirteen-claim draft with five planted errors, but does not expose
+    the attributable evidence supplied or an isolated claim-verification result. Other inspected source-handling
+    reports and recall quizzes do not establish this rubric.
   judgment_ids: []
-  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  confidence_rationale: 'No aggregate confidence: the exact task requirement remains unestablished.'
   evidence_ids:
-  - src-d69b0e2a2d12
-  - src-dc1c9e6b2717
+  - src-eaa56d3523ad
+  - src-71ea095aee2f
+  - src-a73697043308
   conditions:
-  - Exact-model public evidence; no inference or account access.
+  - Exact source identity, date, relevance and reconciliation are required; mixed seven-task correctness cannot
+    become a fact-checking rate.
   remaining_gaps:
-  - Task-specific setup and exact-model evidence remain unknown.
+  - Claim-level original inputs/sources, isolated grading, contradictory-source handling and uncertainty calibration
+    unknown.
   id: task-assessment-f34cd39639dc1c4e
+  aggregate:
+    policy_version: '1'
+    suitability: unknown
+    evidence_confidence: null
+    assessed_at: '2026-10-08'
+    rationale: A workflow study includes a thirteen-claim draft with five planted errors, but does not expose
+      the attributable evidence supplied or an isolated claim-verification result. Other inspected source-handling
+      reports and recall quizzes do not establish this rubric.
+    confidence_rationale: 'No aggregate confidence: the exact task requirement remains unestablished.'
+    supporting_evidence_ids:
+    - src-eaa56d3523ad
+    - src-71ea095aee2f
+    - src-a73697043308
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Claim-level original inputs/sources, isolated grading, contradictory-source handling and uncertainty
+      calibration unknown.
+    access_ids: []
 - model_id: claude-haiku-5-5
   task_id: research.synthesis
-  applicability: unknown
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: 'Investigated research.synthesis: exact-model sources do not establish the rubric inclusion rules;
-    broad/older-model results cannot complete this task.'
-  judgment_ids: []
-  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: The observed application setup misses key source material and relies on unverified snippets or
+    screenshot guesses, undermining the core requirement for grounded cross-source reporting.
+  judgment_ids:
+  - judgment-dab8687c81a7a991
+  confidence_rationale: 'Low confidence: one small attributed study with unresolved replication and serving
+    details; the conclusion is bounded to the observed task.'
   evidence_ids:
-  - src-d69b0e2a2d12
-  - src-dc1c9e6b2717
+  - src-71ea095aee2f
   conditions:
-  - Exact-model public evidence; no inference or account access.
+  - One run per setup at low, medium and high; Exa/Brave search, page fetch, image search/analysis; blind Opus
+    judging.
   remaining_gaps:
-  - Task-specific setup and exact-model evidence remain unknown.
+  - Only four briefs, one run per setup; hidden prompts, provider and judge bias limit generalization.
   id: task-assessment-8f6233faac73b939
+  aggregate:
+    policy_version: '1'
+    suitability: low
+    evidence_confidence: low
+    assessed_at: '2026-10-08'
+    rationale: The observed application setup misses key source material and relies on unverified snippets
+      or screenshot guesses, undermining the core requirement for grounded cross-source reporting.
+    confidence_rationale: 'Low confidence: one small attributed study with unresolved replication and serving
+      details; the conclusion is bounded to the observed task.'
+    supporting_evidence_ids:
+    - src-71ea095aee2f
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Brand-guideline source missed and colors guessed from screenshots; a forum-quote win used search excerpts
+      without opening source pages.
+    access_ids: []
 - model_id: claude-haiku-5-5
   task_id: video.editing
   applicability: excluded
   result: excluded
-  checked_at: '2026-10-07'
-  rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
-    API. External tool output does not establish native modality support.
+  checked_at: '2026-10-08'
+  rationale: Editing a native video sequence requires a modality absent from the official text/image-input
+    and text-output interface.
   judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image and outputs text, which positively mismatch this task requirement. The boundary
-    is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  confidence_rationale: High confidence in the authoritative exact-model native modality boundary.
   evidence_ids:
   - src-d69b0e2a2d12
   conditions:
-  - Exact-model public evidence; no inference or account access.
+  - Native Claude Haiku 5.5 API boundary; external synthesis, transcription, rendering and tool workflows are
+    separate.
   remaining_gaps: []
   id: task-assessment-2489457cdc600233
   aggregate:
@@ -4767,36 +5552,30 @@ records:
     suitability: not_supported
     evidence_confidence: high
     assessed_at: '2026-10-08'
-    rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
-      API. External tool output does not establish native modality support.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    rationale: Editing a native video sequence requires a modality absent from the official text/image-input
+      and text-output interface.
+    confidence_rationale: High confidence in the authoritative exact-model native modality boundary.
     supporting_evidence_ids:
     - src-d69b0e2a2d12
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
+    - This exclusion does not assess external tool-orchestrated workflows.
     access_ids: []
 - model_id: claude-haiku-5-5
   task_id: video.generation
   applicability: excluded
   result: excluded
-  checked_at: '2026-10-07'
-  rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
-    API. External tool output does not establish native modality support.
+  checked_at: '2026-10-08'
+  rationale: Generating native video frames and motion requires a modality absent from the official text/image-input
+    and text-output interface.
   judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image and outputs text, which positively mismatch this task requirement. The boundary
-    is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  confidence_rationale: High confidence in the authoritative exact-model native modality boundary.
   evidence_ids:
   - src-d69b0e2a2d12
   conditions:
-  - Exact-model public evidence; no inference or account access.
+  - Native Claude Haiku 5.5 API boundary; external synthesis, transcription, rendering and tool workflows are
+    separate.
   remaining_gaps: []
   id: task-assessment-f93f6a5d9b45ce15
   aggregate:
@@ -4804,79 +5583,99 @@ records:
     suitability: not_supported
     evidence_confidence: high
     assessed_at: '2026-10-08'
-    rationale: Rubric requires direct modality processing/generation absent from this text/image-input, text-output
-      API. External tool output does not establish native modality support.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    rationale: Generating native video frames and motion requires a modality absent from the official text/image-input
+      and text-output interface.
+    confidence_rationale: High confidence in the authoritative exact-model native modality boundary.
     supporting_evidence_ids:
     - src-d69b0e2a2d12
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
+    - This exclusion does not assess external tool-orchestrated workflows.
     access_ids: []
 - model_id: claude-haiku-5-5
   task_id: vision.grounding
-  applicability: unknown
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: 'Investigated vision.grounding: exact-model sources do not establish the rubric inclusion rules;
-    broad/older-model results cannot complete this task.'
-  judgment_ids: []
-  confidence_rationale: No task-specific conclusion from composite, sibling model, or release-day absence.
+  applicability: applicable
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: Produces useful class-conditioned bounding boxes, but stricter spatial matching exposes enough
+    imprecision to require material localization checks.
+  judgment_ids:
+  - judgment-acdb24a71a38f8c7
+  confidence_rationale: 'Medium confidence: exact-model ground-truth detection metrics at two efforts with
+    three runs; undisclosed sample and request details constrain generalization.'
   evidence_ids:
-  - src-d69b0e2a2d12
-  - src-dc1c9e6b2717
+  - src-aac5808af0ec
+  - src-12127a4ce5a0
   conditions:
-  - Exact-model public evidence; no inference or account access.
+  - Exact source-described configurations only; access_ids empty because findings span API, Claude.ai and/or
+    unspecified routes, not one verified canonical entitlement.
+  - Roboflow normalized box coordinates, mAP thresholds; low/high native effort.
   remaining_gaps:
-  - Task-specific setup and exact-model evidence remain unknown.
+  - No static-interface-control-specific study or autonomous GUI completion inference.
   id: task-assessment-6f250c04f5cc2109
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: medium
+    assessed_at: '2026-10-08'
+    rationale: Produces useful class-conditioned bounding boxes, but stricter spatial matching exposes enough
+      imprecision to require material localization checks.
+    confidence_rationale: 'Medium confidence: exact-model ground-truth detection metrics at two efforts with
+      three runs; undisclosed sample and request details constrain generalization.'
+    supporting_evidence_ids:
+    - src-aac5808af0ec
+    - src-12127a4ce5a0
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - No static-interface-control-specific study or autonomous GUI completion inference.
+    access_ids: []
 - model_id: claude-haiku-5-5
   task_id: vision.question_answering
   applicability: applicable
   result: assessed
-  checked_at: '2026-10-07'
-  rationale: The no-tool chart-question result establishes useful visual question answering on some evaluated
-    cases, with many missed answers requiring substantial checking. General image interpretation and other
-    configurations remain uncertain.
+  checked_at: '2026-10-08'
+  rationale: Useful image-based answers with material verification; independent counting/reasoning errors persist,
+    and specialized chart performance is highly tool-dependent.
   judgment_ids:
   - judgment-f7c3002252f74a20
-  confidence_rationale: 'Low confidence: The exact-task evidence is narrow, incompletely pinned or independently
-    unreplicated; separate configurations are not replications. The conclusion retains the cited findings,
-    their original inspection dates and the conditions below. Independent task-specific replication and production
-    acceptance remain unknown.'
+  - judgment-aa99bcfcb8165b0a
+  confidence_rationale: 'Medium confidence: relevant independent repeated task results supplement one vendor
+    chart study; unknown sample/resolution details and no matched replication prevent high confidence.'
   evidence_ids:
-  - src-cdb1d51fae04
+  - src-5a6452e14543
+  - src-efd1db045882
+  - src-657f3a6037f7
+  - src-12127a4ce5a0
   conditions:
-  - Launch-day public evidence; exact deployment must match the recorded setup.
-  - Only the source-described task subsets and setups are assessed; no equivalent provider route is assumed.
+  - Exact source-described configurations only; access_ids empty because findings span API, Claude.ai and/or
+    unspecified routes, not one verified canonical entitlement.
+  - Roboflow low/high imageQA judged and strict scores; separate Anthropic max Chartography no-tool/container
+    setups.
   remaining_gaps:
-  - Independent task-specific replication and production acceptance remain unknown.
+  - Do not use inconsistent site-wide Roboflow composite or transfer to grounding.
+  - No universal image-resolution or modality guarantee.
   id: task-assessment-125bdec834549880
   aggregate:
     policy_version: '1'
     suitability: medium
-    evidence_confidence: low
+    evidence_confidence: medium
     assessed_at: '2026-10-08'
-    rationale: The no-tool chart-question result establishes useful visual question answering on some evaluated
-      cases, with many missed answers requiring substantial checking. General image interpretation and other
-      configurations remain uncertain.
-    confidence_rationale: 'Low confidence: The exact-task evidence is narrow, incompletely pinned or independently
-      unreplicated; separate configurations are not replications. The conclusion retains the cited findings,
-      their original inspection dates and the conditions below. Independent task-specific replication and production
-      acceptance remain unknown.'
+    rationale: Useful image-based answers with material verification; independent counting/reasoning errors
+      persist, and specialized chart performance is highly tool-dependent.
+    confidence_rationale: 'Medium confidence: relevant independent repeated task results supplement one vendor
+      chart study; unknown sample/resolution details and no matched replication prevent high confidence.'
     supporting_evidence_ids:
-    - src-cdb1d51fae04
+    - src-5a6452e14543
+    - src-efd1db045882
+    - src-657f3a6037f7
+    - src-12127a4ce5a0
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Independent task-specific replication and production acceptance remain unknown.
-    - Measurement date, effort and complete run configuration unknown; system card failed inspection.
-    - No comparison or narrow-task inference from a shared benchmark name.
+    - Do not use inconsistent site-wide Roboflow composite or transfer to grounding.
+    - No universal image-resolution or modality guarantee.
     access_ids: []
 - model_id: claude-opus-5-5
   task_id: agent.computer_use
@@ -6237,23 +7036,42 @@ records:
 - model_id: claude-sonnet-5-5
   task_id: coding.refactoring
   applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Investigated Restructure existing code while preserving its specified externally observable behavior.
-    No exact-model direct task conclusion was established. Repository, planted-bug, preference and review tasks
-    retain separate setups; effort and client tool naming affect reports.
-  judgment_ids: []
-  confidence_rationale: No ability or confidence score is inferred from missing task evidence.
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: A supplied shippingCost function was simplified while preserving eight tested behaviors. This
+    supports a small assisted refactor, with material checking required beyond that single function.
+  judgment_ids:
+  - judgment-1d166a8ffd058c04
+  confidence_rationale: 'Low confidence: The exact-task result is preliminary, tiny or vendor-limited; ordinary
+    review outside the recorded fixture cannot be assumed.'
   evidence_ids:
-  - src-752375ff0c97
-  - src-f3655eaf1407
-  - src-4e3ca8a95d36
-  - src-ad78a04807f9
+  - src-0351220a07ba
+  - src-abcf985b3d88
   conditions:
-  - Interface applicability does not establish task quality.
+  - llmwise/OpenRouterSeptember 28 fixture; executable Node.js checker,8K reply cap,effort unknown; no equivalent
+    provider route assumed.
   remaining_gaps:
-  - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
+  - One answer and eight tests; no cross-module restructuring or exhaustive equivalence evidence.
+  - Kunya sketch is not an implemented behavior-preserving refactor; Ofox lead body was inaccessible.
   id: task-assessment-3ef5c7f28faa2fbc
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: low
+    assessed_at: '2026-10-08'
+    rationale: A supplied shippingCost function was simplified while preserving eight tested behaviors. This
+      supports a small assisted refactor, with material checking required beyond that single function.
+    confidence_rationale: 'Low confidence: The exact-task result is preliminary, tiny or vendor-limited; ordinary
+      review outside the recorded fixture cannot be assumed.'
+    supporting_evidence_ids:
+    - src-0351220a07ba
+    - src-abcf985b3d88
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - One answer and eight tests; no cross-module restructuring or exhaustive equivalence evidence.
+    - Kunya sketch is not an implemented behavior-preserving refactor; Ofox lead body was inaccessible.
+    access_ids: []
 - model_id: claude-sonnet-5-5
   task_id: coding.repository_work
   applicability: applicable
@@ -6629,22 +7447,39 @@ records:
   task_id: language.multilingual_chat
   applicability: applicable
   result: unknown
-  checked_at: '2026-10-07'
-  rationale: Investigated Conduct contextually appropriate dialogue in one or more languages across conversational
-    turns. No exact-model direct task conclusion was established. Repository, planted-bug, preference and review
-    tasks retain separate setups; effort and client tool naming affect reports.
+  checked_at: '2026-10-08'
+  rationale: The German study is single-turn prose generation, and multilingual knowledge tests do not establish
+    multi-turn dialogue context, register or code-switching reliability.
   judgment_ids: []
-  confidence_rationale: No ability or confidence score is inferred from missing task evidence.
+  confidence_rationale: Investigation does not establish this task’s suitability; aggregate confidence stays
+    null.
   evidence_ids:
-  - src-752375ff0c97
   - src-f3655eaf1407
-  - src-4e3ca8a95d36
-  - src-ad78a04807f9
+  - src-d802b13b5eaa
+  - src-1ea3e75f96c3
   conditions:
-  - Interface applicability does not establish task quality.
+  - Native text/image processing is applicable; lack of task-quality evidence is not a non-support boundary.
   remaining_gaps:
-  - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
+  - Exact-model repeated multilingual dialogue evidence remains unestablished.
   id: task-assessment-6c12258868cc56b6
+  aggregate:
+    policy_version: '1'
+    suitability: unknown
+    evidence_confidence: null
+    assessed_at: '2026-10-08'
+    rationale: The German study is single-turn prose generation, and multilingual knowledge tests do not establish
+      multi-turn dialogue context, register or code-switching reliability.
+    confidence_rationale: Investigation does not establish this task’s suitability; aggregate confidence stays
+      null.
+    supporting_evidence_ids:
+    - src-f3655eaf1407
+    - src-d802b13b5eaa
+    - src-1ea3e75f96c3
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Exact-model repeated multilingual dialogue evidence remains unestablished.
+    access_ids: []
 - model_id: claude-sonnet-5-5
   task_id: language.summarization
   applicability: applicable
@@ -6669,22 +7504,37 @@ records:
   task_id: language.translation
   applicability: applicable
   result: unknown
-  checked_at: '2026-10-07'
-  rationale: Investigated Transfer supplied meaning from one language to another while preserving relevant
-    register and nuance. No exact-model direct task conclusion was established. Repository, planted-bug, preference
-    and review tasks retain separate setups; effort and client tool naming affect reports.
+  checked_at: '2026-10-08'
+  rationale: German native writing with two instruction languages does not evaluate translation of a supplied
+    source meaning. Official multilingual support establishes interface applicability only.
   judgment_ids: []
-  confidence_rationale: No ability or confidence score is inferred from missing task evidence.
+  confidence_rationale: Investigation does not establish this task’s suitability; aggregate confidence stays
+    null.
   evidence_ids:
-  - src-752375ff0c97
   - src-f3655eaf1407
-  - src-4e3ca8a95d36
-  - src-ad78a04807f9
+  - src-d802b13b5eaa
   conditions:
-  - Interface applicability does not establish task quality.
+  - Native text/image processing is applicable; lack of task-quality evidence is not a non-support boundary.
   remaining_gaps:
-  - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
+  - Source-target semantic/register fidelity and language-pair-specific trials remain unestablished.
   id: task-assessment-18dd0a0f459f8462
+  aggregate:
+    policy_version: '1'
+    suitability: unknown
+    evidence_confidence: null
+    assessed_at: '2026-10-08'
+    rationale: German native writing with two instruction languages does not evaluate translation of a supplied
+      source meaning. Official multilingual support establishes interface applicability only.
+    confidence_rationale: Investigation does not establish this task’s suitability; aggregate confidence stays
+      null.
+    supporting_evidence_ids:
+    - src-f3655eaf1407
+    - src-d802b13b5eaa
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Source-target semantic/register fidelity and language-pair-specific trials remain unestablished.
+    access_ids: []
 - model_id: claude-sonnet-5-5
   task_id: language.writing
   applicability: applicable
@@ -6931,43 +7781,78 @@ records:
 - model_id: claude-sonnet-5-5
   task_id: vision.grounding
   applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Investigated Localize a described visual entity or interface element to a region, coordinate,
-    or other explicit visual reference. No exact-model direct task conclusion was established. Repository,
-    planted-bug, preference and review tasks retain separate setups; effort and client tool naming affect reports.
-  judgment_ids: []
-  confidence_rationale: No ability or confidence score is inferred from missing task evidence.
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: Useful zero-shot object localization requires checking and correction of box precision and missed
+    objects.
+  judgment_ids:
+  - judgment-b96cb26fcff545d2
+  confidence_rationale: Medium confidence from original, directly relevant nonvendor evidence with the stated
+    setup and grading limits; independent matched replication is absent.
   evidence_ids:
-  - src-752375ff0c97
-  - src-f3655eaf1407
-  - src-4e3ca8a95d36
-  - src-ad78a04807f9
+  - src-aac5808af0ec
+  - src-12127a4ce5a0
   conditions:
-  - Interface applicability does not establish task quality.
+  - Normalized y-min/x-min/y-max/x-max boxes and labels; three runs at each low/high native effort.
   remaining_gaps:
-  - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
+  - No autonomous GUI outcome or specialized-detector equivalence established.
   id: task-assessment-2ff68166c3e02d02
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: medium
+    assessed_at: '2026-10-08'
+    rationale: Useful zero-shot object localization requires checking and correction of box precision and missed
+      objects.
+    confidence_rationale: Medium confidence from original, directly relevant nonvendor evidence with the stated
+      setup and grading limits; independent matched replication is absent.
+    supporting_evidence_ids:
+    - src-aac5808af0ec
+    - src-12127a4ce5a0
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - mAP@50 is74.3 low/76.8 high, while mAP@75 is60.0/63.1 and mAP@50:95 is57.1/59.5.
+    - Sample denominator and precise model route not disclosed; no GUI-action success inferred.
+    access_ids: []
 - model_id: claude-sonnet-5-5
   task_id: vision.question_answering
   applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Investigated Answer questions about visual input by interpreting visible objects, text, relationships,
-    or diagrams. No exact-model direct task conclusion was established. Repository, planted-bug, preference
-    and review tasks retain separate setups; effort and client tool naming affect reports.
-  judgment_ids: []
-  confidence_rationale: No ability or confidence score is inferred from missing task evidence.
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: Both measured effort settings answer many visual integration questions correctly, with material
+    checking needed for wrong or ambiguous answers.
+  judgment_ids:
+  - judgment-de743a67836582cd
+  confidence_rationale: Medium confidence from original, directly relevant nonvendor evidence with the stated
+    setup and grading limits; independent matched replication is absent.
   evidence_ids:
-  - src-752375ff0c97
-  - src-f3655eaf1407
-  - src-4e3ca8a95d36
-  - src-ad78a04807f9
+  - src-efd1db045882
+  - src-12127a4ce5a0
   conditions:
-  - Interface applicability does not establish task quality.
+  - Three runs each at low/high native effort; same visual samples; Gemini 3.5 Flash temperature0 grades against
+    ground truth.
   remaining_gaps:
-  - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
+  - Sample count, exact endpoint and independent evaluator replication remain unknown.
   id: task-assessment-2f74a9cd8bc0256d
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: medium
+    assessed_at: '2026-10-08'
+    rationale: Both measured effort settings answer many visual integration questions correctly, with material
+      checking needed for wrong or ambiguous answers.
+    confidence_rationale: Medium confidence from original, directly relevant nonvendor evidence with the stated
+      setup and grading limits; independent matched replication is absent.
+    supporting_evidence_ids:
+    - src-efd1db045882
+    - src-12127a4ce5a0
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Low judged accuracy76.4% versus strict11.9%; high83.9% versus strict72.8%; verbosity affects strict matching.
+    - Sample denominator, exact endpoint and run dates not disclosed; range is not a confidence interval.
+    access_ids: []
 - model_id: cohere-command-a-plus
   task_id: agent.computer_use
   applicability: applicable
@@ -51351,42 +52236,88 @@ records:
 - model_id: xai-grok-4-7
   task_id: vision.grounding
   applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Investigated Localize a described visual entity or interface element to a region, coordinate,
-    or other explicit visual reference. No exact-model direct task conclusion was established. Cursor routing/subagent
-    configuration reports are separate from model behavior; contradictory quality impressions do not establish
-    a weights regression.
-  judgment_ids: []
-  confidence_rationale: No ability or confidence score is inferred from missing task evidence.
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: Can emit normalized boxes for described image classes, but localization is weak enough that precise
+    coordinates need substantial correction.
+  judgment_ids:
+  - judgment-b638cfe00b628c73
+  confidence_rationale: 'Medium confidence in the bounded localization limitation: the independent task page
+    reports three-run results at two efforts and deterministic overlap metrics. Unknown image/sample details
+    limit transfer, and the result is not a GUI-completion or segmentation benchmark.'
   evidence_ids:
-  - src-d14fea025626
-  - src-ad78a04807f9
-  - src-02b09208ceab
-  - src-0b72694a5dea
+  - src-aac5808af0ec
+  - src-12127a4ce5a0
   conditions:
-  - Interface applicability does not establish task quality.
+  - Roboflow zero-shot object detection; requested labels and normalized[ymin,xmin,ymax,xmax]coordinates; Grok
+    4.7 low/high;3runs each.
+  - Deterministic box-overlap mAP; sample/object denominators, image resolution, immutable checkpoint and route
+    undisclosed.
   remaining_gaps:
-  - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
+  - mAP@50= 40.4% low / 41.2% high; mAP@75=23.0%/23.7% and mAP@50:95=23.6%/24.4%.
+  - mAP is not a fraction of task successes; no GUI-action or segmentation conclusion.
   id: task-assessment-f61008b6059654a6
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: medium
+    assessed_at: '2026-10-08'
+    rationale: Can emit normalized boxes for described image classes, but localization is weak enough that
+      precise coordinates need substantial correction.
+    confidence_rationale: 'Medium confidence in the bounded localization limitation: the independent task page
+      reports three-run results at two efforts and deterministic overlap metrics. Unknown image/sample details
+      limit transfer, and the result is not a GUI-completion or segmentation benchmark.'
+    supporting_evidence_ids:
+    - src-aac5808af0ec
+    - src-12127a4ce5a0
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - mAP@50= 40.4% low / 41.2% high; mAP@75=23.0%/23.7% and mAP@50:95=23.6%/24.4%.
+    - mAP is not a fraction of task successes; no GUI-action or segmentation conclusion.
+    access_ids: []
 - model_id: xai-grok-4-7
   task_id: vision.question_answering
   applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Investigated Answer questions about visual input by interpreting visible objects, text, relationships,
-    or diagrams. No exact-model direct task conclusion was established. Cursor routing/subagent configuration
-    reports are separate from model behavior; contradictory quality impressions do not establish a weights
-    regression.
-  judgment_ids: []
-  confidence_rationale: No ability or confidence score is inferred from missing task evidence.
+  result: assessed
+  checked_at: '2026-10-08'
+  rationale: Useful for questions requiring visual relationships and derived answers, but needs material checking
+    under the measured image-question setup.
+  judgment_ids:
+  - judgment-0ba4cb2ee9068e43
+  confidence_rationale: 'Medium confidence in the measured visual-question setup: an independent evaluator
+    reports three-run means, ground truth, judge identity and strict-match corroboration. Sample count, resolution,
+    exact route and model-run day remain unknown; no second independent exact-task stream is established.'
   evidence_ids:
-  - src-d14fea025626
-  - src-ad78a04807f9
-  - src-02b09208ceab
-  - src-0b72694a5dea
+  - src-efd1db045882
+  - src-12127a4ce5a0
   conditions:
-  - Interface applicability does not establish task quality.
+  - Roboflow current visual-reasoning task; Grok 4.7 low/high native effort;3runs each; fixed public examples
+    require interpreting diagrams and images.
+  - Gemini 3.5 Flash temperature 0 judges against ground truth; strict normalized-match score also provided;
+    sample count, resolution, model-run date, immutable snapshot and exact inference route undisclosed.
   remaining_gaps:
-  - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
+  - Mean judged accuracy 64.2%low and 66.9%high; additional effort did not establish uniformly correct interpretation.
+  - Half-range bars and observed run range are not confidence intervals; model-page six-task composite not
+    used.
   id: task-assessment-2e885e1ca620ef62
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: medium
+    assessed_at: '2026-10-08'
+    rationale: Useful for questions requiring visual relationships and derived answers, but needs material
+      checking under the measured image-question setup.
+    confidence_rationale: 'Medium confidence in the measured visual-question setup: an independent evaluator
+      reports three-run means, ground truth, judge identity and strict-match corroboration. Sample count, resolution,
+      exact route and model-run day remain unknown; no second independent exact-task stream is established.'
+    supporting_evidence_ids:
+    - src-efd1db045882
+    - src-12127a4ce5a0
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Mean judged accuracy 64.2%low and 66.9%high; additional effort did not establish uniformly correct interpretation.
+    - Half-range bars and observed run range are not confidence intervals; model-page six-task composite not
+      used.
+    access_ids: []

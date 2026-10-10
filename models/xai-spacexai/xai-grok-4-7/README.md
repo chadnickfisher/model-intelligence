@@ -71,7 +71,161 @@ Supporting sources: [Code Arena WebDev Frontend](https://arena.ai/leaderboard/co
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Confidence concerns this bounded claim, not a capability score.; Fresh October 8 snapshot is 1658 ±12 from 3, 082 votes, rank spread 11–21. This remains preference evidence and is not the reason for the separate executable-frontend assessment.
+
+### Coding.debugging (low confidence)
+
+Repairs were highly prompt-sensitive in a small test: the familiar JavaScript median formulation passed all five checks, while the Python reformulation repeatedly retained defects.
+
+Scope: direct / conditional. Exact task and recorded conditions only; no transfer from benchmark components to neighboring tasks.
+
+Direct task IDs: coding.debugging
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-018736055ee45c29
+
+Conditions: Five responses per code prompt, default settings, output code executed against five assertions; actual run date and route undisclosed.
+
+Failure modes / limitations: Python outputs never fixed even-length averaging or empty input; only two of five fixed lexicographic sorting.
+
+Supporting sources: [Grok 4.7 Review: Self-Checking](https://developer.puter.com/blog/grok-4-7-review/)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: The Python mean was 2.4 defects fixed of 5; this does not measure test generation or prove an internal self-checking mechanism.
+
+### Vision.question_answering (medium confidence)
+
+Useful for questions requiring visual relationships and derived answers, but needs material checking under the measured image-question setup.
+
+Scope: direct / conditional. Exact task and recorded public setup only; no transfer from compound scores or neighboring tasks.
+
+Direct task IDs: vision.question_answering
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-0ba4cb2ee9068e43
+
+Conditions: Roboflow current visual-reasoning task; Grok 4.7 low/high native effort;3runs each; fixed public examples require interpreting diagrams and images.; Gemini 3.5 Flash temperature 0 judges against ground truth; strict normalized-match score also provided; sample count, resolution, model-run date, immutable snapshot and exact inference route undisclosed.
+
+Failure modes / limitations: Mean judged accuracy 64.2%low and 66.9%high; additional effort did not establish uniformly correct interpretation.
+
+Supporting sources: [Visual Reasoning Benchmark](https://playground.roboflow.com/evals/visual-reasoning) · [Vision Evals methodology](https://playground.roboflow.com/evals)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Half-range bars and observed run range are not confidence intervals; model-page six-task composite not used.
+
+### Coding.scoped_edit (low confidence)
+
+Useful bounded script generation still requires runtime validation: the tested backup scripts worked, while every first-pass non-root nginx manifest crash-looped despite clean schema validation.
+
+Scope: direct / conditional. Exact task and recorded conditions only; no transfer from benchmark components to neighboring tasks.
+
+Direct task IDs: coding.scoped_edit
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-50e15107482eac41
+
+Conditions: Josphat Mutai tested three prompts three times each at default high and low via xAI API on September 25.; Bash was tested with stubbed commands; Terraform was only validated/formatted, not deployed.
+
+Failure modes / limitations: All six nginx manifests omitted necessary writable mounts; generated scripts generally used the current directory for backups.
+
+Supporting sources: [Grok 4.7 real DevOps results](https://computingforgeeks.com/grok-4-7-tested/)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Do not convert the mixed 6-of-9 checks total into a narrow function, repository or security rate.
+
+### Coding.debugging (low confidence)
+
+A single log-assisted follow-up repaired a crashing non-root nginx manifest on the tested cluster; the result supports a narrow corrective workflow, not general autonomous recovery.
+
+Scope: direct / conditional. Exact task and recorded conditions only; no transfer from benchmark components to neighboring tasks.
+
+Direct task IDs: coding.debugging
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-539a094d8fd79d60
+
+Conditions: Original failed manifest and two-line error supplied; xAI API, September 25, k3s 1.36.4 on Ubuntu 26.04.
+
+Failure modes / limitations: The repaired manifest relies on the runtime allowing unprivileged port 80; its added capability line did not confer the claimed effective capability.
+
+Supporting sources: [Grok 4.7 real DevOps results](https://computingforgeeks.com/grok-4-7-tested/)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: The author deployed the repaired output and observed HTTP 200. One repair is not a repeat estimate.
+
+### Coding.repository_work, coding.architecture, coding.refactoring, coding.tests (low confidence)
+
+Attributable Cursor users report both useful Rust multi-file work and architecture/refactor drift; the anecdotes do not isolate model quality or establish behavior-preserving refactoring.
+
+Scope: unresolved / unknown. Unresolved compound evidence retained for navigation only; no direct task endorsement.
+
+Direct task IDs: Not established in this pass
+
+Related task IDs (navigation only): coding.repository_work; coding.architecture; coding.refactoring; coding.tests
+
+Judgment ID: judgment-545f5cc024f99a3d
+
+Conditions: Exact effort, serving route, patches and acceptance checks were not disclosed.
+
+Failure modes / limitations: Unnecessary abstractions, unreadable refactors and unapplied changes are reported, without controlled reproduction.
+
+Supporting sources: [Grok 4.7 Cursor Rust-workflow discussion](https://www.reddit.com/r/cursor/comments/1wrktgc/am_i_the_only_one_who_thinks_grok_47_is_actually/)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Mixed user experiences are not sufficient by themselves for an aggregate Disputed rating.
+
+### Coding.frontend (low confidence)
+
+Grok Build xhigh produced usable visual code and a game satisfying the explicit brief, but visible animation, camera and interaction-polish problems required direct rendered-output review.
+
+Scope: direct / conditional. Exact task and recorded conditions only; no transfer from benchmark components to neighboring tasks.
+
+Direct task IDs: coding.frontend
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-a610fa0194677cb5
+
+Conditions: One attempt per brief. Browser self-check was forbidden for three initial builds and required/available for the separate Hill Climb game.
+
+Failure modes / limitations: Reported faults included disconnected animation layers, a camera losing the rocket, abrupt coasting and floating background scenery.
+
+Supporting sources: [Grok 4.7 Hill Climb build test](https://www.bitsminds.com/news/claude-opus-5-vs-gpt-5-6-sol-vs-grok-4-7-hill-climb-2026) · [Grok 4.7 three visual build briefs](https://www.bitsminds.com/news/grok-4-7-vs-fable-5-1-vs-astra-6-build-off-2026)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: All explicit Hill Climb requirements passed. Its 6/20 subjective score is not a functional failure rate; exact prompts and blinded grading were unavailable.
+
+### Vision.grounding (medium confidence)
+
+Can emit normalized boxes for described image classes, but localization is weak enough that precise coordinates need substantial correction.
+
+Scope: direct / conditional. Exact task and recorded public setup only; no transfer from compound scores or neighboring tasks.
+
+Direct task IDs: vision.grounding
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-b638cfe00b628c73
+
+Conditions: Roboflow zero-shot object detection; requested labels and normalized[ymin,xmin,ymax,xmax]coordinates; Grok 4.7 low/high;3runs each.; Deterministic box-overlap mAP; sample/object denominators, image resolution, immutable checkpoint and route undisclosed.
+
+Failure modes / limitations: mAP@50= 40.4% low / 41.2% high; mAP@75=23.0%/23.7% and mAP@50:95=23.6%/24.4%.
+
+Supporting sources: [Object Detection Benchmark](https://playground.roboflow.com/evals/object-detection) · [Vision Evals methodology](https://playground.roboflow.com/evals)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: mAP is not a fraction of task successes; no GUI-action or segmentation conclusion.
 
 ### Low latency assistance (medium confidence)
 

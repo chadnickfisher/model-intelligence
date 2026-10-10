@@ -1,0 +1,298 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Research batch input; evidence review is required before application",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "package_type",
+    "assignment_id",
+    "baseline_commit",
+    "created_at",
+    "research_run",
+    "changes",
+    "discoveries",
+    "discovery_checks",
+    "source_groups"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "package_type": {
+      "const": "research-batch"
+    },
+    "assignment_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]+$"
+    },
+    "baseline_commit": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "research_run": {
+      "$ref": "research-run-record.schema.json"
+    },
+    "changes": {
+      "type": "array",
+      "maxItems": 5000,
+      "items": {
+        "$ref": "#/$defs/change"
+      }
+    },
+    "discoveries": {
+      "type": "array",
+      "maxItems": 500,
+      "items": {
+        "$ref": "#/$defs/discovery"
+      }
+    },
+    "discovery_checks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/discovery_check"
+      }
+    },
+    "source_groups": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "$defs": {
+    "strings": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "discovery_check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "creator_id",
+        "result",
+        "checked_at",
+        "rationale",
+        "evidence_ids",
+        "search_references",
+        "remaining_gaps",
+        "blocked_reason"
+      ],
+      "properties": {
+        "creator_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "result": {
+          "enum": [
+            "not_checked",
+            "checked",
+            "unknown",
+            "blocked"
+          ]
+        },
+        "checked_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "rationale": {
+          "type": "string"
+        },
+        "evidence_ids": {
+          "$ref": "#/$defs/strings"
+        },
+        "remaining_gaps": {
+          "$ref": "#/$defs/strings"
+        },
+        "blocked_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "search_references": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "query",
+              "checked_at",
+              "outcome",
+              "urls",
+              "notes"
+            ],
+            "properties": {
+              "query": {
+                "type": "string",
+                "minLength": 1
+              },
+              "checked_at": {
+                "type": "string",
+                "format": "date"
+              },
+              "outcome": {
+                "enum": [
+                  "sources_located",
+                  "no_matched_sources",
+                  "blocked"
+                ]
+              },
+              "urls": {
+                "$ref": "#/$defs/strings"
+              },
+              "notes": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "change": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "record",
+        "previous_hash",
+        "identity_key",
+        "evidence_ids",
+        "checked_paths",
+        "rationale"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "model",
+            "provider",
+            "source",
+            "access",
+            "price",
+            "benchmark",
+            "behavior",
+            "release",
+            "task_assessment",
+            "research_coverage"
+          ]
+        },
+        "record": {
+          "type": "object",
+          "required": [
+            "id"
+          ]
+        },
+        "previous_hash": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          ]
+        },
+        "identity_key": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "evidence_ids": {
+          "$ref": "#/$defs/strings"
+        },
+        "checked_paths": {
+          "$ref": "#/$defs/strings"
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "source"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "evidence_ids": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "discovery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "name",
+        "url",
+        "evidence_ids",
+        "rationale",
+        "remaining_gaps"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "model",
+            "provider",
+            "product"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "evidence_ids": {
+          "$ref": "#/$defs/strings"
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "remaining_gaps": {
+          "$ref": "#/$defs/strings"
+        },
+        "identity": {
+          "anyOf": [
+            {
+              "$ref": "discovery-identity.schema.json"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

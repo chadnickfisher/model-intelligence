@@ -4,6 +4,7 @@ from pathlib import Path
 import json,os,sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from tools.knowledge import scope_errors
+from tools.research_followups import render_followups
 import yaml
 R=Path(__file__).resolve().parents[1]
 def rd(p):return yaml.load(p.read_text(encoding='utf-8'),Loader=getattr(yaml,'CSafeLoader',yaml.SafeLoader))
@@ -94,3 +95,6 @@ for task in task_rows:
   lines+=[label+':','']+['- '+rule for rule in task[key]]+['']
  lines+=['Neighboring tasks: '+', '.join(task['neighboring_task_ids']),'']
 wr(R/'data/tasks.md','\n'.join(lines)+'\n')
+
+if (R/'data/research-followups.yaml').exists():
+ wr(R/'data/research-followups.md',render_followups(rd(R/'data/research-followups.yaml')['records']))
