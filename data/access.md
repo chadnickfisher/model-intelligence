@@ -146,8 +146,8 @@ Generated from canonical YAML. Units, route conditions and dates are essential.
 | gemini4argon | google-ai-studio | developer-web-ui | Distribution documented; exact model selector, rollout, regional and subscription entitlement may vary.; Not established in this pass |
 | ai21-jamba2-mini | ai21 | hosted_api | documented_not_execution_tested; Not established in this pass |
 | ai21-jamba2-mini | ai21 | developer_playground | documented_not_execution_tested; Not established in this pass |
-| bfl-flux3-video | bfl | hosted_api | documented_not_execution_tested; Not established in this pass |
-| bfl-flux3-video | together | hosted_api | provider_listed; billing_unit_conflict_requires_verification; Not established in this pass |
+| bfl-flux3-video | bfl | hosted_api | documented_not_execution_tested; Standard API terms allow application integration but prohibit offering a proxy API to other developers.; The video overview documents signed output URLs expiring after about two hours; download within that window. This does not establish full-data deletion timing. |
+| bfl-flux3-video | together | hosted_api | publicly_listed; account_availability_and_price_configuration_unverified; Not established in this pass |
 | claude-fable-5-1 | anthropic | hosted_api | officially_documented_not_execution_tested; Not established in this pass |
 | claude-fable-5-1 | aws-bedrock | hosted_api | officially_documented_not_execution_tested; Not established in this pass |
 | claude-fable-5-1 | google-cloud | hosted_api | officially_documented_not_execution_tested; Not established in this pass |
@@ -199,9 +199,9 @@ Generated from canonical YAML. Units, route conditions and dates are essential.
 | deepseek-v4-pro-0813 | together | hosted_api | documented_not_execution_tested; Not established in this pass |
 | devstral-small-2 | mistral-api | hosted_api | deprecated; Not established in this pass |
 | devstral-small-2 | fireworks | hosted_api | documented_not_execution_tested; Not established in this pass |
-| elevenlabs-eleven-v4 | elevenlabs | hosted_api | documented_not_execution_tested; Not established in this pass |
-| elevenlabs-eleven-v4 | elevenlabs | hosted_api | documented_not_execution_tested; Not established in this pass |
-| elevenlabs-eleven-v4 | elevenlabs | chat | model documented; exact app-plan entitlement not reverified; Not established in this pass |
+| elevenlabs-eleven-v4 | elevenlabs | hosted_api | documented_public_route; account_entitlement_not_execution_tested; Applicable regional terms require age 18 or local legal majority and necessary voice/input rights; the v4 FAQ requires verified voice-owner consent.; Free use is noncommercial; commercial rights under paid subscriptions remain subject to policies. A PayGo purchase alone is not treated as a commercial-use grant.; Health and other sensitive inputs have regional and service-specific restrictions. API section 4.2 has scoped exceptions; no general eligibility is inferred. |
+| elevenlabs-eleven-v4 | elevenlabs | hosted_api | documented_public_route; account_entitlement_not_execution_tested; Applicable regional terms require age 18 or local legal majority and necessary voice/input rights; the v4 FAQ requires verified voice-owner consent.; Free use is noncommercial; commercial rights under paid subscriptions remain subject to policies. A PayGo purchase alone is not treated as a commercial-use grant.; Health and other sensitive inputs have regional and service-specific restrictions. API section 4.2 has scoped exceptions; no general eligibility is inferred. |
+| elevenlabs-eleven-v4 | elevenlabs | chat | documented_public_route; account_entitlement_not_execution_tested; Applicable regional terms require age 18 or local legal majority and necessary voice/input rights; the v4 FAQ requires verified voice-owner consent.; Free use is noncommercial; commercial rights under paid subscriptions remain subject to policies. A PayGo purchase alone is not treated as a commercial-use grant.; Regional sensitive-input restrictions and applicable Creative terms govern this UI route; API-specific exceptions are not treated as UI permissions. |
 | gemini-3-1-pro-preview | google-developer-api | hosted_api | officially_documented_not_execution_tested; Not established in this pass |
 | gemini-3-1-pro-preview | google-cloud | hosted_api | official_preview; Not established in this pass |
 | gemini-3-1-pro-preview | google-ai | client_product; chat_app; subscription_client | Conditional consumer/client product; exact account entitlement unverified; 3.1 Pro rollout documented in app with higher Pro/Ultra limits; NotebookLM launch exclusive to Pro/Ultra. Current app help uses Pro family label, not preview API alias. API has no free tier. |

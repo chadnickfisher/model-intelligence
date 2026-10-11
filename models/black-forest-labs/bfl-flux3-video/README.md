@@ -23,7 +23,7 @@ Conditions: Not established in this pass
 
 Failure modes / limitations: Not established in this pass
 
-Supporting sources: [docs.bfl.ai](https://docs.bfl.ai/flux_3/flux3_overview)
+Supporting sources: [FLUX 3 Video](https://docs.bfl.ai/flux_3/flux3_overview)
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
@@ -100,14 +100,14 @@ Local conditions: Not established in this pass
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
-| bfl | t2v/i2v full render HD / current | generation: 0.17 USD / per output second | Not established in this pass | 2026-10-06 |
-| bfl | t2v/i2v full render UHD / current | generation: 0.8 USD / per output second | Not established in this pass | 2026-10-06 |
+| bfl | t2v/i2v full render HD / current | generation: 0.17 USD / per output second | API and Playground use the same listed tariff; 1 credit = $0.01 USD.; Full renders and drafts are distinct operations; no subscription entitlement or free local inference inferred. | 2026-10-11 |
+| bfl | t2v/i2v full render UHD / current | generation: 0.8 USD / per output second | API and Playground use the same listed tariff; 1 credit = $0.01 USD.; Full renders and drafts are distinct operations; no subscription entitlement or free local inference inferred.; This resolution class was announced September 10; delivery includes the upsampler. | 2026-10-11 |
 
 ## Recorded access routes
 
-- bfl / BFL API and Playground: documented_not_execution_tested. Not established in this pass
-- together / hosted metered api: provider_listed; billing_unit_conflict_requires_verification. Not established in this pass
+- bfl / BFL API and Playground: documented_not_execution_tested. Standard API terms allow application integration but prohibit offering a proxy API to other developers.; The video overview documents signed output URLs expiring after about two hours; download within that window. This does not establish full-data deletion timing.
+- together / hosted metered api: publicly_listed; account_availability_and_price_configuration_unverified. Not established in this pass
 
 ## Sources
 
-[docs.bfl.ai](https://docs.bfl.ai/flux_3/flux3_overview) · [docs.bfl.ai](https://docs.bfl.ai/quick_start/pricing) · [Introducing FLUX.3](https://bfl.ai/blog/flux-3)
+[FLUX 3 Video](https://docs.bfl.ai/flux_3/flux3_overview) · [Overview](https://docs.bfl.ai/quick_start/pricing) · [Introducing FLUX.3](https://bfl.ai/blog/flux-3)

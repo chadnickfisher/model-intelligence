@@ -23,7 +23,7 @@ Conditions: Not established in this pass
 
 Failure modes / limitations: Not established in this pass
 
-Supporting sources: [elevenlabs.io](https://elevenlabs.io/docs/overview/models)
+Supporting sources: [Models](https://elevenlabs.io/docs/overview/models)
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
@@ -45,7 +45,7 @@ Conditions: AA Provider Voice Arena; representative provider voices, not the con
 
 Failure modes / limitations: Not established in this pass
 
-Supporting sources: [Eleven v4 Provider Voice Arena](https://artificialanalysis.ai/text-to-speech/models/eleven-v4) · [Text-to-speech evaluation methodology](https://artificialanalysis.ai/methodology/text-to-speech) · [elevenlabs.io](https://elevenlabs.io/docs/overview/models)
+Supporting sources: [Eleven v4 Provider Voice Arena](https://artificialanalysis.ai/text-to-speech/models/eleven-v4) · [Text-to-speech evaluation methodology](https://artificialanalysis.ai/methodology/text-to-speech) · [Models](https://elevenlabs.io/docs/overview/models)
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
@@ -100,14 +100,14 @@ Local conditions: Not established in this pass
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
-| elevenlabs | Free / PayGo displayed / current | text: 0.022 USD / per 1,000 characters | Displayed temporary $0.022 per 1000 characters promotion until October 12, 2026; undiscounted displayed rate $0.08. Exact ending instant is not specified.; Prices exclude taxes, levies and duties; subscription allowances remain separate. | 2026-10-07 |
+| elevenlabs | Free / PayGo displayed / current | text: 0.022 USD / per 1,000 characters | Displayed temporary $0.022 per 1000 characters promotion until October 12, 2026; undiscounted displayed rate $0.08. Exact ending instant is not specified.; Prices exclude taxes, levies and duties; subscription allowances remain separate. | 2026-10-11 |
 
 ## Recorded access routes
 
-- elevenlabs / ElevenCreative speech playground: model documented; exact app-plan entitlement not reverified. Not established in this pass
-- elevenlabs / ElevenAPI Starter: documented_not_execution_tested. Not established in this pass
-- elevenlabs / ElevenAPI PayGo: documented_not_execution_tested. Not established in this pass
+- elevenlabs / ElevenCreative speech playground: documented_public_route; account_entitlement_not_execution_tested. Applicable regional terms require age 18 or local legal majority and necessary voice/input rights; the v4 FAQ requires verified voice-owner consent.; Free use is noncommercial; commercial rights under paid subscriptions remain subject to policies. A PayGo purchase alone is not treated as a commercial-use grant.; Regional sensitive-input restrictions and applicable Creative terms govern this UI route; API-specific exceptions are not treated as UI permissions.
+- elevenlabs / ElevenAPI Starter: documented_public_route; account_entitlement_not_execution_tested. Applicable regional terms require age 18 or local legal majority and necessary voice/input rights; the v4 FAQ requires verified voice-owner consent.; Free use is noncommercial; commercial rights under paid subscriptions remain subject to policies. A PayGo purchase alone is not treated as a commercial-use grant.; Health and other sensitive inputs have regional and service-specific restrictions. API section 4.2 has scoped exceptions; no general eligibility is inferred.
+- elevenlabs / ElevenAPI PayGo: documented_public_route; account_entitlement_not_execution_tested. Applicable regional terms require age 18 or local legal majority and necessary voice/input rights; the v4 FAQ requires verified voice-owner consent.; Free use is noncommercial; commercial rights under paid subscriptions remain subject to policies. A PayGo purchase alone is not treated as a commercial-use grant.; Health and other sensitive inputs have regional and service-specific restrictions. API section 4.2 has scoped exceptions; no general eligibility is inferred.
 
 ## Sources
 
-[elevenlabs.io](https://elevenlabs.io/docs/overview/models) · [elevenlabs.io](https://elevenlabs.io/pricing/api) · [Eleven v4 Provider Voice Arena](https://artificialanalysis.ai/text-to-speech/models/eleven-v4) · [Text-to-speech evaluation methodology](https://artificialanalysis.ai/methodology/text-to-speech) · [September 28, 2026 changelog](https://elevenlabs.io/docs/changelog/2026/9/28)
+[Models](https://elevenlabs.io/docs/overview/models) · [ElevenAPI Pricing](https://elevenlabs.io/pricing/api) · [Eleven v4 Provider Voice Arena](https://artificialanalysis.ai/text-to-speech/models/eleven-v4) · [Text-to-speech evaluation methodology](https://artificialanalysis.ai/methodology/text-to-speech) · [September 28, 2026 changelog](https://elevenlabs.io/docs/changelog/2026/9/28)

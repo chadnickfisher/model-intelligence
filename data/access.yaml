@@ -3663,96 +3663,157 @@ records:
     verified_at: '2026-10-07'
     product: AI21 Studio Playground
     billing: Trial allowance or metered usage, not a chat subscription
-- schema_version: '1.0'
-  id: access-81655ffa1f7f6666
-  verified_at: '2026-10-07'
-  model_id: bfl-flux3-video
-  provider_id: bfl
-  model_label: flux-3-video
-  product: BFL API and Playground
-  methods:
-  - hosted_api
-  status: documented_not_execution_tested
-  availability: documented
+- availability: documented
   billing_class: metered_api
-  price_ids: []
-  restrictions: []
-  evidence_ids:
-  - src-57a05c45a0b1
-  - src-752c7dd560da
-  - src-2e19eb496679
-  notes:
-  - 'Research route class: hosted_metered_api'
-  - Source documented; inference execution and individual eligibility were not tested.
   client_id: null
-  requires_account: null
-  subscription_includes_api: null
-  reset_cadence: null
   conditions:
   - Preview. Draft enhancement and video-edit tool are separate operations; compute cost not zero when output
     weights unavailable.
-  research_details:
-    research_provider_id: bfl
-    model_alias: flux-3-video
-    route_class: hosted_metered_api
-    status: documented_not_execution_tested
-    prices:
-      currency: USD
-      unit: per output second
-      t2v_i2v:
-        draft_hd: 0.06
-        hd: 0.17
-        fhd: 0.29
-        qhd: 0.4
-        uhd: 0.8
-      v2v:
-        draft_hd: 0.12
-        hd: 0.41
-        fhd: 0.53
-        qhd: 0.65
-        uhd: 0.95
-    verified_at: '2026-10-07'
-    product: BFL API and Playground
-    endpoint: https://api.bfl.ai/v1/flux-3-video
-    authentication: BFL x-key
-    limits:
-      max_duration_seconds: 20
-      fps: 24
-    conditions: Preview. Draft enhancement and video-edit tool are separate operations; compute cost not zero
-      when output weights unavailable.
-- schema_version: '1.0'
-  id: access-d806a0c3a1f82a84
-  verified_at: '2026-10-07'
-  model_id: bfl-flux3-video
-  provider_id: together
-  model_label: black-forest-labs/FLUX-3
-  product: hosted metered api
-  methods:
-  - hosted_api
-  status: provider_listed; billing_unit_conflict_requires_verification
-  availability: unknown
-  billing_class: metered_api
-  price_ids: []
-  restrictions: []
+  - A confirmed account, prepaid credits and project x-key are documented; no execution or individual eligibility
+    test.
+  - No subscription or seat fee on standard BFL pay-as-you-go; organization credit balance funds API and Playground.
+  - t2v/i2v can reach 20 seconds; continuation is limited to 15 seconds. QHD/UHD are finished through the upsampler.
+  - 'Continuation HD/FHD tariff conflict: docs $0.41/$0.53 versus help $0.43/$0.54 per output second.'
+  - Global, EU and US API routing is documented; exact FLUX account geography restrictions are not exhaustively
+    established.
+  - General API guide states at most 24 active requests for most endpoints, not a verified FLUX/account-specific
+    quota.
+  - Applicable API terms permit use of inputs/outputs for training and improvement; exact full-data retention
+    duration and any contract opt-out remain unverified.
   evidence_ids:
   - src-57a05c45a0b1
   - src-752c7dd560da
-  - src-2e19eb496679
+  - src-2d980c304e95
+  - src-10a91840b546
+  - src-7e3a0b76fdd6
+  - src-bb26705946aa
+  - src-31ba1a35827e
+  - src-8480eae8d4c0
+  - src-c12ad05ec233
+  - src-b66d992d27f1
+  id: access-81655ffa1f7f6666
+  methods:
+  - hosted_api
+  model_id: bfl-flux3-video
+  model_label: flux-3-video
   notes:
-  - 'Research route class: hosted_metered_api'
   - Source documented; inference execution and individual eligibility were not tested.
-  client_id: null
-  requires_account: null
-  subscription_includes_api: null
-  reset_cadence: null
-  conditions: []
+  - Direct BFL policy conclusions are bounded to this access route; no whole-provider verification date is
+    advanced.
+  price_ids:
+  - price-providers-bfl-flux3-video-bfl-772aa13dfb82
+  - price-c7304280763b2015
+  - price-123480d7451d6507
+  - price-providers-bfl-flux3-video-bfl-c4a4dfe8876e
+  - price-302abd795042a81e
+  - price-efbad60409efdba1
+  - price-d58d3f01fe463702
+  - price-82761110f518dcd8
+  - price-912853939957f01c
+  - price-e8edd03a0ba20d77
+  product: BFL API and Playground
+  provider_id: bfl
+  requires_account: true
   research_details:
-    research_provider_id: together
-    model_alias: black-forest-labs/FLUX-3
+    authentication: BFL x-key
+    conditions: Preview. Draft enhancement and video-edit tool are separate operations; compute cost not zero
+      when output weights unavailable.
+    endpoint: https://api.bfl.ai/v1/flux-3-video
+    limits:
+      fps: 24
+      max_duration_seconds: 20
+      max_continuation_seconds: 15
+    model_alias: flux-3-video
+    prices:
+      currency: USD
+      t2v_i2v:
+        draft_hd: 0.06
+        fhd: 0.29
+        hd: 0.17
+        qhd: 0.4
+        uhd: 0.8
+      unit: per output second
+      v2v:
+        draft_hd: 0.12
+        fhd: 0.53
+        hd: 0.41
+        qhd: 0.65
+        uhd: 0.95
+    product: BFL API and Playground
+    research_provider_id: bfl
     route_class: hosted_metered_api
-    status: provider_listed; billing_unit_conflict_requires_verification
-    prices: null
-    verified_at: '2026-10-07'
+    status: documented_not_execution_tested
+    verified_at: '2026-10-11'
+    version: Rolling endpoint; this review does not establish an immutable checkpoint.
+    price_conflict:
+      status: conflicting
+      docs_v2v_hd: 0.41
+      docs_v2v_fhd: 0.53
+      help_v2v_hd: 0.43
+      help_v2v_fhd: 0.54
+      currency: USD
+      unit: per output second
+      resolution: Help directs readers to current docs, but no effective change date or billed transaction
+        inspected.
+  reset_cadence: null
+  restrictions:
+  - Standard API terms allow application integration but prohibit offering a proxy API to other developers.
+  - The video overview documents signed output URLs expiring after about two hours; download within that window.
+    This does not establish full-data deletion timing.
+  schema_version: '1.0'
+  status: documented_not_execution_tested
+  subscription_includes_api: null
+  verified_at: '2026-10-11'
+- availability: unknown
+  billing_class: metered_api
+  client_id: null
+  conditions:
+  - Exact listed alias black-forest-labs/FLUX-3; examples use the /v2/videos API.
+  - Public page mixes available and launching-soon wording; catalog presence is not tested account access.
+  - Advertised $0.17 per video has no duration/resolution denominator; it is not the direct BFL $0.17 per output
+    second offer.
+  - Together storage defaults and optional training settings are distinct; disabling storage enables ZDR but
+    disables passthrough models.
+  - The exact FLUX 3 route is not classified as passthrough or Together-hosted by the inspected policy; upstream
+    applicability remains unresolved.
+  - No numeric model/account quota or fixed reset schedule established; serverless guidance is best effort
+    with 429/503 responses.
+  - The model page advertises a 99.9% SLA while generic serverless guidance is best effort; no applicable FLUX
+    3 contract guarantee was established.
+  evidence_ids:
+  - src-8d057ab55356
+  - src-2e19eb496679
+  - src-a8bf24d0415e
+  - src-eec7142cd474
+  id: access-d806a0c3a1f82a84
+  methods:
+  - hosted_api
+  model_id: bfl-flux3-video
+  model_label: black-forest-labs/FLUX-3
+  notes:
+  - Source documented; inference execution and individual eligibility were not tested.
+  price_ids:
+  - price-4b96884cd590cc84
+  product: hosted metered api
+  provider_id: together
+  requires_account: true
+  research_details:
+    model_alias: black-forest-labs/FLUX-3
+    prices: Advertised USD 0.17 per video; duration/resolution unspecified; not normalized to per second.
+    research_provider_id: together
+    route_class: hosted_metered_api
+    status: publicly_listed; account_availability_and_price_configuration_unverified
+    verified_at: '2026-10-11'
+    endpoint: https://api.together.xyz/v2/videos
+    authentication: Bearer API key
+    product: hosted metered api
+    documented_route_description: Together serverless video API
+  reset_cadence: null
+  restrictions: []
+  schema_version: '1.0'
+  status: publicly_listed; account_availability_and_price_configuration_unverified
+  subscription_includes_api: null
+  verified_at: '2026-10-11'
 - schema_version: '1.0'
   id: access-ffea018bd8f0c00e
   verified_at: '2026-10-07'
@@ -6613,131 +6674,207 @@ records:
     - text
     - image
     conditions: Dedicated GPU deployment supported; serverless unsupported. GPU count and total price unverified.
-- schema_version: '1.0'
-  id: access-a0b4c7d41e9fe052
-  verified_at: '2026-10-07'
-  model_id: elevenlabs-eleven-v4
-  provider_id: elevenlabs
-  model_label: eleven_v4
-  product: ElevenAPI PayGo
-  methods:
-  - hosted_api
-  status: documented_not_execution_tested
-  availability: documented
+- availability: documented
   billing_class: metered_api
-  price_ids: []
-  restrictions: []
-  evidence_ids:
-  - src-bcc14c31357b
-  - src-ca21f5099e32
-  - src-2166fd7f06f8
-  - src-a063315a377b
-  notes:
-  - 'Research route class: hosted_metered_api'
-  - Source documented; inference execution and individual eligibility were not tested.
   client_id: null
-  requires_account: null
-  subscription_includes_api: null
-  reset_cadence: null
   conditions:
   - Taxes excluded; eleven_v4_turbo is distinct and has different pricing.
-  research_details:
-    research_provider_id: elevenlabs
-    model_alias: eleven_v4
-    route_class: hosted_metered_api
-    status: documented_not_execution_tested
-    prices:
-      currency: USD
-      unit: per 1000 characters
-      current_promo: 0.022
-      published_base: 0.08
-      promotion_ends: '2026-10-12'
-    verified_at: '2026-10-07'
-    product: ElevenAPI PayGo
-    max_input_characters: 10000
-    outputs:
-    - audio
-    authentication: ElevenLabs API key
-    conditions: Taxes excluded; eleven_v4_turbo is distinct and has different pricing.
-- schema_version: '1.0'
-  id: access-8c59f3a51ab26c58
-  verified_at: '2026-10-07'
-  model_id: elevenlabs-eleven-v4
-  provider_id: elevenlabs
-  model_label: eleven_v4
-  product: ElevenAPI Starter
-  methods:
-  - hosted_api
-  status: documented_not_execution_tested
-  availability: documented
-  billing_class: subscription
-  price_ids: []
-  restrictions: []
+  - Use explicit eleven_v4; v4_turbo is a separately priced/modelled sibling.
+  - Public listing does not establish an individual account’s plan, region, voice or runtime eligibility.
+  - The model reference gives 10,000 input characters; the integration guide gives both 5,000 and 10,000; shared
+    TTD recommends <=2,000 for reliable completion.
+  - TTD seed is best effort; deterministic replay is not guaranteed.
+  - PAYG prepaid credits last 12 months; not a recurring monthly subscription reset. Legacy and Enterprise
+    arrangements have separate rules.
+  - xi-api-key authentication; key scopes, quota and IP restrictions may further limit access.
+  - Default retention applies. Eligible Enterprise accounts may use enable_logging=false for TTS/TTD; the Starter/PayGo
+    label alone does not grant ZRM.
+  - MP3 192kbps requires Creator+;44.1kHz PCM/WAV requires Pro+ per shared TTD reference.
+  - v4 disables SSML break tags; inline audio tags are documented. Other setting support requires model-specific
+    verification.
+  - Shared TTD endpoint guidance defaults to v3; it does not establish an independent lower v4 model ceiling.
   evidence_ids:
   - src-bcc14c31357b
-  - src-ca21f5099e32
-  - src-2166fd7f06f8
-  - src-a063315a377b
+  - src-0cfe13d09adf
+  - src-58f6a44d1374
+  - src-b7683813c287
+  - src-7a7fa65f65f1
+  - src-043cfbfe4301
+  - src-019e7bd6f55b
+  - src-9cc54eb0a407
+  - src-27f957bac2fb
+  - src-db5e38f3c926
+  - src-f7f5e3088c45
+  id: access-a0b4c7d41e9fe052
+  methods:
+  - hosted_api
+  model_id: elevenlabs-eleven-v4
+  model_label: eleven_v4
   notes:
-  - 'Research route class: subscription_authenticated_api'
   - Source documented; inference execution and individual eligibility were not tested.
-  client_id: null
-  requires_account: null
-  subscription_includes_api: null
+  price_ids: []
+  product: ElevenAPI PayGo
+  provider_id: elevenlabs
+  requires_account: true
+  research_details:
+    authentication: ElevenLabs API key
+    conditions: Taxes excluded; eleven_v4_turbo is distinct and has different pricing.
+    max_input_characters: null
+    model_alias: eleven_v4
+    outputs:
+    - audio
+    prices:
+      currency: USD
+      current_promo: 0.022
+      promotion_ends: '2026-10-12'
+      published_base: 0.08
+      unit: per 1000 characters
+    product: ElevenAPI PayGo
+    research_provider_id: elevenlabs
+    route_class: hosted_metered_api
+    status: documented_public_route; account_entitlement_not_execution_tested
+    verified_at: '2026-10-11'
+    documented_max_input_characters: 10000
+    input_limit_status: Model reference says 10000; integration guide contains both 5000 and 10000; effective
+      route limit not tested.
   reset_cadence: null
+  restrictions:
+  - Applicable regional terms require age 18 or local legal majority and necessary voice/input rights; the
+    v4 FAQ requires verified voice-owner consent.
+  - Free use is noncommercial; commercial rights under paid subscriptions remain subject to policies. A PayGo
+    purchase alone is not treated as a commercial-use grant.
+  - Health and other sensitive inputs have regional and service-specific restrictions. API section 4.2 has
+    scoped exceptions; no general eligibility is inferred.
+  schema_version: '1.0'
+  status: documented_public_route; account_entitlement_not_execution_tested
+  subscription_includes_api: null
+  verified_at: '2026-10-11'
+- availability: documented
+  billing_class: subscription
+  client_id: null
   conditions:
   - Displayed included-character estimate depends on temporary v4 rate; do not preserve this allowance after
     promo without rechecking.
-  research_details:
-    research_provider_id: elevenlabs
-    model_alias: eleven_v4
-    route_class: subscription_authenticated_api
-    status: documented_not_execution_tested
-    prices:
-      currency: USD
-      unit: monthly plan fee
-      starter_first_month: 1
-      starter_recurring: 6
-      current_calculator_included_characters: 272727
-    verified_at: '2026-10-07'
-    product: ElevenAPI Starter
-    conditions: Displayed included-character estimate depends on temporary v4 rate; do not preserve this allowance
-      after promo without rechecking.
-- schema_version: '1.0'
-  id: access-19adfeee35641105
-  verified_at: '2026-10-07'
-  model_id: elevenlabs-eleven-v4
-  provider_id: elevenlabs
-  model_label: eleven_v4
-  product: ElevenCreative speech playground
-  methods:
-  - chat
-  status: model documented; exact app-plan entitlement not reverified
-  availability: documented
-  billing_class: unknown
-  price_ids: []
-  restrictions: []
+  - Use explicit eleven_v4; v4_turbo is a separately priced/modelled sibling.
+  - Public listing does not establish an individual account’s plan, region, voice or runtime eligibility.
+  - The model reference gives 10,000 input characters; the integration guide gives both 5,000 and 10,000; shared
+    TTD recommends <=2,000 for reliable completion.
+  - TTD seed is best effort; deterministic replay is not guaranteed.
+  - Starter current public calculator shows 272,727 v4 characters (table rounded 273k), $6/month and $1 first
+    month during promotion; future allowance not locked.
+  - xi-api-key authentication; key scopes, quota and IP restrictions may further limit access.
+  - Default retention applies. Eligible Enterprise accounts may use enable_logging=false for TTS/TTD; the Starter/PayGo
+    label alone does not grant ZRM.
+  - MP3 192kbps requires Creator+;44.1kHz PCM/WAV requires Pro+ per shared TTD reference.
+  - v4 disables SSML break tags; inline audio tags are documented. Other setting support requires model-specific
+    verification.
+  - Shared TTD endpoint guidance defaults to v3; it does not establish an independent lower v4 model ceiling.
   evidence_ids:
   - src-bcc14c31357b
-  - src-ca21f5099e32
-  - src-2166fd7f06f8
-  - src-a063315a377b
+  - src-0cfe13d09adf
+  - src-58f6a44d1374
+  - src-b7683813c287
+  - src-7a7fa65f65f1
+  - src-043cfbfe4301
+  - src-019e7bd6f55b
+  - src-9cc54eb0a407
+  - src-27f957bac2fb
+  - src-db5e38f3c926
+  - src-f7f5e3088c45
+  id: access-8c59f3a51ab26c58
+  methods:
+  - hosted_api
+  model_id: elevenlabs-eleven-v4
+  model_label: eleven_v4
   notes:
-  - 'Research route class: creative_app'
   - Source documented; inference execution and individual eligibility were not tested.
-  client_id: null
-  requires_account: null
-  subscription_includes_api: null
-  reset_cadence: null
-  conditions: []
+  price_ids:
+  - price-9ebb4de934222044
+  product: ElevenAPI Starter
+  provider_id: elevenlabs
+  requires_account: true
   research_details:
-    research_provider_id: elevenlabs
+    conditions: Displayed included-character estimate depends on temporary v4 rate; do not preserve this allowance
+      after promo without rechecking.
     model_alias: eleven_v4
-    route_class: creative_app
-    status: model documented; exact app-plan entitlement not reverified
+    prices:
+      currency: USD
+      current_calculator_included_characters: 272727
+      starter_first_month: 1
+      starter_recurring: 6
+      unit: monthly plan fee
+    product: ElevenAPI Starter
+    research_provider_id: elevenlabs
+    route_class: subscription_authenticated_api
+    status: documented_public_route; account_entitlement_not_execution_tested
+    verified_at: '2026-10-11'
+  reset_cadence: Monthly credit allocation; up to two months of unused credits roll over while the plan is
+    maintained without downgrade or cancellation.
+  restrictions:
+  - Applicable regional terms require age 18 or local legal majority and necessary voice/input rights; the
+    v4 FAQ requires verified voice-owner consent.
+  - Free use is noncommercial; commercial rights under paid subscriptions remain subject to policies. A PayGo
+    purchase alone is not treated as a commercial-use grant.
+  - Health and other sensitive inputs have regional and service-specific restrictions. API section 4.2 has
+    scoped exceptions; no general eligibility is inferred.
+  schema_version: '1.0'
+  status: documented_public_route; account_entitlement_not_execution_tested
+  subscription_includes_api: true
+  verified_at: '2026-10-11'
+- availability: documented
+  billing_class: unknown
+  client_id: null
+  conditions:
+  - Use explicit eleven_v4; v4_turbo is a separately priced/modelled sibling.
+  - Public listing does not establish an individual account’s plan, region, voice or runtime eligibility.
+  - The model reference gives 10,000 input characters; the integration guide gives both 5,000 and 10,000.
+  - Public v4 page includes free and paid access; this broad playground route has no single plan fee or usage
+    allowance.
+  - UI traffic is not covered by Zero Retention Mode.
+  - v4 disables SSML break tags; inline audio tags are documented. Other setting support requires model-specific
+    verification.
+  evidence_ids:
+  - src-bcc14c31357b
+  - src-0cfe13d09adf
+  - src-58f6a44d1374
+  - src-b7683813c287
+  - src-7a7fa65f65f1
+  - src-043cfbfe4301
+  - src-019e7bd6f55b
+  - src-1d10205c255d
+  id: access-19adfeee35641105
+  methods:
+  - chat
+  model_id: elevenlabs-eleven-v4
+  model_label: eleven_v4
+  notes:
+  - Source documented; inference execution and individual eligibility were not tested.
+  - The interface called chat in the legacy route schema is a supplied-text speech playground, not a native
+    conversational LLM.
+  price_ids: []
+  product: ElevenCreative speech playground
+  provider_id: elevenlabs
+  requires_account: true
+  research_details:
+    model_alias: eleven_v4
     prices: null
-    verified_at: '2026-10-07'
     product: ElevenCreative speech playground
+    research_provider_id: elevenlabs
+    route_class: creative_app
+    status: documented_public_route; account_entitlement_not_execution_tested
+    verified_at: '2026-10-11'
+  reset_cadence: null
+  restrictions:
+  - Applicable regional terms require age 18 or local legal majority and necessary voice/input rights; the
+    v4 FAQ requires verified voice-owner consent.
+  - Free use is noncommercial; commercial rights under paid subscriptions remain subject to policies. A PayGo
+    purchase alone is not treated as a commercial-use grant.
+  - Regional sensitive-input restrictions and applicable Creative terms govern this UI route; API-specific
+    exceptions are not treated as UI permissions.
+  schema_version: '1.0'
+  status: documented_public_route; account_entitlement_not_execution_tested
+  subscription_includes_api: null
+  verified_at: '2026-10-11'
 - schema_version: '1.0'
   id: access-13993b616413e4a7
   verified_at: '2026-10-07'

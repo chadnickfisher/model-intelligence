@@ -3892,58 +3892,70 @@ records:
   notes:
   - This route names a model/alias not yet resolved to a canonical model profile; do not assume checkpoint
     equivalence.
-- schema_version: '1.0'
+- billing_method: metered-api
+  conditions:
+  - API and Playground use the same listed tariff; 1 credit = $0.01 USD.
+  - Full renders and drafts are distinct operations; no subscription entitlement or free local inference inferred.
+  effective_from: null
+  effective_to: null
+  evidence_ids:
+  - src-752c7dd560da
+  - src-10a91840b546
   id: price-providers-bfl-flux3-video-bfl-772aa13dfb82
-  verified_at: '2026-10-06'
+  included_usage: []
   model_id: bfl-flux3-video
-  provider_id: bfl
-  product: API / Playground
   model_label: FLUX 3 Video
-  billing_method: metered-api
-  status: current
+  notes:
+  - Region-specific taxes, negotiated enterprise rates and account eligibility not established.
+  overage: []
+  product: API / Playground
+  provider_id: bfl
+  rates:
+  - amount: 0.17
+    currency: USD
+    metric: generation
+    unit: per output second
+    conditions:
+    - Published API documentation rate; output duration is the billing denominator.
   region: not specified
+  reset_cadence: null
+  schema_version: '1.0'
+  status: current
   tier: t2v/i2v full render HD
-  effective_from: null
+  verified_at: '2026-10-11'
+- billing_method: metered-api
+  conditions:
+  - API and Playground use the same listed tariff; 1 credit = $0.01 USD.
+  - Full renders and drafts are distinct operations; no subscription entitlement or free local inference inferred.
+  - This resolution class was announced September 10; delivery includes the upsampler.
+  effective_from: '2026-09-10'
   effective_to: null
-  rates:
-  - metric: generation
-    amount: 0.17
-    currency: USD
-    unit: per output second
-    conditions: []
-  included_usage: []
-  reset_cadence: null
-  overage: []
-  conditions: []
   evidence_ids:
   - src-752c7dd560da
-  notes: []
-- schema_version: '1.0'
+  - src-10a91840b546
+  - src-7e3a0b76fdd6
   id: price-providers-bfl-flux3-video-bfl-c4a4dfe8876e
-  verified_at: '2026-10-06'
-  model_id: bfl-flux3-video
-  provider_id: bfl
-  product: API / Playground
-  model_label: FLUX 3 Video
-  billing_method: metered-api
-  status: current
-  region: not specified
-  tier: t2v/i2v full render UHD
-  effective_from: null
-  effective_to: null
-  rates:
-  - metric: generation
-    amount: 0.8
-    currency: USD
-    unit: per output second
-    conditions: []
   included_usage: []
-  reset_cadence: null
+  model_id: bfl-flux3-video
+  model_label: FLUX 3 Video
+  notes:
+  - Region-specific taxes, negotiated enterprise rates and account eligibility not established.
   overage: []
-  conditions: []
-  evidence_ids:
-  - src-752c7dd560da
-  notes: []
+  product: API / Playground
+  provider_id: bfl
+  rates:
+  - amount: 0.8
+    currency: USD
+    metric: generation
+    unit: per output second
+    conditions:
+    - Published API documentation rate; output duration is the billing denominator.
+  region: not specified
+  reset_cadence: null
+  schema_version: '1.0'
+  status: current
+  tier: t2v/i2v full render UHD
+  verified_at: '2026-10-11'
 - schema_version: '1.0'
   id: price-providers-api-playground-bfl-87cdad9a25df
   verified_at: '2026-10-06'
@@ -3973,35 +3985,42 @@ records:
   notes:
   - This route names a model/alias not yet resolved to a canonical model profile; do not assume checkpoint
     equivalence.
-- schema_version: '1.0'
-  id: price-providers-elevenlabs-eleven-v4-elevenlabs-9a8e2a2f9216
-  verified_at: '2026-10-07'
-  model_id: elevenlabs-eleven-v4
-  provider_id: elevenlabs
-  product: ElevenAPI
-  model_label: eleven_v4
-  billing_method: metered-api
-  status: current
-  region: not specified
-  tier: Free / PayGo displayed
-  effective_from: null
-  effective_to: null
-  rates:
-  - metric: text
-    amount: 0.022
-    currency: USD
-    unit: per 1,000 characters
-    conditions: []
-  included_usage: []
-  reset_cadence: null
-  overage: []
+- billing_method: metered-api
   conditions:
   - Displayed temporary $0.022 per 1000 characters promotion until October 12, 2026; undiscounted displayed
     rate $0.08. Exact ending instant is not specified.
   - Prices exclude taxes, levies and duties; subscription allowances remain separate.
+  effective_from: null
+  effective_to: null
   evidence_ids:
   - src-bcc14c31357b
-  notes: []
+  - src-9cc54eb0a407
+  id: price-providers-elevenlabs-eleven-v4-elevenlabs-9a8e2a2f9216
+  included_usage: []
+  model_id: elevenlabs-eleven-v4
+  model_label: eleven_v4
+  notes:
+  - The current price remains a temporary published offer, not a billed transaction. Promotion ends October
+    12 but exact time zone/instant is not specified.
+  - The Free/PAYG pricing table also displays 10k included characters; the paid balance and free recurring
+    allowance are separate funding concepts, so no effective per-task cost is inferred.
+  - The published base and temporary promotion are distinct; no automatic retirement date is inferred from
+    an unspecified cutoff instant.
+  overage: []
+  product: ElevenAPI
+  provider_id: elevenlabs
+  rates:
+  - amount: 0.022
+    conditions: []
+    currency: USD
+    metric: text
+    unit: per 1,000 characters
+  region: not specified
+  reset_cadence: null
+  schema_version: '1.0'
+  status: current
+  tier: Free / PayGo displayed
+  verified_at: '2026-10-11'
 - schema_version: '1.0'
   id: price-providers-elevenapi-elevenlabs-3c86d62642bb
   verified_at: '2026-10-06'
@@ -6142,3 +6161,347 @@ records:
   evidence_ids:
   - src-73e03ec6d5cd
   notes: []
+- billing_method: metered-api
+  conditions:
+  - API and Playground use the same listed tariff; 1 credit = $0.01 USD.
+  - Full renders and drafts are distinct operations; no subscription entitlement or free local inference inferred.
+  effective_from: null
+  effective_to: null
+  evidence_ids:
+  - src-752c7dd560da
+  - src-10a91840b546
+  id: price-c7304280763b2015
+  included_usage: []
+  model_id: bfl-flux3-video
+  model_label: FLUX 3 Video
+  notes:
+  - Region-specific taxes, negotiated enterprise rates and account eligibility not established.
+  overage: []
+  product: API / Playground
+  provider_id: bfl
+  rates:
+  - amount: 0.29
+    currency: USD
+    metric: generation
+    unit: per output second
+    conditions:
+    - Published API documentation rate; output duration is the billing denominator.
+  region: not specified
+  reset_cadence: null
+  schema_version: '1.0'
+  status: current
+  tier: t2v/i2v full render FHD
+  verified_at: '2026-10-11'
+- billing_method: metered-api
+  conditions:
+  - API and Playground use the same listed tariff; 1 credit = $0.01 USD.
+  - Full renders and drafts are distinct operations; no subscription entitlement or free local inference inferred.
+  - This resolution class was announced September 10; delivery includes the upsampler.
+  effective_from: '2026-09-10'
+  effective_to: null
+  evidence_ids:
+  - src-752c7dd560da
+  - src-10a91840b546
+  - src-7e3a0b76fdd6
+  id: price-123480d7451d6507
+  included_usage: []
+  model_id: bfl-flux3-video
+  model_label: FLUX 3 Video
+  notes:
+  - Region-specific taxes, negotiated enterprise rates and account eligibility not established.
+  overage: []
+  product: API / Playground
+  provider_id: bfl
+  rates:
+  - amount: 0.4
+    currency: USD
+    metric: generation
+    unit: per output second
+    conditions:
+    - Published API documentation rate; output duration is the billing denominator.
+  region: not specified
+  reset_cadence: null
+  schema_version: '1.0'
+  status: current
+  tier: t2v/i2v full render QHD
+  verified_at: '2026-10-11'
+- billing_method: metered-api
+  conditions:
+  - API and Playground use the same listed tariff; 1 credit = $0.01 USD.
+  - Full renders and drafts are distinct operations; no subscription entitlement or free local inference inferred.
+  effective_from: null
+  effective_to: null
+  evidence_ids:
+  - src-752c7dd560da
+  - src-10a91840b546
+  id: price-302abd795042a81e
+  included_usage: []
+  model_id: bfl-flux3-video
+  model_label: FLUX 3 Video
+  notes:
+  - Region-specific taxes, negotiated enterprise rates and account eligibility not established.
+  overage: []
+  product: API / Playground
+  provider_id: bfl
+  rates:
+  - amount: 0.06
+    currency: USD
+    metric: generation
+    unit: per output second
+    conditions:
+    - Published API documentation rate; output duration is the billing denominator.
+  region: not specified
+  reset_cadence: null
+  schema_version: '1.0'
+  status: current
+  tier: t2v/i2v draft HD
+  verified_at: '2026-10-11'
+- billing_method: metered-api
+  conditions:
+  - API and Playground use the same listed tariff; 1 credit = $0.01 USD.
+  - Full renders and drafts are distinct operations; no subscription entitlement or free local inference inferred.
+  - Conflicting original first-party rates retained; effective tariff transition date unknown.
+  effective_from: null
+  effective_to: null
+  evidence_ids:
+  - src-752c7dd560da
+  - src-10a91840b546
+  - src-31ba1a35827e
+  id: price-efbad60409efdba1
+  included_usage: []
+  model_id: bfl-flux3-video
+  model_label: FLUX 3 Video
+  notes:
+  - Region-specific taxes, negotiated enterprise rates and account eligibility not established.
+  overage: []
+  product: API / Playground
+  provider_id: bfl
+  rates:
+  - amount: 0.41
+    currency: USD
+    metric: generation
+    unit: per output second
+    conditions:
+    - Published API documentation rate; output duration is the billing denominator.
+    - Conflicts with help-center value; not confirmed by a billed request.
+  - amount: 0.43
+    currency: USD
+    metric: generation
+    unit: per output second
+    conditions:
+    - Alternative published help-center rate, NOT an additional charge; help defers to current documentation.
+  region: not specified
+  reset_cadence: null
+  schema_version: '1.0'
+  status: unknown
+  tier: v2v full render HD
+  verified_at: '2026-10-11'
+- billing_method: metered-api
+  conditions:
+  - API and Playground use the same listed tariff; 1 credit = $0.01 USD.
+  - Full renders and drafts are distinct operations; no subscription entitlement or free local inference inferred.
+  - Conflicting original first-party rates retained; effective tariff transition date unknown.
+  effective_from: null
+  effective_to: null
+  evidence_ids:
+  - src-752c7dd560da
+  - src-10a91840b546
+  - src-31ba1a35827e
+  id: price-d58d3f01fe463702
+  included_usage: []
+  model_id: bfl-flux3-video
+  model_label: FLUX 3 Video
+  notes:
+  - Region-specific taxes, negotiated enterprise rates and account eligibility not established.
+  overage: []
+  product: API / Playground
+  provider_id: bfl
+  rates:
+  - amount: 0.53
+    currency: USD
+    metric: generation
+    unit: per output second
+    conditions:
+    - Published API documentation rate; output duration is the billing denominator.
+    - Conflicts with help-center value; not confirmed by a billed request.
+  - amount: 0.54
+    currency: USD
+    metric: generation
+    unit: per output second
+    conditions:
+    - Alternative published help-center rate, NOT an additional charge; help defers to current documentation.
+  region: not specified
+  reset_cadence: null
+  schema_version: '1.0'
+  status: unknown
+  tier: v2v full render FHD
+  verified_at: '2026-10-11'
+- billing_method: metered-api
+  conditions:
+  - API and Playground use the same listed tariff; 1 credit = $0.01 USD.
+  - Full renders and drafts are distinct operations; no subscription entitlement or free local inference inferred.
+  - This resolution class was announced September 10; delivery includes the upsampler.
+  effective_from: '2026-09-10'
+  effective_to: null
+  evidence_ids:
+  - src-752c7dd560da
+  - src-10a91840b546
+  - src-7e3a0b76fdd6
+  id: price-82761110f518dcd8
+  included_usage: []
+  model_id: bfl-flux3-video
+  model_label: FLUX 3 Video
+  notes:
+  - Region-specific taxes, negotiated enterprise rates and account eligibility not established.
+  overage: []
+  product: API / Playground
+  provider_id: bfl
+  rates:
+  - amount: 0.65
+    currency: USD
+    metric: generation
+    unit: per output second
+    conditions:
+    - Published API documentation rate; output duration is the billing denominator.
+  region: not specified
+  reset_cadence: null
+  schema_version: '1.0'
+  status: current
+  tier: v2v full render QHD
+  verified_at: '2026-10-11'
+- billing_method: metered-api
+  conditions:
+  - API and Playground use the same listed tariff; 1 credit = $0.01 USD.
+  - Full renders and drafts are distinct operations; no subscription entitlement or free local inference inferred.
+  - This resolution class was announced September 10; delivery includes the upsampler.
+  effective_from: '2026-09-10'
+  effective_to: null
+  evidence_ids:
+  - src-752c7dd560da
+  - src-10a91840b546
+  - src-7e3a0b76fdd6
+  id: price-912853939957f01c
+  included_usage: []
+  model_id: bfl-flux3-video
+  model_label: FLUX 3 Video
+  notes:
+  - Region-specific taxes, negotiated enterprise rates and account eligibility not established.
+  overage: []
+  product: API / Playground
+  provider_id: bfl
+  rates:
+  - amount: 0.95
+    currency: USD
+    metric: generation
+    unit: per output second
+    conditions:
+    - Published API documentation rate; output duration is the billing denominator.
+  region: not specified
+  reset_cadence: null
+  schema_version: '1.0'
+  status: current
+  tier: v2v full render UHD
+  verified_at: '2026-10-11'
+- billing_method: metered-api
+  conditions:
+  - API and Playground use the same listed tariff; 1 credit = $0.01 USD.
+  - Full renders and drafts are distinct operations; no subscription entitlement or free local inference inferred.
+  effective_from: null
+  effective_to: null
+  evidence_ids:
+  - src-752c7dd560da
+  - src-10a91840b546
+  id: price-e8edd03a0ba20d77
+  included_usage: []
+  model_id: bfl-flux3-video
+  model_label: FLUX 3 Video
+  notes:
+  - Region-specific taxes, negotiated enterprise rates and account eligibility not established.
+  overage: []
+  product: API / Playground
+  provider_id: bfl
+  rates:
+  - amount: 0.12
+    currency: USD
+    metric: generation
+    unit: per output second
+    conditions:
+    - Published API documentation rate; output duration is the billing denominator.
+  region: not specified
+  reset_cadence: null
+  schema_version: '1.0'
+  status: current
+  tier: v2v draft HD
+  verified_at: '2026-10-11'
+- id: price-4b96884cd590cc84
+  schema_version: '1.0'
+  provider_id: together
+  model_id: bfl-flux3-video
+  model_label: black-forest-labs/FLUX-3
+  product: hosted metered api
+  tier: Public advertised estimate; configuration unspecified
+  status: unknown
+  billing_method: metered-api
+  region: not specified
+  rates:
+  - amount: 0.17
+    currency: USD
+    metric: generation
+    unit: per video
+    conditions:
+    - Duration and resolution not published with the quoted amount; do not convert to per-second cost.
+  included_usage: []
+  overage: []
+  reset_cadence: null
+  conditions:
+  - Publicly advertised estimate, not execution-verified cost or account entitlement.
+  effective_from: null
+  effective_to: null
+  verified_at: '2026-10-11'
+  evidence_ids:
+  - src-2e19eb496679
+  - src-8d057ab55356
+  notes:
+  - A differently denominated BFL offer is not contradictory evidence about this provider’s configured billing.
+  - The product identity is the existing hosted metered API route; the public endpoint is described as serverless
+    video.
+- id: price-9ebb4de934222044
+  schema_version: '1.0'
+  provider_id: elevenlabs
+  model_id: elevenlabs-eleven-v4
+  model_label: eleven_v4
+  product: ElevenAPI
+  tier: Starter monthly; first-month promotion separately qualified
+  status: current
+  billing_method: subscription
+  region: not specified
+  rates:
+  - amount: 6
+    currency: USD
+    metric: subscription
+    unit: per month
+    conditions:
+    - Current recurring Starter fee; taxes excluded.
+  - amount: 1
+    currency: USD
+    metric: subscription
+    unit: first month
+    conditions:
+    - Advertised first-month introductory amount, not an additional fee; eligibility not account-tested.
+  included_usage:
+  - Current v4 calculator 272,727 characters (table rounds 273k); temporary launch economics through October
+    12, not a permanent allowance.
+  overage:
+  - Additional prepaid PAYG credits may be purchased on eligible new subscriptions; exact billed overage/account
+    settings not tested.
+  reset_cadence: Monthly; rollover up to two months while maintained without downgrade or cancellation.
+  conditions:
+  - No annual price or per-use conversion inferred from monthly subscription.
+  effective_from: null
+  effective_to: null
+  verified_at: '2026-10-11'
+  evidence_ids:
+  - src-bcc14c31357b
+  - src-9cc54eb0a407
+  notes:
+  - Exact introduction/expiry instants and user eligibility not published for this complete offer.

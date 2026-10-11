@@ -46,4 +46,4 @@ Verified: 2026-10-06
 
 ## Sources
 
-[www.together.ai](https://www.together.ai/pricing) · [docs.together.ai](https://docs.together.ai/docs/privacy-and-security)
+[Pricing](https://www.together.ai/pricing) · [Privacy and security](https://docs.together.ai/docs/privacy-and-security)

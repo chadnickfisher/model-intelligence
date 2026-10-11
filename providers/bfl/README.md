@@ -46,4 +46,4 @@ Verified: 2026-10-06
 
 ## Sources
 
-[docs.bfl.ai](https://docs.bfl.ai/quick_start/pricing) · [docs.bfl.ai](https://docs.bfl.ai/flux_3/flux3_overview)
+[Overview](https://docs.bfl.ai/quick_start/pricing) · [FLUX 3 Video](https://docs.bfl.ai/flux_3/flux3_overview)

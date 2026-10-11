@@ -535,17 +535,21 @@ records:
   limitations: []
 - id: src-2e19eb496679
   url: https://www.together.ai/pricing
-  title: null
-  publisher: null
+  title: Pricing
+  publisher: Together AI
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-07'
+  accessed_at: '2026-10-11'
   claim_scope:
-  - Access/pricing source investigation; account entitlement and operational access not tested.
-  - FLUX 3 third-party listing observed; table says per-video .17, cannot transpose BFL per-second rate.
-  - Together lower promotional K3 rates2.70/.27/13.50.
-  - Exact route/price or applicable provider billing terms verified in first pass.
-  limitations: []
+  - 'Previously recorded (source checked 2026-10-07): FLUX 3 third-party listing observed; table says per-video
+    .17, cannot transpose BFL per-second rate.'
+  - 'Previously recorded (source checked 2026-10-07): Together lower promotional K3 rates2.70/.27/13.50.'
+  - The video table advertises FLUX 3 at USD 0.17 per video; exact duration and resolution are not supplied
+    with that row.
+  limitations:
+  - No conversion to BFL per-second rates. Unrelated model prices and GPU offers were not reverified in this
+    review.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
 - id: src-2f3ae40d3bb7
   url: https://ai.google.dev/gemma/docs/core
   title: Gemma 4 overview
@@ -937,14 +941,20 @@ records:
   limitations: []
 - id: src-57a05c45a0b1
   url: https://docs.bfl.ai/flux_3/flux3_overview
-  title: null
-  publisher: null
+  title: FLUX 3 Video
+  publisher: Black Forest Labs
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-07'
+  accessed_at: '2026-10-11'
   claim_scope:
-  - Preview endpoint /v1/flux-3-video; t2v/i2v/v2v, synchronized audio, up to 20 seconds/4K/24 fps.
-  limitations: []
+  - 'Previously recorded (source checked 2026-10-07): Preview endpoint /v1/flux-3-video; t2v/i2v/v2v, synchronized
+    audio, up to 20 seconds/4K/24 fps.'
+  - The preview video endpoint supports text/image generation up to 20 seconds and continuation up to 15 seconds,
+    24 fps, and upsampled resolutions. Signed video links expire after about two hours.
+  limitations:
+  - Documentation is not execution evidence. The video retrieval window must not be replaced with the generic
+    image guide’s ten-minute window.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
 - id: src-58333316475e
   url: https://claude.com/pricing
   title: Claude plan pricing
@@ -975,14 +985,18 @@ records:
   limitations: []
 - id: src-58f6a44d1374
   url: https://elevenlabs.io/docs/overview/models
-  title: null
-  publisher: null
+  title: Models
+  publisher: ElevenLabs
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-07'
+  accessed_at: '2026-10-11'
   claim_scope:
-  - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
-  limitations: []
+  - The model table distinguishes eleven_v4 from eleven_v4_turbo and lists v4 at 10,000 characters with 90+
+    languages.
+  limitations:
+  - The integration blog retains a conflicting 5,000-character table. Concurrency tables for other named models
+    do not establish v4 limits.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
 - id: src-5906a70e58c6
   url: https://developers.openai.com/api/docs/models/gpt-6.1-sol
   title: gpt-6.1-sol model specifications
@@ -1335,14 +1349,19 @@ records:
     multiplier prose.
 - id: src-752c7dd560da
   url: https://docs.bfl.ai/quick_start/pricing
-  title: null
-  publisher: null
+  title: Overview
+  publisher: Black Forest Labs
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-07'
+  accessed_at: '2026-10-11'
   claim_scope:
-  - Credit conversion 1 credit=.01 USD; all mode/resolution rates; API and Playground same price.
-  limitations: []
+  - 'Previously recorded (source checked 2026-10-07): Credit conversion 1 credit=.01 USD; all mode/resolution
+    rates; API and Playground same price.'
+  - FLUX 3 Video is priced per output second by mode and resolution; one credit equals USD 0.01 and API/Playground
+    tariffs match. Continuation HD/FHD are listed at 0.41/0.53.
+  limitations:
+  - The help center lists 0.43/0.54 for continuation HD/FHD. No transition date or billed tariff was established.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
 - id: src-772c9fd668f0
   url: https://opencode.ai/docs/zen/
   title: null
@@ -1393,13 +1412,18 @@ records:
     with methodology, model mode, harness and date.
 - id: src-7a7fa65f65f1
   url: https://elevenlabs.io/docs/eleven-api/resources/zero-retention-mode
-  title: null
-  publisher: null
+  title: Zero Retention Mode (Enterprise)
+  publisher: ElevenLabs
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-06'
-  claim_scope: []
-  limitations: []
+  accessed_at: '2026-10-11'
+  claim_scope:
+  - Eligible Enterprise API TTS/TTD requests can disable logging; UI and playground traffic are outside zero
+    retention coverage.
+  limitations:
+  - Enterprise status alone does not guarantee access; high-risk or account-specific restrictions can apply.
+    Coverage excludes other customer data.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
 - id: src-7a929ac1ccc5
   url: https://artificialanalysis.ai/articles/cohere-launches-open-weights-model-command-a-more-than-a-year-since-the-command-a-release
   title: null
@@ -1744,13 +1768,17 @@ records:
     with methodology, model mode, harness and date.
 - id: src-a8bf24d0415e
   url: https://docs.together.ai/docs/privacy-and-security
-  title: null
-  publisher: null
+  title: Privacy and security
+  publisher: Together AI
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-06'
-  claim_scope: []
-  limitations: []
+  accessed_at: '2026-10-11'
+  claim_scope:
+  - Storage is on by default; training sharing is opt-in. Organization storage disablement enables ZDR and
+    disables passthrough models. Serverless has no region selection.
+  limitations:
+  - The inspected policy does not classify the exact FLUX 3 route as passthrough or Together-hosted.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
 - id: src-a90c98ed76ae
   url: https://www.ai21.com/deployment/
   title: null
@@ -1904,14 +1932,20 @@ records:
   limitations: []
 - id: src-bcc14c31357b
   url: https://elevenlabs.io/pricing/api
-  title: null
-  publisher: null
+  title: ElevenAPI Pricing
+  publisher: ElevenLabs
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-07'
+  accessed_at: '2026-10-11'
   claim_scope:
-  - ElevenAPI USD/characters, promo until Oct12, PayGo versus Starter subscription.
-  limitations: []
+  - 'Previously recorded (source checked 2026-10-07): ElevenAPI USD/characters, promo until Oct12, PayGo versus
+    Starter subscription.'
+  - v4 is USD 0.022 per 1,000 characters during the offer ending October 12, versus displayed base 0.08. Starter
+    is USD 6 monthly, USD 1 introductory, with 272.727k calculator characters and 273k rounded table characters.
+  limitations:
+  - Exact cutoff instant and account eligibility are unknown; allowances depend on the temporary rate. Turbo
+    is separate and taxes are excluded.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
 - id: src-be6c06ae0b52
   url: https://www.vals.ai/models/google_gemini-3.8-flash
   title: Vals AI gemini-3.8-flash
@@ -3272,15 +3306,17 @@ records:
   limitations: []
 - id: src-eec7142cd474
   url: https://docs.together.ai/docs/serverless/rate-limits
-  title: https://docs.together.ai/docs/serverless/rate-limits
-  publisher: null
+  title: Rate limits
+  publisher: Together AI
   source_type: primary
   published_at: null
-  accessed_at: '2026-10-07'
+  accessed_at: '2026-10-11'
   claim_scope:
-  - Access/pricing source investigation; account entitlement and operational access not tested.
-  - Exact route/price or applicable provider billing terms verified in first pass.
-  limitations: []
+  - Serverless is best effort, may return 429/503 under demand, and can have model-specific restrictions; provisioned
+    throughput provides separately contracted guarantees.
+  limitations:
+  - No numeric FLUX 3 account quota or reset schedule is established by this generic guidance.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
 - id: src-1738285cd510
   url: https://support.together.ai/articles/1862638756-changes-to-free-tier-and-billing-july-2025
   title: https://support.together.ai/articles/1862638756-changes-to-free-tier-and-billing-july-2025
@@ -9959,3 +9995,246 @@ records:
   - Exact Phi-4-multimodal-instruct scoped research
   - Scout localization and rejection results under the same published GroundingME referring-expression protocol;
     no GUI action or autonomous computer-use evaluation.
+- id: src-019e7bd6f55b
+  url: https://elevenlabs.io/terms-of-use-eu
+  title: ElevenLabs Terms of Service EEA, UK and Switzerland
+  publisher: ElevenLabs
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-11'
+  claim_scope:
+  - Regional terms dated October 9 cover age eligibility, plan-dependent output use and Article 9 sensitive-input
+    restrictions, subject to applicable-law exceptions.
+  limitations:
+  - Regional and supplemental terms govern their own scope; no account-specific legal eligibility was tested.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
+- id: src-043cfbfe4301
+  url: https://elevenlabs.io/terms-of-use
+  title: ElevenLabs Terms of Service
+  publisher: ElevenLabs
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-11'
+  claim_scope:
+  - October 9 terms distinguish free noncommercial use from commercial use under paid subscriptions; content-use
+    permission and prospective training opt-out are separate from output ownership.
+  limitations:
+  - No standalone commercial grant is inferred from buying PayGo credits; applicable supplemental terms may
+    change the general terms.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
+- id: src-0cfe13d09adf
+  url: https://elevenlabs.io/v4
+  title: Eleven v4 and Eleven v4 Turbo Text to Speech models
+  publisher: ElevenLabs
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-11'
+  claim_scope:
+  - The v4 page lists free and paid access, API use, a 10,000-character limit, verified voice-owner consent,
+    and disabled SSML break tags.
+  limitations:
+  - Vendor claims do not independently prove capability. Consent-based training language must be read with
+    contractual permissions; it is not zero retention.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
+- id: src-9cc54eb0a407
+  url: https://elevenlabs.io/docs/overview/administration/billing
+  title: Billing
+  publisher: ElevenLabs
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-11'
+  claim_scope:
+  - Self-serve allocations reset monthly with up to two months of rollover while the plan is maintained. Prepaid
+    PayGo credits last 12 months; legacy and Enterprise subscriptions have different eligibility.
+  limitations:
+  - Cancellation and downgrade affect rollover; no customer balance or billed transaction was inspected.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
+- id: src-b7683813c287
+  url: https://elevenlabs.io/blog/text-to-speech-api-integration
+  title: 'Text to Speech API integration: A developer’s guide'
+  publisher: ElevenLabs
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-11'
+  claim_scope:
+  - The v4 comparison table states 5,000 characters, while the limits section states 10,000; the guide is internally
+    inconsistent.
+  limitations:
+  - Generic Flash controls and concurrency examples cannot establish v4-specific settings or quotas.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
+- id: src-7e3a0b76fdd6
+  url: https://docs.bfl.ai/release-notes
+  title: Release Notes
+  publisher: Black Forest Labs
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-11'
+  claim_scope:
+  - Dated entries document August 4 video preview, August 17 continuation limit, August 20 separate upscale,
+    September 10 integrated QHD/UHD, and October 1 separate Image release.
+  limitations:
+  - Release announcements do not prove current account access or performance; separate Image/Upscale releases
+    do not replace the video model identity.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
+- id: src-2d980c304e95
+  url: https://docs.bfl.ai/quick_start/get_started
+  title: Quick Start
+  publisher: Black Forest Labs
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-11'
+  claim_scope:
+  - The documented setup requires an email-confirmed account, credits and a project API key; its video example
+    uses x-key and /v1/flux-3-video.
+  limitations:
+  - Public setup instructions do not establish account-specific eligibility or execution success.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
+- id: src-10a91840b546
+  url: https://docs.bfl.ai/account_management/credits_billing
+  title: Credits & Billing
+  publisher: Black Forest Labs
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-11'
+  claim_scope:
+  - Organization credits are shared across projects, usage is tracked per project, and purchases fund the balance.
+    Auto top-up is optional.
+  limitations:
+  - No recurring subscription allowance or account balance is inferred.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
+- id: src-c12ad05ec233
+  url: https://bfl.ai/legal/flux-api-service-terms
+  title: FLUX API Service Terms
+  publisher: Black Forest Labs
+  source_type: primary
+  published_at: '2026-08-04'
+  accessed_at: '2026-10-11'
+  claim_scope:
+  - Standard API terms permit app integration, prohibit offering third-party proxy API endpoints, and allow
+    input/output use for model training and improvement.
+  limitations:
+  - Contractual permission does not prove actual training on a request. Video retrieval requirements do not
+    establish full data retention duration.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
+- id: src-b66d992d27f1
+  url: https://bfl.ai/legal/eu-api-service-terms
+  title: EU API Service Terms
+  publisher: Black Forest Labs
+  source_type: primary
+  published_at: '2026-08-26'
+  accessed_at: '2026-10-11'
+  claim_scope:
+  - EU API terms likewise cover app integration, prohibit third-party proxy APIs and permit input/output use
+    for training and improvement.
+  limitations:
+  - Regional contractual differences remain; no negotiated opt-out or actual training was verified.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
+- id: src-8480eae8d4c0
+  url: https://docs.bfl.ai/api_integration/integration_guidelines
+  title: FLUX API Integration Guide
+  publisher: Black Forest Labs
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-11'
+  claim_scope:
+  - Global, EU and US endpoints and returned polling URLs are documented. The general guide lists 24 active
+    requests for most endpoints and image delivery expiry of ten minutes.
+  limitations:
+  - This does not establish a FLUX 3 account quota or video expiry; the video overview provides its own retrieval
+    window.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
+- id: src-bb26705946aa
+  url: https://bfl.ai/pricing
+  title: Pricing
+  publisher: Black Forest Labs
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-11'
+  claim_scope:
+  - The standard API is described as pay as you go without subscription or seat fees; enterprise pricing is
+    negotiated.
+  limitations:
+  - The default calculator rendered an image rate, so no video tariff is taken from that default.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
+- id: src-31ba1a35827e
+  url: https://help.bfl.ai/articles/7986977817-what-are-the-costs-associated-with-using-your-models
+  title: What are the costs associated with using your models?
+  publisher: Black Forest Labs
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-11'
+  claim_scope:
+  - The help center lists continuation HD/FHD at USD 0.43/0.54 per output second and points to current pricing
+    documentation.
+  limitations:
+  - Documentation instead lists 0.41/0.53. The relative update label cannot establish an exact tariff change
+    date.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
+- id: src-8d057ab55356
+  url: https://www.together.ai/models/flux-3
+  title: FLUX 3
+  publisher: Together AI
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-11'
+  claim_scope:
+  - The public page names black-forest-labs/FLUX-3, /v2/videos with Bearer authentication, serverless deployment,
+    and a USD 0.17 per-video estimate.
+  limitations:
+  - Available language coexists with a launching-soon block. A 99.9% SLA claim conflicts with generic best-effort
+    guidance unless contract scope is established; account availability and configuration remain unknown.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
+- id: src-27f957bac2fb
+  url: https://elevenlabs.io/docs/api-reference/authentication
+  title: API Authentication
+  publisher: ElevenLabs
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-11'
+  claim_scope:
+  - API requests use xi-api-key; keys may restrict endpoint scope, credit quota and permitted IP addresses.
+  limitations:
+  - No live credential, quota or account access was checked.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
+- id: src-db5e38f3c926
+  url: https://elevenlabs.io/docs/api-reference/text-to-dialogue/convert
+  title: Create dialogue
+  publisher: ElevenLabs
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-11'
+  claim_scope:
+  - Shared TTD guidance recommends at most 2,000 input characters for reliability, offers best-effort seeded
+    sampling, and gates 192kbps MP3 and 44.1kHz PCM/WAV by plan.
+  limitations:
+  - The endpoint defaults to v3; these are shared endpoint rules, not a lower universal v4 model ceiling. ZRM
+    requires eligible Enterprise access.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
+- id: src-f7f5e3088c45
+  url: https://elevenlabs.io/elevenapi-terms
+  title: ElevenAPI Terms
+  publisher: ElevenLabs
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-11'
+  claim_scope:
+  - October 9 API terms make access depend on plan, entitlements and region. Isolated regions use separate
+    credentials/workspaces; API PHI exceptions are scoped by section 4.2.
+  limitations:
+  - General service terms and relevant supplemental terms must be read together; no blanket healthcare eligibility
+    is inferred.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
+- id: src-1d10205c255d
+  url: https://elevenlabs.io/creative-terms
+  title: ElevenCreative Terms
+  publisher: ElevenLabs
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-11'
+  claim_scope:
+  - Creative access may depend on location, plan and model terms; identifiable-person inputs require necessary
+    consents and records.
+  limitations:
+  - Third-party model and offering-specific conditions are separate. Dubbing, image/video or music restrictions
+    are not automatically speech-playground restrictions.
+  - The current inspection covers the stated sections only; retained historical scopes are not newly certified.

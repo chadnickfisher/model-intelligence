@@ -16064,3 +16064,210 @@ records:
     canonical_path: data/task-assessments.yaml
     operation: update
   id: change-c7b8b3c8c4c2cd21
+- observed_at: '2026-10-11'
+  summary: Recorded researched model, task, measurement and access updates with their evidence and limitations.
+  evidence_ids:
+  - src-019e7bd6f55b
+  - src-043cfbfe4301
+  - src-0cfe13d09adf
+  - src-10a91840b546
+  - src-1d10205c255d
+  - src-27f957bac2fb
+  - src-2d980c304e95
+  - src-2e19eb496679
+  - src-31ba1a35827e
+  - src-57a05c45a0b1
+  - src-58f6a44d1374
+  - src-752c7dd560da
+  - src-7a7fa65f65f1
+  - src-7e3a0b76fdd6
+  - src-8480eae8d4c0
+  - src-8d057ab55356
+  - src-9cc54eb0a407
+  - src-a8bf24d0415e
+  - src-b66d992d27f1
+  - src-b7683813c287
+  - src-bb26705946aa
+  - src-bcc14c31357b
+  - src-c12ad05ec233
+  - src-db5e38f3c926
+  - src-eec7142cd474
+  - src-f7f5e3088c45
+  changed_entities:
+  - entity_type: access
+    entity_id: access-19adfeee35641105
+    canonical_path: data/access.yaml
+    operation: update
+  - entity_type: access
+    entity_id: access-81655ffa1f7f6666
+    canonical_path: data/access.yaml
+    operation: update
+  - entity_type: access
+    entity_id: access-8c59f3a51ab26c58
+    canonical_path: data/access.yaml
+    operation: update
+  - entity_type: access
+    entity_id: access-a0b4c7d41e9fe052
+    canonical_path: data/access.yaml
+    operation: update
+  - entity_type: access
+    entity_id: access-d806a0c3a1f82a84
+    canonical_path: data/access.yaml
+    operation: update
+  - entity_type: price
+    entity_id: price-123480d7451d6507
+    canonical_path: data/pricing.yaml
+    operation: add
+  - entity_type: price
+    entity_id: price-302abd795042a81e
+    canonical_path: data/pricing.yaml
+    operation: add
+  - entity_type: price
+    entity_id: price-4b96884cd590cc84
+    canonical_path: data/pricing.yaml
+    operation: add
+  - entity_type: price
+    entity_id: price-82761110f518dcd8
+    canonical_path: data/pricing.yaml
+    operation: add
+  - entity_type: price
+    entity_id: price-912853939957f01c
+    canonical_path: data/pricing.yaml
+    operation: add
+  - entity_type: price
+    entity_id: price-9ebb4de934222044
+    canonical_path: data/pricing.yaml
+    operation: add
+  - entity_type: price
+    entity_id: price-c7304280763b2015
+    canonical_path: data/pricing.yaml
+    operation: add
+  - entity_type: price
+    entity_id: price-d58d3f01fe463702
+    canonical_path: data/pricing.yaml
+    operation: add
+  - entity_type: price
+    entity_id: price-e8edd03a0ba20d77
+    canonical_path: data/pricing.yaml
+    operation: add
+  - entity_type: price
+    entity_id: price-efbad60409efdba1
+    canonical_path: data/pricing.yaml
+    operation: add
+  - entity_type: price
+    entity_id: price-providers-bfl-flux3-video-bfl-772aa13dfb82
+    canonical_path: data/pricing.yaml
+    operation: update
+  - entity_type: price
+    entity_id: price-providers-bfl-flux3-video-bfl-c4a4dfe8876e
+    canonical_path: data/pricing.yaml
+    operation: update
+  - entity_type: price
+    entity_id: price-providers-elevenlabs-eleven-v4-elevenlabs-9a8e2a2f9216
+    canonical_path: data/pricing.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-019e7bd6f55b
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-043cfbfe4301
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-0cfe13d09adf
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-10a91840b546
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-1d10205c255d
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-27f957bac2fb
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-2d980c304e95
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-2e19eb496679
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-31ba1a35827e
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-57a05c45a0b1
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-58f6a44d1374
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-752c7dd560da
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-7a7fa65f65f1
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-7e3a0b76fdd6
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-8480eae8d4c0
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-8d057ab55356
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-9cc54eb0a407
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-a8bf24d0415e
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-b66d992d27f1
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-b7683813c287
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-bb26705946aa
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-bcc14c31357b
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-c12ad05ec233
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-db5e38f3c926
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-eec7142cd474
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-f7f5e3088c45
+    canonical_path: evidence/sources.yaml
+    operation: add
+  id: change-b5d46e7c7bd62416

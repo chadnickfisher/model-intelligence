@@ -46,4 +46,4 @@ Verified: 2026-10-06
 
 ## Sources
 
-[elevenlabs.io](https://elevenlabs.io/pricing/api) · [elevenlabs.io](https://elevenlabs.io/docs/overview/models) · [elevenlabs.io](https://elevenlabs.io/docs/eleven-api/resources/zero-retention-mode)
+[ElevenAPI Pricing](https://elevenlabs.io/pricing/api) · [Models](https://elevenlabs.io/docs/overview/models) · [Zero Retention Mode (Enterprise)](https://elevenlabs.io/docs/eleven-api/resources/zero-retention-mode)
