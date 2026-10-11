@@ -15,6 +15,10 @@ Each published change retains its actual source inspection dates and limitations
 | Sunday | Black Forest Labs, ElevenLabs, and shared inference and compute services |
 
 These are research groups, not affiliations or claims that models are interchangeable.
+After reviewed onboarding enters the canonical catalog, a new model creator
+receives a stable weekday placement. Existing creator weekdays remain unchanged.
+Daily assignments list the placement and any models deferred by the time budget;
+overflow rotates through later weekly passes and remains explicitly unchecked.
 Every day covers three tracks for its assigned group:
 
 1. **Onboarding:** discover new models, providers and products, resolve exact

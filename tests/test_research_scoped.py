@@ -7,6 +7,7 @@ import tempfile
 import unittest
 
 from tools import research_scoped as scoped,research_onboarding as onboard,research_audit as audit,research_build as build
+from tools.research_scope_selection import select_scope
 from tools import research_batch as batch
 from tools.git_baselines import git_state
 from tools.knowledge import ROOT,record_hash,canonical
@@ -121,7 +122,7 @@ class ScopedTests(unittest.TestCase):
                 p['scope_run']['field_checks'][0]=deepcopy(a['scope_run']['field_checks'][0])
                 if result=='blocked':p['scope_run']['field_checks'][0].update(result='blocked',checked_at=DAY,rationale='Synthetic blocked retrieval',blocked_reason='Synthetic tool failure')
                 with self.assertRaisesRegex(ValueError,'incomplete'):scoped.compile_scope(p,a,self.baseline)
-                selected=scoped.select_scope(p,a,self.baseline)
+                selected=select_scope(p,a,self.baseline)
                 self.assertNotIn(('provider',s['id']),selected['compiled']['candidate'])
                 self.assertEqual(selected['deferred_units'],1)
 
@@ -151,7 +152,7 @@ class ScopedTests(unittest.TestCase):
     def test_private_packet_rejected_globally(self):
         a=self.assignment([self.subject()]);p=scoped.output_template(a)
         p['scope_run']['field_checks'][0]['remaining_gaps']=['https://localhost/private']
-        with self.assertRaisesRegex(ValueError,'Private'):scoped.select_scope(p,a,self.baseline)
+        with self.assertRaisesRegex(ValueError,'Private'):select_scope(p,a,self.baseline)
 
     def test_exact_existing_match_and_variant_separation(self):
         mid='llama-4-maverick';m=self.baseline['model',mid]
@@ -221,7 +222,7 @@ class ScopedTests(unittest.TestCase):
                 row.update(investigated(row));row['result']='value'
         for row in p['scope_run']['source_checks']:
             if row['category']=='primary':row.update(investigated(row))
-        selected=scoped.select_scope(p,a,self.baseline)
+        selected=select_scope(p,a,self.baseline)
         self.assertEqual(selected['deferred_units'],1)
         self.assertEqual(selected['compiled']['candidate']['provider',ids[0]],self.baseline['provider',ids[0]])
         self.assertEqual(selected['compiled']['candidate']['provider',ids[1]]['privacy_data_use'][-1],'Synthetic fixture policy observation')
@@ -235,11 +236,66 @@ class ScopedTests(unittest.TestCase):
         self.assertTrue(any(u['reconciliation_status']=='conflict' for u in report['units'] if u['kind']=='model'))
         self.assertTrue(all(u['reconciliation_status']=='dependency_deferred' for u in report['units'] if u['kind'] in {'task_assessment','research_coverage'}))
 
+    def shared_source_packet(self):
+        """An invalid donor provider still has a real, reusable source inspection."""
+        ids=sorted(i for k,i in self.baseline if k=='provider')[:2]
+        extra=deepcopy(source());extra.update(id='src-222222222222',url='https://example.org/second-fixture')
+        self.baseline['source',extra['id']]=extra
+        a=self.assignment([{'kind':'provider','id':i,'operation':'review','identity':None} for i in ids])
+        p=scoped.output_template(a)
+        for original in (source(),extra):
+            inspected=deepcopy(original);inspected['accessed_at']=DAY
+            change=proposal('source',inspected,self.baseline)
+            change['evidence_ids']=[inspected['id']]
+            p['changes'].append(change)
+        for n,ident in enumerate(ids):
+            record=deepcopy(self.baseline['provider',ident])
+            if n==0:record['roles']=['invalid-role']
+            else:record['privacy_data_use'].append('Synthetic fixture policy observation')
+            p['changes'].append(proposal('provider',record,self.baseline))
+        for row in p['scope_run']['field_checks']:
+            if row['path']==('/roles' if row['subject_id']==ids[0] else '/privacy_data_use'):
+                row.update(investigated(row));row['result']='value'
+        donor=next(r for r in p['scope_run']['source_checks'] if r['subject_id']==ids[0] and r['category']=='primary')
+        donor.update(investigated(donor));donor['evidence_ids'].append(extra['id'])
+        return ids,a,p,donor
+
+    def test_shared_source_inspection_survives_provider_projection(self):
+        ids,a,p,donor=self.shared_source_packet();before=deepcopy((p,a,self.baseline))
+        selected=select_scope(p,a,self.baseline)
+        self.assertEqual(selected['deferred_units'],1)
+        self.assertEqual(selected['compiled']['candidate']['provider',ids[0]],self.baseline['provider',ids[0]])
+        self.assertEqual(selected['compiled']['candidate']['provider',ids[1]]['privacy_data_use'][-1],'Synthetic fixture policy observation')
+        self.assertEqual(selected['source_check_dependencies'],[donor])
+        self.assertEqual(selected['compiled']['candidate']['source','src-222222222222']['accessed_at'],DAY)
+        for name in ('field_checks','domain_checks'):
+            self.assertTrue(all(r['result']=='not_checked' for r in selected['selected_packet']['scope_run'][name] if r.get('subject_id')==ids[0]))
+        self.assertEqual((p,a,self.baseline),before)
+        report=audit.audit(p,a,self.baseline,self.baseline)
+        self.assertEqual(report['source_check_dependencies'],[donor])
+        self.assertEqual(report['structural_counts']['deferred'],1)
+
+    def test_invalid_shared_source_inspection_cannot_be_laundered(self):
+        ids,a,p,donor=self.shared_source_packet()
+        donor['checked_at']=(date.today()-timedelta(days=1)).isoformat()
+        selected=select_scope(p,a,self.baseline)
+        self.assertEqual(selected['deferred_units'],2)
+        self.assertEqual(selected['candidate_units'],0)
+        self.assertEqual(selected['source_check_dependencies'],[])
+
+    def test_missing_shared_inspection_cannot_be_invented(self):
+        ids,a,p,donor=self.shared_source_packet()
+        donor.update(deepcopy(next(r for r in a['scope_run']['source_checks'] if
+                                  r['subject_id']==ids[0] and r['category']=='primary')))
+        selected=select_scope(p,a,self.baseline)
+        self.assertEqual(selected['deferred_units'],2)
+        self.assertEqual(selected['candidate_units'],0)
+
     def test_unassigned_record_rejected_before_partial_selection(self):
         s=self.subject('provider','Synthetic Hosting');a,p=self.completed(s)
         other=deepcopy(next(r for (k,i),r in self.baseline.items() if k=='provider'))
         other['roles']=['invalid-role'];p['changes'].append(proposal('provider',other,self.baseline))
-        with self.assertRaisesRegex(ValueError,'Unassigned'):scoped.select_scope(p,a,self.baseline)
+        with self.assertRaisesRegex(ValueError,'Unassigned'):select_scope(p,a,self.baseline)
 
     def test_wrong_collection_outcome_is_not_completion(self):
         s=self.subject('provider','Synthetic Hosting');a,p=self.completed(s)
@@ -266,7 +322,7 @@ class ScopedTests(unittest.TestCase):
         for name in scoped.KEYS:
             p['scope_run'][name]=[investigated(r) if r.get('subject_kind')=='provider' else r for r in p['scope_run'][name]]
         p['changes'][1]['record']['roles']=['invalid-role']
-        selected=scoped.select_scope(p,a,self.baseline)
+        selected=select_scope(p,a,self.baseline)
         self.assertNotIn(('provider',left['id']),selected['compiled']['candidate'])
         self.assertIn(('provider',right['id']),selected['compiled']['candidate'])
 

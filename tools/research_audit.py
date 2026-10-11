@@ -145,7 +145,7 @@ def reconcile_current(selection, baseline, current, protected_context=()):
 
 def audit(packet, assignment, baseline, current, private_patterns=()):
     if packet.get('package_type') == 'research-scoped-batch':
-        from tools.research_scoped import select_scope
+        from tools.research_scope_selection import select_scope
         selection = select_scope(packet, assignment, baseline, private_patterns)
         rules = {('research_contract', 'research-contract-v1')}
     else:
@@ -160,6 +160,7 @@ def audit(packet, assignment, baseline, current, private_patterns=()):
             'original_accounting_counts': selection['original_accounting_counts'],
             'completion': selection['compiled']['completion'], 'source_reconciliation': selection['reconciliation'],
             'accounting_projection': selection['accounting_projection'],
+            'source_check_dependencies': selection.get('source_check_dependencies', []),
             'ready_unit_ids': [u['id'] for u in comparison['units'] if u['reconciliation_status'] == 'ready'],
             'selected_packet': selection['selected_packet'],
             'judgment_origin': 'researcher_packet', 'independent_claim_verification_performed': False,
