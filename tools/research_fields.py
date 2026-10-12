@@ -4,10 +4,37 @@ Arrays are atomic. New null placeholders assert no fact; existing values changed
 to null still need investigation. Citation/derived metadata is checked separately.
 """
 from hashlib import sha256
+from datetime import date
 import json
 
 META = {'id', 'schema_version', 'verified_at', 'evidence_ids', 'source_ids',
         'supporting_evidence_ids', 'contradictory_evidence_ids', 'access_ids', 'price_ids'}
+
+
+def assessment_chronology_errors(record, *, latest_date=None):
+    """Portable chronology for actual aggregate judgments, never a date repair."""
+    aggregate = record.get('aggregate')
+    if not isinstance(aggregate, dict):
+        return []
+    errors = []
+    dates = {}
+    for path, value in (('/checked_at', record.get('checked_at')),
+                        ('/aggregate/assessed_at', aggregate.get('assessed_at'))):
+        try:
+            parsed = date.fromisoformat(value) if isinstance(value, str) else None
+            if parsed is None or parsed.isoformat() != value:
+                raise ValueError('Expected an ISO date')
+            dates[path] = value
+        except ValueError:
+            errors.append({'path': path, 'message': 'aggregate chronology requires a valid actual date'})
+    if errors:
+        return errors
+    assessed = dates['/aggregate/assessed_at']
+    if assessed < dates['/checked_at']:
+        errors.append({'path': '/aggregate/assessed_at', 'message': 'aggregate assessment predates its source check'})
+    if latest_date is not None and assessed > latest_date:
+        errors.append({'path': '/aggregate/assessed_at', 'message': 'aggregate assessment postdates the packet'})
+    return errors
 
 
 def digest(value):
@@ -36,6 +63,75 @@ def factual_fields(record):
 def changed_fields(before, after):
     previous = factual_fields(before)
     return {p: v for p, v in factual_fields(after).items() if previous.get(p) != v}
+
+
+def group_field_checks(rows):
+    """Retain every owner-qualified row for a shared record/field."""
+    groups = {}
+    for row in rows:
+        groups.setdefault((row['entity_type'], row['entity_id'], row['path']), []).append(row)
+    return groups
+
+
+def subject_owns(subject, kind, record):
+    sk, ident = subject['kind'], subject['id']
+    if sk == 'model':
+        return (kind == 'model' and record.get('id') == ident or record.get('model_id') == ident
+                or ident in record.get('model_ids', []))
+    if sk == 'provider':
+        return kind == 'provider' and record.get('id') == ident or record.get('provider_id') == ident
+    if sk == 'product':
+        return (kind in {'access', 'price', 'behavior', 'release'}
+                and record.get('provider_id') == subject['identity']['provider_id']
+                and record.get('product') == subject['identity']['product'])
+    return False
+
+
+def primary_field(kind, path):
+    return (kind in {'access', 'price'} or
+            kind == 'model' and path.split('/')[1] in {'identity', 'specifications', 'additional_specifications', 'licensing', 'local_inference'} or
+            kind == 'provider' and path.split('/')[1] not in {'reliability', 'limitations', 'notes'})
+
+
+def qualifying_field_checks(change, path, groups, run, state, sources, observations, packet_date, *, positive=False):
+    """Each eligible row must independently satisfy all support requirements.
+
+    No evidence or positive/primary status is pooled across rows. This function
+    never edits check results. Sorting only the returned references makes later
+    selection deterministic without changing the input accounting order.
+    """
+    kind, record = change['kind'], change['record']
+    rows = groups.get((kind, record['id'], path), [])
+    if 'subjects' in run:
+        owners = {(s['kind'], s['id']) for s in run['subjects'] if subject_owns(s, kind, record)}
+        eligible = lambda row: (row.get('subject_kind'), row.get('subject_id')) in owners
+    else:
+        models = ({record['id']} if kind == 'model' else
+                  {r.get('model_id') for (k, _), r in state.items()
+                   if k in {'access', 'price'} and r.get('provider_id') == record['id']} if kind == 'provider' else
+                  set(record.get('model_ids', [])) | {record.get('model_id')})
+        models &= set(run['target_model_ids'])
+        eligible = lambda row: row.get('model_id') in models
+    accepted = []
+    for row in rows:
+        checked = row.get('checked_at')
+        if (not eligible(row) or row['result'] in {'blocked', 'not_checked'}
+                or positive and row['result'] != 'value'
+                or not set(row['evidence_ids']) & set(change['evidence_ids'])
+                or not checked or not run['created_at'] <= checked <= packet_date):
+            continue
+        expanded = {i for ident in row['evidence_ids']
+                    for i in observations.get(ident, {}).get('source_ids', [ident])}
+        if not expanded or any(not observations.get(ident, {}).get('source_ids', [ident]) for ident in row['evidence_ids']):
+            continue
+        if not all(i in sources and isinstance(sources[i].get('accessed_at'), str)
+                   and checked <= sources[i]['accessed_at'] <= packet_date for i in expanded):
+            continue
+        if primary_field(kind, path) and not any(sources[i]['source_type'] == 'primary' for i in expanded):
+            continue
+        accepted.append(row)
+    return sorted(accepted, key=lambda row: (row.get('model_id', ''), row.get('subject_kind', ''),
+                                            row.get('subject_id', ''), row['domain']))
 
 
 def field_domain(kind, path, groups):

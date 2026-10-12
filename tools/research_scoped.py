@@ -11,7 +11,7 @@ import re
 from tools import research_batch as batch
 from tools.knowledge import record_hash
 from tools.research_runs import digest,state_hash,leaves,pending_check,row_errors
-from tools.research_fields import changed_fields, factual_fields, field_domain, pointer
+from tools.research_fields import changed_fields, factual_fields, field_domain, pointer, subject_owns, group_field_checks, qualifying_field_checks, assessment_chronology_errors
 from tools.research_onboarding import model_seed,provider_seed,resolve
 
 PROVIDER_FIELDS={
@@ -49,11 +49,7 @@ def drafts(subjects,day):
             for s in subjects if s['operation']=='onboard' and s['kind'] in {'model','provider'}}
 
 def owned(subject,kind,record):
-    sk,ident=subject['kind'],subject['id']
-    if sk=='model':return kind=='model' and record.get('id')==ident or record.get('model_id')==ident or ident in record.get('model_ids',[])
-    if sk=='provider':return kind=='provider' and record.get('id')==ident or record.get('provider_id')==ident
-    if sk=='product':return kind in {'access','price','behavior','release'} and record.get('provider_id')==subject['identity']['provider_id'] and record.get('product')==subject['identity']['product']
-    return False
+    return subject_owns(subject,kind,record)
 
 def manifest(state,subjects,day,candidate=None):
     records={**state,**drafts(subjects,day)}
@@ -300,6 +296,7 @@ def validate_change(change,baseline,seed,run,candidate,mapping,created,groups):
         for ident in record['price_ids']:
             batch.require(candidate['price',ident]['product']==record['product'],'New access price belongs to another product')
     if kind=='task_assessment':
+        batch.require(not assessment_chronology_errors(record,latest_date=created.date().isoformat()),'EA04: Invalid scoped aggregate assessment chronology')
         row=next(r for r in run['task_decisions'] if r['model_id']==record['model_id'] and r['task_id']==record['task_id'])
         batch.require(all(record[k]==row[k] for k in ('result','checked_at','judgment_ids','evidence_ids')),'Scoped canonical task decision differs')
         batch.validate_confidence(change,sources,observations,groups);return
@@ -320,13 +317,9 @@ def validate_change(change,baseline,seed,run,candidate,mapping,created,groups):
     altered=set(changed_fields(old,record)) & set(actual)
     batch.require(altered<=set(change['checked_paths']),'Scoped changed field omitted from checked_paths')
     for path in altered:
-        checks=[r for r in run['field_checks'] if (r['entity_type'],r['entity_id'],r['path'])==(kind,record['id'],path)]
-        checks=[r for r in checks if r['result'] not in {'not_checked','blocked'} and set(r['evidence_ids'])&set(change['evidence_ids'])]
-        batch.require(checks,'Changed scoped field lacks actual linked investigation: '+path)
-        if actual[path] is not None and actual[path] not in ('unknown','disputed','',[],{}):
-            batch.require(any(r['result']=='value' for r in checks),'Changed factual value must have positive field accounting: '+path)
-        primary=kind in {'access','price'} or kind=='model' and path.split('/')[1] in {'identity','specifications','additional_specifications','licensing','local_inference'} or kind=='provider' and path.split('/')[1] not in {'reliability','limitations','notes'}
-        if primary:batch.require(any(sources[i]['source_type']=='primary' for r in checks for i in batch.expanded_sources(r['evidence_ids'],observations)),'Scoped specifications/policies/prices need primary evidence')
+        positive=actual[path] is not None and actual[path] not in ('unknown','disputed','',[],{})
+        checks=qualifying_field_checks(change,path,group_field_checks(run['field_checks']),run,candidate,sources,observations,created.date().isoformat(),positive=positive)
+        batch.require(checks,'Changed scoped field lacks actual linked investigation with eligible current evidence, primary evidence and required positive field accounting: '+path)
 
 def validate_resolutions(packet,seed,candidate,created):
     sources={i:r for (k,i),r in candidate.items() if k=='source'};observations={i:r for (k,i),r in candidate.items() if k=='observation'}
@@ -344,6 +337,11 @@ def validate_resolutions(packet,seed,candidate,created):
                       'Resolution cites uninspected evidence')
         if row['result']!='blocked':batch.require(support or any(s['outcome']!='blocked' for s in row['search_references']),
             'Identity resolution requires actual investigation')
+        # Expose investigated identity fields to check_rows, including partial identities.
+        # Existing field-level source/date/null guards still run; scratch records are
+        # removed from the candidate before returning or onboarding anything.
+        if row['identity'] is not None:
+            candidate['discovery',row['candidate_id']]={'identity':deepcopy(row['identity'])}
         if row['result']!='resolved':batch.require(row['remaining_gaps'],'Unresolved identity needs gaps');continue
         batch.require(row['identity'] is not None,'Resolved identity missing')
         identity=row['identity']
@@ -351,7 +349,6 @@ def validate_resolutions(packet,seed,candidate,created):
         batch.require(resolved['status'] in {'existing','ready_onboarding'},'Resolved identity still has ambiguous boundaries')
         batch.require(any(i in sources and sources[i]['source_type']=='primary' and sources[i]['url']==row['identity']['official_url'] and
             row['checked_at']<=sources[i]['accessed_at']<=created.date().isoformat() for i in support),'Resolved identity needs current exact official evidence')
-        candidate['discovery',row['candidate_id']]={'identity':row['identity']}
         for field in IDENTITY_FIELDS:
             checks=[r for r in packet['scope_run']['field_checks'] if r['entity_type']=='discovery' and r['entity_id']==row['candidate_id'] and r['path']=='/identity/'+field]
             batch.require(checks and checks[0]['result'] not in {'not_checked','blocked'} and set(checks[0]['evidence_ids'])&set(row['evidence_ids']),'Resolved identity field lacks inspected accounting')
@@ -423,6 +420,7 @@ def compile_scope(packet,assignment,baseline,private_patterns=()):
     # Resolution scratch values are private, never canonical candidate records.
     candidate={key:r for key,r in candidate.items() if key[0]!='discovery'}
     return {'changes':changes,'candidate':candidate,'mapping':mapping,'research_run':run,'completion':completion(run,normalized['resolutions']),
+            'packet_created_at':packet['created_at'],
             'discoveries':normalized['discoveries'],'resolutions':normalized['resolutions'],'new_profile_paths':assignment['profile_paths'],
             'source_reconciliation':reconciliation}
 

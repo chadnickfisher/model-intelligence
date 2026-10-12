@@ -23,7 +23,7 @@ Conditions: Audio-token pricing cannot be compared directly with Live session-mi
 
 Failure modes / limitations: Not established in this pass
 
-Supporting sources: [gpt-realtime-2.1 model specifications](https://developers.openai.com/api/docs/models/gpt-realtime-2.1)
+Supporting sources: [GPT-Realtime-2.1 model specifications](https://developers.openai.com/api/docs/models/gpt-realtime-2.1)
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
@@ -45,11 +45,33 @@ Conditions: AA tau-Voice simulated customer support with domain tools and polici
 
 Failure modes / limitations: Not established in this pass
 
-Supporting sources: [Speech-to-speech benchmark configurations](https://artificialanalysis.ai/speech-to-speech?api-benchmarks=agentic-performance-vs-cost-to-run) · [gpt-realtime-2.1 model specifications](https://developers.openai.com/api/docs/models/gpt-realtime-2.1)
+Supporting sources: [Speech-to-speech benchmark configurations](https://artificialanalysis.ai/speech-to-speech?api-benchmarks=agentic-performance-vs-cost-to-run) · [GPT-Realtime-2.1 model specifications](https://developers.openai.com/api/docs/models/gpt-realtime-2.1)
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
 Evidence notes: Low confidence beyond the measured agent systems: few trials, rolling alias and incomplete configuration.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
+
+### Reasoning.general (low confidence)
+
+The model performs well on the evaluated spoken logical-question distribution, but that does not establish mathematical, scientific or long-horizon execution quality.
+
+Scope: direct / conditional. Bounded exact-version task evidence; no transfer from related models or neighboring tasks.
+
+Direct task IDs: reasoning.general
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-7bdf9e2cadd855f7
+
+Conditions: Big Bench Audio: 1,000 audio questions across formal fallacies, navigation, object counting and Boolean word problems; exact 2.1 High/Minimal rows.
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [Speech-to-speech benchmark configurations](https://artificialanalysis.ai/speech-to-speech?api-benchmarks=agentic-performance-vs-cost-to-run)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Displayed speech-reasoning values are 96% High and 87% Minimal, rounded in the source table.; One evaluation stream; immutable snapshot and full decoding configuration are unspecified.
 
 ## Specifications
 
@@ -112,4 +134,4 @@ Local conditions: Not established in this pass
 
 ## Sources
 
-[gpt-realtime-2.1 model specifications](https://developers.openai.com/api/docs/models/gpt-realtime-2.1) · [OpenAI API changelog](https://developers.openai.com/api/docs/changelog) · [developers.openai.com](https://developers.openai.com/api/docs/models/gpt-realtime-2.1-mini) · [Speech-to-speech benchmark configurations](https://artificialanalysis.ai/speech-to-speech?api-benchmarks=agentic-performance-vs-cost-to-run)
+[GPT-Realtime-2.1 model specifications](https://developers.openai.com/api/docs/models/gpt-realtime-2.1) · [OpenAI API changelog](https://developers.openai.com/api/docs/changelog) · [developers.openai.com](https://developers.openai.com/api/docs/models/gpt-realtime-2.1-mini) · [Speech-to-speech benchmark configurations](https://artificialanalysis.ai/speech-to-speech?api-benchmarks=agentic-performance-vs-cost-to-run)

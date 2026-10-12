@@ -117,6 +117,72 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
+### Knowledge.classification (low confidence)
+
+Useful for explicit political-text categories with a supplied codebook, but ambiguous and rare labels require review.
+
+Scope: direct / conditional. Only the named task and measured setup; no neighboring-task endorsement.
+
+Direct task IDs: knowledge.classification
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-05e781283416667e
+
+Conditions: GPT-6 Luna; one pass, temperature zero, reasoning off; published prompts.; GTD attack-type classification over 37,709 incidents; codebook accuracy 0.743 and macro F1 0.634.
+
+Failure modes / limitations: Unknown-label recall remained low; identical requests were not fully deterministic.
+
+Supporting sources: [JEV versus LLMs](https://arxiv.org/html/2610.06625v1)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: One original study supports this bounded finding; no independent matched contradiction established.
+
+### Agent.tool_use (low confidence)
+
+Can complete many catalog-grounded BLS questions under Codex, but harness changes materially affect completion.
+
+Scope: direct / conditional. Only the named task and measured setup; no neighboring-task endorsement.
+
+Direct task IDs: agent.tool_use
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-8638470eda0ea860
+
+Conditions: 108 held-out single-turn BLS questions; Codex 0.159.2; promptfoo 0.123.1; GPT-5.6 Sol rubric judge.; Reported Codex pass rate 0.88 versus 0.74 in a standalone tool loop; effort not established.
+
+Failure modes / limitations: Standalone failures included unavailable-data answers and step-limit exhaustion.
+
+Supporting sources: [Harness-aware evaluation of plugins](https://developers.openai.com/cookbook/examples/partners/harness_aware_plugin_evals/harness_aware_plugin_evals)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: One original study supports this bounded finding; no independent matched contradiction established.
+
+### Coding.scoped_edit (low confidence)
+
+Useful for bounded local changes with explicit acceptance criteria; review integration boundaries before accepting.
+
+Scope: direct / conditional. Only the named task and measured setup; no neighboring-task endorsement.
+
+Direct task IDs: coding.scoped_edit
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-886c1c801e974c2a
+
+Conditions: Luna high; ten C++/Python/TypeScript engineering tasks in one roughly 60K-line codebase; iterative implement/review/fix workflow.
+
+Failure modes / limitations: Some locally coherent implementations left requirements outside the immediate change unresolved.
+
+Supporting sources: [Luna time to correctness](https://quant.engineering/gpt-5-6-luna-vs-gpt-6-luna-time-to-correctness.html)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: One original study supports this bounded finding; no independent matched contradiction established.
+
 ## Specifications
 
 | Field | Recorded value |

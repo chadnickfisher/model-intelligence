@@ -7766,6 +7766,228 @@ records:
     research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate review_tests_frontend:frontend-sol61-practitioner; exact identity gates
       and original sources retained.
+- model_id: gpt-6-1-sol
+  profile: models/openai/gpt-6-1-sol/profile.yaml
+  id: judgment-2733964500e64515
+  scope: direct
+  task_ids:
+  - vision.question_answering
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Bounded direct task evidence in the specified workflow; no transfer to untested tasks or configurations.
+  judgment: Answered the tested simple synthetic image questions accurately; natural-image and high-resolution
+    transfer remain unestablished.
+  confidence: low
+  supporting_evidence_ids:
+  - src-72b833708b3f
+  contradictory_evidence_ids: []
+  conditions:
+  - 17 generated images, two trials each; chart, OCR, counting and diagram tasks; Codex subscription default
+    effort.
+  known_failure_modes: []
+  evidence_notes:
+  - 34/34 trials passed all expected fields; small clean synthetic images omit natural-image clutter and distribution
+    shift.
+  - No matched independent replication established; confidence concerns this narrow conclusion, not the numerical
+    score.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-research-2026-10-12
+    method: Original source body and setup inspected; direct task acceptance separated from interface availability
+      and neighboring tasks.
+- model_id: gpt-6-1-sol
+  profile: models/openai/gpt-6-1-sol/profile.yaml
+  id: judgment-289b144d4efd3f48
+  scope: direct
+  task_ids:
+  - language.instruction_following
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Bounded direct task evidence in the specified workflow; no transfer to untested tasks or configurations.
+  judgment: Followed the tested Korean output-format constraints; this supports constrained formatting rather
+    than broad language fluency.
+  confidence: low
+  supporting_evidence_ids:
+  - src-72b833708b3f
+  contradictory_evidence_ids: []
+  conditions:
+  - 16 Korean instruction cases repeated twice, 48 constraints, Codex subscription default effort.
+  known_failure_modes: []
+  evidence_notes:
+  - 32/32 cases passed the author's deterministic constraint checks; naturalness and conversational coherence
+    were not graded.
+  - No matched independent replication established; confidence concerns this narrow conclusion, not the numerical
+    score.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-research-2026-10-12
+    method: Original source body and setup inspected; direct task acceptance separated from interface availability
+      and neighboring tasks.
+- model_id: gpt-6-1-sol
+  profile: models/openai/gpt-6-1-sol/profile.yaml
+  id: judgment-2cec8c99696f4a0c
+  scope: direct
+  task_ids:
+  - agent.tool_use
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Bounded direct task evidence in the specified workflow; no transfer to untested tasks or configurations.
+  judgment: Useful evidence for choosing and chaining a small set of deterministic mock tools; validate arguments
+    and results in real workflows.
+  confidence: low
+  supporting_evidence_ids:
+  - src-919648ee422b
+  contradictory_evidence_ids: []
+  conditions:
+  - Codex subscription, September 30; effort left at environment default.
+  - Five mock tools; 60 strict selection/argument cases and 16 agent cases with three to five calls, maximum
+    12 turns.
+  known_failure_modes: []
+  evidence_notes:
+  - 60/60 strict tool cases and 16/16 agent cases passed. Synthetic ceiling tests do not establish recovery
+    from real service failures.
+  - No matched independent replication established; confidence concerns this narrow conclusion, not the numerical
+    score.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-research-2026-10-12
+    method: Original source body and setup inspected; direct task acceptance separated from interface availability
+      and neighboring tasks.
+- model_id: gpt-6-1-sol
+  profile: models/openai/gpt-6-1-sol/profile.yaml
+  id: judgment-3d20bc120f7b5508
+  scope: direct
+  task_ids:
+  - language.writing
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Bounded direct task evidence in the specified workflow; no transfer to untested tasks or configurations.
+  judgment: Useful candidate for drafting scripts against a supplied voice guide and research packet; human
+    editorial review remains necessary.
+  confidence: low
+  supporting_evidence_ids:
+  - src-0a5c73fb795a
+  contradictory_evidence_ids: []
+  conditions:
+  - High effort, Codex subscription, default sampling; ten YouTube-script briefs with five runs each.
+  - About 13K prompt tokens of guide, brief and research packet; no external tools.
+  known_failure_modes: []
+  evidence_notes:
+  - 'October 11 run: WritingScore 81.1/100; three LLM judges plus the typed Jev 1.13 classifier. Same-family
+    GPT-6.1 Sol medium creates judge dependence. Narrow single-creator voice, private rubric and references.'
+  - No matched independent replication established; confidence concerns this narrow conclusion, not the numerical
+    score.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-research-2026-10-12
+    method: Original source body and setup inspected; direct task acceptance separated from interface availability
+      and neighboring tasks.
+- model_id: gpt-6-1-sol
+  profile: models/openai/gpt-6-1-sol/profile.yaml
+  id: judgment-60dbd819022599bd
+  scope: direct
+  task_ids:
+  - coding.refactoring
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Bounded direct task evidence in the specified workflow; no transfer to untested tasks or configurations.
+  judgment: Can preserve measured legacy binary behavior during constrained rewrites at high, xhigh and max
+    effort; retain the executable acceptance suite.
+  confidence: low
+  supporting_evidence_ids:
+  - src-0ad767b6cd80
+  contradictory_evidence_ids: []
+  conditions:
+  - Codex CLI 0.159.0 Pro; September 29–30; 23 tasks per effort, one run per task.
+  - Frozen v3.18 benchmark grades 231 hidden behavior checks; preserve actual binary behavior, including departures
+    from specification.
+  known_failure_modes:
+  - Low and medium efforts missed some hidden behavior targets.
+  evidence_notes:
+  - High/xhigh/max each passed 23/23 tasks; medium 22/23 and low 20/23. Code-style LLM scores are not the correctness
+    result.
+  - No matched independent replication established; confidence concerns this narrow conclusion, not the numerical
+    score.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-research-2026-10-12
+    method: Original source body and setup inspected; direct task acceptance separated from interface availability
+      and neighboring tasks.
+- model_id: gpt-6-1-sol
+  profile: models/openai/gpt-6-1-sol/profile.yaml
+  id: judgment-9d24ce6aabf3f9dd
+  scope: direct
+  task_ids:
+  - context.retrieval
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Bounded direct task evidence in the specified workflow; no transfer to untested tasks or configurations.
+  judgment: Synthetic needle retrieval remained accurate across the tested long contexts; production document
+    retrieval still needs task-specific evaluation.
+  confidence: low
+  supporting_evidence_ids:
+  - src-f80b0404e3ee
+  contradictory_evidence_ids: []
+  conditions:
+  - Codex Pro, low effort, September 30; 16K to about 914K input tokens at five insertion depths.
+  - Repeated filler contexts; largest cells sometimes have one run; source reports 98/98 successful needle
+    cases.
+  known_failure_modes: []
+  evidence_notes:
+  - This is retrieval of inserted strings, not distractor-rich evidence synthesis; no immutable server checkpoint
+    reported.
+  - No matched independent replication established; confidence concerns this narrow conclusion, not the numerical
+    score.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-research-2026-10-12
+    method: Original source body and setup inspected; direct task acceptance separated from interface availability
+      and neighboring tasks.
+- model_id: gpt-6-1-sol
+  profile: models/openai/gpt-6-1-sol/profile.yaml
+  id: judgment-fa71065d8579ec80
+  scope: direct
+  task_ids:
+  - knowledge.retrieval
+  related_task_ids: []
+  assessment: conditional
+  scope_note: Bounded direct task evidence in the specified workflow; no transfer to untested tasks or configurations.
+  judgment: A plausible low-effort reranker for short multilingual candidate excerpts; check recall and language
+    performance on the actual corpus.
+  confidence: low
+  supporting_evidence_ids:
+  - src-6e349a2be53a
+  contradictory_evidence_ids: []
+  conditions:
+  - 240 MIRACL queries, 40 each in six languages; 24 fixed candidates per query; candidate excerpts truncated
+    to 1200 characters.
+  - GPT-6.1 Sol low; 8192 maximum output tokens; the exact result row identifies Bedrock us-west-2. Specific
+    Bedrock endpoint/API, inference profile and immutable serving revision are not established.
+  known_failure_modes:
+  - Approximately 23% of evaluated first choices were not the target passage.
+  evidence_notes:
+  - Published Hit@1 is 77%, bootstrap interval 72–82%; this does not measure generated-answer groundedness.
+  - No matched independent replication established; confidence concerns this narrow conclusion, not the numerical
+    score.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-research-2026-10-12
+    method: Original source body and setup inspected; direct task acceptance separated from interface availability
+      and neighboring tasks.
 - model_id: gpt-6-astra
   profile: models/openai/gpt-6-astra/profile.yaml
   id: judgment-fbf53a2171375503
@@ -8032,6 +8254,33 @@ records:
     research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate review_tests_frontend:review-astra; exact identity gates and original
       sources retained.
+- model_id: gpt-6-astra
+  profile: models/openai/gpt-6-astra/profile.yaml
+  id: judgment-73932600c90add2f
+  scope: direct
+  task_ids:
+  - agent.tool_use
+  related_task_ids: []
+  scope_note: One task and one bounded evaluation; no transfer to neighboring tasks.
+  assessment: conditional
+  judgment: Astra can complete many BLS plugin queries in a configured Codex harness; validate the actual harness
+    before deployment.
+  confidence: low
+  conditions:
+  - 108-question production plugin corpus; Codex; reported pass rate 0.94.
+  known_failure_modes:
+  - Some queries fail; tool/server instructions materially affect outcomes.
+  supporting_evidence_ids:
+  - src-d526f74ef3e9
+  contradictory_evidence_ids: []
+  evidence_notes:
+  - Vendor/coauthor study; exact effort and immutable checkpoint not supplied; no superiority claim.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    method: Fresh original-body inspection, October 12; no inference executed.
+    research_batch_id: public-source-inspection-2026-10-12
 - model_id: gpt-6-luna
   profile: models/openai/gpt-6-luna/profile.yaml
   id: judgment-0c281701a4185869
@@ -8206,6 +8455,90 @@ records:
     research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate review_tests_frontend:frontend-arena-gpt-6-luna; exact identity gates
       and original sources retained.
+- model_id: gpt-6-luna
+  profile: models/openai/gpt-6-luna/profile.yaml
+  id: judgment-05e781283416667e
+  scope: direct
+  task_ids:
+  - knowledge.classification
+  related_task_ids: []
+  judgment: Useful for explicit political-text categories with a supplied codebook, but ambiguous and rare
+    labels require review.
+  assessment: conditional
+  confidence: low
+  supporting_evidence_ids:
+  - src-016916d2e9be
+  contradictory_evidence_ids: []
+  conditions:
+  - GPT-6 Luna; one pass, temperature zero, reasoning off; published prompts.
+  - GTD attack-type classification over 37,709 incidents; codebook accuracy 0.743 and macro F1 0.634.
+  known_failure_modes:
+  - Unknown-label recall remained low; identical requests were not fully deterministic.
+  evidence_notes:
+  - One original study supports this bounded finding; no independent matched contradiction established.
+  scope_note: Only the named task and measured setup; no neighboring-task endorsement.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-synthesis
+    method: Original task-specific source inspection and rubric comparison.
+- model_id: gpt-6-luna
+  profile: models/openai/gpt-6-luna/profile.yaml
+  id: judgment-8638470eda0ea860
+  scope: direct
+  task_ids:
+  - agent.tool_use
+  related_task_ids: []
+  judgment: Can complete many catalog-grounded BLS questions under Codex, but harness changes materially affect
+    completion.
+  assessment: conditional
+  confidence: low
+  supporting_evidence_ids:
+  - src-d526f74ef3e9
+  contradictory_evidence_ids: []
+  conditions:
+  - 108 held-out single-turn BLS questions; Codex 0.159.2; promptfoo 0.123.1; GPT-5.6 Sol rubric judge.
+  - Reported Codex pass rate 0.88 versus 0.74 in a standalone tool loop; effort not established.
+  known_failure_modes:
+  - Standalone failures included unavailable-data answers and step-limit exhaustion.
+  evidence_notes:
+  - One original study supports this bounded finding; no independent matched contradiction established.
+  scope_note: Only the named task and measured setup; no neighboring-task endorsement.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-synthesis
+    method: Original task-specific source inspection and rubric comparison.
+- model_id: gpt-6-luna
+  profile: models/openai/gpt-6-luna/profile.yaml
+  id: judgment-886c1c801e974c2a
+  scope: direct
+  task_ids:
+  - coding.scoped_edit
+  related_task_ids: []
+  judgment: Useful for bounded local changes with explicit acceptance criteria; review integration boundaries
+    before accepting.
+  assessment: conditional
+  confidence: low
+  supporting_evidence_ids:
+  - src-39879b962b79
+  contradictory_evidence_ids: []
+  conditions:
+  - Luna high; ten C++/Python/TypeScript engineering tasks in one roughly 60K-line codebase; iterative implement/review/fix
+    workflow.
+  known_failure_modes:
+  - Some locally coherent implementations left requirements outside the immediate change unresolved.
+  evidence_notes:
+  - One original study supports this bounded finding; no independent matched contradiction established.
+  scope_note: Only the named task and measured setup; no neighboring-task endorsement.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-synthesis
+    method: Original task-specific source inspection and rubric comparison.
 - model_id: gpt-image-2-5-flare
   profile: models/openai/gpt-image-2-5-flare/profile.yaml
   id: judgment-399c0b738f152d10
@@ -8277,6 +8610,86 @@ records:
     research_batch_id: public-task-followup-2026-10-07
     method: Inspected original model/evaluator sources and performed the recorded public search; no inference
       or benchmarking calls.
+- model_id: gpt-image-2-5-flare
+  profile: models/openai/gpt-image-2-5-flare/profile.yaml
+  id: judgment-022e710d0ee58887
+  scope: direct
+  task_ids:
+  - image.generation
+  related_task_ids: []
+  judgment: Higher quality helped large portrait texture, but upper-tier repeats did not show a reliable high-to-max
+    improvement.
+  assessment: conditional
+  confidence: low
+  supporting_evidence_ids:
+  - src-60c9ba3f256f
+  contradictory_evidence_ids: []
+  conditions:
+  - Four prompts, 29 images; three 1024x1024 prompts and a 2880x2880 portrait; four samples at each upper tier.
+  known_failure_modes:
+  - Clock-hand constraints were not reliably fixed by higher settings.
+  evidence_notes:
+  - Qualitative first-person review; exact date, route and immutable served revision undisclosed.
+  scope_note: Limited to the named task and reported source configuration; no transfer to neighboring tasks.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-review
+    method: Original public source body inspected; no model execution or independent rerun.
+- model_id: gpt-image-2-5-flare
+  profile: models/openai/gpt-image-2-5-flare/profile.yaml
+  id: judgment-298dd9fed2153242
+  scope: direct
+  task_ids:
+  - image.generation
+  related_task_ids: []
+  judgment: Repeated image prompts reveal useful composition with persistent spatial and exact-constraint errors.
+  assessment: conditional
+  confidence: low
+  supporting_evidence_ids:
+  - src-f3b4f2f619e9
+  contradictory_evidence_ids: []
+  conditions:
+  - AIMLAPI, named undated Flare, medium quality, 1536x1024; September 9, 2026; three runs per test.
+  known_failure_modes:
+  - All three mirror and refraction trials failed; fruit constraints scored 3/7, 4/7 and 4/7.
+  evidence_notes:
+  - Hand scoring on a small published prompt set; historical baseline not concurrently rerun.
+  scope_note: Limited to the named task and reported source configuration; no transfer to neighboring tasks.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-review
+    method: Original public source body inspected; no model execution or independent rerun.
+- model_id: gpt-image-2-5-flare
+  profile: models/openai/gpt-image-2-5-flare/profile.yaml
+  id: judgment-fa6ad43224ee39c4
+  scope: direct
+  task_ids:
+  - image.editing
+  related_task_ids: []
+  judgment: An eight-edit duck sequence usually satisfied the rubric but introduced an unwanted color change
+    in one run.
+  assessment: conditional
+  confidence: low
+  supporting_evidence_ids:
+  - src-f3b4f2f619e9
+  contradictory_evidence_ids: []
+  conditions:
+  - AIMLAPI, medium quality, 1536x1024; three repetitions of eight edits on September 9, 2026.
+  known_failure_modes:
+  - First run scored 7/8 after an unrequested yellow duck; two runs scored 8/8.
+  evidence_notes:
+  - Narrow synthetic sequence; cannot establish production identity or document fidelity.
+  scope_note: Limited to the named task and reported source configuration; no transfer to neighboring tasks.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-review
+    method: Original public source body inspected; no model execution or independent rerun.
 - model_id: gpt-image-2-5-sunburst
   profile: models/openai/gpt-image-2-5-sunburst/profile.yaml
   id: judgment-5ae64605b3a4b23e
@@ -8415,6 +8828,34 @@ records:
     research_batch_id: public-task-followup-2026-10-07
     method: Inspected original model/evaluator sources and performed the recorded public search; no inference
       or benchmarking calls.
+- model_id: gpt-live-1
+  profile: models/openai/gpt-live-1/profile.yaml
+  id: judgment-01335c4c452e231e
+  scope: direct
+  task_ids:
+  - reasoning.general
+  related_task_ids: []
+  judgment: AA reports useful audio-puzzle accuracy for combined GPT-Live/backend systems; it does not isolate
+    frontend reasoning.
+  assessment: conditional
+  confidence: low
+  supporting_evidence_ids:
+  - src-4500b2c5fc9e
+  - src-a4490bba9515
+  contradictory_evidence_ids: []
+  conditions:
+  - 'Big Bench Audio: 1000 spoken questions across four reasoning categories; Astra-medium and Sol-low configurations.'
+  known_failure_modes:
+  - No immutable backend/frontend revisions or isolated frontend control established.
+  evidence_notes:
+  - Evidence is bounded to the named study; exact serving revisions and broader generalization remain unresolved.
+  scope_note: Direct task-specific finding; frontend and delegated work remain separate.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-gpt-live-evidence-2026-10-12
+    method: Inspected original public source bodies; no model execution.
 - model_id: gpt-oss-120b
   profile: models/openai/gpt-oss-120b/profile.yaml
   id: judgment-f8a05ea09b9472ae
@@ -8719,6 +9160,116 @@ records:
     research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate review_tests_frontend:tests-oss20; exact identity gates and original
       sources retained.
+- model_id: gpt-oss-20b
+  profile: models/openai/gpt-oss-20b/profile.yaml
+  id: judgment-6aeb774447d36eea
+  scope: direct
+  task_ids:
+  - knowledge.rag
+  related_task_ids: []
+  judgment: Useful but fallible for BrowseComp-Plus answers with the documented external retrieval pipeline.
+  assessment: conditional
+  confidence: medium
+  supporting_evidence_ids:
+  - src-2639ef77aedc
+  - src-4b4e9bc6b8de
+  contradictory_evidence_ids: []
+  conditions:
+  - gpt-oss-20b high;vLLM0.15;131,072 context;40,000 output;100 iterations.
+  - BM25 passages plus monoT5-3B reranking at depth50; top5 snippets up to512 tokens.
+  known_failure_modes:
+  - Answer accuracy0.689; pipeline and retriever choices materially affect results.
+  evidence_notes:
+  - One study, not two independent streams; scoring and corpus are bounded and no native embedding capability
+    is inferred.
+  scope_note: Direct evidence only for the stated task and configuration.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-task-research
+    method: Task-rubric interpretation of original source bodies; configurations and limitations retained.
+- model_id: gpt-oss-20b
+  profile: models/openai/gpt-oss-20b/profile.yaml
+  id: judgment-8f37f48cf9f3a398
+  scope: direct
+  task_ids:
+  - coding.refactoring
+  related_task_ids: []
+  judgment: Unreliable for the tested autonomous helper-function extraction:0/10 repetitions succeeded.
+  assessment: weak
+  confidence: low
+  supporting_evidence_ids:
+  - src-a7e870a0a373
+  - src-f6c31aaff5f3
+  contradictory_evidence_ids: []
+  conditions:
+  - OpenRouter via ellmer/vitals; extract repeated code into a helper and preserve unit tests.
+  - Underlying inference provider, precision, effort and run date are not disclosed in the inspected report.
+  known_failure_modes:
+  - Invalid tool arguments and abandonment.
+  evidence_notes:
+  - One narrow task repeated ten times; no transfer to all refactoring workloads.
+  scope_note: Direct evidence only for the stated task and configuration.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-task-research
+    method: Task-rubric interpretation of original source bodies; configurations and limitations retained.
+- model_id: gpt-oss-20b
+  profile: models/openai/gpt-oss-20b/profile.yaml
+  id: judgment-acf44d745addcc1e
+  scope: direct
+  task_ids:
+  - language.translation
+  related_task_ids: []
+  judgment: Short EN-to-European-Spanish drafts were usable but needed idiom and completion checks.
+  assessment: conditional
+  confidence: low
+  supporting_evidence_ids:
+  - src-de7b8e8fd2c6
+  contradictory_evidence_ids: []
+  conditions:
+  - OpenRouter openai/gpt-oss-20b:free; temperature0.2,300-token cap;12 segments across six domains.
+  known_failure_modes:
+  - Literal calques and one truncated creative segment.
+  evidence_notes:
+  - One language direction, small corpus, no blinded replicated evaluation; cap and provider can affect truncation.
+  scope_note: Direct evidence only for the stated task and configuration.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-task-research
+    method: Task-rubric interpretation of original source bodies; configurations and limitations retained.
+- model_id: gpt-oss-20b
+  profile: models/openai/gpt-oss-20b/profile.yaml
+  id: judgment-d2ecd9854feca2c4
+  scope: direct
+  task_ids:
+  - research.synthesis
+  related_task_ids: []
+  judgment: Theme generation was plausible, but source attribution failed in every reported qualitative-synthesis
+    run.
+  assessment: weak
+  confidence: low
+  supporting_evidence_ids:
+  - src-6051cb2ee352
+  contradictory_evidence_ids: []
+  conditions:
+  - 13 interview transcripts, approximately52K-token prompts,30 local MacBookPro runs.
+  known_failure_modes:
+  - Misquotes and misattributions in100% of runs; duplicated attribution90%, irrelevant support80%.
+  evidence_notes:
+  - Run-level rates from one practitioner; runtime, precision, effort and independent verification absent.
+  scope_note: Direct evidence only for the stated task and configuration.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-task-research
+    method: Task-rubric interpretation of original source bodies; configurations and limitations retained.
 - model_id: gpt-realtime-2-1
   profile: models/openai/gpt-realtime-2-1/profile.yaml
   id: judgment-cf3c0c86e40306ed
@@ -8784,6 +9335,35 @@ records:
     research_batch_id: public-task-followup-2026-10-07
     method: Inspected original model/evaluator sources and performed the recorded public search; no inference
       or benchmarking calls.
+- model_id: gpt-realtime-2-1
+  profile: models/openai/gpt-realtime-2-1/profile.yaml
+  id: judgment-7bdf9e2cadd855f7
+  scope: direct
+  task_ids:
+  - reasoning.general
+  related_task_ids: []
+  judgment: The model performs well on the evaluated spoken logical-question distribution, but that does not
+    establish mathematical, scientific or long-horizon execution quality.
+  assessment: conditional
+  confidence: low
+  supporting_evidence_ids:
+  - src-4500b2c5fc9e
+  contradictory_evidence_ids: []
+  conditions:
+  - 'Big Bench Audio: 1,000 audio questions across formal fallacies, navigation, object counting and Boolean
+    word problems; exact 2.1 High/Minimal rows.'
+  known_failure_modes: []
+  evidence_notes:
+  - Displayed speech-reasoning values are 96% High and 87% Minimal, rounded in the source table.
+  - One evaluation stream; immutable snapshot and full decoding configuration are unspecified.
+  scope_note: Bounded exact-version task evidence; no transfer from related models or neighboring tasks.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-synthesis-2026-10-12
+    method: Original public source-body comparison under stated task and deployment conditions; no inference
+      or benchmark execution.
 - model_id: xai-grok-4-7
   profile: models/xai-spacexai/xai-grok-4-7/profile.yaml
   id: judgment-445f99a05ebe5177

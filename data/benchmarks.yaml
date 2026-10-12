@@ -1790,62 +1790,66 @@ records:
   - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
   evidence_notes:
   - '{"attempts": 14, "passed_repairs": 14}'
-- schema_version: '1.0'
-  id: benchmark-68cac6399aceeb23
-  model_id: gpt-oss-120b
-  judgment_ids:
-  - judgment-e2b504d398235939
-  benchmark:
-    name: ClosedCode local CSV repair
-    version: null
+- benchmark:
+    direction: higher
     metric: visible tests passed out of 14
+    name: ClosedCode local CSV repair
     unit: test count
-    direction: higher
-  value: 14
-  model_version: null
-  harness: null
-  effort: null
-  provider_id: null
-  tools: null
-  measured_at: null
-  observed_at: '2026-10-07'
-  evidence_class: practitioner_test
-  source_ids:
-  - src-844ba1375784
+    version: null
   conditions:
-  - ClosedCode/Ollama,high effort,ASUSGX10; exact quantization not stated.
-  limitations:
-  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  - Single synthetic CSV repair task on ASUS Ascent GX10, NVIDIA GB10, 128GB unified memory; exact 120b quantization
+    and immutable revision not stated.
+  - High reasoning effort; visible/hidden tests and syntax checks form the author grading workflow.
+  effort: high
+  evidence_class: practitioner_test
   evidence_notes:
   - '{"hidden_passed": 8, "hidden_tests": 8, "visible_passed": 14, "visible_tests": 14}'
-- schema_version: '1.0'
-  id: benchmark-57d131fb79113e55
-  model_id: gpt-oss-120b
+  harness: ClosedCode (unofficial OpenCode fork) with Ollama
+  id: benchmark-68cac6399aceeb23
   judgment_ids:
   - judgment-e2b504d398235939
-  benchmark:
-    name: ClosedCode local CSV repair
-    version: null
-    metric: hidden tests passed out of 8
-    unit: test count
-    direction: higher
-  value: 8
-  model_version: null
-  harness: null
-  effort: null
-  provider_id: null
-  tools: null
-  measured_at: null
-  observed_at: '2026-10-07'
-  evidence_class: practitioner_test
-  source_ids:
-  - src-844ba1375784
-  conditions:
-  - ClosedCode/Ollama,high effort,ASUSGX10; exact quantization not stated.
   limitations:
   - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  measured_at: null
+  model_id: gpt-oss-120b
+  model_version: null
+  observed_at: '2026-10-07'
+  provider_id: null
+  schema_version: '1.0'
+  source_ids:
+  - src-844ba1375784
+  tools: null
+  value: 14
+- benchmark:
+    direction: higher
+    metric: hidden tests passed out of 8
+    name: ClosedCode local CSV repair
+    unit: test count
+    version: null
+  conditions:
+  - Single synthetic CSV repair task on ASUS Ascent GX10, NVIDIA GB10, 128GB unified memory; exact 120b quantization
+    and immutable revision not stated.
+  - High reasoning effort; visible/hidden tests and syntax checks form the author grading workflow.
+  effort: high
+  evidence_class: practitioner_test
   evidence_notes:
   - '{"hidden_passed": 8, "hidden_tests": 8, "visible_passed": 14, "visible_tests": 14}'
+  harness: ClosedCode (unofficial OpenCode fork) with Ollama
+  id: benchmark-57d131fb79113e55
+  judgment_ids:
+  - judgment-e2b504d398235939
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  measured_at: null
+  model_id: gpt-oss-120b
+  model_version: null
+  observed_at: '2026-10-07'
+  provider_id: null
+  schema_version: '1.0'
+  source_ids:
+  - src-844ba1375784
+  tools: null
+  value: 8
 - schema_version: '1.0'
   id: benchmark-7e19ec7f62c4546c
   model_id: kimi-k3
@@ -5408,3 +5412,314 @@ records:
   evidence_notes:
   - Original published evaluation inspected; this research ran no benchmark. Publication or page-update date
     is not substituted for measurement date.
+- schema_version: '1.0'
+  id: benchmark-2302bccc30dc0106
+  model_id: gpt-6-1-sol
+  provider_id: null
+  model_version: gpt-6.1-sol
+  benchmark:
+    name: PARK JOON mock tools
+    version: null
+    metric: strict selection and argument cases passed
+    unit: cases out of 60
+    direction: higher
+  value: 60
+  effort: null
+  harness: Codex subscription
+  tools: null
+  measured_at: '2026-09-30'
+  observed_at: '2026-10-12'
+  evidence_class: practitioner_test
+  source_ids:
+  - src-919648ee422b
+  judgment_ids:
+  - judgment-2cec8c99696f4a0c
+  conditions:
+  - Codex subscription, September 30; effort left at environment default.
+  - Five mock tools; 60 strict selection/argument cases and 16 agent cases with three to five calls, maximum
+    12 turns.
+  limitations:
+  - Environment-default effort unspecified; five deterministic fake tools; tiny ceiling benchmark.
+  evidence_notes:
+  - Preserve the source-specific sample, grader and configuration; no controlled cross-model ranking inferred.
+- schema_version: '1.0'
+  id: benchmark-2d1478d8f45a60e9
+  model_id: gpt-oss-20b
+  judgment_ids:
+  - judgment-3d019877a961e79d
+  benchmark:
+    name: Java refactoring correctness detection
+    version: arXiv2605.02096v1
+    metric: correctly detected faulty transformations
+    unit: correct cases out of226
+    direction: higher
+  value: 182
+  model_version: gpt-oss-20b
+  harness: Ollama via LangChain
+  effort: default (not numerically specified)
+  provider_id: null
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-12'
+  evidence_class: independent_quality
+  source_ids:
+  - src-a8450f23b0f1
+  conditions:
+  - 226 Java cases:185 compilation errors,41 behavior changes;3–28 LOC,mean10.8.
+  - First run:182/226 overall;38/41 behavioral-change witnesses;144/185 compilation errors.
+  - MacMiniM4Pro64GB;temperature0.5;five runs overall;analysis conducted April2026.
+  limitations:
+  - Exact run day, Ollama version, model-file digest and quantization unspecified.
+  - First-run result is not the five-run mean; evaluation detects faulty refactorings, not implements refactors.
+  evidence_notes:
+  - Ground truth uses OpenJDKTemurin21.0.7+6 and compiled/executed JUnit witnesses.
+- schema_version: '1.0'
+  id: benchmark-5bf240b1aca3acaa
+  model_id: gpt-6-1-sol
+  provider_id: null
+  model_version: gpt-6.1-sol
+  benchmark:
+    name: Vulcan legacy binary rewrite
+    version: v3.18
+    metric: tasks preserving hidden behavior
+    unit: tasks out of 23
+    direction: higher
+  value: 23
+  effort: high
+  harness: Codex CLI 0.159.0 Pro
+  tools: null
+  measured_at: '2026-09-30'
+  observed_at: '2026-10-12'
+  evidence_class: independent_quality
+  source_ids:
+  - src-0ad767b6cd80
+  judgment_ids:
+  - judgment-60dbd819022599bd
+  conditions:
+  - Codex CLI 0.159.0 Pro; September 29–30; 23 tasks per effort, one run per task.
+  - Frozen v3.18 benchmark grades 231 hidden behavior checks; preserve actual binary behavior, including departures
+    from specification.
+  limitations:
+  - One run per task/effort; high/xhigh/max ceiling; separate LLM style scores omitted.
+  evidence_notes:
+  - Preserve the source-specific sample, grader and configuration; no controlled cross-model ranking inferred.
+- schema_version: '1.0'
+  id: benchmark-5d2b124d1b057f8b
+  model_id: gpt-oss-20b
+  judgment_ids:
+  - judgment-6aeb774447d36eea
+  benchmark:
+    name: BrowseComp-Plus
+    version: arXiv2602.21456v1
+    metric: answer accuracy
+    unit: fraction
+    direction: higher
+  value: 0.689
+  model_version: gpt-oss-20b
+  harness: vLLM0.15 / BrowseComp-Plus agent
+  effort: high
+  provider_id: null
+  tools:
+  - BM25 passage retrieval
+  - monoT5-3B reranking
+  measured_at: null
+  observed_at: '2026-10-12'
+  evidence_class: independent_quality
+  source_ids:
+  - src-2639ef77aedc
+  - src-4b4e9bc6b8de
+  conditions:
+  - 830 queries;BM25+monoT5 depth50,top5 snippets512tokens;40,000 output cap;100 iterations.
+  - Recall0.716 is separate from answer accuracy0.689.
+  - 'Study hardware pool: RTX 6000 Ada 48 GB, H100 80 GB, and H200 141 GB, subject to availability; not minimum
+    requirements.'
+  limitations:
+  - One study; actual measurement date and weight digest/precision not disclosed.
+  - External retriever and reranker supply retrieval; results are pipeline-specific.
+  evidence_notes:
+  - Original paper and repository form one independence group.
+  - Answer accuracy uses an LLM judge against ground truth; judge identity remains unresolved.
+- schema_version: '1.0'
+  id: benchmark-9b244f348bfc9c5f
+  model_id: gpt-image-2-5-flare
+  model_version: gpt-image-2.5-flare
+  benchmark:
+    name: PromptFrenzy wrong-coloured fruit bowl
+    version: null
+    metric: mean prompt constraints satisfied
+    unit: percent
+    direction: higher
+  value: 52.4
+  evidence_class: independent_quality
+  provider_id: null
+  harness: AIMLAPI; medium quality; 1536x1024; seven manually graded marks on each of three generations
+  effort: null
+  tools: null
+  measured_at: '2026-09-09'
+  observed_at: '2026-10-12'
+  conditions:
+  - AIMLAPI; medium quality; 1536x1024; seven manually graded marks on each of three generations
+  limitations:
+  - Per-run marks 3/7, 4/7, 4/7; no retries.
+  - Immutable snapshot, precision, context tokens and complete client version undisclosed.
+  - Published July GPT Image 2 baseline reused; quality-high Flare check scored 4/7 in all three runs.
+  evidence_notes:
+  - Original evaluator methodology and reported result inspected; no inference calls or independent rerun.
+  source_ids:
+  - src-f3b4f2f619e9
+  judgment_ids: []
+- schema_version: '1.0'
+  id: benchmark-a9c964434322e473
+  model_id: gpt-image-2-5-flare
+  model_version: gpt-image-2.5-flare
+  benchmark:
+    name: OutfitGen ordinary fashion edits
+    version: '1.0'
+    metric: cases correct in every delivered run
+    unit: cases of 18
+    direction: higher
+  value: 14
+  evidence_class: independent_quality
+  provider_id: null
+  harness: fal hosted Flare; medium quality; one blinded reviewer; 18 edits times five requests
+  effort: null
+  tools: null
+  measured_at: '2026-09-23'
+  observed_at: '2026-10-12'
+  conditions:
+  - fal hosted Flare; medium quality; one blinded reviewer; 18 edits times five requests
+  limitations:
+  - Synthetic adult photos; 20 of 90 requests refused. An always-refused case counts as not completed.
+  - Exact immutable serving revision, output dimensions, precision and client version not established.
+  - One reviewer and provider-specific moderation limit generalization.
+  evidence_notes:
+  - Original evaluator methodology and reported result inspected; no inference calls or independent rerun.
+  source_ids:
+  - src-ca2c49e8bad2
+  judgment_ids: []
+- schema_version: '1.0'
+  id: benchmark-b980f9e70a57b14a
+  model_id: gpt-realtime-2-1
+  judgment_ids: []
+  benchmark:
+    name: Cekura Speech-to-Speech
+    version: null
+    metric: scenarios passing all three calls
+    unit: percent
+    direction: higher
+  value: 79.3
+  model_version: gpt-realtime-2.1
+  harness: Cekura matched Pipecat speech-to-speech pipeline
+  effort: high
+  provider_id: openai
+  tools:
+  - appointment and Medicare workflow tools
+  measured_at: null
+  observed_at: '2026-10-12'
+  evidence_class: independent_quality
+  source_ids:
+  - src-8085f83f0de7
+  conditions:
+  - 65 of 82 scenarios passed all three calls.
+  - Voice marin, 24kHz audio and service turn detection; same prompt, tools and Pipecat pipeline.
+  limitations:
+  - Exact run date, immutable revision and full decoding parameters are not disclosed.
+  evidence_notes:
+  - Public original evaluation inspected; measurement date is not inferred from publication or observation.
+- schema_version: '1.0'
+  id: benchmark-d023727299498828
+  model_id: gpt-6-1-sol
+  provider_id: null
+  model_version: gpt-6.1-sol
+  benchmark:
+    name: PARK JOON synthetic vision
+    version: null
+    metric: all expected fields correct
+    unit: trials out of 34
+    direction: higher
+  value: 34
+  effort: null
+  harness: Codex subscription
+  tools: null
+  measured_at: '2026-09-30'
+  observed_at: '2026-10-12'
+  evidence_class: practitioner_test
+  source_ids:
+  - src-72b833708b3f
+  judgment_ids:
+  - judgment-2733964500e64515
+  conditions:
+  - 17 generated images, two trials each; chart, OCR, counting and diagram tasks; Codex subscription default
+    effort.
+  limitations:
+  - 17 synthetic images repeated twice; not natural-image robustness.
+  evidence_notes:
+  - Preserve the source-specific sample, grader and configuration; no controlled cross-model ranking inferred.
+- schema_version: '1.0'
+  id: benchmark-d6615a54367dd3e6
+  model_id: gpt-6-1-sol
+  provider_id: aws-bedrock
+  model_version: gpt-6.1-sol
+  benchmark:
+    name: Stuga MIRACL reranking
+    version: null
+    metric: Hit@1
+    unit: percent
+    direction: higher
+  value: 77
+  effort: low
+  harness: Stuga fixed candidate reranking
+  tools: null
+  measured_at: null
+  observed_at: '2026-10-12'
+  evidence_class: practitioner_test
+  source_ids:
+  - src-6e349a2be53a
+  judgment_ids:
+  - judgment-fa71065d8579ec80
+  conditions:
+  - 240 MIRACL queries, 40 each in six languages; 24 fixed candidates per query; candidate excerpts truncated
+    to 1200 characters.
+  - GPT-6.1 Sol low; 8192 maximum output tokens; the exact result row identifies Bedrock us-west-2. Specific
+    Bedrock endpoint/API, inference profile and immutable serving revision are not established.
+  limitations:
+  - 240 queries, six languages, confidence interval 72–82%; disclosed Bedrock us-west-2 route, with specific
+    API/endpoint, inference profile and immutable serving revision unspecified; not RAG answer quality.
+  - Article is dated September 29, 2026; actual measurement date is not separately stated.
+  evidence_notes:
+  - Preserve the source-specific sample, grader and configuration; no controlled cross-model ranking inferred.
+- schema_version: '1.0'
+  id: benchmark-fda2abc80e31b127
+  model_id: gpt-6-1-sol
+  provider_id: null
+  model_version: gpt-6.1-sol
+  benchmark:
+    name: ToneBench
+    version: October 11 run
+    metric: WritingScore
+    unit: points out of 100
+    direction: higher
+  value: 81.1
+  effort: high
+  harness: Codex subscription
+  tools: null
+  measured_at: '2026-10-11'
+  observed_at: '2026-10-12'
+  evidence_class: independent_quality
+  source_ids:
+  - src-0a5c73fb795a
+  judgment_ids:
+  - judgment-3d20bc120f7b5508
+  conditions:
+  - High effort, Codex subscription, default sampling; ten YouTube-script briefs with five runs each.
+  - About 13K prompt tokens of guide, brief and research packet; no external tools.
+  limitations:
+  - 50 drafts, one creator voice, private rubric; three LLM judges plus the typed Jev 1.13 classifier, including
+    same-family Sol medium; not an independent human quality score.
+  evidence_notes:
+  - Preserve the source-specific sample, grader and configuration; no controlled cross-model ranking inferred.
+  - 'Judge: Claude Opus 5.5; type LLM; role per-draft rubric scoring; medium effort through Claude Code subscription.'
+  - 'Judge: GPT-6.1 Sol; type LLM; role per-draft rubric scoring; medium reasoning through Codex CLI.'
+  - 'Judge: GLM 5.3 Flash; type LLM; role per-draft rubric scoring; OpenRouter route.'
+  - 'Judge: Jev 1.13; type typed classifier; role choosing among five described quality levels for one rubric
+    question per metric; TypeSafe route, no generated prose.'

@@ -424,6 +424,31 @@ capabilities:
     research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate review_tests_frontend:review-astra; exact identity gates and original
       sources retained.
+- id: judgment-73932600c90add2f
+  scope: direct
+  task_ids:
+  - agent.tool_use
+  related_task_ids: []
+  scope_note: One task and one bounded evaluation; no transfer to neighboring tasks.
+  assessment: conditional
+  judgment: Astra can complete many BLS plugin queries in a configured Codex harness; validate the actual harness
+    before deployment.
+  confidence: low
+  conditions:
+  - 108-question production plugin corpus; Codex; reported pass rate 0.94.
+  known_failure_modes:
+  - Some queries fail; tool/server instructions materially affect outcomes.
+  supporting_evidence_ids:
+  - src-d526f74ef3e9
+  contradictory_evidence_ids: []
+  evidence_notes:
+  - Vendor/coauthor study; exact effort and immutable checkpoint not supplied; no superiority claim.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    method: Fresh original-body inspection, October 12; no inference executed.
+    research_batch_id: public-source-inspection-2026-10-12
 performance_characteristics: []
 access_ids:
 - access-20dfff8ec8df204d

@@ -6505,3 +6505,590 @@ records:
   - src-9cc54eb0a407
   notes:
   - Exact introduction/expiry instants and user eligibility not published for this complete offer.
+- schema_version: '1.0'
+  id: price-2ffbacc3980e7d64
+  model_id: gpt-6-luna
+  model_label: gpt-6-luna
+  provider_id: openai
+  product: Decisions API public beta
+  tier: null
+  status: current
+  billing_method: metered-api
+  region: null
+  rates:
+  - metric: input
+    amount: 0.1
+    currency: USD
+    unit: per 1 million tokens
+    conditions:
+    - Input at or below 272K tokens.
+  included_usage: []
+  overage: []
+  reset_cadence: null
+  conditions:
+  - 'Input-only billing: no output, cache-read or cache-write charges.'
+  - Long-context input multiplier and regional processing premium apply where applicable.
+  notes:
+  - Endpoint-specific rate; not evidence of inclusion with ChatGPT or Codex subscriptions.
+  effective_from: null
+  effective_to: null
+  evidence_ids:
+  - src-f6e419d4eb70
+  - src-f00960a11928
+  verified_at: '2026-10-12'
+- schema_version: '1.0'
+  id: price-33433b569bee6a14
+  verified_at: '2026-10-12'
+  model_id: gpt-6-1-sol
+  provider_id: aws-bedrock
+  model_label: us.openai.gpt-6.1-sol
+  product: Bedrock Runtime
+  billing_method: metered-api
+  status: current
+  region: US CRIS
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 4.4
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.22
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 5.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 16.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Input >272000 tokens; rates apply to the full request
+  - Runtime requires the specified inference profile; direct in-region Runtime invocation is unsupported.
+  - 'Explicit caching: 30-minute TTL only, minimum 1024-token prefix, maximum four writes; Converse supports
+    implicit caching only.'
+  evidence_ids:
+  - src-aaf4addbc3e1
+  notes:
+  - Published list tariff; no account-specific execution, discount or eligibility verification.
+- schema_version: '1.0'
+  id: price-3b4537bd3a38e822
+  verified_at: '2026-10-12'
+  model_id: gpt-6-1-sol
+  provider_id: aws-bedrock
+  model_label: global.openai.gpt-6.1-sol
+  product: Bedrock Runtime
+  billing_method: metered-api
+  status: current
+  region: Global CRIS
+  tier: Ultrafast
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 24
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 1.2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 30
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 90
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Input >272000 tokens; rates apply to the full request
+  - Runtime requires the specified inference profile; direct in-region Runtime invocation is unsupported.
+  - 'Explicit caching: 30-minute TTL only, minimum 1024-token prefix, maximum four writes; Converse supports
+    implicit caching only.'
+  evidence_ids:
+  - src-aaf4addbc3e1
+  notes:
+  - Published list tariff; no account-specific execution, discount or eligibility verification.
+- schema_version: '1.0'
+  id: price-3e0ca19be94e89d6
+  verified_at: '2026-10-12'
+  model_id: gpt-6-1-sol
+  provider_id: aws-bedrock
+  model_label: openai.gpt-6.1-sol
+  product: Bedrock Mantle
+  billing_method: metered-api
+  status: current
+  region: us-east-1
+  tier: Ultrafast
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 26.4
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 1.32
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 33.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 99.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Input >272000 tokens; rates apply to the full request
+  - In-region bedrock-mantle in us-east-1, model ID openai.gpt-6.1-sol; use /openai/v1/responses or /openai/v1/chat/completions.
+  - Responses and Chat Completions support implicit and explicit caching on Mantle. Explicit caching uses 30-minute
+    TTL only, a minimum 1024-token prefix and at most four cache writes per request.
+  - The documented Ultrafast Responses request uses service_tier ultrafast on the Mantle us-east-1 endpoint.
+  evidence_ids:
+  - src-aaf4addbc3e1
+  notes:
+  - Published list tariff; no account-specific execution, discount or eligibility verification.
+- schema_version: '1.0'
+  id: price-42ad1c7bff379b66
+  verified_at: '2026-10-12'
+  model_id: gpt-6-1-sol
+  provider_id: aws-bedrock
+  model_label: openai.gpt-6.1-sol
+  product: Bedrock Mantle
+  billing_method: metered-api
+  status: current
+  region: us-east-1
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 4.4
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.22
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 5.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 16.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Input >272000 tokens; rates apply to the full request
+  - In-region bedrock-mantle in us-east-1, model ID openai.gpt-6.1-sol; use /openai/v1/responses or /openai/v1/chat/completions.
+  - Responses and Chat Completions support implicit and explicit caching on Mantle. Explicit caching uses 30-minute
+    TTL only, a minimum 1024-token prefix and at most four cache writes per request.
+  - Standard processing uses service_tier default or an omitted field.
+  evidence_ids:
+  - src-aaf4addbc3e1
+  notes:
+  - Published list tariff; no account-specific execution, discount or eligibility verification.
+- schema_version: '1.0'
+  id: price-4ab50b0839d3883a
+  verified_at: '2026-10-12'
+  model_id: gpt-6-1-sol
+  provider_id: aws-bedrock
+  model_label: openai.gpt-6.1-sol
+  product: Bedrock Mantle
+  billing_method: metered-api
+  status: current
+  region: us-east-1
+  tier: Ultrafast
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 13.2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.66
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 16.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 66
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Input <=272000 tokens
+  - In-region bedrock-mantle in us-east-1, model ID openai.gpt-6.1-sol; use /openai/v1/responses or /openai/v1/chat/completions.
+  - Responses and Chat Completions support implicit and explicit caching on Mantle. Explicit caching uses 30-minute
+    TTL only, a minimum 1024-token prefix and at most four cache writes per request.
+  - The documented Ultrafast Responses request uses service_tier ultrafast on the Mantle us-east-1 endpoint.
+  evidence_ids:
+  - src-aaf4addbc3e1
+  notes:
+  - Published list tariff; no account-specific execution, discount or eligibility verification.
+- schema_version: '1.0'
+  id: price-5c4880a53d3ce074
+  verified_at: '2026-10-12'
+  model_id: gpt-6-1-sol
+  provider_id: aws-bedrock
+  model_label: global.openai.gpt-6.1-sol
+  product: Bedrock Runtime
+  billing_method: metered-api
+  status: current
+  region: Global CRIS
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.1
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 2.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 10
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Input <=272000 tokens
+  - Runtime requires the specified inference profile; direct in-region Runtime invocation is unsupported.
+  - 'Explicit caching: 30-minute TTL only, minimum 1024-token prefix, maximum four writes; Converse supports
+    implicit caching only.'
+  evidence_ids:
+  - src-aaf4addbc3e1
+  notes:
+  - Published list tariff; no account-specific execution, discount or eligibility verification.
+- schema_version: '1.0'
+  id: price-6bbb7dad96fda714
+  verified_at: '2026-10-12'
+  model_id: gpt-6-1-sol
+  provider_id: aws-bedrock
+  model_label: openai.gpt-6.1-sol
+  product: Bedrock Mantle
+  billing_method: metered-api
+  status: current
+  region: us-east-1
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 2.2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.11
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 2.75
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 11
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Input <=272000 tokens
+  - In-region bedrock-mantle in us-east-1, model ID openai.gpt-6.1-sol; use /openai/v1/responses or /openai/v1/chat/completions.
+  - Responses and Chat Completions support implicit and explicit caching on Mantle. Explicit caching uses 30-minute
+    TTL only, a minimum 1024-token prefix and at most four cache writes per request.
+  - Standard processing uses service_tier default or an omitted field.
+  evidence_ids:
+  - src-aaf4addbc3e1
+  notes:
+  - Published list tariff; no account-specific execution, discount or eligibility verification.
+- schema_version: '1.0'
+  id: price-8d8d806d57455c3f
+  verified_at: '2026-10-12'
+  model_id: gpt-6-1-sol
+  provider_id: aws-bedrock
+  model_label: us.openai.gpt-6.1-sol
+  product: Bedrock Runtime
+  billing_method: metered-api
+  status: current
+  region: US CRIS
+  tier: Ultrafast
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 13.2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.66
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 16.5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 66
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Input <=272000 tokens
+  - Runtime requires the specified inference profile; direct in-region Runtime invocation is unsupported.
+  - 'Explicit caching: 30-minute TTL only, minimum 1024-token prefix, maximum four writes; Converse supports
+    implicit caching only.'
+  evidence_ids:
+  - src-aaf4addbc3e1
+  notes:
+  - Published list tariff; no account-specific execution, discount or eligibility verification.
+- schema_version: '1.0'
+  id: price-9e535475c742449b
+  verified_at: '2026-10-12'
+  model_id: gpt-6-1-sol
+  provider_id: aws-bedrock
+  model_label: us.openai.gpt-6.1-sol
+  product: Bedrock Runtime
+  billing_method: metered-api
+  status: current
+  region: US CRIS
+  tier: Ultrafast
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 26.4
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 1.32
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 33.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 99.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Input >272000 tokens; rates apply to the full request
+  - Runtime requires the specified inference profile; direct in-region Runtime invocation is unsupported.
+  - 'Explicit caching: 30-minute TTL only, minimum 1024-token prefix, maximum four writes; Converse supports
+    implicit caching only.'
+  evidence_ids:
+  - src-aaf4addbc3e1
+  notes:
+  - Published list tariff; no account-specific execution, discount or eligibility verification.
+- schema_version: '1.0'
+  id: price-ac3711f856df0367
+  verified_at: '2026-10-12'
+  model_id: gpt-6-1-sol
+  provider_id: aws-bedrock
+  model_label: global.openai.gpt-6.1-sol
+  product: Bedrock Runtime
+  billing_method: metered-api
+  status: current
+  region: Global CRIS
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 4
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 5
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 15
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Input >272000 tokens; rates apply to the full request
+  - Runtime requires the specified inference profile; direct in-region Runtime invocation is unsupported.
+  - 'Explicit caching: 30-minute TTL only, minimum 1024-token prefix, maximum four writes; Converse supports
+    implicit caching only.'
+  evidence_ids:
+  - src-aaf4addbc3e1
+  notes:
+  - Published list tariff; no account-specific execution, discount or eligibility verification.
+- schema_version: '1.0'
+  id: price-c44d40d05e197a74
+  verified_at: '2026-10-12'
+  model_id: gpt-6-1-sol
+  provider_id: aws-bedrock
+  model_label: global.openai.gpt-6.1-sol
+  product: Bedrock Runtime
+  billing_method: metered-api
+  status: current
+  region: Global CRIS
+  tier: Ultrafast
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 12
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.6
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 15.0
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 60
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Input <=272000 tokens
+  - Runtime requires the specified inference profile; direct in-region Runtime invocation is unsupported.
+  - 'Explicit caching: 30-minute TTL only, minimum 1024-token prefix, maximum four writes; Converse supports
+    implicit caching only.'
+  evidence_ids:
+  - src-aaf4addbc3e1
+  notes:
+  - Published list tariff; no account-specific execution, discount or eligibility verification.
+- schema_version: '1.0'
+  id: price-e02b9d47b5e53e63
+  verified_at: '2026-10-12'
+  model_id: gpt-6-1-sol
+  provider_id: aws-bedrock
+  model_label: us.openai.gpt-6.1-sol
+  product: Bedrock Runtime
+  billing_method: metered-api
+  status: current
+  region: US CRIS
+  tier: Standard
+  effective_from: null
+  effective_to: null
+  rates:
+  - metric: input
+    amount: 2.2
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cached_input
+    amount: 0.11
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: cache_write
+    amount: 2.75
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  - metric: output
+    amount: 11
+    currency: USD
+    unit: per 1 million tokens
+    conditions: []
+  included_usage: []
+  reset_cadence: null
+  overage: []
+  conditions:
+  - Input <=272000 tokens
+  - Runtime requires the specified inference profile; direct in-region Runtime invocation is unsupported.
+  - 'Explicit caching: 30-minute TTL only, minimum 1024-token prefix, maximum four writes; Converse supports
+    implicit caching only.'
+  evidence_ids:
+  - src-aaf4addbc3e1
+  notes:
+  - Published list tariff; no account-specific execution, discount or eligibility verification.

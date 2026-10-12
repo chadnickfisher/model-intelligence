@@ -95,6 +95,94 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
+### Knowledge.rag (medium confidence)
+
+Useful but fallible for BrowseComp-Plus answers with the documented external retrieval pipeline.
+
+Scope: direct / conditional. Direct evidence only for the stated task and configuration.
+
+Direct task IDs: knowledge.rag
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-6aeb774447d36eea
+
+Conditions: gpt-oss-20b high;vLLM0.15;131,072 context;40,000 output;100 iterations.; BM25 passages plus monoT5-3B reranking at depth50; top5 snippets up to512 tokens.
+
+Failure modes / limitations: Answer accuracy0.689; pipeline and retriever choices materially affect results.
+
+Supporting sources: [Revisiting Text Ranking in Deep Research](https://arxiv.org/html/2602.21456v1) · [Revisiting Text Ranking in Deep Research repository](https://github.com/ChuanMeng/text-ranking-in-deep-research)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: One study, not two independent streams; scoring and corpus are bounded and no native embedding capability is inferred.
+
+### Coding.refactoring (low confidence)
+
+Unreliable for the tested autonomous helper-function extraction:0/10 repetitions succeeded.
+
+Scope: direct / weak. Direct evidence only for the stated task and configuration.
+
+Direct task IDs: coding.refactoring
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-8f37f48cf9f3a398
+
+Conditions: OpenRouter via ellmer/vitals; extract repeated code into a helper and preserve unit tests.; Underlying inference provider, precision, effort and run date are not disclosed in the inspected report.
+
+Failure modes / limitations: Invalid tool arguments and abandonment.
+
+Supporting sources: [Local models are not there (yet)](https://posit.co/blog/local-models-are-not-there-yet) · [helperbench](https://github.com/simonpcouch/helperbench)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: One narrow task repeated ten times; no transfer to all refactoring workloads.
+
+### Language.translation (low confidence)
+
+Short EN-to-European-Spanish drafts were usable but needed idiom and completion checks.
+
+Scope: direct / conditional. Direct evidence only for the stated task and configuration.
+
+Direct task IDs: language.translation
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-acf44d745addcc1e
+
+Conditions: OpenRouter openai/gpt-oss-20b:free; temperature0.2,300-token cap;12 segments across six domains.
+
+Failure modes / limitations: Literal calques and one truncated creative segment.
+
+Supporting sources: [Does DeepL Still Win in 2026?](https://blog.translastars.com/deepl-vs-llms-mt-comparison-2026)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: One language direction, small corpus, no blinded replicated evaluation; cap and provider can affect truncation.
+
+### Research.synthesis (low confidence)
+
+Theme generation was plausible, but source attribution failed in every reported qualitative-synthesis run.
+
+Scope: direct / weak. Direct evidence only for the stated task and configuration.
+
+Direct task IDs: research.synthesis
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-d2ecd9854feca2c4
+
+Conditions: 13 interview transcripts, approximately52K-token prompts,30 local MacBookPro runs.
+
+Failure modes / limitations: Misquotes and misattributions in100% of runs; duplicated attribution90%, irrelevant support80%.
+
+Supporting sources: [Testing locally hosted gpt-oss-20b for user research synthesis](https://llewynpaine.consulting/blog/2025/8/7/testing-locally-hosted-gpt-oss-20b-for-user-research-synthesis-how-it-compares-to-gpt-4o-and-claude-35-sonnet)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Run-level rates from one practitioner; runtime, precision, effort and independent verification absent.
+
 ## Specifications
 
 | Field | Recorded value |

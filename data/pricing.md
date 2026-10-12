@@ -183,5 +183,18 @@ Generated from canonical YAML. Units, route conditions and dates are essential.
 | bfl-flux3-video | bfl | metered-api / v2v draft HD / current | generation: 0.12 USD / per output second | 2026-10-11 |
 | bfl-flux3-video | together | metered-api / Public advertised estimate; configuration unspecified / unknown | generation: 0.17 USD / per video | 2026-10-11 |
 | elevenlabs-eleven-v4 | elevenlabs | subscription / Starter monthly; first-month promotion separately qualified / current | subscription: 6 USD / per month; subscription: 1 USD / first month | 2026-10-11 |
+| gpt-6-luna | openai | metered-api / None / current | input: 0.1 USD / per 1 million tokens | 2026-10-12 |
+| gpt-6-1-sol | aws-bedrock | metered-api / Standard / current | input: 4.4 USD / per 1 million tokens; cached_input: 0.22 USD / per 1 million tokens; cache_write: 5.5 USD / per 1 million tokens; output: 16.5 USD / per 1 million tokens | 2026-10-12 |
+| gpt-6-1-sol | aws-bedrock | metered-api / Ultrafast / current | input: 24 USD / per 1 million tokens; cached_input: 1.2 USD / per 1 million tokens; cache_write: 30 USD / per 1 million tokens; output: 90 USD / per 1 million tokens | 2026-10-12 |
+| gpt-6-1-sol | aws-bedrock | metered-api / Ultrafast / current | input: 26.4 USD / per 1 million tokens; cached_input: 1.32 USD / per 1 million tokens; cache_write: 33.0 USD / per 1 million tokens; output: 99.0 USD / per 1 million tokens | 2026-10-12 |
+| gpt-6-1-sol | aws-bedrock | metered-api / Standard / current | input: 4.4 USD / per 1 million tokens; cached_input: 0.22 USD / per 1 million tokens; cache_write: 5.5 USD / per 1 million tokens; output: 16.5 USD / per 1 million tokens | 2026-10-12 |
+| gpt-6-1-sol | aws-bedrock | metered-api / Ultrafast / current | input: 13.2 USD / per 1 million tokens; cached_input: 0.66 USD / per 1 million tokens; cache_write: 16.5 USD / per 1 million tokens; output: 66 USD / per 1 million tokens | 2026-10-12 |
+| gpt-6-1-sol | aws-bedrock | metered-api / Standard / current | input: 2 USD / per 1 million tokens; cached_input: 0.1 USD / per 1 million tokens; cache_write: 2.5 USD / per 1 million tokens; output: 10 USD / per 1 million tokens | 2026-10-12 |
+| gpt-6-1-sol | aws-bedrock | metered-api / Standard / current | input: 2.2 USD / per 1 million tokens; cached_input: 0.11 USD / per 1 million tokens; cache_write: 2.75 USD / per 1 million tokens; output: 11 USD / per 1 million tokens | 2026-10-12 |
+| gpt-6-1-sol | aws-bedrock | metered-api / Ultrafast / current | input: 13.2 USD / per 1 million tokens; cached_input: 0.66 USD / per 1 million tokens; cache_write: 16.5 USD / per 1 million tokens; output: 66 USD / per 1 million tokens | 2026-10-12 |
+| gpt-6-1-sol | aws-bedrock | metered-api / Ultrafast / current | input: 26.4 USD / per 1 million tokens; cached_input: 1.32 USD / per 1 million tokens; cache_write: 33.0 USD / per 1 million tokens; output: 99.0 USD / per 1 million tokens | 2026-10-12 |
+| gpt-6-1-sol | aws-bedrock | metered-api / Standard / current | input: 4 USD / per 1 million tokens; cached_input: 0.2 USD / per 1 million tokens; cache_write: 5 USD / per 1 million tokens; output: 15 USD / per 1 million tokens | 2026-10-12 |
+| gpt-6-1-sol | aws-bedrock | metered-api / Ultrafast / current | input: 12 USD / per 1 million tokens; cached_input: 0.6 USD / per 1 million tokens; cache_write: 15.0 USD / per 1 million tokens; output: 60 USD / per 1 million tokens | 2026-10-12 |
+| gpt-6-1-sol | aws-bedrock | metered-api / Standard / current | input: 2.2 USD / per 1 million tokens; cached_input: 0.11 USD / per 1 million tokens; cache_write: 2.75 USD / per 1 million tokens; output: 11 USD / per 1 million tokens | 2026-10-12 |
 
 [Canonical records with evidence and all conditions](pricing.yaml)

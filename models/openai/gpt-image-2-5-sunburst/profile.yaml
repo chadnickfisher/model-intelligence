@@ -113,16 +113,19 @@ additional_specifications:
     - src-259c8fd88c0f
     - src-285d61f371cf
 licensing:
-  name: null
-  commercial_use: null
+  name: OpenAI Services Agreement for API and business services
+  commercial_use: API outputs are owned by the customer as between the parties to the extent permitted by law;
+    use remains subject to the agreement and applicable policies.
   redistribution: null
   fine_tuning: null
-  hosted_service: null
-  restrictions: []
+  hosted_service: The Services Agreement permits API integration into customer applications made available
+    to end users, subject to its terms.
+  restrictions:
+  - Customer must hold required rights to inputs and comply with usage restrictions and applicable law.
+  - Output ownership is not a license to redistribute model weights.
   evidence_ids:
+  - src-53cd13bd410c
   - src-1a9fcf8d6701
-  - src-259c8fd88c0f
-  - src-285d61f371cf
 local_inference:
   availability: unavailable
   hardware_notes: []

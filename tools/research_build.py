@@ -56,7 +56,7 @@ def merge_ready(compiled, report, baseline, current):
     batch.require(set(ready) <= set(proposals), 'Unknown ready proposal')
     result = deepcopy(current)
     evidence = {}
-    fields = {(r['entity_type'], r['entity_id'], r['path']): r for r in compiled['research_run']['field_checks']}
+    fields = batch.group_field_checks(compiled['research_run']['field_checks'])
     for ident in ready:
         unit, receipt = proposals[ident], receipts[ident]
         batch.require(unit['operation'] == 'upsert', 'Deletion is outside update scope')
@@ -70,7 +70,7 @@ def merge_ready(compiled, report, baseline, current):
             partial.put(result[key], unit)
         else:
             result[key] = deepcopy(unit['value'])
-        change = partial.selected_change(unit, baseline, fields)
+        change = partial.selected_change(unit, baseline, fields, compiled['research_run'], compiled['candidate'], compiled['packet_created_at'][:10])
         evidence.setdefault(key, set()).update(change['evidence_ids'])
     changes = []
     for key in sorted(result):

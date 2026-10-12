@@ -165,6 +165,33 @@ capabilities:
     research_batch_id: public-task-followup-2026-10-07
     method: Inspected original model/evaluator sources and performed the recorded public search; no inference
       or benchmarking calls.
+- id: judgment-7bdf9e2cadd855f7
+  scope: direct
+  task_ids:
+  - reasoning.general
+  related_task_ids: []
+  judgment: The model performs well on the evaluated spoken logical-question distribution, but that does not
+    establish mathematical, scientific or long-horizon execution quality.
+  assessment: conditional
+  confidence: low
+  supporting_evidence_ids:
+  - src-4500b2c5fc9e
+  contradictory_evidence_ids: []
+  conditions:
+  - 'Big Bench Audio: 1,000 audio questions across formal fallacies, navigation, object counting and Boolean
+    word problems; exact 2.1 High/Minimal rows.'
+  known_failure_modes: []
+  evidence_notes:
+  - Displayed speech-reasoning values are 96% High and 87% Minimal, rounded in the source table.
+  - One evaluation stream; immutable snapshot and full decoding configuration are unspecified.
+  scope_note: Bounded exact-version task evidence; no transfer from related models or neighboring tasks.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-synthesis-2026-10-12
+    method: Original public source-body comparison under stated task and deployment conditions; no inference
+      or benchmark execution.
 performance_characteristics: []
 access_ids:
 - access-4df322a979cb940f

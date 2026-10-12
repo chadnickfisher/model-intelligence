@@ -74,15 +74,15 @@ Provider routes and subscriptions are separate. Read billing units, thresholds, 
 
 ## Licensing and local use
 
-License: Not established / proprietary terms must be checked
+License: OpenAI Services Agreement for API and business services
 
-Restrictions: Not established in this pass
+Restrictions: Customer must hold required rights to inputs and comply with usage restrictions and applicable law.; Output ownership is not a license to redistribute model weights.
 
-Commercial use: Unknown / not established
+Commercial use: API outputs are owned by the customer as between the parties to the extent permitted by law; use remains subject to the agreement and applicable policies.
 
 Redistribution: Unknown / not established
 
-Hosted service: Unknown / not established
+Hosted service: The Services Agreement permits API integration into customer applications made available to end users, subject to its terms.
 
 Local weights/runtime availability: unavailable
 

@@ -142,16 +142,26 @@ additional_specifications:
     - src-6d85ece3b497
 licensing:
   name: Apache-2.0
-  commercial_use: null
-  redistribution: null
-  fine_tuning: null
-  hosted_service: null
-  restrictions: []
+  commercial_use: Permitted under Apache-2.0; the gpt-oss usage policy requires compliance with applicable
+    law.
+  redistribution: 'Permitted subject to Apache-2.0 section 4: provide the license, mark modified files, retain
+    applicable notices, and preserve NOTICE attribution when supplied.'
+  fine_tuning: Permitted; OpenAI describes adaptation with open tools on user infrastructure, not OpenAI API
+    fine-tuning.
+  hosted_service: Self-managed or third-party hosting is supported in OpenAI documentation; provider service
+    terms and compute charges are separate from the weight license.
+  restrictions:
+  - Applicable law under the gpt-oss usage policy.
+  - Apache-2.0 attribution and modification notices apply to redistribution; the license does not grant trademark
+    rights.
   evidence_ids:
   - src-1b711f47aa6a
   - src-f85326ed9ab1
   - src-06e7619eb6a4
   - src-6d85ece3b497
+  - src-e291d5581ddb
+  - src-f0ecdab36bb1
+  - src-033fa0bf122f
 local_inference:
   availability: available
   hardware_notes:

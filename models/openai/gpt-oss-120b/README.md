@@ -142,13 +142,13 @@ Provider routes and subscriptions are separate. Read billing units, thresholds, 
 
 License: Apache-2.0
 
-Restrictions: Not established in this pass
+Restrictions: Applicable law under the gpt-oss usage policy.; Apache-2.0 attribution and modification notices apply to redistribution; the license does not grant trademark rights.
 
-Commercial use: Unknown / not established
+Commercial use: Permitted under Apache-2.0; the gpt-oss usage policy requires compliance with applicable law.
 
-Redistribution: Unknown / not established
+Redistribution: Permitted subject to Apache-2.0 section 4: provide the license, mark modified files, retain applicable notices, and preserve NOTICE attribution when supplied.
 
-Hosted service: Unknown / not established
+Hosted service: Self-managed or third-party hosting is supported in OpenAI documentation; provider service terms and compute charges are separate from the weight license.
 
 Local weights/runtime availability: available
 

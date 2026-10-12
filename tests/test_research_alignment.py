@@ -145,8 +145,8 @@ def test_model_preflight_keeps_entity_identity_after_checking_findings(fixture, 
     row['result'] = result
     before_packet, before_baseline = deepcopy(packet), deepcopy(baseline)
     errors = packet_errors(packet, baseline)
-    missing = f'model {MID}: changed field lacks linked investigation: /notes'
-    assert (missing in errors) == (result != 'value')
+    missing = f'EA03: model {MID}: changed field lacks linked investigation'
+    assert any(e.startswith(missing) and e.endswith(': /notes') for e in errors) == (result != 'value')
     if result == 'value':
         assert errors == []
     assert packet == before_packet and baseline == before_baseline

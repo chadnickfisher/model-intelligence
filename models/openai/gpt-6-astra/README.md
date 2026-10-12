@@ -183,6 +183,28 @@ Contradictory or limiting sources: [GPT-6 Astra Cost 1.6x More Per Verified Bug 
 
 Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
+### Agent.tool_use (low confidence)
+
+Astra can complete many BLS plugin queries in a configured Codex harness; validate the actual harness before deployment.
+
+Scope: direct / conditional. One task and one bounded evaluation; no transfer to neighboring tasks.
+
+Direct task IDs: agent.tool_use
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-73932600c90add2f
+
+Conditions: 108-question production plugin corpus; Codex; reported pass rate 0.94.
+
+Failure modes / limitations: Some queries fail; tool/server instructions materially affect outcomes.
+
+Supporting sources: [Harness-aware evaluation of plugins](https://developers.openai.com/cookbook/examples/partners/harness_aware_plugin_evals/harness_aware_plugin_evals)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Vendor/coauthor study; exact effort and immutable checkpoint not supplied; no superiority claim.
+
 ## Specifications
 
 | Field | Recorded value |

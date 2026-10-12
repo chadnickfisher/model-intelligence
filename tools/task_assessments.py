@@ -1,4 +1,5 @@
 """Validate and select explicit task suitability records; no inferred model ratings."""
+from tools.research_fields import assessment_chronology_errors
 
 DEFAULT_SUITABILITY = ('high', 'medium', 'low', 'disputed')
 SELECTABLE_SUITABILITY = (*DEFAULT_SUITABILITY, 'not_supported')
@@ -27,7 +28,7 @@ def select_task_assessments(records, task_id, *, suitability=None, confidence=()
     return result
 
 
-def task_assessment_errors(records, models, tasks, access):
+def task_assessment_errors(records, models, tasks, access, *, latest_date=None):
     """Check identity/scope consistency, not source quality or research adequacy."""
     errors = []
     seen = set()
@@ -55,9 +56,7 @@ def task_assessment_errors(records, models, tasks, access):
         aggregate = record.get('aggregate')
         if not isinstance(aggregate, dict):
             continue
-        assessed_at = aggregate.get('assessed_at')
-        if isinstance(assessed_at, str) and assessed_at < record['checked_at']:
-            errors.append(label + ': aggregate assessment predates its source check')
+        errors.extend(label + ': ' + e['message'] for e in assessment_chronology_errors(record, latest_date=latest_date))
         cited = set(aggregate.get('supporting_evidence_ids', [])) | set(
             aggregate.get('contradictory_evidence_ids', []))
         if not cited <= set(record['evidence_ids']):

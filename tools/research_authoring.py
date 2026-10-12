@@ -5,9 +5,9 @@ if __name__ == '__main__':
     sys.exit(2)
 
 if __package__:
-    from .research_fields import changed_fields, factual_fields
+    from .research_fields import changed_fields, factual_fields, group_field_checks, qualifying_field_checks, assessment_chronology_errors
 else:
-    from research_fields import changed_fields, factual_fields
+    from research_fields import changed_fields, factual_fields, group_field_checks, qualifying_field_checks, assessment_chronology_errors
 
 
 # Kept portable for frozen kits. Parity tests bind these to the receiver/schema.
@@ -18,6 +18,46 @@ SCOPED_RESULTS = {
     'source_checks': {'not_checked', 'blocked', 'unknown', 'checked'},
 }
 MODEL_RESULTS = {**SCOPED_RESULTS, 'field_checks': SCOPED_RESULTS['field_checks'] | {'not_applicable'}}
+ACCOUNTING_CHECKS = {
+    'EA01': 'Put only source bodies inspected for the dated check in RUN.*.evidence_ids; expanded sources must exist and have check_date <= accessed_at <= packet_date. Keep historical citations in unchanged canonical records and the frozen baseline.',
+    'EA02': 'For blocked rows save the actual attempt date, rationale, blocked_reason and remaining_gaps. Keep evidence_ids empty when no source was inspected; a failed attempt does not refresh source dates.',
+    'EA03': 'Preserve all owner-qualified field rows. Each changed factual field needs one relevant investigated row that independently satisfies linked current evidence, date and primary-source requirements; scoped concrete values also require value status. Never pool row evidence or credit an unchecked owner.',
+    'EA04': 'Save actual task checked_at and aggregate.assessed_at with checked_at <= assessed_at <= packet_date. Never refresh a carried-forward aggregate date to pass validation; defer incompatible proposals while preserving canonical history and actual research accounting.',
+}
+
+
+def accounting_evidence_errors(packet, baseline):
+    """Current check citations are distinct from retained canonical history.
+
+    Pure preflight, matching research_runs.row_errors and scoped.check_rows.
+    A blocked attempt may cite freshly inspected partial evidence or no evidence;
+    it cannot claim that retained source bodies were opened again.
+    """
+    run_key = 'scope_run' if 'scope_run' in packet else 'research_run'
+    run = packet[run_key]
+    state = {**baseline, **{(c['kind'], c['record']['id']): c['record'] for c in packet['changes']}}
+    sources = {i: r for (k, i), r in state.items() if k == 'source'}
+    observations = {i: r for (k, i), r in state.items() if k == 'observation'}
+    errors = []
+    for collection in MODEL_RESULTS:
+        for index, row in enumerate(run[collection]):
+            path = '/' + run_key + '/' + collection + '/' + str(index)
+            checked = row['checked_at']
+            if row['result'] == 'blocked' and not (
+                    checked and run['created_at'] <= checked <= packet['created_at'][:10]
+                    and row['rationale'].strip() and row['blocked_reason'] and row['remaining_gaps']):
+                errors.append('EA02: ' + path + ': blocked attempt requires actual date, rationale, reason and gaps')
+            for ident in row['evidence_ids']:
+                expanded = observations.get(ident, {}).get('source_ids', [ident])
+                if not expanded:
+                    errors.append('EA01: ' + path + '/evidence_ids: observation has no inspected source: ' + ident)
+                for source_id in expanded:
+                    source = sources.get(source_id)
+                    accessed = source.get('accessed_at') if source else None
+                    if not (source and checked and run['created_at'] <= checked <= packet['created_at'][:10]
+                            and isinstance(accessed, str) and checked <= accessed <= packet['created_at'][:10]):
+                        errors.append('EA01: ' + path + '/evidence_ids: uninspected current-check source: ' + source_id)
+    return errors
 
 
 def private_paths(value, reserved, path=''):
@@ -41,6 +81,13 @@ def contract_errors(packet, baseline):
     run = packet['scope_run' if scoped else 'research_run']
     outcomes = SCOPED_RESULTS if scoped else MODEL_RESULTS
     state = {**baseline, **{(c['kind'], c['record']['id']): c['record'] for c in packet['changes']}}
+    if scoped:
+        # Resolution identities are private scratch facts, never canonical proposals.
+        # Known fields may be sourced even while another identity boundary is unresolved.
+        state.update({('discovery', row['candidate_id']): {'identity': row['identity']}
+                      for row in packet.get('resolutions', [])
+                      if row['result'] in {'resolved', 'ambiguous', 'blocked'}
+                      and isinstance(row['identity'], dict)})
     errors = []
     for collection, allowed in outcomes.items():
         for index, row in enumerate(run[collection]):
@@ -61,10 +108,12 @@ def contract_errors(packet, baseline):
                 if value is None or not row['evidence_ids']:
                     errors.append(label + ': absent/null fact cannot be a sourced value')
     reserved = tuple(x for x in (packet['assignment_id'], run['id'], '.local/', '.agents/', 'AGENTS.md', '.receipt.json') if x)
-    for change in packet['changes']:
+    for change_index, change in enumerate(packet['changes']):
         record, kind = change['record'], change['kind']
         label = kind + ' ' + record['id'] + ': '
         if kind == 'task_assessment':
+            for error in assessment_chronology_errors(record, latest_date=packet['created_at'][:10]):
+                errors.append('EA04: /changes/' + str(change_index) + '/record' + error['path'] + ': ' + error['message'])
             if record.get('result') != 'assessed' and record.get('judgment_ids'):
                 errors.append(label + 'non-assessed task cannot endorse judgments')
             decision = next((r for r in run['task_decisions'] if
@@ -109,7 +158,8 @@ def packet_errors(packet, baseline):
     observations = {i: r for (k, i), r in state.items() if k == 'observation'}
     def expanded(ids):
         return {s for i in ids for s in observations.get(i, {}).get('source_ids', [i])}
-    errors = contract_errors(packet, baseline)
+    errors = contract_errors(packet, baseline) + accounting_evidence_errors(packet, baseline)
+    fields = group_field_checks(run['field_checks'])
     urls = {}
     for (kind, ident), row in baseline.items():
         if kind == 'source':
@@ -169,13 +219,14 @@ def packet_errors(packet, baseline):
         if kind in {'benchmark', 'behavior', 'release'}:
             if not expanded(change['evidence_ids']) <= expanded(evidence_ids(record)):
                 errors.append(label + 'claim envelope evidence missing from permanent record citations')
-        for path in changed_fields(old, record):
+        for path, value in changed_fields(old, record).items():
             if kind=='provider' and not old and path=='/model_ids':continue
             if path not in change['checked_paths']:
                 errors.append(label + 'changed field missing from checked_paths: ' + path)
-            rows = [r for r in run['field_checks'] if (r['entity_type'], r['entity_id'], r['path']) == (kind, ident, path)]
-            if not any(r['result'] not in {'blocked', 'not_checked'} and set(r['evidence_ids']) & set(change['evidence_ids']) for r in rows):
-                errors.append(label + 'changed field lacks linked investigation: ' + path)
+            positive = 'scope_run' in packet and value is not None and value not in ('unknown', 'disputed', '', [], {})
+            rows = qualifying_field_checks(change, path, fields, run, state, sources, observations, packet['created_at'][:10], positive=positive)
+            if not rows:
+                errors.append('EA03: ' + label + 'changed field lacks linked investigation with eligible current evidence: ' + path)
         for source in expanded(change['evidence_ids']):
             if source not in sources or not run['created_at'] <= sources[source]['accessed_at'] <= packet['created_at'][:10]:
                 errors.append(label + 'uninspected claim envelope source: ' + source)

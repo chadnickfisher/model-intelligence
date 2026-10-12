@@ -183,6 +183,160 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: Confidence concerns this bounded claim, not a capability score.
 
+### Vision.question_answering (low confidence)
+
+Answered the tested simple synthetic image questions accurately; natural-image and high-resolution transfer remain unestablished.
+
+Scope: direct / conditional. Bounded direct task evidence in the specified workflow; no transfer to untested tasks or configurations.
+
+Direct task IDs: vision.question_answering
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-2733964500e64515
+
+Conditions: 17 generated images, two trials each; chart, OCR, counting and diagram tasks; Codex subscription default effort.
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [GPT-6.1 Sol vision and Korean instruction tests](https://github.com/joonlab/gpt-6.1-sol-benchmark/blob/main/data/vision_ko/README.md)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: 34/34 trials passed all expected fields; small clean synthetic images omit natural-image clutter and distribution shift.; No matched independent replication established; confidence concerns this narrow conclusion, not the numerical score.
+
+### Language.instruction_following (low confidence)
+
+Followed the tested Korean output-format constraints; this supports constrained formatting rather than broad language fluency.
+
+Scope: direct / conditional. Bounded direct task evidence in the specified workflow; no transfer to untested tasks or configurations.
+
+Direct task IDs: language.instruction_following
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-289b144d4efd3f48
+
+Conditions: 16 Korean instruction cases repeated twice, 48 constraints, Codex subscription default effort.
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [GPT-6.1 Sol vision and Korean instruction tests](https://github.com/joonlab/gpt-6.1-sol-benchmark/blob/main/data/vision_ko/README.md)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: 32/32 cases passed the author's deterministic constraint checks; naturalness and conversational coherence were not graded.; No matched independent replication established; confidence concerns this narrow conclusion, not the numerical score.
+
+### Agent.tool_use (low confidence)
+
+Useful evidence for choosing and chaining a small set of deterministic mock tools; validate arguments and results in real workflows.
+
+Scope: direct / conditional. Bounded direct task evidence in the specified workflow; no transfer to untested tasks or configurations.
+
+Direct task IDs: agent.tool_use
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-2cec8c99696f4a0c
+
+Conditions: Codex subscription, September 30; effort left at environment default.; Five mock tools; 60 strict selection/argument cases and 16 agent cases with three to five calls, maximum 12 turns.
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [GPT-6.1 Sol tool-use and schema tests](https://github.com/joonlab/gpt-6.1-sol-benchmark/blob/main/data/tools/README.md)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: 60/60 strict tool cases and 16/16 agent cases passed. Synthetic ceiling tests do not establish recovery from real service failures.; No matched independent replication established; confidence concerns this narrow conclusion, not the numerical score.
+
+### Language.writing (low confidence)
+
+Useful candidate for drafting scripts against a supplied voice guide and research packet; human editorial review remains necessary.
+
+Scope: direct / conditional. Bounded direct task evidence in the specified workflow; no transfer to untested tasks or configurations.
+
+Direct task IDs: language.writing
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-3d20bc120f7b5508
+
+Conditions: High effort, Codex subscription, default sampling; ten YouTube-script briefs with five runs each.; About 13K prompt tokens of guide, brief and research packet; no external tools.
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [ToneBench GPT-6.1 Sol high](https://benchmark.towardsai.com/models/gpt-6-1-sol-high.html)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: October 11 run: WritingScore 81.1/100; three LLM judges plus the typed Jev 1.13 classifier. Same-family GPT-6.1 Sol medium creates judge dependence. Narrow single-creator voice, private rubric and references.; No matched independent replication established; confidence concerns this narrow conclusion, not the numerical score.
+
+### Coding.refactoring (low confidence)
+
+Can preserve measured legacy binary behavior during constrained rewrites at high, xhigh and max effort; retain the executable acceptance suite.
+
+Scope: direct / conditional. Bounded direct task evidence in the specified workflow; no transfer to untested tasks or configurations.
+
+Direct task IDs: coding.refactoring
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-60dbd819022599bd
+
+Conditions: Codex CLI 0.159.0 Pro; September 29–30; 23 tasks per effort, one run per task.; Frozen v3.18 benchmark grades 231 hidden behavior checks; preserve actual binary behavior, including departures from specification.
+
+Failure modes / limitations: Low and medium efforts missed some hidden behavior targets.
+
+Supporting sources: [GPT-6.1 Sol legacy binary rewrite study v3.18](https://vulcanbench.com/benchmarks/swe-v4-gpt61-sol-v318.html)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: High/xhigh/max each passed 23/23 tasks; medium 22/23 and low 20/23. Code-style LLM scores are not the correctness result.; No matched independent replication established; confidence concerns this narrow conclusion, not the numerical score.
+
+### Context.retrieval (low confidence)
+
+Synthetic needle retrieval remained accurate across the tested long contexts; production document retrieval still needs task-specific evaluation.
+
+Scope: direct / conditional. Bounded direct task evidence in the specified workflow; no transfer to untested tasks or configurations.
+
+Direct task IDs: context.retrieval
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-9d24ce6aabf3f9dd
+
+Conditions: Codex Pro, low effort, September 30; 16K to about 914K input tokens at five insertion depths.; Repeated filler contexts; largest cells sometimes have one run; source reports 98/98 successful needle cases.
+
+Failure modes / limitations: Not established in this pass
+
+Supporting sources: [GPT-6.1 Sol long-context tests](https://github.com/joonlab/gpt-6.1-sol-benchmark/blob/main/data/longctx/README.md)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: This is retrieval of inserted strings, not distractor-rich evidence synthesis; no immutable server checkpoint reported.; No matched independent replication established; confidence concerns this narrow conclusion, not the numerical score.
+
+### Knowledge.retrieval (low confidence)
+
+A plausible low-effort reranker for short multilingual candidate excerpts; check recall and language performance on the actual corpus.
+
+Scope: direct / conditional. Bounded direct task evidence in the specified workflow; no transfer to untested tasks or configurations.
+
+Direct task IDs: knowledge.retrieval
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-fa71065d8579ec80
+
+Conditions: 240 MIRACL queries, 40 each in six languages; 24 fixed candidates per query; candidate excerpts truncated to 1200 characters.; GPT-6.1 Sol low; 8192 maximum output tokens; the exact result row identifies Bedrock us-west-2. Specific Bedrock endpoint/API, inference profile and immutable serving revision are not established.
+
+Failure modes / limitations: Approximately 23% of evaluated first choices were not the target passage.
+
+Supporting sources: [Reranking with a classifier](https://stuga.dev/blog/reranking-with-a-classifier)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Published Hit@1 is 77%, bootstrap interval 72–82%; this does not measure generated-answer groundedness.; No matched independent replication established; confidence concerns this narrow conclusion, not the numerical score.
+
 ## Specifications
 
 | Field | Recorded value |

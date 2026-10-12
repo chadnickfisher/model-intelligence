@@ -92,16 +92,21 @@ additional_specifications:
     - src-c84f0489248c
     - src-49e8d0577a5e
 licensing:
-  name: null
-  commercial_use: null
-  redistribution: null
+  name: Proprietary hosted service under applicable OpenAI terms
+  commercial_use: API use in customer applications is permitted subject to the Services Agreement; ChatGPT
+    Voice Output has a separate non-commercial restriction.
+  redistribution: ChatGPT Voice Output cannot be redistributed as standalone audio; model-weight redistribution
+    rights are unestablished.
   fine_tuning: null
-  hosted_service: null
-  restrictions: []
+  hosted_service: API integration in customer applications is permitted; account resale or leasing is restricted.
+  restrictions:
+  - Applicable Services Agreement, Service Terms and Usage Policies; keep API service rights separate from
+    ChatGPT Voice Output.
   evidence_ids:
+  - src-53cd13bd410c
+  - src-fe82d34f0f54
+  - src-b8c6d5709eea
   - src-84d1a7712d6a
-  - src-c84f0489248c
-  - src-49e8d0577a5e
 local_inference:
   availability: unavailable
   hardware_notes: []
@@ -174,6 +179,32 @@ capabilities:
     research_batch_id: public-task-followup-2026-10-07
     method: Inspected original model/evaluator sources and performed the recorded public search; no inference
       or benchmarking calls.
+- id: judgment-01335c4c452e231e
+  scope: direct
+  task_ids:
+  - reasoning.general
+  related_task_ids: []
+  judgment: AA reports useful audio-puzzle accuracy for combined GPT-Live/backend systems; it does not isolate
+    frontend reasoning.
+  assessment: conditional
+  confidence: low
+  supporting_evidence_ids:
+  - src-4500b2c5fc9e
+  - src-a4490bba9515
+  contradictory_evidence_ids: []
+  conditions:
+  - 'Big Bench Audio: 1000 spoken questions across four reasoning categories; Astra-medium and Sol-low configurations.'
+  known_failure_modes:
+  - No immutable backend/frontend revisions or isolated frontend control established.
+  evidence_notes:
+  - Evidence is bounded to the named study; exact serving revisions and broader generalization remain unresolved.
+  scope_note: Direct task-specific finding; frontend and delegated work remain separate.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-gpt-live-evidence-2026-10-12
+    method: Inspected original public source bodies; no model execution.
 performance_characteristics: []
 access_ids:
 - access-75763dfe80bc3dfa

@@ -8144,3 +8144,75 @@ records:
   notes:
   - Service/harness observation; not evidence of a BF16 weights regression.
   - No verified fix or measured recovery in the inspected open issue.
+- schema_version: '1.0'
+  id: behavior-12f93619ce4d995a
+  model_ids:
+  - gpt-oss-20b
+  provider_id: null
+  product: NVIDIA NIM for LLMs
+  model_version: gpt-oss-20b
+  harness: NIM 1.12 vLLM backend
+  effort: null
+  claim: NVIDIA documents a Chat Completions tool-calling failure affecting 20B in NIM 1.12, marked fixed in
+    1.12.4.
+  change_type: harness_change
+  metrics: []
+  observed_at: '2026-10-12'
+  reported_at: null
+  effective_from: null
+  status: fix_published
+  fact_status: acknowledged
+  confidence: high
+  supporting_evidence_ids:
+  - src-d2eb309b3efe
+  contradictory_evidence_ids: []
+  official_acknowledgment: Official NVIDIA release notes identify the affected model and Harmony API issue.
+  fix:
+    published_at: null
+    version: 1.12.4
+    summary: Published tool-calling fix; no measured recovery supplied.
+    evidence_ids:
+    - src-d2eb309b3efe
+    measured_improvement: null
+  conditions:
+  - This shared 20B/120B bullet explicitly includes 20B; separate 120B-only bugs are excluded.
+  - A separate streaming tool-parser issue remains listed, with non-streaming as workaround.
+  notes:
+  - Release-note claim, not an independently reproduced fix.
+  - No publication date, weight digest, effort or quantitative recovery is established.
+- schema_version: '1.0'
+  id: behavior-39630189a28889dc
+  model_ids:
+  - gpt-live-1
+  provider_id: openai
+  product: Live sessions API
+  model_version: gpt-live-1 + gpt-5.6-luna
+  harness: Python 3.12; livekit-agents[openai] 1.8.3; livekit 1.1.18; Responses delegation
+  effort: null
+  claim: A LiveKit reporter observed an unspoken failed cancellation outcome after a caller interjection triggered
+    new delegation.
+  change_type: harness_change
+  metrics:
+  - kind: quality
+    measurement: 2/5 omitted outcome in standalone check; not a production rate.
+  observed_at: '2026-10-12'
+  reported_at: '2026-09-29'
+  effective_from: null
+  status: ongoing
+  fact_status: reported
+  confidence: low
+  supporting_evidence_ids:
+  - src-47014957066a
+  contradictory_evidence_ids: []
+  official_acknowledgment: null
+  fix:
+    published_at: null
+    version: null
+    summary: null
+    evidence_ids: []
+    measured_improvement: null
+  conditions:
+  - Mock cancellation tool; caller says Reschedule after backend result; 20-second observation window.
+  notes:
+  - Two of five interjection calls omitted the failure meaning; three and a silent control conveyed it.
+  - Issue open at inspection; plugin versus upstream cause unresolved.

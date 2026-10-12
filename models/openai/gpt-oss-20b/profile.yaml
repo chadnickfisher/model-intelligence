@@ -292,6 +292,108 @@ capabilities:
     research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate review_tests_frontend:tests-oss20; exact identity gates and original
       sources retained.
+- id: judgment-6aeb774447d36eea
+  scope: direct
+  task_ids:
+  - knowledge.rag
+  related_task_ids: []
+  judgment: Useful but fallible for BrowseComp-Plus answers with the documented external retrieval pipeline.
+  assessment: conditional
+  confidence: medium
+  supporting_evidence_ids:
+  - src-2639ef77aedc
+  - src-4b4e9bc6b8de
+  contradictory_evidence_ids: []
+  conditions:
+  - gpt-oss-20b high;vLLM0.15;131,072 context;40,000 output;100 iterations.
+  - BM25 passages plus monoT5-3B reranking at depth50; top5 snippets up to512 tokens.
+  known_failure_modes:
+  - Answer accuracy0.689; pipeline and retriever choices materially affect results.
+  evidence_notes:
+  - One study, not two independent streams; scoring and corpus are bounded and no native embedding capability
+    is inferred.
+  scope_note: Direct evidence only for the stated task and configuration.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-task-research
+    method: Task-rubric interpretation of original source bodies; configurations and limitations retained.
+- id: judgment-8f37f48cf9f3a398
+  scope: direct
+  task_ids:
+  - coding.refactoring
+  related_task_ids: []
+  judgment: Unreliable for the tested autonomous helper-function extraction:0/10 repetitions succeeded.
+  assessment: weak
+  confidence: low
+  supporting_evidence_ids:
+  - src-a7e870a0a373
+  - src-f6c31aaff5f3
+  contradictory_evidence_ids: []
+  conditions:
+  - OpenRouter via ellmer/vitals; extract repeated code into a helper and preserve unit tests.
+  - Underlying inference provider, precision, effort and run date are not disclosed in the inspected report.
+  known_failure_modes:
+  - Invalid tool arguments and abandonment.
+  evidence_notes:
+  - One narrow task repeated ten times; no transfer to all refactoring workloads.
+  scope_note: Direct evidence only for the stated task and configuration.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-task-research
+    method: Task-rubric interpretation of original source bodies; configurations and limitations retained.
+- id: judgment-acf44d745addcc1e
+  scope: direct
+  task_ids:
+  - language.translation
+  related_task_ids: []
+  judgment: Short EN-to-European-Spanish drafts were usable but needed idiom and completion checks.
+  assessment: conditional
+  confidence: low
+  supporting_evidence_ids:
+  - src-de7b8e8fd2c6
+  contradictory_evidence_ids: []
+  conditions:
+  - OpenRouter openai/gpt-oss-20b:free; temperature0.2,300-token cap;12 segments across six domains.
+  known_failure_modes:
+  - Literal calques and one truncated creative segment.
+  evidence_notes:
+  - One language direction, small corpus, no blinded replicated evaluation; cap and provider can affect truncation.
+  scope_note: Direct evidence only for the stated task and configuration.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-task-research
+    method: Task-rubric interpretation of original source bodies; configurations and limitations retained.
+- id: judgment-d2ecd9854feca2c4
+  scope: direct
+  task_ids:
+  - research.synthesis
+  related_task_ids: []
+  judgment: Theme generation was plausible, but source attribution failed in every reported qualitative-synthesis
+    run.
+  assessment: weak
+  confidence: low
+  supporting_evidence_ids:
+  - src-6051cb2ee352
+  contradictory_evidence_ids: []
+  conditions:
+  - 13 interview transcripts, approximately52K-token prompts,30 local MacBookPro runs.
+  known_failure_modes:
+  - Misquotes and misattributions in100% of runs; duplicated attribution90%, irrelevant support80%.
+  evidence_notes:
+  - Run-level rates from one practitioner; runtime, precision, effort and independent verification absent.
+  scope_note: Direct evidence only for the stated task and configuration.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-task-research
+    method: Task-rubric interpretation of original source bodies; configurations and limitations retained.
 performance_characteristics: []
 access_ids:
 - access-36f2b86695893834

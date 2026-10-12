@@ -26778,149 +26778,112 @@ records:
   remaining_gaps:
   - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
   id: task-assessment-60ca9b92cc850ecb
-- model_id: gpt-6-astra
-  task_id: agent.tool_use
-  applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Investigated Select and invoke external tools with valid arguments, then use their results to
-    complete a task. No exact-model direct task conclusion was established. Scientific vendor evidence stays
-    low confidence; coding results preserve effort, harness and provider identity.
-  judgment_ids: []
-  confidence_rationale: No ability or confidence score is inferred from missing task evidence.
-  evidence_ids:
-  - src-67b4ce9b4e6a
-  - src-49e8d0577a5e
-  - src-ea74e2fffbc5
-  - src-ad78a04807f9
+- applicability: applicable
+  checked_at: '2026-10-12'
   conditions:
-  - Interface applicability does not establish task quality.
-  remaining_gaps:
-  - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
+  - Codex production BLS plugin, 108 questions; not a generic standalone tool loop.
+  confidence_rationale: 'Low confidence in broad transfer: the exact-task evidence is limited or configuration-specific.'
+  evidence_ids:
+  - src-d526f74ef3e9
   id: task-assessment-6da18085ae1fcd8d
-- model_id: gpt-6-astra
-  task_id: audio.conversation
+  judgment_ids:
+  - judgment-73932600c90add2f
+  model_id: gpt-6-astra
+  rationale: A bounded BLS plugin evaluation supports the new conditional tool-use judgment; harness instructions
+    are material.
+  remaining_gaps:
+  - Exact effort/checkpoint and independent replication.
+  result: assessed
+  task_id: agent.tool_use
+- aggregate:
+    access_ids: []
+    assessed_at: '2026-10-12'
+    confidence_rationale: High confidence in explicit exact-model native input/output restrictions; this is
+      not a judgment of tool-mediated systems.
+    conflict_rationale: null
+    contradictory_evidence_ids: []
+    evidence_confidence: high
+    policy_version: '1'
+    rationale: Native audio input and output are unsupported, so real-time spoken conversation is outside the
+      native contract.
+    suitability: not_supported
+    supporting_evidence_ids:
+    - src-67b4ce9b4e6a
+    watch_outs: []
   applicability: excluded
-  result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Sustain interactive
-    spoken dialogue through listening, responding, timing, and management of voice turns.
-  judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image and outputs text, which positively mismatch this task requirement. The boundary
-    is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  checked_at: '2026-10-12'
+  conditions:
+  - Native model interface only; external tools and wrappers require separate assessment.
+  confidence_rationale: High confidence in explicit exact-model native input/output restrictions; this is not
+    a judgment of tool-mediated systems.
   evidence_ids:
   - src-67b4ce9b4e6a
-  - src-49e8d0577a5e
-  - src-ea74e2fffbc5
-  conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
-  remaining_gaps: []
   id: task-assessment-61976979d42ae605
-  aggregate:
-    policy_version: '1'
-    suitability: not_supported
+  judgment_ids: []
+  model_id: gpt-6-astra
+  rationale: Native audio input and output are unsupported, so real-time spoken conversation is outside the
+    native contract.
+  remaining_gaps: []
+  result: excluded
+  task_id: audio.conversation
+- aggregate:
+    access_ids: []
+    assessed_at: '2026-10-12'
+    confidence_rationale: High confidence in explicit exact-model native input/output restrictions; this is
+      not a judgment of tool-mediated systems.
+    conflict_rationale: null
+    contradictory_evidence_ids: []
     evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Sustain interactive
-      spoken dialogue through listening, responding, timing, and management of voice turns.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    policy_version: '1'
+    rationale: Native output is text, not synthesized speech.
+    suitability: not_supported
     supporting_evidence_ids:
     - src-67b4ce9b4e6a
-    - src-49e8d0577a5e
-    - src-ea74e2fffbc5
-    contradictory_evidence_ids: []
-    conflict_rationale: null
-    watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
-    access_ids: []
-- model_id: gpt-6-astra
-  task_id: audio.speech_generation
+    watch_outs: []
   applicability: excluded
-  result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Produce intelligible
-    spoken audio with requested verbal content, voice characteristics, or delivery.
-  judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image and outputs text, which positively mismatch this task requirement. The boundary
-    is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  checked_at: '2026-10-12'
+  conditions:
+  - Native model interface only; external tools and wrappers require separate assessment.
+  confidence_rationale: High confidence in explicit exact-model native input/output restrictions; this is not
+    a judgment of tool-mediated systems.
   evidence_ids:
   - src-67b4ce9b4e6a
-  - src-49e8d0577a5e
-  - src-ea74e2fffbc5
-  conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
-  remaining_gaps: []
   id: task-assessment-c3963c8ad1112e9f
-  aggregate:
-    policy_version: '1'
-    suitability: not_supported
+  judgment_ids: []
+  model_id: gpt-6-astra
+  rationale: Native output is text, not synthesized speech.
+  remaining_gaps: []
+  result: excluded
+  task_id: audio.speech_generation
+- aggregate:
+    access_ids: []
+    assessed_at: '2026-10-12'
+    confidence_rationale: High confidence in explicit exact-model native input/output restrictions; this is
+      not a judgment of tool-mediated systems.
+    conflict_rationale: null
+    contradictory_evidence_ids: []
     evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Produce intelligible
-      spoken audio with requested verbal content, voice characteristics, or delivery.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    policy_version: '1'
+    rationale: Native inputs are text and image, not audio.
+    suitability: not_supported
     supporting_evidence_ids:
     - src-67b4ce9b4e6a
-    - src-49e8d0577a5e
-    - src-ea74e2fffbc5
-    contradictory_evidence_ids: []
-    conflict_rationale: null
-    watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
-    access_ids: []
-- model_id: gpt-6-astra
-  task_id: audio.understanding
+    watch_outs: []
   applicability: excluded
-  result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Interpret supplied
-    audio to recover speech, events, speaker information, or other audible meaning.
-  judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image and outputs text, which positively mismatch this task requirement. The boundary
-    is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  checked_at: '2026-10-12'
+  conditions:
+  - Native model interface only; external tools and wrappers require separate assessment.
+  confidence_rationale: High confidence in explicit exact-model native input/output restrictions; this is not
+    a judgment of tool-mediated systems.
   evidence_ids:
   - src-67b4ce9b4e6a
-  - src-49e8d0577a5e
-  - src-ea74e2fffbc5
-  conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
-  remaining_gaps: []
   id: task-assessment-7fdd81fa371aebe0
-  aggregate:
-    policy_version: '1'
-    suitability: not_supported
-    evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Interpret
-      supplied audio to recover speech, events, speaker information, or other audible meaning.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
-    supporting_evidence_ids:
-    - src-67b4ce9b4e6a
-    - src-49e8d0577a5e
-    - src-ea74e2fffbc5
-    contradictory_evidence_ids: []
-    conflict_rationale: null
-    watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
-    access_ids: []
+  judgment_ids: []
+  model_id: gpt-6-astra
+  rationale: Native inputs are text and image, not audio.
+  remaining_gaps: []
+  result: excluded
+  task_id: audio.understanding
 - model_id: gpt-6-astra
   task_id: coding.architecture
   applicability: applicable
@@ -27265,88 +27228,64 @@ records:
   remaining_gaps:
   - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
   id: task-assessment-f1007143a9d6b14c
-- model_id: gpt-6-astra
-  task_id: image.editing
+- aggregate:
+    access_ids: []
+    assessed_at: '2026-10-12'
+    confidence_rationale: High confidence in explicit exact-model native input/output restrictions; this is
+      not a judgment of tool-mediated systems.
+    conflict_rationale: null
+    contradictory_evidence_ids: []
+    evidence_confidence: high
+    policy_version: '1'
+    rationale: The model produces text, not edited image pixels; an external image tool is a separate model.
+    suitability: not_supported
+    supporting_evidence_ids:
+    - src-67b4ce9b4e6a
+    watch_outs: []
   applicability: excluded
-  result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Modify an existing
-    still image while satisfying requested changes and preserving specified source content.
-  judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image and outputs text, which positively mismatch this task requirement. The boundary
-    is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  checked_at: '2026-10-12'
+  conditions:
+  - Native model interface only; external tools and wrappers require separate assessment.
+  confidence_rationale: High confidence in explicit exact-model native input/output restrictions; this is not
+    a judgment of tool-mediated systems.
   evidence_ids:
   - src-67b4ce9b4e6a
-  - src-49e8d0577a5e
-  - src-ea74e2fffbc5
-  conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
-  remaining_gaps: []
   id: task-assessment-127918d2d054415d
-  aggregate:
-    policy_version: '1'
-    suitability: not_supported
+  judgment_ids: []
+  model_id: gpt-6-astra
+  rationale: The model produces text, not edited image pixels; an external image tool is a separate model.
+  remaining_gaps: []
+  result: excluded
+  task_id: image.editing
+- aggregate:
+    access_ids: []
+    assessed_at: '2026-10-12'
+    confidence_rationale: High confidence in explicit exact-model native input/output restrictions; this is
+      not a judgment of tool-mediated systems.
+    conflict_rationale: null
+    contradictory_evidence_ids: []
     evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Modify an
-      existing still image while satisfying requested changes and preserving specified source content.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    policy_version: '1'
+    rationale: Native text output cannot itself generate raster images; tool integration is separate.
+    suitability: not_supported
     supporting_evidence_ids:
     - src-67b4ce9b4e6a
-    - src-49e8d0577a5e
-    - src-ea74e2fffbc5
-    contradictory_evidence_ids: []
-    conflict_rationale: null
-    watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
-    access_ids: []
-- model_id: gpt-6-astra
-  task_id: image.generation
+    watch_outs: []
   applicability: excluded
-  result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Create a still
-    image from a requested description or reference-based composition brief.
-  judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image and outputs text, which positively mismatch this task requirement. The boundary
-    is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  checked_at: '2026-10-12'
+  conditions:
+  - Native model interface only; external tools and wrappers require separate assessment.
+  confidence_rationale: High confidence in explicit exact-model native input/output restrictions; this is not
+    a judgment of tool-mediated systems.
   evidence_ids:
   - src-67b4ce9b4e6a
-  - src-49e8d0577a5e
-  - src-ea74e2fffbc5
-  conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
-  remaining_gaps: []
   id: task-assessment-06282e7f06bf43d4
-  aggregate:
-    policy_version: '1'
-    suitability: not_supported
-    evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Create a still
-      image from a requested description or reference-based composition brief.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
-    supporting_evidence_ids:
-    - src-67b4ce9b4e6a
-    - src-49e8d0577a5e
-    - src-ea74e2fffbc5
-    contradictory_evidence_ids: []
-    conflict_rationale: null
-    watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
-    access_ids: []
+  judgment_ids: []
+  model_id: gpt-6-astra
+  rationale: Native text output cannot itself generate raster images; tool integration is separate.
+  remaining_gaps: []
+  result: excluded
+  task_id: image.generation
 - model_id: gpt-6-astra
   task_id: knowledge.classification
   applicability: applicable
@@ -27527,47 +27466,35 @@ records:
   remaining_gaps:
   - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
   id: task-assessment-5523539031b38221
-- model_id: gpt-6-astra
-  task_id: music.generation
-  applicability: excluded
-  result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Create musical
-    audio with requested melodic, rhythmic, structural, instrumental, or vocal characteristics.
-  judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image and outputs text, which positively mismatch this task requirement. The boundary
-    is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
-  evidence_ids:
-  - src-67b4ce9b4e6a
-  - src-49e8d0577a5e
-  - src-ea74e2fffbc5
-  conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
-  remaining_gaps: []
-  id: task-assessment-0266574d3effe467
-  aggregate:
-    policy_version: '1'
-    suitability: not_supported
+- aggregate:
+    access_ids: []
+    assessed_at: '2026-10-12'
+    confidence_rationale: High confidence in explicit exact-model native input/output restrictions; this is
+      not a judgment of tool-mediated systems.
+    conflict_rationale: null
+    contradictory_evidence_ids: []
     evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Create musical
-      audio with requested melodic, rhythmic, structural, instrumental, or vocal characteristics.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    policy_version: '1'
+    rationale: No native musical-audio output is documented.
+    suitability: not_supported
     supporting_evidence_ids:
     - src-67b4ce9b4e6a
-    - src-49e8d0577a5e
-    - src-ea74e2fffbc5
-    contradictory_evidence_ids: []
-    conflict_rationale: null
-    watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
-    access_ids: []
+    watch_outs: []
+  applicability: excluded
+  checked_at: '2026-10-12'
+  conditions:
+  - Native model interface only; external tools and wrappers require separate assessment.
+  confidence_rationale: High confidence in explicit exact-model native input/output restrictions; this is not
+    a judgment of tool-mediated systems.
+  evidence_ids:
+  - src-67b4ce9b4e6a
+  id: task-assessment-0266574d3effe467
+  judgment_ids: []
+  model_id: gpt-6-astra
+  rationale: No native musical-audio output is documented.
+  remaining_gaps: []
+  result: excluded
+  task_id: music.generation
 - model_id: gpt-6-astra
   task_id: reasoning.general
   applicability: applicable
@@ -27689,88 +27616,64 @@ records:
   remaining_gaps:
   - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
   id: task-assessment-c2d4aa5001495a1a
-- model_id: gpt-6-astra
-  task_id: video.editing
+- aggregate:
+    access_ids: []
+    assessed_at: '2026-10-12'
+    confidence_rationale: High confidence in explicit exact-model native input/output restrictions; this is
+      not a judgment of tool-mediated systems.
+    conflict_rationale: null
+    contradictory_evidence_ids: []
+    evidence_confidence: high
+    policy_version: '1'
+    rationale: Neither native video input nor rendered video output is documented.
+    suitability: not_supported
+    supporting_evidence_ids:
+    - src-67b4ce9b4e6a
+    watch_outs: []
   applicability: excluded
-  result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Modify an existing
-    video while preserving specified source content and consistency across time.
-  judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image and outputs text, which positively mismatch this task requirement. The boundary
-    is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  checked_at: '2026-10-12'
+  conditions:
+  - Native model interface only; external tools and wrappers require separate assessment.
+  confidence_rationale: High confidence in explicit exact-model native input/output restrictions; this is not
+    a judgment of tool-mediated systems.
   evidence_ids:
   - src-67b4ce9b4e6a
-  - src-49e8d0577a5e
-  - src-ea74e2fffbc5
-  conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
-  remaining_gaps: []
   id: task-assessment-cab195dc125ace7b
-  aggregate:
-    policy_version: '1'
-    suitability: not_supported
+  judgment_ids: []
+  model_id: gpt-6-astra
+  rationale: Neither native video input nor rendered video output is documented.
+  remaining_gaps: []
+  result: excluded
+  task_id: video.editing
+- aggregate:
+    access_ids: []
+    assessed_at: '2026-10-12'
+    confidence_rationale: High confidence in explicit exact-model native input/output restrictions; this is
+      not a judgment of tool-mediated systems.
+    conflict_rationale: null
+    contradictory_evidence_ids: []
     evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Modify an
-      existing video while preserving specified source content and consistency across time.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    policy_version: '1'
+    rationale: The native output contract does not generate video.
+    suitability: not_supported
     supporting_evidence_ids:
     - src-67b4ce9b4e6a
-    - src-49e8d0577a5e
-    - src-ea74e2fffbc5
-    contradictory_evidence_ids: []
-    conflict_rationale: null
-    watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
-    access_ids: []
-- model_id: gpt-6-astra
-  task_id: video.generation
+    watch_outs: []
   applicability: excluded
-  result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Create a video
-    sequence from a prompt or conditioning inputs with requested motion and temporal content.
-  judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image and outputs text, which positively mismatch this task requirement. The boundary
-    is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  checked_at: '2026-10-12'
+  conditions:
+  - Native model interface only; external tools and wrappers require separate assessment.
+  confidence_rationale: High confidence in explicit exact-model native input/output restrictions; this is not
+    a judgment of tool-mediated systems.
   evidence_ids:
   - src-67b4ce9b4e6a
-  - src-49e8d0577a5e
-  - src-ea74e2fffbc5
-  conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
-  remaining_gaps: []
   id: task-assessment-3a6bd507e3eb9a99
-  aggregate:
-    policy_version: '1'
-    suitability: not_supported
-    evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Create a video
-      sequence from a prompt or conditioning inputs with requested motion and temporal content.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
-    supporting_evidence_ids:
-    - src-67b4ce9b4e6a
-    - src-49e8d0577a5e
-    - src-ea74e2fffbc5
-    contradictory_evidence_ids: []
-    conflict_rationale: null
-    watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
-    access_ids: []
+  judgment_ids: []
+  model_id: gpt-6-astra
+  rationale: The native output contract does not generate video.
+  remaining_gaps: []
+  result: excluded
+  task_id: video.generation
 - model_id: gpt-6-astra
   task_id: vision.grounding
   applicability: applicable
@@ -27853,27 +27756,41 @@ records:
   remaining_gaps:
   - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
   id: task-assessment-9875af31dd7c48a6
-- model_id: gpt-6-luna
-  task_id: agent.tool_use
-  applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Investigated Select and invoke external tools with valid arguments, then use their results to
-    complete a task. No exact-model direct task conclusion was established. Reported reasoning configuration
-    and official image encoding repair are distinct changes; exact-edit results do not transfer to broad repository
-    work.
-  judgment_ids: []
-  confidence_rationale: No ability or confidence score is inferred from missing task evidence.
-  evidence_ids:
-  - src-f00960a11928
-  - src-49e8d0577a5e
-  - src-a28910d24d02
-  - src-7224ceac93af
+- applicability: applicable
+  checked_at: '2026-10-12'
   conditions:
-  - Interface applicability does not establish task quality.
-  remaining_gaps:
-  - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
+  - 108 held-out single-turn BLS questions; Codex 0.159.2; promptfoo 0.123.1; GPT-5.6 Sol rubric judge.
+  - Reported Codex pass rate 0.88 versus 0.74 in a standalone tool loop; effort not established.
+  confidence_rationale: 'Low confidence: one bounded study, limited setup generalization and no independently
+    matched replication.'
+  evidence_ids:
+  - src-d526f74ef3e9
   id: task-assessment-cd64972a0685add0
+  judgment_ids:
+  - judgment-8638470eda0ea860
+  model_id: gpt-6-luna
+  rationale: Can complete many catalog-grounded BLS questions under Codex, but harness changes materially affect
+    completion.
+  remaining_gaps:
+  - Independent replication in the same task and operating setup remains missing.
+  result: assessed
+  task_id: agent.tool_use
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: low
+    assessed_at: '2026-10-12'
+    rationale: Can complete many catalog-grounded BLS questions under Codex, but harness changes materially
+      affect completion.
+    confidence_rationale: 'Low confidence: one bounded study, limited setup generalization and no independently
+      matched replication.'
+    supporting_evidence_ids:
+    - src-d526f74ef3e9
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Independent replication in the same task and operating setup remains missing.
+    access_ids: []
 - model_id: gpt-6-luna
   task_id: audio.conversation
   applicability: excluded
@@ -28188,70 +28105,41 @@ records:
   remaining_gaps:
   - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
   id: task-assessment-8c4c7c83ebd6335a
-- model_id: gpt-6-luna
-  task_id: coding.scoped_edit
-  applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: The exact-edit benchmark verifies fully specified mechanical byte changes, but explicitly does
-    not assess compilation or behavior. The scoped-edit rubric requires correctness of the requested behavior
-    and preservation of relevant behavior; these core requirements remain unestablished. Retain exact-edit
-    evidence without converting it into semantic implementation suitability.
-  judgment_ids:
-  - judgment-4793164eb12deab7
-  confidence_rationale: 'No aggregate confidence badge: The exact-edit benchmark verifies fully specified mechanical
-    byte changes, but explicitly does not assess compilation or behavior. The scoped-edit rubric requires correctness
-    of the requested behavior and preservation of relevant behavior; these core requirements remain unestablished.
-    Retain exact-edit evidence without converting it into semantic implementation suitability.'
-  evidence_ids:
-  - src-a28910d24d02
-  - src-7224ceac93af
-  - src-0c5ee375aae3
-  conditions:
-  - 'Provider route: opencode-go; 1 contributing harness families; detailed effort mix not extracted.'
-  - API/checkpoint identity follows source's exact named model; underlying quantization not supplied.
-  - 226 tasks; shell/native editing tools allowed.
-  - Score combines 75% initial exactness and 25% final exactness after permitted recovery.
-  - Record describes a model route with mixed harnesses; do not interpret as pass@1 or a causal model ranking.
-  - Only the source-described task subsets and setups are assessed; no equivalent provider route is assumed.
-  remaining_gaps:
-  - Some initial or final file trees failed exact comparison; this aggregate does not isolate the failure mechanism.
-  - The exact-edit benchmark verifies fully specified mechanical byte changes, but explicitly does not assess
-    compilation or behavior. The scoped-edit rubric requires correctness of the requested behavior and preservation
-    of relevant behavior; these core requirements remain unestablished. Retain exact-edit evidence without
-    converting it into semantic implementation suitability.
-  id: task-assessment-383832edd7a208be
-  aggregate:
+- aggregate:
     policy_version: '1'
-    suitability: unknown
-    evidence_confidence: null
-    assessed_at: '2026-10-08'
-    rationale: The exact-edit benchmark verifies fully specified mechanical byte changes, but explicitly does
-      not assess compilation or behavior. The scoped-edit rubric requires correctness of the requested behavior
-      and preservation of relevant behavior; these core requirements remain unestablished. Retain exact-edit
-      evidence without converting it into semantic implementation suitability.
-    confidence_rationale: 'No aggregate confidence badge: The exact-edit benchmark verifies fully specified
-      mechanical byte changes, but explicitly does not assess compilation or behavior. The scoped-edit rubric
-      requires correctness of the requested behavior and preservation of relevant behavior; these core requirements
-      remain unestablished. Retain exact-edit evidence without converting it into semantic implementation suitability.'
+    suitability: medium
+    evidence_confidence: low
+    assessed_at: '2026-10-12'
+    rationale: Useful for bounded local changes with explicit acceptance criteria; review integration boundaries
+      before accepting.
+    confidence_rationale: 'Low confidence: one bounded study, limited setup generalization and no independently
+      matched replication.'
     supporting_evidence_ids:
-    - src-a28910d24d02
-    - src-7224ceac93af
-    - src-0c5ee375aae3
+    - src-39879b962b79
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Some initial or final file trees failed exact comparison; this aggregate does not isolate the failure
-      mechanism.
-    - Performance is not established for this exact task rubric.
-    - Model-route aggregates combine different harness configurations. Mechanical bytes-only tasks; not semantic
-      correctness. Data inspected on access date; exact server checkpoint/quantization may be undisclosed.
-    - First and final exactness differ; verifier feedback is adaptive, not independent retry. Methodology and
-      dataset views can change.
-    - 226 deterministic mechanical edits; no diagnosis or program understanding required.
-    - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
-      comparability.
+    - Independent replication in the same task and operating setup remains missing.
     access_ids: []
+  applicability: applicable
+  checked_at: '2026-10-12'
+  conditions:
+  - Luna high; ten C++/Python/TypeScript engineering tasks in one roughly 60K-line codebase; iterative implement/review/fix
+    workflow.
+  confidence_rationale: 'Low confidence: one bounded study, limited setup generalization and no independently
+    matched replication.'
+  evidence_ids:
+  - src-39879b962b79
+  id: task-assessment-383832edd7a208be
+  judgment_ids:
+  - judgment-886c1c801e974c2a
+  model_id: gpt-6-luna
+  rationale: Useful for bounded local changes with explicit acceptance criteria; review integration boundaries
+    before accepting.
+  remaining_gaps:
+  - Independent replication in the same task and operating setup remains missing.
+  result: assessed
+  task_id: coding.scoped_edit
 - model_id: gpt-6-luna
   task_id: coding.tests
   applicability: applicable
@@ -28392,26 +28280,41 @@ records:
     - Applies to the documented native interface. External tools, wrappers and downstream systems require a
       separate assessment.
     access_ids: []
-- model_id: gpt-6-luna
-  task_id: knowledge.classification
-  applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Investigated Assign supplied items to defined categories using their content and the stated category
-    criteria. No exact-model direct task conclusion was established. Reported reasoning configuration and official
-    image encoding repair are distinct changes; exact-edit results do not transfer to broad repository work.
-  judgment_ids: []
-  confidence_rationale: No ability or confidence score is inferred from missing task evidence.
-  evidence_ids:
-  - src-f00960a11928
-  - src-49e8d0577a5e
-  - src-a28910d24d02
-  - src-7224ceac93af
+- applicability: applicable
+  checked_at: '2026-10-12'
   conditions:
-  - Interface applicability does not establish task quality.
-  remaining_gaps:
-  - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
+  - GPT-6 Luna; one pass, temperature zero, reasoning off; published prompts.
+  - GTD attack-type classification over 37,709 incidents; codebook accuracy 0.743 and macro F1 0.634.
+  confidence_rationale: 'Low confidence: one bounded study, limited setup generalization and no independently
+    matched replication.'
+  evidence_ids:
+  - src-016916d2e9be
   id: task-assessment-e80939ac819fcf71
+  judgment_ids:
+  - judgment-05e781283416667e
+  model_id: gpt-6-luna
+  rationale: Useful for explicit political-text categories with a supplied codebook, but ambiguous and rare
+    labels require review.
+  remaining_gaps:
+  - Independent replication in the same task and operating setup remains missing.
+  result: assessed
+  task_id: knowledge.classification
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: low
+    assessed_at: '2026-10-12'
+    rationale: Useful for explicit political-text categories with a supplied codebook, but ambiguous and rare
+      labels require review.
+    confidence_rationale: 'Low confidence: one bounded study, limited setup generalization and no independently
+      matched replication.'
+    supporting_evidence_ids:
+    - src-016916d2e9be
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Independent replication in the same task and operating setup remains missing.
+    access_ids: []
 - model_id: gpt-6-luna
   task_id: knowledge.extraction
   applicability: applicable
@@ -28881,132 +28784,121 @@ records:
   id: task-assessment-147560330bd1b95a
 - model_id: gpt-image-2-5-flare
   task_id: agent.tool_use
-  applicability: unknown
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Investigated Select and invoke external tools with valid arguments, then use their results to
-    complete a task. No exact-model direct task conclusion was established. Image generation and variant-specific
-    controls; prompt echo and wrapper-added controls do not establish native capability or a weights change.
+  applicability: excluded
+  result: excluded
+  checked_at: '2026-10-12'
+  rationale: The exact-model page explicitly marks function calling unsupported; Flare is an image-generation
+    tool target, not the mainline model selecting and invoking tools.
+  confidence_rationale: High confidence in the exact native-interface boundary, not a task-performance rating.
   judgment_ids: []
-  confidence_rationale: No ability or confidence score is inferred from missing task evidence.
   evidence_ids:
   - src-cee7a5257e77
-  - src-467bad59597d
   conditions:
-  - Interface applicability does not establish task quality.
-  remaining_gaps:
-  - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
+  - Documented native Flare interface; external orchestration and other models are separate.
+  remaining_gaps: []
   id: task-assessment-0a925d57517809fe
+  aggregate:
+    policy_version: '1'
+    suitability: not_supported
+    evidence_confidence: high
+    assessed_at: '2026-10-12'
+    rationale: The exact-model page explicitly marks function calling unsupported; Flare is an image-generation
+      tool target, not the mainline model selecting and invoking tools.
+    confidence_rationale: High confidence in the exact native-interface boundary, not a task-performance rating.
+    supporting_evidence_ids:
+    - src-cee7a5257e77
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Applies only to the native documented interface; a composite workflow requires its own assessment.
+    access_ids: []
 - model_id: gpt-image-2-5-flare
   task_id: audio.conversation
   applicability: excluded
   result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Sustain interactive
-    spoken dialogue through listening, responding, timing, and management of voice turns.
+  checked_at: '2026-10-12'
+  rationale: Interactive spoken turns require audio input and output; the exact-model page explicitly marks
+    audio unsupported.
+  confidence_rationale: High confidence in the exact native-interface boundary, not a task-performance rating.
   judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image and outputs image, which positively mismatch this task requirement. The boundary
-    is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
   evidence_ids:
   - src-cee7a5257e77
   conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
+  - Documented native Flare interface; external orchestration and other models are separate.
   remaining_gaps: []
   id: task-assessment-a17c13bb794e3fbd
   aggregate:
     policy_version: '1'
     suitability: not_supported
     evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Sustain interactive
-      spoken dialogue through listening, responding, timing, and management of voice turns.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image and outputs image, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    assessed_at: '2026-10-12'
+    rationale: Interactive spoken turns require audio input and output; the exact-model page explicitly marks
+      audio unsupported.
+    confidence_rationale: High confidence in the exact native-interface boundary, not a task-performance rating.
     supporting_evidence_ids:
     - src-cee7a5257e77
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
+    - Applies only to the native documented interface; a composite workflow requires its own assessment.
     access_ids: []
 - model_id: gpt-image-2-5-flare
   task_id: audio.speech_generation
   applicability: excluded
   result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Produce intelligible
-    spoken audio with requested verbal content, voice characteristics, or delivery.
+  checked_at: '2026-10-12'
+  rationale: Spoken waveform output is required; Flare emits images and audio is explicitly unsupported.
+  confidence_rationale: High confidence in the exact native-interface boundary, not a task-performance rating.
   judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image and outputs image, which positively mismatch this task requirement. The boundary
-    is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
   evidence_ids:
   - src-cee7a5257e77
   conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
+  - Documented native Flare interface; external orchestration and other models are separate.
   remaining_gaps: []
   id: task-assessment-fb9d57aebb93bc3f
   aggregate:
     policy_version: '1'
     suitability: not_supported
     evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Produce intelligible
-      spoken audio with requested verbal content, voice characteristics, or delivery.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image and outputs image, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    assessed_at: '2026-10-12'
+    rationale: Spoken waveform output is required; Flare emits images and audio is explicitly unsupported.
+    confidence_rationale: High confidence in the exact native-interface boundary, not a task-performance rating.
     supporting_evidence_ids:
     - src-cee7a5257e77
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
+    - Applies only to the native documented interface; a composite workflow requires its own assessment.
     access_ids: []
 - model_id: gpt-image-2-5-flare
   task_id: audio.understanding
   applicability: excluded
   result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Interpret supplied
-    audio to recover speech, events, speaker information, or other audible meaning.
+  checked_at: '2026-10-12'
+  rationale: Recovering spoken or acoustic meaning requires audio input, which the official native interface
+    does not support.
+  confidence_rationale: High confidence in the exact native-interface boundary, not a task-performance rating.
   judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image and outputs image, which positively mismatch this task requirement. The boundary
-    is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
   evidence_ids:
   - src-cee7a5257e77
   conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
+  - Documented native Flare interface; external orchestration and other models are separate.
   remaining_gaps: []
   id: task-assessment-cb2d8929daa2ead5
   aggregate:
     policy_version: '1'
     suitability: not_supported
     evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Interpret
-      supplied audio to recover speech, events, speaker information, or other audible meaning.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image and outputs image, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    assessed_at: '2026-10-12'
+    rationale: Recovering spoken or acoustic meaning requires audio input, which the official native interface
+      does not support.
+    confidence_rationale: High confidence in the exact native-interface boundary, not a task-performance rating.
     supporting_evidence_ids:
     - src-cee7a5257e77
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
+    - Applies only to the native documented interface; a composite workflow requires its own assessment.
     access_ids: []
 - model_id: gpt-image-2-5-flare
   task_id: coding.architecture
@@ -29241,42 +29133,46 @@ records:
 - model_id: gpt-image-2-5-flare
   task_id: image.generation
   applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Latency and high-volume product positioning do not establish prompt fidelity or image quality
-    for this exact generation task.
+  result: assessed
+  checked_at: '2026-10-12'
+  rationale: Useful still-image generation is demonstrated on repeated prompt sets, but spatial, exact-text
+    and composition constraints need material review and correction.
+  confidence_rationale: 'Medium confidence for this bounded task synthesis: an independent repeated manual-rubric
+    study and a separately attributable qualitative repeated-image study agree on useful outputs with constraint
+    failures; their prompts, routes and quality settings are not interchangeable.'
   judgment_ids:
-  - judgment-399c0b738f152d10
-  confidence_rationale: 'No aggregate confidence badge: Latency and high-volume product positioning do not
-    establish prompt fidelity or image quality for this exact generation task.'
+  - judgment-298dd9fed2153242
+  - judgment-022e710d0ee58887
   evidence_ids:
   - src-cee7a5257e77
-  - src-259c8fd88c0f
-  - src-285d61f371cf
+  - src-f3b4f2f619e9
+  - src-60c9ba3f256f
   conditions:
-  - Quality, resolution, reference images and retries change consumption.
-  - Only the source-described task subsets and setups are assessed; no equivalent provider route is assumed.
+  - Prompt-led still images similar to the inspected studies; medium 1536x1024 through AIMLAPI and separate
+    qualitative 1024x1024/2880x2880 probes.
+  - Inspect spatial relationships, exact constraints and rendered text; no universal quality or latency claim.
   remaining_gaps:
-  - Latency and high-volume product positioning do not establish prompt fidelity or image quality for this
-    exact generation task.
+  - No representative production prompt distribution, immutable serving snapshots or large independent replication.
   id: task-assessment-b4e98f1e1529604e
   aggregate:
     policy_version: '1'
-    suitability: unknown
-    evidence_confidence: null
-    assessed_at: '2026-10-08'
-    rationale: Latency and high-volume product positioning do not establish prompt fidelity or image quality
-      for this exact generation task.
-    confidence_rationale: 'No aggregate confidence badge: Latency and high-volume product positioning do not
-      establish prompt fidelity or image quality for this exact generation task.'
+    suitability: medium
+    evidence_confidence: medium
+    assessed_at: '2026-10-12'
+    rationale: Useful still-image generation is demonstrated on repeated prompt sets, but spatial, exact-text
+      and composition constraints need material review and correction.
+    confidence_rationale: 'Medium confidence for this bounded task synthesis: an independent repeated manual-rubric
+      study and a separately attributable qualitative repeated-image study agree on useful outputs with constraint
+      failures; their prompts, routes and quality settings are not interchangeable.'
     supporting_evidence_ids:
-    - src-259c8fd88c0f
     - src-cee7a5257e77
-    - src-285d61f371cf
+    - src-f3b4f2f619e9
+    - src-60c9ba3f256f
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Performance is not established for this exact task rubric.
+    - No representative production prompt distribution, immutable serving snapshots or large independent replication.
+    - Inspect spatial relationships, exact constraints and rendered text; no universal quality or latency claim.
     access_ids: []
 - model_id: gpt-image-2-5-flare
   task_id: knowledge.classification
@@ -29445,38 +29341,31 @@ records:
   task_id: music.generation
   applicability: excluded
   result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Create musical
-    audio with requested melodic, rhythmic, structural, instrumental, or vocal characteristics.
+  checked_at: '2026-10-12'
+  rationale: The rubric requires musical audio; the documented native interface outputs images and explicitly
+    excludes audio.
+  confidence_rationale: High confidence in the exact native-interface boundary, not a task-performance rating.
   judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image and outputs image, which positively mismatch this task requirement. The boundary
-    is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
   evidence_ids:
   - src-cee7a5257e77
   conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
+  - Documented native Flare interface; external orchestration and other models are separate.
   remaining_gaps: []
   id: task-assessment-5f7b839ffb025f16
   aggregate:
     policy_version: '1'
     suitability: not_supported
     evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Create musical
-      audio with requested melodic, rhythmic, structural, instrumental, or vocal characteristics.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image and outputs image, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    assessed_at: '2026-10-12'
+    rationale: The rubric requires musical audio; the documented native interface outputs images and explicitly
+      excludes audio.
+    confidence_rationale: High confidence in the exact native-interface boundary, not a task-performance rating.
     supporting_evidence_ids:
     - src-cee7a5257e77
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
+    - Applies only to the native documented interface; a composite workflow requires its own assessment.
     access_ids: []
 - model_id: gpt-image-2-5-flare
   task_id: reasoning.general
@@ -29574,75 +29463,61 @@ records:
   task_id: video.editing
   applicability: excluded
   result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Modify an existing
-    video while preserving specified source content and consistency across time.
+  checked_at: '2026-10-12'
+  rationale: The task requires preserving content across a video clip. Video input/output is explicitly unsupported;
+    editing still images is not video editing.
+  confidence_rationale: High confidence in the exact native-interface boundary, not a task-performance rating.
   judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image and outputs image, which positively mismatch this task requirement. The boundary
-    is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
   evidence_ids:
   - src-cee7a5257e77
   conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
+  - Documented native Flare interface; external orchestration and other models are separate.
   remaining_gaps: []
   id: task-assessment-5e512c557421f3c6
   aggregate:
     policy_version: '1'
     suitability: not_supported
     evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Modify an
-      existing video while preserving specified source content and consistency across time.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image and outputs image, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    assessed_at: '2026-10-12'
+    rationale: The task requires preserving content across a video clip. Video input/output is explicitly unsupported;
+      editing still images is not video editing.
+    confidence_rationale: High confidence in the exact native-interface boundary, not a task-performance rating.
     supporting_evidence_ids:
     - src-cee7a5257e77
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
+    - Applies only to the native documented interface; a composite workflow requires its own assessment.
     access_ids: []
 - model_id: gpt-image-2-5-flare
   task_id: video.generation
   applicability: excluded
   result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Create a video
-    sequence from a prompt or conditioning inputs with requested motion and temporal content.
+  checked_at: '2026-10-12'
+  rationale: The task requires temporal motion output. The official model page explicitly excludes video; third-party
+    pipelines use a different model to animate Flare stills.
+  confidence_rationale: High confidence in the exact native-interface boundary, not a task-performance rating.
   judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image and outputs image, which positively mismatch this task requirement. The boundary
-    is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
   evidence_ids:
   - src-cee7a5257e77
   conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
+  - Documented native Flare interface; external orchestration and other models are separate.
   remaining_gaps: []
   id: task-assessment-688bb51d14194a77
   aggregate:
     policy_version: '1'
     suitability: not_supported
     evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Create a video
-      sequence from a prompt or conditioning inputs with requested motion and temporal content.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image and outputs image, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    assessed_at: '2026-10-12'
+    rationale: The task requires temporal motion output. The official model page explicitly excludes video;
+      third-party pipelines use a different model to animate Flare stills.
+    confidence_rationale: High confidence in the exact native-interface boundary, not a task-performance rating.
     supporting_evidence_ids:
     - src-cee7a5257e77
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
+    - Applies only to the native documented interface; a composite workflow requires its own assessment.
     access_ids: []
 - model_id: gpt-image-2-5-flare
   task_id: vision.grounding
@@ -29717,24 +29592,21 @@ records:
   remaining_gaps:
   - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
   id: task-assessment-b0883fe178f265e0
-- model_id: gpt-image-2-5-sunburst
-  task_id: agent.tool_use
-  applicability: unknown
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Investigated Select and invoke external tools with valid arguments, then use their results to
-    complete a task. No exact-model direct task conclusion was established. Image editing preservation is separate
-    from image preference; exact API variant versus automatic tool routing remains unresolved.
-  judgment_ids: []
-  confidence_rationale: No ability or confidence score is inferred from missing task evidence.
+- applicability: excluded
+  checked_at: '2026-10-12'
+  conditions:
+  - Exact named model; native API scope unless a source explicitly identifies another route.
+  confidence_rationale: Interface exclusion is a modality/tool boundary, not a low quality score.
   evidence_ids:
   - src-1a9fcf8d6701
-  - src-467bad59597d
-  conditions:
-  - Interface applicability does not establish task quality.
-  remaining_gaps:
-  - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
   id: task-assessment-bb64d4c811153ecc
+  judgment_ids: []
+  model_id: gpt-image-2-5-sunburst
+  rationale: The model card explicitly marks function calling unsupported; being called as an image tool does
+    not establish native tool selection or execution.
+  remaining_gaps: []
+  result: excluded
+  task_id: agent.tool_use
 - model_id: gpt-image-2-5-sunburst
   task_id: audio.conversation
   applicability: excluded
@@ -31162,27 +31034,40 @@ records:
   remaining_gaps:
   - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
   id: task-assessment-1fcb8ed324be83ed
-- model_id: gpt-live-1
-  task_id: reasoning.general
-  applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Investigated Derive a justified answer from logical relationships, constraints, or causal premises
-    outside specialized tasks. No exact-model direct task conclusion was established. Voice delegation depends
-    on backend configuration; corrected release evaluations are documentation/harness corrections, not a production
-    degradation claim.
-  judgment_ids: []
-  confidence_rationale: No ability or confidence score is inferred from missing task evidence.
-  evidence_ids:
-  - src-84d1a7712d6a
-  - src-c84f0489248c
-  - src-49e8d0577a5e
-  - src-4500b2c5fc9e
+- applicability: applicable
+  checked_at: '2026-10-12'
   conditions:
-  - Interface applicability does not establish task quality.
-  remaining_gaps:
-  - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
+  - 'Big Bench Audio: 1000 spoken questions across four reasoning categories; Astra-medium and Sol-low configurations.'
+  confidence_rationale: Confidence is low because the evidence is bounded to the documented studies and configurations.
+  evidence_ids:
+  - src-4500b2c5fc9e
+  - src-a4490bba9515
   id: task-assessment-e2d2850184c09bee
+  judgment_ids:
+  - judgment-01335c4c452e231e
+  model_id: gpt-live-1
+  rationale: AA reports useful audio-puzzle accuracy for combined GPT-Live/backend systems; it does not isolate
+    frontend reasoning.
+  remaining_gaps:
+  - Serving revisions, broader task conditions and replicate evidence remain incomplete.
+  result: assessed
+  task_id: reasoning.general
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: low
+    assessed_at: '2026-10-12'
+    rationale: AA reports useful audio-puzzle accuracy for combined GPT-Live/backend systems; it does not isolate
+      frontend reasoning.
+    confidence_rationale: Confidence is low because the evidence is bounded to the documented studies and configurations.
+    supporting_evidence_ids:
+    - src-4500b2c5fc9e
+    - src-a4490bba9515
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Serving revisions, broader task conditions and replicate evidence remain incomplete.
+    access_ids: []
 - model_id: gpt-live-1
   task_id: reasoning.math
   applicability: applicable
@@ -32492,117 +32377,95 @@ records:
   remaining_gaps:
   - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
   id: task-assessment-2c144cf0b82e3747
-- model_id: gpt-oss-20b
-  task_id: audio.conversation
+- aggregate:
+    policy_version: '1'
+    suitability: not_supported
+    evidence_confidence: high
+    assessed_at: '2026-10-12'
+    rationale: No native audio input/output for listening, spoken replies, interruption timing or voice-turn
+      management.
+    confidence_rationale: High confidence in the documented native modality mismatch; this is not a performance
+      score.
+    supporting_evidence_ids:
+    - src-0dc6c2d41a2c
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs: []
+    access_ids: []
   applicability: excluded
-  result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Sustain interactive
-    spoken dialogue through listening, responding, timing, and management of voice turns.
-  judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text and outputs text, which positively mismatch this task requirement. The boundary is
-    assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  checked_at: '2026-10-12'
+  conditions:
+  - Native gpt-oss-20b text input/output; no external perception or media-generation component.
+  confidence_rationale: High confidence in the documented native modality mismatch; this is not a performance
+    score.
   evidence_ids:
   - src-0dc6c2d41a2c
-  conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
-  remaining_gaps: []
   id: task-assessment-eae5d8f0306af0c8
-  aggregate:
+  judgment_ids: []
+  model_id: gpt-oss-20b
+  rationale: No native audio input/output for listening, spoken replies, interruption timing or voice-turn
+    management.
+  remaining_gaps: []
+  result: excluded
+  task_id: audio.conversation
+- aggregate:
     policy_version: '1'
     suitability: not_supported
     evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Sustain interactive
-      spoken dialogue through listening, responding, timing, and management of voice turns.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    assessed_at: '2026-10-12'
+    rationale: No audio output for pronunciation, voice or prosody generation.
+    confidence_rationale: High confidence in the documented native modality mismatch; this is not a performance
+      score.
     supporting_evidence_ids:
     - src-0dc6c2d41a2c
     contradictory_evidence_ids: []
     conflict_rationale: null
-    watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
+    watch_outs: []
     access_ids: []
-- model_id: gpt-oss-20b
-  task_id: audio.speech_generation
   applicability: excluded
-  result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Produce intelligible
-    spoken audio with requested verbal content, voice characteristics, or delivery.
-  judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text and outputs text, which positively mismatch this task requirement. The boundary is
-    assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  checked_at: '2026-10-12'
+  conditions:
+  - Native gpt-oss-20b text input/output; no external perception or media-generation component.
+  confidence_rationale: High confidence in the documented native modality mismatch; this is not a performance
+    score.
   evidence_ids:
   - src-0dc6c2d41a2c
-  conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
-  remaining_gaps: []
   id: task-assessment-5deb330d8cf2ec33
-  aggregate:
+  judgment_ids: []
+  model_id: gpt-oss-20b
+  rationale: No audio output for pronunciation, voice or prosody generation.
+  remaining_gaps: []
+  result: excluded
+  task_id: audio.speech_generation
+- aggregate:
     policy_version: '1'
     suitability: not_supported
     evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Produce intelligible
-      spoken audio with requested verbal content, voice characteristics, or delivery.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    assessed_at: '2026-10-12'
+    rationale: No audio input for speech transcription or audible-event interpretation.
+    confidence_rationale: High confidence in the documented native modality mismatch; this is not a performance
+      score.
     supporting_evidence_ids:
     - src-0dc6c2d41a2c
     contradictory_evidence_ids: []
     conflict_rationale: null
-    watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
+    watch_outs: []
     access_ids: []
-- model_id: gpt-oss-20b
-  task_id: audio.understanding
   applicability: excluded
-  result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Interpret supplied
-    audio to recover speech, events, speaker information, or other audible meaning.
-  judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text and outputs text, which positively mismatch this task requirement. The boundary is
-    assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  checked_at: '2026-10-12'
+  conditions:
+  - Native gpt-oss-20b text input/output; no external perception or media-generation component.
+  confidence_rationale: High confidence in the documented native modality mismatch; this is not a performance
+    score.
   evidence_ids:
   - src-0dc6c2d41a2c
-  conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
-  remaining_gaps: []
   id: task-assessment-aa8a52b66619a7b0
-  aggregate:
-    policy_version: '1'
-    suitability: not_supported
-    evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Interpret
-      supplied audio to recover speech, events, speaker information, or other audible meaning.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
-    supporting_evidence_ids:
-    - src-0dc6c2d41a2c
-    contradictory_evidence_ids: []
-    conflict_rationale: null
-    watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
-    access_ids: []
+  judgment_ids: []
+  model_id: gpt-oss-20b
+  rationale: No audio input for speech transcription or audible-event interpretation.
+  remaining_gaps: []
+  result: excluded
+  task_id: audio.understanding
 - model_id: gpt-oss-20b
   task_id: coding.architecture
   applicability: applicable
@@ -32698,26 +32561,40 @@ records:
   remaining_gaps:
   - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
   id: task-assessment-5c0a53eddf3d74e4
-- model_id: gpt-oss-20b
-  task_id: coding.refactoring
-  applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Investigated Restructure existing code while preserving its specified externally observable behavior.
-    No exact-model direct task conclusion was established. Text-only open MoE; warm serving rollback is a bounded
-    runtime throughput result, not an immutable weights change.
-  judgment_ids: []
-  confidence_rationale: No ability or confidence score is inferred from missing task evidence.
-  evidence_ids:
-  - src-0dc6c2d41a2c
-  - src-ad78a04807f9
-  - src-02b09208ceab
-  - src-0b72694a5dea
+- applicability: applicable
+  checked_at: '2026-10-12'
   conditions:
-  - Interface applicability does not establish task quality.
-  remaining_gaps:
-  - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
+  - OpenRouter via ellmer/vitals; extract repeated code into a helper and preserve unit tests.
+  - Underlying inference provider, precision, effort and run date are not disclosed in the inspected report.
+  confidence_rationale: Evidence confidence is low for this bounded setup. One attributable practitioner or
+    one narrow study; no independent replication.
+  evidence_ids:
+  - src-a7e870a0a373
+  - src-f6c31aaff5f3
   id: task-assessment-5c5a9f29214b27d9
+  judgment_ids:
+  - judgment-8f37f48cf9f3a398
+  model_id: gpt-oss-20b
+  rationale: Unreliable for the tested autonomous helper-function extraction:0/10 repetitions succeeded.
+  remaining_gaps: []
+  result: assessed
+  task_id: coding.refactoring
+  aggregate:
+    policy_version: '1'
+    suitability: low
+    evidence_confidence: low
+    assessed_at: '2026-10-12'
+    rationale: Unreliable for the tested autonomous helper-function extraction:0/10 repetitions succeeded.
+    confidence_rationale: Evidence confidence is low for this bounded setup. One attributable practitioner
+      or one narrow study; no independent replication.
+    supporting_evidence_ids:
+    - src-a7e870a0a373
+    - src-f6c31aaff5f3
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Invalid tool arguments and abandonment.
+    access_ids: []
 - model_id: gpt-oss-20b
   task_id: coding.repository_work
   applicability: applicable
@@ -32883,80 +32760,64 @@ records:
   remaining_gaps:
   - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
   id: task-assessment-d06d3164dd0a8915
-- model_id: gpt-oss-20b
-  task_id: image.editing
+- aggregate:
+    policy_version: '1'
+    suitability: not_supported
+    evidence_confidence: high
+    assessed_at: '2026-10-12'
+    rationale: No image input/output for pixel changes with source preservation.
+    confidence_rationale: High confidence in the documented native modality mismatch; this is not a performance
+      score.
+    supporting_evidence_ids:
+    - src-0dc6c2d41a2c
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs: []
+    access_ids: []
   applicability: excluded
-  result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Modify an existing
-    still image while satisfying requested changes and preserving specified source content.
-  judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text and outputs text, which positively mismatch this task requirement. The boundary is
-    assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  checked_at: '2026-10-12'
+  conditions:
+  - Native gpt-oss-20b text input/output; no external perception or media-generation component.
+  confidence_rationale: High confidence in the documented native modality mismatch; this is not a performance
+    score.
   evidence_ids:
   - src-0dc6c2d41a2c
-  conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
-  remaining_gaps: []
   id: task-assessment-5225f2cbec737380
-  aggregate:
+  judgment_ids: []
+  model_id: gpt-oss-20b
+  rationale: No image input/output for pixel changes with source preservation.
+  remaining_gaps: []
+  result: excluded
+  task_id: image.editing
+- aggregate:
     policy_version: '1'
     suitability: not_supported
     evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Modify an
-      existing still image while satisfying requested changes and preserving specified source content.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    assessed_at: '2026-10-12'
+    rationale: No native image output for still-image composition.
+    confidence_rationale: High confidence in the documented native modality mismatch; this is not a performance
+      score.
     supporting_evidence_ids:
     - src-0dc6c2d41a2c
     contradictory_evidence_ids: []
     conflict_rationale: null
-    watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
+    watch_outs: []
     access_ids: []
-- model_id: gpt-oss-20b
-  task_id: image.generation
   applicability: excluded
-  result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Create a still
-    image from a requested description or reference-based composition brief.
-  judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text and outputs text, which positively mismatch this task requirement. The boundary is
-    assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  checked_at: '2026-10-12'
+  conditions:
+  - Native gpt-oss-20b text input/output; no external perception or media-generation component.
+  confidence_rationale: High confidence in the documented native modality mismatch; this is not a performance
+    score.
   evidence_ids:
   - src-0dc6c2d41a2c
-  conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
-  remaining_gaps: []
   id: task-assessment-1e5e756bbc0070e3
-  aggregate:
-    policy_version: '1'
-    suitability: not_supported
-    evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Create a still
-      image from a requested description or reference-based composition brief.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
-    supporting_evidence_ids:
-    - src-0dc6c2d41a2c
-    contradictory_evidence_ids: []
-    conflict_rationale: null
-    watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
-    access_ids: []
+  judgment_ids: []
+  model_id: gpt-oss-20b
+  rationale: No native image output for still-image composition.
+  remaining_gaps: []
+  result: excluded
+  task_id: image.generation
 - model_id: gpt-oss-20b
   task_id: knowledge.classification
   applicability: applicable
@@ -32997,26 +32858,40 @@ records:
   remaining_gaps:
   - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
   id: task-assessment-d2096dc3aeccde55
-- model_id: gpt-oss-20b
-  task_id: knowledge.rag
-  applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Investigated Answer a question using evidence retrieved from an external corpus within a documented
-    retrieval workflow. No exact-model direct task conclusion was established. Text-only open MoE; warm serving
-    rollback is a bounded runtime throughput result, not an immutable weights change.
-  judgment_ids: []
-  confidence_rationale: No ability or confidence score is inferred from missing task evidence.
-  evidence_ids:
-  - src-0dc6c2d41a2c
-  - src-ad78a04807f9
-  - src-02b09208ceab
-  - src-0b72694a5dea
+- applicability: applicable
+  checked_at: '2026-10-12'
   conditions:
-  - Interface applicability does not establish task quality.
-  remaining_gaps:
-  - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
+  - gpt-oss-20b high;vLLM0.15;131,072 context;40,000 output;100 iterations.
+  - BM25 passages plus monoT5-3B reranking at depth50; top5 snippets up to512 tokens.
+  confidence_rationale: Evidence confidence is medium for this bounded setup. Relevant independent evaluation
+    and explicit methods; one study or complementary bounded methods do not establish universal task performance.
+  evidence_ids:
+  - src-2639ef77aedc
+  - src-4b4e9bc6b8de
   id: task-assessment-4b5fbc071162ffe6
+  judgment_ids:
+  - judgment-6aeb774447d36eea
+  model_id: gpt-oss-20b
+  rationale: Useful but fallible for BrowseComp-Plus answers with the documented external retrieval pipeline.
+  remaining_gaps: []
+  result: assessed
+  task_id: knowledge.rag
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: medium
+    assessed_at: '2026-10-12'
+    rationale: Useful but fallible for BrowseComp-Plus answers with the documented external retrieval pipeline.
+    confidence_rationale: Evidence confidence is medium for this bounded setup. Relevant independent evaluation
+      and explicit methods; one study or complementary bounded methods do not establish universal task performance.
+    supporting_evidence_ids:
+    - src-2639ef77aedc
+    - src-4b4e9bc6b8de
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Answer accuracy0.689; pipeline and retriever choices materially affect results.
+    access_ids: []
 - model_id: gpt-oss-20b
   task_id: knowledge.retrieval
   applicability: applicable
@@ -33097,26 +32972,37 @@ records:
   remaining_gaps:
   - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
   id: task-assessment-019a6a0faf004d56
-- model_id: gpt-oss-20b
-  task_id: language.translation
-  applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Investigated Transfer supplied meaning from one language to another while preserving relevant
-    register and nuance. No exact-model direct task conclusion was established. Text-only open MoE; warm serving
-    rollback is a bounded runtime throughput result, not an immutable weights change.
-  judgment_ids: []
-  confidence_rationale: No ability or confidence score is inferred from missing task evidence.
-  evidence_ids:
-  - src-0dc6c2d41a2c
-  - src-ad78a04807f9
-  - src-02b09208ceab
-  - src-0b72694a5dea
+- applicability: applicable
+  checked_at: '2026-10-12'
   conditions:
-  - Interface applicability does not establish task quality.
-  remaining_gaps:
-  - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
+  - OpenRouter openai/gpt-oss-20b:free; temperature0.2,300-token cap;12 segments across six domains.
+  confidence_rationale: Evidence confidence is low for this bounded setup. One attributable practitioner or
+    one narrow study; no independent replication.
+  evidence_ids:
+  - src-de7b8e8fd2c6
   id: task-assessment-0a3d52ee7e11aa8b
+  judgment_ids:
+  - judgment-acf44d745addcc1e
+  model_id: gpt-oss-20b
+  rationale: Short EN-to-European-Spanish drafts were usable but needed idiom and completion checks.
+  remaining_gaps: []
+  result: assessed
+  task_id: language.translation
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: low
+    assessed_at: '2026-10-12'
+    rationale: Short EN-to-European-Spanish drafts were usable but needed idiom and completion checks.
+    confidence_rationale: Evidence confidence is low for this bounded setup. One attributable practitioner
+      or one narrow study; no independent replication.
+    supporting_evidence_ids:
+    - src-de7b8e8fd2c6
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Literal calques and one truncated creative segment.
+    access_ids: []
 - model_id: gpt-oss-20b
   task_id: language.writing
   applicability: applicable
@@ -33137,43 +33023,35 @@ records:
   remaining_gaps:
   - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
   id: task-assessment-bcd109eabc712f28
-- model_id: gpt-oss-20b
-  task_id: music.generation
-  applicability: excluded
-  result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Create musical
-    audio with requested melodic, rhythmic, structural, instrumental, or vocal characteristics.
-  judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text and outputs text, which positively mismatch this task requirement. The boundary is
-    assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
-  evidence_ids:
-  - src-0dc6c2d41a2c
-  conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
-  remaining_gaps: []
-  id: task-assessment-01e5b9e7055cd826
-  aggregate:
+- aggregate:
     policy_version: '1'
     suitability: not_supported
     evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Create musical
-      audio with requested melodic, rhythmic, structural, instrumental, or vocal characteristics.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    assessed_at: '2026-10-12'
+    rationale: No audio output for musical composition or performance.
+    confidence_rationale: High confidence in the documented native modality mismatch; this is not a performance
+      score.
     supporting_evidence_ids:
     - src-0dc6c2d41a2c
     contradictory_evidence_ids: []
     conflict_rationale: null
-    watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
+    watch_outs: []
     access_ids: []
+  applicability: excluded
+  checked_at: '2026-10-12'
+  conditions:
+  - Native gpt-oss-20b text input/output; no external perception or media-generation component.
+  confidence_rationale: High confidence in the documented native modality mismatch; this is not a performance
+    score.
+  evidence_ids:
+  - src-0dc6c2d41a2c
+  id: task-assessment-01e5b9e7055cd826
+  judgment_ids: []
+  model_id: gpt-oss-20b
+  rationale: No audio output for musical composition or performance.
+  remaining_gaps: []
+  result: excluded
+  task_id: music.generation
 - model_id: gpt-oss-20b
   task_id: reasoning.general
   applicability: applicable
@@ -33255,174 +33133,155 @@ records:
   remaining_gaps:
   - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
   id: task-assessment-be350f39867dba43
-- model_id: gpt-oss-20b
-  task_id: research.synthesis
-  applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Investigated Combine multiple relevant sources into a grounded account of their findings, relationships,
-    and disagreements. No exact-model direct task conclusion was established. Text-only open MoE; warm serving
-    rollback is a bounded runtime throughput result, not an immutable weights change.
-  judgment_ids: []
-  confidence_rationale: No ability or confidence score is inferred from missing task evidence.
-  evidence_ids:
-  - src-0dc6c2d41a2c
-  - src-ad78a04807f9
-  - src-02b09208ceab
-  - src-0b72694a5dea
+- applicability: applicable
+  checked_at: '2026-10-12'
   conditions:
-  - Interface applicability does not establish task quality.
-  remaining_gaps:
-  - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
+  - 13 interview transcripts, approximately52K-token prompts,30 local MacBookPro runs.
+  confidence_rationale: Evidence confidence is low for this bounded setup. One attributable practitioner or
+    one narrow study; no independent replication.
+  evidence_ids:
+  - src-6051cb2ee352
   id: task-assessment-1fd989dcb5bd3890
-- model_id: gpt-oss-20b
-  task_id: video.editing
+  judgment_ids:
+  - judgment-d2ecd9854feca2c4
+  model_id: gpt-oss-20b
+  rationale: Theme generation was plausible, but source attribution failed in every reported qualitative-synthesis
+    run.
+  remaining_gaps: []
+  result: assessed
+  task_id: research.synthesis
+  aggregate:
+    policy_version: '1'
+    suitability: low
+    evidence_confidence: low
+    assessed_at: '2026-10-12'
+    rationale: Theme generation was plausible, but source attribution failed in every reported qualitative-synthesis
+      run.
+    confidence_rationale: Evidence confidence is low for this bounded setup. One attributable practitioner
+      or one narrow study; no independent replication.
+    supporting_evidence_ids:
+    - src-6051cb2ee352
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Misquotes and misattributions in100% of runs; duplicated attribution90%, irrelevant support80%.
+    access_ids: []
+- aggregate:
+    policy_version: '1'
+    suitability: not_supported
+    evidence_confidence: high
+    assessed_at: '2026-10-12'
+    rationale: No video input/output for temporally consistent clip modification.
+    confidence_rationale: High confidence in the documented native modality mismatch; this is not a performance
+      score.
+    supporting_evidence_ids:
+    - src-0dc6c2d41a2c
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs: []
+    access_ids: []
   applicability: excluded
-  result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Modify an existing
-    video while preserving specified source content and consistency across time.
-  judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text and outputs text, which positively mismatch this task requirement. The boundary is
-    assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  checked_at: '2026-10-12'
+  conditions:
+  - Native gpt-oss-20b text input/output; no external perception or media-generation component.
+  confidence_rationale: High confidence in the documented native modality mismatch; this is not a performance
+    score.
   evidence_ids:
   - src-0dc6c2d41a2c
-  conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
-  remaining_gaps: []
   id: task-assessment-0ee413ce60fd0e7f
-  aggregate:
+  judgment_ids: []
+  model_id: gpt-oss-20b
+  rationale: No video input/output for temporally consistent clip modification.
+  remaining_gaps: []
+  result: excluded
+  task_id: video.editing
+- aggregate:
     policy_version: '1'
     suitability: not_supported
     evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Modify an
-      existing video while preserving specified source content and consistency across time.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    assessed_at: '2026-10-12'
+    rationale: No video output for moving scenes or synchronized audiovisual sequences.
+    confidence_rationale: High confidence in the documented native modality mismatch; this is not a performance
+      score.
     supporting_evidence_ids:
     - src-0dc6c2d41a2c
     contradictory_evidence_ids: []
     conflict_rationale: null
-    watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
+    watch_outs: []
     access_ids: []
-- model_id: gpt-oss-20b
-  task_id: video.generation
   applicability: excluded
-  result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Create a video
-    sequence from a prompt or conditioning inputs with requested motion and temporal content.
-  judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text and outputs text, which positively mismatch this task requirement. The boundary is
-    assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  checked_at: '2026-10-12'
+  conditions:
+  - Native gpt-oss-20b text input/output; no external perception or media-generation component.
+  confidence_rationale: High confidence in the documented native modality mismatch; this is not a performance
+    score.
   evidence_ids:
   - src-0dc6c2d41a2c
-  conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
-  remaining_gaps: []
   id: task-assessment-1d8526e210fe8f72
-  aggregate:
+  judgment_ids: []
+  model_id: gpt-oss-20b
+  rationale: No video output for moving scenes or synchronized audiovisual sequences.
+  remaining_gaps: []
+  result: excluded
+  task_id: video.generation
+- aggregate:
     policy_version: '1'
     suitability: not_supported
     evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Create a video
-      sequence from a prompt or conditioning inputs with requested motion and temporal content.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    assessed_at: '2026-10-12'
+    rationale: No image input for visual-region/coordinate localization.
+    confidence_rationale: High confidence in the documented native modality mismatch; this is not a performance
+      score.
     supporting_evidence_ids:
     - src-0dc6c2d41a2c
     contradictory_evidence_ids: []
     conflict_rationale: null
-    watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
+    watch_outs: []
     access_ids: []
-- model_id: gpt-oss-20b
-  task_id: vision.grounding
   applicability: excluded
-  result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Localize a described
-    visual entity or interface element to a region, coordinate, or other explicit visual reference.
-  judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text and outputs text, which positively mismatch this task requirement. The boundary is
-    assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  checked_at: '2026-10-12'
+  conditions:
+  - Native gpt-oss-20b text input/output; no external perception or media-generation component.
+  confidence_rationale: High confidence in the documented native modality mismatch; this is not a performance
+    score.
   evidence_ids:
   - src-0dc6c2d41a2c
-  conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
-  remaining_gaps: []
   id: task-assessment-7dbef65bc7e44435
-  aggregate:
+  judgment_ids: []
+  model_id: gpt-oss-20b
+  rationale: No image input for visual-region/coordinate localization.
+  remaining_gaps: []
+  result: excluded
+  task_id: vision.grounding
+- aggregate:
     policy_version: '1'
     suitability: not_supported
     evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Localize a
-      described visual entity or interface element to a region, coordinate, or other explicit visual reference.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
+    assessed_at: '2026-10-12'
+    rationale: No image input for questions grounded in visible content.
+    confidence_rationale: High confidence in the documented native modality mismatch; this is not a performance
+      score.
     supporting_evidence_ids:
     - src-0dc6c2d41a2c
     contradictory_evidence_ids: []
     conflict_rationale: null
-    watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
+    watch_outs: []
     access_ids: []
-- model_id: gpt-oss-20b
-  task_id: vision.question_answering
   applicability: excluded
-  result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Answer questions
-    about visual input by interpreting visible objects, text, relationships, or diagrams.
-  judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text and outputs text, which positively mismatch this task requirement. The boundary is
-    assessed from retained evidence checked 2026-10-07; the source was not freshly inspected in this judgment
-    pass. External wrappers and downstream systems are separate.'
+  checked_at: '2026-10-12'
+  conditions:
+  - Native gpt-oss-20b text input/output; no external perception or media-generation component.
+  confidence_rationale: High confidence in the documented native modality mismatch; this is not a performance
+    score.
   evidence_ids:
   - src-0dc6c2d41a2c
-  conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
-  remaining_gaps: []
   id: task-assessment-e2891fe852f0bbc1
-  aggregate:
-    policy_version: '1'
-    suitability: not_supported
-    evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Answer questions
-      about visual input by interpreting visible objects, text, relationships, or diagrams.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text and outputs text, which positively mismatch this task requirement.
-      The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-      in this judgment pass. External wrappers and downstream systems are separate.'
-    supporting_evidence_ids:
-    - src-0dc6c2d41a2c
-    contradictory_evidence_ids: []
-    conflict_rationale: null
-    watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
-    access_ids: []
+  judgment_ids: []
+  model_id: gpt-oss-20b
+  rationale: No image input for questions grounded in visible content.
+  remaining_gaps: []
+  result: excluded
+  task_id: vision.question_answering
 - model_id: gpt-realtime-2-1
   task_id: agent.computer_use
   applicability: applicable
@@ -33786,80 +33645,64 @@ records:
   task_id: image.editing
   applicability: excluded
   result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Modify an existing
-    still image while satisfying requested changes and preserving specified source content.
+  checked_at: '2026-10-12'
+  rationale: 'Native image output is not supported: image is input-only; producing edited image pixels is outside
+    this model setup.'
+  confidence_rationale: Exact official model modality boundary; this is not a performance rating or a claim
+    about external tool workflows.
   judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image, audio and outputs text, audio, which positively mismatch this task requirement.
-    The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-    in this judgment pass. External wrappers and downstream systems are separate.'
   evidence_ids:
   - src-cf6a8843c8fd
-  - src-49e8d0577a5e
   conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
+  - Exact GPT-Realtime-2.1; no Mini, GPT-Live or predecessor transfer.
   remaining_gaps: []
   id: task-assessment-288baf50d5e18007
   aggregate:
     policy_version: '1'
     suitability: not_supported
     evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Modify an
-      existing still image while satisfying requested changes and preserving specified source content.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image, audio and outputs text, audio, which positively mismatch
-      this task requirement. The boundary is assessed from retained evidence checked 2026-10-07; the source
-      was not freshly inspected in this judgment pass. External wrappers and downstream systems are separate.'
+    assessed_at: '2026-10-12'
+    rationale: 'Native image output is not supported: image is input-only; producing edited image pixels is
+      outside this model setup.'
+    confidence_rationale: Exact official model modality boundary; this is not a performance rating or a claim
+      about external tool workflows.
     supporting_evidence_ids:
     - src-cf6a8843c8fd
-    - src-49e8d0577a5e
     contradictory_evidence_ids: []
     conflict_rationale: null
-    watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
-    access_ids: []
+    watch_outs: []
+    access_ids:
+    - access-5929e39a45cd3bc9
 - model_id: gpt-realtime-2-1
   task_id: image.generation
   applicability: excluded
   result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Create a still
-    image from a requested description or reference-based composition brief.
+  checked_at: '2026-10-12'
+  rationale: 'Native image output is not supported: documented outputs are text and audio.'
+  confidence_rationale: Exact official model modality boundary; this is not a performance rating or a claim
+    about external tool workflows.
   judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image, audio and outputs text, audio, which positively mismatch this task requirement.
-    The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-    in this judgment pass. External wrappers and downstream systems are separate.'
   evidence_ids:
   - src-cf6a8843c8fd
-  - src-49e8d0577a5e
   conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
+  - Exact GPT-Realtime-2.1; no Mini, GPT-Live or predecessor transfer.
   remaining_gaps: []
   id: task-assessment-4c39bbf41e306f0e
   aggregate:
     policy_version: '1'
     suitability: not_supported
     evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Create a still
-      image from a requested description or reference-based composition brief.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image, audio and outputs text, audio, which positively mismatch
-      this task requirement. The boundary is assessed from retained evidence checked 2026-10-07; the source
-      was not freshly inspected in this judgment pass. External wrappers and downstream systems are separate.'
+    assessed_at: '2026-10-12'
+    rationale: 'Native image output is not supported: documented outputs are text and audio.'
+    confidence_rationale: Exact official model modality boundary; this is not a performance rating or a claim
+      about external tool workflows.
     supporting_evidence_ids:
     - src-cf6a8843c8fd
-    - src-49e8d0577a5e
     contradictory_evidence_ids: []
     conflict_rationale: null
-    watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
-    access_ids: []
+    watch_outs: []
+    access_ids:
+    - access-5929e39a45cd3bc9
 - model_id: gpt-realtime-2-1
   task_id: knowledge.classification
   applicability: applicable
@@ -34060,23 +33903,41 @@ records:
 - model_id: gpt-realtime-2-1
   task_id: reasoning.general
   applicability: applicable
-  result: unknown
-  checked_at: '2026-10-07'
-  rationale: Investigated Derive a justified answer from logical relationships, constraints, or causal premises
-    outside specialized tasks. No exact-model direct task conclusion was established. Voice tool use depends
-    on effort and backend/harness; two-trial high-effort results are not directly comparable to unspecified
-    minimal-effort runs.
-  judgment_ids: []
-  confidence_rationale: No ability or confidence score is inferred from missing task evidence.
+  result: assessed
+  checked_at: '2026-10-12'
+  rationale: The model performs well on the evaluated spoken logical-question distribution, but that does not
+    establish mathematical, scientific or long-horizon execution quality.
+  confidence_rationale: Displayed speech-reasoning values are 96% High and 87% Minimal, rounded in the source
+    table.; One evaluation stream; immutable snapshot and full decoding configuration are unspecified.
+  judgment_ids:
+  - judgment-7bdf9e2cadd855f7
   evidence_ids:
-  - src-cf6a8843c8fd
-  - src-49e8d0577a5e
   - src-4500b2c5fc9e
   conditions:
-  - Interface applicability does not establish task quality.
+  - 'Big Bench Audio: 1,000 audio questions across formal fallacies, navigation, object counting and Boolean
+    word problems; exact 2.1 High/Minimal rows.'
   remaining_gaps:
-  - Exact-task quality, identifiable serving setup and independent corroboration remain unestablished.
+  - Displayed speech-reasoning values are 96% High and 87% Minimal, rounded in the source table.
+  - One evaluation stream; immutable snapshot and full decoding configuration are unspecified.
   id: task-assessment-d1c60a60272ab233
+  aggregate:
+    policy_version: '1'
+    suitability: medium
+    evidence_confidence: low
+    assessed_at: '2026-10-12'
+    rationale: The model performs well on the evaluated spoken logical-question distribution, but that does
+      not establish mathematical, scientific or long-horizon execution quality.
+    confidence_rationale: Displayed speech-reasoning values are 96% High and 87% Minimal, rounded in the source
+      table.; One evaluation stream; immutable snapshot and full decoding configuration are unspecified.
+    supporting_evidence_ids:
+    - src-4500b2c5fc9e
+    contradictory_evidence_ids: []
+    conflict_rationale: null
+    watch_outs:
+    - Displayed speech-reasoning values are 96% High and 87% Minimal, rounded in the source table.
+    - One evaluation stream; immutable snapshot and full decoding configuration are unspecified.
+    access_ids:
+    - access-5929e39a45cd3bc9
 - model_id: gpt-realtime-2-1
   task_id: reasoning.math
   applicability: applicable
@@ -34161,80 +34022,62 @@ records:
   task_id: video.editing
   applicability: excluded
   result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Modify an existing
-    video while preserving specified source content and consistency across time.
+  checked_at: '2026-10-12'
+  rationale: Video is not supported and no native video output exists for temporally consistent clip edits.
+  confidence_rationale: Exact official model modality boundary; this is not a performance rating or a claim
+    about external tool workflows.
   judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image, audio and outputs text, audio, which positively mismatch this task requirement.
-    The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-    in this judgment pass. External wrappers and downstream systems are separate.'
   evidence_ids:
   - src-cf6a8843c8fd
-  - src-49e8d0577a5e
   conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
+  - Exact GPT-Realtime-2.1; no Mini, GPT-Live or predecessor transfer.
   remaining_gaps: []
   id: task-assessment-4675707066b2a04b
   aggregate:
     policy_version: '1'
     suitability: not_supported
     evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Modify an
-      existing video while preserving specified source content and consistency across time.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image, audio and outputs text, audio, which positively mismatch
-      this task requirement. The boundary is assessed from retained evidence checked 2026-10-07; the source
-      was not freshly inspected in this judgment pass. External wrappers and downstream systems are separate.'
+    assessed_at: '2026-10-12'
+    rationale: Video is not supported and no native video output exists for temporally consistent clip edits.
+    confidence_rationale: Exact official model modality boundary; this is not a performance rating or a claim
+      about external tool workflows.
     supporting_evidence_ids:
     - src-cf6a8843c8fd
-    - src-49e8d0577a5e
     contradictory_evidence_ids: []
     conflict_rationale: null
-    watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
-    access_ids: []
+    watch_outs: []
+    access_ids:
+    - access-5929e39a45cd3bc9
 - model_id: gpt-realtime-2-1
   task_id: video.generation
   applicability: excluded
   result: excluded
-  checked_at: '2026-10-07'
-  rationale: The documented native input/output contract has a positive modality mismatch with Create a video
-    sequence from a prompt or conditioning inputs with requested motion and temporal content.
+  checked_at: '2026-10-12'
+  rationale: Video is documented as unsupported; native outputs are text and audio.
+  confidence_rationale: Exact official model modality boundary; this is not a performance rating or a claim
+    about external tool workflows.
   judgment_ids: []
-  confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model documentation
-    specifies inputs text, image, audio and outputs text, audio, which positively mismatch this task requirement.
-    The boundary is assessed from retained evidence checked 2026-10-07; the source was not freshly inspected
-    in this judgment pass. External wrappers and downstream systems are separate.'
   evidence_ids:
   - src-cf6a8843c8fd
-  - src-49e8d0577a5e
   conditions:
-  - Native model interface; external tools and derived systems require separate assessment.
+  - Exact GPT-Realtime-2.1; no Mini, GPT-Live or predecessor transfer.
   remaining_gaps: []
   id: task-assessment-4a49e1e760d6ca13
   aggregate:
     policy_version: '1'
     suitability: not_supported
     evidence_confidence: high
-    assessed_at: '2026-10-08'
-    rationale: The documented native input/output contract has a positive modality mismatch with Create a video
-      sequence from a prompt or conditioning inputs with requested motion and temporal content.
-    confidence_rationale: 'High confidence in the documented native-interface boundary: primary exact-model
-      documentation specifies inputs text, image, audio and outputs text, audio, which positively mismatch
-      this task requirement. The boundary is assessed from retained evidence checked 2026-10-07; the source
-      was not freshly inspected in this judgment pass. External wrappers and downstream systems are separate.'
+    assessed_at: '2026-10-12'
+    rationale: Video is documented as unsupported; native outputs are text and audio.
+    confidence_rationale: Exact official model modality boundary; this is not a performance rating or a claim
+      about external tool workflows.
     supporting_evidence_ids:
     - src-cf6a8843c8fd
-    - src-49e8d0577a5e
     contradictory_evidence_ids: []
     conflict_rationale: null
-    watch_outs:
-    - Applies to the documented native interface. External tools, wrappers and downstream systems require a
-      separate assessment.
-    access_ids: []
+    watch_outs: []
+    access_ids:
+    - access-5929e39a45cd3bc9
 - model_id: gpt-realtime-2-1
   task_id: vision.grounding
   applicability: applicable

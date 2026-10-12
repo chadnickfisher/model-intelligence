@@ -325,6 +325,84 @@ capabilities:
     research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate review_tests_frontend:frontend-arena-gpt-6-luna; exact identity gates
       and original sources retained.
+- id: judgment-05e781283416667e
+  scope: direct
+  task_ids:
+  - knowledge.classification
+  related_task_ids: []
+  judgment: Useful for explicit political-text categories with a supplied codebook, but ambiguous and rare
+    labels require review.
+  assessment: conditional
+  confidence: low
+  supporting_evidence_ids:
+  - src-016916d2e9be
+  contradictory_evidence_ids: []
+  conditions:
+  - GPT-6 Luna; one pass, temperature zero, reasoning off; published prompts.
+  - GTD attack-type classification over 37,709 incidents; codebook accuracy 0.743 and macro F1 0.634.
+  known_failure_modes:
+  - Unknown-label recall remained low; identical requests were not fully deterministic.
+  evidence_notes:
+  - One original study supports this bounded finding; no independent matched contradiction established.
+  scope_note: Only the named task and measured setup; no neighboring-task endorsement.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-synthesis
+    method: Original task-specific source inspection and rubric comparison.
+- id: judgment-8638470eda0ea860
+  scope: direct
+  task_ids:
+  - agent.tool_use
+  related_task_ids: []
+  judgment: Can complete many catalog-grounded BLS questions under Codex, but harness changes materially affect
+    completion.
+  assessment: conditional
+  confidence: low
+  supporting_evidence_ids:
+  - src-d526f74ef3e9
+  contradictory_evidence_ids: []
+  conditions:
+  - 108 held-out single-turn BLS questions; Codex 0.159.2; promptfoo 0.123.1; GPT-5.6 Sol rubric judge.
+  - Reported Codex pass rate 0.88 versus 0.74 in a standalone tool loop; effort not established.
+  known_failure_modes:
+  - Standalone failures included unavailable-data answers and step-limit exhaustion.
+  evidence_notes:
+  - One original study supports this bounded finding; no independent matched contradiction established.
+  scope_note: Only the named task and measured setup; no neighboring-task endorsement.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-synthesis
+    method: Original task-specific source inspection and rubric comparison.
+- id: judgment-886c1c801e974c2a
+  scope: direct
+  task_ids:
+  - coding.scoped_edit
+  related_task_ids: []
+  judgment: Useful for bounded local changes with explicit acceptance criteria; review integration boundaries
+    before accepting.
+  assessment: conditional
+  confidence: low
+  supporting_evidence_ids:
+  - src-39879b962b79
+  contradictory_evidence_ids: []
+  conditions:
+  - Luna high; ten C++/Python/TypeScript engineering tasks in one roughly 60K-line codebase; iterative implement/review/fix
+    workflow.
+  known_failure_modes:
+  - Some locally coherent implementations left requirements outside the immediate change unresolved.
+  evidence_notes:
+  - One original study supports this bounded finding; no independent matched contradiction established.
+  scope_note: Only the named task and measured setup; no neighboring-task endorsement.
+  observed_at: '2026-10-12'
+  effective_from: null
+  provenance:
+    origin: research
+    research_batch_id: public-source-synthesis
+    method: Original task-specific source inspection and rubric comparison.
 performance_characteristics: []
 access_ids:
 - access-2bd7ab9a31c203fb

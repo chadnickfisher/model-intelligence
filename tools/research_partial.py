@@ -22,6 +22,7 @@ from tools.knowledge import record_hash, scope_errors
 from tools.research_reconcile import reconcile_sources, remap_refs
 from tools.research_runs import required_fields, pending_check, state_hash, digest, row_errors
 from tools.task_assessments import task_assessment_errors
+from tools.research_fields import group_field_checks, qualifying_field_checks
 
 COLLECTIONS = ('capabilities', 'performance_characteristics')
 REFERENCE_FIELDS = {'model_id', 'model_ids', 'provider_id', 'task_id', 'task_ids', 'related_task_ids',
@@ -209,17 +210,20 @@ def refs(value, key=''):
     return result
 
 
-def selected_change(unit, baseline, fields):
+def selected_change(unit, baseline, fields, run, state, packet_date):
     change = deepcopy(unit['change'])
     if unit['path']:
         change['record'] = deepcopy(baseline[(unit['kind'], unit['record_id'])])
         put(change['record'], unit)
-        row = fields.get((unit['kind'], unit['record_id'], unit['path']))
         if unit['finding_id'] and isinstance(unit['value'], dict):
             evidence = batch.evidence_ids(unit['value'])
             change['evidence_ids'] = sorted(evidence & set(change['evidence_ids']))
-        elif row is not None:
-            change['evidence_ids'] = sorted(set(row['evidence_ids']) & set(change['evidence_ids']))
+        else:
+            sources = {i: r for (k, i), r in state.items() if k == 'source'}
+            observations = {i: r for (k, i), r in state.items() if k == 'observation'}
+            rows = qualifying_field_checks(change, unit['path'], fields, run, state, sources, observations, packet_date)
+            if rows:
+                change['evidence_ids'] = sorted(set(rows[0]['evidence_ids']) & set(change['evidence_ids']))
     return change
 
 
@@ -286,11 +290,11 @@ def project_packet(packet, units, state, baseline, mapping):
     result = deepcopy(packet)
     result['changes'] = []
     grouped = {}
-    fields = {(r['entity_type'], r['entity_id'], r['path']): r for r in packet['research_run']['field_checks']}
+    fields = group_field_checks(packet['research_run']['field_checks'])
     for unit in units:
         if unit['status'] != 'candidate': continue
         key = unit['kind'], unit['record_id']
-        c = selected_change(unit, baseline, fields)
+        c = selected_change(unit, baseline, fields, packet['research_run'], state, packet['created_at'][:10])
         if key not in grouped:
             grouped[key] = c
         else:
@@ -425,7 +429,8 @@ def compile_partial(packet, assignment, baseline, private_patterns=(), *, review
     units = units_for(normalized['changes'], baseline)
     allocation_errors = {(k, mapping.get(i, i)): v for (k, i), v in allocation_errors.items()}
     run, seed = normalized['research_run'], assignment['research_run']
-    fields = {(r['entity_type'], r['entity_id'], r['path']): r for r in run['field_checks']}
+    fields = group_field_checks(run['field_checks'])
+    proposed_state = {**baseline, **{(c['kind'], c['record']['id']): c['record'] for c in normalized['changes']}}
     decisions = {(r['model_id'], r['task_id']): r for r in run['task_decisions']}
     targets = set(seed['target_model_ids'])
     providers = {r['provider_id'] for (k, _), r in baseline.items() if k in {'access', 'price'} and r.get('model_id') in targets}
@@ -441,7 +446,7 @@ def compile_partial(packet, assignment, baseline, private_patterns=(), *, review
         try:
             failure = allocation_errors.get((unit['kind'], unit['record_id'])) or allocation_errors.get(('finding', unit['finding_id']))
             batch.require(not failure, failure or '')
-            c = selected_change(unit, baseline, fields)
+            c = selected_change(unit, baseline, fields, run, proposed_state, created.date().isoformat())
             dependencies = refs(unit['value'], unit['path'].lstrip('/')) | set(c['evidence_ids'])
             unit['dependencies'] = sorted({definitions[i] for i in dependencies if i in definitions and definitions[i] != unit['id']})
             batch.validate_change(c, baseline, mapping, assignment, seed, targets, providers, created)
@@ -458,9 +463,9 @@ def compile_partial(packet, assignment, baseline, private_patterns=(), *, review
     for unit in units:
         if unit['status'] == 'deferred': continue
         try:
-            c = selected_change(unit, baseline, fields)
+            c = selected_change(unit, baseline, fields, run, state, created.date().isoformat())
             batch.validate_support(c, baseline, sources, observations, seed, created)
-            batch.validate_accounting(c, baseline, fields, decisions, run, sources, observations, discovery_checks=normalized['discovery_checks'], created=created)
+            batch.validate_accounting(c, baseline, fields, decisions, run, sources, observations, discovery_checks=normalized['discovery_checks'], created=created, candidate=state)
             batch.validate_confidence(c, sources, observations, normalized['source_groups'])
             public_refs_valid(c, state)
         except (ValueError, KeyError, TypeError, IndexError, StopIteration) as exc:
@@ -485,15 +490,15 @@ def compile_partial(packet, assignment, baseline, private_patterns=(), *, review
         accounting_projection = projected
         projected_run = remap_refs(selected['research_run'], mapping)
         projected_discovery_checks = remap_refs(selected['discovery_checks'], mapping)
-        projected_fields = {(r['entity_type'], r['entity_id'], r['path']): r for r in projected_run['field_checks']}
+        projected_fields = group_field_checks(projected_run['field_checks'])
         projected_decisions = {(r['model_id'], r['task_id']): r for r in projected_run['task_decisions']}
         sources = {i: r for (k, i), r in state.items() if k == 'source'}
         changed = False
         for unit in units:
             if unit['status'] == 'deferred': continue
             try:
-                c = selected_change(unit, baseline, projected_fields)
-                batch.validate_accounting(c, baseline, projected_fields, projected_decisions, projected_run, sources, observations, discovery_checks=projected_discovery_checks, created=created)
+                c = selected_change(unit, baseline, projected_fields, projected_run, state, created.date().isoformat())
+                batch.validate_accounting(c, baseline, projected_fields, projected_decisions, projected_run, sources, observations, discovery_checks=projected_discovery_checks, created=created, candidate=state)
             except (ValueError, KeyError, TypeError, IndexError, StopIteration) as exc:
                 defer(unit, str(exc), 'accounting_deferred')
                 changed = True

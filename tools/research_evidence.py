@@ -20,6 +20,15 @@ from tools.research_followups import public_url
 MAX_BODY = 2 * 1024 * 1024
 
 
+class RetrievalError(ValueError):
+    """Safe categorical diagnostics; never retain network exception payloads."""
+    def __init__(self, code, http_status=None):
+        super().__init__({'non_public_dns':'Source resolved to a non-public address',
+                          'non_public_url':'Non-public source URL'}.get(code,code))
+        self.code = code
+        self.http_status = http_status
+
+
 class Text(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
@@ -54,7 +63,7 @@ class Text(HTMLParser):
 def text_body(raw, content_type):
     media = content_type.split(';')[0].strip().lower()
     if media not in {'text/html', 'application/xhtml+xml', 'text/plain', 'text/markdown', 'application/json'}:
-        raise ValueError('Unsupported source body; original bytes retained without reviewable text')
+        raise RetrievalError('unsupported_content_type')
     # Strict UTF-8: unsupported encodings are disclosed, not silently repaired.
     decoded = raw.decode('utf-8-sig')
     if media in {'text/html', 'application/xhtml+xml'}:
@@ -62,14 +71,14 @@ def text_body(raw, content_type):
         parser.feed(decoded)
         decoded = ''.join(parser.parts)
     if not decoded.strip() or '\x00' in decoded:
-        raise ValueError('Empty or binary source text')
+        raise RetrievalError('empty_or_binary_text')
     return decoded
 
 
 def resolve_public(host, port=443):
     addresses = sorted({item[4][0] for item in socket.getaddrinfo(host, port, type=socket.SOCK_STREAM)})
     if not addresses or any(not ipaddress.ip_address(address).is_global for address in addresses):
-        raise ValueError('Source resolved to a non-public address')
+        raise RetrievalError('non_public_dns')
     return addresses[0]
 
 
@@ -78,7 +87,7 @@ def get_public(url, *, timeout=15, limit=MAX_BODY):
     current, history = url, []
     for _ in range(4):
         if not public_url(current):
-            raise ValueError('Non-public source URL')
+            raise RetrievalError('non_public_url')
         parts = urlsplit(current)
         address = resolve_public(parts.hostname)
         connection = http.client.HTTPSConnection(parts.hostname, timeout=timeout, context=ssl.create_default_context())
@@ -94,43 +103,53 @@ def get_public(url, *, timeout=15, limit=MAX_BODY):
             if response.status in {301, 302, 303, 307, 308}:
                 location = response.getheader('Location')
                 if not location:
-                    raise ValueError('Redirect lacks destination')
+                    raise RetrievalError('missing_redirect_location')
                 current = urljoin(current, location)
                 continue
             if response.status != 200:
-                raise ValueError('Source HTTP retrieval failed')
+                raise RetrievalError('http_status', response.status)
             if response.getheader('Content-Encoding', 'identity').lower() != 'identity':
-                raise ValueError('Unsupported compressed source body')
+                raise RetrievalError('unsupported_content_encoding')
             length = response.getheader('Content-Length')
             if length and (not length.isdigit() or int(length) > limit):
-                raise ValueError('Source exceeds body limit')
+                raise RetrievalError('invalid_or_oversized_content_length')
             raw = response.read(limit + 1)
             if len(raw) > limit or length and len(raw) != int(length):
-                raise ValueError('Oversize or incomplete source body')
+                raise RetrievalError('oversized_or_incomplete_body')
             return raw, response.getheader('Content-Type', ''), current, history
         finally:
             connection.close()
-    raise ValueError('Source redirect limit exceeded')
+    raise RetrievalError('redirect_limit')
 
 
 def inspect_source(source, *, fetch=get_public):
     captured = datetime.now(timezone.utc).isoformat()
     result = {'source_id': source['id'], 'url': source['url'], 'captured_at': captured,
               'status': 'unavailable', 'failure': None, 'body_sha256': None,
-              'text_sha256': None, 'content_type': None, 'final_url': None, 'redirects': [], 'text': None}
+              'text_sha256': None, 'content_type': None, 'final_url': None, 'redirects': [], 'text': None,
+              'failure_code': None, 'http_status': None, 'capture_origin': 'direct_http'}
     raw = None
     try:
         if not public_url(source['url']):
-            raise ValueError('Non-public source URL')
+            raise RetrievalError('non_public_url')
         raw, content_type, final, redirects = fetch(source['url'])
         if len(raw) > MAX_BODY or not all(public_url(url) for url in [final, *redirects]):
-            raise ValueError('Unsafe source response')
+            raise RetrievalError('unsafe_source_response')
         result.update(body_sha256=sha256(raw).hexdigest(), content_type=content_type, final_url=final, redirects=redirects)
         text = text_body(raw, content_type)
         result.update(status='available', text=text, text_sha256=sha256(text.encode()).hexdigest())
-    except (ValueError, OSError, http.client.HTTPException, UnicodeError):
+    except (ValueError, OSError, http.client.HTTPException, UnicodeError) as exc:
         # No exception payload: may contain proxy settings, private addresses or headers.
         result['failure'] = 'Source retrieval or text extraction unavailable; not verified'
+        result['failure_code'] = (exc.code if isinstance(exc, RetrievalError) else
+            'dns_error' if isinstance(exc, socket.gaierror) else
+            'tls_verification' if isinstance(exc, ssl.SSLCertVerificationError) else
+            'tls_error' if isinstance(exc, ssl.SSLError) else
+            'network_timeout' if isinstance(exc, TimeoutError) else
+            'text_encoding' if isinstance(exc, UnicodeError) else
+            'http_protocol' if isinstance(exc, http.client.HTTPException) else
+            'network_io' if isinstance(exc, OSError) else 'invalid_source_response')
+        if isinstance(exc, RetrievalError): result['http_status'] = exc.http_status
     return result, raw
 
 
@@ -150,9 +169,9 @@ def inspect_source_process(source, *, timeout=20):
         if raw is not None and len(raw) > MAX_BODY:
             raise ValueError('Worker body exceeds bound')
         return retained['inspection'], raw
-    except (ValueError, OSError, subprocess.SubprocessError):
+    except (ValueError, OSError, subprocess.SubprocessError) as exc:
         def unavailable(_):
-            raise ValueError('Source worker timed out or failed')
+            raise RetrievalError('worker_timeout' if isinstance(exc, subprocess.TimeoutExpired) else 'worker_failure')
         return inspect_source(source, fetch=unavailable)
 
 

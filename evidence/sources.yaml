@@ -180,19 +180,19 @@ records:
   claim_scope:
   - Gemini 3.5 Flash-Lite architecture lineage to Gemini 3 Pro
   limitations: []
-- id: src-0dc6c2d41a2c
-  url: https://developers.openai.com/api/docs/models/gpt-oss-20b
-  title: gpt-oss-20b model specifications
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-12'
   claim_scope:
   - Model identity
   - context/output/modalities/cutoff
   - model-specific pricing and restrictions
   - Model catalog describes weights; not hostedAPI proof.
+  id: src-0dc6c2d41a2c
   limitations: []
+  published_at: null
+  publisher: null
+  source_type: primary
+  title: gpt-oss-20b model specifications
+  url: https://developers.openai.com/api/docs/models/gpt-oss-20b
 - id: src-0dd3bed5c7dd
   url: https://www.anthropic.com/claude-opus-5-5
   title: Introducing Claude Opus 5.5
@@ -295,13 +295,7 @@ records:
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
-- id: src-1a9fcf8d6701
-  url: https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst
-  title: gpt-image-2.5-sunburst model specifications
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-12'
   claim_scope:
   - Model identity
   - context/output/modalities/cutoff
@@ -310,9 +304,15 @@ records:
   - Dated post-launch finding; retain its model, client, service or runtime scope.
   - Model-qualified primary-source route investigation.
   - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
+  id: src-1a9fcf8d6701
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
+  published_at: null
+  publisher: null
+  source_type: primary
+  title: gpt-image-2.5-sunburst model specifications
+  url: https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst
 - id: src-1b711f47aa6a
   url: https://developers.openai.com/api/docs/models/gpt-oss-120b
   title: gpt-oss-120b model specifications
@@ -1160,20 +1160,20 @@ records:
   claim_scope:
   - Current USD input/cache/output;  cache storage limited-time free, not permanent.
   limitations: []
-- id: src-67b4ce9b4e6a
-  url: https://developers.openai.com/api/docs/models/gpt-6-astra
-  title: gpt-6-astra model specifications
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-12'
   claim_scope:
   - Model identity
   - context/output/modalities/cutoff
   - model-specific pricing and restrictions
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
+  id: src-67b4ce9b4e6a
   limitations: []
+  published_at: null
+  publisher: null
+  source_type: primary
+  title: gpt-6-astra model specifications
+  url: https://developers.openai.com/api/docs/models/gpt-6-astra
 - id: src-6a511cb9176a
   url: https://huggingface.co/MiniMaxAI/MiniMax-M3/blob/main/LICENSE
   title: MiniMax M3 Community License
@@ -1482,13 +1482,7 @@ records:
   limitations:
   - This policy is not extended to Claude Marketplace processing.
   - These clauses are not transferred to Claude.
-- id: src-84d1a7712d6a
-  url: https://developers.openai.com/api/docs/models/gpt-live-1
-  title: gpt-live-1 model specifications
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-12'
   claim_scope:
   - Model identity
   - context/output/modalities/cutoff
@@ -1497,9 +1491,17 @@ records:
   - Dated post-launch finding; retain its model, client, service or runtime scope.
   - Model-qualified primary-source route investigation.
   - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
+  - Exact model identity, native modalities, session tariff, feature support and concurrent-session tiers.
+  id: src-84d1a7712d6a
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
+  - No immutable dated OpenAI snapshot, numerical output ceiling or parameter count established.
+  published_at: null
+  publisher: null
+  source_type: primary
+  title: gpt-live-1 model specifications
+  url: https://developers.openai.com/api/docs/models/gpt-live-1
 - id: src-85f93e060d0d
   url: https://ai.google.dev/gemini-api/docs/music-generation
   title: Generate music with Lyria 3.5
@@ -1996,13 +1998,7 @@ records:
   claim_scope:
   - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations: []
-- id: src-c84f0489248c
-  url: https://openai.com/index/introducing-gpt-live/
-  title: Introducing GPT-Live
-  publisher: null
-  source_type: primary
-  published_at: '2026-07-08'
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-12'
   claim_scope:
   - Full-duplex design
   - ChatGPT Voice launch
@@ -2010,7 +2006,18 @@ records:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
   - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
-  limitations: []
+  - Initial release, full-duplex architecture and delegated-backend boundaries.
+  id: src-c84f0489248c
+  limitations:
+  - Launch product entitlements are historical, not current plan eligibility.
+  - The July 8, 2026 launch post initially announced API access as forthcoming; it is not evidence of current
+    API availability. Its July 31 update concerns supported-audio watermarking. Vendor evaluation claims do
+    not establish independent task performance.
+  published_at: '2026-07-08'
+  publisher: OpenAI
+  source_type: primary
+  title: Introducing GPT-Live
+  url: https://openai.com/index/introducing-gpt-live/
 - id: src-ca26bca182f6
   url: https://huggingface.co/Qwen/Qwen3.8-27B
   title: Qwen3.8-27B model card
@@ -2035,13 +2042,7 @@ records:
   - Apache 2.0 weights; AI21 Studio distribution.
   - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations: []
-- id: src-cee7a5257e77
-  url: https://developers.openai.com/api/docs/models/gpt-image-2.5-flare
-  title: gpt-image-2.5-flare model specifications
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-12'
   claim_scope:
   - Model identity
   - context/output/modalities/cutoff
@@ -2050,9 +2051,15 @@ records:
   - Dated post-launch finding; retain its model, client, service or runtime scope.
   - Model-qualified primary-source route investigation.
   - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
+  id: src-cee7a5257e77
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
+  published_at: null
+  publisher: null
+  source_type: primary
+  title: gpt-image-2.5-flare model specifications
+  url: https://developers.openai.com/api/docs/models/gpt-image-2.5-flare
 - id: src-cf152e0fafb2
   url: https://openrouter.ai/support
   title: null
@@ -2062,13 +2069,7 @@ records:
   accessed_at: '2026-10-06'
   claim_scope: []
   limitations: []
-- id: src-cf6a8843c8fd
-  url: https://developers.openai.com/api/docs/models/gpt-realtime-2.1
-  title: gpt-realtime-2.1 model specifications
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-12'
   claim_scope:
   - Model identity
   - context/output/modalities/cutoff
@@ -2077,9 +2078,20 @@ records:
   - Dated post-launch finding; retain its model, client, service or runtime scope.
   - Model-qualified primary-source route investigation.
   - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
+  - Exact 2.1 modality, context/output, cutoff, function-calling and fine-tuning boundaries, current model-specific
+    prices and Build/Launch/Grow rate table.
+  id: src-cf6a8843c8fd
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
+  - API alias only; no immutable OpenAI serving snapshot, parameter count, architecture or exhaustive language
+    inventory disclosed.
+  - Endpoint-name enumeration is not evidence that every listed endpoint is supported.
+  published_at: null
+  publisher: OpenAI
+  source_type: primary
+  title: GPT-Realtime-2.1 model specifications
+  url: https://developers.openai.com/api/docs/models/gpt-realtime-2.1
 - id: src-d0fcb427591e
   url: https://openrouter.ai/providers
   title: null
@@ -2427,13 +2439,7 @@ records:
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
-- id: src-f00960a11928
-  url: https://developers.openai.com/api/docs/models/gpt-6-luna
-  title: gpt-6-luna model specifications
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-12'
   claim_scope:
   - Model identity
   - context/output/modalities/cutoff
@@ -2441,9 +2447,15 @@ records:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Dated post-launch finding; retain its model, client, service or runtime scope.
   - Model-qualified primary-source route investigation.
+  id: src-f00960a11928
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
+  published_at: null
+  publisher: null
+  source_type: primary
+  title: gpt-6-luna model specifications
+  url: https://developers.openai.com/api/docs/models/gpt-6-luna
 - id: src-f10e40cc0139
   url: https://artificialanalysis.ai/zh/articles/claude-fable-5-1
   title: Fable 5.1 launch measurement
@@ -2725,19 +2737,21 @@ records:
   - All Bug Hunt files describe the same evaluation; they are not independent replications.
   - Seeded sources, answer keys, model diffs and judge transcripts are withheld.
   - Updated 2026-10-01; an original publication date is not established by the inspected body.
-- id: src-0de3942764ff
-  url: https://github.com/joonlab/gpt-6.1-sol-benchmark/blob/main/data/coding/README.md
-  title: Python coding and repair track
-  publisher: PARK JOON (joonlab)
-  source_type: practitioner
-  published_at: '2026-09-30'
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-12'
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
+  id: src-0de3942764ff
   limitations:
   - Small synthetic set; Codex subscription environment. Tests/harness/full outputs unpublished. Repair feedback
     reveals failed hidden tests. Cross-repair pretends another model's code was the repair model's previous
     answer.
+  - The report labels September 30, 2026 as its measurement day; an original publication date is not separately
+    established.
+  published_at: null
+  publisher: PARK JOON (joonlab)
+  source_type: practitioner
+  title: Python coding and repair track
+  url: https://github.com/joonlab/gpt-6.1-sol-benchmark/blob/main/data/coding/README.md
 - id: src-60a4ffa68522
   url: https://arxiv.org/html/2606.07314v1
   title: QBugLM quantum software debugging
@@ -2751,18 +2765,18 @@ records:
   - Five 5-qubit circuit families with injected single bugs, simulation oracle, five repeats/config. Text contains
     contradictory category phrasing and calls Qwen reasoning-capable despite its non-thinking checkpoint; retain
     narrow measured findings with low confidence.
-- id: src-844ba1375784
-  url: https://zenn.dev/nicktominaga/articles/closedcode-local-llm-benchmark?locale=en
-  title: Local ClosedCode editing and CSV repair study
-  publisher: Nick / nicktominaga
-  source_type: practitioner
-  published_at: '2026-06-09'
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-12'
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
+  id: src-844ba1375784
   limitations:
   - Small single-file examples; limited repeats, AI-translated page; dated Ollama quantizations on ASUS GX10,
     not all Qwen/gpt-oss deployments.
+  published_at: '2026-06-09'
+  publisher: Nick / nicktominaga
+  source_type: practitioner
+  title: Local ClosedCode editing and CSV repair study
+  url: https://zenn.dev/nicktominaga/articles/closedcode-local-llm-benchmark?locale=en
 - id: src-5b92e98d55fe
   url: https://aider.chat/docs/leaderboards/
   title: Aider Polyglot gpt-oss-120b result
@@ -3137,19 +3151,19 @@ records:
   - Early/pre-release configuration and unspecified checkpoint hash; baseline is a mixture. June result needs
     release-equivalence verification before promotion to current checkpoint. Retry burden and endpoint pricing
     limit cost claims.
-- id: src-a8450f23b0f1
-  url: https://arxiv.org/html/2605.02096v1
-  title: Foundation Models as Oracles for Refactoring Correctness Detection
-  publisher: Gheyi et al. / arXiv
-  source_type: primary
-  published_at: '2026-05-03'
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-12'
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
+  id: src-a8450f23b0f1
   limitations:
   - 'Main set all buggy: reported accuracy equals recall, not precision. Gemma IT suffix/quantization and Gemini
     immutable snapshot unspecified. Small Java witnesses do not establish whole-repository review. No transfer
     from tested Phi 4-14 B or Llama 3.2 to requested variants.'
+  published_at: '2026-05-03'
+  publisher: Gheyi et al. / arXiv
+  source_type: independent-evaluation
+  title: Foundation Models as Oracles for Refactoring Correctness Detection
+  url: https://arxiv.org/html/2605.02096v1
 - id: src-a0e67d807af9
   url: https://arxiv.org/html/2602.08146v1
   title: 'Test vs Mutant: Adversarial LLM Agents for Robust Unit Test Generation'
@@ -3786,17 +3800,17 @@ records:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
   limitations: []
-- id: src-aaf4addbc3e1
-  url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-6-1-sol.html
-  title: Amazon Bedrock gpt-6-1-sol
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-12'
   claim_scope:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
+  id: src-aaf4addbc3e1
   limitations: []
+  published_at: null
+  publisher: null
+  source_type: primary
+  title: Amazon Bedrock gpt-6-1-sol
+  url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-6-1-sol.html
 - id: src-f10ac13385d4
   url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-6-luna.html
   title: Amazon Bedrock gpt-6-luna
@@ -6063,16 +6077,16 @@ records:
   claim_scope:
   - Exact alias zai-glm-5-3; 1M/128K; cache .14 rather than first-party .26.
   limitations: []
-- id: src-033fa0bf122f
-  url: https://help.openai.com/en/articles/11870455-openai-open-weight-models
-  title: https://help.openai.com/en/articles/11870455-openai-open-weight-models
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-12'
   claim_scope:
   - Explicitly not served in OpenAI API/ChatGPT; hosting providers and downloadable weights.
+  id: src-033fa0bf122f
   limitations: []
+  published_at: null
+  publisher: null
+  source_type: primary
+  title: https://help.openai.com/en/articles/11870455-openai-open-weight-models
+  url: https://help.openai.com/en/articles/11870455-openai-open-weight-models
 - id: src-33b0ee85f128
   url: https://console.groq.com/docs/prompt-caching
   title: https://console.groq.com/docs/prompt-caching
@@ -6531,16 +6545,22 @@ records:
   claim_scope:
   - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
   limitations: []
-- id: src-4500b2c5fc9e
-  url: https://artificialanalysis.ai/speech-to-speech?api-benchmarks=agentic-performance-vs-cost-to-run
-  title: Speech-to-speech benchmark configurations
-  publisher: Artificial Analysis
-  source_type: independent-evaluation
-  published_at: null
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-12'
   claim_scope:
   - Exact named model/task evaluation inspected in public-task-followup-2026-10-07.
-  limitations: []
+  - Exact Astra-medium and Sol-low GPT-Live configurations and one-trial tau-Voice exception.
+  - Exact GPT-Realtime-2.1 High/Minimal rows and tau-Voice, Big Bench Audio and Full Duplex Bench methodology.
+  id: src-4500b2c5fc9e
+  limitations:
+  - Live leaderboard; measurement dates and immutable serving revisions undisclosed.
+  - OpenAI immutable revision, run date, precision and complete per-model decoding configuration are not disclosed
+    in the inspected page.
+  - Preference Elo, task completion and speech reasoning are distinct outcomes.
+  published_at: null
+  publisher: Artificial Analysis
+  source_type: independent-evaluation
+  title: Speech-to-speech benchmark configurations
+  url: https://artificialanalysis.ai/speech-to-speech?api-benchmarks=agentic-performance-vs-cost-to-run
 - id: src-91a6d4ec7912
   url: https://discuss.ai.google.dev/t/query-differences-in-details-of-decoration-between-veo-3-1-generate-preview-and-veo-3-1-fast-preview/108272
   title: Veo detail-accuracy question and support reply
@@ -10238,3 +10258,410 @@ records:
   - Third-party model and offering-specific conditions are separate. Dubbing, image/video or music restrictions
     are not automatically speech-playground restrictions.
   - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
+- id: src-016916d2e9be
+  url: https://arxiv.org/html/2610.06625v1
+  title: JEV versus LLMs
+  publisher: Study authors
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - Luna political-text classification and calibration
+  limitations:
+  - Published-data contamination and response variation remain concerns.
+- id: src-0a5c73fb795a
+  url: https://benchmark.towardsai.com/models/gpt-6-1-sol-high.html
+  title: ToneBench GPT-6.1 Sol high
+  publisher: Towards AI
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - Ten YouTube-script briefs, five runs each, closed-book writing with supplied research packet
+  limitations:
+  - Private exact rubric/references; three LLM judges and the typed Jev 1.13 classifier include same-family
+    GPT-6.1 Sol medium; narrow voice; no independent human acceptance.
+  - Displayed study/run or update date is retained in research context; original publication date is not independently
+    established.
+- id: src-0ad767b6cd80
+  url: https://vulcanbench.com/benchmarks/swe-v4-gpt61-sol-v318.html
+  title: GPT-6.1 Sol legacy binary rewrite study v3.18
+  publisher: Vulcan Bench
+  source_type: independent-evaluation
+  published_at: '2026-10-01'
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - 23 legacy binary rewrite tasks, five efforts, hidden behavior tests
+  limitations:
+  - One run per task/effort; high efforts at ceiling; code quality judges are separate from executable correctness.
+- id: src-0e4bdcfd6f8e
+  url: https://developers.openai.com/api/docs/guides/live-delegation
+  title: Delegation and tools in GPT-Live
+  publisher: OpenAI
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - Backend execution, image routing, cancellation and verified application-state responsibilities.
+  limitations:
+  - Interface guidance is not a measured recovery or task-performance result.
+- id: src-2639ef77aedc
+  url: https://arxiv.org/html/2602.21456v1
+  title: Revisiting Text Ranking in Deep Research
+  publisher: Chuan Meng and coauthors
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - 20B high-effort BrowseComp-Plus retrieval-augmented answering
+  limitations:
+  - Retriever/reranker are external components, not 20B native embeddings.
+- id: src-39879b962b79
+  url: https://quant.engineering/gpt-5-6-luna-vs-gpt-6-luna-time-to-correctness.html
+  title: Luna time to correctness
+  publisher: QuantLoop
+  source_type: practitioner
+  published_at: '2026-09-24'
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - ten high-effort bounded engineering changes
+  limitations:
+  - Private codebase, one practitioner and model-assisted review.
+- id: src-3f8a4d659f69
+  url: https://imagebench.ai/imagebench-v1
+  title: ImageBench V1.2 leaderboard
+  publisher: ImageBench
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - Sunburst 88.0% capability and 82.1 composite on current V1.2 board.
+  limitations: []
+- id: src-47014957066a
+  url: https://github.com/livekit/agents/issues/7552
+  title: Unspoken backend results across interruptions
+  publisher: LiveKit GitHub / jl982
+  source_type: practitioner
+  published_at: '2026-09-29'
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - Reproduction reports omitted backend failure meaning after new delegation.
+  limitations:
+  - Issue remains open; cause between plugin and upstream service unresolved; 2/5 is not prevalence.
+- id: src-488554b1e12a
+  url: https://research.everypixel.com/gpt-image-2-5-sunburst-vs-gpt-image-2/
+  title: GPT Image 2.5 Sunburst vs GPT Image 2
+  publisher: Everypixel Research
+  source_type: independent-evaluation
+  published_at: '2026-10-06'
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - 48 scenes, 144 Sunburst outputs, blind human comparison at Wavespeed 2K/high; believability interval overlaps
+    50%.
+  limitations:
+  - Updated October 9; commercial evaluation with fixed anchors, modest scene count and low rater agreement.
+- id: src-4b4e9bc6b8de
+  url: https://github.com/ChuanMeng/text-ranking-in-deep-research
+  title: Revisiting Text Ranking in Deep Research repository
+  publisher: Chuan Meng and coauthors
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - vLLM 0.15, BM25 plus monoT5-3B depth50 workflow and result
+  limitations: []
+- id: src-53cd13bd410c
+  url: https://openai.com/policies/services-agreement/
+  title: OpenAI Services Agreement
+  publisher: OpenAI
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - Business/developer service-use rights and restrictions; effective January 1, 2026.
+  - API business/developer service rights and restrictions.
+  limitations:
+  - Service access terms are not a downloadable-weight license. Order forms and service-specific terms can
+    control; individual agreements were not inspected.
+  - General API terms; negotiated order forms and consumer terms may differ.
+  - The page labels December 1, 2025 as its update date and January 1, 2026 as the posted version effective
+    date. Its original publication date is not established. Customer-specific Effective Date and Order Forms
+    can differ.
+- id: src-6051cb2ee352
+  url: https://llewynpaine.consulting/blog/2025/8/7/testing-locally-hosted-gpt-oss-20b-for-user-research-synthesis-how-it-compares-to-gpt-4o-and-claude-35-sonnet
+  title: Testing locally hosted gpt-oss-20b for user research synthesis
+  publisher: Llewyn Paine
+  source_type: practitioner
+  published_at: '2025-08-07'
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - 30 qualitative-synthesis runs over13 transcripts and attribution failures
+  limitations:
+  - Single researcher, unspecified runtime/quantization; percentages are run-level not quote-level rates.
+- id: src-60c9ba3f256f
+  url: https://sanand0.github.io/llmevals/gpt-image-flare-quality/
+  title: What GPT Image 2.5 Flare quality actually buys you
+  publisher: sanand0
+  source_type: practitioner
+  published_at: null
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - 29 images across four prompts and explicit quality levels; repeated upper-tier portraits.
+  limitations:
+  - Qualitative visual review; route, exact run date and immutable served revision undisclosed.
+  - Editing and reference preservation explicitly deferred.
+- id: src-6e349a2be53a
+  url: https://stuga.dev/blog/reranking-with-a-classifier
+  title: Reranking with a classifier
+  publisher: Stuga
+  source_type: practitioner
+  published_at: '2026-09-29'
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - MIRACL multilingual candidate reranking at low effort
+  - Exact GPT-6.1 Sol result row identifies Bedrock us-west-2; the specific endpoint/API, inference profile
+    and immutable serving revision remain unspecified.
+  limitations:
+  - 240 queries, six languages, 24 fixed candidates, 1200-character candidate truncation; retrieval is not
+    RAG answer quality; separate BRIGHT experiment uses exploratory question-matched excerpts selected after
+    the initial results; relevance is graded against gold passages.
+- id: src-72b833708b3f
+  url: https://github.com/joonlab/gpt-6.1-sol-benchmark/blob/main/data/vision_ko/README.md
+  title: GPT-6.1 Sol vision and Korean instruction tests
+  publisher: PARK JOON
+  source_type: practitioner
+  published_at: null
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - Synthetic chart, diagram, OCR and counting questions; Korean formatting constraints
+  limitations:
+  - Synthetic images; Korean tests assess constraints, not natural dialogue quality.
+  - Displayed study/run or update date is retained in research context; original publication date is not independently
+    established.
+- id: src-8085f83f0de7
+  url: https://benchmarks.cekura.ai/speech-to-speech/compare/grok-realtime-vs-openai-realtime
+  title: 'Cekura Speech-to-Speech: exact GPT Realtime 2.1 configuration'
+  publisher: Cekura
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-12'
+  limitations:
+  - Current comparison differs from older Cekura article snippets; only inspected current body used.
+  - Per-call metric denominators can differ, and exact run date/immutable revision are not disclosed.
+  claim_scope:
+  - Current 82-scenario three-run exact 2.1 high/Marin/24kHz matched-Pipecat results and failure descriptions.
+- id: src-919648ee422b
+  url: https://github.com/joonlab/gpt-6.1-sol-benchmark/blob/main/data/tools/README.md
+  title: GPT-6.1 Sol tool-use and schema tests
+  publisher: PARK JOON
+  source_type: practitioner
+  published_at: null
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - Synthetic tool selection, arguments, multi-step mock tools, constrained JSON
+  limitations:
+  - Same author and Codex subscription workflow as other PARK JOON tracks; no immutable checkpoint; small ceiling
+    tests.
+  - Displayed study/run or update date is retained in research context; original publication date is not independently
+    established.
+- id: src-a428700de290
+  url: https://imagebench.ai/blog/estimated-preference-score
+  title: Estimated preference score
+  publisher: ImageBench
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - Overall score combines capability and HPSv3 estimated preference, not direct human preference.
+  limitations: []
+- id: src-a4490bba9515
+  url: https://artificialanalysis.ai/methodology/speech-to-speech-benchmarking
+  title: Speech to Speech methodology
+  publisher: Artificial Analysis
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - AA tau-Voice scenarios, simulator, grader and database end-state metric.
+  limitations:
+  - General three-trial description is overridden by exact leaderboard one-trial notes for GPT-Live.
+- id: src-a7e870a0a373
+  url: https://posit.co/blog/local-models-are-not-there-yet
+  title: Local models are not there (yet)
+  publisher: Posit
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - helperbench 20B refactoring failures through OpenRouter
+  limitations:
+  - Ten repetitions of one narrow task; underlying provider and precision unspecified.
+- id: src-a9fe1dee58fe
+  url: https://imagebench.ai/blog/benchmark-v1-methodology
+  title: ImageBench V1 methodology
+  publisher: ImageBench
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - 192 prompts, 64 tests, six categories and binary task scoring; judge changes in V1.2 supersede old description.
+  limitations: []
+- id: src-b8c6d5709eea
+  url: https://openai.com/policies/usage-policies/
+  title: Usage policies
+  publisher: OpenAI
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - Universal acceptable-use limits applicable to API use.
+  - Service use is subject to usage policies.
+  limitations:
+  - Policy text is not evidence of refusal frequency.
+  - Navigational policy summary, not legal advice.
+  - The page labels October 29, 2025 as an effective date; original publication date is not established. Policies
+    describe permitted service use, not measured model behavior or a downloadable-weight license.
+- id: src-bc904275a767
+  url: https://imagebench.ai/blog/benchmark-v1-2-hands-qwen
+  title: ImageBench V1.2 hands scoring
+  publisher: ImageBench
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - 12 hand tests scored by Qwen3.5-122B; remaining 180 by Gemini3.1Pro.
+  limitations: []
+- id: src-ca2c49e8bad2
+  url: https://outfitgen.ai/research/swimwear-refusals-2026-09
+  title: Over-refusal in AI image editing
+  publisher: OutfitGen Team
+  source_type: independent-evaluation
+  published_at: '2026-09-23'
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - 18 adult-fashion edits, five runs each, medium/high Flare through fal; blinded edit quality and refusals.
+  limitations:
+  - One reviewer, synthetic adult photos, fal moderation; no direct OpenAI API or real-traffic rate inferred.
+- id: src-d2eb309b3efe
+  url: https://docs.nvidia.com/nim/large-language-models/1.12.0/release-notes.html
+  title: NVIDIA NIM LLM1.12 release notes
+  publisher: NVIDIA
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - 20B-specific/shared Harmony parser and tool-calling fixes and remaining streaming issue
+  limitations:
+  - 120B-only GPU count and multi-turn bullets excluded; announced fixes are not measured recovery.
+- id: src-d526f74ef3e9
+  url: https://developers.openai.com/cookbook/examples/partners/harness_aware_plugin_evals/harness_aware_plugin_evals
+  title: Harness-aware evaluation of plugins
+  publisher: OpenAI and deepsense.ai
+  source_type: primary
+  published_at: '2026-09-23'
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - Astra tool use in 108-question production BLS plugin evaluation
+  - 108 BLS questions across Codex and standalone harnesses
+  limitations:
+  - Vendor/coauthor evaluation; private production dataset; Codex harness; result not portable to standalone
+    API loops.
+  - Vendor-hosted study; same-family LLM judge and incomplete effort metadata.
+- id: src-de7b8e8fd2c6
+  url: https://blog.translastars.com/deepl-vs-llms-mt-comparison-2026
+  title: Does DeepL Still Win in 2026?
+  publisher: Alfonso González Bartolessis
+  source_type: practitioner
+  published_at: '2026-08-13'
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - 20B OpenRouter free EN-to-European-Spanish translation test
+  limitations:
+  - 12 segments; 300-token cap; no blinded replicated score or underlying host disclosed.
+- id: src-e291d5581ddb
+  url: https://huggingface.co/openai/gpt-oss-120b/blob/18ce482ffa492e71929332d18c60360de76f81c6/LICENSE
+  title: gpt-oss-120b Apache License at pinned repository revision
+  publisher: OpenAI
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-12'
+  limitations:
+  - Snapshot scope; the January 2004 license version is not model publication date.
+  claim_scope:
+  - 'License text at repository revision 18ce482ffa492e71929332d18c60360de76f81c6: redistribution requirements
+    and copyright/patent grants.'
+- id: src-f0ecdab36bb1
+  url: https://huggingface.co/openai/gpt-oss-120b/blob/main/USAGE_POLICY
+  title: gpt-oss-120b usage policy
+  publisher: OpenAI
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-12'
+  limitations:
+  - Inspected main on 2026-10-12; effective date not disclosed by this body.
+  claim_scope:
+  - Current policy requires compliance with applicable law.
+- id: src-f3b4f2f619e9
+  url: https://www.promptfrenzy.com/benchmark/gpt-image-2-5-vs-gpt-image-2
+  title: 'GPT Image 2.5 vs GPT Image 2: the same tests, re-run'
+  publisher: PromptFrenzy
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - Three-run image generation and editing tests, manual rubric and AIMLAPI configuration.
+  limitations:
+  - Small prompt set; old-model quality baseline reused from July.
+  - Body alternates April model naming and July result dates; does not identify an immutable served snapshot.
+- id: src-f6c31aaff5f3
+  url: https://github.com/simonpcouch/helperbench
+  title: helperbench
+  publisher: Simon Couch
+  source_type: independent-evaluation
+  published_at: null
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - ellmer/vitals harness, codebase tools, helper extraction and unit-test acceptance
+  limitations: []
+- id: src-f6e419d4eb70
+  url: https://developers.openai.com/api/docs/guides/decisions
+  title: Decisions API
+  publisher: OpenAI
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - Luna-only beta route, typed outputs and endpoint-specific input-only tariff
+  - The public-beta Decisions API is a dedicated gpt-6-luna endpoint with typed answers and endpoint-specific
+    input-only billing.
+  limitations:
+  - No subscription entitlement established.
+  - Separate service contract; does not establish task quality or inherit all Responses API pricing.
+- id: src-f80b0404e3ee
+  url: https://github.com/joonlab/gpt-6.1-sol-benchmark/blob/main/data/longctx/README.md
+  title: GPT-6.1 Sol long-context tests
+  publisher: PARK JOON
+  source_type: practitioner
+  published_at: null
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - Synthetic needle retrieval and numeric aggregation in long filler contexts
+  limitations:
+  - Small cells, some N=1; two 400K streams returned no answer and were excluded; cause unknown.
+  - Displayed study/run or update date is retained in research context; original publication date is not independently
+    established.
+- id: src-fe82d34f0f54
+  url: https://openai.com/policies/service-terms/
+  title: Service terms
+  publisher: OpenAI
+  source_type: primary
+  published_at: null
+  accessed_at: '2026-10-12'
+  claim_scope:
+  - API and visual-capability terms.
+  - ChatGPT Voice Output noncommercial/nonredistribution boundary.
+  limitations:
+  - Does not grant a model-weight license.
+  - ChatGPT Voice Output restriction is not automatically an API-output restriction.
+  - The page labels September 29, 2026 as an update date; original publication date is not established. Service-specific
+    conditions control where applicable; the ChatGPT Voice Output restriction is scoped to that feature.

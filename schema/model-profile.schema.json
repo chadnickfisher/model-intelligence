@@ -452,8 +452,7 @@
             "enum": [
               "direct",
               "compound",
-              "unresolved",
-              "performance"
+              "unresolved"
             ]
           },
           "task_ids": {
@@ -626,12 +625,7 @@
             "pattern": "^judgment-[a-f0-9]{16}$"
           },
           "scope": {
-            "enum": [
-              "direct",
-              "compound",
-              "unresolved",
-              "performance"
-            ]
+            "const": "performance"
           },
           "task_ids": {
             "type": "array",
@@ -639,7 +633,8 @@
               "type": "string",
               "pattern": "^[a-z]+\\.[a-z_]+$"
             },
-            "uniqueItems": true
+            "uniqueItems": true,
+            "maxItems": 0
           },
           "related_task_ids": {
             "type": "array",
@@ -647,7 +642,8 @@
               "type": "string",
               "pattern": "^[a-z]+\\.[a-z_]+$"
             },
-            "uniqueItems": true
+            "uniqueItems": true,
+            "maxItems": 0
           },
           "assessment": {
             "enum": [

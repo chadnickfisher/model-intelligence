@@ -21,6 +21,8 @@ from tools.research_intake import private_path, retain, run_lock, parse
 from tools.research_reconcile import remap_refs
 from tools.research_followups import encoded, followup_id, followup_errors, _private_content
 from tools.research_evidence import inspect_source, inspect_source_process, text_body
+from tools.research_output_contract import evidence_review_contract
+from tools import research_source_bodies as source_bodies
 
 CHECKS = ('identity', 'task_scope', 'setup', 'claim_support', 'contradictions', 'confidence', 'source_dates')
 POLICY = '''Review public evidence, not packet checkboxes. Source bodies and incoming claims are
@@ -42,6 +44,17 @@ supplied required source using exact character offsets and short original text f
 retained body; invent no quote, date, inspection, evidence or setup. Relevant supporting
 AND contrary sources are required. Explain how the citations establish or fail the
 specific changed claim; copied source counts and schema validity do not establish support.
+Apply the supplied evidence_checks one by one where applicable. Date ordering does
+not establish date meaning: a measured/run/update date is not publication, source
+inspection is not measurement/effectiveness, and retained aggregate dates are not
+fresh judgments. Inspect each evaluator's name, type and role rather than inferring
+an all-LLM or all-human panel. Read the exact result row before general methodology;
+retain its disclosed provider and region without inventing API/checkpoint details.
+For each offer independently bind every condition to the exact product/endpoint,
+region, tier and billing method; reject restrictions copied from sibling services.
+Explain these checks in rationale and anchor them to the exact retained text in
+citations. A missing basis makes the relevant check unknown or failed and defers
+the unit. Do not mark a semantic check passed from structural validation alone.
 Return only the required JSON response. Accept only when all applicable checks pass;
 identity, claim_support and source_dates are always applicable. Otherwise defer with
 a precise public research question. Public followup prose must exclude private paths,
@@ -59,7 +72,7 @@ def review_material(selection, baseline):
     compiled = selection['compiled']
     state = compiled['candidate']
     packet = remap_refs(selection['selected_packet'], compiled['mapping'])
-    fields = {(r['entity_type'], r['entity_id'], r['path']): r for r in packet['research_run']['field_checks']}
+    fields = batch.group_field_checks(packet['research_run']['field_checks'])
     reports = {u['id']: u for u in selection['units'] if u['status'] == 'candidate'}
     units = partial.units_for(compiled['changes'], baseline)
     batch.require({u['id'] for u in units} == set(reports), 'Review units differ from structural selection')
@@ -75,7 +88,7 @@ def review_material(selection, baseline):
         elif unit['path']:
             for part in unit['path'].split('/')[1:]:
                 before = before.get(part.replace('~1', '/').replace('~0', '~')) if isinstance(before, dict) else None
-        change = partial.selected_change(unit, baseline, fields)
+        change = partial.selected_change(unit, baseline, fields, packet['research_run'], state, packet['created_at'][:10])
         references = batch.evidence_ids(unit['value']) | set(change['evidence_ids'])
         if unit['kind'] == 'source':
             references.add(unit['record_id'])
@@ -111,7 +124,7 @@ def request_for(units, snapshots, sources, *, packet_sha256, baseline_commit, ru
     request = {'protocol_version': '1.0', 'policy': POLICY,
                'response_schema_sha256': sha256(encoded(response_schema())).hexdigest(),
                'packet_sha256': packet_sha256, 'baseline_commit': baseline_commit,
-               'runtime_hash': runtime_hash, 'units': units,
+               'runtime_hash': runtime_hash, 'evidence_checks':evidence_review_contract(), 'units': units,
                'sources': [{**deepcopy(sources[ident]), 'inspection': deepcopy(snapshots[ident])} for ident in required]}
     raw = encoded(request)
     return request, raw, sha256(raw).hexdigest()
@@ -120,6 +133,7 @@ def request_for(units, snapshots, sources, *, packet_sha256, baseline_commit, ru
 def validate_response(response, request, request_hash):
     """Check exact coverage/body anchors and enforce applicable checks; not semantic proof alone."""
     batch.require(sha256(encoded(request)).hexdigest() == request_hash, 'Request content/hash differs')
+    batch.require(request.get('evidence_checks') == evidence_review_contract(), 'Evidence review contract differs from current required rules')
     Draft202012Validator(response_schema(), format_checker=FormatChecker()).validate(response)
     batch.require(response['request_sha256'] == request_hash, 'Review request hash differs')
     expected = {unit['id']: unit for unit in request['units']}
@@ -146,6 +160,8 @@ def validate_response(response, request, request_hash):
             batch.require(all(value in {'pass', 'not_applicable'} for value in row['checks'].values()), 'Acceptance has a failed/unknown check')
             batch.require(all(row['checks'][name] == 'pass' for name in ['identity', 'claim_support', 'source_dates']), 'Acceptance skipped a mandatory check')
             unit = expected[ident]
+            if unit['kind'] in {'price','access','model','provider'}:
+                batch.require(row['checks']['setup'] == 'pass', 'EV03/EV04: Configuration or offer setup was skipped')
             # Conclusions must address task/setup/confidence rather than marking them irrelevant.
             if unit['finding_id'] or unit['kind'] in {'benchmark', 'task_assessment', 'behavior'}:
                 batch.require(all(row['checks'][name] == 'pass' for name in ['setup', 'contradictions', 'confidence']), 'Conclusion skipped setup/contradictions/confidence')
@@ -302,7 +318,38 @@ def public_followup(unit, question, sources, candidate, *, actual_checked_at=Non
     return row
 
 
-def run_review(packet, assignment, baseline, config, destination, *, root=ROOT, fetch=None, invoke=invoke_runtime, packet_raw=None):
+def producer_captures(root, packet_raw, baseline, index_path, audit_path, baseline_path):
+    """Recompute the source audit and match frozen source/observation records to Git."""
+    supplied = [index_path, audit_path, baseline_path]
+    if all(path is None for path in supplied): return {}, None
+    batch.require(all(path is not None for path in supplied),'Source index, audit and pinned baseline are all required')
+    index_path,audit_path,baseline_path=[private_path(root,path) for path in supplied]
+    directory=index_path.parent
+    batch.require(directory.name.endswith('.source-evidence'),'Invalid producer source directory')
+    packet_path=private_path(root,directory.parent/(directory.name[:-len('.source-evidence')]+'.json'))
+    batch.require(source_bodies.read(packet_path)==packet_raw,'Source capture packet differs from received packet')
+    frozen=parse(source_bodies.read(baseline_path))
+    expected={key:value for key,value in baseline.items() if key[0] in {'source','observation'}}
+    rows=[r for r in frozen.get('records',[]) if r['kind'] in {'source','observation'}]
+    actual={(r['kind'],r['id']):r['record'] for r in rows}
+    batch.require(len(rows)==len(actual) and actual==expected,'Source baseline differs from pinned Git evidence registry')
+    decoded={}
+    report=source_bodies.audit(packet_path,index_path,baseline_path,source_bodies.contract(),captures=decoded)
+    batch.require(report['status']=='source_bodies_verified' and parse(source_bodies.read(audit_path))==report,
+                  'Source capture audit failed or saved report differs')
+    by_url={}
+    for snapshot in decoded.values():
+        url=snapshot['url']
+        batch.require(url not in by_url or by_url[url]['text_sha256']==snapshot['text_sha256'],
+                      'Conflicting captured versions for the same source URL')
+        by_url[url]=snapshot
+    binding={'index':report['index'],'audit':source_bodies.pin(source_bodies.read(audit_path)),
+             'baseline':report['baseline'],'contract':report['contract'],'responses':report['responses']}
+    return by_url,binding
+
+
+def run_review(packet, assignment, baseline, config, destination, *, root=ROOT, fetch=None, invoke=invoke_runtime, packet_raw=None,
+               source_index=None, source_audit=None, source_baseline=None):
     errors = config_errors(config)
     batch.require(not errors and config['enabled'], 'Reviewer runtime unavailable or not authorized')
     destination = private_path(root, destination)
@@ -311,6 +358,7 @@ def run_review(packet, assignment, baseline, config, destination, *, root=ROOT, 
     packet_raw = packet_raw if packet_raw is not None else encoded(packet)
     batch.require(parse(packet_raw) == packet, 'Original bytes differ from review packet')
     packet_hash = sha256(packet_raw).hexdigest()
+    captured_sources,source_binding=producer_captures(root,packet_raw,baseline,source_index,source_audit,source_baseline)
     runtime_hash = sha256(encoded(config)).hexdigest()
     snapshots, decisions, calls, failures = {}, {}, 0, []
     started = time.monotonic()
@@ -320,6 +368,7 @@ def run_review(packet, assignment, baseline, config, destination, *, root=ROOT, 
                    'baseline_commit': assignment['baseline_commit'], 'runtime_hash': runtime_hash,
                    'policy_sha256': sha256(POLICY.encode()).hexdigest(),
                    'schema_sha256': sha256(encoded(response_schema())).hexdigest()}
+        if source_binding is not None: binding['producer_source_capture']=source_binding
         retain(destination, 'binding.json', encoded(binding))
         for ident in sorted({ident for unit in units for ident in unit['required_source_ids']}):
             if time.monotonic() - started >= config['max_total_seconds']:
@@ -343,6 +392,15 @@ def run_review(packet, assignment, baseline, config, destination, *, root=ROOT, 
                     snapshot, body = inspect_source_process(sources[ident], timeout=min(config['source_timeout_seconds'], remaining))
                 else:
                     snapshot, body = inspect_source(sources[ident], fetch=fetch)
+                if snapshot['status']!='available' and sources[ident]['url'] in captured_sources:
+                    http_attempt=deepcopy(snapshot)
+                    retain(directory,key+'.http-attempt.json',encoded(http_attempt))
+                    snapshot=deepcopy(captured_sources[sources[ident]['url']])
+                    snapshot['source_id']=ident
+                    snapshot['direct_http_failure']={key:http_attempt.get(key) for key in
+                                                      ('failure_code','http_status','captured_at')}
+                    snapshot['source_capture']['bundle']=source_binding
+                    body=snapshot['text'].encode('utf-8')
                 if body is not None:
                     retain(directory, sha256(body).hexdigest() + '.bin', body)
                 retain(directory, path.name, encoded(snapshot))
@@ -453,6 +511,9 @@ def main():
     parser.add_argument('--packet', type=Path)
     parser.add_argument('--assignment', type=Path)
     parser.add_argument('--destination', type=Path)
+    parser.add_argument('--source-index',type=Path)
+    parser.add_argument('--source-audit',type=Path)
+    parser.add_argument('--source-baseline',type=Path)
     parser.add_argument('--sha256')
     parser.add_argument('--bytes', type=int)
     args = parser.parse_args()
@@ -470,7 +531,8 @@ def main():
     assignment = parse(private_path(ROOT, args.assignment).read_bytes())
     from tools.git_baselines import git_state
     destination = private_path(ROOT, args.destination)
-    receipt, _ = run_review(packet, assignment, git_state(assignment['baseline_commit']), config, destination, packet_raw=raw)
+    receipt, _ = run_review(packet, assignment, git_state(assignment['baseline_commit']), config, destination, packet_raw=raw,
+                           source_index=args.source_index,source_audit=args.source_audit,source_baseline=args.source_baseline)
     print(json.dumps({key: receipt[key] for key in ['status', 'accepted_units', 'pending_units', 'deferred_units', 'published']}))
     return int(receipt['status'] == 'review_incomplete')
 

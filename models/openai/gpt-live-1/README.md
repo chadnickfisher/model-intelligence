@@ -51,6 +51,28 @@ Contradictory or limiting sources: None separately identified in this pass; this
 
 Evidence notes: Low confidence beyond these systems: one trial, configuration dependence, not a controlled causal frontend comparison.; No located contrary source is not proof of agreement; search scope and remaining gaps are recorded in the coverage ledger.
 
+### Reasoning.general (low confidence)
+
+AA reports useful audio-puzzle accuracy for combined GPT-Live/backend systems; it does not isolate frontend reasoning.
+
+Scope: direct / conditional. Direct task-specific finding; frontend and delegated work remain separate.
+
+Direct task IDs: reasoning.general
+
+Related task IDs (navigation only): Not established in this pass
+
+Judgment ID: judgment-01335c4c452e231e
+
+Conditions: Big Bench Audio: 1000 spoken questions across four reasoning categories; Astra-medium and Sol-low configurations.
+
+Failure modes / limitations: No immutable backend/frontend revisions or isolated frontend control established.
+
+Supporting sources: [Speech-to-speech benchmark configurations](https://artificialanalysis.ai/speech-to-speech?api-benchmarks=agentic-performance-vs-cost-to-run) · [Speech to Speech methodology](https://artificialanalysis.ai/methodology/speech-to-speech-benchmarking)
+
+Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+
+Evidence notes: Evidence is bounded to the named study; exact serving revisions and broader generalization remain unresolved.
+
 ## Specifications
 
 | Field | Recorded value |
@@ -74,15 +96,15 @@ Provider routes and subscriptions are separate. Read billing units, thresholds, 
 
 ## Licensing and local use
 
-License: Not established / proprietary terms must be checked
+License: Proprietary hosted service under applicable OpenAI terms
 
-Restrictions: Not established in this pass
+Restrictions: Applicable Services Agreement, Service Terms and Usage Policies; keep API service rights separate from ChatGPT Voice Output.
 
-Commercial use: Unknown / not established
+Commercial use: API use in customer applications is permitted subject to the Services Agreement; ChatGPT Voice Output has a separate non-commercial restriction.
 
-Redistribution: Unknown / not established
+Redistribution: ChatGPT Voice Output cannot be redistributed as standalone audio; model-weight redistribution rights are unestablished.
 
-Hosted service: Unknown / not established
+Hosted service: API integration in customer applications is permitted; account resale or leasing is restricted.
 
 Local weights/runtime availability: unavailable
 

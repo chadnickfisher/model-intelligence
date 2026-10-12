@@ -24,7 +24,7 @@ from referencing.jsonschema import DRAFT202012
 from tools.knowledge import ROOT, canonical, record_hash, scope_errors
 from tools.git_baselines import git_state
 from tools.research_runs import completion, digest, leaves, required_fields, run_errors
-from tools.research_fields import META, factual_fields, changed_fields
+from tools.research_fields import META, factual_fields, changed_fields, group_field_checks, qualifying_field_checks
 from tools.task_assessments import task_assessment_errors
 from tools.package_workflow import archive_members, safe_name
 from tools.migrate_v2 import write_yaml
@@ -259,7 +259,7 @@ def validate_support(change, baseline, sources, observations, seed, created):
         require(record['id'] in change['evidence_ids'], 'Source change must account for its own inspection')
 
 
-def validate_accounting(change, baseline, fields, decisions, run, sources, observations, *, discovery_checks=(), created=None):
+def validate_accounting(change, baseline, fields, decisions, run, sources, observations, *, discovery_checks=(), created=None, candidate=None):
     kind, record = change['kind'], change['record']
     old = baseline.get((kind, record['id']), {})
     if kind in {'source', 'task_assessment', 'research_coverage'}:
@@ -287,14 +287,10 @@ def validate_accounting(change, baseline, fields, decisions, run, sources, obser
     altered = set(changed_fields(old, record))
     require(altered <= set(change['checked_paths']), 'Changed fields missing from checked_paths')
     for path in sorted(altered):
-        row = fields.get((kind, record['id'], path))
-        require(row is not None and row['result'] not in {'blocked', 'not_checked'}, 'Changed factual field was not investigated: ' + path)
-        require(set(change['evidence_ids']) & set(row['evidence_ids']), 'Changed field lacks linked inspected evidence')
-        primary_required = (kind in {'access', 'price'} or
-            kind == 'model' and path.split('/')[1] in {'identity', 'specifications', 'additional_specifications', 'licensing', 'local_inference'} or
-            kind == 'provider' and path.split('/')[1] not in {'reliability', 'limitations', 'notes'})
-        if primary_required:
-            require(any(sources[i]['source_type'] == 'primary' for i in expanded_sources(row['evidence_ids'], observations)), 'Specifications, prices and eligibility need primary evidence')
+        require(created is not None, 'Field accounting needs packet date')
+        rows = qualifying_field_checks(change, path, fields, run, candidate if candidate is not None else baseline,
+                                       sources, observations, created.date().isoformat())
+        require(rows, 'Changed factual field was not investigated with eligible linked current evidence: ' + path)
 
 
 def validate_confidence(change, sources, observations, groups):
@@ -370,17 +366,17 @@ def compile_batch(packet, assignment, baseline, private_patterns=()):
     # Newly discovered records/fields extend the pinned checklist; omissions fail closed.
     errors = run_errors(run, baseline, candidate)
     require(not errors, 'Research accounting: ' + '; '.join(errors[:8]))
-    fields = {(r['entity_type'], r['entity_id'], r['path']): r for r in run['field_checks']}
+    fields = group_field_checks(run['field_checks'])
     decisions = {(r['model_id'], r['task_id']): r for r in run['task_decisions']}
     for change in changes:
         validate_accounting(change, baseline, fields, decisions, run, sources, observations,
-                            discovery_checks=replace_refs(packet['discovery_checks'], mapping), created=created)
+                            discovery_checks=replace_refs(packet['discovery_checks'], mapping), created=created, candidate=candidate)
     tasks = {i for (k, i) in candidate if k == 'task'}
     models = {i: r for (k, i), r in candidate.items() if k == 'model'}
     access = {i: r for (k, i), r in candidate.items() if k == 'access'}
     require(not any(scope_errors(models[m], tasks) for m in targets), 'Invalid task/finding scope')
     assessments = [r for (k, _), r in candidate.items() if k == 'task_assessment']
-    require(not task_assessment_errors(assessments, models, tasks, access), 'Invalid task-assessment references')
+    require(not task_assessment_errors(assessments, models, tasks, access, latest_date=created.date().isoformat()), 'Invalid task-assessment references')
     discoveries = replace_refs(packet['discoveries'], mapping)
     for discovery in discoveries:
         public_url(discovery['url'])
@@ -408,7 +404,7 @@ def compile_batch(packet, assignment, baseline, private_patterns=()):
     report['discovery_blocked'] = sum(r['result'] == 'blocked' for r in discovery_checks)
     report['batch_complete'] = report['complete'] and not report['discovery_pending'] and not report['discovery_blocked']
     return {'changes': changes, 'research_run': run, 'mapping': mapping, 'candidate': candidate,
-            'completion': report, 'discoveries': discoveries}
+            'completion': report, 'discoveries': discoveries, 'packet_created_at': packet['created_at']}
 
 
 def git(root, *args):
