@@ -10,6 +10,7 @@ sys.path.insert(0,str(ROOT))
 from tools.knowledge import canonical, judgment_index, scope_errors, research_coverage_errors, integrity_errors
 from tools.research_runs import task_rubric_errors
 from tools.task_assessments import task_assessment_errors
+from tools.source_snapshots import snapshot_errors
 from tools.research_followups import followup_errors, render_followups
 from tools.public_boundary import private_work_path, public_files, tracked_work_paths
 def read(p):return yaml.load(p.read_text(encoding='utf-8'),Loader=getattr(yaml,'CSafeLoader',yaml.SafeLoader))
@@ -93,6 +94,7 @@ def run():
  errors.extend(task_assessment_errors(
   [a for _,a in collections['task-assessment-record']],
   {m['id']:m for _,m in collections['model-profile']}, tasks, access_by_id))
+ errors.extend(snapshot_errors([s for _,s in collections['source-record']], [a for _,a in collections['task-assessment-record']]))
  if records('data/capabilities.yaml')!=expected:errors.append('Capability index differs from canonical claims; run render.py')
  current={key:value for key,(_,value) in canonical(ROOT).items()}
  followups=[row for _,row in collections['research-followup-record']]

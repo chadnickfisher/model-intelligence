@@ -407,7 +407,8 @@
             "enum": [
               "low",
               "medium",
-              "high"
+              "high",
+              "unknown"
             ]
           },
           "supporting_evidence_ids": {
@@ -546,8 +547,75 @@
                   }
                 },
                 "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "origin": {
+                    "const": "saved-source-analysis"
+                  },
+                  "method": {
+                    "const": "solo_researcher"
+                  },
+                  "snapshot_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[a-z0-9][a-z0-9._-]{0,159}$"
+                    },
+                    "uniqueItems": true,
+                    "maxItems": 30
+                  }
+                },
+                "required": [
+                  "origin",
+                  "method",
+                  "snapshot_ids"
+                ]
               }
             ]
+          },
+          "basis": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "kind": {
+                "enum": [
+                  "direct_evaluation",
+                  "reported_experience",
+                  "vendor_documentation",
+                  "reasoned_inference",
+                  "mixed",
+                  "unknown"
+                ]
+              },
+              "rationale": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 3000
+              }
+            },
+            "required": [
+              "kind",
+              "rationale"
+            ]
+          },
+          "snapshot_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9._-]{0,159}$"
+            },
+            "uniqueItems": true,
+            "maxItems": 30
+          },
+          "inspection_reported_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
           }
         },
         "required": [
@@ -568,7 +636,32 @@
           "effective_from",
           "provenance"
         ],
-        "additionalProperties": false
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "provenance": {
+                  "properties": {
+                    "origin": {
+                      "const": "saved-source-analysis"
+                    }
+                  },
+                  "required": [
+                    "origin"
+                  ]
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "basis",
+                "snapshot_ids",
+                "inspection_reported_at"
+              ]
+            }
+          }
+        ]
       }
     },
     "performance_characteristics": {

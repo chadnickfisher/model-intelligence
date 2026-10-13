@@ -4,7 +4,7 @@ Arrays are atomic. New null placeholders assert no fact; existing values changed
 to null still need investigation. Citation/derived metadata is checked separately.
 """
 from hashlib import sha256
-from datetime import date
+from datetime import date, datetime
 import json
 
 META = {'id', 'schema_version', 'verified_at', 'evidence_ids', 'source_ids',
@@ -16,6 +16,24 @@ def assessment_chronology_errors(record, *, latest_date=None):
     aggregate = record.get('aggregate')
     if not isinstance(aggregate, dict):
         return []
+    if aggregate.get('policy_version') == '2':
+        errors = []
+        try:
+            checked = date.fromisoformat(record['checked_at']) if record['checked_at'] else None
+            recorded = datetime.fromisoformat(aggregate['recorded_at'])
+            reported = datetime.fromisoformat(aggregate['inspection_reported_at']) if aggregate['inspection_reported_at'] else None
+            assessed = date.fromisoformat(aggregate['assessed_at']) if aggregate['assessed_at'] else None
+            if recorded.tzinfo is None or reported and reported.tzinfo is None:
+                raise ValueError('Timezone required')
+            if (reported.date() if reported else None) != assessed:
+                errors.append({'path':'/aggregate/assessed_at','message':'assessment date must reflect reported inspection, including null'})
+            if checked and recorded.date() < checked or reported and (reported > recorded or checked and reported.date() < checked):
+                errors.append({'path':'/aggregate/recorded_at','message':'source capture, reported inspection and recording are out of order'})
+            if latest_date and recorded.date().isoformat() > latest_date:
+                errors.append({'path':'/aggregate/recorded_at','message':'recording postdates the packet'})
+        except (ValueError, TypeError, KeyError):
+            errors.append({'path':'/aggregate','message':'invalid policy-v2 capture/report/record chronology'})
+        return errors
     errors = []
     dates = {}
     for path, value in (('/checked_at', record.get('checked_at')),

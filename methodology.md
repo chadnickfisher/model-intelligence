@@ -60,6 +60,40 @@ Full specifications, licensing, local hardware and source evidence remain
 available in the existing details view. Task suitability does not replace this
 information or combine it into a universal model score.
 
+## Task suitability policy v2
+
+New policy-v2 assessments also state the basis of the conclusion: direct
+evaluation, reported experience, vendor documentation, reasoned inference,
+mixed evidence and inference, or unknown. Existing policy-v1 records keep their
+original interpretation; a migration does not recheck their sources or change
+their ratings.
+
+For each exact task and setup, ask:
+
+1. What outputs, modalities, tools and workflow does the task require?
+2. Does the documented model and access route support those prerequisites?
+3. What matching evaluations or attributable experience support or contradict
+   the conclusion, and under which conditions?
+4. If exact-task evidence is absent, what concrete mechanism or relevant adjacent
+   evidence supports a reasoned inference, and where could it fail?
+5. What suitability follows, and separately how strong is the evidence for that
+   judgment? Which limitations, disagreements and unknowns remain?
+
+An inference may support High or Medium suitability with Low confidence when its
+reasoning and conditions justify that conclusion. Model branding does not assign
+a minimum suitability. Adjacent results are not relabeled as direct measurements
+of another task. Direct task scope identifies the conclusion being made; it does
+not mean the conclusion's basis was a direct evaluation. Missing evidence does not
+establish weakness or a positive capability boundary.
+
+Saved source versions retain original/readable byte hashes and actual retrieval
+clocks separately from source publication and effective dates, which may remain
+unknown. Policy-v2 judgments reference those versions. A reported inspection date
+may remain null; receiving an analysis does not supply that missing date. The
+recording clock denotes when the conclusion was recorded. These checks establish
+structure and provenance, not independent semantic validation of the researcher's
+interpretation. Suitability is not a measured probability of successful execution.
+
 ## Evidence confidence
 
 Evidence confidence describes the strength of evidence supporting a specific

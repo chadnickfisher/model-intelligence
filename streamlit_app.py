@@ -79,6 +79,9 @@ def source_panel(data, ids):
     for s in sources(data,ids):
         st.markdown(f"[{s.get('title') or 'Source'}]({s['url']})")
         st.caption(f"Checked {show(s.get('accessed_at'))} · published {show(s.get('published_at'))}")
+        for snapshot in s.get('snapshots',[]):
+            st.caption('Saved source version captured '+snapshot['retrieval_completed_at']+
+                       ' · published '+show(snapshot['publication_at']))
     if not ids: st.caption('None separately recorded in this pass; this does not establish consensus.')
 
 def short(text, limit=240):
@@ -259,6 +262,9 @@ def card_fit(data,model,task,related=False):
         if aggregate['evidence_confidence']:
             label+=' · **Evidence confidence:** '+aggregate['evidence_confidence'].capitalize()
         st.write(label)
+        from explorer.presentation import assessment_basis
+        basis=assessment_basis(aggregate)
+        if basis:st.write('**Basis:** '+basis['label']+' — '+basis['rationale'])
         st.markdown('**Why this rating?**')
         reasons=rating_bullets(aggregate['rationale'])
         if aggregate['conflict_rationale']:
@@ -292,7 +298,8 @@ def task_assessment_details(data,model,assessment):
     st.write('**Supporting evidence**');source_panel(data,aggregate['supporting_evidence_ids'])
     if aggregate['contradictory_evidence_ids']:
         st.write('**Contrary / limiting evidence**');source_panel(data,aggregate['contradictory_evidence_ids'])
-    st.caption('Sources checked '+assessment['checked_at']+' · assessment '+aggregate['assessed_at'])
+    assessed=aggregate['assessed_at'] or 'inspection date unknown'
+    st.caption('Sources checked '+show(assessment['checked_at'])+' · assessment '+assessed)
 
 def card_limits(data,model,task=None,related=False):
     st.markdown('**Watch-outs**')

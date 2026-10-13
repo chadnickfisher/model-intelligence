@@ -75,6 +75,13 @@ unrelated specification facts. Unknown is uncertainty, not demonstrated weakness
 unassessed work remains distinguishable in model lookup.
 
 The shared selection helper is `tools.task_assessments.select_task_assessments`.
+Policy-v2 assessments retain the same suitability and filtering semantics and
+also return the conclusion's basis, source snapshot IDs, reported inspection time
+(including null) and recording time. Direct task scope and a reasoned-inference
+basis may coexist. Do not present the recording clock as an inspection date or
+derive a suitability floor from the model's creator. See
+[policy v2](../methodology.md#task-suitability-policy-v2).
+
 The application's selected-task search uses this helper through
 `explorer.data.filter_models`. The MCP server remains deferred; its future
 implementation must use the same selection semantics and canonical records.

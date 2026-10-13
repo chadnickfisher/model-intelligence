@@ -54,6 +54,97 @@
       "items": {
         "type": "string"
       }
+    },
+    "snapshots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^snapshot-[a-f0-9]{20}$"
+          },
+          "original": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "bytes": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "bytes",
+              "sha256"
+            ]
+          },
+          "readable": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "bytes": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "bytes",
+              "sha256"
+            ]
+          },
+          "final_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "retrieval_started_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "retrieval_completed_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "extractor_version": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 3000
+          },
+          "publication_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "effective_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "id",
+          "original",
+          "readable",
+          "final_url",
+          "retrieval_started_at",
+          "retrieval_completed_at",
+          "extractor_version",
+          "publication_at",
+          "effective_at"
+        ]
+      }
     }
   },
   "required": [

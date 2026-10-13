@@ -12,6 +12,15 @@ def task_assessment(model, data, task):
         raise ValueError('Duplicate canonical model/task assessment')
     return rows[0] if rows else None
 
+def assessment_basis(aggregate):
+    """Policy-v1 has no recorded basis; do not infer one from fit or confidence."""
+    basis=aggregate.get('basis')
+    if not basis:return None
+    labels={'direct_evaluation':'Direct evaluation','reported_experience':'Reported experience',
+        'vendor_documentation':'Vendor documentation','reasoned_inference':'Reasoned inference',
+        'mixed':'Mixed evidence and inference','unknown':'Unknown basis'}
+    return {'label':labels[basis['kind']], 'rationale':basis['rationale']}
+
 
 def task_card_evidence(model, data, task=None, include_related=False):
     findings=claims(model,task,include_related) if task else []
