@@ -12,11 +12,6 @@ def stage(root,compiled,*,observed_at,summary,allow_synthetic=False):
     root=Path(root).resolve()
     here=Path(__file__).resolve().parents[1]
     if root!=here:raise ValueError('Run staging helper from its isolated implementation checkout')
-    dirty=subprocess.check_output(['git','-C',str(root),'status','--porcelain','--untracked-files=all'],text=True)
-    if dirty.strip():raise ValueError('Canonical staging requires a clean isolated checkout')
-    if compiled.get('merge_baseline'):
-        head=subprocess.check_output(['git','-C',str(root),'rev-parse','HEAD'],text=True).strip()
-        if head!=compiled['merge_baseline']:raise ValueError('Canonical staging baseline differs')
     expected={p['id'] for p in compiled['assessments']}
     if len(expected)!=len(compiled['assessments']):raise ValueError('Duplicate compiled assessment ID')
     old_tasks=read(root/'data/task-assessments.yaml');old_sources=read(root/'evidence/sources.yaml')
@@ -27,6 +22,11 @@ def stage(root,compiled,*,observed_at,summary,allow_synthetic=False):
         old=read(path);new=compiled['models'].get(old['id'])
         if new and old!=new:planned[path.relative_to(root).as_posix()]=new
     if not planned:return {'status':'no_change','paths':[],'history_changes':0}
+    dirty=subprocess.check_output(['git','-C',str(root),'status','--porcelain','--untracked-files=all'],text=True)
+    if dirty.strip():raise ValueError('Canonical staging requires a clean isolated checkout')
+    if compiled.get('merge_baseline'):
+        head=subprocess.check_output(['git','-C',str(root),'rev-parse','HEAD'],text=True).strip()
+        if head!=compiled['merge_baseline']:raise ValueError('Canonical staging baseline differs')
     for task in compiled['assessments']:
         if task['id'] in compiled['changed_task_ids']:evidence.update(task['evidence_ids'])
     if not evidence:raise ValueError('Changed canonical records require saved source references')
