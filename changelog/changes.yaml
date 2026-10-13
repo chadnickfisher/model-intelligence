@@ -17259,3 +17259,31 @@ records:
     canonical_path: data/task-assessments.yaml
     operation: update
   id: change-019024764deb6452
+- observed_at: '2026-10-13'
+  summary: Update scoped-edit task judgment and saved source provenance.
+  evidence_ids:
+  - src-5383730b273f
+  - src-752375ff0c97
+  - src-d89f8cc5b275
+  changed_entities:
+  - entity_type: model
+    entity_id: claude-sonnet-5-5
+    canonical_path: models/anthropic/claude-sonnet-5-5/profile.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-5383730b273f
+    canonical_path: evidence/sources.yaml
+    operation: add
+  - entity_type: source
+    entity_id: src-752375ff0c97
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: source
+    entity_id: src-d89f8cc5b275
+    canonical_path: evidence/sources.yaml
+    operation: update
+  - entity_type: task_assessment
+    entity_id: task-assessment-be1ae5ae450eba5b
+    canonical_path: data/task-assessments.yaml
+    operation: update
+  id: change-51f27d7ff6e9044d

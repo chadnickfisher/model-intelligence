@@ -36,3 +36,22 @@ def test_moved_baseline_rejected_before_any_canonical_write(tmp_path,monkeypatch
     with pytest.raises(ValueError,match='baseline differs'):
         writer.stage(tmp_path,compiled,observed_at='2026-10-13',summary='Fixture')
     assert writer.read(tmp_path/'evidence/sources.yaml')['records']==[]
+
+def test_sorted_json_handoff_preserves_yaml_order_and_values():
+    import json
+    original={'schema_version':'1.0','records':[{'id':'one','z':3,'a':None,'nested':{'z':False,'a':['x','y']}}]}
+    transported=json.loads(json.dumps(original,sort_keys=True))
+    transported['records'][0]['new_field']={'b':1,'a':2}
+    result=writer.preserve_key_order(original,transported)
+    assert result==transported
+    assert list(result)==list(original)
+    assert list(result['records'][0])==['id','z','a','nested','new_field']
+    assert list(result['records'][0]['nested'])==['z','a']
+    assert original['records'][0].get('new_field') is None
+
+def test_record_array_order_is_not_changed_by_mapping_order_preservation():
+    original=[{'id':'first','z':1,'a':2},{'id':'second','a':3,'z':4}]
+    incoming=[{'z':4,'id':'second','a':3},{'a':2,'id':'first','z':1},{'id':'new','value':None}]
+    result=writer.preserve_key_order(original,incoming)
+    assert result==incoming and [row['id'] for row in result]==['second','first','new']
+    assert list(result[0])==list(original[1]) and list(result[1])==list(original[0])

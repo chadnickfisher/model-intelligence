@@ -8,6 +8,23 @@ from tools.knowledge import capture, read
 from tools.migrate_v2 import write_yaml
 from tools.research_observations import privacy
 
+def preserve_key_order(reference,value):
+    """Keep existing YAML key order after a canonically sorted JSON handoff.
+
+    Only mapping presentation changes; scalar values and list order stay intact.
+    """
+    if isinstance(value,dict):
+        prior=reference if isinstance(reference,dict) else {}
+        keys=[key for key in prior if key in value]+[key for key in value if key not in prior]
+        return {key:preserve_key_order(prior.get(key),value[key]) for key in keys}
+    if isinstance(value,list):
+        prior=reference if isinstance(reference,list) else []
+        by_id={item['id']:item for item in prior if isinstance(item,dict) and 'id' in item}
+        return [preserve_key_order(by_id.get(item.get('id'),prior[index] if index<len(prior) else None)
+            if isinstance(item,dict) else prior[index] if index<len(prior) else None,item)
+            for index,item in enumerate(value)]
+    return value
+
 def stage(root,compiled,*,observed_at,summary,allow_synthetic=False):
     root=Path(root).resolve()
     here=Path(__file__).resolve().parents[1]
@@ -32,7 +49,7 @@ def stage(root,compiled,*,observed_at,summary,allow_synthetic=False):
     if not evidence:raise ValueError('Changed canonical records require saved source references')
     privacy(planned)
     # Only allow the explicit compiled canonical paths; receipts and source workspace files stay external.
-    for name,value in planned.items():write_yaml(root/name,value)
+    for name,value in planned.items():write_yaml(root/name,preserve_key_order(read(root/name),value))
     changes=capture(root,observed_at,summary,sorted(evidence))
     logs=[]
     for script in ('tools/render.py','tools/validate.py'):

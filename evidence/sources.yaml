@@ -1353,6 +1353,20 @@ records:
   source_type: primary
   title: Claude sonnet-5-5 specifications
   url: https://platform.claude.com/docs/en/models/sonnet-5-5/overview
+  snapshots:
+  - effective_at: null
+    extractor_version: source-formats/1.1
+    final_url: https://platform.claude.com/docs/en/models/sonnet-5-5/overview
+    id: snapshot-cdc97d6ca1d305368b98
+    original:
+      bytes: 401631
+      sha256: 34e655d6c693f197b64c74e440035ad5aa2d1959f2b49ff19762fd24938bcce4
+    publication_at: null
+    readable:
+      bytes: 5882
+      sha256: cb082b7f309a020b1e7fccc5666101bbb9036f8c13f537dccb2864219cc38342
+    retrieval_completed_at: '2026-10-13T22:43:37.828826+00:00'
+    retrieval_started_at: '2026-10-13T22:43:37.407007+00:00'
 - id: src-752c7dd560da
   url: https://docs.bfl.ai/quick_start/pricing
   title: Overview
@@ -2975,6 +2989,20 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations: []
+  snapshots:
+  - effective_at: null
+    extractor_version: source-formats/1.1
+    final_url: https://ibragim.dev/leaderboard/
+    id: snapshot-5cb8fa4ab0f4ed5892e8
+    original:
+      bytes: 13505
+      sha256: 46db4b9a6968e9dd8251eb67520bc05a434c0258ea5822a23a41fc7a987aad69
+    publication_at: null
+    readable:
+      bytes: 2900
+      sha256: 43848640d9f6ce78dc5803a12551f0ff74845ad7e4bf4f1732ce190dcc7bd4ce
+    retrieval_completed_at: '2026-10-13T22:43:39.847355+00:00'
+    retrieval_started_at: '2026-10-13T22:43:39.554402+00:00'
 - id: src-3dc04dde4bf1
   url: https://modelbattles.com/articles/gemma-4-12b-agentic-core-v1-2026/
   title: Gemma 4 12B on agentic-core-v1
@@ -10954,3 +10982,28 @@ records:
     agent default to Turbo.
   limitations:
   - Agent default selection is not a model checkpoint or training-update policy.
+- accessed_at: '2026-10-13'
+  claim_scope:
+  - coding.scoped_edit
+  id: src-5383730b273f
+  limitations:
+  - Source category has not been independently classified.
+  published_at: null
+  publisher: null
+  snapshots:
+  - effective_at: null
+    extractor_version: source-formats/1.1
+    final_url: https://ibragim.dev/writing/mini-benchmark-for-coding-agents/
+    id: snapshot-e5e5f33c0948c8a5ba81
+    original:
+      bytes: 8495
+      sha256: 8ff11ad865ced80b6b68ae0016a59130d8b6b4c7f45ce8f4a436031d8d1dec34
+    publication_at: null
+    readable:
+      bytes: 2766
+      sha256: baf883e13bce64552073464f59b0c85429f15b7f0ff85c0c88a967a914359750
+    retrieval_completed_at: '2026-10-13T22:43:40.595949+00:00'
+    retrieval_started_at: '2026-10-13T22:43:40.462908+00:00'
+  source_type: unknown
+  title: null
+  url: https://ibragim.dev/writing/mini-benchmark-for-coding-agents/

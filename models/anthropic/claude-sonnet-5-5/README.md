@@ -31,9 +31,9 @@ Evidence notes: supporting evidence: AA reports Terminal-Bench4.0 about64% at ma
 
 ### Coding.scoped_edit (low confidence)
 
-For bounded changes, maximum effort can expand scope and reduce merge-readiness.
+A useful conditional candidate for localized, explicitly specified edits when a host supplies repository context, constrained write tools and acceptance tests; use scope review rather than assuming passing tests ensure a minimal diff.
 
-Scope: direct / warning. Task-specific source claim under documented conditions; no transfer to other coding tasks.
+Scope: direct / conditional. Conditional utility is supported by text/code I/O, tool workflows and the small evaluation's bounded successes. Medium denotes an assisted implement-and-check use case needing scope and regression review, not a penalty for missing measurements or a claim of measured failure frequency.
 
 Direct task IDs: coding.scoped_edit
 
@@ -41,15 +41,15 @@ Related task IDs (navigation only): Not established in this pass
 
 Judgment ID: judgment-cb9aeb423bbdc834
 
-Conditions: Claude Code FrontierCode1.1; vendor comparison at max versus xhigh.
+Conditions: Anthropic API access-proprietary-access-18, Standard/global; host-managed code reads/writes/tests, not an autonomous repository environment supplied by the endpoint.; Specify target behavior and allowed files; run regression tests and inspect unrelated changes.; Keep effort and harness explicit; the earlier maximum-effort scope warning is not an exact-route default-high failure rate.
 
-Failure modes / limitations: Two inspected cases linked expanded subagent review to timeout or extra edits.
+Failure modes / limitations: Rubric requires bounded behavior change plus preservation, not debugging or broad coordination.; A small mixed private suite is only partial rubric overlap.; No positive route/task mismatch is established.; An earlier vendor scope-expansion warning remains background; its supporting passage was unavailable for re-inspection.; No contrary passage was available for inspection in this pass; this does not establish consensus.
 
-Supporting sources: [Introducing Claude Sonnet 5.5](https://www.anthropic.com/claude-sonnet-5-5)
+Supporting sources: [ibragim.dev](https://ibragim.dev/writing/mini-benchmark-for-coding-agents/) · [Claude sonnet-5-5 specifications](https://platform.claude.com/docs/en/models/sonnet-5-5/overview) · [Personal Coding Evals](https://ibragim.dev/leaderboard/)
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Inspected failure cases are direct scoped-edit evidence; aggregate FrontierCode is not reclassified into every coding task.; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: The evaluation only partially overlaps the scoped-edit rubric and leaves exact endpoint and preservation checks uncertain; the suitability conclusion is a conditional workflow inference.; Independent evaluator-reported outcomes and vendor modality/tool documentation support conditional workflow inference. The earlier warning remains background context.
 
 ### Coding.debugging (medium confidence)
 

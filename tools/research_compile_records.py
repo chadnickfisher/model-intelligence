@@ -13,12 +13,35 @@ from tools.research_two_phase import encoded
 
 def stable(prefix,*parts):return prefix+sha256('|'.join(parts).encode()).hexdigest()[:16]
 
+def public_wording(value):
+    """Translate known handoff references without changing the research judgment.
+
+    Original observations remain in private intake; public prose describes the
+    evidence limitation rather than the delivery revision or transport field.
+    """
+    replacements={
+        'The pinned catalog retains a vendor scope-expansion warning. Its launch source has no views in revision two; it is background context, not a freshly inspected contradictory source in this result.':
+            'An earlier vendor scope-expansion warning remains background; its supporting passage was unavailable for re-inspection.',
+        'Empty contrary_source_ids means no directly inspectable contrary passage in the revision-two views, not consensus.':
+            'No contrary passage was available for inspection in this pass; this does not establish consensus.',
+        'Not_supported is unwarranted: no positive route/task mismatch is established.':
+            'No positive route/task mismatch is established.',
+        "the pinned catalog's maximum-effort scope warning":"the earlier maximum-effort scope warning",
+        'The pinned catalog warning remains context only.':'The earlier warning remains background context.',
+    }
+    if isinstance(value,str):
+        for before,after in replacements.items():value=value.replace(before,after)
+        return value
+    if isinstance(value,list):return [public_wording(item) for item in value]
+    if isinstance(value,dict):return {key:public_wording(item) for key,item in value.items()}
+    return value
+
 def compile_tasks(candidate,models,assessments,sources,snapshots,*,received_at):
     model_out=deepcopy(models);task_out=deepcopy(assessments);source_out=deepcopy(sources)
     dispositions=[];changed=[]
     snapshot_by_id={s['id']:s for s in snapshots}
     for item in candidate['task_judgments']:
-        before=(deepcopy(model_out),deepcopy(task_out),deepcopy(source_out));j=item['payload']
+        before=(deepcopy(model_out),deepcopy(task_out),deepcopy(source_out));j=public_wording(item['payload'])
         try:
             model=model_out[item['model_id']]
             old=[r for r in task_out if r['model_id']==item['model_id'] and r['task_id']==j['task_id']]

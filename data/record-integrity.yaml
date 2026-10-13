@@ -2580,7 +2580,7 @@ records:
 - entity_type: model
   entity_id: claude-sonnet-5-5
   canonical_path: models/anthropic/claude-sonnet-5-5/profile.yaml
-  value_hash: 8b4f4204f840cbd4716b080d924aa00be5d69cbcffdbfece7fe085e8e0463be8
+  value_hash: d18fe7e7290dd04e426ed30c8c1e4aefecf33120bc46e0d8c878cbad718a5f60
 - entity_type: model
   entity_id: cohere-command-a-plus
   canonical_path: models/cohere/cohere-command-a-plus/profile.yaml
@@ -6278,6 +6278,10 @@ records:
   canonical_path: evidence/sources.yaml
   value_hash: ed9a290d603273f9d5082f38bc8b10fe4f50ebc907918201f8c485ee3912f1fe
 - entity_type: source
+  entity_id: src-5383730b273f
+  canonical_path: evidence/sources.yaml
+  value_hash: 3d473c1dfeff8a7aa6d835bf9ac042f3d841febe3f5ba0e1b2ee0af05bf34f53
+- entity_type: source
   entity_id: src-53cd13bd410c
   canonical_path: evidence/sources.yaml
   value_hash: f14f4ac47f70cbbce46476a075a0325edaeae3efb3b5fb666e25f5e8a9fc93cb
@@ -6812,7 +6816,7 @@ records:
 - entity_type: source
   entity_id: src-752375ff0c97
   canonical_path: evidence/sources.yaml
-  value_hash: 3355c9ae1436837839a107d9185bf1d7c50b027f5f980bb3f2493077d75df174
+  value_hash: f363f918e408ea4b27d291647e243b34b724a4edc0e8617281b1e18635508d4f
 - entity_type: source
   entity_id: src-752c7dd560da
   canonical_path: evidence/sources.yaml
@@ -8076,7 +8080,7 @@ records:
 - entity_type: source
   entity_id: src-d89f8cc5b275
   canonical_path: evidence/sources.yaml
-  value_hash: 818716a14d226dc13179d19234f7220b8be41bfa36d98589326ae05721c2dee0
+  value_hash: 369d96f1b3a4987cc618e58910f7d0dd666bdffc9ccb5d5b65cca423c13d9445
 - entity_type: source
   entity_id: src-d8d48de1253a
   canonical_path: evidence/sources.yaml
@@ -14800,7 +14804,7 @@ records:
 - entity_type: task_assessment
   entity_id: task-assessment-be1ae5ae450eba5b
   canonical_path: data/task-assessments.yaml
-  value_hash: 4e56d21ac5d785b52ea2951f0fd1ff88e981bfe6aa2b95efc3a8a6c94a01ca89
+  value_hash: 5e86255a0588d364927f08fae93c7081023bbf39a36449ceb40f51b812004274
 - entity_type: task_assessment
   entity_id: task-assessment-be34131726623652
   canonical_path: data/task-assessments.yaml

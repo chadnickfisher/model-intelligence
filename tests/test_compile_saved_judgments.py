@@ -1,6 +1,20 @@
 from copy import deepcopy
 from tools.research_compile_records import compile_tasks
 
+def test_public_wording_preserves_fit_confidence_and_evidence_limitations():
+    from tools.research_compile_records import public_wording
+    original={'suitability':{'level':'medium'},'confidence':{'level':'low'},'source_ids':['snapshot-example'],
+        'limitations':['The pinned catalog retains a vendor scope-expansion warning. Its launch source has no views in revision two; it is background context, not a freshly inspected contradictory source in this result.',
+            'Empty contrary_source_ids means no directly inspectable contrary passage in the revision-two views, not consensus.',
+            'Independent evaluator used a private suite; exact-route performance unknown.']}
+    before=deepcopy(original);result=public_wording(original)
+    assert original==before and result['suitability']==original['suitability']
+    assert result['confidence']==original['confidence'] and result['source_ids']==original['source_ids']
+    assert result['limitations'][2]==original['limitations'][2]
+    assert 'unavailable for re-inspection' in result['limitations'][0]
+    assert 'does not establish consensus' in result['limitations'][1]
+    assert 'revision two' not in str(result) and 'contrary_source_ids' not in str(result)
+
 def inputs():
     source='snapshot-'+'d'*20
     payload={'task_id':'coding.scoped_edit','conclusion':'Illustrative strong fit under specified conditions',
