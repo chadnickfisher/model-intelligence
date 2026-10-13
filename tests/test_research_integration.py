@@ -1,11 +1,18 @@
-from tools.git_baselines import git_bytes, first_file_commit
+from tools.git_baselines import git_bytes, first_file_commit, git_state
 from explorer.data import load, behavior_findings
 from tools.knowledge import ROOT,read
 
 
 def test_imported_identity_gates_and_original_baseline_are_preserved():
+    import subprocess
     data=load()
-    new=[j for m in data['model'].values() for j in m['capabilities'] if j['provenance'].get('research_batch_id')=='public-research-2026-10-07']
+    # Pin the public task-rubric correction, after preference-only claims were gated.
+    commits=subprocess.check_output(['git','log','--reverse','--format=%H','--fixed-strings',
+        '--grep=Review catalog models with scoped task conclusions and uncertainty'],cwd=ROOT,text=True).splitlines()
+    assert len(commits)==1
+    imported=git_state(commits[0])
+    original_models=[m for (kind,ident),m in imported.items() if kind=='model']
+    new=[j for m in original_models for j in m['capabilities'] if j['provenance'].get('research_batch_id')=='public-research-2026-10-07']
     assert len(new)==84
     direct=[j for j in new if j['scope']=='direct']
     assert len(direct)==83 and all(len(j['task_ids'])==1 for j in direct)
@@ -13,6 +20,13 @@ def test_imported_identity_gates_and_original_baseline_are_preserved():
     related=[j for j in new if j['scope']!='direct']
     assert [(j['id'],j['scope'],j['task_ids'],j['related_task_ids']) for j in related]==[
         ('judgment-b0524d80aaeb6829','unresolved',[],['coding.review'])]
+    # Fresh evidence may replace provenance/wording but must retain model and task identity.
+    for model in original_models:
+        current={j['id']:j for j in data['model'][model['id']]['capabilities']}
+        for claim in model['capabilities']:
+            if claim['provenance'].get('research_batch_id')!='public-research-2026-10-07':continue
+            assert claim['id'] in current
+            assert all(current[claim['id']][key]==claim[key] for key in ('scope','task_ids','related_task_ids'))
     # Reported non-IT variants and pre-release checkpoints are not silently enrolled.
     assert not any(j['task_ids']==['coding.frontend'] for j in data['model']['gemma-4-31b-it']['capabilities'] if j['provenance'].get('origin')=='research')
     import yaml

@@ -33,9 +33,15 @@ def test_all_original_conclusions_and_evidence_survive():
 
 
 def test_index_retains_actual_claim_and_never_splits_bundle():
+    import yaml
     indexed = read(ROOT / 'data/capabilities.yaml')['records']
-    migrated = [j for j in indexed if j['provenance'].get('origin') != 'research']
-    assert len(migrated) == 58
+    path='history/migrations/2026-10-07-capabilities.yaml'
+    originals=yaml.safe_load(git_bytes(first_file_commit(path),path))['records']
+    migrated_ids={j['judgment_id'] for j in originals if j['original_collection']=='capabilities'
+        and j['classification']!='performance'}
+    assert len(migrated_ids)==58
+    # Current evidence provenance can change; the migration and stable IDs cannot.
+    assert migrated_ids<={j['id'] for j in indexed}
     assert len({j['id'] for j in indexed}) == len(indexed)
     current = canonical()
     for j in indexed:
