@@ -5905,29 +5905,27 @@ records:
   task_id: coding.debugging
   applicability: applicable
   result: assessed
-  checked_at: '2026-10-07'
-  rationale: The recorded agent configurations fixed real planted repository defects, making them useful for
-    assisted diagnosis and repair. Many defects remained; independent review and executable regression checks
-    are material requirements, and the result does not establish a complete audit.
+  checked_at: '2026-10-13'
+  rationale: The frozen Bug Hunt Bench README reports 41.7 of 105 planted defects fixed across three Opus 5.5/max
+    runs in Claude Code. This supports assisted diagnosis and repair under that setup; many defects remain
+    and a complete audit is not established.
   judgment_ids:
   - judgment-e494146b5a163111
-  confidence_rationale: 'Low confidence: The exact-task evidence is narrow, incompletely pinned or independently
-    unreplicated; separate configurations are not replications. The conclusion retains the cited findings,
-    their original inspection dates and the conditions below. Many planted defects remained unresolved in the
-    measured runs. Run variance and harness differences prevent fine-grained cross-model ranking.'
+  confidence_rationale: 'Low confidence: one benchmark family, three runs, withheld seeded snapshots and answer
+    keys, and no disclosed serving endpoint or immutable checkpoint. The blind judge is GPT-5.5 through Codex;
+    the score does not measure confidence or general model superiority.'
   evidence_ids:
-  - src-ad78a04807f9
-  - src-02b09208ceab
-  - src-0b72694a5dea
+  - src-e86e19b3dd2c
   conditions:
-  - Claude Code;1M window; zero compactions in this run group.
-  - 'Harness: Claude Code; effort: max; effort evidence: first_party.'
-  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
-  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
-    and budgets.
-  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
-    external reproduction.
-  - Only the source-described task subsets and setups are assessed; no equivalent provider route is assumed.
+  - Claude Code harness at max effort; exact serving endpoint, region, immutable checkpoint and client build
+    are not disclosed by the frozen README.
+  - 105 planted defects across a TypeScript VS Code extension and a React/Supabase LMS. Repo 1 derives from
+    a public extension; repo 2 is a private product. Both seeded snapshots and answer keys are withheld.
+  - One agentic round per repository with native CLI tools, identical task prompts, no network and no Git history.
+    Different model configurations are not controlled equivalents.
+  - GPT-5.5 through Codex grades blinded diffs against withheld answer keys; extra unplanted fixes are excluded.
+  - The exact Opus 5.5/max row reports three runs, mean 41.7/105, 19/45 and 22.7/60, labeled September 23,
+    2026.
   remaining_gaps:
   - Many planted defects remained unresolved in the measured runs.
   - Run variance and harness differences prevent fine-grained cross-model ranking.
@@ -5936,38 +5934,35 @@ records:
     policy_version: '1'
     suitability: medium
     evidence_confidence: low
-    assessed_at: '2026-10-08'
-    rationale: The recorded agent configurations fixed real planted repository defects, making them useful
-      for assisted diagnosis and repair. Many defects remained; independent review and executable regression
-      checks are material requirements, and the result does not establish a complete audit.
-    confidence_rationale: 'Low confidence: The exact-task evidence is narrow, incompletely pinned or independently
-      unreplicated; separate configurations are not replications. The conclusion retains the cited findings,
-      their original inspection dates and the conditions below. Many planted defects remained unresolved in
-      the measured runs. Run variance and harness differences prevent fine-grained cross-model ranking.'
+    assessed_at: '2026-10-13'
+    rationale: The frozen Bug Hunt Bench README reports 41.7 of 105 planted defects fixed across three Opus
+      5.5/max runs in Claude Code. This supports assisted diagnosis and repair under that setup; many defects
+      remain and a complete audit is not established.
+    confidence_rationale: 'Low confidence: one benchmark family, three runs, withheld seeded snapshots and
+      answer keys, and no disclosed serving endpoint or immutable checkpoint. The blind judge is GPT-5.5 through
+      Codex; the score does not measure confidence or general model superiority.'
     supporting_evidence_ids:
-    - src-ad78a04807f9
-    - src-02b09208ceab
-    - src-0b72694a5dea
+    - src-e86e19b3dd2c
     contradictory_evidence_ids: []
     conflict_rationale: null
     watch_outs:
     - Many planted defects remained unresolved in the measured runs.
     - Run variance and harness differences prevent fine-grained cross-model ranking.
     - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+    - Seeded snapshots and answer keys are withheld; exact serving endpoint and immutable checkpoint are undisclosed.
     access_ids: []
 - model_id: claude-opus-5-5
   task_id: coding.frontend
   applicability: applicable
   result: unknown
-  checked_at: '2026-10-07'
-  rationale: Relative frontend preference evidence can guide a shortlist, but it does not establish executable
-    interactions, acceptance checks or maintainable implementation for this task. Retain the preference results
-    without converting rank into task fit.
+  checked_at: '2026-10-13'
+  rationale: The October 8 Arena snapshot reports Opus 5.5/max at 1857 with a plus/minus 19 interval and 1,687
+    anonymous community preference votes. Preference can guide frontend trials, but executable interactions,
+    accessibility, tests and maintainability remain unestablished for this task rubric.
   judgment_ids:
   - judgment-cd273215e58beb5c
-  confidence_rationale: 'No aggregate confidence badge: Relative frontend preference evidence can guide a shortlist,
-    but it does not establish executable interactions, acceptance checks or maintainable implementation for
-    this task. Retain the preference results without converting rank into task fit.'
+  confidence_rationale: 'No aggregate confidence badge: the inspected evidence measures human preference rather
+    than executable frontend acceptance, and the serving endpoint and immutable checkpoint are not disclosed.'
   evidence_ids:
   - src-4e6f4ff35504
   - src-2bf9d5fecb2c
@@ -5979,6 +5974,8 @@ records:
     checkpoint hashes.
   - exact_named_release_effort_retained
   - Only the source-described task subsets and setups are assessed; no equivalent provider route is assumed.
+  - October 8 snapshot inspected October 13; anonymous pairwise voting is aggregated using Bradley-Terry, not
+    an executable pass rate.
   remaining_gaps:
   - Relative frontend preference evidence can guide a shortlist, but it does not establish executable interactions,
     acceptance checks or maintainable implementation for this task. Retain the preference results without converting
@@ -5988,13 +5985,13 @@ records:
     policy_version: '1'
     suitability: unknown
     evidence_confidence: null
-    assessed_at: '2026-10-08'
-    rationale: Relative frontend preference evidence can guide a shortlist, but it does not establish executable
-      interactions, acceptance checks or maintainable implementation for this task. Retain the preference results
-      without converting rank into task fit.
-    confidence_rationale: 'No aggregate confidence badge: Relative frontend preference evidence can guide a
-      shortlist, but it does not establish executable interactions, acceptance checks or maintainable implementation
-      for this task. Retain the preference results without converting rank into task fit.'
+    assessed_at: '2026-10-13'
+    rationale: The October 8 Arena snapshot reports Opus 5.5/max at 1857 with a plus/minus 19 interval and
+      1,687 anonymous community preference votes. Preference can guide frontend trials, but executable interactions,
+      accessibility, tests and maintainability remain unestablished for this task rubric.
+    confidence_rationale: 'No aggregate confidence badge: the inspected evidence measures human preference
+      rather than executable frontend acceptance, and the serving endpoint and immutable checkpoint are not
+      disclosed.'
     supporting_evidence_ids:
     - src-4e6f4ff35504
     - src-2bf9d5fecb2c

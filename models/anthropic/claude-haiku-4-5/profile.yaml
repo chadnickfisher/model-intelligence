@@ -104,7 +104,7 @@ additional_specifications:
     - src-5c510b458547
   default_api_effort:
     value: null
-    status: unknown
+    status: documented
     conditions: []
     evidence_ids:
     - src-e1910c5126bc
@@ -133,8 +133,8 @@ additional_specifications:
     value: '2026-10-15'
     status: documented
     conditions:
-    - Creator API lifecycle boundary; AWS Haiku card separately says no sooner than 2026-10-01. Neither is
-      an announced shutdown.
+    - Creator API retirement floor is 2026-10-15; Amazon Bedrock separately documents EOL no sooner than 2026-10-16.
+      Neither is an announced shutdown.
     evidence_ids:
     - src-e1910c5126bc
     - src-f3655eaf1407

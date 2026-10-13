@@ -341,7 +341,7 @@ Local conditions: Not established in this pass
 
 | Provider | Tier / status | Rates | Conditions | Verified |
 |---|---|---|---|---|
-| anthropic | Standard / current | input: 2 USD / per 1 million tokens; output: 10 USD / per 1 million tokens; cached_input: unknown USD / per 1 million tokens; cache_write_5m: 2.5 USD / per 1 million tokens; cache_write_1h: 4 USD / per 1 million tokens | Not established in this pass | 2026-10-07 |
+| anthropic | Standard / current | input: 2 USD / per 1 million tokens; output: 10 USD / per 1 million tokens; cached_input: 0.1 USD / per 1 million tokens; cache_write_5m: 2.5 USD / per 1 million tokens; cache_write_1h: 4 USD / per 1 million tokens | Claude API standard global routing. US-only inference_geo applies a 1.1x multiplier to all token categories.; Published tariff verification only; account-specific billing and negotiated discounts are unverified. | 2026-10-13 |
 | anthropic | Batch / current | input: 1.0 USD / per 1 million tokens; output: 5.0 USD / per 1 million tokens | Not established in this pass | 2026-10-07 |
 
 ## Recorded access routes
@@ -353,7 +353,7 @@ Local conditions: Not established in this pass
 - anthropic / Claude API: officially_documented_not_execution_tested. Not established in this pass
 - google-cloud / Gemini Enterprise Agent Platform (formerly Vertex AI): officially_documented_not_execution_tested. Not established in this pass
 - anthropic / Claude apps: Conditional consumer/client product; exact account entitlement unverified. 5.5 app model is documented; current plan table lists Sonnet for Free and paid plans. Exact Free picker routing/remaining allowance not verified.
-- azure-foundry / Claude in Microsoft Foundry / Hosted on Azure: officially_documented_not_execution_tested. Message Batches, Models API and server-side fallback are unsupported on Foundry.; New computer/browser toolsets are unsupported; older beta computer tools are separate.; Code execution, Files API, Agent Skills and programmatic tool calling are unsupported on Azure hosting.; Azure hosting permits only basic web_search_20250305 and web_fetch_20250910 tools.; Sonnet 5.5 supports Global Standard only; US Data Zone is unavailable.
+- azure-foundry / Claude in Microsoft Foundry / Hosted on Azure: officially_documented_not_execution_tested. Message Batches, Models API and server-side fallback are unsupported on Foundry.; New computer/browser toolsets are unsupported; older beta computer tools are separate.; Code execution, Files API, Agent Skills and programmatic tool calling are unsupported on Azure hosting.; Azure hosting permits only basic web_search_20250305 and web_fetch_20250910 tools.; Current Microsoft model-specific table supports Sonnet5.5 Data Zone Standard (US) on Azure hosting; exact regional deployment availability and private quota are unverified.
 - anthropic / Claude Code terminal and IDE: Conditional consumer/client product; exact account entitlement unverified. Full model IDs can be selected subject to plan and organization permissions. Separate subscription sign-in from API-key/partner billing.
 - anthropic / Claude API: Active. quota: Tier/account-specific; exact numeric public tier table not captured
 - aws-bedrock / Amazon Bedrock: Listed by creator; independent provider pricing and regional entitlement not verified. Not established in this pass

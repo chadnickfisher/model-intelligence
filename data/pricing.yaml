@@ -1198,55 +1198,60 @@ records:
   - src-4d070c5c8c67
   notes:
   - 50% input/output discount; cache/tool charges should be checked separately
-- schema_version: '1.0'
-  id: price-proprietary-claude-sonnet-5-5-anthropic-706ffb2ac9c2
-  verified_at: '2026-10-07'
-  model_id: claude-sonnet-5-5
-  provider_id: anthropic
-  product: null
-  model_label: claude-sonnet-5-5
-  billing_method: metered-api
-  status: current
-  region: null
-  tier: Standard
+- billing_method: metered-api
+  conditions:
+  - Claude API standard global routing. US-only inference_geo applies a 1.1x multiplier to all token categories.
+  - Published tariff verification only; account-specific billing and negotiated discounts are unverified.
   effective_from: null
   effective_to: null
-  rates:
-  - metric: input
-    amount: 2
-    currency: USD
-    unit: per 1 million tokens
-    conditions: []
-  - metric: output
-    amount: 10
-    currency: USD
-    unit: per 1 million tokens
-    conditions: []
-  - metric: cached_input
-    amount: null
-    currency: USD
-    unit: per 1 million tokens
-    conditions:
-    - 'Conflicting current documentation: Sonnet 5.5 overview and pricing table list USD 0.20 per million cache-read
-      tokens; pricing-page multiplier section says USD 0.10. Actual billed rate unresolved.'
-  - metric: cache_write_5m
-    amount: 2.5
-    currency: USD
-    unit: per 1 million tokens
-    conditions: []
-  - metric: cache_write_1h
-    amount: 4
-    currency: USD
-    unit: per 1 million tokens
-    conditions: []
-  included_usage: []
-  reset_cadence: null
-  overage: []
-  conditions: []
   evidence_ids:
   - src-752375ff0c97
   - src-50846cd1ff36
-  notes: []
+  - src-4e3ca8a95d36
+  id: price-proprietary-claude-sonnet-5-5-anthropic-706ffb2ac9c2
+  included_usage: []
+  model_id: claude-sonnet-5-5
+  model_label: claude-sonnet-5-5
+  notes:
+  - Current documentation agrees on USD 0.10/MTok cache reads; original launch article still reports USD 0.20.
+    No effective-change day is established.
+  overage: []
+  product: null
+  provider_id: anthropic
+  rates:
+  - amount: 2
+    conditions: []
+    currency: USD
+    metric: input
+    unit: per 1 million tokens
+  - amount: 10
+    conditions: []
+    currency: USD
+    metric: output
+    unit: per 1 million tokens
+  - amount: 0.1
+    conditions:
+    - Current Sonnet 5.5 overview and tariff both list USD 0.10/MTok. September 28 release article retains
+      USD 0.20; historical difference is not an established effective-date change. Actual billing not tested.
+    currency: USD
+    metric: cached_input
+    unit: per 1 million tokens
+  - amount: 2.5
+    conditions: []
+    currency: USD
+    metric: cache_write_5m
+    unit: per 1 million tokens
+  - amount: 4
+    conditions: []
+    currency: USD
+    metric: cache_write_1h
+    unit: per 1 million tokens
+  region: null
+  reset_cadence: null
+  schema_version: '1.0'
+  status: current
+  tier: Standard
+  verified_at: '2026-10-13'
 - schema_version: '1.0'
   id: price-proprietary-claude-sonnet-5-5-anthropic-ed2559301c6f
   verified_at: '2026-10-07'
@@ -3023,45 +3028,48 @@ records:
   notes:
   - Superseded by dated 2026-10-07 model/provider price observation; service-effective change date remains
     unknown.
-- schema_version: '1.0'
-  id: price-providers-xai-grok-4-7-xai-39519ba1474e
-  verified_at: '2026-10-06'
-  model_id: xai-grok-4-7
-  provider_id: xai
-  product: API
-  model_label: grok-4.7
-  billing_method: metered-api
-  status: current
-  region: global endpoint; model UI shows us-east-1
-  tier: standard, short context
+- billing_method: metered-api
+  conditions:
+  - Global xAI API short-context standard tariff; USD per million tokens.
+  - General tariff marks long context at >=200k, while model-detail and prose say exceeds/above 200k; exactly
+    200k remains inconsistent across official wording.
+  - Once long-context pricing applies, all request tokens use long-context rates. US regional endpoint has
+    a separate 10% token premium; server-side tools can add invocation charges.
   effective_from: null
   effective_to: null
-  rates:
-  - metric: input
-    amount: 2
-    currency: USD
-    unit: per 1M tokens
-    conditions: []
-  - metric: cached_input
-    amount: 0.5
-    currency: USD
-    unit: per 1M tokens
-    conditions: []
-  - metric: output
-    amount: 6
-    currency: USD
-    unit: per 1M tokens
-    conditions: []
-  included_usage: []
-  reset_cadence: null
-  overage: []
-  conditions:
-  - Higher-context pricing exists above 200k; exact boundary/rates require reconciliation with general page.
-    These are base displayed rates.
-  - not stated
   evidence_ids:
   - src-d14fea025626
+  - src-dedf56167aa3
+  id: price-providers-xai-grok-4-7-xai-39519ba1474e
+  included_usage: []
+  model_id: xai-grok-4-7
+  model_label: grok-4.7
   notes: []
+  overage: []
+  product: API
+  provider_id: xai
+  rates:
+  - amount: 2
+    conditions: []
+    currency: USD
+    metric: input
+    unit: per 1M tokens
+  - amount: 0.5
+    conditions: []
+    currency: USD
+    metric: cached_input
+    unit: per 1M tokens
+  - amount: 6
+    conditions: []
+    currency: USD
+    metric: output
+    unit: per 1M tokens
+  region: global endpoint; model UI shows us-east-1
+  reset_cadence: null
+  schema_version: '1.0'
+  status: current
+  tier: standard, short context
+  verified_at: '2026-10-13'
 - schema_version: '1.0'
   id: price-providers-api-xai-35fe1f107006
   verified_at: '2026-10-06'
@@ -5921,172 +5929,184 @@ records:
   - src-5a910d3cd807
   notes:
   - Rates observed today; published effective-start date unknown.
-- schema_version: '1.0'
+- billing_method: metered-api
+  conditions:
+  - Prompt <=100,000 tokens
+  - Global routing at published base rates; US-only inference_geo us applies 1.1× to every token category.
+    Server-side tools may add separate charges.
+  - Prompt length includes all input tokens, including cache reads and writes; the higher tier applies to the
+    entire individual request.
+  effective_from: '2026-10-07'
+  effective_to: null
+  evidence_ids:
+  - src-50846cd1ff36
+  - src-cdb1d51fae04
   id: price-729ac6158cd411fd
-  verified_at: '2026-10-07'
+  included_usage: []
   model_id: claude-haiku-5-5
   model_label: claude-haiku-5-5
-  provider_id: anthropic
+  notes: []
+  overage: []
   product: Claude API
+  provider_id: anthropic
+  rates:
+  - amount: 0.1
+    conditions: []
+    currency: USD
+    metric: input
+    unit: per 1 million tokens
+  - amount: 0.5
+    conditions: []
+    currency: USD
+    metric: output
+    unit: per 1 million tokens
+  - amount: 0.01
+    conditions: []
+    currency: USD
+    metric: cached_input
+    unit: per 1 million tokens
+  - amount: 0.125
+    conditions: []
+    currency: USD
+    metric: cache_write_5m
+    unit: per 1 million tokens
+  - amount: 0.2
+    conditions: []
+    currency: USD
+    metric: cache_write_1h
+    unit: per 1 million tokens
+  region: global
+  reset_cadence: null
+  schema_version: '1.0'
+  status: current
   tier: Standard / <=100k
-  status: current
-  billing_method: metered-api
-  region: global
-  rates:
-  - metric: input
-    amount: 0.1
-    currency: USD
-    unit: per 1 million tokens
-    conditions: []
-  - metric: output
-    amount: 0.5
-    currency: USD
-    unit: per 1 million tokens
-    conditions: []
-  - metric: cached_input
-    amount: 0.01
-    currency: USD
-    unit: per 1 million tokens
-    conditions: []
-  - metric: cache_write_5m
-    amount: 0.125
-    currency: USD
-    unit: per 1 million tokens
-    conditions: []
-  - metric: cache_write_1h
-    amount: 0.2
-    currency: USD
-    unit: per 1 million tokens
-    conditions: []
-  included_usage: []
-  overage: []
-  reset_cadence: null
+  verified_at: '2026-10-07'
+- billing_method: metered-api
   conditions:
-  - Prompt <=100,000 tokens
+  - Prompt >100,000 tokens
   - Global routing at published base rates; US-only inference_geo us applies 1.1× to every token category.
     Server-side tools may add separate charges.
+  - Prompt length includes all input tokens, including cache reads and writes; the higher tier applies to the
+    entire individual request.
   effective_from: '2026-10-07'
   effective_to: null
   evidence_ids:
   - src-50846cd1ff36
-  notes: []
-- schema_version: '1.0'
+  - src-cdb1d51fae04
   id: price-033812acbb533c13
-  verified_at: '2026-10-07'
+  included_usage: []
   model_id: claude-haiku-5-5
   model_label: claude-haiku-5-5
-  provider_id: anthropic
-  product: Claude API
-  tier: Standard / >100k
-  status: current
-  billing_method: metered-api
-  region: global
-  rates:
-  - metric: input
-    amount: 0.5
-    currency: USD
-    unit: per 1 million tokens
-    conditions: []
-  - metric: output
-    amount: 2.5
-    currency: USD
-    unit: per 1 million tokens
-    conditions: []
-  - metric: cached_input
-    amount: 0.05
-    currency: USD
-    unit: per 1 million tokens
-    conditions: []
-  - metric: cache_write_5m
-    amount: 0.625
-    currency: USD
-    unit: per 1 million tokens
-    conditions: []
-  - metric: cache_write_1h
-    amount: 1
-    currency: USD
-    unit: per 1 million tokens
-    conditions: []
-  included_usage: []
-  overage: []
-  reset_cadence: null
-  conditions:
-  - Prompt >100,000 tokens
-  - Global routing at published base rates; US-only inference_geo us applies 1.1× to every token category.
-    Server-side tools may add separate charges.
-  effective_from: '2026-10-07'
-  effective_to: null
-  evidence_ids:
-  - src-50846cd1ff36
   notes: []
-- schema_version: '1.0'
-  id: price-851b345d1ce20f50
-  verified_at: '2026-10-07'
-  model_id: claude-haiku-5-5
-  model_label: claude-haiku-5-5
-  provider_id: anthropic
-  product: Claude API
-  tier: Batch / <=100k
-  status: current
-  billing_method: metered-api
-  region: global
-  rates:
-  - metric: input
-    amount: 0.05
-    currency: USD
-    unit: per 1 million tokens
-    conditions: []
-  - metric: output
-    amount: 0.25
-    currency: USD
-    unit: per 1 million tokens
-    conditions: []
-  included_usage: []
   overage: []
+  product: Claude API
+  provider_id: anthropic
+  rates:
+  - amount: 0.5
+    conditions: []
+    currency: USD
+    metric: input
+    unit: per 1 million tokens
+  - amount: 2.5
+    conditions: []
+    currency: USD
+    metric: output
+    unit: per 1 million tokens
+  - amount: 0.05
+    conditions: []
+    currency: USD
+    metric: cached_input
+    unit: per 1 million tokens
+  - amount: 0.625
+    conditions: []
+    currency: USD
+    metric: cache_write_5m
+    unit: per 1 million tokens
+  - amount: 1
+    conditions: []
+    currency: USD
+    metric: cache_write_1h
+    unit: per 1 million tokens
+  region: global
   reset_cadence: null
+  schema_version: '1.0'
+  status: current
+  tier: Standard / >100k
+  verified_at: '2026-10-07'
+- billing_method: metered-api
   conditions:
   - Prompt <=100,000 tokens
   - Global routing at published base rates; US-only inference_geo us applies 1.1× to every token category.
     Server-side tools may add separate charges.
+  - Prompt length includes all input tokens, including cache reads and writes; the higher tier applies to the
+    entire individual request.
   effective_from: '2026-10-07'
   effective_to: null
   evidence_ids:
   - src-50846cd1ff36
-  notes: []
-- schema_version: '1.0'
-  id: price-ff990a87ae69bd0a
-  verified_at: '2026-10-07'
+  - src-cdb1d51fae04
+  id: price-851b345d1ce20f50
+  included_usage: []
   model_id: claude-haiku-5-5
   model_label: claude-haiku-5-5
-  provider_id: anthropic
-  product: Claude API
-  tier: Batch / >100k
-  status: current
-  billing_method: metered-api
-  region: global
-  rates:
-  - metric: input
-    amount: 0.25
-    currency: USD
-    unit: per 1 million tokens
-    conditions: []
-  - metric: output
-    amount: 1.25
-    currency: USD
-    unit: per 1 million tokens
-    conditions: []
-  included_usage: []
+  notes: []
   overage: []
+  product: Claude API
+  provider_id: anthropic
+  rates:
+  - amount: 0.05
+    conditions: []
+    currency: USD
+    metric: input
+    unit: per 1 million tokens
+  - amount: 0.25
+    conditions: []
+    currency: USD
+    metric: output
+    unit: per 1 million tokens
+  region: global
   reset_cadence: null
+  schema_version: '1.0'
+  status: current
+  tier: Batch / <=100k
+  verified_at: '2026-10-07'
+- billing_method: metered-api
   conditions:
   - Prompt >100,000 tokens
   - Global routing at published base rates; US-only inference_geo us applies 1.1× to every token category.
     Server-side tools may add separate charges.
+  - Prompt length includes all input tokens, including cache reads and writes; the higher tier applies to the
+    entire individual request.
   effective_from: '2026-10-07'
   effective_to: null
   evidence_ids:
   - src-50846cd1ff36
+  - src-cdb1d51fae04
+  id: price-ff990a87ae69bd0a
+  included_usage: []
+  model_id: claude-haiku-5-5
+  model_label: claude-haiku-5-5
   notes: []
+  overage: []
+  product: Claude API
+  provider_id: anthropic
+  rates:
+  - amount: 0.25
+    conditions: []
+    currency: USD
+    metric: input
+    unit: per 1 million tokens
+  - amount: 1.25
+    conditions: []
+    currency: USD
+    metric: output
+    unit: per 1 million tokens
+  region: global
+  reset_cadence: null
+  schema_version: '1.0'
+  status: current
+  tier: Batch / >100k
+  verified_at: '2026-10-07'
 - schema_version: '1.0'
   id: price-kimi-k3-together-observed-2026-10-07
   verified_at: '2026-10-07'

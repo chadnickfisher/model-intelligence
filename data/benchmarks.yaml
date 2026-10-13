@@ -246,29 +246,12 @@ records:
   evidence_notes:
   - '{"harness_families": 1, "metric": "published_model_route_score_v2_percent", "not_pass_at_1": true, "observations":
     226, "score": 93, "tasks": 226}'
-- schema_version: '1.0'
-  id: benchmark-899e981e916002fc
-  model_id: claude-opus-5-5
-  judgment_ids:
-  - judgment-cd273215e58beb5c
-  benchmark:
-    name: Arena Frontend
-    version: null
-    metric: preference rating
-    unit: Arena rating
+- benchmark:
     direction: higher
-  value: 1859
-  model_version: claude-opus-5.5-max
-  harness: null
-  effort: null
-  provider_id: null
-  tools: null
-  measured_at: null
-  observed_at: '2026-10-07'
-  evidence_class: preference
-  source_ids:
-  - src-4e6f4ff35504
-  - src-2bf9d5fecb2c
+    metric: preference rating
+    name: Arena Frontend
+    unit: Arena rating
+    version: null
   conditions:
   - Frontend generation under hosted Arena configurations
   - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
@@ -278,6 +261,21 @@ records:
   - exact_named_release_effort_retained
   - Anonymous community pairwise judgments; Bradley-Terry aggregation. Vote count is not unique tasks or replicated
     trials.
+  - 'Inspected leaderboard is labeled Oct 8, 2026: claude-opus-5.5-max, 1857 +/-19, 1,687 votes, rank spread
+    1–1. This label is a leaderboard snapshot, not a single measurement day.'
+  - 'Evaluator: anonymous community human voters making pairwise preferences, aggregated using Bradley-Terry;
+    no LLM judge is disclosed for these votes.'
+  effort: max
+  evidence_class: preference
+  evidence_notes:
+  - '{"model_id": "claude-opus-5-5", "preliminary": false, "rank_spread": "1–1", "reported_model": "claude-opus-5.5-max",
+    "score": 1859, "score_interval_plus_minus": 19}'
+  - 'Fresh October 8 snapshot: claude-opus-5.5-max, 1857 +/-19, rank spread 1-1, 1,687 votes. Historical 1859
+    observed October 7 is retained, not freshly reproduced; movement is immaterial within the interval.'
+  harness: null
+  id: benchmark-899e981e916002fc
+  judgment_ids:
+  - judgment-cd273215e58beb5c
   limitations:
   - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
     rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
@@ -285,11 +283,17 @@ records:
   - Preference evidence; user/task mix and harness effects require consideration.
   - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
     comparability.
-  evidence_notes:
-  - '{"model_id": "claude-opus-5-5", "preliminary": false, "rank_spread": "1–1", "reported_model": "claude-opus-5.5-max",
-    "score": 1859, "score_interval_plus_minus": 19}'
-  - 'Fresh October 8 snapshot: claude-opus-5.5-max, 1857 +/-19, rank spread 1-1, 1,687 votes. Historical 1859
-    observed October 7 is retained, not freshly reproduced; movement is immaterial within the interval.'
+  measured_at: null
+  model_id: claude-opus-5-5
+  model_version: claude-opus-5.5-max
+  observed_at: '2026-10-13'
+  provider_id: null
+  schema_version: '1.0'
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  tools: null
+  value: 1857
 - schema_version: '1.0'
   id: benchmark-baf6e2f186535f58
   model_id: gpt-6-astra
@@ -330,69 +334,47 @@ records:
   evidence_notes:
   - '{"model_id": "gpt-6-astra", "preliminary": false, "rank_spread": "2–3", "reported_model": "gpt-6-astra-max",
     "score": 1810, "score_interval_plus_minus": 13}'
-- schema_version: '1.0'
+- benchmark:
+    direction: higher
+    metric: preference rating
+    name: Arena Frontend
+    unit: Arena rating
+    version: null
+  conditions:
+  - Frontend anonymous human preference; claude-sonnet-5.5-xhigh;1833 votes; rating1813 with±17, rank spread2–3.
+  effort: xhigh
+  evidence_class: preference
+  evidence_notes:
+  - Snapshot inspected October13. Exact voting window, immutable checkpoint, serving provider and client build
+    undisclosed. Bradley–Terry preference score, not coding pass rate.
+  harness: null
   id: benchmark-a492335db6daf5d2
-  model_id: claude-sonnet-5-5
   judgment_ids:
   - judgment-6696d66817b015d5
-  benchmark:
-    name: Arena Frontend
-    version: null
-    metric: preference rating
-    unit: Arena rating
-    direction: higher
-  value: 1810
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  measured_at: null
+  model_id: claude-sonnet-5-5
   model_version: claude-sonnet-5.5-xhigh
-  harness: null
-  effort: null
+  observed_at: '2026-10-13'
   provider_id: null
-  tools: null
-  measured_at: null
-  observed_at: '2026-10-07'
-  evidence_class: preference
+  schema_version: '1.0'
   source_ids:
   - src-4e6f4ff35504
   - src-2bf9d5fecb2c
-  conditions:
-  - Frontend generation under hosted Arena configurations
-  - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
-    security and maintenance checks.
-  - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
-    checkpoint hashes.
-  - exact_named_release_effort_retained
-  limitations:
-  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
-    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
-    Preliminary rows remain preliminary.
-  - Preference evidence; user/task mix and harness effects require consideration.
-  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
-    comparability.
-  evidence_notes:
-  - '{"model_id": "claude-sonnet-5-5", "preliminary": false, "rank_spread": "2–3", "reported_model": "claude-sonnet-5.5-xhigh",
-    "score": 1810, "score_interval_plus_minus": 18}'
-- schema_version: '1.0'
-  id: benchmark-e18712235a38da5c
-  model_id: claude-fable-5-1
-  judgment_ids:
-  - judgment-2b7a37781171e7e2
-  benchmark:
-    name: Arena Frontend
-    version: null
-    metric: preference rating
-    unit: Arena rating
+  tools: null
+  value: 1813
+- benchmark:
     direction: higher
-  value: 1779
-  model_version: claude-fable-5.1-max
-  harness: null
-  effort: null
-  provider_id: null
-  tools: null
-  measured_at: null
-  observed_at: '2026-10-07'
-  evidence_class: preference
-  source_ids:
-  - src-4e6f4ff35504
-  - src-2bf9d5fecb2c
+    metric: preference rating
+    name: Arena Frontend
+    unit: Arena rating
+    version: null
   conditions:
   - Frontend generation under hosted Arena configurations
   - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
@@ -400,16 +382,33 @@ records:
   - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
     checkpoint hashes.
   - exact_named_release_effort_retained
-  limitations:
-  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
-    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
-    Preliminary rows remain preliminary.
-  - Preference evidence; user/task mix and harness effects require consideration.
-  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
-    comparability.
+  effort: max
+  evidence_class: preference
   evidence_notes:
   - '{"model_id": "claude-fable-5-1", "preliminary": false, "rank_spread": "4–5", "reported_model": "claude-fable-5.1-max",
-    "score": 1779, "score_interval_plus_minus": 11}'
+    "score": 1778, "score_interval_plus_minus": 11, "votes": 5284, "leaderboard_updated_at": "2026-10-08"}'
+  harness: null
+  id: benchmark-e18712235a38da5c
+  judgment_ids:
+  - judgment-2b7a37781171e7e2
+  limitations:
+  - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
+    rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
+    Preliminary rows remain preliminary.
+  - Preference evidence; user/task mix and harness effects require consideration.
+  - Setup fields left null where not independently specified; shared benchmark name does not establish controlled
+    comparability.
+  measured_at: null
+  model_id: claude-fable-5-1
+  model_version: claude-fable-5.1-max
+  observed_at: '2026-10-13'
+  provider_id: null
+  schema_version: '1.0'
+  source_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  tools: null
+  value: 1778
 - schema_version: '1.0'
   id: benchmark-c5c424b3a73c6a5c
   model_id: gpt-6-1-sol
@@ -1194,43 +1193,40 @@ records:
   - Exact harness build, tools, provider endpoint and measurement date remain unverified.
   evidence_notes:
   - Corrected test identity and evidence class from the original reporting page; numeric result unchanged.
-- schema_version: '1.0'
+- benchmark:
+    direction: higher
+    metric: planted defects fixed
+    name: Bug Hunt Bench
+    unit: mean planted defects fixed out of 105
+    version: 1217192a6d04e89da3f6106ca3a304d2734882eb
+  conditions:
+  - Max effort; three-run mean 51.3/105 planted defects. One seeded repository derives from a public extension
+    and the second from a private LMS; both seeded snapshots and answer keys are withheld.
+  - The frozen README labels the exact result row September 29, 2026, but the precise run window and serving
+    endpoint are not disclosed.
+  effort: max
+  evidence_class: independent_quality
+  evidence_notes:
+  - 'Blind diff-versus-answer-key LLM scoring: GPT5.5 through Codex for Anthropic arms. Exact client build
+    not reverified; underlying run notes could not be fetched.'
+  harness: Claude Code
   id: benchmark-ac7d2d91379a30b6
-  model_id: claude-sonnet-5-5
   judgment_ids:
   - judgment-fb34061351983c89
-  benchmark:
-    name: Bug Hunt Bench
-    version: 1217192a6d04e89da3f6106ca3a304d2734882eb
-    metric: planted defects fixed
-    unit: mean planted defects fixed out of 105
-    direction: higher
-  value: 51.3
-  model_version: Sonnet 5.5 (max effort) - mean of 3
-  harness: null
-  effort: max
-  provider_id: null
-  tools: null
-  measured_at: '2026-09-29'
-  observed_at: '2026-10-07'
-  evidence_class: independent_quality
-  source_ids:
-  - src-ad78a04807f9
-  - src-02b09208ceab
-  - src-0b72694a5dea
-  conditions:
-  - claude-sonnet-5-5[1m]; Claude Code2.1.283; compaction occurred.
-  - 'Harness: Claude Code; effort: max; effort evidence: first_party.'
-  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
-  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
-    and budgets.
-  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
-    external reproduction.
   limitations:
   - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
-  evidence_notes:
-  - '{"fixed_of_105": 51.3, "individual_scores": [57, 54, 43], "measured_at": "2026-09-29", "n_runs": 3, "repo1_fixed_of45":
-    22.7, "repo2_fixed_of60": 28.7, "row_id": "Sonnet 5.5 (max effort) - mean of 3"}'
+  - Seeded snapshots, answer keys and judge transcripts are withheld. Exact serving provider, immutable checkpoint
+    and client build remain unspecified; run notes were unavailable.
+  measured_at: null
+  model_id: claude-sonnet-5-5
+  model_version: Sonnet 5.5 (max effort) - mean of 3
+  observed_at: '2026-10-13'
+  provider_id: null
+  schema_version: '1.0'
+  source_ids:
+  - src-e86e19b3dd2c
+  tools: null
+  value: 51.3
 - schema_version: '1.0'
   id: benchmark-a13cae876fca7ebf
   model_id: gpt-6-astra
@@ -1361,43 +1357,55 @@ records:
   - Requested effort is documented first-party max, not independently probed as binding.
   - Per-repository metric receipts identify claude-fable-5-1 and requested [1m] context; exact endpoint/build
     unknown.
-- schema_version: '1.0'
-  id: benchmark-f80fe80eb23c9afa
-  model_id: claude-opus-5-5
-  judgment_ids:
-  - judgment-e494146b5a163111
-  benchmark:
-    name: Bug Hunt Bench
-    version: 1217192a6d04e89da3f6106ca3a304d2734882eb
-    metric: planted defects fixed
-    unit: mean planted defects fixed out of 105
+- benchmark:
     direction: higher
-  value: 41.7
-  model_version: Opus 5.5 (max effort) - mean of 3
-  harness: null
-  effort: max
-  provider_id: null
-  tools: null
-  measured_at: '2026-09-23'
-  observed_at: '2026-10-07'
-  evidence_class: independent_quality
-  source_ids:
-  - src-ad78a04807f9
-  - src-02b09208ceab
-  - src-0b72694a5dea
+    metric: planted defects fixed
+    name: Bug Hunt Bench
+    unit: mean planted defects fixed out of 105
+    version: 1217192a6d04e89da3f6106ca3a304d2734882eb
   conditions:
-  - Claude Code;1M window; zero compactions in this run group.
-  - 'Harness: Claude Code; effort: max; effort evidence: first_party.'
-  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
-  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
-    and budgets.
-  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
-    external reproduction.
-  limitations:
-  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  - Claude Code harness at max effort; exact serving endpoint, region, immutable checkpoint and client build
+    are not disclosed by the frozen README.
+  - 105 planted defects across a TypeScript VS Code extension and a React/Supabase LMS. Repo 1 derives from
+    a public extension; repo 2 is a private product. Both seeded snapshots and answer keys are withheld.
+  - One agentic round per repository with native CLI tools, identical task prompts, no network and no Git history.
+    Different model configurations are not controlled equivalents.
+  - GPT-5.5 through Codex grades blinded diffs against withheld answer keys; extra unplanted fixes are excluded.
+  - The exact Opus 5.5/max row reports three runs, mean 41.7/105, 19/45 and 22.7/60, labeled September 23,
+    2026.
+  effort: max
+  evidence_class: independent_quality
   evidence_notes:
   - '{"fixed_of_105": 41.7, "individual_scores": [43, 39, 43], "measured_at": "2026-09-23", "n_runs": 3, "repo1_fixed_of45":
     19, "repo2_fixed_of60": 22.7, "row_id": "Opus 5.5 (max effort) - mean of 3"}'
+  - Historical artifact references could not be freshly inspected; current setup correction is supported solely
+    by the original frozen main README. Failed retrievals remain captured.
+  - Individual-run scores, 1M context and zero-compaction metadata are retained as historical context from
+    the prior record and its original artifact references. Those artifacts were unavailable in this inspection;
+    none of those details was freshly verified from the README.
+  harness: Claude Code
+  id: benchmark-f80fe80eb23c9afa
+  judgment_ids:
+  - judgment-e494146b5a163111
+  limitations:
+  - Configurations are not controlled equivalents; scores are task/setup-specific and never evidence confidence.
+  - Seeded repositories, answer keys and judge transcripts are private; secondary-judge calibration concerns
+    six early repo-1 arms, not demonstrated replication of every Opus 5.5 run.
+  - Original JSON/results README fetches failed; the fully retained original frozen main README supplies the
+    exact result row and methodology.
+  measured_at: '2026-09-23'
+  model_id: claude-opus-5-5
+  model_version: Opus 5.5 (max effort) - mean of 3
+  observed_at: '2026-10-07'
+  provider_id: null
+  schema_version: '1.0'
+  source_ids:
+  - src-02b09208ceab
+  - src-0b72694a5dea
+  - src-ad78a04807f9
+  - src-e86e19b3dd2c
+  tools: null
+  value: 41.7
 - schema_version: '1.0'
   id: benchmark-1dbb168b00176ffe
   model_id: xai-grok-4-7

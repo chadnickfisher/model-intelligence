@@ -41,15 +41,15 @@ Related task IDs (navigation only): Not established in this pass
 
 Judgment ID: judgment-e494146b5a163111
 
-Conditions: Claude Code;1M window; zero compactions in this run group.; Harness: Claude Code; effort: max; effort evidence: first_party.; 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).; One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts and budgets.; Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full external reproduction.
+Conditions: Claude Code harness at max effort; exact serving endpoint, region, immutable checkpoint and client build are not disclosed by the frozen README.; 105 planted defects across a TypeScript VS Code extension and a React/Supabase LMS. Repo 1 derives from a public extension; repo 2 is a private product. Both seeded snapshots and answer keys are withheld.; One agentic round per repository with native CLI tools, identical task prompts, no network and no Git history. Different model configurations are not controlled equivalents.; GPT-5.5 through Codex grades blinded diffs against withheld answer keys; extra unplanted fixes are excluded.; The exact Opus 5.5/max row reports three runs, mean 41.7/105, 19/45 and 22.7/60, labeled September 23, 2026.
 
 Failure modes / limitations: Many planted defects remained unresolved in the measured runs.; Run variance and harness differences prevent fine-grained cross-model ranking.
 
-Supporting sources: [Bug Hunt Bench frozen measurements](https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/data/benchmark.json) · [Bug Hunt Bench receipts and boundaries](https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/results/README.md) · [Bug Hunt Bench individual configuration caveats](https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/results/run-notes.md)
+Supporting sources: [Bug Hunt Bench methodology](https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/README.md)
 
 Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
 
-Evidence notes: Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation quality.; No matched independent contradiction located; partial successes and misses coexist.; Confidence concerns this bounded claim, not a capability score.
+Evidence notes: Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation quality.; No matched independent contradiction located; partial successes and misses coexist.; Confidence concerns this bounded claim, not a capability score.; The exact max-effort mean is 41.7 planted fixes out of 105 over three runs; separate result-artifact fetch failures remain unresolved.; Historical supplementary-artifact citations are not treated as current support; their unavailable attempts remain recorded.; Current inspection supports the frozen README result row and methodology. Historical context-window, compaction and individual-score details were not freshly reverified.
 
 ### Coding.architecture (low confidence)
 
@@ -85,7 +85,7 @@ Related task IDs (navigation only): Not established in this pass
 
 Judgment ID: judgment-cd273215e58beb5c
 
-Conditions: Frontend generation under hosted Arena configurations; Relative user-preference evidence only; production acceptance requires executable behavior, accessibility, security and maintenance checks.; Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider checkpoint hashes.; exact_named_release_effort_retained
+Conditions: Frontend generation under hosted Arena configurations; Relative user-preference evidence only; production acceptance requires executable behavior, accessibility, security and maintenance checks.; Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider checkpoint hashes.; exact_named_release_effort_retained; Human community pairwise voters, Bradley-Terry aggregation; exact serving route remains unknown.
 
 Failure modes / limitations: Not established in this pass
 
@@ -172,7 +172,7 @@ Local conditions: Not established in this pass
 
 - google-cloud / Gemini Enterprise Agent Platform (formerly Vertex AI): officially_documented_not_execution_tested. Not established in this pass
 - azure-foundry / Claude in Microsoft Foundry / Hosted on Azure: officially_documented_not_execution_tested. Message Batches, Models API and server-side fallback are unsupported on Foundry.; New computer/browser toolsets are unsupported; older beta computer tools are separate.; Code execution, Files API, Agent Skills and programmatic tool calling are unsupported on Azure hosting.; Azure hosting permits only basic web_search_20250305 and web_fetch_20250910 tools.
-- aws-bedrock / Amazon Bedrock: officially_documented_not_execution_tested. Not established in this pass
+- aws-bedrock / Amazon Bedrock: officially_documented_not_execution_tested. Runtime supports Messages, Invoke and Converse via geo/global profiles; in-region Runtime is not offered.; Mantle supports Messages at its regional endpoint; its listed in-region locations are us-east-1, ap-southeast-4 and us-gov-west-1.; Only Standard service tier is supported; Priority, Flex, Reserved and Batch are not listed as supported.
 - anthropic / Claude API: officially_documented_not_execution_tested. Not established in this pass
 - anthropic / Claude apps: Conditional consumer/client product; exact account entitlement unverified. Pro, Max, Team and Enterprise; no Free Opus entitlement.
 - claude-platform-on-aws / Claude Platform on AWS: officially_documented_not_execution_tested. Not established in this pass

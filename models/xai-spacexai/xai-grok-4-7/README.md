@@ -278,7 +278,7 @@ Evidence notes: Different reasoning settings; broad quality gain is not across e
 | architecture | Unknown / not established |
 | parameters | Unknown / not established |
 | context window | 500000 |
-| maximum output | Unknown / not established |
+| maximum output | No text output limit |
 | modalities | input: text; image; output: text |
 | language support | Unknown / not established |
 
@@ -322,7 +322,7 @@ Local conditions: Not established in this pass
 |---|---|---|---|---|
 | opencode-zen | prompt >200k / current | input: 4 USD / per 1M tokens; cached_input: 1 USD / per 1M tokens; output: 12 USD / per 1M tokens | Not established in this pass | 2026-10-06 |
 | opencode-zen | prompt <=200k / current | input: 2 USD / per 1M tokens; cached_input: 0.5 USD / per 1M tokens; output: 6 USD / per 1M tokens | Not established in this pass | 2026-10-06 |
-| xai | standard, short context / current | input: 2 USD / per 1M tokens; cached_input: 0.5 USD / per 1M tokens; output: 6 USD / per 1M tokens | Higher-context pricing exists above 200k; exact boundary/rates require reconciliation with general page. These are base displayed rates.; not stated | 2026-10-06 |
+| xai | standard, short context / current | input: 2 USD / per 1M tokens; cached_input: 0.5 USD / per 1M tokens; output: 6 USD / per 1M tokens | Global xAI API short-context standard tariff; USD per million tokens.; General tariff marks long context at >=200k, while model-detail and prose say exceeds/above 200k; exactly 200k remains inconsistent across official wording.; Once long-context pricing applies, all request tokens use long-context rates. US regional endpoint has a separate 10% token premium; server-side tools can add invocation charges. | 2026-10-13 |
 
 ## Recorded access routes
 

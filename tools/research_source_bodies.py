@@ -28,7 +28,7 @@ CHECKS = {
     'SB04': 'Save actual UTC Z timestamps with started_at <= completed_at <= packet.created_at <= validation time; never substitute publication or effective dates.',
     'SB05': 'Save the complete tool-visible return as UTF-8 JSON in responses/<call-id>.json; save read-back path, byte count and SHA-256 in response.',
     'SB06': 'Keep only index.json and indexed response files in <stem>.source-evidence; reject linked paths, unexpected files and changed response bytes.',
-    'SB07': 'For available text use web-run-numbered-lines-v1: retain every numbered page chunk and require the exact source URL. A chunk may contain gaps; merge all captured chunks before requiring every declared line and identical overlaps. Unsupported formats, incomplete combined pages and challenge/login bodies cannot supply evidence.',
+    'SB07': 'For available text use web-run-numbered-lines-v1: retain every numbered page or PDF chunk, including empty titles and PDF page labels, and require the exact source URL. A chunk may contain gaps; require every declared line and identical overlaps within each version. A changed version may start only when the previous version and the new return are independently complete; retain prior version hashes. Unsupported formats, incomplete combined pages and challenge/login bodies cannot supply evidence.',
     'SB08': 'Save an available complete capture for every current-check source in change envelopes, run evidence, discovery and resolution evidence; expand observation source_ids. Historical record citations alone require no new capture.',
     'SB09': 'For unavailable retrieval save retrieval_status=unavailable and its actual returned response; it supplies no evidence. Required unavailable sources fail completeness and keep affected research unresolved.',
     'SB10': 'If response export fails save capture_status=capture_failed, response=null and a nonempty capture_error; never reconstruct the return or claim complete capture.',
@@ -113,13 +113,13 @@ def page_lines(response_raw, expected_url):
     if not isinstance(response, str): raise ValueError('Unsupported tool return; save the exact return and request an adapter')
     if re.search(r'(?i)(?:Warning: truncated output|[0-9]+ tokens truncated|\[truncated\])',response):
         raise ValueError('Truncated tool return')
-    header = re.match(r'[^\n]+ \((https://[^\n]+)\)\r?\n', response)
+    header = re.match(r'[^\n]* \((https://[^\n]+)\)\r?\n', response)
     totals = re.findall(r'Total lines: ([0-9]+)', response)
     if not header or header.group(1) != expected_url or len(totals) != 1:
         raise ValueError('Page identity or declared total differs')
     total = int(totals[0])
     if not 0 < total <= 20000: raise ValueError('Invalid declared page size')
-    matches = list(re.finditer(r'L([0-9]+): ?', response))
+    matches = list(re.finditer(r'L([0-9]+)(?:@P[0-9]+(?:-[0-9]+)?)?: ?', response))
     if not matches: raise ValueError('No numbered source lines')
     lines = {}
     for n, match in enumerate(matches):
@@ -151,7 +151,7 @@ def audit(packet_path, index_path, baseline_path, expected_contract, contract_pa
     contract_raw = read(contract_path) if contract_path else encoded(expected_contract)
     sources, observations = catalog(packet, baseline)
     root = regular(index_path).parent
-    checks = {key:'passed' for key in CHECKS};errors=[];responses={};groups={};snapshots={}
+    checks = {key:'passed' for key in CHECKS};errors=[];responses={};groups={};snapshots={};versions={}
     def reject(code, message):
         checks[code]='failed';errors.append({'check_id':code,'message':message})
     if expected_contract != contract() or parse(contract_raw) != expected_contract:
@@ -212,13 +212,27 @@ def audit(packet_path, index_path, baseline_path, expected_contract, contract_pa
         try:
             total,lines=page_lines(raw,url)
             group=groups.setdefault(source_id,{'url':url,'total':total,'lines':{},'calls':[], 'captured_at':call['completed_at']})
-            if group['url']!=url or group['total']!=total:raise ValueError('Page version/URL differs')
+            conflicts=any(number in group['lines'] and group['lines'][number]!=value for number,value in lines.items())
+            if group['url']!=url:raise ValueError('Page URL differs')
+            if group['total']!=total or conflicts:
+                if set(group['lines'])!=set(range(group['total'])) or set(lines)!=set(range(total)):
+                    raise ValueError('Changed page versions must be independently complete')
+                if instant(call['completed_at'])<instant(group['captured_at']):
+                    raise ValueError('Changed page version predates its preceding capture')
+                prior_text='\n'.join(group['lines'][n] for n in range(group['total']))+'\n'
+                if not prior_text.strip() or len(prior_text.encode('utf-8'))>MAX_TEXT:
+                    raise ValueError('Previous page version is empty or oversized')
+                versions.setdefault(source_id,[]).append({'call_ids':group['calls'],
+                    'captured_at':group['captured_at'],'visible_line_count':group['total'],
+                    'text_sha256':sha256(prior_text.encode('utf-8')).hexdigest()})
+                group={'url':url,'total':total,'lines':{},'calls':[], 'captured_at':call['completed_at']}
+                groups[source_id]=group
             for number,value in lines.items():
                 if number in group['lines'] and group['lines'][number]!=value:raise ValueError('Source overlap differs')
                 group['lines'][number]=value
             group['calls'].append(ident)
             group['captured_at']=max(group['captured_at'],call['completed_at'],key=instant)
-        except (ValueError,UnicodeError,json.JSONDecodeError):reject('SB07',ident+': unsupported, incomplete, changed or inaccessible source text')
+        except (ValueError,UnicodeError,json.JSONDecodeError) as exc:reject('SB07',ident+': '+str(exc))
     for ident,group in groups.items():
         if set(group['lines'])!=set(range(group['total'])):
             reject('SB07',ident+': missing numbered source lines');continue
@@ -231,6 +245,7 @@ def audit(packet_path, index_path, baseline_path, expected_contract, contract_pa
                          'content_type':'text/plain; charset=utf-8','text':text,'capture_origin':'producer_tool_capture',
                          'source_capture':{'call_ids':group['calls'],'visible_line_count':group['total'],
                                            'representation':'complete tool-visible numbered text; not raw HTTP HTML'}}
+        if ident in versions:snapshots[ident]['source_capture']['prior_versions']=versions[ident]
     try:
         required=required_sources(packet,observations)
         if not required<=snapshots.keys():reject('SB08','Current-check sources lack complete available captures: '+', '.join(sorted(required-snapshots.keys())))

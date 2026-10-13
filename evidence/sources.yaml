@@ -560,21 +560,21 @@ records:
   claim_scope:
   - current open-weight family and distribution
   limitations: []
-- id: src-2f9ece653a0f
-  url: https://aws.amazon.com/bedrock/pricing/
-  title: null
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-09'
+- accessed_at: '2026-10-13'
   claim_scope:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
   - Original pricing body announces October 7 Sonnet 5.5 cache-read reduction by half; numerical model tariff
     tables were not exposed.
   - 2026-10-09 reinspection of current pricing page did not recover a Haiku 4.5 numerical tariff.
+  id: src-2f9ece653a0f
   limitations:
   - Current tariff remains unverified; dated vendor blog quotations are not promoted to a current offer.
+  published_at: null
+  publisher: null
+  source_type: primary
+  title: null
+  url: https://aws.amazon.com/bedrock/pricing/
 - id: src-3057cae1019b
   url: https://artificialanalysis.ai/models/gemma-4-31b
   title: Artificial Analysis gemma-4-31b
@@ -769,13 +769,7 @@ records:
   - sparse MoE transformer architecture of base Gemini 3 Pro
   - family lineage
   limitations: []
-- id: src-4d070c5c8c67
-  url: https://platform.claude.com/docs/en/models/opus-5-5/overview
-  title: Claude opus-5-5 specifications
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-13'
   claim_scope:
   - Release/status
   - specifications
@@ -784,7 +778,13 @@ records:
   - migration restrictions
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
+  id: src-4d070c5c8c67
   limitations: []
+  published_at: null
+  publisher: null
+  source_type: primary
+  title: Claude opus-5-5 specifications
+  url: https://platform.claude.com/docs/en/models/opus-5-5/overview
 - id: src-4d947df5f3d7
   url: https://artificialanalysis.ai/articles/claude-sonnet-5-5/
   title: Claude Sonnet 5.5 independent analysis
@@ -797,13 +797,7 @@ records:
   - high output token consumption
   - fallback and prerelease caveats
   limitations: []
-- id: src-4e3ca8a95d36
-  url: https://www.anthropic.com/claude-sonnet-5-5
-  title: Introducing Claude Sonnet 5.5
-  publisher: null
-  source_type: primary
-  published_at: '2026-09-28'
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-13'
   claim_scope:
   - Task-conditioned capability
   - FrontierCode max versus xhigh failure
@@ -811,9 +805,15 @@ records:
   - Coding evidence; bounded task and measured configuration only.
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
+  id: src-4e3ca8a95d36
   limitations:
   - Vendor-selected tasks and testimonials; useful scoped failure observations, not an independent failure-rate
     estimate.
+  published_at: '2026-09-28'
+  publisher: null
+  source_type: primary
+  title: Introducing Claude Sonnet 5.5
+  url: https://www.anthropic.com/claude-sonnet-5-5
 - id: src-4fb7165743ee
   url: https://huggingface.co/openai/gpt-oss-20b
   title: OpenAI gpt-oss-20b model card
@@ -827,22 +827,23 @@ records:
   - Harmony formatting
   - hardware guidance
   limitations: []
-- id: src-50846cd1ff36
-  url: https://platform.claude.com/docs/en/about-claude/pricing
-  title: Claude API pricing
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-08'
+- accessed_at: '2026-10-13'
   claim_scope:
   - USD API billing
   - caching and batch pricing reference
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
   - Sonnet 5.5 direct API rates, explicit batch/cache modifier stacking and marketplace CCU conversion inspected.
+  id: src-50846cd1ff36
   limitations:
-  - Sonnet 5.5 cache-read tariff is inconsistent between the current pricing table/overview and the pricing-page
-    multiplier prose.
+  - Current Sonnet 5.5 overview, pricing table and multiplier prose agree on USD 0.10 per million cache-read
+    tokens. The September 28 launch article retains USD 0.20; the effective change date and actual billing
+    are not established.
+  published_at: null
+  publisher: null
+  source_type: primary
+  title: Claude API pricing
+  url: https://platform.claude.com/docs/en/about-claude/pricing
 - id: src-521c059d5d6a
   url: https://ai.google.dev/gemini-api/docs/models/veo-3.1-generate-preview
   title: Veo 3.1 API model documentation
@@ -955,13 +956,7 @@ records:
   - Documentation is not execution evidence. The video retrieval window must not be replaced with the generic
     image guide’s ten-minute window.
   - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
-- id: src-58333316475e
-  url: https://claude.com/pricing
-  title: Claude plan pricing
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-09'
+- accessed_at: '2026-10-13'
   claim_scope:
   - Subscription prices
   - model access
@@ -972,8 +967,14 @@ records:
   - App/Code plan eligibility, Enterprise seat plus API-rate usage, and separate usage units inspected.
   - '2026-10-09 reinspection: included-usage plan windows and pooled client usage; current plan model labels
     are family-level.'
+  id: src-58333316475e
   limitations:
   - Plan limits are not fixed per-task/token allowances, and family names do not pin app-selected Haiku checkpoint.
+  published_at: null
+  publisher: null
+  source_type: primary
+  title: Claude plan pricing
+  url: https://claude.com/pricing
 - id: src-58bf94c165a9
   url: https://raw.githubusercontent.com/OpenMDW/OpenMDW/refs/heads/main/1.1/LICENSE.OpenMDW-1.1
   title: OpenMDW1.1
@@ -983,20 +984,24 @@ records:
   accessed_at: '2026-10-06'
   claim_scope: []
   limitations: []
-- id: src-58f6a44d1374
-  url: https://elevenlabs.io/docs/overview/models
-  title: Models
-  publisher: ElevenLabs
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-11'
+- accessed_at: '2026-10-13'
   claim_scope:
   - The model table distinguishes eleven_v4 from eleven_v4_turbo and lists v4 at 10,000 characters with 90+
     languages.
+  - The catalog separately names Eleven Music v2.5 / music_v2_5 and Music v2 / music_v2.
+  - The catalog separately names Eleven v4 Turbo / eleven_v4_turbo and Eleven v4 / eleven_v4, with separate
+    real-time and content-generation roles.
+  id: src-58f6a44d1374
   limitations:
   - The integration blog retains a conflicting 5,000-character table. Concurrency tables for other named models
     do not establish v4 limits.
   - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
+  - Current identity inspection does not establish immutable weights or a rolling-alias guarantee.
+  published_at: null
+  publisher: ElevenLabs
+  source_type: primary
+  title: Models
+  url: https://elevenlabs.io/docs/overview/models
 - id: src-5906a70e58c6
   url: https://developers.openai.com/api/docs/models/gpt-6.1-sol
   title: gpt-6.1-sol model specifications
@@ -1329,13 +1334,7 @@ records:
   accessed_at: '2026-10-06'
   claim_scope: []
   limitations: []
-- id: src-752375ff0c97
-  url: https://platform.claude.com/docs/en/models/sonnet-5-5/overview
-  title: Claude sonnet-5-5 specifications
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-13'
   claim_scope:
   - Release/status
   - specifications
@@ -1344,9 +1343,16 @@ records:
   - migration restrictions
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
+  id: src-752375ff0c97
   limitations:
-  - Sonnet 5.5 cache-read tariff is inconsistent between the current pricing table/overview and the pricing-page
-    multiplier prose.
+  - Current Sonnet 5.5 overview, pricing table and multiplier prose agree on USD 0.10 per million cache-read
+    tokens. The September 28 launch article retains USD 0.20; the effective change date and actual billing
+    are not established.
+  published_at: null
+  publisher: null
+  source_type: primary
+  title: Claude sonnet-5-5 specifications
+  url: https://platform.claude.com/docs/en/models/sonnet-5-5/overview
 - id: src-752c7dd560da
   url: https://docs.bfl.ai/quick_start/pricing
   title: Overview
@@ -2101,16 +2107,16 @@ records:
   accessed_at: '2026-10-06'
   claim_scope: []
   limitations: []
-- id: src-d14fea025626
-  url: https://docs.x.ai/developers/models/grok-4.7
-  title: null
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-13'
   claim_scope:
   - Exact grok-4.7 alias,500K context, API rates,150 RPS / 50M TPM; batch unsupported.
+  id: src-d14fea025626
   limitations: []
+  published_at: null
+  publisher: null
+  source_type: primary
+  title: null
+  url: https://docs.x.ai/developers/models/grok-4.7
 - id: src-d1e7ac1dfe19
   url: https://recipes.vllm.ai/zai-org/GLM-5.3
   title: vLLM GLM5.3 recipe
@@ -2240,16 +2246,16 @@ records:
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
-- id: src-dedf56167aa3
-  url: https://docs.x.ai/developers/pricing
-  title: null
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-13'
   claim_scope:
   - USD global/long-context, US regional10%premium, Fast client variant and tool fees.
+  id: src-dedf56167aa3
   limitations: []
+  published_at: null
+  publisher: null
+  source_type: primary
+  title: null
+  url: https://docs.x.ai/developers/pricing
 - id: src-e06185c2c32b
   url: https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers
   title: About ChatGPT Pro tiers
@@ -2276,13 +2282,7 @@ records:
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
-- id: src-e1910c5126bc
-  url: https://platform.claude.com/docs/en/models/haiku-4-5/overview
-  title: Claude haiku-4-5 specifications
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-13'
   claim_scope:
   - Release/status
   - specifications
@@ -2291,7 +2291,13 @@ records:
   - migration restrictions
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
+  id: src-e1910c5126bc
   limitations: []
+  published_at: null
+  publisher: null
+  source_type: primary
+  title: Claude haiku-4-5 specifications
+  url: https://platform.claude.com/docs/en/models/haiku-4-5/overview
 - id: src-e37726fea976
   url: https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512
   title: Ministral 3 8B Instruct model card
@@ -2345,20 +2351,20 @@ records:
   - trusted-access restrictions
   - cache economics claim
   limitations: []
-- id: src-e99bd76836c1
-  url: https://www.anthropic.com/news/claude-haiku-4-5
-  title: Introducing Claude Haiku 4.5
-  publisher: null
-  source_type: primary
-  published_at: '2025-10-15'
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-13'
   claim_scope:
   - Vendor SWE-bench result with harness conditions
   - app/Code access
   - vendor-selected practitioner evidence
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
+  id: src-e99bd76836c1
   limitations: []
+  published_at: '2025-10-15'
+  publisher: null
+  source_type: primary
+  title: Introducing Claude Haiku 4.5
+  url: https://www.anthropic.com/news/claude-haiku-4-5
 - id: src-ea2ea7424a68
   url: https://docs.x.ai/developers/rate-limits
   title: null
@@ -3009,13 +3015,7 @@ records:
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   limitations: []
-- id: src-4e6f4ff35504
-  url: https://arena.ai/leaderboard/code/webdev/frontend
-  title: Code Arena WebDev Frontend
-  publisher: Arena
-  source_type: independent-evaluation
-  published_at: '2026-10-08'
-  accessed_at: '2026-10-09'
+- accessed_at: '2026-10-13'
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   - Oct 8 snapshot inspected; preserve historical Oct 7 measurement separately. Preference movement within
@@ -3025,6 +3025,7 @@ records:
     11–21.'
   - Exact grok-4.7-xhigh row and frontend preference scope reconfirmed; prior observation dates and numeric
     snapshot retained.
+  id: src-4e6f4ff35504
   limitations:
   - Not a production-correctness, test-coverage, security, maintainability, or review benchmark. Neighboring
     rank intervals overlap. Provider endpoints and effort are not portable to arbitrary local quantizations.
@@ -3032,13 +3033,12 @@ records:
   - Public row labels do not identify immutable checkpoints or full backend setup.
   - Votes are preference observations, not distinct tasks, independent trials or executable acceptance tests.
   - Displayed snapshot date is not an individual evaluation-run date.
-- id: src-2bf9d5fecb2c
-  url: https://arena.ai/faq
-  title: Arena FAQ
+  published_at: null
   publisher: Arena
   source_type: independent-evaluation
-  published_at: null
-  accessed_at: '2026-10-09'
+  title: Code Arena WebDev Frontend
+  url: https://arena.ai/leaderboard/code/webdev/frontend
+- accessed_at: '2026-10-13'
   claim_scope:
   - Coding evidence; bounded task and measured configuration only.
   - Inspected paired community-preference methodology; preference is not executable task correctness.
@@ -3049,9 +3049,15 @@ records:
     acceptance.
   - Blind paired voting and Bradley-Terry community judgment establish preference methodology, not executable
     frontend correctness.
+  id: src-2bf9d5fecb2c
   limitations:
   - Preference evidence; user/task mix and harness effects require consideration.
   - Individual prompt/attempt denominator and immutable Grok serving endpoint are not disclosed here.
+  published_at: null
+  publisher: Arena
+  source_type: independent-evaluation
+  title: Arena FAQ
+  url: https://arena.ai/faq
 - id: src-a0149a24853a
   url: https://www.coderabbit.ai/blog/opus-5-5-model-review
   title: 'Claude Opus 5.5 for code review: More catches, different misses'
@@ -3822,44 +3828,44 @@ records:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
   limitations: []
-- id: src-26606ff14841
-  url: https://code.claude.com/docs/en/model-config
-  title: Claude Code model configuration
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-08'
+- accessed_at: '2026-10-13'
   claim_scope:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
   - Sonnet family alias differs by provider; full-ID selection and organization allowlists inspected.
+  id: src-26606ff14841
   limitations: []
-- id: src-b2ab15dd01eb
-  url: https://support.claude.com/en/articles/12304248-manage-api-key-environment-variables-in-claude-code
-  title: Claude Code API key billing priority
+  published_at: null
   publisher: null
   source_type: primary
-  published_at: null
-  accessed_at: '2026-10-08'
+  title: Claude Code model configuration
+  url: https://code.claude.com/docs/en/model-config
+- accessed_at: '2026-10-13'
   claim_scope:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
   - API key precedence over subscription authentication inspected.
+  id: src-b2ab15dd01eb
   limitations: []
-- id: src-f61234c4ee64
-  url: https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan
-  title: Claude Code subscription authentication
+  published_at: null
   publisher: null
   source_type: primary
-  published_at: null
-  accessed_at: '2026-10-09'
+  title: Claude Code API key billing priority
+  url: https://support.claude.com/en/articles/12304248-manage-api-key-environment-variables-in-claude-code
+- accessed_at: '2026-10-13'
   claim_scope:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
   - Shared Pro/Max terminal/IDE limits and API-key billing distinction inspected.
   - '2026-10-09 reinspection: IDE/terminal shared Pro/Max usage pools and API-key authentication billing precedence.'
+  id: src-f61234c4ee64
   limitations:
   - Pro/Max scope does not establish every Enterprise contract or current Haiku 4.5 individual entitlement.
+  published_at: null
+  publisher: null
+  source_type: primary
+  title: Claude Code subscription authentication
+  url: https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan
 - id: src-9b374de3e978
   url: https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan
   title: Fable models on Claude plans
@@ -3882,17 +3888,17 @@ records:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
   limitations: []
-- id: src-90f4749affde
-  url: https://support.claude.com/en/articles/12138966-release-notes
-  title: Claude release notes
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-13'
   claim_scope:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
+  id: src-90f4749affde
   limitations: []
+  published_at: null
+  publisher: null
+  source_type: primary
+  title: Claude release notes
+  url: https://support.claude.com/en/articles/12138966-release-notes
 - id: src-8d6f49bb7111
   url: https://support.claude.com/en/articles/10684626-enable-and-use-web-search
   title: Claude app model list and web search
@@ -3915,46 +3921,40 @@ records:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
   limitations: []
-- id: src-1120b9b8680d
-  url: https://docs.aws.amazon.com/us_en/bedrock/latest/userguide/model-card-anthropic-claude-opus-5-5.html
+- accessed_at: '2026-10-13'
+  claim_scope:
+  - Access/pricing source investigation; account entitlement and operational access not tested.
+  - Model-qualified primary-source route investigation.
+  id: src-1120b9b8680d
+  limitations: []
+  published_at: null
+  publisher: null
+  source_type: primary
   title: Bedrock claude-opus-5-5
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
+  url: https://docs.aws.amazon.com/us_en/bedrock/latest/userguide/model-card-anthropic-claude-opus-5-5.html
+- accessed_at: '2026-10-13'
   claim_scope:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
+  id: src-0470ca77e23d
   limitations: []
-- id: src-0470ca77e23d
-  url: https://docs.aws.amazon.com/us_en/bedrock/latest/userguide/model-card-anthropic-claude-sonnet-5-5.html
+  published_at: null
+  publisher: null
+  source_type: primary
   title: Bedrock claude-sonnet-5-5
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
+  url: https://docs.aws.amazon.com/us_en/bedrock/latest/userguide/model-card-anthropic-claude-sonnet-5-5.html
+- accessed_at: '2026-10-13'
   claim_scope:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
+  id: src-f64988fee771
   limitations: []
-- id: src-f64988fee771
-  url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-haiku-4-5.html
+  published_at: null
+  publisher: null
+  source_type: primary
   title: Bedrock claude-haiku-4-5
-  publisher: null
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-07'
-  claim_scope:
-  - Access/pricing source investigation; account entitlement and operational access not tested.
-  - Model-qualified primary-source route investigation.
-  limitations: []
-- id: src-f1078602a2b4
-  url: https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing
-  title: Agent Platform Pricing
-  publisher: Google Cloud
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-09'
+  url: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-haiku-4-5.html
+- accessed_at: '2026-10-13'
   claim_scope:
   - Access/pricing source investigation; account entitlement and operational access not tested.
   - Model-qualified primary-source route investigation.
@@ -3967,10 +3967,16 @@ records:
     charging. No xAI-direct regional premium transferred.
   - Exact Grok 4.7 cache-hit rates and <=200K/>200K tariff rows; no cache-write, storage or batch tariff is
     supplied for this model.
+  id: src-f1078602a2b4
   limitations:
   - This pass does not normalize count to seconds or establish actual deployment billing/capacity.
   - Original page was readable through web retrieval; direct Python request returned a Site Unavailable wrapper
     and was not treated as source content.
+  published_at: null
+  publisher: Google Cloud
+  source_type: primary
+  title: Agent Platform Pricing
+  url: https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing
 - id: src-2cc31a5ba4fd
   url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions
   title: Cloud model versions
@@ -4632,30 +4638,32 @@ records:
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
-- id: src-69689436665a
-  url: https://www.bridgebench.ai/nerf-bench
+- accessed_at: '2026-10-13'
+  claim_scope:
+  - Dated post-launch finding; retain its model, client, service or runtime scope.
+  id: src-69689436665a
+  limitations:
+  - Imported public-source research inspection metadata; no operational access or model execution performed
+    by this integration.
+  - Dates on this rolling board identify measurement sessions; October 4 is a test date and the latest displayed
+    test is October 9, not an established original page publication date.
+  published_at: null
+  publisher: null
+  source_type: independent-evaluation
   title: bridge results
-  publisher: null
-  source_type: independent-evaluation
-  published_at: '2026-10-04'
-  accessed_at: '2026-10-07'
+  url: https://www.bridgebench.ai/nerf-bench
+- accessed_at: '2026-10-13'
   claim_scope:
   - Dated post-launch finding; retain its model, client, service or runtime scope.
+  id: src-f3a4a7760647
   limitations:
   - Imported public-source research inspection metadata; no operational access or model execution performed
     by this integration.
-- id: src-f3a4a7760647
-  url: https://www.bridgebench.ai/blog/the-methodology-of-nerfbench
+  published_at: '2026-10-04'
+  publisher: null
+  source_type: independent-evaluation
   title: bridge method
-  publisher: null
-  source_type: independent-evaluation
-  published_at: '2026-10-04'
-  accessed_at: '2026-10-07'
-  claim_scope:
-  - Dated post-launch finding; retain its model, client, service or runtime scope.
-  limitations:
-  - Imported public-source research inspection metadata; no operational access or model execution performed
-    by this integration.
+  url: https://www.bridgebench.ai/blog/the-methodology-of-nerfbench
 - id: src-98b203ee96ea
   url: https://www.reddit.com/r/ClaudeAI/comments/1wtrf5y/opus_55_feels_way_dumber_after_todays_outage/
   title: decline anecdote
@@ -6795,33 +6803,33 @@ records:
   claim_scope:
   - Separate API and Claude.ai supported lists; ownership restriction.
   - Separate supported API and Claude app regions and eligibility policy inspected.
-- id: src-ed2ea3ed3dc1
-  url: https://platform.claude.com/docs/en/api/rate-limits
-  title: Claude API rate limits
-  publisher: Anthropic
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-09'
-  limitations:
-  - Live public page; upstream content revision not pinned.
-  - Maximum documented tiers are not guaranteed minimum capacity or individual entitlements.
+- accessed_at: '2026-10-13'
   claim_scope:
   - Start/Build/Scale Haiku 4.5 maximum rates; token-bucket replenishment, monthly caps and new-account exceptions.
   - Sonnet 5.5 Start/Build/Scale Messages limits, independent model bucket, spend caps and cache accounting
     inspected.
   - '2026-10-09 reinspection: public spend caps and the distinction between spend-cap pauses and ordinary replenishing
     rate limits.'
-- id: src-6bd484fad5a5
-  url: https://support.claude.com/en/articles/8114521-how-can-i-access-the-claude-api
-  title: How can I access the Claude API?
-  publisher: Anthropic
-  source_type: primary
-  published_at: '2026-08-18'
-  accessed_at: '2026-10-08'
+  id: src-ed2ea3ed3dc1
   limitations:
   - Live public page; upstream content revision not pinned.
+  - Maximum documented tiers are not guaranteed minimum capacity or individual entitlements.
+  published_at: null
+  publisher: Anthropic
+  source_type: primary
+  title: Claude API rate limits
+  url: https://platform.claude.com/docs/en/api/rate-limits
+- accessed_at: '2026-10-13'
   claim_scope:
   - How can I access the Claude API?
+  id: src-6bd484fad5a5
+  limitations:
+  - Live public page; upstream content revision not pinned.
+  published_at: '2026-08-18'
+  publisher: Anthropic
+  source_type: primary
+  title: How can I access the Claude API?
+  url: https://support.claude.com/en/articles/8114521-how-can-i-access-the-claude-api
 - id: src-2085dff5045d
   url: https://cohere.com/enterprise-data-commitments
   title: Enterprise Data Commitments
@@ -6946,20 +6954,22 @@ records:
   - Live public page; upstream content revision not pinned.
   claim_scope:
   - Exact partner model ID, regions and published regional/global quotas.
-- id: src-b03f06e4ffc9
-  url: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models
-  title: Claude models in Microsoft Foundry
-  publisher: Microsoft
-  source_type: primary
-  published_at: '2026-09-21'
-  accessed_at: '2026-10-09'
+- accessed_at: '2026-10-13'
+  claim_scope:
+  - Separate Azure-hosted and Anthropic-hosted Haiku 4.5 GA versions; deployment-specific rates and privacy.
+  - Sonnet 5.5 GA in both hosts; the deployment section explicitly lists Azure US Data Zone support.
+  id: src-b03f06e4ffc9
   limitations:
   - Live public page; upstream content revision not pinned.
   - Anthropic Foundry guide states Sonnet 5.5 Global Standard only; disagreement is retained, with no new Data
     Zone offer asserted.
-  claim_scope:
-  - Separate Azure-hosted and Anthropic-hosted Haiku 4.5 GA versions; deployment-specific rates and privacy.
-  - Sonnet 5.5 GA in both hosts; the deployment section explicitly lists Azure US Data Zone support.
+  - The inspected page labels September 22, 2026 as its last update; this does not establish an original publication
+    date or a September 21 publication.
+  published_at: null
+  publisher: Microsoft
+  source_type: primary
+  title: Claude models in Microsoft Foundry
+  url: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models
 - id: src-07c29d610258
   url: https://platform.claude.com/docs/en/build-with-claude/multilingual-support
   title: Claude multilingual support
@@ -7088,20 +7098,21 @@ records:
   limitations:
   - Immutable API revision and measurement day unreported; prompt tuned in preliminary trials; familiar benchmark;
     two collection runs.
-- id: src-88ad926ffd53
-  url: https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/claude-models/data-privacy
-  title: 'Claude models in Foundry: data, privacy and security'
-  publisher: Microsoft
-  source_type: primary
-  published_at: '2026-06-29'
-  accessed_at: '2026-10-09'
+- accessed_at: '2026-10-13'
   claim_scope:
   - Anthropic-operated Marketplace offering; Azure-hosted and Anthropic-hosted processing differ.
   - Public body distinguishes Anthropic-operated Azure hosting and Anthropic infrastructure and exceptions-only
     safety review.
   - Anthropic independent processor status, host-specific processing and exceptions-only safety review.
+  id: src-88ad926ffd53
   limitations:
   - Live policy; deployment option matters; exceptions-only safety review remains.
+  - The page labels June 29, 2026 as its last update; an original publication date is not established.
+  published_at: null
+  publisher: Microsoft
+  source_type: primary
+  title: 'Claude models in Foundry: data, privacy and security'
+  url: https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/claude-models/data-privacy
 - id: src-6042302df83d
   url: https://arxiv.org/html/2608.20627v1
   title: 'When Failures Propagate: Multi-hop RAG Diagnosis'
@@ -7124,13 +7135,7 @@ records:
   - Patent-claim revision with retrieval and locality metrics; not grounded question answering.
   limitations:
   - Compound legal writing workload; insufficient for independent RAG answer-quality judgment.
-- id: src-3044b3f1e225
-  url: https://platform.claude.com/docs/en/build-with-claude/claude-platform-on-aws
-  title: Claude Platform on AWS
-  publisher: Original service documentation
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-09'
+- accessed_at: '2026-10-13'
   claim_scope:
   - Anthropic operation, separate organization, API/IAM, billing, data boundaries and Haiku geography limitation.
   - Sonnet 5.5 route, Anthropic operation, AWS billing, enrollment, feature exceptions and geography inspected.
@@ -7138,10 +7143,16 @@ records:
     accounting with billed overshoot.'
   - Independent Anthropic-operated service, separate capacity, opt-in ZDR, private-terms non-transfer and delayed
     spend accounting.
+  id: src-3044b3f1e225
   limitations:
   - Live public page; exact upstream revision and unpublished account terms unknown.
   - Separate capacity does not establish statistically independent outages or measured failover success.
   - Bedrock SLA does not establish this service's commitment.
+  published_at: null
+  publisher: Original service documentation
+  source_type: primary
+  title: Claude Platform on AWS
+  url: https://platform.claude.com/docs/en/build-with-claude/claude-platform-on-aws
 - id: src-0882f00e6258
   url: https://platform.claude.com/docs/en/api/overview
   title: Claude API overview
@@ -7456,17 +7467,17 @@ records:
   - Current model page; API limits are not measured task performance.
   claim_scope:
   - Exact model identity, specifications and lifecycle
-- id: src-cdb1d51fae04
-  url: https://www.anthropic.com/claude-haiku-5-5
-  title: Haiku 5.5 launch
-  publisher: Anthropic
-  source_type: primary
-  published_at: '2026-10-07'
-  accessed_at: '2026-10-08'
-  limitations:
-  - Creator evaluations and selected customer testimonials; incomplete setup and no independent replication.
+- accessed_at: '2026-10-13'
   claim_scope:
   - Haiku 5.5 launch
+  id: src-cdb1d51fae04
+  limitations:
+  - Creator evaluations and selected customer testimonials; incomplete setup and no independent replication.
+  published_at: '2026-10-07'
+  publisher: Anthropic
+  source_type: primary
+  title: Haiku 5.5 launch
+  url: https://www.anthropic.com/claude-haiku-5-5
 - id: src-e471bc2bb72f
   url: https://platform.claude.com/docs/en/models/haiku-5-5/migration-guide
   title: Haiku 5.5 migration guide
@@ -7547,17 +7558,19 @@ records:
   - Public page inspected; unreported setup remains unknown.
   claim_scope:
   - Haiku 5.5 AWS launch
-- id: src-bb4952bada00
-  url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/haiku-5-5
-  title: Haiku 5.5 Google Cloud model card
-  publisher: Google Cloud
-  source_type: primary
-  published_at: '2026-10-07'
-  accessed_at: '2026-10-08'
-  limitations:
-  - Public page inspected; unreported setup remains unknown.
+- accessed_at: '2026-10-13'
   claim_scope:
   - Haiku 5.5 Google Cloud model card
+  id: src-bb4952bada00
+  limitations:
+  - Public page inspected; unreported setup remains unknown.
+  - October 7, 2026 is the model release date and October 9 the card update date; neither establishes the original
+    card publication date.
+  published_at: null
+  publisher: Google Cloud
+  source_type: primary
+  title: Haiku 5.5 Google Cloud model card
+  url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/haiku-5-5
 - id: src-f34fd90d33e8
   url: https://platform.claude.com/docs/en/build-with-claude/claude-in-amazon-bedrock
   title: Claude on aws-bedrock
@@ -7569,35 +7582,35 @@ records:
   - Public page inspected; unreported setup remains unknown.
   claim_scope:
   - Claude on aws-bedrock
-- id: src-8cb4ce8e8a24
-  url: https://platform.claude.com/docs/en/build-with-claude/claude-on-vertex-ai
-  title: Claude on google-cloud
-  publisher: Anthropic
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-08'
-  limitations:
-  - Public page inspected; unreported setup remains unknown.
+- accessed_at: '2026-10-13'
   claim_scope:
   - Claude on google-cloud
   - Google provider endpoint types, billing distinction, request APIs and model-specific availability caveats
     inspected.
-- id: src-dc337252fd3b
-  url: https://platform.claude.com/docs/en/build-with-claude/claude-in-microsoft-foundry
-  title: Claude in Microsoft Foundry
-  publisher: Anthropic
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-09'
+  id: src-8cb4ce8e8a24
   limitations:
   - Public page inspected; unreported setup remains unknown.
-  - No private agreement or actual deployment inspected.
+  published_at: null
+  publisher: Anthropic
+  source_type: primary
+  title: Claude on google-cloud
+  url: https://platform.claude.com/docs/en/build-with-claude/claude-on-vertex-ai
+- accessed_at: '2026-10-13'
   claim_scope:
   - Claude on azure-foundry
   - Sonnet 5.5 both hosting options and Global Standard-only deployment, authentication, billing and feature
     exceptions inspected.
   - Exact Sonnet Global-only statement rechecked alongside Microsoft's contrary Data Zone documentation; API
     restrictions and postpaid CCU semantics.
+  id: src-dc337252fd3b
+  limitations:
+  - Public page inspected; unreported setup remains unknown.
+  - No private agreement or actual deployment inspected.
+  published_at: null
+  publisher: Anthropic
+  source_type: primary
+  title: Claude in Microsoft Foundry
+  url: https://platform.claude.com/docs/en/build-with-claude/claude-in-microsoft-foundry
 - id: src-ba85b2f3bd1e
   url: https://docs.cohere.com/v1/changelog/command-a-plus-05-2026
   title: Command A+ release notes
@@ -7609,17 +7622,19 @@ records:
   - Exact release, MoE parameter counts and supported input/output limits.
   limitations:
   - Hardware guidance and throughput comparisons are vendor claims.
-- id: src-f98c5c7dbe17
-  url: https://elevenlabs.io/docs/changelog/2026/9/28
-  title: September 28, 2026 changelog
-  publisher: ElevenLabs
-  source_type: primary
-  published_at: '2026-09-28'
-  accessed_at: '2026-10-07'
+- accessed_at: '2026-10-13'
   claim_scope:
   - Eleven v4 availability and separate Turbo endpoint.
+  - The launch entry distinguishes eleven_v4_turbo on the Text to Dialogue WebSocket from eleven_v4 on the
+    Text to Dialogue API.
+  id: src-f98c5c7dbe17
   limitations:
   - Release announcement does not establish cross-language speech accuracy.
+  published_at: '2026-09-28'
+  publisher: ElevenLabs
+  source_type: primary
+  title: September 28, 2026 changelog
+  url: https://elevenlabs.io/docs/changelog/2026/9/28
 - id: src-616a4e4e2b6f
   url: https://deploymentsafety.openai.com/gpt-live/change-log
   title: GPT-Live system card corrected safety evaluations
@@ -7758,21 +7773,21 @@ records:
     maximum.'
   limitations:
   - Public documentation/report only; no model execution or provider account inspection.
-- id: src-e86e19b3dd2c
-  url: https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/README.md
-  title: Bug Hunt Bench methodology
-  publisher: Pawel Huryn
-  source_type: independent-evaluation
-  published_at: null
-  accessed_at: '2026-10-08'
+- accessed_at: '2026-10-13'
+  claim_scope:
+  - Bug Hunt Bench corpus construction, one-round repository repair methodology and reproduction boundaries.
+  id: src-e86e19b3dd2c
   limitations:
   - All Bug Hunt files describe the same evaluation; they are not independent replications.
   - Seeded sources, answer keys, model diffs and judge transcripts are withheld.
   - Updated 2026-10-01; an original publication date is not established by the inspected body.
   - Repo 1 derives from a public extension; only repo 2 is explicitly a private product. Both seeded snapshots
     are withheld.
-  claim_scope:
-  - Bug Hunt Bench corpus construction, one-round repository repair methodology and reproduction boundaries.
+  published_at: null
+  publisher: Pawel Huryn
+  source_type: independent-evaluation
+  title: Bug Hunt Bench methodology
+  url: https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/README.md
 - id: src-e9c984ecc940
   url: https://github.com/phuryn/bug-hunt-bench/blob/1217192a6d04e89da3f6106ca3a304d2734882eb/results/repo1-metrics.csv
   title: Bug Hunt Bench repository 1 metrics
@@ -7961,18 +7976,18 @@ records:
   - A frontmatter workaround is not a model-quality fix or a measured model-behavior recovery.
   claim_scope:
   - Haiku 5.5 subagent effort configuration and user-confirmed frontmatter workaround
-- id: src-0e7b36859ec7
-  url: https://docs.aws.amazon.com/us_en/bedrock/latest/userguide/model-card-anthropic-claude-haiku-5-5.html
-  title: Claude Haiku 5.5 - Amazon Bedrock
-  publisher: Amazon Web Services
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-08'
-  limitations:
-  - Public documentation; no individual entitlement, negotiated contract or inference execution tested.
+- accessed_at: '2026-10-13'
   claim_scope:
   - Exact-model card distinguishes runtime CRIS from Mantle us-gov-west-1 in-region; Standard only, 512-token
     caching, four checkpoints, 5-minute or 1-hour TTL and account-dependent quotas.
+  id: src-0e7b36859ec7
+  limitations:
+  - Public documentation; no individual entitlement, negotiated contract or inference execution tested.
+  published_at: null
+  publisher: Amazon Web Services
+  source_type: primary
+  title: Claude Haiku 5.5 - Amazon Bedrock
+  url: https://docs.aws.amazon.com/us_en/bedrock/latest/userguide/model-card-anthropic-claude-haiku-5-5.html
 - id: src-11b3486f8e43
   url: https://llmwise.ai/prompts/a-product-description-into-french
   title: 'llmwise published prompt and Haiku output: a product description into french'
@@ -8425,17 +8440,7 @@ records:
   - Client/model-configuration failure; no model output quality or weight regression measured.
   claim_scope:
   - Issue body and all API-returned comments; proposed fixes separated from shipped fixes.
-- id: src-4159ec1ffae5
-  url: https://platform.claude.com/docs/en/about-claude/api-credits-for-subscribers
-  title: API credits for Max and Team plans
-  publisher: Anthropic
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-08'
-  limitations:
-  - Live public program documentation; publication date not displayed. Terms acceptance and individual eligibility
-    were not tested.
-  - Public documentation; no individual entitlement, negotiated contract or inference execution tested.
+- accessed_at: '2026-10-13'
   claim_scope:
   - Max and Team credit amounts, eligibility, linked Console organization, covered products, expiry, and spend-tier
     conditions.
@@ -8443,6 +8448,16 @@ records:
     and rate/spend tier treatment.
   - Conditional monthly credit amounts, claim/role/organization limits, expiry and first-party-only scope.
   - Claimed Max/Team credit eligibility, organization linking, amounts, expiry and platform exclusions inspected.
+  id: src-4159ec1ffae5
+  limitations:
+  - Live public program documentation; publication date not displayed. Terms acceptance and individual eligibility
+    were not tested.
+  - Public documentation; no individual entitlement, negotiated contract or inference execution tested.
+  published_at: null
+  publisher: Anthropic
+  source_type: primary
+  title: API credits for Max and Team plans
+  url: https://platform.claude.com/docs/en/about-claude/api-credits-for-subscribers
 - id: src-427f26e1d576
   url: https://github.com/FaultMaven/faultmaven/pull/1768
   title: Ask for an evidence trail, not internal reasoning, in investigation schemas
@@ -8870,16 +8885,7 @@ records:
     provider/prompt details.
   claim_scope:
   - Research-source failures and task-specific title-writing behavior, not a general win rate.
-- id: src-72eb512e62c1
-  url: https://support.claude.com/en/articles/17154008-monthly-api-credits-for-max-and-team-plans
-  title: Monthly API credits for Max and Team plans
-  publisher: Anthropic
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-08'
-  limitations:
-  - Public documentation only; no account access, entitlement test or inference execution.
-  - Public documentation; no individual entitlement, negotiated contract or inference execution tested.
+- accessed_at: '2026-10-13'
   claim_scope:
   - Credits cover available Claude models, Messages and Batch APIs. Self-run claude -p and Agent SDK with linked
     Console API key count as covered Agent SDK usage. Plan-authenticated runs draw plan limits; GitHub Action,
@@ -8889,6 +8895,15 @@ records:
   - Self-run API-key claude -p/Agent SDK eligibility; interactive and IDE/desktop/GitHub Action exclusions.
   - Self-run API-key claude -p / Agent SDK distinction from interactive, IDE, desktop and GitHub Action usage
     inspected.
+  id: src-72eb512e62c1
+  limitations:
+  - Public documentation only; no account access, entitlement test or inference execution.
+  - Public documentation; no individual entitlement, negotiated contract or inference execution tested.
+  published_at: null
+  publisher: Anthropic
+  source_type: primary
+  title: Monthly API credits for Max and Team plans
+  url: https://support.claude.com/en/articles/17154008-monthly-api-credits-for-max-and-team-plans
 - id: src-7435c41604e4
   url: https://raw.githubusercontent.com/MarcinDudekDev/llm-review-bench/main/harness/models.json
   title: LLM review model configuration
@@ -10082,20 +10097,20 @@ records:
   limitations:
   - Generic Flash controls and concurrency examples cannot establish v4-specific settings or quotas.
   - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
-- id: src-7e3a0b76fdd6
-  url: https://docs.bfl.ai/release-notes
-  title: Release Notes
-  publisher: Black Forest Labs
-  source_type: primary
-  published_at: null
-  accessed_at: '2026-10-11'
+- accessed_at: '2026-10-13'
   claim_scope:
   - Dated entries document August 4 video preview, August 17 continuation limit, August 20 separate upscale,
     September 10 integrated QHD/UHD, and October 1 separate Image release.
+  id: src-7e3a0b76fdd6
   limitations:
   - Release announcements do not prove current account access or performance; separate Image/Upscale releases
     do not replace the video model identity.
   - The current inspection covers the stated sections only; retained historical scopes are not newly certified.
+  published_at: null
+  publisher: Black Forest Labs
+  source_type: primary
+  title: Release Notes
+  url: https://docs.bfl.ai/release-notes
 - id: src-2d980c304e95
   url: https://docs.bfl.ai/quick_start/get_started
   title: Quick Start
@@ -10665,3 +10680,277 @@ records:
   - ChatGPT Voice Output restriction is not automatically an API-output restriction.
   - The page labels September 29, 2026 as an update date; original publication date is not established. Service-specific
     conditions control where applicable; the ChatGPT Voice Output restriction is scoped to that feature.
+- id: src-13f280930866
+  url: https://benchmark.towardsai.com/methodology.html
+  title: ToneBench methodology
+  source_type: independent-evaluation
+  publisher: Towards AI
+  published_at: null
+  accessed_at: '2026-10-13'
+  claim_scope:
+  - Original exact-model task evidence and disclosed setup.
+  limitations:
+  - Current October 12 method cannot silently replace older exact scorecard conditions.
+- id: src-dce7015e0db7
+  url: https://benchmark.towardsai.com/judges.html
+  title: ToneBench judge panel analysis
+  source_type: independent-evaluation
+  publisher: Towards AI
+  published_at: null
+  accessed_at: '2026-10-13'
+  claim_scope:
+  - Original exact-model task evidence and disclosed setup.
+  limitations:
+  - Shared study, not independent replication; typed Jev is not an LLM.
+- id: src-3a49ad558f18
+  url: https://docs.x.ai/developers/grok-4-7
+  title: Grok 4.7 Developer Guide
+  source_type: primary
+  publisher: SpaceXSI
+  published_at: null
+  accessed_at: '2026-10-13'
+  claim_scope:
+  - Grok 4.7 API setup, model-specific input/output boundaries, supported effort and route distinctions
+  limitations:
+  - Last updated October 10, 2026 is not an original publication date. Route documentation does not establish
+    task quality, account eligibility or numerical output-token capacity.
+- id: src-6e68413e157d
+  url: https://benchmark.towardsai.com/models/grok-4-7-high.html
+  title: Grok 4.7 (high) Writing Benchmark Score
+  source_type: independent-evaluation
+  publisher: Towards AI / Louis-François Bouchard
+  published_at: null
+  accessed_at: '2026-10-13'
+  claim_scope:
+  - Grok 4.7 high long-form YouTube-script writing; exact generation route, run date and typed/LLM/code scoring
+  limitations:
+  - One editorial voice, ten briefs and a private exact rubric; no human preference or general-writing guarantee.
+    October 12 is board update, October 11 is the disclosed run date.
+- id: src-853bdd6a79c1
+  url: https://octavus.ai/benchmarks/aab/x-ai-grok-4.7-high
+  title: Grok 4.7 high Autonomous Agents Benchmark
+  source_type: independent-evaluation
+  publisher: Octavus
+  published_at: null
+  accessed_at: '2026-10-13'
+  claim_scope:
+  - October 2 Grok 4.7 high run, per-task computer interactions and instruction compliance
+  limitations:
+  - One 88-task suite run; provider endpoint, immutable model checkpoint, region, initial rubric-grader model
+    and precision undisclosed. Search excerpt described an older September 22 result and is not used.
+- id: src-2989c3ac6115
+  url: https://octavus.ai/benchmarks
+  title: Autonomous Agents Benchmark methodology
+  source_type: independent-evaluation
+  publisher: Octavus
+  published_at: null
+  accessed_at: '2026-10-13'
+  claim_scope:
+  - AI rubric grading, deterministic gates and three-review trace adjudication
+  limitations:
+  - Trace grader openai/gpt-6-luna also competes on the board. Gold-unverified tasks count; independent human
+    adjudication is not established.
+- id: src-71b5c6cbf0ec
+  url: https://www.metergraph.dev/blog/coding-tier/2026-10/
+  title: 'Frontier models for a software factory: where the additional cost is justified'
+  source_type: independent-evaluation
+  publisher: Vasiliy Radostev / Metergraph
+  published_at: '2026-10-11'
+  accessed_at: '2026-10-13'
+  claim_scope:
+  - Exact Grok 4.7 workload rows and eight-design evaluation plus single-step software-factory replay methods
+  limitations:
+  - Publication October 11 does not establish measurement date. Vercel AI Gateway route is disclosed, but exact
+    upstream endpoint, region, checkpoint and effort are not. Agent workloads measure one next step, not end-to-end
+    completion.
+- id: src-6ae42c00ba02
+  url: https://arcprize.org/results/xai-grok-4-7
+  title: Grok 4.7 ARC Prize results
+  source_type: independent-evaluation
+  publisher: ARC Prize Foundation
+  published_at: null
+  accessed_at: '2026-10-13'
+  claim_scope:
+  - Exact four efforts and separate ARC-AGI-1/2/3 harness scores
+  limitations:
+  - September 21 header is not proven to be a measurement day. Public task replay denominators differ from
+    semi-private scores.
+- id: src-de6ff2412b4e
+  url: https://arcprize.org/policy
+  title: ARC Prize Verified Testing Policy
+  source_type: independent-evaluation
+  publisher: ARC Prize Foundation
+  published_at: null
+  accessed_at: '2026-10-13'
+  claim_scope:
+  - Direct input-output versus interactive evaluations and verified-set governance
+  limitations:
+  - General policy does not establish the exact Grok provider endpoint, checkpoint or run date.
+- id: src-87ff98b5d825
+  url: https://vulcanbench.com/benchmarks/swe-v4-grok47-cursor-v320.html
+  title: Grok 4.7 across effort levels
+  source_type: independent-evaluation
+  publisher: VulcanBench
+  published_at: '2026-10-04'
+  accessed_at: '2026-10-13'
+  claim_scope:
+  - Cursor CLI behavior-preserving rewrites, routine coding tickets and exact evaluator panel
+  limitations:
+  - One attempt per task/effort; private code and answer keys. Judge panels differ across models and Routine
+    versus Frontier; cost unavailable.
+- id: src-4f76651a91cc
+  url: https://docs.bfl.ai/flux_tools/flux_video_upscale
+  title: FLUX Video Upscale - Black Forest Labs
+  publisher: Black Forest Labs
+  source_type: primary
+  accessed_at: '2026-10-13'
+  published_at: null
+  claim_scope:
+  - FLUX Video Upscale is a BFL-hosted video super-resolution API product at /v1/flux-tools/video-upscale-v1,
+    powered by FLUX 3.
+  limitations:
+  - Identity inspection only; endpoint version is not an immutable underlying model checkpoint. No account
+    access or quality testing.
+- id: src-3e205589a618
+  url: https://www.ai21.com/gateway/
+  title: AI21 Gateway
+  publisher: AI21 Labs
+  source_type: primary
+  accessed_at: '2026-10-13'
+  published_at: null
+  claim_scope:
+  - AI21 Gateway is a distinct beta API gateway service for routing, compaction and caching between agent harnesses
+    and models.
+  limitations:
+  - Marketing page establishes product identity, not measured savings or upstream-model identity; service details
+    require separate onboarding.
+- id: src-5b049fe3380f
+  url: https://www.ai21.com/
+  title: AI Systems Built for the Enterprise | AI21
+  publisher: AI21 Labs
+  source_type: primary
+  accessed_at: '2026-10-13'
+  published_at: null
+  claim_scope:
+  - AI21 presents its Intelligent Gateway separately from harness optimization and dedicated models.
+  limitations:
+  - Home-page marketing; no immutable model checkpoint or public gateway API hostname is established.
+- id: src-8b4fdd88a2f7
+  url: https://elevenlabs.io/docs/changelog/2026/9/14
+  title: September 14, 2026 | ElevenLabs Documentation
+  publisher: ElevenLabs
+  source_type: primary
+  accessed_at: '2026-10-13'
+  published_at: '2026-09-14'
+  claim_scope:
+  - The September 14 entry announces Music v2.5 API support and the exact music_v2_5 selector.
+  limitations:
+  - API-support announcement is distinct from the model release or immutable checkpoint date.
+- id: src-e742a57d5e85
+  url: https://elevenlabs.io/blog/music-v2-5-model
+  title: Introducing Music v2.5, our best music model yet
+  publisher: ElevenLabs
+  source_type: primary
+  accessed_at: '2026-10-13'
+  published_at: '2026-09-11'
+  claim_scope:
+  - Named Music v2.5 release and distinction from still-available Music v2.
+  limitations:
+  - Published September 11; last updated September 20. Updated marketing text does not disclose a serving checkpoint
+    or model-update policy.
+- id: src-16e1387b467b
+  url: https://elevenlabs.io/docs/overview/capabilities/music
+  title: Eleven Music | ElevenLabs Documentation
+  publisher: ElevenLabs
+  source_type: primary
+  accessed_at: '2026-10-13'
+  published_at: null
+  claim_scope:
+  - Music v2.5 is selectable with model_id music_v2_5 and is distinct from Music v2.
+  limitations:
+  - No checkpoint immutability or alias-update guarantee is stated. Default-model and plan statements differ
+    across official surfaces; those are not resolved here.
+- id: src-8a8961ff6472
+  url: https://elevenlabs.io/docs/eleven-creative/products/music
+  title: Music overview | ElevenLabs Documentation
+  publisher: ElevenLabs
+  source_type: primary
+  accessed_at: '2026-10-13'
+  published_at: null
+  claim_scope:
+  - Music v2.5 product section maps its named model to API selector music_v2_5.
+  limitations:
+  - No immutable snapshot or rolling model guarantee is stated. This page retains a v2-default statement contrary
+    to the newer announcement.
+- id: src-b655bdfea2a3
+  url: https://elevenlabs.io/docs/api-reference/music/compose
+  title: Compose music | ElevenLabs Documentation
+  publisher: ElevenLabs
+  source_type: primary
+  accessed_at: '2026-10-13'
+  published_at: null
+  claim_scope:
+  - Compose music accepts the explicit music_v2_5 selector alongside music_v2 and music_v1.
+  limitations:
+  - The seed description warns outputs can change across system updates; it does not establish whether weights
+    are immutable or the selector is a rolling alias.
+- id: src-bc0ae0d13eb7
+  url: https://github.com/elevenlabs/skills/blob/main/music/references/api_reference.md
+  title: Music API Reference
+  publisher: ElevenLabs
+  source_type: primary
+  accessed_at: '2026-10-13'
+  published_at: null
+  claim_scope:
+  - Official music API reference uses music_v2_5 separately from older model selectors.
+  limitations:
+  - Actual file text was visible and inspected. Usage examples do not specify immutable weights or an alias-update
+    guarantee; no code was executed.
+- id: src-6185a6415370
+  url: https://elevenlabs.io/docs/overview/capabilities/text-to-speech/eleven-v4
+  title: Eleven v4 | ElevenLabs Documentation
+  publisher: ElevenLabs
+  source_type: primary
+  accessed_at: '2026-10-13'
+  published_at: null
+  claim_scope:
+  - The overview distinguishes Eleven v4 and Eleven v4 Turbo variants and warns that Eleven v4 continues training
+    and behavior can evolve after launch.
+  limitations:
+  - The evolution notice is worded for Eleven v4 overall; it does not separately specify a Turbo immutable
+    checkpoint or exact alias replacement policy.
+- id: src-8872e9e05ca4
+  url: https://elevenlabs.io/docs/eleven-api/guides/how-to/websockets/realtime-tdd
+  title: Stream dialogue in real-time | ElevenLabs Documentation
+  publisher: ElevenLabs
+  source_type: primary
+  accessed_at: '2026-10-13'
+  published_at: null
+  claim_scope:
+  - The real-time dialogue guide uses eleven_v4_turbo at /v1/text-to-dialogue/stream-input and distinguishes
+    it from eleven_v4.
+  limitations:
+  - No immutable model checkpoint or version-pinning option is stated; examples were read, not executed.
+- id: src-abb5ce82697b
+  url: https://elevenlabs.io/docs/eleven-api/resources/breaking-changes-policy
+  title: Breaking changes policy | ElevenLabs Documentation
+  publisher: ElevenLabs
+  source_type: primary
+  accessed_at: '2026-10-13'
+  published_at: null
+  claim_scope:
+  - API breaking-change policy addresses schemas, parameters and endpoint removals.
+  limitations:
+  - Does not specify immutable weights or a model-selector update guarantee.
+- id: src-e2f52f6703bc
+  url: https://elevenlabs.io/docs/changelog/2026/10/5
+  title: October 5, 2026 | ElevenLabs Documentation
+  publisher: ElevenLabs
+  source_type: primary
+  accessed_at: '2026-10-13'
+  published_at: '2026-10-05'
+  claim_scope:
+  - Dated API entry adds eleven_v4 and eleven_v4_turbo as separate conversational TTS choices and changes the
+    agent default to Turbo.
+  limitations:
+  - Agent default selection is not a model checkpoint or training-update policy.

@@ -2612,39 +2612,31 @@ records:
     catalog_model_ids:
     - claude-opus-5-5
     incident_status: ongoing
-- schema_version: '1.0'
-  id: behavior-2cb276f61a9659c4
-  model_ids:
-  - claude-opus-5-5
-  provider_id: null
-  product: null
-  model_version: null
-  harness: null
-  effort: null
+- change_type: unresolved
   claim: BridgeBench detected a sustained Opus 5.5 downgrade by October 4.
-  change_type: latency
-  metrics: []
-  observed_at: '2026-10-07'
-  reported_at: '2026-10-04'
-  effective_from: null
-  status: unknown
-  fact_status: measured
-  confidence: high
-  supporting_evidence_ids: []
-  contradictory_evidence_ids:
-  - src-69689436665a
-  - src-f3a4a7760647
-  official_acknowledgment: null
-  fix:
-    published_at: null
-    version: null
-    summary: null
-    evidence_ids: []
-    measured_improvement: null
   conditions:
   - 'conditions: 50 private tasks, three attempts each, no tools/repository per attempt; composite is 60% correctness,
     20% inverse output tokens, 20% inverse cost.'
   - 'model_attribution: Product/harness-wide where category indicates it; no weights cause established'
+  confidence: high
+  contradictory_evidence_ids:
+  - src-69689436665a
+  - src-f3a4a7760647
+  effective_from: null
+  effort: null
+  fact_status: measured
+  fix:
+    evidence_ids: []
+    measured_improvement: null
+    published_at: null
+    summary: null
+    version: null
+  harness: null
+  id: behavior-2cb276f61a9659c4
+  metrics: []
+  model_ids:
+  - claude-opus-5-5
+  model_version: null
   notes:
   - Power is not accuracy. Cheaper/fewer-token outputs can offset lower correctness; speed is excluded. Bench
     supports OpenRouter, Claude Code and Codex series, but the public extracted Opus board did not expose this
@@ -2655,53 +2647,65 @@ records:
   - 'Source event observed_at: 2026-09-22 to 2026-10-04'
   - Repository first observation is 2026-10-07; no retrospective availability inferred.
   - 'Post-change validation: No independent post-fix measurement found'
+  - 'October 13 inspection: latest displayed test is Oct 9 at 95.7% composite power, inside the publisher 90–110
+    band. This is not an accuracy percentage or proof of unchanged model weights.'
+  - Grading uses executable Node tests and normalized exact-answer checks, not an LLM judge. Exact Opus series
+    provider/effort/CLI remains undisclosed.
+  observed_at: '2026-10-07'
+  official_acknowledgment: null
+  product: null
+  provider_id: null
+  reported_at: '2026-10-04'
   research_details:
-    id: opus55_bridgebench_nondetection
-    title: BridgeBench detected a sustained Opus 5.5 downgrade by October 4.
-    kind: longitudinal_measurement
-    layer: observed_end_to_end
-    research_model_ids:
+    actionable: Don't label these percentages intelligence retention or latency. Preserve route/settings uncertainty.
+    assessed_at: '2026-10-07T10:00:00Z'
+    catalog_model_ids:
     - claude-opus-5-5
-    reported_model_label: Claude Opus 5.5
-    snapshot_id: null
-    weights_change_established: false
-    claim: BridgeBench detected a sustained Opus 5.5 downgrade by October 4.
-    claim_status: refuted
-    confidence: high
-    confidence_scope: Confidence in the bounded evidence classification, not proof of general model quality
-      or causal attribution.
-    state: unknown
-    research_source_ids:
-    - opus_bridge_results
-    - opus_bridge_method
-    observed_at: 2026-09-22 to 2026-10-04
-    reported_at: '2026-10-04'
-    reported_date_range: null
-    reported_date_precision: null
-    scope:
-      conditions: 50 private tasks, three attempts each, no tools/repository per attempt; composite is 60%
-        correctness, 20% inverse output tokens, 20% inverse cost.
-      model_attribution: Product/harness-wide where category indicates it; no weights cause established
-    judgment: Published composite power scores are Sep 22 100.0%, Sep 27 99.2%, Oct 1 103.8%, Oct 2 94.2%,
-      Oct 4 96.5%. All are inside its 90–110 normal-variance band. This is meaningful narrow counterevidence
-      to a universal decline, not proof of no task-specific regression.
-    official_acknowledgment: null
-    fix:
-      stage: none_found
-      version: null
-      commit: null
-      measured_post_fix_outcome: No independent post-fix measurement found
-      resolution_scope: null
     caveats:
     - Power is not accuracy. Cheaper/fewer-token outputs can offset lower correctness; speed is excluded. Bench
       supports OpenRouter, Claude Code and Codex series, but the public extracted Opus board did not expose
       this series' exact provider/effort/CLI. Private suite not independently rerun.
-    actionable: Don't label these percentages intelligence retention or latency. Preserve route/settings uncertainty.
+    claim: BridgeBench detected a sustained Opus 5.5 downgrade by October 4.
+    claim_status: refuted
     cluster_id: opus55_bridgebench_nondetection
-    assessed_at: '2026-10-07T10:00:00Z'
-    catalog_model_ids:
-    - claude-opus-5-5
+    confidence: high
+    confidence_scope: Confidence in the bounded evidence classification, not proof of general model quality
+      or causal attribution.
+    fix:
+      commit: null
+      measured_post_fix_outcome: No independent post-fix measurement found
+      resolution_scope: null
+      stage: none_found
+      version: null
+    id: opus55_bridgebench_nondetection
     incident_status: unknown
+    judgment: Published composite power scores are Sep 22 100.0%, Sep 27 99.2%, Oct 1 103.8%, Oct 2 94.2%,
+      Oct 4 96.5%. All are inside its 90–110 normal-variance band. This is meaningful narrow counterevidence
+      to a universal decline, not proof of no task-specific regression.
+    kind: longitudinal_measurement
+    layer: observed_end_to_end
+    observed_at: 2026-09-22 to 2026-10-04
+    official_acknowledgment: null
+    reported_at: '2026-10-04'
+    reported_date_precision: null
+    reported_date_range: null
+    reported_model_label: Claude Opus 5.5
+    research_model_ids:
+    - claude-opus-5-5
+    research_source_ids:
+    - opus_bridge_results
+    - opus_bridge_method
+    scope:
+      conditions: 50 private tasks, three attempts each, no tools/repository per attempt; composite is 60%
+        correctness, 20% inverse output tokens, 20% inverse cost.
+      model_attribution: Product/harness-wide where category indicates it; no weights cause established
+    snapshot_id: null
+    state: unknown
+    title: BridgeBench detected a sustained Opus 5.5 downgrade by October 4.
+    weights_change_established: false
+  schema_version: '1.0'
+  status: unknown
+  supporting_evidence_ids: []
 - schema_version: '1.0'
   id: behavior-2e60979be1eaf779
   model_ids:

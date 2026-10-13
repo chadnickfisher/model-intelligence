@@ -6,7 +6,7 @@ Coverage priorities include configuration-matched independent measurements, exac
 
 ## Recorded inventory
 
-Observed 2026-10-12. This is an inventory date, not a fresh verification date for every fact.
+Observed 2026-10-13. This is an inventory date, not a fresh verification date for every fact.
 
 - models: 54
 - providers and access products: 44
@@ -14,7 +14,7 @@ Observed 2026-10-12. This is an inventory date, not a fresh verification date fo
 - performance judgments: 14
 - price records: 192
 - access routes: 324
-- public sources: 886
+- public sources: 909
 - evidence observations: 55
 
 See [coverage gaps](coverage-gaps.yaml) for source-specific limitations and [contradictions](../evidence/contradictions.yaml) for unresolved differences. Counts indicate coverage, not quality or completeness.

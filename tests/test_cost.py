@@ -80,7 +80,12 @@ def test_cache_write_ttls_and_missing_cache(data):
 
 
 def test_conflicting_cache_tariff_blocks_only_requested_cache_reads(data):
-    p = offer(data, 'claude-sonnet-5-5')
+    # Keep this regression independent of later resolved live-catalog tariffs.
+    p = deepcopy(offer(data, 'claude-sonnet-5-5'))
+    p['verified_at'] = '2026-10-07'
+    p['conditions'] = []
+    p['notes'] = []
+    next(rate for rate in p['rates'] if rate['metric'] == 'cached_input')['amount'] = None
     ordinary = calc(data, p)
     assert ordinary['supported'] and Decimal(ordinary['total']) == Decimal('0.012')
     assert calc(data, p, cache_write_5m_tokens=100)['supported']

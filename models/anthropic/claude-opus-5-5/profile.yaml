@@ -243,44 +243,50 @@ capabilities:
     baseline_commit: b209600f8ae44d41b70d5ed4423e239dbb9d3b6d
     original_position: 0
     history_path: git:ce93efb4741873cb6ac04167376d3b1a07779d60:history/migrations/2026-10-07-capabilities.yaml
-- id: judgment-e494146b5a163111
-  scope: direct
-  task_ids:
-  - coding.debugging
-  related_task_ids: []
-  assessment: conditional
-  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
-  judgment: Can repair a subset of hidden repository defects; use as an assisted audit, not a completeness
-    guarantee.
-  confidence: medium
-  supporting_evidence_ids:
-  - src-ad78a04807f9
-  - src-02b09208ceab
-  - src-0b72694a5dea
-  contradictory_evidence_ids: []
+- assessment: conditional
   conditions:
-  - Claude Code;1M window; zero compactions in this run group.
-  - 'Harness: Claude Code; effort: max; effort evidence: first_party.'
-  - 105 planted defects across TypeScript VS Code extension (~28K lines) and React/Supabase LMS (~60K lines).
-  - One agentic round per repository; native CLI/tools; same task prompt but nonidentical harnesses, contexts
-    and budgets.
-  - Blind diff-based answer-key grading; extra unplanted fixes excluded; private corpus/judgments prevent full
-    external reproduction.
-  known_failure_modes:
-  - Many planted defects remained unresolved in the measured runs.
-  - Run variance and harness differences prevent fine-grained cross-model ranking.
+  - Claude Code harness at max effort; exact serving endpoint, region, immutable checkpoint and client build
+    are not disclosed by the frozen README.
+  - 105 planted defects across a TypeScript VS Code extension and a React/Supabase LMS. Repo 1 derives from
+    a public extension; repo 2 is a private product. Both seeded snapshots and answer keys are withheld.
+  - One agentic round per repository with native CLI tools, identical task prompts, no network and no Git history.
+    Different model configurations are not controlled equivalents.
+  - GPT-5.5 through Codex grades blinded diffs against withheld answer keys; extra unplanted fixes are excluded.
+  - The exact Opus 5.5/max row reports three runs, mean 41.7/105, 19/45 and 22.7/60, labeled September 23,
+    2026.
+  confidence: medium
+  contradictory_evidence_ids: []
+  effective_from: null
   evidence_notes:
   - Result measures finding AND implementing fixes; do not relabel it as code-review recall or test-generation
     quality.
   - No matched independent contradiction located; partial successes and misses coexist.
   - Confidence concerns this bounded claim, not a capability score.
-  observed_at: '2026-10-07'
-  effective_from: null
+  - The exact max-effort mean is 41.7 planted fixes out of 105 over three runs; separate result-artifact fetch
+    failures remain unresolved.
+  - Historical supplementary-artifact citations are not treated as current support; their unavailable attempts
+    remain recorded.
+  - Current inspection supports the frozen README result row and methodology. Historical context-window, compaction
+    and individual-score details were not freshly reverified.
+  id: judgment-e494146b5a163111
+  judgment: Can repair a subset of hidden repository defects; use as an assisted audit, not a completeness
+    guarantee.
+  known_failure_modes:
+  - Many planted defects remained unresolved in the measured runs.
+  - Run variance and harness differences prevent fine-grained cross-model ranking.
+  observed_at: '2026-10-13'
   provenance:
-    origin: research
-    research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate scoped_debugging:claude-opus-5-5-debug-bughunt; exact identity gates
       and original sources retained.
+    origin: research
+    research_batch_id: public-research-2026-10-07
+  related_task_ids: []
+  scope: direct
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  supporting_evidence_ids:
+  - src-e86e19b3dd2c
+  task_ids:
+  - coding.debugging
 - id: judgment-f5926189f36cd899
   scope: direct
   task_ids:
@@ -308,20 +314,7 @@ capabilities:
     research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate architecture_refactoring:A03; exact identity gates and original sources
       retained.
-- id: judgment-cd273215e58beb5c
-  scope: direct
-  task_ids:
-  - coding.frontend
-  related_task_ids: []
-  assessment: conditional
-  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
-  judgment: Use relative preference evidence to shortlist this exact configuration for frontend trials; do
-    not infer tests or review strength.
-  confidence: medium
-  supporting_evidence_ids:
-  - src-4e6f4ff35504
-  - src-2bf9d5fecb2c
-  contradictory_evidence_ids: []
+- assessment: conditional
   conditions:
   - Frontend generation under hosted Arena configurations
   - Relative user-preference evidence only; production acceptance requires executable behavior, accessibility,
@@ -329,18 +322,32 @@ capabilities:
   - Reported model/version and effort retained in arena_rows. Public model labels are not immutable provider
     checkpoint hashes.
   - exact_named_release_effort_retained
-  known_failure_modes: []
+  - Human community pairwise voters, Bradley-Terry aggregation; exact serving route remains unknown.
+  confidence: medium
+  contradictory_evidence_ids: []
+  effective_from: null
   evidence_notes:
   - Confidence concerns this bounded claim, not a capability score.
   - Oct 8 row is 1857 +/-19 with 1,687 votes; this small movement does not change the retained preference conclusion.
     Executable LWC evidence is recorded in a separate finding.
-  observed_at: '2026-10-08'
-  effective_from: null
+  id: judgment-cd273215e58beb5c
+  judgment: Use relative preference evidence to shortlist this exact configuration for frontend trials; do
+    not infer tests or review strength.
+  known_failure_modes: []
+  observed_at: '2026-10-13'
   provenance:
-    origin: research
-    research_batch_id: public-research-2026-10-07
     method: Curated bounded candidate review_tests_frontend:frontend-arena-claude-opus-5-5; exact identity
       gates and original sources retained.
+    origin: research
+    research_batch_id: public-research-2026-10-07
+  related_task_ids: []
+  scope: direct
+  scope_note: Task-specific source claim under documented conditions; no transfer to other coding tasks.
+  supporting_evidence_ids:
+  - src-4e6f4ff35504
+  - src-2bf9d5fecb2c
+  task_ids:
+  - coding.frontend
 - id: judgment-7992397f38f55c00
   scope: direct
   task_ids:

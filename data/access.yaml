@@ -4296,22 +4296,15 @@ records:
         cache_write_5m: 12.5
         cache_write_1h: 20
       conditions: []
-- schema_version: '1.0'
-  id: access-05e43d3e1d4cbb21
-  verified_at: '2026-10-07'
-  model_id: claude-haiku-4-5
-  provider_id: anthropic
-  model_label: claude-haiku-4-5-20251001
-  product: Claude API
-  methods:
-  - hosted_api
-  status: officially_documented_not_execution_tested
-  availability: documented
+- availability: documented
   billing_class: metered_api
-  price_ids:
-  - price-proprietary-claude-haiku-4-5-anthropic-92db4721bd09
-  - price-proprietary-claude-haiku-4-5-anthropic-9448cb8b044e
-  restrictions: []
+  client_id: null
+  conditions:
+  - API key and billing account required; public listing does not establish individual access.
+  - Haiku 4.5 does not support inference_geo; current 1.1x first-party US-only parameter pricing applies to
+    Claude 4.6 and later.
+  - Eligible Max/Team subscribers may link limited API credits to a Claude API organization; this is conditional,
+    not unlimited API inclusion.
   evidence_ids:
   - src-e1910c5126bc
   - src-50846cd1ff36
@@ -4325,68 +4318,80 @@ records:
   - src-e99bd76836c1
   - src-ed2ea3ed3dc1
   - src-6bd484fad5a5
+  - src-4159ec1ffae5
+  id: access-05e43d3e1d4cbb21
+  methods:
+  - hosted_api
+  model_id: claude-haiku-4-5
+  model_label: claude-haiku-4-5-20251001
   notes:
   - 'Research route class: hosted_metered_api'
   - Source documented; inference execution and individual eligibility were not tested.
   - Price verification dates remain attached to their original records; this route check does not refresh old
     tariffs.
-  client_id: null
+  price_ids:
+  - price-proprietary-claude-haiku-4-5-anthropic-92db4721bd09
+  - price-proprietary-claude-haiku-4-5-anthropic-9448cb8b044e
+  product: Claude API
+  provider_id: anthropic
   requires_account: true
-  subscription_includes_api: false
-  reset_cadence: Rate token buckets replenish continuously; spend cap resets monthly at 00:00 UTC.
-  conditions:
-  - API key and billing account required; public listing does not establish individual access.
-  - Haiku 4.5 does not support inference_geo; current 1.1x first-party US-only parameter pricing applies to
-    Claude 4.6 and later.
   research_details:
-    research_provider_id: anthropic
-    product: Claude API
-    route_class: hosted_metered_api
-    provider_model_alias: claude-haiku-4-5-20251001
-    status: officially_documented_not_execution_tested
-    research_source_ids:
-    - a-claude-haiku-4-5
-    - a-price
-    pricing:
-    - tier: standard
-      currency: USD
-      unit: per_1M_tokens
-      rates:
-        input: 1
-        output: 5
-        cached_input: 0.1
-        cache_write_5m: 1.25
-        cache_write_1h: 2
-      conditions: []
-    - tier: batch
-      currency: USD
-      unit: per_1M_tokens
-      rates:
-        input: 0.5
-        output: 2.5
-      conditions:
-      - Separate Batch API tariff; not usable by interactive CLI merely because model is selected.
     account_entitlement_verified: false
-    convenience_alias: claude-haiku-4-5
-    requires_account: true
     conditions:
     - API key and billing account required; public listing does not establish individual access.
     - Haiku 4.5 does not support inference_geo; current 1.1x first-party US-only parameter pricing applies
       to Claude 4.6 and later.
+    - Eligible Max/Team subscribers may link limited API credits to a Claude API organization; this is conditional,
+      not unlimited API inclusion.
+    convenience_alias: claude-haiku-4-5
     limits:
       basis: Published standard maximums; evaluation-tier and organization-specific limits can be lower.
-      start:
-        requests_per_minute: 1000
-        input_tokens_per_minute: 2000000
-        output_tokens_per_minute: 400000
       build:
-        requests_per_minute: 5000
         input_tokens_per_minute: 5000000
         output_tokens_per_minute: 1000000
+        requests_per_minute: 5000
       scale:
-        requests_per_minute: 10000
         input_tokens_per_minute: 10000000
         output_tokens_per_minute: 2000000
+        requests_per_minute: 10000
+      start:
+        input_tokens_per_minute: 2000000
+        output_tokens_per_minute: 400000
+        requests_per_minute: 1000
+    pricing:
+    - conditions: []
+      currency: USD
+      rates:
+        cache_write_1h: 2
+        cache_write_5m: 1.25
+        cached_input: 0.1
+        input: 1
+        output: 5
+      tier: standard
+      unit: per_1M_tokens
+    - conditions:
+      - Separate Batch API tariff; not usable by interactive CLI merely because model is selected.
+      currency: USD
+      rates:
+        input: 0.5
+        output: 2.5
+      tier: batch
+      unit: per_1M_tokens
+    product: Claude API
+    provider_model_alias: claude-haiku-4-5-20251001
+    requires_account: true
+    research_provider_id: anthropic
+    research_source_ids:
+    - a-claude-haiku-4-5
+    - a-price
+    route_class: hosted_metered_api
+    status: officially_documented_not_execution_tested
+  reset_cadence: Rate token buckets replenish continuously; spend cap resets monthly at 00:00 UTC.
+  restrictions: []
+  schema_version: '1.0'
+  status: officially_documented_not_execution_tested
+  subscription_includes_api: null
+  verified_at: '2026-10-07'
 - schema_version: '1.0'
   id: access-ee24cb05e8602905
   verified_at: '2026-10-07'
@@ -4888,20 +4893,13 @@ records:
     conditions:
     - API key and billing account; public rate does not prove this user has entitlement.
     - First-party US inference_geo multiplier 1.1x where supported.
-- schema_version: '1.0'
-  id: access-6546eca3aa6243bd
-  verified_at: '2026-10-07'
-  model_id: claude-opus-5-5
-  provider_id: aws-bedrock
-  model_label: '{''bare'': ''anthropic.claude-opus-5-5'', ''global'': ''global.anthropic.claude-opus-5-5''}'
-  product: Amazon Bedrock
-  methods:
-  - hosted_api
-  status: officially_documented_not_execution_tested
-  availability: documented
+- availability: documented
   billing_class: metered_api
-  price_ids: []
-  restrictions: []
+  client_id: null
+  conditions:
+  - Read exact AWS card/launch and pricing page; no numeric per-model Bedrock tariff retrieved. Do not fill
+    with direct API rates.
+  - Regional/global profiles and service tiers are model-specific.
   evidence_ids:
   - src-4d070c5c8c67
   - src-50846cd1ff36
@@ -4913,36 +4911,47 @@ records:
   - src-2f9ece653a0f
   - src-f1078602a2b4
   - src-2f9466008c6e
+  id: access-6546eca3aa6243bd
+  methods:
+  - hosted_api
+  model_id: claude-opus-5-5
+  model_label: '{''bare'': ''anthropic.claude-opus-5-5'', ''global'': ''global.anthropic.claude-opus-5-5''}'
   notes:
   - 'Research route class: hosted_metered_api'
   - Source documented; inference execution and individual eligibility were not tested.
-  client_id: null
-  requires_account: null
-  subscription_includes_api: null
-  reset_cadence: null
-  conditions:
-  - Read exact AWS card/launch and pricing page; no numeric per-model Bedrock tariff retrieved. Do not fill
-    with direct API rates.
-  - Regional/global profiles and service tiers are model-specific.
+  price_ids: []
+  product: Amazon Bedrock
+  provider_id: aws-bedrock
+  requires_account: true
   research_details:
-    research_provider_id: aws-bedrock
-    product: Amazon Bedrock
-    route_class: hosted_metered_api
-    provider_model_alias:
-      bare: anthropic.claude-opus-5-5
-      global: global.anthropic.claude-opus-5-5
-    status: officially_documented_not_execution_tested
-    research_source_ids:
-    - a-claude-opus-5-5
-    - aws-claude-opus-5-5
-    - aws-pricing
-    pricing: []
     account_entitlement_verified: false
-    price_status: numeric_partner_tariff_not_retrieved
     conditions:
     - Read exact AWS card/launch and pricing page; no numeric per-model Bedrock tariff retrieved. Do not fill
       with direct API rates.
     - Regional/global profiles and service tiers are model-specific.
+    price_status: numeric_partner_tariff_not_retrieved
+    pricing: []
+    product: Amazon Bedrock
+    provider_model_alias:
+      bare: anthropic.claude-opus-5-5
+      global: global.anthropic.claude-opus-5-5
+    research_provider_id: aws-bedrock
+    research_source_ids:
+    - a-claude-opus-5-5
+    - aws-claude-opus-5-5
+    - aws-pricing
+    route_class: hosted_metered_api
+    status: officially_documented_not_execution_tested
+  reset_cadence: null
+  restrictions:
+  - Runtime supports Messages, Invoke and Converse via geo/global profiles; in-region Runtime is not offered.
+  - Mantle supports Messages at its regional endpoint; its listed in-region locations are us-east-1, ap-southeast-4
+    and us-gov-west-1.
+  - Only Standard service tier is supported; Priority, Flex, Reserved and Batch are not listed as supported.
+  schema_version: '1.0'
+  status: officially_documented_not_execution_tested
+  subscription_includes_api: null
+  verified_at: '2026-10-07'
 - schema_version: '1.0'
   id: access-51e50c52598dd165
   verified_at: '2026-10-07'
@@ -5160,95 +5169,105 @@ records:
     - US Data Zone Standard
     data_processing: Prompts and completions remain on Azure; usage metadata and safety-flagged content may
       egress to Anthropic.
-- schema_version: '1.0'
-  id: access-e54a01965f6e1cf1
-  verified_at: '2026-10-07'
-  model_id: claude-opus-5-5
-  provider_id: anthropic
-  model_label: null
-  product: Claude Code terminal and IDE
-  methods:
-  - client_product
-  - subscription_client
-  status: Conditional consumer/client product; exact account entitlement unverified
-  availability: documented
+- availability: documented
   billing_class: subscription
-  price_ids: []
-  restrictions:
-  - Full model IDs can be selected subject to plan and organization permissions. Separate subscription sign-in
-    from API-key/partner billing.
+  client_id: null
+  conditions:
+  - CLI aliases can resolve differently by provider/version; store full model ID.
+  - Batch API price must not be joined to interactive CLI/IDE requests.
+  - Max and Team subscribers can separately claim monthly Claude Platform credits into one linked Console organization
+    after eligibility requirements; Pro and Enterprise are excluded. Credits do not cover interactive Claude
+    Code or client extra usage.
+  - Self-run claude -p/Agent SDK with the linked organization API key can consume API credits; IDE, desktop
+    and GitHub Action runs count as Claude Code and are excluded. Plan-sign-in runs consume plan limits instead.
   evidence_ids:
   - src-26606ff14841
   - src-4d070c5c8c67
   - src-b2ab15dd01eb
   - src-f61234c4ee64
+  id: access-e54a01965f6e1cf1
+  methods:
+  - client_product
+  - subscription_client
+  model_id: claude-opus-5-5
+  model_label: null
   notes:
   - Authentication and billing modes are separate; no API price inherited.
-  client_id: null
+  price_ids: []
+  product: Claude Code terminal and IDE
+  provider_id: anthropic
   requires_account: null
-  subscription_includes_api: false
-  reset_cadence: null
-  conditions:
-  - CLI aliases can resolve differently by provider/version; store full model ID.
-  - Batch API price must not be joined to interactive CLI/IDE requests.
   research_details:
+    account_entitlement_verified: false
+    authentication_modes:
+    - billing: shared plan usage or plan-specific usage credits
+      mode: Claude subscription sign-in
+    - billing: API PAYG, even when logged in with a subscription
+      mode: ANTHROPIC_API_KEY
+    - billing: selected provider, region, endpoint and contract schedule
+      mode: Bedrock / Google Cloud / Foundry
+    conditions:
+    - CLI aliases can resolve differently by provider/version; store full model ID.
+    - Batch API price must not be joined to interactive CLI/IDE requests.
+    entitlement: Full model IDs can be selected subject to plan and organization permissions. Separate subscription
+      sign-in from API-key/partner billing.
     product: Claude Code terminal and IDE
-    route_class: consumer_or_client
     research_source_ids:
     - a-code
     - a-byok
     - a-code-plan
     - a-claude-opus-5-5
-    entitlement: Full model IDs can be selected subject to plan and organization permissions. Separate subscription
-      sign-in from API-key/partner billing.
+    route_class: consumer_or_client
     subscription_fee_is_token_price: false
-    account_entitlement_verified: false
-    authentication_modes:
-    - mode: Claude subscription sign-in
-      billing: shared plan usage or plan-specific usage credits
-    - mode: ANTHROPIC_API_KEY
-      billing: API PAYG, even when logged in with a subscription
-    - mode: Bedrock / Google Cloud / Foundry
-      billing: selected provider, region, endpoint and contract schedule
-    conditions:
-    - CLI aliases can resolve differently by provider/version; store full model ID.
-    - Batch API price must not be joined to interactive CLI/IDE requests.
-- schema_version: '1.0'
-  id: access-88060cd75ad9c4fd
+  reset_cadence: null
+  restrictions:
+  - Full model IDs can be selected subject to plan and organization permissions. Separate subscription sign-in
+    from API-key/partner billing.
+  schema_version: '1.0'
+  status: Conditional consumer/client product; exact account entitlement unverified
+  subscription_includes_api: false
   verified_at: '2026-10-07'
-  model_id: claude-opus-5-5
-  provider_id: anthropic
-  model_label: null
-  product: Claude apps
+- availability: documented
+  billing_class: subscription
+  client_id: null
+  conditions:
+  - Max and Team subscribers can separately claim monthly Claude Platform credits into one linked Console organization
+    after eligibility requirements; Pro and Enterprise are excluded. Credits do not cover interactive Claude
+    Code or client extra usage.
+  - Self-run claude -p/Agent SDK with the linked organization API key can consume API credits; IDE, desktop
+    and GitHub Action runs count as Claude Code and are excluded. Plan-sign-in runs consume plan limits instead.
+  evidence_ids:
+  - src-2f9466008c6e
+  - src-58333316475e
+  id: access-88060cd75ad9c4fd
   methods:
   - client_product
   - chat_app
   - subscription_client
-  status: Conditional consumer/client product; exact account entitlement unverified
-  availability: documented
-  billing_class: subscription
-  price_ids: []
-  restrictions:
-  - Pro, Max, Team and Enterprise; no Free Opus entitlement.
-  evidence_ids:
-  - src-2f9466008c6e
-  - src-58333316475e
+  model_id: claude-opus-5-5
+  model_label: null
   notes:
   - Authentication and billing modes are separate; no API price inherited.
-  client_id: null
+  price_ids: []
+  product: Claude apps
+  provider_id: anthropic
   requires_account: null
-  subscription_includes_api: false
-  reset_cadence: null
-  conditions: []
   research_details:
+    account_entitlement_verified: false
+    entitlement: Pro, Max, Team and Enterprise; no Free Opus entitlement.
     product: Claude apps
-    route_class: consumer_or_client
     research_source_ids:
     - a-opus-launch
     - a-plans
-    entitlement: Pro, Max, Team and Enterprise; no Free Opus entitlement.
+    route_class: consumer_or_client
     subscription_fee_is_token_price: false
-    account_entitlement_verified: false
+  reset_cadence: null
+  restrictions:
+  - Pro, Max, Team and Enterprise; no Free Opus entitlement.
+  schema_version: '1.0'
+  status: Conditional consumer/client product; exact account entitlement unverified
+  subscription_includes_api: false
+  verified_at: '2026-10-07'
 - schema_version: '1.0'
   id: access-efe64fb09d83013c
   verified_at: '2026-10-07'
@@ -5381,77 +5400,82 @@ records:
     conditions:
     - API key and billing account; public rate does not prove this user has entitlement.
     - First-party US inference_geo multiplier 1.1x where supported.
-- schema_version: '1.0'
-  id: access-7a57b99f53529297
-  verified_at: '2026-10-07'
-  model_id: claude-sonnet-5-5
-  provider_id: aws-bedrock
-  model_label: '{''bare'': ''anthropic.claude-sonnet-5-5'', ''global'': ''global.anthropic.claude-sonnet-5-5''}'
-  product: Amazon Bedrock
-  methods:
-  - hosted_api
-  status: officially_documented_not_execution_tested
-  availability: documented
+- availability: documented
   billing_class: metered_api
-  price_ids: []
-  restrictions: []
-  evidence_ids:
-  - src-752375ff0c97
-  - src-50846cd1ff36
-  - src-58333316475e
-  - src-26606ff14841
-  - src-b2ab15dd01eb
-  - src-f61234c4ee64
-  - src-0470ca77e23d
-  - src-2f9ece653a0f
-  - src-f1078602a2b4
-  - src-4e3ca8a95d36
-  - src-90f4749affde
-  - src-8d6f49bb7111
-  notes:
-  - 'Research route class: hosted_metered_api'
-  - Source documented; inference execution and individual eligibility were not tested.
   client_id: null
-  requires_account: null
-  subscription_includes_api: null
-  reset_cadence: null
   conditions:
   - Read exact AWS card/launch and pricing page; no numeric per-model Bedrock tariff retrieved. Do not fill
     with direct API rates.
   - Regional/global profiles and service tiers are model-specific.
+  - AWS card supports both Bedrock Runtime and Mantle. Runtime uses US/EU/global profiles; Mantle uses direct
+    anthropic.claude-sonnet-5-5 and the card lists in-region us-gov-west-1. Standard tier only; batch, Priority,
+    Flex and Reserved unsupported.
+  - Messages supported on both; Converse and InvokeModel on Runtime only. Older computer_20251124 supported
+    by AWS even though first-party API rejects it.
+  evidence_ids:
+  - src-752375ff0c97
+  - src-50846cd1ff36
+  - src-58333316475e
+  - src-26606ff14841
+  - src-b2ab15dd01eb
+  - src-f61234c4ee64
+  - src-0470ca77e23d
+  - src-2f9ece653a0f
+  - src-f1078602a2b4
+  - src-4e3ca8a95d36
+  - src-90f4749affde
+  - src-8d6f49bb7111
+  id: access-7a57b99f53529297
+  methods:
+  - hosted_api
+  model_id: claude-sonnet-5-5
+  model_label: '{''bare'': ''anthropic.claude-sonnet-5-5'', ''global'': ''global.anthropic.claude-sonnet-5-5''}'
+  notes:
+  - 'Research route class: hosted_metered_api'
+  - Source documented; inference execution and individual eligibility were not tested.
+  price_ids: []
+  product: Amazon Bedrock
+  provider_id: aws-bedrock
+  requires_account: null
   research_details:
-    research_provider_id: aws-bedrock
-    product: Amazon Bedrock
-    route_class: hosted_metered_api
-    provider_model_alias:
-      bare: anthropic.claude-sonnet-5-5
-      global: global.anthropic.claude-sonnet-5-5
-    status: officially_documented_not_execution_tested
-    research_source_ids:
-    - a-claude-sonnet-5-5
-    - aws-claude-sonnet-5-5
-    - aws-pricing
-    pricing: []
     account_entitlement_verified: false
-    price_status: numeric_partner_tariff_not_retrieved
     conditions:
     - Read exact AWS card/launch and pricing page; no numeric per-model Bedrock tariff retrieved. Do not fill
       with direct API rates.
     - Regional/global profiles and service tiers are model-specific.
-- schema_version: '1.0'
-  id: access-c32876dd4871b040
-  verified_at: '2026-10-07'
-  model_id: claude-sonnet-5-5
-  provider_id: google-cloud
-  model_label: claude-sonnet-5-5
-  product: Gemini Enterprise Agent Platform (formerly Vertex AI)
-  methods:
-  - hosted_api
-  status: officially_documented_not_execution_tested
-  availability: documented
-  billing_class: metered_api
-  price_ids: []
+    - AWS card supports both Bedrock Runtime and Mantle. Runtime uses US/EU/global profiles; Mantle uses direct
+      anthropic.claude-sonnet-5-5 and the card lists in-region us-gov-west-1. Standard tier only; batch, Priority,
+      Flex and Reserved unsupported.
+    - Messages supported on both; Converse and InvokeModel on Runtime only. Older computer_20251124 supported
+      by AWS even though first-party API rejects it.
+    price_status: numeric_partner_tariff_not_retrieved
+    pricing: []
+    product: Amazon Bedrock
+    provider_model_alias:
+      bare: anthropic.claude-sonnet-5-5
+      global: global.anthropic.claude-sonnet-5-5
+    research_provider_id: aws-bedrock
+    research_source_ids:
+    - a-claude-sonnet-5-5
+    - aws-claude-sonnet-5-5
+    - aws-pricing
+    route_class: hosted_metered_api
+    status: officially_documented_not_execution_tested
+  reset_cadence: null
   restrictions: []
+  schema_version: '1.0'
+  status: officially_documented_not_execution_tested
+  subscription_includes_api: null
+  verified_at: '2026-10-07'
+- availability: documented
+  billing_class: metered_api
+  client_id: null
+  conditions:
+  - Cloud project/model enablement and supported geography required.
+  - Google model ID belongs in endpoint URL; anthropic_version vertex-2023-10-16 in request body. Model label
+    alone does not establish first-party API compatibility.
+  - Global and US/EU multi-region routing differ; multi-region has10%premium. Anthropic Message Batches endpoint
+    is unsupported here even though Google publishes a distinct batch tariff.
   evidence_ids:
   - src-752375ff0c97
   - src-50846cd1ff36
@@ -5465,67 +5489,73 @@ records:
   - src-4e3ca8a95d36
   - src-90f4749affde
   - src-8d6f49bb7111
+  id: access-c32876dd4871b040
+  methods:
+  - hosted_api
+  model_id: claude-sonnet-5-5
+  model_label: claude-sonnet-5-5
   notes:
   - 'Research route class: hosted_metered_api'
   - Source documented; inference execution and individual eligibility were not tested.
-  client_id: null
-  requires_account: null
-  subscription_includes_api: null
-  reset_cadence: null
-  conditions:
-  - Cloud project/model enablement and supported geography required.
+  price_ids: []
+  product: Gemini Enterprise Agent Platform (formerly Vertex AI)
+  provider_id: google-cloud
+  requires_account: true
   research_details:
-    research_provider_id: google-cloud
+    account_entitlement_verified: false
+    conditions:
+    - Cloud project/model enablement and supported geography required.
+    pricing:
+    - conditions:
+      - 'Current Google global table: USD per million tokens, input2/output10/cache-write5m2.5/cache-write1h4/cache-hit0.10;
+        both printed context columns have same standard rates.'
+      currency: USD
+      rates:
+        cache_write_1h: 4
+        cache_write_5m: 2.5
+        cached_input: 0.1
+        input: 2
+        output: 10
+      tier: global_standard
+      unit: per_1M_tokens
+    - calculation: Published non-global table agrees with the documented 1.1x multiplier.
+      conditions:
+      - Current non-global table prints input2.2/output11/cache-write5m2.75/cache-write1h4.4/cache-hit0.11.
+        Exact Google model route uses global or US/EU multi-region; newer models are not supported by the guide’s
+        specific single-region examples.
+      currency: USD
+      rates:
+        cache_write_1h: 4.4
+        cache_write_5m: 2.75
+        cached_input: 0.11
+        input: 2.2
+        output: 11.0
+      tier: multiregion_standard
+      unit: per_1M_tokens
     product: Gemini Enterprise Agent Platform (formerly Vertex AI)
-    route_class: hosted_metered_api
     provider_model_alias: claude-sonnet-5-5
-    status: officially_documented_not_execution_tested
+    research_provider_id: google-cloud
     research_source_ids:
     - a-claude-sonnet-5-5
     - g-cloud-price
     - a-price
-    pricing:
-    - tier: global_standard
-      currency: USD
-      unit: per_1M_tokens
-      rates:
-        input: 2
-        output: 10
-        cached_input: 0.2
-        cache_write_5m: 2.5
-        cache_write_1h: 4
-      conditions:
-      - Published Google Cloud global table; USD per 1M tokens.
-    - tier: regional_or_multiregion_standard
-      currency: USD
-      unit: per_1M_tokens
-      rates:
-        input: 2.2
-        output: 11.0
-        cached_input: 0.22
-        cache_write_5m: 2.75
-        cache_write_1h: 4.4
-      conditions:
-      - 10% premium explicitly stated for Claude 4.5 and later; region support must be checked.
-      calculation: standard rate multiplied by explicitly documented 1.1; not independently quoted for every
-        region
-    account_entitlement_verified: false
-    conditions:
-    - Cloud project/model enablement and supported geography required.
-- schema_version: '1.0'
-  id: access-3f77ae5286ee9409
-  verified_at: '2026-10-07'
-  model_id: claude-sonnet-5-5
-  provider_id: claude-platform-on-aws
-  model_label: claude-sonnet-5-5
-  product: Claude Platform on AWS
-  methods:
-  - hosted_api
-  status: officially_documented_not_execution_tested
-  availability: documented
-  billing_class: metered_api
-  price_ids: []
+    route_class: hosted_metered_api
+    status: officially_documented_not_execution_tested
+  reset_cadence: null
   restrictions: []
+  schema_version: '1.0'
+  status: officially_documented_not_execution_tested
+  subscription_includes_api: null
+  verified_at: '2026-10-07'
+- availability: documented
+  billing_class: metered_api
+  client_id: null
+  conditions:
+  - Postpaid hourly marketplace metering; monthly invoice.
+  - Do not conflate Claude Platform on AWS with partner-operated Amazon Bedrock.
+  - Negotiated discount and eligible US processing surcharge may apply.
+  - Endpoint aws-external-anthropic.{region}.api.aws, AnthropicAWS SDK, AWS SigV4 or AWS-generated API key;
+    separate Anthropic organization and capacity pool. Workspace region does not pin inference geography.
   evidence_ids:
   - src-752375ff0c97
   - src-50846cd1ff36
@@ -5539,214 +5569,238 @@ records:
   - src-4e3ca8a95d36
   - src-90f4749affde
   - src-8d6f49bb7111
+  id: access-3f77ae5286ee9409
+  methods:
+  - hosted_api
+  model_id: claude-sonnet-5-5
+  model_label: claude-sonnet-5-5
   notes:
   - 'Research route class: hosted_metered_api'
   - Source documented; inference execution and individual eligibility were not tested.
-  client_id: null
-  requires_account: null
-  subscription_includes_api: null
-  reset_cadence: null
-  conditions:
-  - Postpaid hourly marketplace metering; monthly invoice.
-  - Do not conflate Claude Platform on AWS with partner-operated Amazon Bedrock.
-  - Negotiated discount and eligible US processing surcharge may apply.
+  price_ids: []
+  product: Claude Platform on AWS
+  provider_id: claude-platform-on-aws
+  requires_account: true
   research_details:
-    research_provider_id: claude-platform-on-aws
-    product: Claude Platform on AWS
-    route_class: hosted_metered_api
-    provider_model_alias: claude-sonnet-5-5
-    status: officially_documented_not_execution_tested
-    research_source_ids:
-    - a-claude-sonnet-5-5
-    - a-price
-    pricing:
-    - tier: standard_token_to_CCU_conversion
-      currency: USD
-      unit: per_1M_tokens
-      rates:
-        input: 2
-        output: 10
-        cached_input: null
-        cache_write_5m: 2.5
-        cache_write_1h: 4
-      conditions:
-      - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through marketplace.
-      - 'Conflicting current documentation: Sonnet 5.5 overview and pricing table list USD 0.20 per million
-        cache-read tokens; pricing-page multiplier section says USD 0.10. Actual billed rate unresolved.'
     account_entitlement_verified: false
-    invoice_unit:
-      name: Claude Consumption Unit
-      currency: USD
-      amount: 0.01
     conditions:
     - Postpaid hourly marketplace metering; monthly invoice.
     - Do not conflate Claude Platform on AWS with partner-operated Amazon Bedrock.
     - Negotiated discount and eligible US processing surcharge may apply.
-- schema_version: '1.0'
-  id: access-d68727250fd716dc
+    invoice_unit:
+      amount: 0.01
+      currency: USD
+      name: Claude Consumption Unit
+    pricing:
+    - conditions:
+      - 'Current documented Standard/global rates: USD per million tokens; current overview and tariff agree
+        on cache read $0.10. September28 launch says $0.20; change effective date and actual billed rate are
+        unverified.'
+      - Anthropic operates inference; AWS Marketplace converts standard token charges after negotiated discount
+        to $0.01 CCUs. US-only inference_geo multiplies every token category by 1.1.
+      currency: USD
+      rates:
+        cache_write_1h: 4
+        cache_write_5m: 2.5
+        cached_input: 0.1
+        input: 2
+        output: 10
+      tier: standard_token_to_CCU_conversion
+      unit: per_1M_tokens
+    product: Claude Platform on AWS
+    provider_model_alias: claude-sonnet-5-5
+    research_provider_id: claude-platform-on-aws
+    research_source_ids:
+    - a-claude-sonnet-5-5
+    - a-price
+    route_class: hosted_metered_api
+    status: officially_documented_not_execution_tested
+  reset_cadence: null
+  restrictions: []
+  schema_version: '1.0'
+  status: officially_documented_not_execution_tested
+  subscription_includes_api: null
   verified_at: '2026-10-07'
-  model_id: claude-sonnet-5-5
-  provider_id: azure-foundry
-  model_label: claude-sonnet-5-5
-  product: Claude in Microsoft Foundry / Hosted on Azure
+- availability: documented
+  billing_class: metered_api
+  client_id: null
+  conditions:
+  - Azure subscription, resource permissions and deployment provisioning required.
+  - Azure Marketplace meters postpaid CCUs; negotiated discount may affect conversion.
+  evidence_ids:
+  - src-dc337252fd3b
+  - src-50846cd1ff36
+  - src-752375ff0c97
+  id: access-d68727250fd716dc
   methods:
   - hosted_api
-  status: officially_documented_not_execution_tested
-  availability: documented
-  billing_class: metered_api
+  model_id: claude-sonnet-5-5
+  model_label: claude-sonnet-5-5
+  notes:
+  - 'Research route class: hosted_metered_api'
+  - Source documented; inference execution and individual eligibility were not tested.
   price_ids: []
+  product: Claude in Microsoft Foundry / Hosted on Azure
+  provider_id: azure-foundry
+  requires_account: true
+  research_details:
+    account_entitlement_verified: false
+    billing_marketplace: Azure Marketplace
+    conditions:
+    - Azure subscription, resource permissions and deployment provisioning required.
+    - Azure Marketplace meters postpaid CCUs; negotiated discount may affect conversion.
+    context: 1000000
+    data_processing: Anthropic remains independent data processor; request ingress, API services and GPU inference
+      run on Azure. At-rest data stays in selected Azure geography; applicable Global/DataZone processing boundaries
+      apply. Safety-flagged content may be sent to Anthropic Trust & Safety.
+    deployment_name: Configurable deployment name passed as the model parameter.
+    deployment_types:
+    - Global Standard
+    - Data Zone Standard (US)
+    hosting_option: Azure
+    invoice_unit:
+      amount: 0.01
+      currency: USD
+      name: Claude Consumption Unit
+    pricing:
+    - conditions:
+      - 'Current documented Standard/global rates: USD per million tokens; current overview and tariff agree
+        on cache read $0.10. September28 launch says $0.20; change effective date and actual billed rate are
+        unverified.'
+      - Azure Marketplace hourly CCU metering, $0.01 per CCU after discount conversion; monthly postpaid invoice.
+        US Data Zone Standard is 1.1x; Global Standard is base rate.
+      currency: USD
+      rates:
+        cache_write_1h: 4
+        cache_write_5m: 2.5
+        cached_input: 0.1
+        input: 2
+        output: 10
+      tier: standard_token_to_CCU_conversion
+      unit: per_1M_tokens
+    product: Claude in Microsoft Foundry / Hosted on Azure
+    provider_model_alias: claude-sonnet-5-5
+    research_provider_id: azure-foundry
+    route_class: hosted_metered_api
+    status: officially_documented_not_execution_tested
+  reset_cadence: null
   restrictions:
   - Message Batches, Models API and server-side fallback are unsupported on Foundry.
   - New computer/browser toolsets are unsupported; older beta computer tools are separate.
   - Code execution, Files API, Agent Skills and programmatic tool calling are unsupported on Azure hosting.
   - Azure hosting permits only basic web_search_20250305 and web_fetch_20250910 tools.
-  - Sonnet 5.5 supports Global Standard only; US Data Zone is unavailable.
-  evidence_ids:
-  - src-dc337252fd3b
-  - src-50846cd1ff36
-  - src-752375ff0c97
-  notes:
-  - 'Research route class: hosted_metered_api'
-  - Source documented; inference execution and individual eligibility were not tested.
-  client_id: null
-  requires_account: true
+  - Current Microsoft model-specific table supports Sonnet5.5 Data Zone Standard (US) on Azure hosting; exact
+    regional deployment availability and private quota are unverified.
+  schema_version: '1.0'
+  status: officially_documented_not_execution_tested
   subscription_includes_api: null
-  reset_cadence: null
-  conditions:
-  - Azure subscription, resource permissions and deployment provisioning required.
-  - Azure Marketplace meters postpaid CCUs; negotiated discount may affect conversion.
-  research_details:
-    research_provider_id: azure-foundry
-    product: Claude in Microsoft Foundry / Hosted on Azure
-    route_class: hosted_metered_api
-    provider_model_alias: claude-sonnet-5-5
-    status: officially_documented_not_execution_tested
-    pricing:
-    - tier: standard_token_to_CCU_conversion
-      currency: USD
-      unit: per_1M_tokens
-      rates:
-        input: 2
-        output: 10
-        cached_input: null
-        cache_write_5m: 2.5
-        cache_write_1h: 4
-      conditions:
-      - Anthropic-operated, token usage rated in USD then converted to $0.01 per CCU; invoice through marketplace.
-      - 'Conflicting current documentation: Sonnet 5.5 overview and pricing table list USD 0.20 per million
-        cache-read tokens; pricing-page multiplier section says USD 0.10. Actual billed rate unresolved.'
-    account_entitlement_verified: false
-    invoice_unit:
-      name: Claude Consumption Unit
-      currency: USD
-      amount: 0.01
-    conditions:
-    - Azure subscription, resource permissions and deployment provisioning required.
-    - Azure Marketplace meters postpaid CCUs; negotiated discount may affect conversion.
-    context: 1000000
-    deployment_name: Configurable deployment name passed as the model parameter.
-    billing_marketplace: Azure Marketplace
-    hosting_option: Azure
-    deployment_types:
-    - Global Standard
-    data_processing: Prompts and completions remain on Azure; usage metadata and safety-flagged content may
-      egress to Anthropic.
-- schema_version: '1.0'
-  id: access-f8b1175b0cecaf06
   verified_at: '2026-10-07'
-  model_id: claude-sonnet-5-5
-  provider_id: anthropic
-  model_label: null
-  product: Claude Code terminal and IDE
-  methods:
-  - client_product
-  - subscription_client
-  status: Conditional consumer/client product; exact account entitlement unverified
-  availability: documented
+- availability: documented
   billing_class: subscription
-  price_ids: []
-  restrictions:
-  - Full model IDs can be selected subject to plan and organization permissions. Separate subscription sign-in
-    from API-key/partner billing.
+  client_id: null
+  conditions:
+  - CLI aliases can resolve differently by provider/version; store full model ID.
+  - Batch API price must not be joined to interactive CLI/IDE requests.
+  - Max/Team monthly API credits require an eligible plan and a separately linked Console organization; Free,Pro,Enterprise
+    excluded. Credits expire monthly and do not alter plan limits.
+  - Credits cover direct API/Batches and self-run Agent SDK or claude -p using the linked organization API
+    key. Interactive terminal/IDE/desktop/web Claude Code, extra usage, GitHub Action and partner clouds are
+    excluded.
   evidence_ids:
   - src-26606ff14841
   - src-752375ff0c97
   - src-b2ab15dd01eb
   - src-f61234c4ee64
+  id: access-f8b1175b0cecaf06
+  methods:
+  - client_product
+  - subscription_client
+  model_id: claude-sonnet-5-5
+  model_label: null
   notes:
   - Authentication and billing modes are separate; no API price inherited.
-  client_id: null
+  price_ids: []
+  product: Claude Code terminal and IDE
+  provider_id: anthropic
   requires_account: null
-  subscription_includes_api: false
-  reset_cadence: null
-  conditions:
-  - CLI aliases can resolve differently by provider/version; store full model ID.
-  - Batch API price must not be joined to interactive CLI/IDE requests.
   research_details:
+    account_entitlement_verified: false
+    authentication_modes:
+    - billing: shared plan usage or plan-specific usage credits
+      mode: Claude subscription sign-in
+    - billing: API PAYG, even when logged in with a subscription
+      mode: ANTHROPIC_API_KEY
+    - billing: selected provider, region, endpoint and contract schedule
+      mode: Bedrock / Google Cloud / Foundry
+    conditions:
+    - CLI aliases can resolve differently by provider/version; store full model ID.
+    - Batch API price must not be joined to interactive CLI/IDE requests.
+    entitlement: Full model IDs can be selected subject to plan and organization permissions. Separate subscription
+      sign-in from API-key/partner billing.
     product: Claude Code terminal and IDE
-    route_class: consumer_or_client
     research_source_ids:
     - a-code
     - a-byok
     - a-code-plan
     - a-claude-sonnet-5-5
-    entitlement: Full model IDs can be selected subject to plan and organization permissions. Separate subscription
-      sign-in from API-key/partner billing.
+    route_class: consumer_or_client
     subscription_fee_is_token_price: false
-    account_entitlement_verified: false
-    authentication_modes:
-    - mode: Claude subscription sign-in
-      billing: shared plan usage or plan-specific usage credits
-    - mode: ANTHROPIC_API_KEY
-      billing: API PAYG, even when logged in with a subscription
-    - mode: Bedrock / Google Cloud / Foundry
-      billing: selected provider, region, endpoint and contract schedule
-    conditions:
-    - CLI aliases can resolve differently by provider/version; store full model ID.
-    - Batch API price must not be joined to interactive CLI/IDE requests.
-- schema_version: '1.0'
-  id: access-d49db2bebe900f35
-  verified_at: '2026-10-07'
-  model_id: claude-sonnet-5-5
-  provider_id: anthropic
-  model_label: null
-  product: Claude apps
-  methods:
-  - client_product
-  - chat_app
-  - subscription_client
-  status: Conditional consumer/client product; exact account entitlement unverified
-  availability: documented
-  billing_class: subscription
-  price_ids: []
+  reset_cadence: null
   restrictions:
-  - 5.5 app model is documented; current plan table lists Sonnet for Free and paid plans. Exact Free picker
-    routing/remaining allowance not verified.
+  - Full model IDs can be selected subject to plan and organization permissions. Separate subscription sign-in
+    from API-key/partner billing.
+  schema_version: '1.0'
+  status: Conditional consumer/client product; exact account entitlement unverified
+  subscription_includes_api: false
+  verified_at: '2026-10-07'
+- availability: documented
+  billing_class: subscription
+  client_id: null
+  conditions:
+  - Max/Team monthly API credits require an eligible plan and a separately linked Console organization; Free,Pro,Enterprise
+    excluded. Credits expire monthly and do not alter plan limits.
+  - Credits cover direct API/Batches and self-run Agent SDK or claude -p using the linked organization API
+    key. Interactive terminal/IDE/desktop/web Claude Code, extra usage, GitHub Action and partner clouds are
+    excluded.
   evidence_ids:
   - src-4e3ca8a95d36
   - src-58333316475e
   - src-8d6f49bb7111
   - src-90f4749affde
+  id: access-d49db2bebe900f35
+  methods:
+  - client_product
+  - chat_app
+  - subscription_client
+  model_id: claude-sonnet-5-5
+  model_label: null
   notes:
   - Authentication and billing modes are separate; no API price inherited.
-  client_id: null
+  price_ids: []
+  product: Claude apps
+  provider_id: anthropic
   requires_account: null
-  subscription_includes_api: false
-  reset_cadence: null
-  conditions: []
   research_details:
+    account_entitlement_verified: false
+    entitlement: 5.5 app model is documented; current plan table lists Sonnet for Free and paid plans. Exact
+      Free picker routing/remaining allowance not verified.
+    exact_free_alias_status: family_entitlement_plus_exact_model_release_not_account_tested
     product: Claude apps
-    route_class: consumer_or_client
     research_source_ids:
     - a-sonnet-launch
     - a-release
     - a-search
     - a-plans
-    entitlement: 5.5 app model is documented; current plan table lists Sonnet for Free and paid plans. Exact
-      Free picker routing/remaining allowance not verified.
+    route_class: consumer_or_client
     subscription_fee_is_token_price: false
-    account_entitlement_verified: false
-    exact_free_alias_status: family_entitlement_plus_exact_model_release_not_account_tested
+  reset_cadence: null
+  restrictions:
+  - 5.5 app model is documented; current plan table lists Sonnet for Free and paid plans. Exact Free picker
+    routing/remaining allowance not verified.
+  schema_version: '1.0'
+  status: Conditional consumer/client product; exact account entitlement unverified
+  subscription_includes_api: false
+  verified_at: '2026-10-07'
 - schema_version: '1.0'
   id: access-b81c493a57c47077
   verified_at: '2026-10-07'
@@ -13823,116 +13877,127 @@ records:
   - src-72eb512e62c1
   notes:
   - No account access or inference was used to verify the public offering.
-- schema_version: '1.0'
-  id: access-f2773a94fb2d7d75
-  verified_at: '2026-10-07'
-  model_id: claude-haiku-5-5
-  model_label: claude-haiku-5-5
-  provider_id: aws-bedrock
-  product: Amazon Bedrock Mantle
-  methods:
-  - API
-  status: Active
-  availability: documented
+- availability: documented
   billing_class: metered_api
   client_id: null
-  requires_account: true
-  subscription_includes_api: null
-  reset_cadence: null
-  restrictions:
-  - Exact account quota, entitlement and negotiated conditions unknown.
   conditions:
-  - anthropic.claude-haiku-5-5; newer computer/browser toolsets and structured outputs unavailable in inspected
-    guide.
-  - Global versus regional routing differs; exact regional tariff unknown.
-  price_ids: []
+  - Bedrock Mantle Messages API uses anthropic.claude-haiku-5-5 at bedrock-mantle.{region}.api.aws/anthropic/v1/messages.
+  - Exact model card lists Mantle in-region availability in us-gov-west-1; Runtime geo/global inference profiles
+    are a different endpoint.
+  - Standard tier only. Structured outputs unsupported; computer_20251124 with computer-use-2025-11-24 is supported;
+    newer computer/browser toolsets are separate.
   evidence_ids:
   - src-f34fd90d33e8
   - src-99f7f1fb215d
-  notes:
-  - No account access or inference was used to verify the public offering.
-- schema_version: '1.0'
-  id: access-ac0b3925edff9ff5
-  verified_at: '2026-10-07'
-  model_id: claude-haiku-5-5
-  model_label: claude-haiku-5-5
-  provider_id: google-cloud
-  product: Gemini Enterprise Agent Platform
+  - src-0e7b36859ec7
+  id: access-f2773a94fb2d7d75
   methods:
   - API
-  status: Active
-  availability: documented
-  billing_class: metered_api
-  client_id: null
+  model_id: claude-haiku-5-5
+  model_label: claude-haiku-5-5
+  notes:
+  - No account access or inference was used to verify the public offering.
+  price_ids: []
+  product: Amazon Bedrock Mantle
+  provider_id: aws-bedrock
   requires_account: true
-  subscription_includes_api: null
   reset_cadence: null
   restrictions:
   - Exact account quota, entitlement and negotiated conditions unknown.
+  schema_version: '1.0'
+  status: Active
+  subscription_includes_api: null
+  verified_at: '2026-10-07'
+- availability: documented
+  billing_class: metered_api
+  client_id: null
   conditions:
   - claude-haiku-5-5; global and US/EU multi-region routes.
   - Card advertises batch predictions while Anthropic guide excludes Message Batches API; distinct APIs, no
     universal batch parity.
   - Google Cloud data handling; exact retention guarantees not established by this model card.
-  price_ids: []
   evidence_ids:
   - src-bb4952bada00
   - src-8cb4ce8e8a24
+  id: access-ac0b3925edff9ff5
+  methods:
+  - API
+  model_id: claude-haiku-5-5
+  model_label: claude-haiku-5-5
   notes:
   - No account access or inference was used to verify the public offering.
-- schema_version: '1.0'
+  price_ids: []
+  product: Gemini Enterprise Agent Platform
+  provider_id: google-cloud
+  requires_account: true
+  reset_cadence: null
+  restrictions:
+  - 'Published multi-region limits: 1500 QPM, 15M input TPM and 1.5M output TPM; global: 3000 QPM, 30M input
+    TPM and 3M output TPM. Input TPM counts uncached and cache-write tokens.'
+  - Account entitlement, effective allocated quota and negotiated terms remain unverified.
+  schema_version: '1.0'
+  status: Active
+  subscription_includes_api: null
+  verified_at: '2026-10-07'
+- availability: documented
+  billing_class: metered_api
+  client_id: null
+  conditions:
+  - Anthropic-operated inference on Azure; Global Standard or US Data Zone Standard. The US Data Zone applies
+    a 1.1x multiplier.
+  - Standard token rates converted to USD 0.01 CCUs, hourly marketplace metering and monthly postpaid invoices.
+  - Computer/browser toolsets and Message Batches unsupported. Azure-hosted deployments additionally lack code
+    execution, advanced web tool versions, Agent Skills and programmatic tool calling.
+  evidence_ids:
+  - src-dc337252fd3b
+  - src-50846cd1ff36
   id: access-761e37eeb75fe437
-  verified_at: '2026-10-07'
+  methods:
+  - API
   model_id: claude-haiku-5-5
   model_label: claude-haiku-5-5
-  provider_id: azure-foundry
+  notes:
+  - No account access or inference was used to verify the public offering.
+  price_ids: []
   product: Microsoft Foundry / Azure-hosted Claude
-  methods:
-  - API
-  status: Active
-  availability: documented
-  billing_class: metered_api
-  client_id: null
+  provider_id: azure-foundry
   requires_account: true
-  subscription_includes_api: null
   reset_cadence: null
   restrictions:
   - Exact account quota, entitlement and negotiated conditions unknown.
+  schema_version: '1.0'
+  status: Active
+  subscription_includes_api: null
+  verified_at: '2026-10-07'
+- availability: documented
+  billing_class: metered_api
+  client_id: null
   conditions:
-  - claude-haiku-5-5 default deployment; custom deployment names may differ.
-  - CCU billing via Azure Marketplace; exact tariff and model-specific eligibility unknown.
-  - Computer/browser toolsets and Message Batches unsupported in inspected guide.
-  price_ids: []
+  - Anthropic-operated inference on Anthropic infrastructure; Global Standard hosting option.
+  - Token usage rated at standard model/feature prices, converted to USD 0.01 CCUs, metered hourly and invoiced
+    monthly in arrears through Azure Marketplace.
+  - Azure-only residency statement does not apply; account eligibility remains unverified.
   evidence_ids:
   - src-dc337252fd3b
-  notes:
-  - No account access or inference was used to verify the public offering.
-- schema_version: '1.0'
+  - src-50846cd1ff36
   id: access-63e388531e15b97b
-  verified_at: '2026-10-07'
+  methods:
+  - API
   model_id: claude-haiku-5-5
   model_label: claude-haiku-5-5
-  provider_id: azure-foundry
+  notes:
+  - No account access or inference was used to verify the public offering.
+  price_ids: []
   product: Microsoft Foundry / Anthropic-hosted Claude
-  methods:
-  - API
-  status: Active
-  availability: documented
-  billing_class: metered_api
-  client_id: null
+  provider_id: azure-foundry
   requires_account: true
-  subscription_includes_api: null
   reset_cadence: null
   restrictions:
   - Exact account quota, entitlement and negotiated conditions unknown.
-  conditions:
-  - Distinct hosting location; do not apply Azure-hosted content residency statement automatically.
-  - Exact CCU tariff and availability to an individual account unknown.
-  price_ids: []
-  evidence_ids:
-  - src-dc337252fd3b
-  notes:
-  - No account access or inference was used to verify the public offering.
+  schema_version: '1.0'
+  status: Active
+  subscription_includes_api: null
+  verified_at: '2026-10-07'
 - schema_version: '1.0'
   id: access-df2beae03d5e857d
   verified_at: '2026-10-07'

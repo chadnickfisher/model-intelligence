@@ -40,14 +40,13 @@ specifications:
     - src-905d5d7a5fb4
     - src-399a034698f6
   maximum_output:
-    value: null
-    status: unknown
-    conditions: []
+    value: No text output limit
+    status: documented
+    conditions:
+    - Official developer guide labels the output limit “No text output limit”; no numerical output-token maximum
+      is asserted, and the documented context window remains 500,000 tokens.
     evidence_ids:
-    - src-f1f9e55552d3
-    - src-d14fea025626
-    - src-905d5d7a5fb4
-    - src-399a034698f6
+    - src-3a49ad558f18
   modalities:
     value:
       input:
