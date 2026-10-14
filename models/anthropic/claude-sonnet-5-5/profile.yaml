@@ -249,54 +249,55 @@ capabilities:
   - coding.scoped_edit
   related_task_ids: []
   assessment: conditional
-  scope_note: Conditional utility is supported by text/code I/O, tool workflows and the small evaluation's
-    bounded successes. Medium denotes an assisted implement-and-check use case needing scope and regression
-    review, not a penalty for missing measurements or a claim of measured failure frequency.
-  judgment: A useful conditional candidate for localized, explicitly specified edits when a host supplies repository
-    context, constrained write tools and acceptance tests; use scope review rather than assuming passing tests
-    ensure a minimal diff.
+  scope_note: Conditional implement-and-check utility follows from bounded successful tasks and compatible
+    text/tool workflow. Known scope expansion under a different effort/harness motivates a reviewed workflow
+    rather than unattended acceptance.
+  judgment: A useful candidate for specified local edits with host-provided context, constrained editing tools
+    and acceptance tests. Keep scope and regression review in the workflow; passing functional checks alone
+    need not mean a minimal, preservation-safe change.
   confidence: low
   supporting_evidence_ids:
   - src-5383730b273f
   - src-752375ff0c97
   - src-d89f8cc5b275
-  contradictory_evidence_ids: []
+  contradictory_evidence_ids:
+  - src-4e3ca8a95d36
   conditions:
-  - Anthropic API access-proprietary-access-18, Standard/global; host-managed code reads/writes/tests, not
-    an autonomous repository environment supplied by the endpoint.
-  - Specify target behavior and allowed files; run regression tests and inspect unrelated changes.
-  - Keep effort and harness explicit; the earlier maximum-effort scope warning is not an exact-route default-high
-    failure rate.
+  - 'Exact assigned route: Anthropic API access-proprietary-access-18, Standard/global.'
+  - Host supplies reads, writes and tests; endpoint is not itself a repository workspace.
+  - Specify allowed changes and regression criteria; do not assume Max improves scope fidelity.
+  - Default API effort high; handle forced-tool-use rejection and model-bound thinking blocks.
   known_failure_modes:
-  - Rubric requires bounded behavior change plus preservation, not debugging or broad coordination.
-  - A small mixed private suite is only partial rubric overlap.
-  - No positive route/task mismatch is established.
-  - An earlier vendor scope-expansion warning remains background; its supporting passage was unavailable for
-    re-inspection.
-  - No contrary passage was available for inspection in this pass; this does not establish consensus.
+  - Broad debugging, architecture and autonomous multi-file scores are not substituted for the rubric.
+  - Contrary source is configuration-specific; it is not direct evidence of weakness under the exact assigned
+    route.
+  - Earlier catalog judgment is background, not independent corroboration.
+  - No positive task/route incompatibility established. Text/code input and text output plus supported tool
+    interaction enable the host-managed workflow; tool API compatibility is not measured coding quality.
   evidence_notes:
-  - The evaluation only partially overlaps the scoped-edit rubric and leaves exact endpoint and preservation
-    checks uncertain; the suitability conclusion is a conditional workflow inference.
-  - Independent evaluator-reported outcomes and vendor modality/tool documentation support conditional workflow
-    inference. The earlier warning remains background context.
-  observed_at: '2026-10-13'
+  - Partial rubric overlap, one small private evaluator and no matched Standard/global endpoint experiment.
+    Missing exact tests reduce confidence, not capability by themselves.
+  - Original evaluator results plus vendor interface and failure reports support a conditional workflow inference.
+  observed_at: '2026-10-14'
   effective_from: null
   provenance:
     origin: saved-source-analysis
     method: solo_researcher
     snapshot_ids:
-    - snapshot-5cb8fa4ab0f4ed5892e8
-    - snapshot-cdc97d6ca1d305368b98
-    - snapshot-e5e5f33c0948c8a5ba81
+    - snapshot-336a96db976414098b2f
+    - snapshot-bbeb9813a737a1ad894c
+    - snapshot-d6680f6632460e2b335d
+    - snapshot-db756109acc5bf87d33e
   basis:
     kind: mixed
-    rationale: Independent evaluator-reported outcomes and vendor modality/tool documentation support conditional
-      workflow inference. The earlier warning remains background context.
+    rationale: Original evaluator results plus vendor interface and failure reports support a conditional workflow
+      inference.
   inspection_reported_at: null
   snapshot_ids:
-  - snapshot-5cb8fa4ab0f4ed5892e8
-  - snapshot-cdc97d6ca1d305368b98
-  - snapshot-e5e5f33c0948c8a5ba81
+  - snapshot-336a96db976414098b2f
+  - snapshot-bbeb9813a737a1ad894c
+  - snapshot-d6680f6632460e2b335d
+  - snapshot-db756109acc5bf87d33e
 - id: judgment-fb34061351983c89
   scope: direct
   task_ids:

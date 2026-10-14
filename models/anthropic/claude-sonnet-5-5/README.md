@@ -31,9 +31,9 @@ Evidence notes: supporting evidence: AA reports Terminal-Bench4.0 about64% at ma
 
 ### Coding.scoped_edit (low confidence)
 
-A useful conditional candidate for localized, explicitly specified edits when a host supplies repository context, constrained write tools and acceptance tests; use scope review rather than assuming passing tests ensure a minimal diff.
+A useful candidate for specified local edits with host-provided context, constrained editing tools and acceptance tests. Keep scope and regression review in the workflow; passing functional checks alone need not mean a minimal, preservation-safe change.
 
-Scope: direct / conditional. Conditional utility is supported by text/code I/O, tool workflows and the small evaluation's bounded successes. Medium denotes an assisted implement-and-check use case needing scope and regression review, not a penalty for missing measurements or a claim of measured failure frequency.
+Scope: direct / conditional. Conditional implement-and-check utility follows from bounded successful tasks and compatible text/tool workflow. Known scope expansion under a different effort/harness motivates a reviewed workflow rather than unattended acceptance.
 
 Direct task IDs: coding.scoped_edit
 
@@ -41,15 +41,15 @@ Related task IDs (navigation only): Not established in this pass
 
 Judgment ID: judgment-cb9aeb423bbdc834
 
-Conditions: Anthropic API access-proprietary-access-18, Standard/global; host-managed code reads/writes/tests, not an autonomous repository environment supplied by the endpoint.; Specify target behavior and allowed files; run regression tests and inspect unrelated changes.; Keep effort and harness explicit; the earlier maximum-effort scope warning is not an exact-route default-high failure rate.
+Conditions: Exact assigned route: Anthropic API access-proprietary-access-18, Standard/global.; Host supplies reads, writes and tests; endpoint is not itself a repository workspace.; Specify allowed changes and regression criteria; do not assume Max improves scope fidelity.; Default API effort high; handle forced-tool-use rejection and model-bound thinking blocks.
 
-Failure modes / limitations: Rubric requires bounded behavior change plus preservation, not debugging or broad coordination.; A small mixed private suite is only partial rubric overlap.; No positive route/task mismatch is established.; An earlier vendor scope-expansion warning remains background; its supporting passage was unavailable for re-inspection.; No contrary passage was available for inspection in this pass; this does not establish consensus.
+Failure modes / limitations: Broad debugging, architecture and autonomous multi-file scores are not substituted for the rubric.; Contrary source is configuration-specific; it is not direct evidence of weakness under the exact assigned route.; Earlier catalog judgment is background, not independent corroboration.; No positive task/route incompatibility established. Text/code input and text output plus supported tool interaction enable the host-managed workflow; tool API compatibility is not measured coding quality.
 
 Supporting sources: [ibragim.dev](https://ibragim.dev/writing/mini-benchmark-for-coding-agents/) · [Claude sonnet-5-5 specifications](https://platform.claude.com/docs/en/models/sonnet-5-5/overview) · [Personal Coding Evals](https://ibragim.dev/leaderboard/)
 
-Contradictory or limiting sources: None separately identified in this pass; this is not evidence of consensus.
+Contradictory or limiting sources: [Introducing Claude Sonnet 5.5](https://www.anthropic.com/claude-sonnet-5-5)
 
-Evidence notes: The evaluation only partially overlaps the scoped-edit rubric and leaves exact endpoint and preservation checks uncertain; the suitability conclusion is a conditional workflow inference.; Independent evaluator-reported outcomes and vendor modality/tool documentation support conditional workflow inference. The earlier warning remains background context.
+Evidence notes: Partial rubric overlap, one small private evaluator and no matched Standard/global endpoint experiment. Missing exact tests reduce confidence, not capability by themselves.; Original evaluator results plus vendor interface and failure reports support a conditional workflow inference.
 
 ### Coding.debugging (medium confidence)
 

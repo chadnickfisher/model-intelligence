@@ -6,7 +6,7 @@ Coverage priorities include configuration-matched independent measurements, exac
 
 ## Recorded inventory
 
-Observed 2026-10-13. This is an inventory date, not a fresh verification date for every fact.
+Observed 2026-10-14. This is an inventory date, not a fresh verification date for every fact.
 
 - models: 54
 - providers and access products: 44

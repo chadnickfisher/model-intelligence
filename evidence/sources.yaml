@@ -814,6 +814,20 @@ records:
   source_type: primary
   title: Introducing Claude Sonnet 5.5
   url: https://www.anthropic.com/claude-sonnet-5-5
+  snapshots:
+  - effective_at: null
+    extractor_version: source-formats/1.1
+    final_url: https://www.anthropic.com/claude-sonnet-5-5
+    id: snapshot-d6680f6632460e2b335d
+    original:
+      bytes: 284985
+      sha256: 9db74c8bb9e86e0214de2360a7f6cfc6d79108a97f757e7adffeea7f7af7a35c
+    publication_at: null
+    readable:
+      bytes: 20785
+      sha256: 90424f4acce37cd6f27ae7cdced23c632b520469165f22d6bbcba79a27979fa4
+    retrieval_completed_at: '2026-10-14T09:56:25.398024+00:00'
+    retrieval_started_at: '2026-10-14T09:56:25.134331+00:00'
 - id: src-4fb7165743ee
   url: https://huggingface.co/openai/gpt-oss-20b
   title: OpenAI gpt-oss-20b model card
@@ -1367,6 +1381,19 @@ records:
       sha256: cb082b7f309a020b1e7fccc5666101bbb9036f8c13f537dccb2864219cc38342
     retrieval_completed_at: '2026-10-13T22:43:37.828826+00:00'
     retrieval_started_at: '2026-10-13T22:43:37.407007+00:00'
+  - effective_at: null
+    extractor_version: source-formats/1.1
+    final_url: https://platform.claude.com/docs/en/models/sonnet-5-5/overview
+    id: snapshot-bbeb9813a737a1ad894c
+    original:
+      bytes: 402671
+      sha256: 609ad111f2b20727ae49ff88185c8fdf3305643b1338498db5c30d9ce214b151
+    publication_at: null
+    readable:
+      bytes: 5882
+      sha256: cb082b7f309a020b1e7fccc5666101bbb9036f8c13f537dccb2864219cc38342
+    retrieval_completed_at: '2026-10-14T09:56:24.574391+00:00'
+    retrieval_started_at: '2026-10-14T09:56:24.063175+00:00'
 - id: src-752c7dd560da
   url: https://docs.bfl.ai/quick_start/pricing
   title: Overview
@@ -3003,6 +3030,19 @@ records:
       sha256: 43848640d9f6ce78dc5803a12551f0ff74845ad7e4bf4f1732ce190dcc7bd4ce
     retrieval_completed_at: '2026-10-13T22:43:39.847355+00:00'
     retrieval_started_at: '2026-10-13T22:43:39.554402+00:00'
+  - effective_at: null
+    extractor_version: source-formats/1.1
+    final_url: https://ibragim.dev/leaderboard/
+    id: snapshot-336a96db976414098b2f
+    original:
+      bytes: 13505
+      sha256: 46db4b9a6968e9dd8251eb67520bc05a434c0258ea5822a23a41fc7a987aad69
+    publication_at: null
+    readable:
+      bytes: 2900
+      sha256: 43848640d9f6ce78dc5803a12551f0ff74845ad7e4bf4f1732ce190dcc7bd4ce
+    retrieval_completed_at: '2026-10-14T09:56:26.326280+00:00'
+    retrieval_started_at: '2026-10-14T09:56:25.965078+00:00'
 - id: src-3dc04dde4bf1
   url: https://modelbattles.com/articles/gemma-4-12b-agentic-core-v1-2026/
   title: Gemma 4 12B on agentic-core-v1
@@ -11004,6 +11044,19 @@ records:
       sha256: baf883e13bce64552073464f59b0c85429f15b7f0ff85c0c88a967a914359750
     retrieval_completed_at: '2026-10-13T22:43:40.595949+00:00'
     retrieval_started_at: '2026-10-13T22:43:40.462908+00:00'
+  - effective_at: null
+    extractor_version: source-formats/1.1
+    final_url: https://ibragim.dev/writing/mini-benchmark-for-coding-agents/
+    id: snapshot-db756109acc5bf87d33e
+    original:
+      bytes: 8495
+      sha256: 8ff11ad865ced80b6b68ae0016a59130d8b6b4c7f45ce8f4a436031d8d1dec34
+    publication_at: null
+    readable:
+      bytes: 2766
+      sha256: baf883e13bce64552073464f59b0c85429f15b7f0ff85c0c88a967a914359750
+    retrieval_completed_at: '2026-10-14T09:56:26.980558+00:00'
+    retrieval_started_at: '2026-10-14T09:56:26.845188+00:00'
   source_type: unknown
   title: null
   url: https://ibragim.dev/writing/mini-benchmark-for-coding-agents/
