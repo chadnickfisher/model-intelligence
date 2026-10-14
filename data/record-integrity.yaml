@@ -2580,7 +2580,7 @@ records:
 - entity_type: model
   entity_id: claude-sonnet-5-5
   canonical_path: models/anthropic/claude-sonnet-5-5/profile.yaml
-  value_hash: 5f258421a87ff94afabf5f7a9d5cf5390a40820e45629960ccd42dd4afb2f997
+  value_hash: 636548dca7c6d54ad6b05d14a6c4bd03b2c60e57cbc179f7026c1f50b6c3e3db
 - entity_type: model
   entity_id: cohere-command-a-plus
   canonical_path: models/cohere/cohere-command-a-plus/profile.yaml
@@ -6200,7 +6200,7 @@ records:
 - entity_type: source
   entity_id: src-4e3ca8a95d36
   canonical_path: evidence/sources.yaml
-  value_hash: f0367bde3f3277232b15c9a3766c39f0de185f455138994c9cd53b3b1d417d0a
+  value_hash: e87438fd2117518bd67bf2270ada36b15012d57b95bbed736b85ea534e33e7b0
 - entity_type: source
   entity_id: src-4e6f4ff35504
   canonical_path: evidence/sources.yaml
@@ -6280,7 +6280,7 @@ records:
 - entity_type: source
   entity_id: src-5383730b273f
   canonical_path: evidence/sources.yaml
-  value_hash: 80cbac549af1f745215c8f410368250d0a71d1b68bfa4d1e32738f301ce4a982
+  value_hash: d9a4a3d524592ac199b3a59ddf10b36ba68de874bef467e63a5a27c4fd0f0df5
 - entity_type: source
   entity_id: src-53cd13bd410c
   canonical_path: evidence/sources.yaml
@@ -6816,7 +6816,7 @@ records:
 - entity_type: source
   entity_id: src-752375ff0c97
   canonical_path: evidence/sources.yaml
-  value_hash: 764de9d815fd0b6b5820d98fd641bf7ad28cc9aee9b16330f56c6f4a3f4241a5
+  value_hash: e9f389f9e4c54b3fc742c1b348ba4dbbb63fe49e370b540eaa8a89291cea9de6
 - entity_type: source
   entity_id: src-752c7dd560da
   canonical_path: evidence/sources.yaml
@@ -8080,7 +8080,7 @@ records:
 - entity_type: source
   entity_id: src-d89f8cc5b275
   canonical_path: evidence/sources.yaml
-  value_hash: 70684b70658f6701e59b75e2b9e9e99812c15477eb08d399cd7855438e15fcbc
+  value_hash: dddadac343061661cc943fff45c2a4be106878a9edaecf2535bcc5bcd4468225
 - entity_type: source
   entity_id: src-d8d48de1253a
   canonical_path: evidence/sources.yaml
@@ -14804,7 +14804,7 @@ records:
 - entity_type: task_assessment
   entity_id: task-assessment-be1ae5ae450eba5b
   canonical_path: data/task-assessments.yaml
-  value_hash: 70c821ace169371626d815da17aee202af9da2d20c1e7622d7d0859e2fb06716
+  value_hash: 119cf4e44fba0589e655a6436c71c00c92d7d22b603c2c12f0eae6bfa0534372
 - entity_type: task_assessment
   entity_id: task-assessment-be34131726623652
   canonical_path: data/task-assessments.yaml

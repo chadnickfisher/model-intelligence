@@ -7205,8 +7205,8 @@ records:
     - Contrary source is configuration-specific; it is not direct evidence of weakness under the exact assigned
       route.
     - Earlier catalog judgment is background, not independent corroboration.
-    - No positive task/route incompatibility established. Text/code input and text output plus supported tool
-      interaction enable the host-managed workflow; tool API compatibility is not measured coding quality.
+    - Text input/output and documented tool interaction support a host-managed edit/test loop, not a measured
+      correctness guarantee. No positive task/route mismatch is established.
     - Exact-route completion and correction rates; task-level preservation and variance.
     access_ids:
     - access-proprietary-access-18
@@ -7216,12 +7216,12 @@ records:
         workflow inference.
     inspection_reported_at: null
     positive_boundary: null
-    recorded_at: '2026-10-14T09:59:03.622766+00:00'
+    recorded_at: '2026-10-14T11:02:54.081281+00:00'
     snapshot_ids:
-    - snapshot-336a96db976414098b2f
-    - snapshot-bbeb9813a737a1ad894c
-    - snapshot-d6680f6632460e2b335d
-    - snapshot-db756109acc5bf87d33e
+    - snapshot-1120876c3844c4ecfd0f
+    - snapshot-91d8f435c044626a1cd0
+    - snapshot-9aa61539523ac02e844d
+    - snapshot-a7c433b5b27c30f4a040
 - model_id: claude-sonnet-5-5
   task_id: coding.tests
   applicability: applicable

@@ -43,7 +43,7 @@ Judgment ID: judgment-cb9aeb423bbdc834
 
 Conditions: Exact assigned route: Anthropic API access-proprietary-access-18, Standard/global.; Host supplies reads, writes and tests; endpoint is not itself a repository workspace.; Specify allowed changes and regression criteria; do not assume Max improves scope fidelity.; Default API effort high; handle forced-tool-use rejection and model-bound thinking blocks.
 
-Failure modes / limitations: Broad debugging, architecture and autonomous multi-file scores are not substituted for the rubric.; Contrary source is configuration-specific; it is not direct evidence of weakness under the exact assigned route.; Earlier catalog judgment is background, not independent corroboration.; No positive task/route incompatibility established. Text/code input and text output plus supported tool interaction enable the host-managed workflow; tool API compatibility is not measured coding quality.
+Failure modes / limitations: Broad debugging, architecture and autonomous multi-file scores are not substituted for the rubric.; Contrary source is configuration-specific; it is not direct evidence of weakness under the exact assigned route.; Earlier catalog judgment is background, not independent corroboration.; Text input/output and documented tool interaction support a host-managed edit/test loop, not a measured correctness guarantee. No positive task/route mismatch is established.
 
 Supporting sources: [ibragim.dev](https://ibragim.dev/writing/mini-benchmark-for-coding-agents/) · [Claude sonnet-5-5 specifications](https://platform.claude.com/docs/en/models/sonnet-5-5/overview) · [Personal Coding Evals](https://ibragim.dev/leaderboard/)
 
